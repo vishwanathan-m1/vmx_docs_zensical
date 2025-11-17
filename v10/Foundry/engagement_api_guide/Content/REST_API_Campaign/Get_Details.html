@@ -1,0 +1,6952 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/engagement_api_guide/Content/REST_API_Campaign/Get_Details.html">
+      
+      
+        <link rel="prev" href="Get_All_Campaigns_by_Pagination.html">
+      
+      
+        <link rel="next" href="Create_campaign.html">
+      
+      
+      <link rel="icon" href="../../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Get Campaign Details by ID - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#get-campaign-details-by-id" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-voltmx/14" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Get Campaign Details by ID
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Whats_New_in_V10.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            Integration Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integration_services.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../offline_objects.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Offline Objects
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_5_3" id="__nav_9_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Engagement Services
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Engagement Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../engagement_services.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../voltmx_foundry_intro_eng/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Introduction to Volt MX Engagement Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vmf_msg_jpush_quick_start_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Services JPush QuickStart Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vmf_msg_quick_start_guide_build_sample_app_apple_ios/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Services Demo App QuickStart Guide     - Apple iOS
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vmf_msg_quick_start_guide_campaign_management/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Services (Campaign Management)
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vms_console_user_guide/Content/Introduction_1.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vms_demo_app_quick_start_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Engagement Demo App QuickStart Guide (for Android Devices)
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../voltmx_foundry_eng_camp_events/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Engagement Campaigns and Events
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../voltmx_foundry_eng_geo_monitoring/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Introduction to Engagement Geoboundary Monitoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5_3_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_5_3_10" id="__nav_9_5_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Services API Programming Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_5_3_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_5_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Volt MX Foundry Engagement Services API Programming Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5_3_10_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_5_3_10_3" id="__nav_9_5_3_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Services APIs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_5_3_10_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_5_3_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Volt MX Foundry Engagement Services APIs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../APIs_for_VoltMX_Messaging_Services/VoltMX_Foundry_Messaging_APIs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../APIs_for_VoltMX_Messaging_Services/Authentication_API.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5_3_10_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_5_3_10_3_3" id="__nav_9_5_3_10_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    REST API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_9_5_3_10_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_5_3_10_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            REST API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../REST_APIs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Access_Management_-_General/Access_Management.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Group/Access_Management_-_Group.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Access Management     - Group (On-Premises only
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_User/Access_Management1.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Access Management -User (On-Premises only
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Administration/Administration.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Application/Applications_API.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Beacon/Beacon.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Beacon
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5_3_10_3_3_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_5_3_10_3_3_8" id="__nav_9_5_3_10_3_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Campaign
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_9_5_3_10_3_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_5_3_10_3_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Campaign
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Campaign.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Get_All_Campaigns_by_Pagination.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get All Campaigns by Pagination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Get Campaign Details by ID
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Get_Details.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Get Campaign Details by ID
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Status
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Create_campaign.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Modify_campaign.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modify Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Delete_campaign.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Start_Campaign.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Terminate_Campaign_-_MBaaS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminate Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Validate_Campaign_Criteria_-_MBaaS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validate Campaign Criteria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Create_campaign_with_upload_images.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Campaign with Upload Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Modify_Campaign_with_Upload_Images.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modify Campaign with Upload Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Campaign_Pause_Service.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pause Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Campaign_Resume_Service.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume Campaign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Email/EMAIL_API.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Email
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Email_Template/Email_Template_-_API.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Email Template
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Event/Event.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Event
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Geo_Location/Geo_Location.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    GeoLocation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Misc/Misc.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Pass_Certificate/Pass_Certificates.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Pass Certificates
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Pass_Device/Pass_Device.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Pass Devices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Pass_Distribution/Pass_Distribution_main.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Pass Distribution
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Pass_Template/Pass_Template.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Pass Template
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../Push_Message_APIs/Push_Message_APIs.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Push Message
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Push_Message_Template/Push_Message_Template.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Push Message Template
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Segments/Segment.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Segment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API__SMS/SMS_API.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SMS
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_SMS_Template/SMS_Template_-_API1.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SMS Template
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Subscribers/Subscription.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Subscribers
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../REST_API_Audience_Member/Audience_Member.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Users
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../JSON_Files.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    JSON Files for Import and Export
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../Deprecated_APIs/Deprecated_APIs.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deprecated APIs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../Invoking_REST_APIs_in_Java.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Invoking REST APIs in Java
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Client-side_Javascript_Code.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Client-side JavaScript Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoltMX_Development_Cloud_Push_APIs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX JavaScript APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../eng_event_mgmt_quickstart_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Engagement Event Management QuickStart Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../2waysms_quick_start_guide/Content/Introduction_1.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Introduction to Engagement Services 2-Way SMS
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Status
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="get-campaign-details-by-id">Get Campaign Details by ID</h1>
+<p>The <strong>Get Campaign Details by ID</strong> API provides details of a campaign. This API accepts the <strong>Campaign ID</strong> as an input parameter and responds with a campaign details matching the Campaign ID.</p>
+<h2 id="url">URL</h2>
+<p>The HTTP URL for <strong>Get Campaign Details by ID</strong> API is:</p>
+<pre><code>http://&lt;host&gt;:&lt;port&gt;/api/v1/campaigns/&lt;id&gt;
+</code></pre>
+<p>This API implements Gateway Filter for Authentication/Basic Authentication to authenticate access of the API by a user.</p>
+<h2 id="method">Method</h2>
+<p>GET</p>
+<h2 id="output-parameters">Output Parameters</h2>
+<p>The following fields are output parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Output Parameter</th>
+<th>Level - Two</th>
+<th>Level - Three</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td> </td>
+<td> </td>
+<td>long</td>
+<td>Unique ID assigned to the campaign</td>
+</tr>
+<tr>
+<td>name</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Campaign name</td>
+</tr>
+<tr>
+<td>campaignType</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Campaign type</td>
+</tr>
+<tr>
+<td>zone</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>The selected time zone for the campaign dates</td>
+</tr>
+<tr>
+<td>startDateStr</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Date on which the campaign starts</td>
+</tr>
+<tr>
+<td>endDateStr</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Date on which the campaign ends</td>
+</tr>
+<tr>
+<td>terminatedDateStr</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Date on which the campaign is terminated</td>
+</tr>
+<tr>
+<td>pausedDateStr</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Date on which the campaign was paused</td>
+</tr>
+<tr>
+<td>lastModifiedBy</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>User name showing who last modified the campaign data</td>
+</tr>
+<tr>
+<td>lastModifiedDateStr</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Date and time at which the campaign was last modified</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>User name showing who created the campaign data</td>
+</tr>
+<tr>
+<td>createdDateStr</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>Date on which the campaign was created</td>
+</tr>
+<tr>
+<td>campaignSegments</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>An array of campaign segments</td>
+</tr>
+<tr>
+<td> </td>
+<td>segment</td>
+<td> </td>
+<td>array</td>
+<td>Provides information about a campaign segment, including: id name</td>
+</tr>
+<tr>
+<td>campaignMessages</td>
+<td> </td>
+<td> </td>
+<td>array</td>
+<td>An array of compaign message information, for more details, <a href="Campaign.html#campaignmessages">see</a></td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td>platformSpecificProps</td>
+<td> </td>
+<td>An array of platform specific properties, for more details, <a href="Campaign.html#platformspecificprops-input-output-parameters">see</a></td>
+</tr>
+<tr>
+<td>campaignMails</td>
+<td> </td>
+<td> </td>
+<td>Array</td>
+<td>An array of campaign mail objects, for more details, <a href="Campaign.html#campaignmails">see</a></td>
+</tr>
+<tr>
+<td>campaignSms</td>
+<td> </td>
+<td> </td>
+<td>array</td>
+<td>An array of campaign SMS objects, for more details, <a href="Campaign.html#campaignsms">see</a></td>
+</tr>
+<tr>
+<td>campaignVoiceSms</td>
+<td> </td>
+<td> </td>
+<td>array</td>
+<td>An array of campaign Voice SMS objects, for more details, <a href="Campaign.html#campaignvoicesms">see</a></td>
+</tr>
+<tr>
+<td>campaignPasses</td>
+<td> </td>
+<td> </td>
+<td>array</td>
+<td>An array of campaign passes, for more details, <a href="Campaign.html#campaignvoicesms">see</a></td>
+</tr>
+<tr>
+<td>campaignChannelPriorities</td>
+<td> </td>
+<td> </td>
+<td>array</td>
+<td>An array of campaign channel (push, email and SMS ) priorities</td>
+</tr>
+<tr>
+<td>status</td>
+<td> </td>
+<td> </td>
+<td>string</td>
+<td>The current status of the campaign as draft, pending or running</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sample-response">Sample Response</h2>
+<pre><code>{
+&quot;id&quot;: 109,
+&quot;name&quot;: &quot;CompleteAPIForCampaign&quot;,
+&quot;campaignType&quot;: &quot;Promotions&quot;,
+&quot;zone&quot;: &quot;(GMT+05:30) Chennai, Mumbai, New Delhi&quot;,
+&quot;startDateStr&quot;: &quot;03/04/2016 05:44:57 PM&quot;,
+&quot;endDateStr&quot;: &quot;03/05/2016 09:03:08 AM&quot;,
+&quot;terminatedDateStr&quot;: &quot;&quot;,
+&quot;pausedDateStr&quot;: &quot;&quot;,
+&quot;lastModifiedBy&quot;: &quot;admin&quot;,
+&quot;lastModifiedDateStr&quot;: &quot;03/04/2016 05:44:58 PM IST&quot;,
+&quot;createdBy&quot;: &quot;admin&quot;,
+&quot;createdDateStr&quot;: &quot;03/04/2016 05:44:57 PM IST&quot;,
+&quot;campaignSegments&quot;: [
+{
+&quot;segment&quot;: {
+&quot;id&quot;: 2,
+&quot;name&quot;: &quot;SegGeolocation152&quot;
+}
+},
+{
+&quot;segment&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;SegEmailContiansCom173&quot;
+}
+}
+],
+&quot;campaignMessages&quot;: [
+{
+&quot;name&quot;: &quot;iphone India Promotion&quot;,
+&quot;message&quot;: &quot;Hi ##First Name##, We are glad to announce flat 20% discount on iphone 6S. The offer ends by 30th March 2016. Hurry!!&quot;,
+&quot;richContent&quot;: &quot;
+
+&lt;p&gt;
+    &lt;s&gt;
+        &lt;strong&gt;Some Rich Content to promote the offer&lt;/strong&gt;
+    &lt;/s&gt;
+&lt;/p&gt;\n&quot;,
+            &quot;application&quot;: {
+                &quot;appId&quot;: &quot;AppForAll1&quot;,
+                &quot;applicationName&quot;: &quot;AppForAll1&quot;
+            },
+            &quot;repeatMessage&quot;: {
+                &quot;name&quot;: &quot;repeat Promotion iPhone India&quot;,
+                &quot;message&quot;: &quot;Message box contents for repeat different message.\n Hi, ##First Name## ##Last Name## Hurry!! 20% discount on iphone 6s. The offer ends by 30th March 2016&quot;,
+                &quot;richContent&quot;: &quot;&quot;,
+                &quot;subscribers&quot;: 4,
+                &quot;pushesSent&quot;: 0,
+                &quot;pushesOpened&quot;: 0,
+                &quot;platformSpecificProps&quot;: {
+                    &quot;title&quot;: &quot;message title for repeat Promotion iPhone India&quot;,
+                    &quot;iphone&quot;: {
+                        &quot;badge&quot;: 1,
+                        &quot;sound&quot;: &quot;repeat sound name&quot;,
+                        &quot;category&quot;: &quot;repeat category&quot;,
+                        &quot;contentAvailable&quot;: 1,
+                        &quot;actionLocKey&quot;: &quot;repeat alk&quot;,
+                        &quot;locKey&quot;: &quot;repeat lk&quot;,
+                        &quot;locArgs&quot;: {
+                            &quot;locArg&quot;: [
+                                &quot;Repeat la1&quot;,
+                                &quot;Repeat la2&quot;
+                            ]
+                        },
+                        &quot;launchImage&quot;: &quot;./images/repeatMessageImage&quot;,
+                        &quot;title&quot;: &quot;message title for repeat different message&quot;,
+                        &quot;titleLocKey&quot;: &quot;repeat tlk&quot;,
+                        &quot;titleLocArgs&quot;: {
+                            &quot;titleLocArg&quot;: [
+                                &quot;repeat TLA&quot;,
+                                &quot; repeat Tla2&quot;
+                            ]
+                        },
+                        &quot;customData&quot;: {
+                            &quot;key&quot;: [
+                                {
+                                    &quot;content&quot;: &quot;1&quot;,
+                                    &quot;name&quot;: &quot;Hit&quot;
+                                },
+                                {
+                                    &quot;content&quot;: &quot;0&quot;,
+                                    &quot;name&quot;: &quot;Miss&quot;
+                                }
+                            ]
+                        }
+                    },
+                    &quot;android&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;HitAndroid&quot;,
+                                &quot;value&quot;: &quot;1&quot;
+                            },
+                            {
+                                &quot;name&quot;: &quot;MissAndroid&quot;,
+                                &quot;value&quot;: &quot;0&quot;
+                            }
+                        ]
+                    },
+                    &quot;web&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;HitWeb&quot;,
+                                &quot;value&quot;: &quot;1&quot;
+                            },
+                            {
+                                &quot;name&quot;: &quot;MissWeb&quot;,
+                                &quot;value&quot;: &quot;0&quot;
+                            }
+                        ]
+                    },
+                    &quot;jpush&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;title&quot;,
+                                &quot;value&quot;: &quot;message title for repeat different message&quot;
+                            },
+                            {
+                                &quot;name&quot;: &quot;HitJPush&quot;,
+                                &quot;value&quot;: &quot;1&quot;
+                            },
+                            {
+                                &quot;name&quot;: &quot;MissJPush&quot;,
+                                &quot;value&quot;: &quot;0&quot;
+                            }
+                        ]
+                    },
+                    &quot;windows&quot;: {
+                        &quot;notificationType&quot;: &quot;RAW&quot;,
+                        &quot;text1&quot;: &quot;&quot;,
+                        &quot;text2&quot;: &quot;&quot;,
+                        &quot;screenName&quot;: &quot;&quot;,
+                        &quot;params&quot;: &quot;&quot;,
+                        &quot;title&quot;: &quot;&quot;,
+                        &quot;badge&quot;: &quot;&quot;,
+                        &quot;imagePath&quot;: &quot;&quot;
+                    },
+                    &quot;wns&quot;: {
+                        &quot;notificationType&quot;: &quot;RAW&quot;,
+                        &quot;text1&quot;: &quot;&quot;,
+                        &quot;text2&quot;: &quot;&quot;,
+                        &quot;screenName&quot;: &quot;&quot;,
+                        &quot;params&quot;: &quot;&quot;,
+                        &quot;template&quot;: &quot;&quot;,
+                        &quot;version&quot;: &quot;&quot;,
+                        &quot;fallback&quot;: &quot;&quot;,
+                        &quot;badge&quot;: &quot;&quot;,
+                        &quot;image&quot;: &quot;&quot;,
+                        &quot;text&quot;: &quot;&quot;,
+                        &quot;value&quot;: &quot;&quot;
+                    }
+                },
+                &quot;interval&quot;: 1,
+                &quot;intervalUnit&quot;: &quot;Days&quot;
+            },
+            &quot;subscribers&quot;: 4,
+            &quot;pushesSent&quot;: 4,
+            &quot;pushesOpened&quot;: 0,
+            &quot;platformSpecificProps&quot;: {
+                &quot;title&quot;: &quot;message title&quot;,
+                &quot;iphone&quot;: {
+                    &quot;badge&quot;: 1,
+                    &quot;sound&quot;: &quot;soundname&quot;,
+                    &quot;category&quot;: &quot;buisniess&quot;,
+                    &quot;contentAvailable&quot;: 12,
+                    &quot;actionLocKey&quot;: &quot;alk&quot;,
+                    &quot;locKey&quot;: &quot;lk&quot;,
+                    &quot;locArgs&quot;: {
+                        &quot;locArg&quot;: [
+                            &quot;la1&quot;,
+                            &quot;la2&quot;
+                        ]
+                    },
+                    &quot;launchImage&quot;: &quot;/image/launchimage&quot;,
+                    &quot;title&quot;: &quot;message title&quot;,
+                    &quot;titleLocKey&quot;: &quot;tlk&quot;,
+                    &quot;titleLocArgs&quot;: {
+                        &quot;titleLocArg&quot;: [
+                            &quot;tla1&quot;,
+                            &quot;tla2&quot;
+                        ]
+                    },
+                    &quot;customData&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;content&quot;: &quot;apple value&quot;,
+                                &quot;name&quot;: &quot;apple &quot;
+                            }
+                        ]
+                    }
+                },
+                &quot;android&quot;: {
+                    &quot;key&quot;: [
+                        {
+                            &quot;name&quot;: &quot;gcm key&quot;,
+                            &quot;value&quot;: &quot;gcm  vlaue&quot;
+                        }
+                    ]
+                },
+               &quot;web&quot;: {
+                    &quot;key&quot;: [
+                        {
+                            &quot;name&quot;: &quot;fcm key&quot;,
+                            &quot;value&quot;: &quot;fcm vlaue&quot;
+                        }
+                    ]
+                },
+                &quot;jpush&quot;: {
+                    &quot;key&quot;: [
+                        {
+                            &quot;name&quot;: &quot;title&quot;,
+                            &quot;value&quot;: &quot;message title&quot;
+                        },
+                        {
+                            &quot;name&quot;: &quot;jpush&quot;,
+                            &quot;value&quot;: &quot;jpush value&quot;
+                        }
+                    ]
+                },
+                &quot;windows&quot;: {
+                    &quot;notificationType&quot;: &quot;TOAST&quot;,
+                    &quot;text1&quot;: &quot;&quot;,
+                    &quot;text2&quot;: &quot;&quot;,
+                    &quot;screenName&quot;: &quot;screen name&quot;,
+                    &quot;params&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;mpns params key&quot;,
+                                &quot;value&quot;: &quot;mpns value&quot;
+                            }
+                        ]
+                    },
+                    &quot;title&quot;: &quot;&quot;,
+                    &quot;badge&quot;: &quot;&quot;,
+                    &quot;imagePath&quot;: &quot;&quot;
+                },
+                &quot;wns&quot;: {
+                    &quot;notificationType&quot;: &quot;TILE&quot;,
+                    &quot;text1&quot;: &quot;&quot;,
+                    &quot;text2&quot;: &quot;&quot;,
+                    &quot;screenName&quot;: &quot;&quot;,
+                    &quot;params&quot;: &quot;&quot;,
+                    &quot;template&quot;: &quot;wns template&quot;,
+                    &quot;version&quot;: 1,
+                    &quot;fallback&quot;: &quot;fallback&quot;,
+                    &quot;badge&quot;: &quot;11&quot;,
+                    &quot;image&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;source&quot;: &quot;image&quot;
+                            }
+                        ]
+                    },
+                    &quot;text&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;value&quot;: &quot;text1&quot;
+                            },
+                            {
+                                &quot;value&quot;: &quot;text2&quot;
+                            }
+                        ]
+                    },
+                    &quot;value&quot;: &quot;&quot;
+                }
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Another message For Different App&quot;,
+            &quot;message&quot;: &quot;Hi ##First Name##, We are glad to announce flat 20% discount on iphone 6s. The offer ends by 30th March 2016. Hurry!!&quot;,
+            &quot;richContent&quot;: &quot;some rich content&quot;,
+            &quot;application&quot;: {
+                &quot;appId&quot;: &quot;JPushSpecificApp&quot;,
+                &quot;applicationName&quot;: &quot;JPushSpecificApp&quot;
+            },
+            &quot;repeatMessage&quot;: {
+                &quot;name&quot;: &quot;Another message For Different App REPEAT&quot;,
+                &quot;message&quot;: &quot;Message box contents for repeat different message.\n 
+Hi, ##First Name## ##Last Name## Hurry!! 20% discount on iphone 6s. The offer ends by 30th March 2016&quot;,
+                &quot;richContent&quot;: &quot;&quot;,
+                &quot;subscribers&quot;: 1,
+                &quot;pushesSent&quot;: 0,
+                &quot;pushesOpened&quot;: 0,
+                &quot;platformSpecificProps&quot;: {
+                    &quot;title&quot;: &quot;Hello China&quot;,
+                    &quot;iphone&quot;: {
+                        &quot;badge&quot;: 1,
+                        &quot;sound&quot;: &quot;tada&quot;,
+                        &quot;category&quot;: &quot;Anniversary&quot;,
+                        &quot;contentAvailable&quot;: 1,
+                        &quot;actionLocKey&quot;: &quot;Celebrate&quot;,
+                        &quot;locKey&quot;: &quot;lockey&quot;,
+                        &quot;locArgs&quot;: {
+                            &quot;locArg&quot;: [
+                                &quot;locArg&quot;
+                            ]
+                        },
+                        &quot;launchImage&quot;: &quot;/yungyankan&quot;,
+                        &quot;title&quot;: &quot;Hello China&quot;,
+                        &quot;titleLocKey&quot;: &quot;tlk&quot;,
+                        &quot;titleLocArgs&quot;: {
+                            &quot;titleLocArg&quot;: [
+                                &quot;tla&quot;
+                            ]
+                        },
+                        &quot;customData&quot;: {
+                            &quot;key&quot;: [
+                                {
+                                    &quot;content&quot;: &quot;1&quot;,
+                                    &quot;name&quot;: &quot;surprise&quot;
+                                }
+                            ]
+                        }
+                    },
+                    &quot;android&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;surprise&quot;,
+                                &quot;value&quot;: &quot;1&quot;
+                            }
+                        ]
+                    },
+                    &quot;web&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;surprise&quot;,
+                                &quot;value&quot;: &quot;1&quot;
+                            }
+                        ]
+                    },
+                    &quot;jpush&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;title&quot;,
+                                &quot;value&quot;: &quot;Hello China&quot;
+                            },
+                            {
+                                &quot;name&quot;: &quot;surprise&quot;,
+                                &quot;value&quot;: &quot;1&quot;
+                            }
+                        ]
+                    },
+                    &quot;windows&quot;: {
+                        &quot;notificationType&quot;: &quot;TILE&quot;,
+                        &quot;text1&quot;: &quot;&quot;,
+                        &quot;text2&quot;: &quot;&quot;,
+                        &quot;screenName&quot;: &quot;&quot;,
+                        &quot;params&quot;: &quot;&quot;,
+                        &quot;title&quot;: &quot;mpnstitle&quot;,
+                        &quot;badge&quot;: 11,
+                        &quot;imagePath&quot;: &quot;/mpns/surprise&quot;
+                    },
+                    &quot;wns&quot;: {
+                        &quot;notificationType&quot;: &quot;BADGE&quot;,
+                        &quot;text1&quot;: &quot;&quot;,
+                        &quot;text2&quot;: &quot;&quot;,
+                        &quot;screenName&quot;: &quot;&quot;,
+                        &quot;params&quot;: &quot;&quot;,
+                        &quot;template&quot;: &quot;&quot;,
+                        &quot;version&quot;: &quot;&quot;,
+                        &quot;fallback&quot;: &quot;&quot;,
+                        &quot;badge&quot;: &quot;&quot;,
+                        &quot;image&quot;: &quot;&quot;,
+                        &quot;text&quot;: &quot;&quot;,
+                        &quot;value&quot;: &quot;attention&quot;
+                    }
+                },
+                &quot;interval&quot;: 1,
+                &quot;intervalUnit&quot;: &quot;Hours&quot;
+            },
+            &quot;subscribers&quot;: 1,
+            &quot;pushesSent&quot;: 1,
+            &quot;pushesOpened&quot;: 0,
+            &quot;platformSpecificProps&quot;: {
+                &quot;title&quot;: &quot;Hello China&quot;,
+                &quot;iphone&quot;: {
+                    &quot;badge&quot;: 1,
+                    &quot;sound&quot;: &quot;tada&quot;,
+                    &quot;category&quot;: &quot;Anniversary&quot;,
+                    &quot;contentAvailable&quot;: 1,
+                    &quot;actionLocKey&quot;: &quot;Celebrate&quot;,
+                    &quot;locKey&quot;: &quot;lockey&quot;,
+                    &quot;locArgs&quot;: {
+                        &quot;locArg&quot;: [
+                            &quot;locArg&quot;
+                        ]
+                    },
+                    &quot;launchImage&quot;: &quot;/yungyankan&quot;,
+                    &quot;title&quot;: &quot;Hello China&quot;,
+                    &quot;titleLocKey&quot;: &quot;tlk&quot;,
+                    &quot;titleLocArgs&quot;: {
+                        &quot;titleLocArg&quot;: [
+                            &quot;tla&quot;
+                        ]
+                    },
+                    &quot;customData&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;content&quot;: &quot;1&quot;,
+                                &quot;name&quot;: &quot;surprise&quot;
+                            }
+                        ]
+                    }
+                },
+                &quot;android&quot;: {
+                    &quot;key&quot;: [
+                        {
+                            &quot;name&quot;: &quot;surprise&quot;,
+                            &quot;value&quot;: &quot;1&quot;
+                        }
+                    ]
+                },
+                &quot;web&quot;: {
+                    &quot;key&quot;: [
+                        {
+                            &quot;name&quot;: &quot;surprise&quot;,
+                            &quot;value&quot;: &quot;1&quot;
+                        }
+                    ]
+                },
+                &quot;jpush&quot;: {
+                    &quot;key&quot;: [
+                        {
+                            &quot;name&quot;: &quot;title&quot;,
+                            &quot;value&quot;: &quot;Hello China&quot;
+                        },
+                        {
+                            &quot;name&quot;: &quot;surprise&quot;,
+                            &quot;value&quot;: &quot;1&quot;
+                        }
+                    ]
+                },
+                &quot;windows&quot;: {
+                    &quot;notificationType&quot;: &quot;TOAST&quot;,
+                    &quot;text1&quot;: &quot;&quot;,
+                    &quot;text2&quot;: &quot;&quot;,
+                    &quot;screenName&quot;: &quot;screen name&quot;,
+                    &quot;params&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;mpns params key&quot;,
+                                &quot;value&quot;: &quot;mpns value&quot;
+                            }
+                        ]
+                    },
+                    &quot;title&quot;: &quot;&quot;,
+                    &quot;badge&quot;: &quot;&quot;,
+                    &quot;imagePath&quot;: &quot;&quot;
+                },
+                &quot;wns&quot;: {
+                    &quot;notificationType&quot;: &quot;TOAST&quot;,
+                    &quot;text1&quot;: &quot;&quot;,
+                    &quot;text2&quot;: &quot;&quot;,
+                    &quot;screenName&quot;: &quot;screen name&quot;,
+                    &quot;params&quot;: {
+                        &quot;key&quot;: [
+                            {
+                                &quot;name&quot;: &quot;wns params key&quot;,
+                                &quot;value&quot;: &quot;wns value&quot;
+                            }
+                        ]
+                    },
+                    &quot;template&quot;: &quot;&quot;,
+                    &quot;version&quot;: &quot;&quot;,
+                    &quot;fallback&quot;: &quot;&quot;,
+                    &quot;badge&quot;: &quot;&quot;,
+                    &quot;image&quot;: &quot;&quot;,
+                    &quot;text&quot;: &quot;&quot;,
+                    &quot;value&quot;: &quot;&quot;
+                }
+            }
+        }
+    ],
+    &quot;campaignMails&quot;: [
+        {
+            &quot;subject&quot;: &quot;email subject&quot;,
+            &quot;contentType&quot;: &quot;text.html&quot;,
+            &quot;senderEmail&quot;: &quot;&quot;,
+            &quot;senderName&quot;: &quot;&quot;,
+            &quot;content&quot;: &quot;compose message&quot;,
+            &quot;mailsSent&quot;: 0,
+            &quot;mailsOpened&quot;: 0,
+            &quot;repeatMessage&quot;: {
+                &quot;subject&quot;: &quot;repeat email subject&quot;,
+                &quot;contentType&quot;: &quot;text.html&quot;,
+                &quot;senderEmail&quot;: &quot;&quot;,
+                &quot;senderName&quot;: &quot;&quot;,
+                &quot;content&quot;: &quot;##First Name##&quot;,
+                &quot;mailsSent&quot;: 0,
+                &quot;mailsOpened&quot;: 0,
+                &quot;interval&quot;: 1,
+                &quot;intervalUnit&quot;: &quot;Weeks&quot;
+            }
+        }
+    ],
+    &quot;campaignSms&quot;: [
+        {
+            &quot;name&quot;: &quot;sms message name&quot;,
+            &quot;smsMessage&quot;: &quot;message box!##Last Name##&quot;,
+            &quot;smsSent&quot;: 0,
+            &quot;smsOpened&quot;: 0,
+            &quot;repeatMessage&quot;: {
+                &quot;name&quot;: &quot;sms message name&quot;,
+                &quot;smsMessage&quot;: &quot;message box!##Last Name##&quot;,
+                &quot;smsSent&quot;: 0,
+                &quot;smsOpened&quot;: 0,
+                &quot;interval&quot;: 1,
+                &quot;intervalUnit&quot;: &quot;Hours&quot;
+            }
+        }
+    ],
+
+  &quot;campaignVoiceSms&quot; : [ {
+    &quot;name&quot; : &quot;campaign voice sms&quot;,
+    &quot;smsMessage&quot; : &quot;campaing voice sms for this campaign&quot;,
+    &quot;smsSent&quot; : 0,
+    &quot;smsOpened&quot; : 0
+  } ],
+
+    &quot;campaignPasses&quot;: [
+        {
+            &quot;passName&quot;: &quot;BoardingPassAuto11&quot;,
+            &quot;passType&quot;: &quot;BOARDING&quot;,
+            &quot;passOpened&quot;: 0,
+            &quot;passSent&quot;: 28,
+            &quot;passIntegrationConfig&quot;: {
+                &quot;passIssueNotificationDetails&quot;: [
+                    {
+                        &quot;channel&quot;: &quot;EMAIL&quot;,
+                        &quot;enabled&quot;: true,
+                        &quot;messageContent&quot;: &quot;Pass Issue content Email
+
+&lt; a href = '##Email Pass Link##' &gt; click here &lt; /a&gt;&quot;,
+&quot;subject&quot;: &quot;Sending Boarding Pass Automation - Test case-01&quot;,
+&quot;senderName&quot;: &quot;&quot;,
+&quot;senderEmail&quot;: &quot;&quot;
+}
+],
+&quot;passUpdateNotificationDetails&quot;: [
+{
+&quot;channel&quot;: &quot;EMAIL&quot;,
+&quot;enabled&quot;: true,
+&quot;messageContent&quot;: &quot;Pass Updated into the device&quot;,
+&quot;subject&quot;: &quot;Boarding Pass Updated - Automation - TestCase -01&quot;,
+&quot;senderName&quot;: &quot;&quot;,
+&quot;senderEmail&quot;: &quot;&quot;
+}
+]
+},
+&quot;passContent&quot;: {
+&quot;basicDetails&quot;: {
+&quot;passTypeIdentifier&quot;: &quot;pass.com.vms.passbook1&quot;,
+&quot;passSerialNumber&quot;: &quot;&quot;,
+&quot;groupIdentifier&quot;: &quot;&quot;,
+&quot;appLaunchURL&quot;: &quot;&quot;,
+&quot;ituneIdentifiers&quot;: &quot;823580694&quot;,
+&quot;webServiceUrl&quot;: &quot;http://10.10.24.48:9091/vpns/&quot;,
+&quot;timezone&quot;: &quot;(GMT+05:30) Chennai, Mumbai, New Delhi&quot;,
+&quot;passType&quot;: &quot;BOARDING&quot;,
+&quot;organizationName&quot;: &quot;VoltMX Automation&quot;,
+&quot;description&quot;: &quot;Creating Boarding Pass Template Through API&quot;,
+&quot;passSerialNumberType&quot;: &quot;AUTO_GEN&quot;,
+&quot;eventTicketType&quot;: &quot;&quot;,
+&quot;customJsonData&quot;: {
+
+                    }
+                },
+                &quot;appearance&quot;: {
+                    &quot;bgColor&quot;: &quot;#FFF17F&quot;,
+                    &quot;labelColor&quot;: &quot;#7E7100&quot;,
+                    &quot;valueColor&quot;: &quot;#181500&quot;,
+                    &quot;suppressStripShine&quot;: false,
+                    &quot;images&quot;: [
+                        {
+                            &quot;url&quot;: &quot;http://icons.iconarchive.com/icons/martz90/circle-addon2/256/plane-flight-icon.png&quot;,
+                            &quot;blob&quot;: false,
+                            &quot;size&quot;: 20376,
+                            &quot;extension&quot;: &quot;png&quot;,
+                            &quot;imageType&quot;: &quot;LOGO&quot;,
+                            &quot;imageId&quot;: &quot;&quot;
+                        },
+                        {
+                            &quot;url&quot;:
+
+&quot;http://icons.iconarchive.com/icons/martz90/circle-addon2/256/plane-flight-icon.png&quot;,
+&quot;blob&quot;: false,
+&quot;size&quot;: 20376,
+&quot;extension&quot;: &quot;png&quot;,
+&quot;imageType&quot;: &quot;ICON&quot;,
+&quot;imageId&quot;: &quot;&quot;
+}
+]
+},
+&quot;frontLayout&quot;: {
+&quot;logoText&quot;: &quot;Brd-Auto-1&quot;,
+&quot;headerFields&quot;: [
+{
+&quot;label&quot;: &quot;header1&quot;,
+&quot;data&quot;: &quot;GATE&quot;,
+&quot;changeMessage&quot;: &quot;&quot;,
+&quot;displayRelatively&quot;: false,
+&quot;ignoreTimezone&quot;: false,
+&quot;key&quot;: &quot;header1&quot;,
+&quot;dataType&quot;: &quot;TEXT&quot;,
+&quot;numberFormat&quot;: &quot;&quot;,
+&quot;currency&quot;: &quot;&quot;,
+&quot;dateTimeFormat&quot;: &quot;&quot;,
+&quot;alignment&quot;: &quot;CENTER&quot;,
+&quot;autolink&quot;: [
+
+                            ]
+                        },
+                        {
+                            &quot;label&quot;: &quot;Head2&quot;,
+                            &quot;data&quot;: &quot;2header&quot;,
+                            &quot;changeMessage&quot;: &quot;&quot;,
+                            &quot;displayRelatively&quot;: false,
+                            &quot;ignoreTimezone&quot;: false,
+                            &quot;key&quot;: &quot;header2&quot;,
+                            &quot;dataType&quot;: &quot;TEXT&quot;,
+                            &quot;numberFormat&quot;: &quot;&quot;,
+                            &quot;currency&quot;: &quot;&quot;,
+                            &quot;dateTimeFormat&quot;: &quot;&quot;,
+                            &quot;alignment&quot;: &quot;LEFT&quot;,
+                            &quot;autolink&quot;: [
+
+                            ]
+                        }
+                    ],
+                    &quot;primaryFields&quot;: [
+
+                    ],
+                    &quot;auxiliaryFields&quot;: [
+
+                    ],
+                    &quot;secondaryFields&quot;: [
+                        {
+                            &quot;label&quot;: &quot;sLabel1&quot;,
+                            &quot;data&quot;: &quot;sdata1&quot;,
+                            &quot;changeMessage&quot;: &quot;&quot;,
+                            &quot;displayRelatively&quot;: false,
+                            &quot;ignoreTimezone&quot;: false,
+                            &quot;key&quot;: &quot;skey1&quot;,
+                            &quot;dataType&quot;: &quot;TEXT&quot;,
+                            &quot;numberFormat&quot;: &quot;&quot;,
+                            &quot;currency&quot;: &quot;&quot;,
+                            &quot;dateTimeFormat&quot;: &quot;&quot;,
+                            &quot;alignment&quot;: &quot;LEFT&quot;,
+                            &quot;autolink&quot;: [
+
+                            ]
+                        },
+                        {
+                            &quot;label&quot;: &quot;sLabel2&quot;,
+                            &quot;data&quot;: &quot;sdata2&quot;,
+                            &quot;changeMessage&quot;: &quot;&quot;,
+                            &quot;displayRelatively&quot;: false,
+                            &quot;ignoreTimezone&quot;: false,
+                            &quot;key&quot;: &quot;skey2&quot;,
+                            &quot;dataType&quot;: &quot;TEXT&quot;,
+                            &quot;numberFormat&quot;: &quot;&quot;,
+                            &quot;currency&quot;: &quot;&quot;,
+                            &quot;dateTimeFormat&quot;: &quot;&quot;,
+                            &quot;alignment&quot;: &quot;LEFT&quot;,
+                            &quot;autolink&quot;: [
+
+                            ]
+                        }
+                    ],
+                    &quot;barcodeDetails&quot;: {
+                        &quot;message&quot;: &quot;Boarding Message Automation2&quot;,
+                        &quot;alternateText&quot;: &quot;Alternative Text message&quot;,
+                        &quot;barcodeType&quot;: &quot;PDF417&quot;,
+                        &quot;embeddedMessageType&quot;: &quot;HARDCODED_MESSAGE&quot;,
+                        &quot;alternativeTextType&quot;: &quot;HARDCODED_MESSAGE&quot;,
+                        &quot;embeddedFormat&quot;: &quot;UTF_8&quot;
+                    },
+                    &quot;transitType&quot;: &quot;AIR&quot;
+                },
+                &quot;backLayout&quot;: {
+                    &quot;fields&quot;: [
+                        {
+                            &quot;label&quot;: &quot;Contact-Us&quot;,
+                            &quot;data&quot;: &quot;website: www.voltmx.com&quot;,
+                            &quot;changeMessage&quot;: &quot;&quot;,
+                            &quot;displayRelatively&quot;: false,
+                            &quot;ignoreTimezone&quot;: false,
+                            &quot;key&quot;: &quot;bkey1&quot;,
+                            &quot;dataType&quot;: &quot;TEXT&quot;,
+                            &quot;numberFormat&quot;: &quot;&quot;,
+                            &quot;currency&quot;: &quot;&quot;,
+                            &quot;dateTimeFormat&quot;: &quot;&quot;,
+                            &quot;alignment&quot;: &quot;&quot;,
+                            &quot;autolink&quot;: [
+
+                            ]
+                        },
+                        {
+                            &quot;label&quot;: &quot;Mobile Number&quot;,
+                            &quot;data&quot;: &quot;9.20E+11&quot;,
+                            &quot;changeMessage&quot;: &quot;&quot;,
+                            &quot;displayRelatively&quot;: false,
+                            &quot;ignoreTimezone&quot;: false,
+                            &quot;key&quot;: &quot;bkey2&quot;,
+                            &quot;dataType&quot;: &quot;TEXT&quot;,
+                            &quot;numberFormat&quot;: &quot;&quot;,
+                            &quot;currency&quot;: &quot;&quot;,
+                            &quot;dateTimeFormat&quot;: &quot;&quot;,
+                            &quot;alignment&quot;: &quot;&quot;,
+                            &quot;autolink&quot;: [
+
+                            ]
+                        }
+                    ],
+                    &quot;enableAutoUpdates&quot;: false
+                },
+                &quot;passRelevance&quot;: {
+                    &quot;relevantDate&quot;: &quot;&quot;,
+                    &quot;ignoreTimezone&quot;: false,
+                    &quot;relevantLocations&quot;: [
+
+                    ],
+                    &quot;relevantBeacons&quot;: [
+
+                    ],
+                    &quot;maxDistance&quot;: 10.0
+                },
+                &quot;passRules&quot;: {
+                    &quot;stopAfter&quot;: &quot;&quot;,
+                    &quot;expiryDate&quot;: &quot;&quot;,
+                    &quot;voided&quot;: false,
+                    &quot;dateRestriction&quot;: &quot;PERMANENTLY_AVAILABLE&quot;
+                },
+                &quot;languageDetails&quot;: {
+                    &quot;originalFields&quot;: [
+
+                    ],
+                    &quot;languageEntries&quot;: [
+
+                    ],
+                    &quot;passLanguage&quot;: &quot;EN&quot;
+                }
+            }
+        }
+    ],
+    &quot;campaignChannelPriorities&quot;: [
+        {
+            &quot;messageChannel&quot;: &quot;PUSH&quot;
+        },
+        {
+            &quot;messageChannel&quot;: &quot;Email&quot;
+        },
+        {
+            &quot;messageChannel&quot;: &quot;SMS&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;Running&quot;
+
+}
+</code></pre>
+<h2 id="response-status">Response Status</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status 200</td>
+<td>Array of campaigns info</td>
+</tr>
+<tr>
+<td>Status 400</td>
+<td>Invalid campaign ID provided or no campaign found with given ID</td>
+</tr>
+<tr>
+<td>Status 401</td>
+<td>Unauthorized request</td>
+</tr>
+<tr>
+<td>Status 500</td>
+<td>Server failure to process request</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

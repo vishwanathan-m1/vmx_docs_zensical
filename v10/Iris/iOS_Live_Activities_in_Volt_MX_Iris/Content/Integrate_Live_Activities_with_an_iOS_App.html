@@ -1,0 +1,3789 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Integrate_Live_Activities_with_an_iOS_App.html">
+      
+      
+        <link rel="prev" href="Introduction.html">
+      
+      
+        <link rel="next" href="Volt_MX_Live_Activity_Namespace_and_APIs.html">
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Integrate Live Activities with an iOS App - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-information-property-list" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-voltmx/14" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integrate Live Activities with an iOS App
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_11" id="__nav_8_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_11">
+            <span class="md-nav__icon md-icon"></span>
+            iOS Live Activities in Volt MX Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Integrate Live Activities with an iOS App
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Integrate_Live_Activities_with_an_iOS_App.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Integrate Live Activities with an iOS App
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-information-property-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Information Property List.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-push-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Push Capabilities.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-enable-live-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Enable Live Activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-liveactivities-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creating LiveActivities module.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creating LiveActivities module.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-adding-attribute-and-configuration-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      i. Adding Attribute and Configuration Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii-bringing-swiftui-live-activity-from-native-to-volt-mx" class="md-nav__link">
+    <span class="md-ellipsis">
+      ii. Bringing SwiftUI Live Activity from Native to Volt MX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii-adding-images-to-live-activity-in-configurations-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      iii. Adding Images to Live Activity in Configurations UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv-sample-use-case-a-cab-live-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      iv. Sample Use Case: A Cab Live Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-deeplinking-in-live-activities-using-widgeturl" class="md-nav__link">
+    <span class="md-ellipsis">
+      v. Deeplinking in Live Activities using widgetURL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-live-activities-in-the-smart-stack-on-apple-watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      vi. Live Activities in the Smart Stack on Apple Watch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vii-live-activities-in-standby-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      vii. Live Activities in StandBy Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Volt_MX_Live_Activity_Namespace_and_APIs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Live Activity Namespace and APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="API_Reference.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-information-property-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Information Property List.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-push-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Push Capabilities.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-enable-live-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Enable Live Activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-liveactivities-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creating LiveActivities module.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creating LiveActivities module.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-adding-attribute-and-configuration-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      i. Adding Attribute and Configuration Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii-bringing-swiftui-live-activity-from-native-to-volt-mx" class="md-nav__link">
+    <span class="md-ellipsis">
+      ii. Bringing SwiftUI Live Activity from Native to Volt MX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii-adding-images-to-live-activity-in-configurations-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      iii. Adding Images to Live Activity in Configurations UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv-sample-use-case-a-cab-live-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      iv. Sample Use Case: A Cab Live Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-deeplinking-in-live-activities-using-widgeturl" class="md-nav__link">
+    <span class="md-ellipsis">
+      v. Deeplinking in Live Activities using widgetURL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-live-activities-in-the-smart-stack-on-apple-watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      vi. Live Activities in the Smart Stack on Apple Watch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vii-live-activities-in-standby-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      vii. Live Activities in StandBy Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Integrate Live Activities with an iOS App</h1>
+
+<p>To enable live activities, you need to add the Permissions, Capabilities, Attributes, Configurations, and images (if any) in the Iris project. Follow these steps:</p>
+<h2 id="1-information-property-list"><p style="color: black"> 1. Information Property List.</p></h2>
+<p>To support Live Activities in your app, include the following key(s) in the infoplist_configuration.json file of the project:</p>
+<pre><code>
+{
+    &quot;NSSupportsLiveActivities&quot; : true,
+    &quot;NSSupportsLiveActivitiesFrequentUpdates&quot; : true
+}
+
+</code></pre>
+<p><b>NSSupportsLiveActivities</b> : (Boolean)
+Set this key to true to enable Live Activities in your app. This allows your app to display real-time updates on the Lock Screen and in the Dynamic Island.</p>
+<p><b>NSSupportsLiveActivitiesFrequentUpdates</b> : (Boolean)
+Set this key to true to allow your app’s Live Activities to receive frequent updates through remote push notifications.
+Make sure to configure these keys properly to enhance the Live Activities experience for users.</p>
+<h2 id="2-push-capabilities"><p style="color: black"> 2. Push Capabilities.</p></h2>
+<p>In Volt Iris, Go to <B>Project &gt; Settings &gt; Native &gt; iPhone/iPad</B>. Scroll down to find the <B>Push Notifications</B> section. Change the value of Push Certificate from <B>None</B> to either <B>development</B> or <B>production</B>, depending on your environment. Enabling push notifications is required if your Live Activity will be started using <B>push capability</B> or <B>broadcast channel capability</B>.</p>
+<p><img alt="" src="../Resources/Images/Fig1.png" /></p>
+<p><em>Fig 1 : Enabling Push Notifications Capability</em></p>
+<h2 id="3-enable-live-activities"><p style="color: black"> 3. Enable Live Activities</p></h2>
+<p>In Volt Iris, Go to <b>Project &gt; Settings &gt; Native &gt; iPhone/iPad</b>. Scroll down to the <b>‘Live Activities’</b> section. Check the box labeled <b>‘Enable iOS Live Activity’</b>.</p>
+<p>Once you enable Live Activities, two text fields will appear:</p>
+<p>a. <b>Attributes:</b> Enter the comma-separated names of the SwiftUI structs conforming to <b>ActivityAttributes</b>, which define the attributes for your Live Activities.</p>
+<p><b>Example:</b> CabAttributes, FlightAttributes</p>
+<p>b. <b>Configurations:</b> Enter the comma-separated names of the SwiftUI structs conforming to <b>Widget</b>, which define the UI layout and behavior for the Live Activity.</p>
+<p><strong>Example:</strong> CabActivityConfiguration, FlightActivityConfiguration</p>
+<p><img alt="" src="../Resources/Images/Fig2.png" /></p>
+<p><em>Fig 2 : Enabling Live Activities</em></p>
+<p><strong><em>Important Considerations</em></strong></p>
+<p>When configuring <b>‘Attributes’</b> and <b>‘Configurations’</b> for Live Activities, keep the following in mind:</p>
+<ol>
+<li>
+<p><b>Both fields must be filled – </b> You must provide at <em>least one</em> entry in both the ‘Attributes’ and ‘Configurations’ fields. If either field is left empty, Live Activities might <em>not</em> be enabled, even if the checkbox is ticked.</p>
+</li>
+<li>
+<p><b>Names must match exactly (case-sensitive) – </b> The names entered in these fields must exactly match the corresponding ActivityAttributes and Widget struct names (as well as the 'swift' module file names) used, including capitalization. Live Activities are case-sensitive, so any mismatch in letter casing will cause issues.</p>
+</li>
+<li>
+<p><b>Unique names are required –</b></p>
+<p>i)   All ‘Attributes’ must have unique names.</p>
+<p>ii)  All ‘Configurations’ must have unique names.</p>
+<p>iii) Duplicate names within either field can cause conflicts and unexpected behavior.</p>
+</li>
+<li>
+<p><b>Multiple entries are allowed –</b> You can add as many ActivityAttributes and Widget configurations as needed, separated by commas.</p>
+</li>
+<li>
+<p><b>Refer to the next section -</b> Refer to ‘Creating LiveActivities module’ for more information on generating the SwiftUI files.</p>
+</li>
+</ol>
+<p>Failing to follow these guidelines may result in Live Activities not being generated or functioning incorrectly.</p>
+<h2 id="4-creating-liveactivities-module"><p style="color: black"> 4. Creating LiveActivities module.</p></h2>
+<h3 id="i-adding-attribute-and-configuration-modules"><p style="color: black"> i. Adding Attribute and Configuration Modules</p></h3>
+<ol>
+<li>
+<p>Navigate to the <B>Modules</B> section in your <B>Project</B> settings.</p>
+</li>
+<li>
+<p>Locate the newly available <B>LiveActivities</B> section.</p>
+</li>
+<li>
+<p>Under <B>LiveActivities</B>, you will find two folders:</p>
+<p>i) <b>Attributes</b> (for defining activity attributes)</p>
+<p>ii) <b>Configurations</b> (for defining activity UI and behavior)</p>
+</li>
+<li>
+<p>To add a new swift module:</p>
+<p>i) Click the small <b>dropdown arrow</b> next to <b>Attributes</b>, then select <b>New Swift Module.</b> This will create a new Swift file inside the Attributes folder.</p>
+<p>ii) Similarly, click the <b>dropdown arrow</b> next to Configurations, then select <b>New Swift Module</b> to create a new Swift file inside the <b>Configurations </b>folder.</p>
+</li>
+<li>
+<p>You can add multiple Attribute Swift files and multiple Configuration Swift files under these folders as needed.</p>
+</li>
+<li>
+<p>The names of modules in <b>Attributes</b> and <b>Configurations</b> folders must exactly match the comma-separated values specified in the respective Attributes and Configurations text fields found under <b>Project &gt; Settings &gt; Native &gt; iPhone/iPad - ‘Enable iOS Live Activity’</b>. For example, if the Attributes field contains CabAttributes, FlightAttributes, you must have Swift modules named CabAttributes.swift and FlightAttributes.swift_Each of these modules should contain the implementation of their corresponding structs — struct CabAttributes and struct FlightAttributes. Having additional or missing modules that do not align with the values provided in the text fields may result in Live Activities being disabled.</p>
+</li>
+</ol>
+<p><img alt="" src="../Resources/Images/Fig3.png" /></p>
+<p><em>Fig 3 : LiveActivities Modules</em></p>
+<h3 id="ii-bringing-swiftui-live-activity-from-native-to-volt-mx"><p style="color: black">ii. Bringing SwiftUI Live Activity from Native to Volt MX</p></h3>
+<p>After developing a SwiftUI Live Activity in your native Xcode project, you need to modify it slightly to fit our structure. Follow these steps:</p>
+<p><strong>Step 1: Create a Widget Extension in Xcode</strong></p>
+<ol>
+<li>Open your <b>Xcode</b> project.</li>
+<li>Go to <b>File &gt; New &gt; Target</b>.</li>
+<li>Select <b>Widget Extension</b> for iOS.</li>
+<li>Enter a Product Name (e.g., <b>Sample)</b>.</li>
+<li>Tick the checkbox <b>Include Live Activity</b>.</li>
+<li>Click <b>Finish</b> and enable the extension when prompted.</li>
+</ol>
+<p>After this, Xcode will generate a default Swift file called <b>SampleLiveActivity.swift</b> inside the new Widget Extension. The file will look like this:</p>
+<pre><code>import ActivityKit
+import WidgetKit
+import SwiftUI
+
+
+struct SampleAttributes: ActivityAttributes {
+    public struct ContentState: Codable, Hashable {
+        var emoji: String  // Dynamic property that changes over time
+    }
+    var name: String  // Fixed property that does not change
+}
+
+
+struct SampleLiveActivity: Widget {
+    var body: some WidgetConfiguration {
+        ActivityConfiguration(for: SampleAttributes.self) { context in
+            VStack {
+                Text(&quot;Hello \(context.state.emoji)&quot;)
+            }
+            .activityBackgroundTint(Color.cyan)
+            .activitySystemActionForegroundColor(Color.black)
+        } dynamicIsland: { context in
+            DynamicIsland {
+                DynamicIslandExpandedRegion(.leading) {
+                    Text(&quot;Leading&quot;)
+                }
+                DynamicIslandExpandedRegion(.trailing) {
+                    Text(&quot;Trailing&quot;)
+                }
+                DynamicIslandExpandedRegion(.bottom) {
+                    Text(&quot;Bottom \(context.state.emoji)&quot;)
+                }
+            } compactLeading: {
+                Text(&quot;L&quot;)
+            } compactTrailing: {
+                Text(&quot;T \(context.state.emoji)&quot;)
+            } minimal: {
+                Text(context.state.emoji)
+            }
+            .widgetURL(URL(string: &quot;http://www.apple.com&quot;))
+            .keylineTint(Color.red)
+        }
+    }
+}
+
+</code></pre>
+<p><strong>Step 2: Modify Your Code to Two Separate Files</strong></p>
+<p>To integrate your code into our product, you need to separate it into two files:</p>
+<ol>
+<li>Attributes File (Defines attributes and dynamic states)</li>
+<li>Configuration File (Defines the UI layout)</li>
+</ol>
+<p>a.  <strong>Attributes File (SampleAttributes.swift)</strong></p>
+<pre><code>
+#if canImport(ActivityKit)
+import ActivityKit
+
+
+@available(iOS 16.2, *)
+struct SampleAttributes: ActivityAttributes {
+    public struct ContentState: Codable, Hashable {
+        var emoji: String  // Dynamic variable (required)
+    }
+    var name: String  // Fixed variable (optional)
+}
+#endif
+
+
+</code></pre>
+<p><strong>Key Changes:</strong></p>
+<ul>
+<li>Added <b>#if canImport(ActivityKit) -</b> Ensures compatibility across platforms.</li>
+<li>Added <b>@available(iOS 16.2, *) -</b> Ensures Live Activity runs on iOS 16.2 and above.</li>
+<li>Fixed properties (var name: String) are optional – your Live Activity must have at least one dynamic (ContentState) variable.</li>
+</ul>
+<p>b.  <strong>Configurations File (SampleLiveActivity.swift)</strong></p>
+<pre><code>import SwiftUI
+import WidgetKit
+
+
+@available(iOS 16.2, *)
+struct SampleLiveActivity: Widget {
+    var body: some WidgetConfiguration {
+        ActivityConfiguration(for: SampleAttributes.self) { context in
+            VStack {
+                Text(&quot;Hello \(context.state.emoji)&quot;)
+            }
+            .activityBackgroundTint(Color.cyan)
+            .activitySystemActionForegroundColor(Color.black)
+        } dynamicIsland: { context in
+            DynamicIsland {
+                DynamicIslandExpandedRegion(.leading) {
+                    Text(&quot;Leading&quot;)
+                }
+                DynamicIslandExpandedRegion(.trailing) {
+                    Text(&quot;Trailing&quot;)
+                }
+                DynamicIslandExpandedRegion(.bottom) {
+                    Text(&quot;Bottom \(context.state.emoji)&quot;)
+                }
+            } compactLeading: {
+                Text(&quot;L&quot;)
+            } compactTrailing: {
+                Text(&quot;T \(context.state.emoji)&quot;)
+            } minimal: {
+                Text(context.state.emoji)
+            }
+            .widgetURL(URL(string: &quot;http://www.apple.com&quot;))
+            .keylineTint(Color.red)
+        }
+    }
+}
+
+
+</code></pre>
+<p><strong>Key Changes:</strong></p>
+<ul>
+<li>Added import SwiftUI and import WidgetKit.</li>
+<li>Kept UI layout code unchanged.</li>
+<li>Added <b>@available(iOS 16.2, *)</b> - Ensures Live Activity runs on iOS 16.2 and above.</li>
+</ul>
+<p>c.  <strong>Understanding SampleAttributes and SampleLiveActivity</strong></p>
+<p><strong>SampleAttributes</strong></p>
+<p>The SampleAttributes struct defines the data structure for a Live Activity. It consists of two parts: ContentState (dynamic variables) and fixed attributes. The ContentState struct contains emoji, which is a dynamic variable—this means its value can change over time, reflecting updates in real-time. The outer SampleAttributes struct contains name, which is a fixed variable that remains unchanged throughout the activity's lifecycle. While this example does not access ‘name’, it can be retrieved using context.attributes.name if needed. The @available(iOS 16.2, *) ensures compatibility since Live Activities are supported from iOS 16.2 onwards.</p>
+<p><strong>SampleLiveActivity</strong></p>
+<p>The SampleLiveActivity struct is responsible for defining how the Live Activity appears on the Lock Screen and Dynamic Island. The main UI for the Lock Screen and Notification Banner is defined inside ActivityConfiguration. In this example, it displays "Hello (context.state.emoji)".</p>
+<p>The Dynamic Island UI is structured using multiple regions:</p>
+<ul>
+<li>
+<p>DynamicIslandExpandedRegion(.leading) - Displays content in the leading (left) area of the expanded Dynamic Island.</p>
+</li>
+<li>
+<p>DynamicIslandExpandedRegion(.trailing) - Displays content in the trailing (right) area of the expanded Dynamic Island.</p>
+</li>
+<li>
+<p>DynamicIslandExpandedRegion(.bottom) - Displays content in the bottom area of the expanded Dynamic Island, allowing for more details.</p>
+</li>
+<li>
+<p>compactLeading - Defines content in the leading (left) area of the compact Dynamic Island.</p>
+</li>
+<li>
+<p>compactTrailing - Defines content in the trailing (right) area of the compact Dynamic Island.</p>
+</li>
+<li>
+<p>minimal - Displays content when the Dynamic Island is in its smallest (minimal) state.</p>
+</li>
+</ul>
+<p>This structured approach ensures that the Live Activity adapts dynamically across different screen placements, making it visible and interactive in multiple locations on iOS devices. For more information, refer to the official Apple <a href="https://developer.apple.com/design/human-interface-guidelines/live-activities">doc for the design of live activities</a>.</p>
+<p><strong>Step 3: Enter Names in Live Activities Settings</strong></p>
+<p>Once you have separated your code into Attributes and Configurations, enter the corresponding names under ‘Enable iOS Live Activity’ fields for ‘Attributes’ and ‘Configurations’ as explained earlier in ‘Enable Live Activities’:</p>
+<ul>
+<li><b>Attributes</b> textfield - SampleAttributes</li>
+<li><b>Configurations</b> textfield - SampleLiveActivity</li>
+</ul>
+<p>This step ensures that our system recognizes your SwiftUI files correctly. In case of multiple live activity configurations, add comma separated values for both Attributes and Configurations.</p>
+<p><strong><em>Important Considerations</em></strong></p>
+<ol>
+<li>
+<p><strong>Unique Naming</strong> - The names of Attributes and Configurations must be unique. No two Configurations can reference the same Attributes.</p>
+</li>
+<li>
+<p><strong>Required Imports</strong></p>
+<p>i. Attributes files - Must include import ActivityKit.</p>
+<p>ii. Configurations files - Must include import SwiftUI , import WidgetKit  </p>
+<p>iii. Failing to import these correctly may cause compilation errors.</p>
+</li>
+<li>
+<p><strong>Minimum iOS Version</strong></p>
+<p>@available(iOS 16.2, *) must be added in both Attributes and Configurations files. Live Activities are supported only from iOS 16.2.</p>
+</li>
+<li>
+<p><strong>Splitting Files</strong></p>
+<p>a. The native Xcode-generated SwiftUI file must be split into two separate files:</p>
+<p>i. Attributes file (inside the Modules/LiveActivities/Attributes folder)</p>
+<p>ii. Configurations file (inside the Modules/LiveActivities/Configurations folder)</p>
+<p>b. A single combined file inside either folder will not work and may cause issues.<br></p>
+</li>
+<li>
+<p><strong>Correct Referencing Between Files</strong></p>
+<p>The Attributes struct name must match the one referenced inside Configurations.</p>
+</li>
+</ol>
+<p><b>Example:</b></p>
+<pre><code>struct SampleAttributes: ActivityAttributes { // Inside Attributes file
+
+ActivityConfiguration(for: SampleAttributes.self) { context in // Inside Configurations file
+</code></pre>
+<ol start="6">
+  <li><b>Registering Names in Enable iOS Live Activity Section</b></li>
+  <p> The struct (same as module) names of Attributes and Configurations must be entered in the respective text fields under ‘Enable iOS Live Activity’ settings. If names are not provided, Live Activities may disabled.</p>
+</ol>
+
+<ol start="7">
+  <li><b>Fixed Variables Are Optional</b></li>
+  <p>  A Live Activity must have at least one ContentState variable but may or may not have fixed variables.</p>  
+</ol>
+
+<p><b>Example:</b></p>
+<pre><code>struct SampleAttributes: ActivityAttributes {
+public struct ContentState: Codable, Hashable {
+var emoji: String  // Required (Dynamic variable)
+}
+var name: String  // Optional (Fixed variable)
+}
+</code></pre>
+<ol start="8">
+  <li><b>Accessing Variables in Configurations</b></li>
+  <p>  For the above SampleAttributes, the variables can be accessed in the configuration as follows:<br> a. Dynamic Variables (ContentState) - context.state.emoji <br>   b. Fixed Variables (Attributes) - context.attributes.name </p>
+</ol>
+
+<ol start="9">
+  <li><b>Case Sensitivity and Syntax Awareness</b></li>
+  <p> All names are case-sensitive. Ensure consistency while referencing them. Be careful while copying files. Maintain correct bracket "{ }" structures. Follow naming conventions precisely.<br>By following these guidelines, you can ensure that your Live Activity setup is smooth and error-free.</p>
+</ol>
+
+<h3 id="iii-adding-images-to-live-activity-in-configurations-ui"><p style="color: black">iii. Adding Images to Live Activity in Configurations UI</p></h3>
+<p>If you need to reference any images within the Configurations UI of your Live Activity, you must first add them to the project's assets. To do this, navigate to Assets under Project. Find the ‘Media’ section under Assets. There will be a new section called LiveActivities. Next to LiveActivities, there will be a dropdown option labeled Import Images. Click on it to add the images you want to use in your Live Activity. These images can then be referenced inside your Live Activity UI as needed.</p>
+<p><img alt="" src="../Resources/Images/Fig4.png" /></p>
+<p><em>Fig 4 : LiveActivities Images</em></p>
+<h3 id="iv-sample-use-case-a-cab-live-activity"><p style="color: black">iv. Sample Use Case: A Cab Live Activity</p></h3>
+<p>Example of an ‘Attribute’ Swift File - CabAttributes.swift (Inside <strong>Attributes</strong> folder) -</p>
+<pre><code>#if canImport(ActivityKit)
+import ActivityKit
+@available(iOS 16.2, *)
+struct CabAttributes: ActivityAttributes {
+    public struct ContentState: Codable, Hashable {
+    // ContentState represents the dynamic (mutable) state of the Live Activity.
+    // These values can change over time and will be updated in real-time.
+        var driverName: String
+        var carModel : String
+        var carNumber : String
+        var pickupLocation : String
+        var dropoffLocation : String
+        var progress : String
+        var distanceRemaining : String
+    }
+// Fixed attribute variables – These do not change once the Live Activity starts.
+    var cabService: String
+}
+#endif
+
+
+</code></pre>
+<p>Example of a ‘Configuration’ Swift File - CabActivityConfiguration.swift (Inside Configurations folder) -</p>
+<pre><code>import SwiftUI
+import WidgetKit
+@available(iOS 16.2, *)
+struct CabActivityConfiguration: Widget {
+    // Defines the UI layout and behavior for the widget, targeting both the lock screen and Dynamic Island.
+    var body: some WidgetConfiguration {
+        ActivityConfiguration(for: CabAttributes.self) { context in
+            // Configures the lock screen UI and retrieves UI components using the activity's context.
+            VStack(spacing: 8) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(context.attributes.cabService)
+                        .font(.custom(&quot;HelveticaNeue-Bold&quot;, size: 16))
+                        .foregroundColor(.green)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(6)
+                        .animation(.easeInOut(duration: 0.5), value: context.attributes.cabService)
+                }
+                HStack {
+                    Image(systemName: &quot;car.fill&quot;)
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.green)
+                        .animation(.easeInOut(duration: 0.5), value: context.state.driverName)
+                    VStack(alignment: .leading) {
+                        Text(&quot;\(context.state.driverName)&quot;)
+                            .font(.custom(&quot;HelveticaNeue-Bold&quot;, size: 16))
+                            .foregroundColor(.white)
+                            .animation(.easeInOut(duration: 0.5), value: context.state.driverName)
+                        Text(&quot;\(context.state.carModel)&quot;)
+                            .font(.custom(&quot;HelveticaNeue&quot;, size: 14))
+                            .foregroundColor(.white)
+                            .animation(.easeInOut(duration: 0.5), value: context.state.carModel)
+                    }
+                    .padding(.leading, 4)
+                    Spacer()
+                    Text(context.state.carNumber)
+                        .font(.custom(&quot;HelveticaNeue-Bold&quot;, size: 14))
+                        .foregroundColor(.green)
+                        .animation(.easeInOut(duration: 0.5), value: context.state.carNumber)
+                }
+                .padding(6)
+                HStack {
+                    GeometryReader { geometry in
+                        ZStack(alignment: .leading) {
+                            Rectangle()
+                                .foregroundColor(.gray)
+                                .cornerRadius(5)
+                            Rectangle()
+                                .foregroundColor(.green)
+                                .cornerRadius(5)
+                                .frame(width: CGFloat(Double(context.state.progress)!) / 100 * geometry.size.width)
+                                .animation(.easeInOut(duration: 0.5), value: context.state.progress)
+                        }
+                        .frame(height: 10)
+                    }
+                }
+                .padding(6)
+                HStack {
+                    Text(context.state.pickupLocation)
+                        .font(.custom(&quot;HelveticaNeue-Bold&quot;, size: 14))
+                        .foregroundColor(.white)
+                        .padding(.leading, 2)
+                        .animation(.easeInOut(duration: 0.5), value: context.state.pickupLocation)           
+                    Spacer()
+                    Text(context.state.dropoffLocation)
+                        .font(.custom(&quot;HelveticaNeue-Bold&quot;, size: 14))
+                        .foregroundColor(.white)
+                        .padding(.trailing, 2)
+                        .animation(.easeInOut(duration: 0.5), value: context.state.dropoffLocation)
+                }
+                .padding(6)
+            }
+                .padding(6)
+                .background(Color(red: 0.0, green: 0, blue: 0.5))
+                .activityBackgroundTint(Color.white.opacity(0.7))
+                .activitySystemActionForegroundColor(Color.black)
+        } dynamicIsland: { context in
+            // Configures the Dynamic Island UI for expanded, compact, and minimal states.
+            DynamicIsland {
+                // Defines the UI for the expanded leading region of the dynamic island.
+                DynamicIslandExpandedRegion(.leading) {
+                    Text(context.state.pickupLocation)
+                        .foregroundColor(.green)
+                        .padding(.leading, 2)
+                        .animation(.easeInOut(duration: 0.5), value: context.state.pickupLocation)
+                }
+                // Defines the UI for the expanded trailing region of the dynamic island.
+                DynamicIslandExpandedRegion(.trailing) {
+                    Text(context.state.dropoffLocation)
+                        .foregroundColor(.red)
+                        .padding(.trailing, 2)
+                        .animation(.easeInOut(duration: 0.5), value: context.state.dropoffLocation)
+                }
+                // Defines the UI for the expanded bottom region of the dynamic island.
+                DynamicIslandExpandedRegion(.bottom) {
+                    VStack {
+                        Image(systemName: &quot;car.fill&quot;)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.white)
+                            .padding()
+                            .animation(.easeInOut(duration: 0.5), value: context.state.driverName)
+
+                        HStack {
+                            GeometryReader { geometry in
+                                ZStack(alignment: .leading) {
+                                    Rectangle()
+                                        .foregroundColor(.gray)
+                                        .cornerRadius(5)
+                                    Rectangle()
+                                        .foregroundColor(.green)
+                                        .cornerRadius(5)
+                                        .frame(width: CGFloat(Double(context.state.progress)!) / 100 * geometry.size.width)
+                                        .animation(.easeInOut(duration: 0.5), value: context.state.progress)
+                                }
+                                .frame(height: 10)
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+            } compactLeading: {
+                // UI for the compact leading region of the dynamic island.
+                Text(context.state.pickupLocation )
+                    .foregroundColor(.green)
+                    .padding(.leading, 2)
+                    .animation(.easeInOut(duration: 0.5), value: context.state.pickupLocation)
+            } compactTrailing: {
+                // UI for the compact trailing region of the dynamic island.
+                Text(context.state.dropoffLocation)
+                    .foregroundColor(.red)
+                    .padding(.trailing, 2)
+                    .animation(.easeInOut(duration: 0.5), value: context.state.dropoffLocation)
+            } minimal: {
+                // UI for the minimal configuration of the dynamic island.
+                Image(systemName: &quot;car.fill&quot;)
+                    .frame(width: 10, height:10)
+                    .foregroundColor(.green)
+                    .padding()
+                    .animation(.easeInOut(duration: 0.5), value: context.state.driverName)
+            }
+            .widgetURL(URL(string: &quot;liveAct://Cab&quot;))
+        }
+    }
+}
+
+
+</code></pre>
+<h3 id="v-deeplinking-in-live-activities-using-widgeturl"><p style="color: black">v. Deeplinking in Live Activities using widgetURL</p></h3>
+<p>By default, tapping on a Live Activity or widget opens the corresponding app. To enhance the user experience and take them directly to relevant content, you can specify a deep link using the <strong>widgetURL(_:)</strong> modifier. This allows your app to open at a specific screen that matches the context of the Live Activity.</p>
+<p><strong>Adding Deep Linking to Your Live Activity Configuration</strong></p>
+<p>In your Live Activity widget configuration, include the widgetURL modifier as shown below:</p>
+<pre><code>.widgetURL(URL(string: &quot;liveAct://Cab&quot;))
+
+</code></pre>
+<p>In the above example (iv. Sample Use Case: A Cab Live Activity), when a user taps on the Live Activity in the Dynamic Island, the app will open with the deep link "liveAct://Cab", which will be handled in the app to navigate to the correct screen.</p>
+<p><strong>Handling Deep Linking in the App</strong></p>
+<p>Once the deep link (widgetURL) is set in the Live Activity configuration, you need to define how the app should handle this URL when it is opened.</p>
+<p>To do this, you must add the following code snippet in your IRIS project AppEvents at the path: Mobile &gt; Properties &gt; App Events &gt; App Service.</p>
+<pre><code>
+function launchParams(params) {
+    //The line below displays how an application is launched: Normal, 
+    for (var key in params) {
+        voltmx.print(&quot;**********&quot; + params[key]);
+    }
+    if (params.launchmode == 1) {
+        return &quot;Form1&quot;;
+    } else if (params.launchmode == 3) {
+        voltmx.print(&quot;*************** launch params are: &quot; + params.launchparams);
+
+        switch(params.launchparams.URL){
+            case &quot;liveAct://Cab&quot;:
+                        return &quot;FormCab&quot;; // Navigates to the Cab form - FormCab
+                    break;
+        }
+    }
+    return &quot;Form1&quot;; // Default fallback startup form
+}
+
+return launchParams(eventobject);
+
+
+</code></pre>
+<p>Here, in our example clicking on the lock screen live activity opens the app and lands on the home screen (Form1), since there is no deep linking from the lock screen. Clicking on the dynamic island (with widgetURL) opens the app and navigates directly to FormCab, as defined in the deep link.</p>
+<p>This setup ensures a smooth user experience by directing them to the relevant screen when interacting with a Live Activity.</p>
+<h3 id="vi-live-activities-in-the-smart-stack-on-apple-watch"><p style="color: black">vi. Live Activities in the Smart Stack on Apple Watch</p></h3>
+<ul>
+<li>
+<p>Starting with watchOS 11 and iOS 18, Live Activities now appear in the Smart Stack on Apple Watch.</p>
+</li>
+<li>
+<p>When a Live Activity starts on a paired iPhone, the Smart Stack automatically surfaces on the Apple Watch, displaying the Live Activity at the top. By default, this view includes the leading and trailing elements from the compact Live Activity presentation on iPhone.</p>
+</li>
+<li>
+<p>If you want to optimize the experience for Apple Watch, you can design a custom SwiftUI layout specifically for the Smart Stack. However, even if you don't create a custom layout, a default UI will still be shown automatically.</p>
+</li>
+<li>
+<p>Tapping a Live Activity on Apple Watch opens a full-screen view with more details and provides an option to launch the app on the paired iPhone for further interaction.</p>
+</li>
+</ul>
+<h3 id="vii-live-activities-in-standby-mode"><p style="color: black">vii. Live Activities in StandBy Mode</p></h3>
+<ul>
+<li>
+<p>The minimal presentation of a Live Activity appears at the top of the Lock Screen when the iPhone is in StandBy mode (landscape, charging, and angled toward the room). </p>
+</li>
+<li>
+<p>Tapping the minimal presentation expands the Live Activity to fill the entire display using the Lock Screen presentation.</p>
+</li>
+<li>
+<p>When multiple apps start Live Activities, the system decides which ones to display based on relevance.</p>
+</li>
+<li>
+<p>The system can show two Live Activities in minimal presentation: one attached to the Dynamic Island. and one detached, appearing on the Lock Screen in StandBy mode.</p>
+</li>
+<li>
+<p>If your app starts multiple Live Activities, you can influence which one appears by setting a relevance score.For more details: <a href="https://developer.apple.com/design/human-interface-guidelines/live-activities#StandBy">Apple Human Interface Guidelines – StandBy Mode</a></p>
+</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

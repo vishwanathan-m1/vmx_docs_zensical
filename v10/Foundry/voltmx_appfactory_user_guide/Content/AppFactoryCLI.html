@@ -1,0 +1,3255 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_appfactory_user_guide/Content/AppFactoryCLI.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>App Factory Command-line Interface - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#app-factory-command-line-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-voltmx/14" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              App Factory Command-line Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-an-api-token-in-app-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating an API Token in App Factory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afcli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      AFCLI Commands
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="app-factory-command-line-interface">App Factory Command-line Interface</h1>
+<p>From V9 ServicePack 4, App Factory has added a command-line Interface, which is designed by extending the existing Jenkins CLI. The App Factory Command-line Interface, or AFCLI, can be used to script routine tasks, bulk updates, troubleshooting, and other actions for your App Factory projects. You can use AFCLI to manage the project creation and configuration from your own systems and to minimize interaction with the Jenkins console.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>An App Factory user account with the <code>Overall/Read</code> permission</li>
+<li>
+<p>The <code>jenkins-cli.jar</code> file, which is used to run commands that are related to App Factory.  </p>
+<p>To download the JAR file, click <strong>Download AFCLI</strong> on the left panel of the App Factory Console. Alternatively, you can use the following URL: <code>&lt;appfactory_url&gt;/jnlpJars/jenkins-cli.jar</code>.<br />
+Make sure that you replace <code>&lt;appfactory_url&gt;</code> with the URL of your App Factory Console, for example: <code>https://a12345.ci.hcl-cloud.com/jnlpJars/jenkins-cli.jar</code>.  </p>
+</li>
+<li>
+<p>An App Factory API Token  <br />
+    This is applicable only if you want to run Jenkins commands by using AFCLI.<br />
+    For more information, refer to <a href="#generating-an-api-token-in-app-factory">Generating an API Token in App Factory</a>.  </p>
+</li>
+</ul>
+<h2 id="authentication">Authentication</h2>
+<p>To perform actions on your project by using AFCLI, you need to add authentication to your App Factory commands. For more information about the App Factory commands, refer to <a href="#afcli-commands">AFCLI Commands</a>.</p>
+<p>The user account that is used for authentication with the Jenkins controller must have the <code>Overall/Read</code> permission to access AFCLI. The account may also require additional permissions for specific commands. For information about the different types of authentication, refer to the following sections.</p>
+<details close="close">
+<p><summary id="API_Token">Authentication with API Token</summary>Authentication with an API token uses the global option <code>-auth</code>, which requires an argument in the <code>user:apitoken</code> format. This authentication mechanism works for App Factory commands and Jenkins commands. For information about API tokens, refer to <a href="#generating-an-api-token-in-app-factory">Generating an API Token in App Factory.</a><br/></p>
+<blockquote>
+<p><strong><em>Note</em></strong>:  Even if you use <code>-auth</code> for authentication, some commands might require the Foundry password to perform specific operations.</p>
+</blockquote>
+<p><strong>Syntax</strong>  </p>
+<p>For in-line arguments, the syntax is as follows:</p>
+<p><code>java -jar jenkins-cli.jar [-s JENKINS_URL] -auth &lt;username&gt;:&lt;api-token&gt; [command] [command_arguments] [command_options]</code></p>
+<p>To load the arguments from a file, the syntax is as follows:</p>
+<pre><code>java -jar jenkins-cli.jar [-s JENKINS_URL] -auth @/path/to/credentials [command] [command_arguments] [command_options]
+</code></pre>
+<p>Make sure that you provide the complete path of your credentials file, for example: <code>@/home/username/.jenkins-cli</code>.</p>
+<blockquote><em><b>Note: </b></em>
+  <p>You can also specify the username and the apitoken arguments by configuring the following environment variables: </p>
+<ul>
+<li> username: <code>$JENKINS_USER_ID</code></li>
+<li> apitoken: <code>$JENKINS_API_TOKEN</code></li>
+</ul>
+<p>Make sure that both the variables are set simultaneously.</p>
+</blockquote>
+<p><strong>Example</strong></p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; -auth username:123456 fetch-build-result MyProject25 iris 19 --password &quot;foundry_password&quot;
+</code></pre>
+<h4 id="generating-an-api-token-in-app-factory">Generating an API Token in App Factory</h4>
+<p>An API token can be generated by using the <code>me/configuration</code> endpoint in your App Factory instance. To access the configuration page and generate an API token, follow these steps:</p>
+<ol>
+<li>Sign-in to your App Factory console.</li>
+<li>On the upper-right corner, click the email address of your account.<br />
+<img alt="" src="Resources/Images/afaas_email.png" /></li>
+<li>On the left panel of the App Factory User page, click <strong>Configure</strong>.<br />
+<img alt="" src="Resources/Images/afaas_configure.png" /></li>
+<li>On the user configuration page, under <strong>API Token</strong>, click <strong>ADD NEW TOKEN</strong>.</li>
+<li>Type a name for the token, and then click <strong>GENERATE</strong>. An API Token is generated with the specified name.<br />
+<img alt="" src="Resources/Images/afaas_token.png" /></li>
+<li>Copy the API Token by clicking the copy icon, and then save the token. You can also revoke the token by clicking the revoke icon.<br />
+<img alt="" src="Resources/Images/afaas_token_generated.png" />  </li>
+</ol>
+<blockquote>
+<p><strong><em>Important</em></strong>: Make sure that you save the token value because it will not be visible after you navigate away from the configuration page.</p>
+</blockquote>
+<ol>
+<li>Click <strong>APPLY</strong>, and then click <strong>SAVE</strong>.</li>
+</ol>
+<p>After saving the user configuration, you can use the API token with the <code>-auth</code> option in AFCLI.</p>
+</details>
+<details close="close">
+<p><summary>Authentication with User Credentials</summary></p>
+<p>Authentication with user credentials uses the command options <code>--username</code> and <code>--password</code>, which require your VoltMX Foundry credentials as arguments. Alternatively, you can use the <code>-u</code> and <code>-p</code> command options for the credentials This mechanism only works with App Factory commands and cannot be used with Jenkins commands.</p>
+<p><strong>Syntax</strong></p>
+<pre><code>java -jar jenkins-cli.jar [-s JENKINS_URL] [global options] [command] --username '&lt;username&gt;' --password '&lt;password&gt;'
+</code></pre>
+<pre><code>java -jar jenkins-cli.jar [-s JENKINS_URL] [global options] [command] -u '&lt;username&gt;' -p '&lt;password&gt;'
+</code></pre>
+<p><strong>Example</strong></p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; fetch-build-result MyProject25 iris 19  --username 'user.name@hcl.com' --password 'foundry_password'
+</code></pre>
+</details>
+<!-- Authentication with Foundry tokens (`--foundry-auth`)
+
+Authentication with Foundry tokens uses the command option `--foundry-auth`, which requires an argument in the `user:foundrytoken` format.
+
+Syntax
+
+
+<pre><code>java -jar jenkins-cli.jar [-s JENKINS_URL] [global options] [commands] --foundry-auth &quot;&lt;username&gt;:&lt;foundry-token&gt;&quot;
+</code></pre>
+
+
+Example
+
+
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; fetch-build-result MyProject25 19 --foundry-auth &quot;user.name@hcl.com:abc1234ffe4a&quot;
+</code></pre>
+
+ -->
+
+<h2 id="afcli-commands">AFCLI Commands</h2>
+<p>The general syntax to run commands is as follows:</p>
+<pre><code>java -jar jenkins-cli.jar [-s JENKINS_URL] [global options] command [command options] [arguments]
+</code></pre>
+<p>The JENKINS_URL parameter can be specified by using the environment variable <code>$JENKINS_URL</code>. You can view the summaries of other general options by running the client without any arguments.</p>
+<p>AFCLI provides commands that are specific to your App Factory instance. AFCLI also supports built-in Jenkins CLI commands, such as <code>build</code> or <code>list-jobs</code>. To view the full list of commands that are available in your environment, use the <code>help</code> command, which is a Jenkins command that requires <a href="#API_Token">authentication with an API token</a> (<code>-auth</code>). For example:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; -auth username:123456 help
+</code></pre>
+<p>To view information about an App Factory command, type the command name after <code>help</code>. For example:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; -auth username:123456 help create-project
+</code></pre>
+<p>For information about the different App Factory commands, refer to the following sections.</p>
+<details close="close">
+<p><summary>create-project</summary></p>
+<p>This command is used to create a project on App Factory. Based on the specified options, the output is the project name and the project type.</p>
+<p><strong>Syntax</strong></p>
+<pre><code>create-project &lt;appfactory_project&gt; &lt;project_type&gt; [-f] [-s] [-w]
+</code></pre>
+<pre><code>create-project &lt;appfactory_project&gt; &lt;project_type&gt; [--follow] [--sync] [--wait]
+</code></pre>
+<p><strong>Arguments</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Argument</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_project</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the name of the project.</p><p>For example: MyProject25</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">project_type</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the type of project that you want to create. The possible values are as follows:</p><ul><li>VoltMX Project</li><li>HCL MicroServices Project</li></ul></td></tr></tbody></table>
+<p><strong>Options</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Command Option</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">-f</code></p><p>OR</p><p><code class="file_names">--follow</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Follows the build progress and modifies the exit code based on the outcome of the build. Interrupts are not passed through to the build, therefore, the job will not be interrupted.</p><p class="Note" madcap:autonum="<b><i><span style=&quot;color: #0a9c4a;&quot; class=&quot;mcFormatColor&quot;>Note: </span></i></b>">The build will continue even if you close the command-line interface (terminal).</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">-s</code></p><p>OR</p><p><code class="file_names">--sync</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Waits until the command is completed or aborted. Interrupts are passed through to the build, therefore, the job can be interrupted.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">-w</code></p><p>OR</p><p><code class="file_names">--wait</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Waits till the start of the command.</p></td></tr></tbody></table>
+<p><strong>Example</strong></p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; create-project MyProject25 &quot;MicroServices Project&quot; --username 'user.name@hcl.com' --password 'foundry_password'
+</code></pre>
+</details>
+<details close="close">
+<p><summary>fetch-project-settings</summary></p>
+<p>This command is used to retrieve the current project settings for the specified App Factory project in a JSON format.</p>
+<p>The JSON format can be used as a template to update the settings by using the <code>update-project-settings</code> command. For new projects, the JSON keys in the template contain default values or <code>null</code>.</p>
+<ul>
+<li>From the V9 ServicePack 5 release, the <a href="Project_Settings.html#foundry-project-settings">Foundry Project Settings</a> can be fetched and configured.</li>
+<li>In V9 ServicePack 4, only the <a href="Project_Settings.html#iris-project-settings">Iris Project Settings</a> can be fetched and configured.</li>
+</ul>
+<p><strong>Syntax</strong></p>
+<pre><code>fetch-project-settings &lt;appfactory_project&gt; &lt;appfactory_service&gt;
+</code></pre>
+<p><strong>Arguments</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Argument</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_project</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the name of the project.</p><p>For example: MyProject25</p></td></tr><tr class="TableStyle-Basic-Body-Body1" madcap:conditions="Default.V9SP5"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">appfactory_service</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the service for which you want to fetch the details. Supports the following values:</p><ul><li><code style="font-size: 11pt;">Iris</code></li><li><code style="font-size: 11pt;">Foundry</code></li></ul></td></tr></tbody></table>
+<p><strong>Example</strong></p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; fetch-project-settings MyProject25 iris --username 'user.name@hcl.com' --password 'foundry_password'
+</code></pre>
+<p><strong>Sample Output</strong></p>
+<pre><code>{
+&quot;sourceControl&quot;:{},
+&quot;internationalization&quot;:{},
+&quot;scans&quot;:
+{
+    &quot;sonar&quot;:
+    {
+        &quot;runSonar&quot;:false,
+        &quot;failBuildOnQualityGateStatus&quot;:false,
+        &quot;isDebugEnabled&quot;:false
+    }
+},
+&quot;notification&quot;:{},
+&quot;android&quot;:{},
+&quot;ios&quot;:
+{
+    &quot;signingMethod&quot;:&quot;API Key&quot;
+},
+&quot;models&quot;:
+{
+    &quot;cleanAndRegenerate&quot;:true
+}
+}
+</code></pre>
+</details>
+<details close="close">
+<p><summary>update-project-settings</summary></p>
+<p>This command is used to configure the project settings of the specified project. The command requires the <code>-j</code> or <code>--json</code> option followed by a JSON string.</p>
+<ul>
+<li>From the V9 ServicePack 5 release, the <a href="Project_Settings.html#foundry-project-settings">Foundry Project Settings</a> can be fetched and configured.</li>
+<li>In V9 ServicePack 4, only the <a href="Project_Settings.html#iris-project-settings">Iris Project Settings</a> can be fetched and configured.</li>
+<li>For the shell input, HCL recommends using single quotes (<code>'</code>) or proper escaping to specify the JSON string.</li>
+</ul>
+<p><strong>Syntax</strong></p>
+<p>For shell terminals:</p>
+<pre><code>update-project-settings &lt;appfactory_project&gt; &lt;appfactory_service&gt; [-j] '{&quot;abc&quot;:&quot;xyz&quot;}'
+</code></pre>
+<pre><code>update-project-settings &lt;appfactory_project&gt; &lt;appfactory_service&gt; [--json] '{&quot;abc&quot;:&quot;xyz&quot;}'
+</code></pre>
+<p>For Windows command prompt:</p>
+<pre><code>update-project-settings &lt;appfactory_project&gt; &lt;appfactory_service&gt; [-j] &quot;{\&quot;abc\&quot;:\&quot;xyz\&quot;}&quot;
+</code></pre>
+<pre><code>update-project-settings &lt;appfactory_project&gt; &lt;appfactory_service&gt; [--json] &quot;{\&quot;abc\&quot;:\&quot;xyz\&quot;}&quot;
+</code></pre>
+<p><strong>Arguments</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Argument</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_project</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the name of the project.</p><p>For example: MyProject25</p></td></tr><tr class="TableStyle-Basic-Body-Body1" madcap:conditions="Default.V9SP5"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">appfactory_service</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the service that you want to update. Supports the following values:</p><ul><li><code style="font-size: 11pt;">Iris</code></li><li><code style="font-size: 11pt;">Foundry</code></li></ul></td></tr></tbody></table>
+<p><strong>Options</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Command Option</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">-j</code></p><p>OR</p><p><code class="file_names">--json</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies that the input is in a JSON format. As an argument, this option requires a JSON string inside single quotes (<code class="file_names">'</code>) for a shell terminal; or a pre-escaped JSON wrapped in double quotes(<code class="file_names">"</code>) for Windows command prompt.</p><p>For simpler handling of JSON inputs, HCL recommends using a shell terminal.</p><p>This option is mandatory.</p><p>For example: <code class="codefirst" style="font-size: 11pt;">'{"abc":"xyz"}'</code> or <code class="codefirst" style="font-size: 11pt;">"{\"abc\":\"xyz\"}"</code></p></td></tr></tbody></table>
+<p><strong>Example</strong></p>
+<p>For shell terminals:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; update-project-settings MyProject25 iris -j   
+'{&quot;sourceControl&quot;:{&quot;projectPath&quot;:&quot;&quot;,&quot;scmVendor&quot;:&quot;GitHub&quot;,&quot;scmCredentials&quot;:&quot;MyGitCreds&quot;,  
+&quot;repositoryURL&quot;:&quot;https://github.com/MyAppFactoryGit/MyProject25.git&quot;},&quot;ios &quot;:{}}' --username 'user.lastname@hcl.com' --password 'foundry_password'
+</code></pre>
+<p>For Windows command prompt:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; update-project-settings MyProject25 iris -j   
+&quot;{\&quot;sourceControl\&quot;:{\&quot;projectPath\&quot;:\&quot;\&quot;,\&quot;scmVendor\&quot;:\&quot;GitHub\&quot;,\&quot;scmCredentials\&quot;:\&quot;MyGitCreds\&quot;,  
+\&quot;repositoryURL\&quot;:\&quot;https://github.com/MyAppFactoryGit/MyProject25.git\&quot;},\&quot;ios\&quot;:{}}&quot; --username 'user.lastname@hcl.com' --password 'foundry_password'
+</code></pre>
+</details>
+<details close="close">
+<p><summary>build-project</summary></p>
+<p>This command is used to run the build job of the specified App Factory project. Based on the specified options, the output is either the build number or the queue ID of the job.</p>
+<p><strong>Syntax</strong></p>
+<pre><code>build-project &lt;appfactory_project&gt; &lt;appfactory_service&gt; [-s] [-f] [-p] [-v] [-w]
+</code></pre>
+<pre><code>build-project &lt;appfactory_project&gt; &lt;appfactory_service&gt; [--sync] [--follow] [--parameter] [--verbose] [--wait]
+</code></pre>
+<p><strong>Arguments</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Argument</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_project</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the project that contains the build job.</p><p>For example: MyProject25</p></td></tr><tr class="TableStyle-Basic-Body-Body1" madcap:conditions="Default.V9SP5"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">appfactory_service</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the service for which you want to run the build job. Supports the following values:</p><ul><li><code style="font-size: 11pt;">Iris</code></li><li><code style="font-size: 11pt;">Foundry</code></li></ul></td></tr></tbody></table>
+<p><strong>Options</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url]('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Command Option</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">-s</code></p><p>OR</p><p><code class="file_names">--sync</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Waits until the command is completed or aborted. Interrupts are passed through to the build, therefore, the job can be interrupted.</p><p>This option provides the <code class="file_names" style="font-size: 11pt;">Build_Id</code> and the final result as the output.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">-f</code></p><p>OR</p><p><code class="file_names">--follow</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Follows the build progress and modifies the exit code based on the outcome of the build. Interrupts are not passed through to the build, therefore, the job will not be interrupted.</p><p>This option provides the <code class="file_names" style="font-size: 11pt;">Build_Id</code> and the final result as the output.</p><p class="Note" madcap:autonum="<b><i><span style=&quot;color: #0a9c4a;&quot; class=&quot;mcFormatColor&quot;>Note: </span></i></b>">The build will continue even if you close the command-line interface (terminal).</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">-param</code></p><p>OR</p><p><code class="file_names">--parameter</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies a build parameter in the <code class="codefirst" style="font-size: 11pt;">"key=value"</code> format.</p><p>You can specify multiple parameters by separating them with a space. For example: <code class="codefirst" style="font-size: 11pt;">-param"Key1=Value1" -param"Key=Value2"</code></p><p>For more information about the build parameters, refer to the following docs:</p><ul><li><a href="BuildingAnApp.html" target="_blank">Building a Iris App</a></li><li><a href="BuildingFoundryApp.html">Building a Foundry App</a></li></ul></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">-v</code></p><p>OR</p><p><code class="file_names">--verbose</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Prints the console output of the build. This option must be used with the <code class="codefirst" style="font-size: 11pt;">-s</code> option.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">-w</code></p><p>OR</p><p><code class="file_names">--wait</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Waits till the start of the command.</p><p>This option provides the <code class="file_names" style="font-size: 11pt;">Build_Id</code> as the output.</p></td></tr></tbody></table>
+<p><strong>Example</strong></p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; build-project MyProject25 iris -param&quot;Key1=Value1&quot; -param&quot;Key=Value2&quot; --username 'user.name@hcl.com' --password 'foundry_password'
+</code></pre>
+</details>
+<details close="close">
+<p><summary>fetch-build-result</summary></p>
+<p>This command is used to fetch the results of the specified build job in an App Factory project. Based on your inputs to the command, the output is either the result or the status of the job.</p>
+<blockquote>
+<p><strong><em>Important</em></strong>: This command requires a Foundry password to fetch information about the build and the artifacts from the Foundry Console (or the S3 storage). <br/><br />
+If you are using <a href="#API_Token">authentication with an API token</a>, make sure that you include the <code>--password</code> option in the command.</p>
+</blockquote>
+<p><strong>Syntax</strong></p>
+<pre><code>fetch-build-result &lt;appfactory_project&gt; &lt;appfactory_service&gt; &lt;build_number&gt; --password &quot;foundry_password&quot;
+</code></pre>
+<pre><code>fetch-build-result &lt;appfactory_project&gt; &lt;appfactory_service&gt; &lt;queue_id&gt; --password &quot;foundry_password&quot;
+</code></pre>
+<p><strong>Arguments</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Argument</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_project</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the project that contains the build job.</p><p>For example: MyProject25</p></td></tr><tr class="TableStyle-Basic-Body-Body1" madcap:conditions="Default.V9SP5"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_service</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the service for which you want to run the build job. Supports the following values:</p><ul><li><code style="font-size: 11pt;">Iris</code></li><li><code style="font-size: 11pt;">Foundry</code></li></ul></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">build_number</code></p><p>OR</p><p><code class="file_names">queue_id</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the build number or the queue ID of the job for which you want to fetch the results.</p><p>For example: 19</p><p class="Important" madcap:autonum="<b><i><span style=&quot;color: #ff6600;&quot; class=&quot;mcFormatColor&quot;>Important: </span></i></b>">The queue ID&nbsp;is not valid to fetch the result if the job has already started.</p></td></tr></tbody></table>
+<!-- **Options**
+
+<table style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0" madcap:conditions="Default.Not Ready for Publish"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Command Option</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">--json</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Prints the output (build result) in a JSON format.</p></td></tr></tbody></table> -->
+<p><strong>Example</strong></p>
+<p>Using Foundry credentials for authentication:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; fetch-build-result MyProject25 iris 19  --username 'user.name@hcl.com' --password 'foundry_password'
+</code></pre>
+<p>Using API token for authentication:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; -auth username:123456 fetch-build-result MyProject25 iris 19  --password 'foundry_password'
+</code></pre>
+<p><strong>Sample Output (if the build is running)</strong></p>
+<pre><code>{
+&quot;ciURL&quot;: &quot;https://a12345.ci.hcl-cloud.com&quot;,
+&quot;project&quot;: &quot;MyProject25&quot;,
+&quot;status&quot;: &quot;RUNNING&quot;,
+&quot;buildJob&quot;:
+{
+    &quot;jobName&quot;: &quot;buildIrisApp&quot;,
+    &quot;buildid&quot;: 19,
+    &quot;queueid&quot;: 0,
+    &quot;durationms&quot;: 0,
+}
+}
+</code></pre>
+<p><strong>Sample output (if the build is complete)</strong></p>
+<pre><code>{
+&quot;ciURL&quot;: &quot;https://a12345.ci.hcl-cloud.com&quot;,
+&quot;project&quot;: &quot;MyProject25&quot;,
+&quot;status&quot;: &quot;COMPLETED&quot;,
+&quot;buildJob&quot;:
+{
+    &quot;jobName&quot;: &quot;buildIrisApp&quot;,
+    &quot;buildUrl&quot;: &quot;job/MyProject25/job/Iris/job/Builds/job/buildIrisApp/19/&quot;,
+    &quot;buildid&quot;: 19,
+    &quot;queueid&quot;: 0,
+    &quot;duration&quot;: &quot;3 min, 1 sec&quot;,
+    &quot;result&quot;: &quot;SUCCESS&quot;,
+    &quot;buildCause&quot;: &quot;Started by user.name@hcl.com&quot;,
+    &quot;durationms&quot;: 181205,
+    &quot;artifacts&quot;:
+    [
+        &quot;\&quot;12345/MyProject25/Builds/buildIrisApp/19/buildResults-PASS.html\&quot;&quot;
+    ]
+},
+&quot;channels&quot;:
+[
+{
+    &quot;jobName&quot;: &quot;buildAndroid&quot;,
+    &quot;buildUrl&quot;: &quot;job/MyProject25/job/MyProject25/job/Iris/job/Builds/job/Channels/job/buildAndroid/176/&quot;
+    &quot;buildid&quot;: 176,
+    &quot;queueid&quot;: 0,
+    &quot;duration&quot;: &quot;2 min, 41 sec&quot;,
+    &quot;result&quot;: &quot;SUCCESS&quot;,
+    &quot;buildCause&quot;: &quot;Started by upstream project \&quot;MyProject25/Iris/Builds/buildIrisApp\&quot; build number 19&quot;,
+    &quot;durationms&quot;: 163812,
+    &quot;artifacts&quot;:
+    [
+        &quot;\&quot;12345/MyProject25/Builds/AppFactoryServer/Android/Mobile/Native/176/MyProject25_176.apk\&quot;&quot;
+    ]
+}
+]
+}
+</code></pre>
+</details>
+<details close="close">
+<p><summary>fetch-download-url</summary></p>
+<p>This command is used to fetch a URL to download the build artifacts. The artifacts contain details about the binaries of the specified build. The output is the download URL in a JSON format.</p>
+<blockquote>
+<p><strong><em>Important</em></strong>: This command requires a Foundry password to fetch information about the build and the artifacts from the Foundry Console (or the S3 storage).<br/><br />
+If you are using <a href="#API_Token">authentication with an API token</a>, make sure that you include the <code>--password</code> option in the command.</p>
+</blockquote>
+<p><strong>Syntax</strong></p>
+<pre><code>fetch-download-url &lt;artifact_type&gt; &lt;appfactory_project&gt; &lt;appfactory_service&gt; &lt;build_number&gt; --password &quot;foundry_password&quot;
+</code></pre>
+<p><strong>Arguments</strong></p>
+<table cellspacing="0" class="TableStyle-Basic" style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Argument</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_project</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the project that contains the build job.</p><p>For example: MyProject25</p></td></tr><tr class="TableStyle-Basic-Body-Body1" madcap:conditions="Default.V9SP5"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p><code class="file_names">appfactory_service</code></p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the service for which you want to run the build job. Supports the following values:</p><ul><li><code style="font-size: 11pt;">Iris</code></li><li><code style="font-size: 11pt;">Foundry</code></li></ul></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">build_number</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the number of the build job for which you want to fetch the download URL.</p><p>For example: 19</p></td></tr></tbody></table>
+<!-- Options
+
+<table style="width: 80%;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0" madcap:conditions="Default.Not Ready for Publish"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"> <col class="TableStyle-Basic-Column-Column1" style="width: auto;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1" madcap:conditions=""><th class="TableStyle-Basic-BodyE-Column1-Body1">Command Option</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1" madcap:conditions=""><td class="TableStyle-Basic-BodyB-Column1-Body1"><p><code class="file_names">--json</code></p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Prints the output (build result) in a JSON format.</p></td></tr></tbody></table> -->
+<p><strong>Example</strong></p>
+<p>Using Foundry credentials for authentication:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; fetch-download-url test MyProject25 iris 19 --username 'user.name@hcl.com' --password 'foundry_password'
+</code></pre>
+<p>Using API token for authentication:</p>
+<pre><code>java -jar jenkins-cli.jar -s &quot;https://a12345.ci.hcl-cloud.com&quot; -auth username:123456 fetch-download-url test MyProject25 iris 19 --password 'foundry_password'
+</code></pre>
+<p><strong>Sample Output</strong></p>
+<pre><code>{
+&quot;artifacts&quot;:
+[
+    &quot;https://a12345-builds.s3.amazonaws/%2212345/MyProject25/Builds/buildIrisApp/25/buildResults-PASS.html%22?AWSAccessKeyId=1A2B3C4D5E&amp;amp;Signature=abcd1234%2FPQRS7890&quot;,
+    &quot;https://a12345-builds.s3.amazonaws/%2212345/MyProject25/Builds/AppFactoryServer/Android/Mobile/Native/176/MyProject25_176.apk%22?AWSAccessKeyId=1A2B3C4D5E&amp;amp;Signature=PQRS7890%2Fabcd1234&quot;
+]
+}
+</code></pre>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

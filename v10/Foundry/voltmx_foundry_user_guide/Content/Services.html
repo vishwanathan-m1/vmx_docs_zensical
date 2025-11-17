@@ -1,0 +1,5296 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/Services.html">
+      
+      
+        <link rel="prev" href="CSD-LegacySerivce.html">
+      
+      
+        <link rel="next" href="ConfigureIntegrationService.html">
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Introduction - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-voltmx/14" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Volt MX Foundry User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Preface.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundrySDKs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundry SDKs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Accessing_VoltMX_MBaaS_Portal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Volt MX Foundry Console - Volt MX Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Environments-Cloud.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environments - Volt MX Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Account_Settings_User_ACLs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Access Control Lists (ACLs) on New Apps and Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UpgradeCloud.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Updates on Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="How_to_access_VoltMX_Foundry_Portal_on-Prem.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Volt MX Foundry Console - On-Premises
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Environments.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environments - On-Premises
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Published_Apps-Environments.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing Applications Published to a Runtime Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Features.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Adding_Applications.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps - How to Add Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ConsoleAccessControl.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Access Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Continuous_Integration_with_Foundry_Governanc_%20APIs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration with Foundry Governanc APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="API_Management.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    APIs in API Management
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="API_Versioning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="App_Versioning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application Versioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CustomDataConfig.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Data Adapters on Volt MX Foundry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="JAR_Management.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing JAR Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CLI_Analytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics for Third-party Client App Binaries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Export-Import_Apps.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting and Importing an Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Identity.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Identity
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Legacy_Serivces.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Legacy Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_24" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_3_24" id="__nav_9_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_24_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Services.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-of-integration-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow of Integration Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-endpoint-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Endpoint Adapters
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="ConfigureIntegrationService.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure the Integration Service
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Advanced_Configurations.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Advanced Configurations
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Orchestration.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Orchestration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Objectservices.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Object Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmx_foundry_workflow/Content/Workflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="offline_Sync.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Enablement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Sync.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoltMXDevPortal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developer Portal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logic_in_Apps.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Rules_as_a_Service.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rules as a Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Engagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engagement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Manage_Client_App_Assets.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Client App Assets
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="EnterpriseAppStore.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Enterprise App Store Service for Digital App Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PushNotificationsEas.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sending Push Notification to EAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AppVersionUpgradePolicyEAS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checking App Versions in EAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="EAS_NativeApp_Walk-through.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Walk-through of Volt MX Enterprise App Store (EAS) Source Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="KnownIssuesEAS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Known Issues - EAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Governance_for_Foundry.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance for Foundry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Publish.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Publish
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AppPromotion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promoting a Deployment Package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="CI_Foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Command Line Utility - Continuous Integration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry_SDKs.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SDKs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Settings_Cloud.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings - Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Settings.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings - On-premises
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Review_Requests_Dashboard.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review Requests Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Reports.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Support.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Telemetry.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Telemetry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Samples/Samples.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Appendix_-_Sync_Strategy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix - Sync Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Appendix_-_App_Services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendix - App Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Appendix_-_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix - Frequently Asked Questions (FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Limitations.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-of-integration-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow of Integration Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-endpoint-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Endpoint Adapters
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>User Guide: <a href="#integration">Integration</a> &gt; Overview</p>
+<h1 id="integration">Integration</h1>
+<h2 id="overview">Overview</h2>
+<p>An Integration Service is an application component that represents the application interaction with an external system or data source. A service definition comprises the meta-data or the configurations required to exchange data with the external system or data source. For example, the configurations can be service type, Endpoint URL, service ID, type (HTTP/HTTPS), request parameters, response parameters, preprocessors and postprocessors, and authentication credentials if required.</p>
+<p>For more hands-on approach on how to implement Integration Services, import and preview the <strong>News and Weather</strong> app using Volt MX Iris.<br />
+<img alt="" src="Resources/Images/Download_Button_08_202x33.png" /></p>
+<h2 id="use-cases">Use Cases</h2>
+<p>If you want to develop an app which enables users to browse through news headlines with different categories such as <em>Top Stories</em>, <em>World</em>, <em>Science</em>, <em>Technology</em>, <em>Sports</em>, weather conditions and so on. In this scenario, you need to use Integration services of Volt MX Foundry to fetch data from 3rd party news and weather APIs, which populates the same data in the front end of the app.</p>
+<h2 id="workflow-of-integration-services">Workflow of Integration Services</h2>
+<p>The following workflow describes the various stages of Integration services:</p>
+<p><img alt="" src="Resources/Images/Integration-workflow_740x416.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Service Request flow</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a. <strong>Request</strong> A client sends a <strong>request</strong> to Volt MX Foundry.<br> b. <strong>Filter</strong><br> c. <strong>Message Parser (JSON, Form Encoded)</strong><br> d. <strong>Pre-Processor</strong> After Volt MX Foundry receives the call from the device, Volt MX Foundry executes custom Java/JS code based on the configured <strong>Pre-Processor</strong> before making any outbound calls.The custom Java/JS code is typically used to decide on what service to call. The custom code can also perform data validation on the request input.<br> e. <strong>Request Builder (Velocity Template)</strong> For adapters (such as XML, JSON), user can format the request sent to an enterprise backend by defining a <a href="http://velocity.apache.org/">velocity template</a>.<br> f. <strong>Adapters</strong> An adapter is the component that communicates to the backend. it takes the formatted request from the request builder and sends it to the enterprise backend. In addition to the out of the box adapters, we can import adapters from <a href="https://marketplace.voltmx.com/domain/general?category=2124">VoltMX Marketplace</a>.<br> <strong><em>Note</em>:</strong> You can select the <strong>Enable pass-through</strong> check box in the <strong>Request Input</strong> tab for Volt MX Foundry to forward the headers and body of clients request to the back end as is.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Service Response flow</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a. <strong>Adapters</strong> An adapter receives the response from the enterprise backend for further processing in Volt MX Foundry.<br> b. <strong>Response Builder</strong> Volt MX Foundry extracts data from the backend payload using <strong>XPath</strong> or <strong>JSON Path</strong> in the form of response parameters.<br> c.<strong>Post-Processor</strong> After extracting the data, Foundry executes the custom Java/JS code based on the configured <strong>Post-Processor</strong>.The custom Java/JS code is typically used to process the data before returning the data to the client. The custom code can also determine whether Foundry needs to make additional service calls.<br> c. <strong>Message Formatter (JSON)</strong><br> e. <strong>Filter</strong> <br> f. <strong>Response</strong> Volt MX Foundry sends the transformed <strong>response</strong> (in JSON) to the client.<br> <strong><em>Note:</em></strong> You can select the <strong>Enable pass-through</strong> check box in the <strong>Response Output</strong> tab for Volt MX Foundry to forward the response from the back end as is to clients.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-endpoint-adapters">Supported Endpoint Adapters</h2>
+<p>Volt MX Integration supports back-end connectivity to Web services such as XML, JSON, JavaScript, Database, Salesforce and so on. If external data sources do not expose the services to these well-known interfaces, you can build a Java service with a custom code.</p>
+<p>Out of the box Volt MX Foundry Integration Services support connectivity to the following different endpoint adapters.</p>
+<table>
+  <tr>
+    <th>Endpoint Type</th>
+    <th>Description</th>
+    <th>Endpoint Configuration</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="XML.html">XML</a>
+    </td>
+    <td>An XML Adapter communicates with an external data source using an XML endpoint over the HTTP protocol.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="XML.html#configure-xml-end-point-adapter">Configure XML Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="XML.html#create-operations-for-xml">Create Operations for XML</a>
+          <ul>
+            <li>
+              <a href="XML.html#configure-request-operation-for-xml">Configure Request Operation for XML</a>
+            </li>
+            <li>
+              <a href="XML.html#configure-response-operation-for-xml">Configure Response Operation for XML</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="SOAP.html">SOAP</a>
+    </td>
+    <td>Simple Object Access Protocol (SOAP) is a messaging protocol that uses WSDL to describe the functionality of a SOAP based web service.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="SOAP.html#configure-soap-end-point-adapter">Configure SOAP Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="SOAP.html#create-operations-for-soap">Create Operations for SOAP</a>
+          <ul>
+            <li>
+              <a href="SOAP.html#configure-request-operation-for-soap">Configure Request Operation for SOAP</a>
+            </li>
+            <li>
+              <a href="SOAP.html#configure-response-operation-for-soap">Configure Response Operation for SOAP</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="JSON.html">JSON</a>
+    </td>
+    <td>JavaScript Object Notation (JSON) communicates with an external data source over the HTTP protocol, and returns a response in JSON format.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="JSON.html#configure-json-end-point-adapter">Configure JSON Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="JSON.html#create-operations-for-json">Create Operations for JSON</a>
+          <ul>
+            <li>
+              <a href="JSON.html#configure-request-operation-for-json">Configure Request Operation for JSON</a>
+            </li>
+            <li>
+              <a href="JSON.html#configure-response-operation-for-json">Configure Response Operation for JSON</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Java_Adapter.html">Java</a>
+    </td>
+    <td>Java Adapter interacts with the software application that does not support restful APIs using a custom Java code.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Java_Adapter.html#configure-java-endpoint-adapter">Configure Java Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="Java_Adapter.html#create-operations-for-java">Create Operations for Java</a>
+          <ul>
+            <li>
+              <a href="Java_Adapter.html#configure-request-operation-for-java">Configure Request Operation for Java</a>
+            </li>
+            <li>
+              <a href="Java_Adapter.html#configure-response-operation-for-java">Configure Response Operation for Java</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="JavaScript_Adapter.html">JavaScript</a>
+    </td>
+    <td>JavaScript integrates plain JavaScript services to applications in Volt MX Foundry.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="JavaScript_Adapter.html#configure-javascript-endpoint-adapter">Configure JavaScript Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="JavaScript_Adapter.html#create-operations-for-javascript">Create Operations for JavaScript</a>
+          <ul>
+            <li>
+              <a href="JavaScript_Adapter.html#configure-request-operation-for-javascript">Configure Request Operation for JavaScript</a>
+            </li>
+            <li>
+              <a href="JavaScript_Adapter.html#configure-response-operation-for-javascript">Configure Response Operation for JavaScript</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="API_Proxy_Adapter.html">API Proxy</a>
+    </td>
+    <td>API Proxy forwards the request and response without intermediate transformation (without affecting the actual request and response).</td>
+    <td>
+      <ul>
+        <li>
+          <a href="API_Proxy_Adapter.html#configure-apiproxy-endpoint-adapter">Configure API Proxy Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="API_Proxy_Adapter.html#create-operations-for-apiproxy">Create Operations for API Proxy</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="MockData_Adapter.html">Mock Data</a>
+    </td>
+    <td>The Volt MX Mock Data adapter capability helps you to continue to develop apps when the back-end services that an app connects to are not ready to be leveraged.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="MockData_Adapter.html#configure-mock-data-adapter">Configure Mock Data Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="MockData_Adapter.html#create-operations-for-mock-data">Create Operations for Mock Data</a>
+          <ul>
+            <li>
+              <a href="MockData_Adapter.html#configure-request-operation-for-mock-data">Configure Request Operation for Mock Data</a>
+            </li>
+            <li>
+              <a href="MockData_Adapter.html#create-response-operation-for-mock-data">Configure Response Operation for Mock Data</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="VoltMX_SAP_Gateway_Adapter.html">VoltMX SAP Gateway</a><br>Only available if you have SAP Gateway services in your account
+    </td>
+    <td>Volt MX SAP Gateway communicates with external SAP services over supported HTTP methods.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="VoltMX_SAP_Gateway_Adapter.html#configure-volt-mx-sapgateway-endpoint-adapter">Configure VoltMX SAP Gateway Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="VoltMX_SAP_Gateway_Adapter.html#create-operations-for-voltmxsapgateway">Create Operations for VoltMX SAP Gateway</a>
+          <ul>
+            <li>
+              <a href="VoltMX_SAP_Gateway_Adapter.html#configure-request-operation-for-volt-mx-sapgateway">Configure Request Operation for VoltMX SAP Gateway</a>
+            </li>
+            <li>
+              <a href="VoltMX_SAP_Gateway_Adapter.html#configure-response-operation-for-volt-mx-sapgateway">Configure Response Operation for VoltMX SAP Gateway</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Mulesoft.html">MuleSoft</a>
+    </td>
+    <td>MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt MX Foundry, developers can interact with more than 50 types of adapters.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Mulesoft.html#configure-mulesoft-end-point-adapter">Configure MuleSoft Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="Mulesoft.html#create-operations-for-mulesoft">Create Operations for MuleSoft</a>
+          <ul>
+            <li>
+              <a href="Mulesoft.html#configure-request-operation-for-mulesoft">Configure Request Operation for MuleSoft</a>
+            </li>
+            <li>
+              <a href="Mulesoft.html#configure-response-operation-for-mulesoft">Configure Response Operation for MuleSoft</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="AWS_API_Gateway_Adapter.html">AWS API Gateway</a>
+    </td>
+    <td>AWS API Gateway connects to the services configured and deployed under API Gateway Service in Amazon Web Services.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="AWS_API_Gateway_Adapter.html#configure-awsapigateway-endpoint-adapter">Configure AWS API Gateway Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="AWS_API_Gateway_Adapter.html#create-operations-for-awsapigateway">Create Operations for AWS API Gateway</a>
+          <ul>
+            <li>
+              <a href="AWS_API_Gateway_Adapter.html#configure-request-operation-for-awsapigateway">Configure Request Operation for AWS API Gateway</a>
+            </li>
+            <li>
+              <a href="AWS_API_Gateway_Adapter.html#configure-response-operation-for-awsapigateway">Configure Response Operation for AWS API Gateway</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Relational_Database_Adapter.html">Database</a>
+    </td>
+    <td>With Volt MX Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt MX Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Relational_Database_Adapter.html#configure-database-end-point-adapter">Configure Database Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="Relational_Database_Adapter.html#create-crud-operations-for-database-adapter">Create CRUD Operations for Database Adapter</a>
+        </li>
+        <li>
+          <a href="Relational_Database_Adapter.html#configure-crudoperations-for-a-database-adapter">Configure CRUD Operations for a Database Adapter</a>
+          <ul>
+            <li>
+              <a href="Relational_Database_Adapter.html#create-a-database-record-with-create-operation">Create a Database Record with Create Operation</a>
+            </li>
+            <li>
+              <a href="Relational_Database_Adapter.html#how-to-query-a-database-and-display-information-with-the-read-operation">Query a Database and Display Information with Read Operation</a>
+            </li>
+            <li>
+              <a href="Relational_Database_Adapter.html#how-to-update-a-database-record-with-update-operation">Update a Database Record with Update Operation</a>
+            </li>
+            <li>
+              <a href="Relational_Database_Adapter.html#how-to-delete-a-database-record-with-delete-operation">Delete a Database Record with Delete Operation</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="MongoDB_Adapter.html">MongoDB</a>
+    </td>
+    <td>With Volt MX Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="MongoDB_Adapter.html#configure-mongodb-end-point-adapter">Configure MongoDB Adapter</a>
+        </li>
+        <li>
+          <a href="MongoDB_Adapter.html#create-and-configure-operations-for-mongodb-adapter">Create and Configure CRUD Operations for a MongoDB Adapter</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="RAML_Adapter.html">RAML</a>
+    </td>
+    <td>RESTful API Modeling Language (RAML) is a YAML-based language for describing RESTful APIs.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="RAML_Adapter.html#configure-ramlendpoint-adapter">Configure RAML Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="RAML_Adapter.html#create-operations-for-raml">Create Operations for RAML</a>
+          <ul>
+            <li>
+              <a href="RAML_Adapter.html#configure-request-operation-for-raml">Configure Request Operation for RAML</a>
+            </li>
+            <li>
+              <a href="RAML_Adapter.html#configure-response-operation-for-raml">Configure Response Operation for RAML</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Salesforce_Adapter.html">Salesforce</a>
+    </td>
+    <td>Salesforce uses a protocol-specific adapter to connect to an external system and access its data.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Salesforce_Adapter.html#configure-salesforce-endpoint-adapter">Configure Salesforce Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="Salesforce_Adapter.html#create-operations-for-salesforce">Create Operations for Salesforce</a>
+          <ul>
+            <li>
+              <a href="Salesforce_Adapter.html#configure-request-operation-for-salesforce">Configure Request Operation for Salesforce</a>
+            </li>
+            <li>
+              <a href="Salesforce_Adapter.html#configure-response-operation-for-salesforce">Configure Response Operation for Salesforce</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="IBM_MQ_service.html">IBM MQ</a>
+    </td>
+    <td>IBM MQ server 9.0.0 version is a messaging middleware that simplifies and accelerates the integration of diverse applications and business data across multiple platforms. Volt MX uses the IBM MQ service to secure the message delivery and reduce the risk of data loss.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="IBM_MQ_service.html#configure-ibmmq-end-point-adapter">Configure IBM MQ Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="IBM_MQ_service.html#create-operations-for-ibmmq-service">Create Operations for IBM MQ</a>
+          <ul>
+            <li>
+              <a href="IBM_MQ_service.html#configure-request-operation-for-ibmmq">Configure Request Operation for IBM MQ</a>
+            </li>
+            <li>
+              <a href="IBM_MQ_service.html#configure-response-operation-for-ibmmq">Configure Response Operation for IBM MQ</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="SAP_JCO.html">SAP JCo</a>
+    </td>
+    <td>Volt MX Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="SAP_JCO.html#configure-sap-jco-end-point-adapter">Configure SAP JCo Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="SAP_JCO.html#create-operations-for-sapjco">Create Operations for SAP JCo</a>
+          <ul>
+            <li>
+              <a href="SAP_JCO.html#configure-request-operation-for-sap-jco">Configure Request Operation for SAP JCo</a>
+            </li>
+            <li>
+              <a href="SAP_JCO.html#configure-response-operation-for-sapjco">Configure Response Operation for SAP JCo</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Open_API__Swagger_.html">Open API (Swagger)</a>
+    </td>
+    <td>Swagger is a powerful open API specification framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Open_API__Swagger_.html#configuring-an-openapi-swagger-end-point-adapter">Configure Open API (Swagger) Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="Open_API__Swagger_.html#creating-operations-for-openapi-swagger">Create Operations for Open API (Swagger)</a>
+          <ul>
+            <li>
+              <a href="Open_API__Swagger_.html#configuring-request-parameters">Configure Request Operation for Open API (Swagger)</a>
+            </li>
+            <li>
+              <a href="Open_API__Swagger_.html#configuring-response-parameters">Configure Response Operation for Open API (Swagger)</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Email_Adapter.html">Email Adapter</a>
+    </td>
+    <td>The Email Adapter is used to send emails from the client app. You can also view the status of the emails that were sent by using the Email service. The email requests are sent to the Volt MX Foundry server which in-turn redirects them to the Volt MX Engagement server.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Email_Adapter.html#configure-a-service-definition">Configure the Email Adapter</a>
+        </li>
+        <li>
+          <a href="Email_Adapter.html#configure-operations-for-the-service-definition">Create Operations for the Email Adapter</a>
+          <ul>
+            <li>
+              <a href="Email_Adapter.html#request-input-parameters">Request Input Parameters</a>
+            </li>
+            <li>
+              <a href="Email_Adapter.html#response-output-parameters">Response Output Parameters</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="S3_File_Storage.html">AWS S3</a>
+    </td>
+    <td>The AWS S3 service on Volt MX Foundry connects to the specified S3 bucket, and also performs supported operations.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="S3_File_Storage.html#configure-a-service-for-aws-s3">Configure the AWS S3 adapter</a>
+        </li>
+        <li>
+          <a href="S3_File_Storage.html#create-operations-for-aws-s3">Create Operations for AWS S3</a>
+          <ul>
+            <li>
+              <a href="S3_File_Storage.html#configure-request-input-parameters">Configure Request Operation for AWS S3</a>
+            </li>
+            <li>
+              <a href="S3_File_Storage.html#configure-response-output-parameters">Configure Response Operation for AWS S3</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Cloudian_File_Storage.html">Cloudian</a>
+    </td>
+    <td>The Cloudian service on Volt MX Foundry connects to the specified S3 bucket on a HyperStore, and also performs supported operations.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Cloudian_File_Storage.html#configure-a-service-for-cloudian">Configure the Cloudian Adapter</a>
+        </li>
+        <li>
+          <a href="Cloudian_File_Storage.html#create-operations-for-cloudian">Create Operations for Cloudian</a>
+          <ul>
+            <li>
+              <a href="Cloudian_File_Storage.html#configure-request-input-parameters">Configure Request Operation for Cloudian</a>
+            </li>
+            <li>
+              <a href="Cloudian_File_Storage.html#configure-response-output-parameters">Configure Response Operation for Cloudian</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Foundry_Admin_Adapter.html">Foundry Admin Adapter</a>
+    </td>
+    <td>The Foundry Admin Adapter is used to perform administrative tasks (exposed via secure APIs) on a Foundry run-time server. With the adapter, external systems can invoke the provided APIs to read or modify settings on the Foundry server.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Foundry_Admin_Adapter.html#step1-configure-a-rules-service-and-publish-it-to-an-environment">Step 1: Configure a Rules Service and publish it to an environment</a>
+        </li>
+        <li>
+          <a href="Foundry_Admin_Adapter.html#step2-configure-an-integration-service-using-the-foundry-admin-adapter">Step 2: Configure an Integration Service using the Foundry Admin adapter</a>
+        </li>
+        <li>
+          <a href="Foundry_Admin_Adapter.html#step3-configure-the-operations-for-managing-the-rules">Step 3: Configure the Operations for Managing the Rules</a>
+        </li>
+        <li>
+          <a href="Foundry_Admin_Adapter.html#step4-publish-the-foundry-app-containing-the-integration-service-to-that-environment">Step 4: Publish the Foundry app containing the Integration Service to that environment</a>
+        </li>
+        <li>
+          <a href="Foundry_Admin_Adapter.html#operations-supported-for-foundry-admin-adapter-with-sample-requestresponse-and-error-scenario">Operations supported for Foundry Admin Adapter</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Red_Hat_PAM_Adapter.html">Red Hat PAM</a>
+    </td>
+    <td>The Red Hat PAM adapter in Foundry Console exposes the services and operations that are created by using the Red Hat PAM Business Central Interface.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Red_Hat_PAM_Adapter.html#how-to-configure-service-definition-for-red-hat-pam-adapter">Configure Service Definition for Red Hat PAM Adapter</a>
+        </li>
+        <li>
+          <a href="Red_Hat_PAM_Adapter.html#how-to-create-and-configure-operations-for-the-red-hat-pam-adapter">Create and Configure Operations for the Red Hat PAM Adapter</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="Text_Adapter.html">Text</a>
+    </td>
+    <td>Text Adapter forwards the request that has Text data and gives response without intermediate transformation (without affecting the actual request and response).</td>
+    <td>
+      <ul>
+        <li>
+          <a href="Text_Adapter.html#configure-text-adapter">Configure Text Adapter</a>
+        </li>
+        <li>
+          <a href="Text_Adapter.html#create-operations-for-text-adapter">Create Operations for Text Adapter</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<!-- | Endpoint Type | Description | Endpoint Configuration |
+| --- | --- | --- |
+| [XML](XML.md#Configur) | An XML Adapter communicates with an external data source using an XML endpoint over the HTTP protocol. | [Configure XML Endpoint Adapter](XML.md#configure-xml-end-point-adapter) [Create Operations for XML](XML.md#create-operations-for-xml) [Configure Request Operation for XML](XML.md#configure-request-operation-for-xml) [Configure Response Operation for XML](XML.md#configure-response-operation-for-xml) |
+| [SOAP](SOAP.md#top) | Simple Object Access Protocol (SOAP) is a messaging protocol that uses WSDL to describe the functionality of a SOAP based web service. | [Configure SOAP Endpoint Adapter](SOAP.md#configure-soap-end-point-adapter) [Create Operations for SOAP](SOAP.md#create-operations-for-soap) [Configure Request Operation for SOAP](SOAP.md#configure-request-operation-for-soap) [](XML.md#configure-response-operation-for-xml)[Configure Response Operation for SOAP](SOAP.md#configure-response-operation-for-soap) |
+| [JSON](JSON.md) | JavaScript Object Notation (JSON) communicates with an external data source over the HTTP protocol, and returns a response in JSON format. | [Configure JSON Endpoint Adapter](JSON.md#configure-json-end-point-adapter) [Create Operations for JSON](JSON.md#create-operations-for-json) [Configure Request Operation for JSON](JSON.md#configure-request-operation-for-json) [Configure Response Operation for JSON](JSON.md#configure-response-operation-for-json) |
+| [Java](Java_Adapter.md) | Java Adapter interacts with the software application that does not support restful APIs using a custom Java code. | [Configure Java Endpoint Adapter](Java_Adapter.md#configure-java-endpoint-adapter) [Create Operations for Java](Java_Adapter.md#create-operations-for-java) [Configure Request Operation for Java](Java_Adapter.md#configure-request-operation-for-java) [Configure Response Operation for Java](Java_Adapter.md#configure-response-operation-for-java) |
+| [JavaScript](JavaScript_Adapter.md) | JavaScript integrates plain JavaScript services to applications in Volt MX Foundry. | [Configure JavaScript Endpoint Adapter](JavaScript_Adapter.md#JavaScript_Service) [Create Operations for JavaScript](JavaScript_Adapter.md#create-operations-for-javascript) [Configure Request Operation for JavaScript](JavaScript_Adapter.md#configure-request-operation-for-javascript) [Configure Response Operation for JavaScript](JavaScript_Adapter.md#configure-response-operation-for-javascript) |
+| [API Proxy](API_Proxy_Adapter.md) | API Proxy forwards the request and response without intermediate transformation (without affecting the actual request and response). | [Configure API Proxy Endpoint Adapter](API_Proxy_Adapter.md#configure-api-proxy-endpoint-adapter) [Create Operations for API Proxy](API_Proxy_Adapter.md#create-operations-for-api-proxy) |
+| [Mock Data](MockData_Adapter.md) | The Volt MX Mock Data adapter capability helps you to continue to develop apps when the back-end services that an app connects to are not ready to be leveraged. | [Configure Mock Data Endpoint Adapter](MockData_Adapter.md#StubOperations) [Create Operations for Mock Data](MockData_Adapter.md#StubOperations) [Configure Request Operation for Mock Data](MockData_Adapter.md#Stub_Request) [Configure Response Operation for Mock Data](MockData_Adapter.md#Stub_Output) |
+| [VoltMX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md) | Volt MX SAP Gateway communicates with external SAP services over supported HTTP methods. | [Configure Volt MX SAP Gateway Endpoint Adapter](VoltMX_SAP_Gateway_Adapter.md#configure-sap-gateway-endpoint-adapter) [Create Operations for Volt MX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md#create-operations-for-sap-gateway) [Configure Request Operation for Volt MX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md#configure-request-operation-for-sap-gateway) [Configure Response Operation for Volt MX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md#configure-response-operation-for-sap-gateway) |
+| [MuleSoft](Mulesoft.md) | MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt MX Foundry, developers can interact with more than 50 types of adapters. | [Configure MuleSoft Endpoint Adapter](Mulesoft.md#configure-mulesoft-end-point-adapter) [Create Operations for MuleSoft](Mulesoft.md#create-operations-for-mulesoft) [Configure Request Operation for MuleSoft](Mulesoft.md#configure-request-operation-for-mulesoft) [Configure Response Operation for MuleSoft](Mulesoft.md#configure-response-operation-for-mulesoft) |
+| [AWS API Gateway](AWS_API_Gateway_Adapter.md) | AWS API Gateway connects to the services configured and deployed under API Gateway Service in Amazon Web Services. | [Configure AWS API Gateway Endpoint Adapter](AWS_API_Gateway_Adapter.md#configure-aws-api-gateway-endpoint-adapter) [Create Operations for AWS API Gateway](AWS_API_Gateway_Adapter.md#create-operations-for-aws-api-gateway) [Configure Request Operation for AWS API Gateway](AWS_API_Gateway_Adapter.md#configure-request-operation-for-aws-api-gateway) [Configure Response Operation for AWS API Gateway](AWS_API_Gateway_Adapter.md#configure-response-operation-for-aws-api-gateway) |
+| [Database](Relational_Database_Adapter.md) | With Volt MX Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt MX Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views. | [Configure Database Endpoint Adapter](Relational_Database_Adapter.md#configure-database-end-point-adapter) [Create CRUD Operations for Database Adapter](Relational_Database_Adapter.md#create-crud-operations-for-database-adapter) [Configure CRUD Operations for a Database Adapter](Relational_Database_Adapter.md#configure-crud-operations-for-a-database-adapter) [Create a Database Record with Create Operation](Relational_Database_Adapter.md#create-a-database-record-with-create-operation)[Query a Database and Display Information with Read Operation](Relational_Database_Adapter.md#how-to-query-a-database-and-display-information-with-the-read-operation)[Update a Database Record with Update Operation](Relational_Database_Adapter.md#how-to-update-a-database-record-with-update-operation)[Delete a Database Record with Delete Operation](Relational_Database_Adapter.md#how-to-delete-a-database-record-with-delete-operation) |
+| [MongoDB](MongoDB_Adapter.md) | With Volt MX Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents. | [Configure MongoDB Adapter](MongoDB_Adapter.md#configure-mongodb-end-point-adapter) [Create and Configure CRUD Operations for a MongoDB Adapter](MongoDB_Adapter.md#create-and-configure-operations-for-mongodb-adapter) |
+| [RAML](RAML_Adapter.md) | RESTful API Modeling Language (RAML) is a YAML-based language for describing RESTful APIs. | [Configure RAML Endpoint Adapter](RAML_Adapter.md#configure-raml-endpoint-adapter) [Create Operations for RAML](RAML_Adapter.md#create-operations-for-raml) [Configure Request Operation for RAML](RAML_Adapter.md#configure-request-operation-for-raml) [Configure Response Operation for RAML](RAML_Adapter.md#configure-response-operation-for-raml) |
+| [Salesforce](Salesforce_Adapter.md) | Salesforce uses a protocol-specific adapter to connect to an external system and access its data. | [Configure Salesforce Endpoint Adapter](Salesforce_Adapter.md#configure-salesforce-endpoint-adapter) [Create Operations for Salesforce](Salesforce_Adapter.md#create-operations-for-salesforce) [Configure Request Operation for Salesforce](Salesforce_Adapter.md#configure-request-operation-for-salesforce) [Configure Response Operation for Salesforce](Salesforce_Adapter.md#configure-response-operation-for-salesforce) |
+| [IBM MQ](IBM_MQ_service.md) | IBM MQ server 9.0.0 version is a messaging middleware that simplifies and accelerates the integration of diverse applications and business data across multiple platforms. Volt MX uses the IBM MQ service to secure the message delivery and reduce the risk of data loss. | [Configure IBM MQ Endpoint Adapter](IBM_MQ_service.md#configure-ibm-mq-end-point-adapter) [Create Operations for IBM MQ](IBM_MQ_service.md#create-operations-for-ibm-mq-service) [Configure Request Operation for IBM MQ](IBM_MQ_service.md#configure-request-operation-for-ibm-mq) [Configure Response Operation for IBM MQ](IBM_MQ_service.md#configure-response-operation-for-ibm-mq) |
+| [SAP JCo](SAP_JCO.md) | Volt MX Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions. | [Configure SAP JCo Endpoint Adapter](SAP_JCO.md#configure-sap-jco-end-point-adapter) [Create Operations for SAP JCo](SAP_JCO.md#create-operations-for-sap-jco) [Configure Request Operation for SAP JCo](SAP_JCO.md#configure-request-operation-for-sap-jco) [Configure Response Operation for SAP JCo](SAP_JCO.md#configure-response-operation-for-sap-jco) |
+| [Open API (Swagger)](Open_API__Swagger_.md) | Swagger is a powerful open API specification framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs. | [Configure Open API (Swagger) Endpoint Adapter](Open_API__Swagger_.md#configuring-an-openapi-swagger-end-point-adapter) [Create Operations for Open API (Swagger)](Open_API__Swagger_.md#creating-operations-for-openapi-swagger) [Configure Request Operation for Open API (Swagger)](Open_API__Swagger_.md#configuring-request-parameters) [Configure Response Operation for Open API (Swagger)](Open_API__Swagger_.md#configuring-response-parameters) | -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

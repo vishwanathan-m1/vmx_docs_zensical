@@ -1,0 +1,4179 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/API_Reference.html">
+      
+      
+        <link rel="prev" href="Volt_MX_Live_Activity_Namespace_and_APIs.html">
+      
+      
+        <link rel="next" href="../../iris_app_viewer/Content/Overview.html">
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>API Reference - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-following-is-the-breakdown-of-activityparams" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-voltmx/14" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_11" id="__nav_8_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_11">
+            <span class="md-nav__icon md-icon"></span>
+            iOS Live Activities in Volt MX Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrate_Live_Activities_with_an_iOS_App.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrate Live Activities with an iOS App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Volt_MX_Live_Activity_Namespace_and_APIs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Live Activity Namespace and APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="API_Reference.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<blockquote>
+<p><strong>Note :</strong> All the APIs listed below are only applicable from iOS 16.2</p>
+</blockquote>
+<details close="close">
+<p><summary id="live_start_01">voltmx.liveActivity.start</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.start(activityParams, pushType, onSuccessCallback, onFailureCallback)</p>
+<p><strong>Description</strong></p>
+<p>Starts a Live Activity locally by initializing it with the required attributes and content state. This enables real-time updates and persistent display on the Lock Screen and Dynamic Island.</p>
+<p><strong>Input Parameters</strong></p>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>activityParams</td>
+<td>Object</td>
+<td>Contains the required attributes and state data for the Live Activity</td>
+</tr>
+<tr>
+<td>pushType</td>
+<td>Constant</td>
+<td>Specifies the push capability of the Live Activity. It can be:<br><li>voltmx.liveActivity.PUSHTYPE_NIL: No push updates
+<li>voltmx.liveActivity.PUSHTYPE_TOKEN: Updates via ActivityKit push notifications.<li>
+voltmx.liveActivity.PUSHTYPE_CHANNEL: Updates via broadcast channels (Valid from iOS 18+).</li>
+</td>
+</tr>
+<tr>
+<td>onSuccessCallback</td>
+<td>Function</td>
+<td>Callback function invoked on successful start of Live Activity.<br>For voltmx.liveActivity.PUSHTYPE_NIL and <br>voltmx.liveActivity.PUSHTYPE_CHANNEL<li>Returns activityID.<br>For voltmx.liveActivity.PUSHTYPE_TOKEN:<li>Returns activityID and pushToken.<li>If a new pushToken is generated (different from the previous one), this callback is triggered again.<li>The retrieval of pushToken is an asynchronous process.</td>
+</tr>
+<tr>
+<td>onFailureCallback</td>
+<td>Function</td>
+<td>Callback function invoked in case of failure, returning an error object containing errorCode, errorMessage, and errorDescription. Refer Exceptions for different types of error constants.</td>
+</tr>
+</table>
+</body>
+</html>
+<p><strong>The following is the breakup of activityParams:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attributesName</td>
+<td>String</td>
+<td>The name of the struct conforming to the ActivityAttributes protocol. This must match the attributes struct name used in the Live Activity configuration. The same attributes name was also mentioned earlier<br>under ‘Enable iOS Live Activity’ as one of the values in ‘Attributes’ textfield.</br></td>
+</tr>
+<tr>
+<td>state</td>
+<td>Object</td>
+<td>A key-value pair containing dynamic properties (ContentState variables) defined in the ActivityAttributes struct. These values update throughout the Live Activity's lifecycle.</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td>Object</td>
+<td>A key-value pair containing fixed properties (Attributes variables) defined in the ActivityAttributes struct. If there are no fixed-state variables defined in Attributes struct, specify here as attributes = { }.</td>
+</tr>
+<tr>
+<td>staleDatePeriod</td>
+<td>Double</td>
+<td>The duration (in seconds) after which the system considers the Live Activity outdated and may stop updating it.</td>
+</tr>
+<tr>
+<td>relevanceScore</td>
+<td>Double</td>
+<td>A score determining the priority order of multiple Live Activities on the Lock Screen. Higher scores appear above lower ones. 0 indicates the lowest relevance and 100 the highest.</td>
+</tr>
+<tr>
+<td>channelID</td>
+<td>String</td>
+<td>This is an optional parameter. A base64-encoded string required to configure a Live Activity for broadcast channels. This parameter is mandatory when using PUSHTYPE_CHANNEL and is available only on iOS 18 and above.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong></p>
+<p>None</p>
+<p><strong>Exceptions</strong></p>
+<p>The following errors may be returned in the onFailureCallback if the API call fails.</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Error constants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5021</td>
+<td>Live Activities are not enabled</td>
+<td>voltmx.liveActivity.ERROR_NOT_ENABLED</td>
+</tr>
+<tr>
+<td>5001</td>
+<td>The provided Live Activity attributes exceeded the maximum size of 4KB</td>
+<td>voltmx.liveActivity.ERROR_ATTRIBUTES_TOO_LARGE</td>
+</tr>
+<tr>
+<td>5002</td>
+<td>The device does not support Live Activities</td>
+<td>voltmx.liveActivity.ERROR_UNSUPPORTED</td>
+</tr>
+<tr>
+<td>5003</td>
+<td>The person has deactivated Live Activities in the Settings</td>
+<td>voltmx.liveActivity.ERROR_DENIED</td>
+</tr>
+<tr>
+<td>5004</td>
+<td>The device has reached the maximum number of ongoing Live Activities</td>
+<td>voltmx.liveActivity.ERROR_GLOBAL_MAX_EXCEEDED</td>
+</tr>
+<tr>
+<td>5005</td>
+<td>The app has already started the maximum number of concurrent Live Activities</td>
+<td>voltmx.liveActivity.ERROR_TARGET_MAX_EXCEEDED</td>
+</tr>
+<tr>
+<td>5006</td>
+<td>The app does not have the required entitlement to start a Live Activity</td>
+<td>voltmx.liveActivity.ERROR_UNSUPPORTED_TARGET</td>
+</tr>
+<tr>
+<td>5007</td>
+<td>App tried to start Live Activity while it was in the background</td>
+<td>voltmx.liveActivity.ERROR_VISIBILITY</td>
+</tr>
+<tr>
+<td>5008</td>
+<td>System could not persist the Live Activity</td>
+<td>voltmx.liveActivity.ERROR_PERSISTENCE_FAILURE</td>
+</tr>
+<tr>
+<td>5009</td>
+<td>Process that tried to start Live Activity is missing a process identifier</td>
+<td>voltmx.liveActivity.ERROR_MISSING_PROCESS_IDENTIFIER</td>
+</tr>
+<tr>
+<td>5010</td>
+<td>App does not have the required entitlement to start a Live Activity</td>
+<td>voltmx.liveActivity.ERROR_UNENTITLED</td>
+</tr>
+<tr>
+<td>5011</td>
+<td>Provided activity identifier is malformed</td>
+<td>voltmx.liveActivity.ERROR_MALFORMED_ACTIVITY_IDENTIFIER</td>
+</tr>
+<tr>
+<td>5012</td>
+<td>Process that tried to recreate Live Activity is not the process that originally created the Live Activity</td>
+<td>voltmx.liveActivity.ERROR_RECONNECT_NOT_PERMITTED</td>
+</tr>
+<tr>
+<td>5013</td>
+<td>Type mismatch encountered while decoding the Live Activity data</td>
+<td>voltmx.liveActivity.ERROR_DATA_TYPE_MISMATCH</td>
+</tr>
+<tr>
+<td>5014</td>
+<td>Key not found while decoding the Live Activity data</td>
+<td>voltmx.liveActivity.ERROR_DATA_KEY_NOT_FOUND</td>
+</tr>
+<tr>
+<td>5015</td>
+<td>Value not found for expected type while decoding the Live Activity data</td>
+<td>voltmx.liveActivity.ERROR_DATA_VALUE_NOT_FOUND</td>
+</tr>
+<tr>
+<td>5016</td>
+<td>Invalid data provided</td>
+<td>voltmx.liveActivity.ERROR_DATA_INVALID</td>
+</tr>
+<tr>
+<td>5017</td>
+<td>Permissions error - Missing required entitlements or capabilities</td>
+<td>voltmx.liveActivity.ERROR_PERMISSION</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note :</strong><br> i) In case of Unknown error -  errorCode, errorMessage and errorDescription is returned as 99999, ‘Unknown error’ and ‘Unknown error encountered’ respectively. For errorCode of 5021 when live activities are not enabled, only errorCode and errorMessage is returned. For all other errors, onFailureCallback will return all three - errorCode, errorMessage and errorDescription in onFailureCallback<br>ii)The errors with errorCodes 5001 - 5012 are of ‘ActivityAuthorizationError’ type. The errorDescription is generated from the system’s localized error message, offering insights into the cause of the Live Activity failure.<br>iii)
+The errors with errorCodes 5013 - 5017 are of ‘DecodingError’ type. The errorDescription is extracted from the system's decoding context, providing details about the specific issue encountered while processing Live Activity data.<br>iv)
+The error message strings in the table are representations and may not match the exact messages returned by the system.</p>
+</blockquote>
+<p><strong>Example</strong></p>
+<pre><code>var activityParams = {
+    attributes: {
+        airlineName: &quot;Nimbus Airways&quot;
+    },
+    state: {
+        flightCode: &quot;G89-AU&quot;,
+        progress: 40.83,
+        time: &quot;Arriving in 30m&quot;,
+        status: &quot;5min delay&quot;,
+        departure: &quot;BLR&quot;,
+        arrival: &quot;HYD&quot;
+    },
+    staleDatePeriod: 300.0,
+    relevanceScore: 50.0,
+    attributesName: &quot;FlightAttributes&quot;,
+    channelID: &quot;channelIDhere&quot;
+};
+var pushType = voltmx.liveActivity.PUSHTYPE_CHANNEL;
+
+function onSuccessCallback(id) {
+    voltmx.ds.save([id], &quot;activityID_flight_01&quot;);
+    alert(&quot;Success ActID: &quot; + id);
+}
+
+function onFailureCallback(errorInfo) {
+    var errorCode = errorInfo.errorCode;
+    var errorMessage = errorInfo.errorMessage;
+    var errorDescription = errorInfo.errorDescription;
+    alert(&quot;Failure Details - start :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage + &quot;\n&quot; + &quot;Error Description: &quot; + errorDescription);
+}
+voltmx.liveActivity.start(activityParams, pushType, onSuccessCallback, onFailureCallback);
+
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>Once the Live Activity starts successfully, it returns an activityID (for PUSHTYPE_NIL and PUSHTYPE_CHANNEL) or both activityID and pushToken (for PUSHTYPE_TOKEN). activityID is a unique identifier and should be stored securely (e.g., using voltmx.ds.save) for future reference. It is required to update (voltmx.liveActivity.update), end (voltmx.liveActivity.end), or fetch data (voltmx.liveActivity.fetchActivityData) for the Live Activity. pushToken is essential when using PUSHTYPE_TOKEN for server-driven updates. This token can be used to update or end the Live Activity remotely.</p>
+</li>
+<li>
+<p>A Live Activity can stay active for up to eight hours unless it is manually ended by the app or the user. After reaching this limit, the system automatically terminates the Live Activity and removes it from the Dynamic Island. However, a live activity remains visible on the Lock Screen until the user dismisses it or for up to an additional four hours, whichever comes first. In total, a Live Activity can remain on the Lock Screen for a maximum of 12 hours.</p>
+</li>
+<li>
+<p>All dynamic variables must be initialized inside the state object, while fixed variables should be placed inside the attributes object in activityParams.</p>
+</li>
+<li>
+<p>If using Channel Push Type, refer to <a href="https://developer.apple.com/documentation/usernotifications/setting-up-broadcast-push-notifications?language=objc">Apple’s Broadcast Push Notification Documentation</a>. Ensure that the Broadcast Capability is enabled for your app. Use the push notification console to manage channels under the Channels tab, where you can create or delete channels. When creating a new channel, the console provides guidance on configuring parameters like environment and message storage policy <a href="https://developer.apple.com/documentation/usernotifications/sending-channel-management-requests-to-apns?language=objc">(More details here)</a>.</p>
+</li>
+<li>
+<p>DecodingErrors may occur if some key-value pairs are missing in attributes or state within activityParams. Additionally, if a user disables "Allow Live Activities" in app settings, an error "Live Activities are not enabled" may be thrown. A previously started Live Activity can also automatically dismiss due to system constraints.</p>
+</li>
+<li>
+<p>If the Live Activity is started via Push or Channel type, ensure that Push Capability is added in Iris.</p>
+</li>
+<li>
+<p>Calling this API multiple times can start multiple Live Activities with the same initial attributes and state values. However, each Live Activity will have a unique activityID and pushToken, as their lifecycles are independent.</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_02">voltmx.liveActivity.update</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.update(activityParams,  onFailureCallback, alertParams)</p>
+<p><strong>Description</strong></p>
+<p>The voltmx.liveActivity.update API is used to modify the content state of an ongoing Live Activity. This allows real-time updates to be reflected on the Lock Screen and Dynamic Island.
+This API enables updating dynamic data such as progress, status, or time while also allowing adjustments to the staleDatePeriod and relevanceScore, ensuring the Live Activity remains relevant. The activityID parameter ensures that the correct Live Activity instance is updated.
+Additionally, an optional alertParams parameter can be provided. When used, it triggers an alert notification on paired Apple Watch devices and displays a banner notification on devices that do not support the Dynamic Island.</p>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityParams</td>
+<td style="text-align: center;">Object</td>
+<td style="text-align: center;">An object containing the updated content-state data, stale date period, relevance score, and the activityID of the Live Activity to be updated.</td>
+</tr>
+<tr>
+<td>onFailureCallback</td>
+<td style="text-align: center;">Function</td>
+<td style="text-align: center;">Callback function invoked in case of failure in update, returning an error object containing errorCode and errorMessage. Refer Exceptions for different types of error constants.</td>
+</tr>
+<tr>
+<td>alertParams</td>
+<td style="text-align: center;">Object</td>
+<td style="text-align: center;">This is an optional parameter. On a paired Apple Watch, the alert will be shown once the update is finished. If alertParams is provided as an input, the expanded presentation in the Dynamic Island or the Lock Screen presentation as a banner on devices that don’t support the Dynamic Island, will be shown.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Below is the breakup of activityParams -</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attributesName</td>
+<td>String</td>
+<td>The name of the struct conforming to the ActivityAttributes protocol.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Object</td>
+<td>The updated content-state data (dynamic key-value pairs) to reflect in the Live Activity.</td>
+</tr>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>A string representing the unique identifier of the Live Activity that needs to be updated.</td>
+</tr>
+<tr>
+<td>staleDatePeriod</td>
+<td>Double</td>
+<td>The duration (in seconds) after which the system considers the Live Activity outdated.</td>
+</tr>
+<tr>
+<td>relevanceScore</td>
+<td>Double</td>
+<td>A score that determines the priority order of Live Activities on the Lock Screen when multiple Live Activities are active.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Below is the breakup of alertParams -</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>A string representing the alert title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>Object</td>
+<td>A string representing the alert body message.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong></p>
+<p>None</p>
+<p><strong>Exceptions</strong></p>
+<p>The following errors may be returned in the onFailureCallback if the API call fails.</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Error Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5021</td>
+<td>Live Activities are not enabled</td>
+<td>voltmx.liveActivity.ERROR_NOT_ENABLED</td>
+</tr>
+<tr>
+<td>5020</td>
+<td>Live Activity with specified activityID not found</td>
+<td>voltmx.liveActivity.ERROR_NOT_FOUND.</td>
+</tr>
+</tbody>
+</table>
+<p>Other errorCodes(errorMessage/errorConstants) of ActivityAuthorizationError and DecodingError similar to voltmx.liveActivity.start API apply here as well.</p>
+<p><strong>Example</strong></p>
+<pre><code>var activityParams = {
+    state: {
+        flightCode: &quot;G89-D&quot;,
+        progress: 100,
+        time: &quot;Arrived&quot;,
+        status: &quot;Boarding!&quot;,
+        departure: &quot;HYD&quot;,
+        arrival: &quot;DEL&quot;
+    },
+    activityID: voltmx.ds.read(&quot;activityID_flight_01&quot;)[0],
+    staleDatePeriod: 300.0,
+    relevanceScore: 50.0,
+    attributesName: &quot;FlightAttributes&quot;
+};
+
+function onFailureCallback(errorInfo) {
+   var errorCode = errorInfo.errorCode;
+   var errorMessage = errorInfo.errorMessage;
+    alert(&quot;Failure Details - update :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage);
+}
+
+//alertParams is optional
+var alertParams = {
+    &quot;title&quot;: &quot;Arrived!&quot;,
+    &quot;body&quot;: &quot;Boarding at Gate 3 ..!&quot;
+}
+voltmx.liveActivity.update(activityParams, onFailureCallback, alertParams);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>If a Live Activity has already started but is dismissed before calling this update API (either due to exceeding its 8-hour lifecycle or being manually dismissed by the user), the failure callback will trigger with the error constant voltmx.liveActivity.ERROR_NOT_FOUND. The same error occurs if the provided activityID is incorrect.</p>
+</li>
+<li>
+<p>alertParams is optional. Live Activity alerts light up the screen and, by default, play a notification sound for critical updates. They also present an expanded view in the Dynamic Island or appear as a banner notification on devices that do not support the Dynamic Island. Avoid excessive alerts or non-essential updates, as users may disable Live Activities for your app in Settings. The alert message is delivered to a paired Apple Watch.</p>
+</li>
+<li>
+<p>watchOS 11 Integration: Starting with watchOS 11, when a Live Activity starts on an iPhone paired to an Apple Watch, the Smart Stack will automatically show the Live Activity at the top. By default, the Smart Stack displays a combination of the leading and trailing elements from the Live Activity’s compact presentation on the iPhone.</p>
+</li>
+<li>
+<p>Live Activity Updates: The activityID is unique for each Live Activity. A Live Activity can be updated multiple times with different state, staleDate, and relevanceScore, as long as it has not been ended or dismissed. Updates can be sent either from the application using this API or remotely.</p>
+</li>
+<li>
+<p>Fixed Attributes Cannot Be Updated: The attributes defined in the attributes struct (fixed key-value pairs) cannot be modified once the Live Activity has started. Only the state (dynamic key-value pairs), staleDatePeriod, and relevanceScore can be updated. </p>
+</li>
+<li>
+<p>Use alertParams if you want to display an alert on a paired Apple Watch. Banner notifications are typically not shown when the update is triggered while the app is in the foreground. However, these notifications can appear if the app is in the background or not running, and the alertParams update is sent remotely.</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_03">voltmx.liveActivity.end</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.end(activityParams, policyParams, onFailureCallback)</p>
+<p><strong>Description</strong></p>
+<p>The voltmx.liveActivity.end API is used to end a running Live Activity based on a specified dismissal policy. This API allows the application to control how and when the Live Activity should be dismissed from the system.</p>
+<p><strong>There are three dismissal policies available</strong></p>
+<ul>
+<li>Immediate (DISMISSAL_IMMEDIATE): The Live Activity is removed instantly.</li>
+<li>Default (DISMISSAL_DEFAULT): The Live Activity remains on the Lock Screen for up to four hours before being removed by the system or the user.</li>
+<li>Custom (DISMISSAL_CUSTOM): The Live Activity is removed at a specified time, within a four-hour window.</li>
+</ul>
+<p>If a Live Activity has already been dismissed or the provided activityID is incorrect, the failure callback will trigger with an error.</p>
+<p>The following table shows the different dismissal policies available for ending a Live Activity, along with their descriptions, required parameters, and state transitions -</p>
+<table>
+<thead>
+<tr>
+<th>Dismissal Policy</th>
+<th>Description</th>
+<th>Required Parameters in policyParams</th>
+<th>Activity State Transition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DISMISSAL_IMMEDIATE</td>
+<td>The system immediately removes the Live Activity.</td>
+<td>None</td>
+<td>The activityState changes to STATE_DISMISSED immediately.</td>
+</tr>
+<tr>
+<td>DISMISSAL_DEFAULT</td>
+<td>The Live Activity remains on the Lock Screen for up to four hours unless removed by the user.</td>
+<td>state – Defines the final state of the Live Activity before dismissal.</td>
+<td>The activityState does not change to STATE_DISMISSED until the system or user removes it.</td>
+</tr>
+<tr>
+<td>DISMISSAL_CUSTOM</td>
+<td>The system removes the Live Activity at a specified time within a four-hour window.</td>
+<td>state – Defines the final state of the Live Activity before dismissal.<br>dismissalDate – A string in ISO format indicating the removal time.</td>
+<td>The system removes the Live Activity at the specified date or after four hours, whichever comes first. When removed, the activityState changes to STATE_DISMISSED.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityParams</td>
+<td>Object</td>
+<td>Contains details of the Live Activity to be ended.</td>
+</tr>
+<tr>
+<td>policyParams</td>
+<td>Object</td>
+<td>Defines the dismissal policy for the Live Activity.</td>
+</tr>
+<tr>
+<td>onFailureCallback</td>
+<td>Function</td>
+<td>Callback function invoked in case of failure in invoking end call, returning an error object containing errorCode and errorMessage. Refer Exceptions for different types of error constants.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The following is the breakup of activityParams</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attributesName</td>
+<td>String</td>
+<td>The name of the struct conforming to the ActivityAttributes protocol.</td>
+</tr>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>A unique identifier for the Live Activity that needs to be ended</td>
+</tr>
+<tr>
+<td>staleDatePeriod</td>
+<td>Double</td>
+<td>The duration (in seconds) after which the system considers the Live Activity out of date.</td>
+</tr>
+<tr>
+<td>relevanceScore</td>
+<td>Double</td>
+<td>Determines the priority of the Live Activity when multiple are present.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The following is the breakup of policyParams</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dismissalPolicy</td>
+<td>Constant</td>
+<td>Defines how the Live Activity should be dismissed. Acceptable values:<br>- voltmx.liveActivity.DISMISSAL_IMMEDIATE<br>- voltmx.liveActivity.DISMISSAL_DEFAULT<br>- voltmx.liveActivity.DISMISSAL_CUSTOM</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Object (optional)</td>
+<td>The final state of the Live Activity before dismissal (only applicable for DISMISSAL_DEFAULT and DISMISSAL_CUSTOM).</td>
+</tr>
+<tr>
+<td>dismissalDate</td>
+<td>String (ISO format)</td>
+<td>Specifies when the Live Activity should be removed (only applicable for DISMISSAL_CUSTOM).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong>
+None</p>
+<p><strong>Exceptions</strong></p>
+<p>The following errors may be returned in the onFailureCallback if the API call fails.</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Error Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5021</td>
+<td>Live Activities are not enabled</td>
+<td>voltmx.liveActivity.ERROR_NOT_ENABLED</td>
+</tr>
+<tr>
+<td>5020</td>
+<td>Live Activity with specified activityID not found</td>
+<td>voltmx.liveActivity.ERROR_NOT_FOUND.</td>
+</tr>
+</tbody>
+</table>
+<p>Other errorCodes(errorMessage/errorConstants) of ActivityAuthorizationError and DecodingError similar to voltmx.liveActivity.start API apply here as well.</p>
+<p><strong>Example</strong></p>
+<pre><code>
+//Immediate dismissal - No state or dismissalDate required
+var activityParams = {
+    attributesName: &quot;FlightAttributes&quot;,
+    activityID: voltmx.ds.read(&quot;activityID_flight_02&quot;)[0],
+    staleDatePeriod: 300.0,
+    relevanceScore: 100.0
+};
+var policyParams = {
+    dismissalPolicy: voltmx.liveActivity.DISMISSAL_IMMEDIATE
+};
+
+function onFailureCallback(errorInfo) {
+    var errorCode = errorInfo.errorCode;
+    var errorMessage = errorInfo.errorMessage;
+    alert(&quot;Failure Details - end :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage);
+}
+voltmx.liveActivity.end(activityParams, policyParams, onFailureCallback);
+
+
+//Custom dismissal - Requires state and dismissalDate
+var activityParams = {
+    attributesName: &quot;FlightAttributes&quot;,
+    activityID: voltmx.ds.read(&quot;activityID_flight_02&quot;)[0],
+    staleDatePeriod: 300.0,
+    relevanceScore: 100.0
+};
+//Ensure date is passed in correct format
+var date_ = new Date(new Date().getTime() + 10000).toISOString(); //ends after 10s
+var policyParams = {
+    dismissalPolicy: voltmx.liveActivity.DISMISSAL_CUSTOM,
+    state: {
+        flightCode: &quot;G89-AU&quot;,
+        progress: 100,
+        time: &quot;Arrived&quot;,
+        status: &quot;Boarding in 10min&quot;,
+        departure: &quot;HYD&quot;,
+        arrival: &quot;DEL&quot;
+    },
+    dismissalDate: date_
+};
+
+function onFailureCallback(errorInfo) {
+    var errorCode = errorInfo.errorCode;
+    var errorMessage = errorInfo.errorMessage;
+    alert(&quot;Failure Details - end :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage);
+}
+voltmx.liveActivity.end(activityParams, policyParams, onFailureCallback);
+
+
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>A Live Activity can also be ended remotely using the appropriate API calls.</li>
+<li>If a Live Activity has been started and dismissed before calling this API (e.g., exceeded its 8-hour lifecycle or was dismissed by the user), the failure callback will trigger with the error constant voltmx.liveActivity.ERROR_NOT_FOUND.</li>
+<li>The same error (voltmx.liveActivity.ERROR_NOT_FOUND) is thrown if the activityID provided is incorrect.</li>
+<li>Attributes (fixed variables in the ActivityAttributes struct) cannot be updated using this API. Only state data, dismissal policies, and timing parameters can be modified.</li>
+<li>When using DISMISSAL_CUSTOM, ensure dismissalDate is in ISO format.</li>
+<li>The dismissalDate should be set correctly, as the system will remove the Live Activity at the specified time or within four hours after the provided date—whichever comes first.</li>
+<li>If a Live Activity is ended using DISMISSAL_CUSTOM or DISMISSAL_DEFAULT, it may remain visible on the Lock Screen for the specified duration before being removed. However, once it is marked as ended, it cannot be updated or ended again.</li>
+<li>If the dismissal policy is immediate, the Live Activity will be removed instantly, and its state will change to STATE_DISMISSED.</li>
+<li>The system handles the final removal of Live Activities based on the chosen dismissal policy, ensuring a seamless user experience.</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_04">voltmx.liveActivity.observeActivityStateUpdates</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.observeActivityStateUpdates(activityID, attributesName, onSuccessCallback, onFailureCallback)</p>
+<p><strong>Description</strong></p>
+<p>The voltmx.liveActivity.observeActivityStateUpdates API is used to observe activity state changes of a Live Activity in real-time. It asynchronously notifies the application when the activity state changes, allowing the app to respond accordingly. The callback function will be triggered continuously as long as the activity state keeps changing. When first called, it immediately returns the current activity state of the Live Activity.</p>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>A unique identifier representing the Live Activity whose activity state changes need to be observed.</td>
+</tr>
+<tr>
+<td>attributesName</td>
+<td>String</td>
+<td>The name of the struct conforming to the ActivityAttributes protocol.</td>
+</tr>
+<tr>
+<td>onSuccessCallback</td>
+<td>Function</td>
+<td>A callback function that receives updates whenever the Live Activity's state changes.</td>
+</tr>
+<tr>
+<td>onFailureCallback</td>
+<td>Function</td>
+<td>A callback function that is triggered if an error occurs while observing state changes.</td>
+</tr>
+</tbody>
+</table>
+<p>Activity State constants</p>
+<table>
+<thead>
+<tr>
+<th>Constants</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>voltmx.liveActivity.STATE_ACTIVE</td>
+<td>The Live Activity is currently running, visible to the user, and capable of receiving updates.</td>
+</tr>
+<tr>
+<td>voltmx.liveActivity.STATE_ENDED</td>
+<td>The Live Activity remains visible, but it has been marked as ended, meaning it will no longer receive updates.</td>
+</tr>
+<tr>
+<td>voltmx.liveActivity.STATE_DISMISSED</td>
+<td>The Live Activity has been fully removed from view, either by the system or the user, and can no longer be interacted with.</td>
+</tr>
+<tr>
+<td>voltmx.liveActivity.STATE_STALE</td>
+<td>The content of the Live Activity is outdated and needs a refresh. This can occur if there is a connectivity issue preventing updates.</td>
+</tr>
+<tr>
+<td>voltmx.liveActivity.STATE_UNKNOWN</td>
+<td>The Live Activity's state is undefined or does not match any of the known states.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong></p>
+<p>None</p>
+<p><strong>Exceptions</strong></p>
+<p>The following errors may be returned in the onFailureCallback if the API call fails.</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Error Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5020</td>
+<td>Live Activity with specified activityID not found</td>
+<td>voltmx.liveActivity.ERROR_NOT_FOUND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code>function onSuccessCallback(activityState) {
+    if (activityState == voltmx.liveActivity.STATE_ACTIVE) {
+        alert(&quot;Activity State : ACTIVE&quot;);
+    } else if (activityState == voltmx.liveActivity.STATE_ENDED) {
+        alert(&quot;Activity State : ENDED&quot;);
+    } else if (activityState == voltmx.liveActivity.STATE_DISMISSED) {
+        alert(&quot;Activity State : DISMISSED&quot;);
+    } else if (activityState == voltmx.liveActivity.STATE_STALE) {
+        alert(&quot;Activity State : STALE&quot;);
+    } else if (activityState == voltmx.liveActivity.STATE_UNKNOWN) {
+        alert(&quot;Activity State : UNKNOWN&quot;);
+    }
+}
+
+function onFailureCallback(errorInfo) {
+    var errorCode = errorInfo.errorCode;
+    var errorMessage = errorInfo.errorMessage;
+    alert(&quot;Failure Details - observeActivityStateUpdates :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage);
+}
+
+var attributesName = &quot;FlightAttributes&quot;;
+voltmx.liveActivity.observeActivityStateUpdates(voltmx.ds.read(&quot;activityID_flight_03&quot;)[0], attributesName, onSuccessCallback, onFailureCallback);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>If the activityID is incorrect or does not exist, the onFailureCallback will be triggered with the error constant voltmx.liveActivity.ERROR_NOT_FOUND.</p>
+</li>
+<li>
+<p>This API is asynchronous and will continue to trigger the onSuccessCallback whenever the state of the Live Activity changes.</p>
+</li>
+<li>
+<p>The first onSuccessCallback will immediately return the current activity state of the Live Activity. Further updates will be triggered only when the activity state changes.</p>
+</li>
+<li>
+<p>Once a Live Activity reaches the STATE_DISMISSED state, it is no longer visible and cannot receive further updates.</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_05">voltmx.liveActivity.stopActivityStateUpdates</summary></p>
+<p><strong>Syntax</strong>
+voltmx.liveActivity.stopActivityStateUpdates(activityID)</p>
+<p><strong>Description</strong></p>
+<p>The voltmx.liveActivity.stopActivityStateUpdates API is used to stop observing the activity state changes of a specific Live Activity. Once this API is called, the application will no longer receive activity state updates for the specified activityID. However, the application can call observeActivityStateUpdates again later if it wants to resume tracking the activity state of the same Live Activity.</p>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>A unique identifier representing the Live Activity for which state updates should be stopped.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong>
+None</p>
+<p><strong>Exceptions</strong>
+None</p>
+<p><strong>Example</strong></p>
+<pre><code>voltmx.liveActivity.stopActivityStateUpdates(voltmx.ds.read(&quot;activityID_flight_03&quot;)[0]);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>Calling this API stops further activity state updates for the specified activityID.</li>
+<li>There is no failure callback, so if the provided activityID is incorrect or does not exist, the API will silently do nothing.</li>
+<li>The application can re-register for activity state updates using observeActivityStateUpdates at any time.</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_06">voltmx.liveActivity.observeContentStateUpdates</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.observeContentStateUpdates(activityID, attributesName, onSuccessCallback, onFailureCallback)</p>
+<p><strong>Description</strong></p>
+<p>This API allows an application to asynchronously observe changes in the content state of a Live Activity. It continuously listens for updates and triggers the success callback whenever the content state changes. When first called, it immediately returns the current content state of the Live Activity.</p>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>The unique identifier of the Live Activity whose content state changes need to be observed.</td>
+</tr>
+<tr>
+<td>attributesName</td>
+<td>String</td>
+<td>The name of the struct conforming to the ActivityAttributes protocol.</td>
+</tr>
+<tr>
+<td>onSuccessCallback</td>
+<td>Function</td>
+<td>A callback function that receives the updated content state whenever it changes. This callback only returns dynamic variables of the Live Activity.</td>
+</tr>
+<tr>
+<td>onFailureCallback</td>
+<td>Function</td>
+<td>A callback function that gets triggered if the API fails.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong></p>
+<p>None</p>
+<p><strong>Exceptions</strong></p>
+<p>If the API call fails, the onFailureCallback will be triggered with the following errors:</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Error Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5020</td>
+<td>voltmx.liveActivity.ERROR_NOT_FOUND</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code>function onSuccessCallback(activityContentState) {
+    console.log(activityContentState);
+    alert(&quot;callback parameters ActivityContentState : &quot; + JSON.stringify(activityContentState));
+}
+
+function onFailureCallback(errorInfo) {
+    var errorCode = errorInfo.errorCode;
+    var errorMessage = errorInfo.errorMessage;
+    alert(&quot;Failure Details - observeContentStateUpdates :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage);
+}
+var attributesName = &quot;FlightAttributes&quot;;
+voltmx.liveActivity.observeContentStateUpdates(voltmx.ds.read(&quot;activityID_flight_03_B&quot;)[0], attributesName, onSuccessCallback, onFailureCallback);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>If the provided activityID is incorrect or does not exist, the onFailureCallback will trigger with ERROR_NOT_FOUND.</p>
+</li>
+<li>
+<p>Content state updates only return dynamic state variables and do not include fixed attributes defined in ActivityAttributes.</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_07">voltmx.liveActivity.stopContentStateUpdates</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.stopContentStateUpdates(activityID)</p>
+<p><strong>Description</strong></p>
+<p>Stops observing content state changes for a specific Live Activity. After calling this API, the app will no longer receive content state updates for the given activityID.</p>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>The unique identifier of the Live Activity for which content state updates should be stopped.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong></p>
+<p>None</p>
+<p><strong>Exceptions</strong></p>
+<p>None</p>
+<p><strong>Example</strong></p>
+<pre><code>voltmx.liveActivity.stopContentStateUpdates(voltmx.ds.read(&quot;activityID_flight_03_B&quot;)[0]);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>This API does not provide a failure callback. If the provided activityID is incorrect or the Live Activity does not exist, the API will silently do nothing without returning an error.</p>
+</li>
+<li>
+<p>If needed, the app can call voltmx.liveActivity.observeContentStateUpdates again for the same activityID to resume observing content state updates.</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_08">voltmx.liveActivity.fetchActivityData</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.fetchActivityData(activityParams, onSuccessCallback, onFailureCallback)</p>
+<p><strong>Description</strong></p>
+<p>Retrieves the latest available data for a specified Live Activity. This API returns both fixed attributes (from ActivityAttributes) and dynamic content state variables. Unlike observation APIs, it does not provide continuous updates; it only returns the data once when called.</p>
+<p><strong>Input Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityParams</td>
+<td>Object</td>
+<td>Contains the parameters required to fetch activity data.</td>
+</tr>
+<tr>
+<td>onSuccessCallback</td>
+<td>Function</td>
+<td>A callback function that receives the fetched data. Returns both fixed attributes (as liveActivityfixedState) and dynamic content state (as liveActivityContentState).</td>
+</tr>
+<tr>
+<td>onFailureCallback</td>
+<td>Function</td>
+<td>A callback function triggered if the API call fails.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="the-following-is-the-breakdown-of-activityparams">The following is the breakdown of activityParams</h1>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityID</td>
+<td>String</td>
+<td>The unique identifier of the Live Activity whose data is to be fetched.</td>
+</tr>
+<tr>
+<td>attributesName</td>
+<td>String</td>
+<td>The name of the struct conforming to the ActivityAttributes protocol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Values</strong></p>
+<p>None</p>
+<p><strong>Exceptions</strong></p>
+<p>If the API call fails, the onFailureCallback will be triggered with the following errors:</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Error Message</th>
+<th>Error Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5020</td>
+<td>Live Activity with specified activityID not found</td>
+<td>voltmx.liveActivity.ERROR_NOT_FOUND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code>var activityParams = {
+    activityID: voltmx.ds.read(&quot;activityID_flight_03&quot;)[0],
+    attributesName: &quot;FlightAttributes&quot;
+};
+
+function onSuccessCallback(liveActivityfixedState, liveActivityContentState) {
+    alert(&quot;ATTRIBUTES &quot; + &quot;\n&quot; + JSON.stringify(liveActivityfixedState) + &quot;\n------------------\n&quot; + &quot;STATE &quot; + &quot;\n&quot; + JSON.stringify(liveActivityContentState));
+}
+
+function onFailureCallback(errorInfo) {
+    var errorCode = errorInfo.errorCode;
+    var errorMessage = errorInfo.errorMessage;
+    alert(&quot;Failure Details - fetchActivityData :\n&quot; + &quot;------------------\n&quot; + &quot;Error Code : &quot; + errorCode + &quot;\n&quot; + &quot;Error Message: &quot; + errorMessage);
+}
+voltmx.liveActivity.fetchActivityData(activityParams, onSuccessCallback, onFailureCallback);
+
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>The onSuccessCallback will return both fixed attributes (liveActivityfixedState) and dynamic content state (liveActivityContentState).</li>
+<li>This API only returns data once when called; it does not continuously update the app with changes in content state or activity state.</li>
+<li>If the provided activityID is incorrect or does not exist, the failure callback will be triggered with error constant voltmx.liveActivity.ERROR_NOT_FOUND.</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_09">voltmx.liveActivity.isEnabled</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.isEnabled( )</p>
+<p><strong>Description</strong></p>
+<p>Returns a Boolean value indicating whether Live Activities are enabled for the app. This setting is controlled by the user and can be toggled in the app's settings.</p>
+<p><strong>Input Parameters</strong></p>
+<p>None</p>
+<p><strong>Return Values</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boolean</td>
+<td>Returns true if Live Activities are enabled at the system level. Returns false if the user has explicitly disabled Live Activities in Settings &gt; Your App &gt; Live Activities</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<p>None</p>
+<p><strong>Example</strong></p>
+<pre><code>var isEnabled = voltmx.liveActivity.isEnabled();
+alert(isEnabled);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>This API simply checks the system setting for Live Activities and does not interact with any specific Live Activity instance.</p>
+</li>
+<li>
+<p>If Live Activities are disabled in the app settings, this API will return false, preventing the app from starting or updating any Live Activities.</p>
+</li>
+<li>
+<p><strong>NSSupportsLiveActivities (Boolean)</strong> - Set this key to true to enable Live Activities in your app, in infoplist_configuration.json file. Refer to ‘Information Property List’ section.</p>
+</li>
+<li>
+<p><strong>Note:</strong> This API checks the system-wide Live Activities authorization state and does not verify if NSSupportsLiveActivities is set to YES in the app’s Info.plist. Even if this API returns true, attempting to start a Live Activity will fail if NSSupportsLiveActivities = NO in Info.plist. </p>
+</li>
+<li>
+<p>If NSSupportsLiveActivities = NO in Info.plist, this API may still return true, but attempting to start a Live Activity will fail with unsupportedtarget </p>
+<p>(voltmx.liveActivity.ERROR_UNSUPPORTED_TARGET).</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+<details close="close">
+<p><summary id="live_start_10">voltmx.liveActivity.isHighFrequencyUpdateEnabled</summary></p>
+<p><strong>Syntax</strong></p>
+<p>voltmx.liveActivity.isHighFrequencyUpdateEnabled( )</p>
+<p><strong>Description</strong></p>
+<p>Returns a Boolean value indicating whether the user has allowed the app to send high-frequency updates for Live Activities using frequent ActivityKit push notifications. This setting can be toggled by the user in the app's settings.</p>
+<p><strong>Input Parameters</strong></p>
+<p>None</p>
+<p><strong>Return Values</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boolean</td>
+<td>Returns true if high-frequency updates are enabled; otherwise, returns false.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<p>None</p>
+<p><strong>Example</strong></p>
+<pre><code>var isHighFreqEnabled = voltmx.liveActivity.isHighFrequencyUpdateEnabled();
+alert(isHighFreqEnabled);
+
+</code></pre>
+<p><strong><em>Important Considerations</em></strong></p>
+<ul>
+<li>
+<p>NSSupportsLiveActivitiesFrequentUpdates (Boolean) - Set this key to true to allow your app’s Live Activities to receive frequent updates through remote push notifications in infoplist_configuration.json file. Refer to ‘Information Property List’ section.</p>
+</li>
+<li>
+<p>The user can toggle the More Frequent Updates option off in the app settings.</p>
+</li>
+</ul>
+<p><strong>Platform Availability</strong></p>
+<ul>
+<li>iOS</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3476 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/HCLMicroservicesAdapter.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>HCL Microservices Adapter for Object Services - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hcl-microservices-adapter-for-object-services" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-voltmx/14" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HCL Microservices Adapter for Object Services
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-hcl-microservices-object-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a HCL Microservices Object Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a HCL Microservices Object Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-a-hcl-microservices-end-point-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring a HCL Microservices End-point Adapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-a-data-model-for-hcl-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring a Data Model for HCL Microservices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-operations-to-back-end-methods-for-hcl-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping Operations to Back-end Methods for HCL Microservices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-mapping-operations-to-back-end-methods-for-hcl-microservices-for-requests-and-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Mapping Operations to Back-end Methods for HCL Microservices (for Requests and Responses)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Mapping Operations to Back-end Methods for HCL Microservices (for Requests and Responses)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map-record-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map-record issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-mapper-xml-generation-issue-dataset-as-back-end-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Mapper XML generation issue - dataset as back-end response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-map-support-for-objects-with-no-pre-defined-fields-free-form-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Map Support for Objects with No Pre-defined Fields (Free form objects)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Miscellaneous">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openapi-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAPI 3.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hcl-microservices-adapter-for-object-services">HCL Microservices Adapter for Object Services</h1>
+<p>The HCL Microservices Adapter is an interface supported in Object Services from Foundry V9SP5 GA onwards. The adapter allows you to connect to the back-end HCL Microservices via Object Services.</p>
+<blockquote>
+<p><strong><em>Important:</em></strong> The HCL Microservices adapter only supports Open API (Swagger) 3.0 specification. It supports uploading a Swagger file along with external reference files.  </p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p><strong><em>Important:</em></strong> Supports more than one Swagger definition file in a . ZIP file.</p>
+</blockquote>
+<p><strong>Use Case</strong>:</p>
+<p>Currently, any team trying to connect to HCL microservice must use Foundry JSON services to implement microservices manually. When the team should modify request payloads, each required JSON template must be changed manually, which is time-consuming as well.</p>
+<p>Using the HCL Microservices adapter in object services, you can upload a valid Swagger JSON file containing all APIs to connect to the hosted microservices. The object service retrieves the metadata from the uploaded Swagger file and displays all the APIs as back-end operations in the Object services. You can use an existing Swagger engine to connect to hosted back-end APIs. So you can use the object services capabilities to link microservices APIs for these objects. For more information on Foundry Object Services, refer to <a href="Objectservices.html">Object Services</a>.</p>
+<p>The HCL Microservices adapter helps you to improve the Foundry app development aspects as follows:</p>
+<ul>
+<li>To access microservices back-end operations in an object service.</li>
+<li>To manage APIs definitions with OpenAPI spec, instead of changing individual JSON integration services.</li>
+<li>To upgrade newer versions of APIs definitions is faster. You need to upload a newer version of the Swagger JSON file to the adapter to get the latest APIs definitions.</li>
+<li>To create a new data model to link microservices: You can create your custom app data model and map it to microservices operations.</li>
+</ul>
+<p>The following sections help you create a HCL Microservices object service.</p>
+<h2 id="creating-a-hcl-microservices-object-service">Creating a HCL Microservices Object Service</h2>
+<ul>
+<li><a href="#creating-a-hcl-microservices-object-service">Configuring a HCL Microservices End-point Adapter</a></li>
+<li><a href="#Create_Op">Configuring a Data Model for HCL Microservices</a></li>
+<li><a href="#Create_Op">Mapping Operations to Back-end Methods for HCL Microservices</a></li>
+<li><a href="#Visual">Visual Mapping Operations to Back-end Methods for HCL Microservices (for Requests and Responses)</a></li>
+</ul>
+<h3 id="configuring-a-hcl-microservices-end-point-adapter">Configuring a HCL Microservices End-point Adapter</h3>
+<p>To configure a HCL Microservices in object service, you need to upload a Swagger file and a Swagger external reference file(s) containing specifications for the required APIs to the service.</p>
+<ol>
+<li>In your VoltMX Foundry Console &gt; Foundry Apps, click <strong>ADD NEW</strong> to create an app.</li>
+<li>Under Configure Services, click the <strong>Objects</strong> tab, and click <strong>CONFIGURE NEW</strong> to create an object service.</li>
+<li>
+<p>In the <a href="ConfigureIntegrationService.html">Object Service Definition</a> tab, configure the service definition parameters. For more information, refer to the following sections.</p>
+<p><table style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 80%;" class="TableStyle-Basic" cellspacing="0"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"><col class="TableStyle-Basic-Column-Column1" style="width: 65%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p>Name</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the name that Foundry uses to identify the service on the console.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p>Version</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the version number of the service. The version number ranges from <b>1.0</b> to <b>999.99</b>.</p><p>If you create a new service, the version number is <b>1.0</b> by default, and it cannot be changed.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p>Description</p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the description of the service that is displayed on the console.</p></td></tr></tbody></table></p>
+</li>
+<li>
+<p>From the <strong>Endpoint Type</strong> list, select the <strong>HCL Microservices</strong> on the <a href="ConfigureIntegrationService.html#IntSD">Object Service Definition</a> page.</p>
+</li>
+<li>
+<p>Under Swagger File, click <strong>UPLOAD FILE</strong> to select your Swagger File.</p>
+<p><table style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 80%;" class="TableStyle-Basic" cellspacing="0"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"><col class="TableStyle-Basic-Column-Column1" style="width: 65%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1">Swagger File</td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the JSON,or YAML file that contains the required API specifications. You can also upload a zip file that contains the JSON or YAML file along with external reference files, if any.</p><p>To upload an OpenAPI specification file, click <b>UPLOAD FILE</b>, and then select a file from your local system.</p><p madcap:conditions="Default.V9SP2M1">After you upload a file, Foundry displays connection parameters based on the OpenAPI spec version that is mentioned in the file.</p><p class="Note" madcap:autonum="\<b>\<i>\<span style=&quot;color: #0a9c4a;&quot; class=&quot;mcFormatColor&quot;>Note: \</span>\</i>\</b>">In the following sections, all references (screen-shots, objects, operations, and mapping) are based on the sample Swagger JSON file for the Service Request microservice.</p></td></tr></tbody></table></p>
+<blockquote>
+<p><strong><em>Important:</em></strong> It supports uploading a Swagger file along with external reference files.</p>
+</blockquote>
+<p><details close markdown="block"><summary>OpenAPI uploaded with External Reference Files</summary>
+<blockquote><em><b>Important: </b></em>If the extension files are empty and there are references in the main JSON file to schemas/custom fields of these extensions, an error message will be popped up. To prevent the error message, you need to add dummy schemas/custom fields to the extension files.<br/>
+</blockquote>
+For example,<br>
+<p>1. You have uploaded a mircoservices zip file provided by the Infinity microservices team. The path for uploading the zip file: Object Services &gt; Service Definition page &gt; <b>Swagger File</b>.</p>
+<img src="./Resources/Images/UploadSwaggerMicroServiceAdapter.png"> 
+<p>In case the uploaded zip file contains empty extension files whose references are present in the main JSON file, an error window will pop up when you click on the Mapping tab &gt; Mapping &gt; &lt;<b>Object</b>&gt; of the Object Service in the Foundry Console.</p>
+<p>Failed to fetch metadata. Schema definition not present for referenced schema : customFields.</p>
+<img src="./Resources/Images/MicroservicesAppwithNoExtension.png">
+<p>- You will be redirected to this documentation page when you click on here.</p>
+<p>- You will be redirected to the previous page in Console when you confirm OK.</p></p>
+<p><p>If the main OpenAPI file contains a reference to a schema from external files, for example:</p>
+<pre><code style="display:block;background-color:#eee;">ServiceRequest: 
+      properties: 
+        account: 
+          type: string 
+          description: Account Id 
+          example: '87907' 
+        requestIn: 
+          $ref: 'srmsExternalRef.yaml#/components/schemas/requestIn' 
+        signatoryApprovalRequired: 
+          type: string 
+          description: signatory Approved or Not 
+          example: true<br />
+</code></pre>
+<ul>
+<li>Make sure the external reference file exists in the zip.</li>
+<li>The schema should be present in that file. Otherwise the console will throw an error when you try to create a verb and map an operation.<br/>
+The <code>srmsExternalRef.yaml</code> file would look like this:
+<pre><code style="display:block;background-color:#eee;">ServiceRequest: 
+  Components: 
+            schemas: 
+              serviceReqRequestIn: 
+                    type: object 
+                    properties: 
+                      xyz: 
+                          type: string 
+                          description: Generic serviceReq ID 
+                          example: ORD127REDFDSAS 
+                    description: Request In for ServiceReq 
+                    example: 
+                      checkIssueId: SB.2406 
+                      note: CreateNew 
+              requestIn: 
+                    type: object 
+                    properties: 
+                    description: Request Load for Creating ServiceReq 
+                    example: 
+                      checkIssueId: SB.2406 
+                      note: CreateNew
+</code></pre>
+</li>
+<li>If you do not have fields in a schema, you can keep an empty properties field, as mentioned in the requestIn schema of the above example.</li>
+</ul>
+</details></p>
+</li>
+<li>
+<p>Enter the following connection parameters. The adapter will provide an option for you to enter an header Key and value:  </p>
+<p><details close markdown="block"><summary>Connection Parameters</summary>
+<table style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 80%;" class="TableStyle-Basic" cellspacing="0"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"><col class="TableStyle-Basic-Column-Column1" style="width: 65%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p>xapikey</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specify the header value "xapikey" for AWS. If you want to have AWS authentication, you can add this value in the service configuration. This value will be added to the header parameters while connecting to the microservice.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p>xfunctionkey</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specify the header value "xfunctionkey" for Azure. This is a common value for all Microsoft Azure deployments.</p><p>If you want to have Azure authentication, you can add this value in the service configuration. This value will be added to the header parameters while connecting to the microservice.</p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p>Authorization</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1">These details are generated by the adapter itself, for Docker on-premises.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1"><p>Server URL</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1"><p>Specifies the URL of the server that hosts the APIs. The default URL is the first Server URL in the specification file.</p><p>For information about how Foundry parses the URLs, refer to the <a href="#Miscellaneous">Miscellaneous</a> section.</p><p>For example: <code class="codefirst" style="font-size: 11pt;">https://subdomain.site.com/version</code></p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p>Server Description</p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the description for the server that is specified by the URL.</p><p>For example: <code class="codefirst" style="font-size: 11pt;">Development Server</code></p></td></tr></tbody></table>
+<b>Authentication</b>
+<table style="mc-table-style: url]('Resources/TableStyles/Basic.css');width: 80%;" class="TableStyle-Basic" cellspacing="0"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 15%;"><col class="TableStyle-Basic-Column-Column1" style="width: 65%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1"><p>Use Existing Identity Provider</p></td><td class="TableStyle-Basic-BodyA-Column1-Body1"><p>Specifies the identity provider that you want to use to authenticate users for the service.</p><p>You can select any Identity Service that is created on the <madcap:variable name="MyVariables.VoltMX">Foundry cloud.</madcap:variable></p><p>For information about creating an Identity Service, refer to <a href="ConfigureIdentiryService.html" target="_blank">Configure Identity Service</a>.</p><p class="Note" madcap:conditions="Default.V9SP3" madcap:autonum="\<b>\<i>\<span style=&quot;color: #0a9c4a;&quot; class=&quot;mcFormatColor&quot;>Note: \</span>\</i>\</b>">For more information on Externalizing Identity Services, refer to <a href="Replacing_Identity_Services.html" target="_blank">Replace the Identity Service references in a Foundry app</a>.</p></td></tr></tbody></table><br />
+</details></p>
+<p><details close markdown="block"><summary>Advanced</summary><table>
+  <tr>
+  <th>Field</th>    <br />
+  <th>Description</th>
+  </tr>    <br />
+  <tr>
+  <td>Custom code</td>    <br />
+  <td>
+  <p>Specifies any custom JAR files that you want to associate with the service.To associate a JAR file with the service, follow either of the following steps.</p>
+  <ul>
+  <li>From the Select Existing JAR list, <b>select a JAR file</b> from the Foundry cloud</li>          <br />
+  <li>Click <b>Upload New</b>, and then select a JAR file from the file explorer</li>  <br />
+  </ul>
+  <blockquote><em><b>Note: </b></em>For on-premises instances of Foundry, make sure that the JAR file that is built on the same JDK version that is used to install the Foundry Integration.</blockquote>
+  </td>
+  </tr>    <br />
+  <tr>
+  <td>API Throttling</td>    <br />
+  <td>
+  <p>Specifies whether Foundry must limit the number of request calls in a minute.To use <b>API Throttling</b>, follow these steps.</p>
+  <ol>
+  <li>In the <b>Total Rate Limit</b> box, type a required value. This limits the total number of requests that are processed by the service.</li>          <br />
+  <li>In the <b>Rate Limit Per IP</b> box, type a required value. This limits the number of requests based on the IP Address of the request.</li>  <br />
+  </ol>
+  <p>You can also override throttling from the Foundry App Services Console. For more information, refer to <a href= "API_Throttling_Override.html#OverrideAPIThrottling">Override API Throttling Configuration.</a></p>
+  </td>
+  </tr>
+</table>
+</details></p>
+</li>
+<li>
+<p>After you configure all the parameters, click <strong>SAVE</strong>.  </p>
+<blockquote>
+<p><strong><em>Note:</em></strong> If you want to create objects to the service, click <strong>SAVE &amp; CONFIGURE</strong>.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="configuring-a-data-model-for-hcl-microservices">Configuring a Data Model for HCL Microservices</h3>
+<blockquote>
+<p><strong><em>Note:</em></strong> In the following sections, all references to screen-shots, objects, operations, and mapping are based on the sample Swagger JSON file for the Service Request microservice.</p>
+</blockquote>
+<ol>
+<li>
+<p>Click the <strong>Data Model</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong> to create an object and fields as per your Swagger details. The following sample object is created for GetRequestDetails and fields:</p>
+</li>
+</ol>
+<table>
+   <tr>
+   <th>Object</th>
+   <th>Fields</th>
+   </tr>
+   <tr>
+   <td><code>GetRequestDetails</code></td>        
+   <td><ul><li>account</li><li>dateFrom</li><li>dateTo</li><li>partyId</li><li>status</li><li>subType</li><li>type</li></ul></td>
+   </tr>
+   </table>
+
+<pre><code>
+</code></pre>
+<p><img alt="" src="Resources/Images/DataModel_Microservice_Object.png" /></p>
+<blockquote>
+<p><strong><em>Note:</em></strong> Currently, the option to auto-generate the data model is not supported for this adapter.</p>
+</blockquote>
+<p>For more information on creating objects and fields, refer to <a href="ObjectsServices/Stage_2.html#creating-objects-definition-and-map-to-back-end-objects-manually">Configuring a Data Model</a>.</p>
+<h3 id="mapping-operations-to-back-end-methods-for-hcl-microservices">Mapping Operations to Back-end Methods for HCL Microservices</h3>
+<ol>
+<li>Click the <strong>Mapping</strong> tab.</li>
+<li>
+<p>Select an object and click <strong>Add</strong> to create an operation.</p>
+</li>
+<li>
+<p>Associate a back-end operation to the object verb. To do this, select the <strong>Data Model Verb</strong> from the list and select a back-end operation from the <strong>Operations</strong> list.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> All the operations listed in the Swagger file are displayed here. You can map the required back-end operations to verbs for objects.</p>
+</blockquote>
+<p><img alt="" src="Resources/Images/Back_endOperations_Microservice_Object.png" /></p>
+<p>The following object verbs are linked to back-end operations.</p>
+<p><img alt="" src="Resources/Images/Mapped_Back_endOperations_Objects_MicroserviceAdapter.png" /></p>
+</li>
+</ol>
+<h3 id="visual-mapping-operations-to-back-end-methods-for-hcl-microservices-for-requests-and-responses">Visual Mapping Operations to Back-end Methods for HCL Microservices (for Requests and Responses)</h3>
+<p>The base mapper1 is created for request and response by default.</p>
+<p>Click <strong>EDIT</strong> to add your custom mapping for request and response parameters, if required.</p>
+<h4 id="request-mapping">Request Mapping</h4>
+<p>For object request calls, you can now map the objects to the back-end operations using the Visual/XML mapping, as shown below:</p>
+<p><img alt="" src="Resources/Images/RequestVisaualMapper_MicroserviceAdapter_Object.png" /></p>
+<h4 id="response-mapping">Response Mapping</h4>
+<p>For object response calls, you can now map the back-end operations to the objects using the Visual/XML mapping, as shown below:</p>
+<p><img alt="" src="Resources/Images/ResponseVisaualMapper_MicroserviceAdapter_Object.png" /></p>
+<p>For more information on mapping, methods (verbs) mapping, custom verbs, and mapper elements, refer to <a href="ObjectsServices/Objectservices_Stage3.html">Mapping Operations to Back-end Methods</a>.</p>
+<!-- ### Testing the Operation
+
+After creating an operation and configuring the request and response mapping, you can test the operation and validate the configuration details.
+
+Select an environment from the **Select Environment** list and then click **SAVE AND FETCH RESPONSE** to test an operation. The result of the operation appears. For more details, refer to [Test a Service Operation](Test_a_Service_Operation.md).
+
+For Post or Put methods that contain nested payloads, you cannot test the service from the Foundry Console. You can only send a request from the App Services Console, or from [Postman](https://www.postman.com/). -->
+
+<h2 id="limitations">Limitations</h2>
+<h3 id="map-record-issue">Map-record issue</h3>
+<p>When you pass an input payload where you have a scenario of mapping a record within a record, the Visual Mapper generates wrong XML mapper.</p>
+<p>For instance, if the input payload is:</p>
+<pre><code>{
+  &quot;id&quot;: 0,
+  &quot;category&quot;: {
+    &quot;id&quot;: 0,
+    &quot;name&quot;: &quot;string&quot;
+  },
+  &quot;name&quot;: &quot;doggie&quot;,
+  &quot;photoUrls&quot;: [
+    &quot;string&quot;
+  ],
+  &quot;tags&quot;: [
+    {
+      &quot;id&quot;: 0,
+      &quot;name&quot;: &quot;string&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;available&quot;
+}
+
+</code></pre>
+<p>where category is a record within a record.</p>
+<p>The XML generated sample code does not include nested records as follows:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;mapper xmlns=&quot;http://www.voltmx.com/ns/mapper&quot;&gt;  
+  &lt;map inputpath=&quot;request_in&quot; outputpath=&quot;request_out&quot;&gt;    
+    &lt;set-param inputpath=&quot;id&quot; outputpath=&quot;id&quot;/&gt;    
+    &lt;set-param inputpath=&quot;name&quot; outputpath=&quot;name&quot;/&gt;    
+    &lt;set-param inputpath=&quot;photoUrls&quot; outputpath=&quot;photoUrls&quot;/&gt;    
+    &lt;set-param inputpath=&quot;status&quot; outputpath=&quot;status&quot;/&gt;     
+    &lt;map inputpath=&quot;category&quot; outputpath=&quot;category&quot;&gt;      
+      &lt;set-param inputpath=&quot;id&quot; outputpath=&quot;id&quot;/&gt;      
+      &lt;set-param inputpath=&quot;name&quot; outputpath=&quot;name&quot;/&gt;    
+    &lt;/map&gt;    
+    &lt;map inputpath=&quot;tags&quot; outputpath=&quot;tags&quot;&gt;      
+      &lt;set-param inputpath=&quot;id&quot; outputpath=&quot;id&quot;/&gt;      
+      &lt;set-param inputpath=&quot;name&quot; outputpath=&quot;name&quot;/&gt;    
+    &lt;/map&gt;  
+  &lt;/map&gt;
+&lt;/mapper&gt;
+</code></pre>
+<p>For scenarios like this where we have a record within a record, the tag should be <map-record></map-record> instead of <map></map>.</p>
+<p>To achieve this case, use the custom XML mapper and generate the XML as below:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;mapper xmlns=&quot;http://www.voltmx.com/ns/mapper&quot;&gt;  
+  &lt;map inputpath=&quot;request_in&quot; outputpath=&quot;request_out&quot;&gt;    
+    &lt;set-param inputpath=&quot;id&quot; outputpath=&quot;id&quot;/&gt;    
+    &lt;set-param inputpath=&quot;name&quot; outputpath=&quot;name&quot;/&gt;    
+    &lt;set-param inputpath=&quot;photoUrls&quot; outputpath=&quot;photoUrls&quot;/&gt;    
+    &lt;set-param inputpath=&quot;status&quot; outputpath=&quot;status&quot;/&gt;     
+    &lt;map-record inputpath=&quot;category&quot; outputpath=&quot;category&quot;&gt;      
+      &lt;set-param inputpath=&quot;id&quot; outputpath=&quot;id&quot;/&gt;      
+      &lt;set-param inputpath=&quot;name&quot; outputpath=&quot;name&quot;/&gt;    
+    &lt;/map-record&gt;    
+    &lt;map inputpath=&quot;tags&quot; outputpath=&quot;tags&quot;&gt;      
+      &lt;set-param inputpath=&quot;id&quot; outputpath=&quot;id&quot;/&gt;      
+      &lt;set-param inputpath=&quot;name&quot; outputpath=&quot;name&quot;/&gt;    
+    &lt;/map&gt;  
+  &lt;/map&gt;
+&lt;/mapper&gt;
+
+</code></pre>
+<h3 id="visual-mapper-xml-generation-issue-dataset-as-back-end-response">Visual Mapper XML generation issue - dataset as back-end response</h3>
+<p>When a backend response is a dataset (array), the Visual Mapper generates wrong XML mapper. To achieve this case, use the custom XML mapper and generate the XML as below:</p>
+<blockquote>
+<p><strong><em>Important:</em></strong> Responses with Datasets cannot be generated by the Visual Mapper.</p>
+</blockquote>
+<p>For example, Backend Response sample code:</p>
+<pre><code>{
+  &quot;officer&quot;: [
+    {
+      &quot;officerkey&quot;: &quot;1&quot;,
+      &quot;description&quot;: &quot;Implementation&quot;,
+      &quot;processDate&quot;: &quot;2022-03-02 10:21:26.0&quot;
+    },
+    {
+      &quot;officerkey&quot;: &quot;10&quot;,
+      &quot;description&quot;: &quot;Chief Treasury Dealer -Interbank&quot;,
+      &quot;processDate&quot;: &quot;2022-03-02 10:21:27.0&quot;
+    },
+    {
+      &quot;officerkey&quot;: &quot;10009&quot;,
+      &quot;description&quot;: &quot;Implementation&quot;
+
+    }
+  ]
+}
+
+</code></pre>
+<p>The sample visual mapper looks something like this:</p>
+<p><img alt="" src="Resources/Images/MicroservicesAdapterLimitations1_visual_mapper.png" /></p>
+<p>The XML generated sample code is as follows:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;                
+&lt;mapper xmlns=&quot;http://www.voltmx.com/ns/mapper&quot;&gt;
+  &lt;map inputpath=&quot;response_in&quot; outputpath=&quot;response_out&quot;&gt;
+    &lt;map inputpath=&quot;getListOfOfficer&quot; outputpath=&quot;officer&quot;&gt;
+      &lt;set-param inputpath=&quot;officer/officerkey&quot; outputpath=&quot;key&quot;/&gt;
+      &lt;set-param inputpath=&quot;officer/description&quot; outputpath=&quot;description&quot;/&gt;
+      &lt;set-param inputpath=&quot;officer/processDate&quot; outputpath=&quot;message&quot;/&gt;
+    &lt;/map&gt;
+  &lt;/map&gt;
+&lt;/mapper&gt;
+
+</code></pre>
+<p>This kind of mapping iterates through getListOfOfficer dataset and fetches officerkey, description and processDate only from the first object in the officer array, but the iteration has to happen through all the objects under officer array of getListOfOfficer.</p>
+<p>The Mapper generated Response sample code:</p>
+<pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;description&quot;: &quot;Implementation&quot;,
+      &quot;message&quot;: &quot;2022-03-02 10:21:26.0&quot;,
+      &quot;key&quot;: &quot;1&quot;
+    }
+  ],
+  &quot;opstatus&quot;: 0,
+  &quot;httpStatusCode&quot;: 200
+}
+
+</code></pre>
+<p>For correct XML mapper response, the XML sample code should look like this</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;mapper xmlns=&quot;http://www.voltmx.com/ns/mapper&quot;&gt;
+  &lt;map inputpath=&quot;response_in&quot; outputpath=&quot;response_out&quot;&gt;
+    &lt;map inputpath=&quot;getListOfOfficer/officer&quot; outputpath=&quot;officer&quot;&gt;
+      &lt;set-param inputpath=&quot;officerkey&quot; outputpath=&quot;key&quot;/&gt;
+      &lt;set-param inputpath=&quot;description&quot; outputpath=&quot;description&quot;/&gt;
+      &lt;set-param inputpath=&quot;processDate&quot; outputpath=&quot;message&quot;/&gt;
+    &lt;/map&gt;
+  &lt;/map&gt;
+&lt;/mapper&gt;
+
+</code></pre>
+<p>Or it can also look like this</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;mapper xmlns=&quot;http://www.voltmx.com/ns/mapper&quot;&gt;
+  &lt;map inputpath=&quot;response_in&quot; outputpath=&quot;response_out&quot;&gt;
+    &lt;map inputpath=&quot;getListOfOfficer&quot; outputpath=&quot;&quot;&gt;
+      &lt;map inputpath=&quot;officer&quot; outputpath=&quot;officer&quot;&gt;
+        &lt;set-param inputpath=&quot;officerkey&quot; outputpath=&quot;key&quot;/&gt;
+        &lt;set-param inputpath=&quot;description&quot; outputpath=&quot;description&quot;/&gt;
+        &lt;set-param inputpath=&quot;processDate&quot; outputpath=&quot;message&quot;/&gt;
+      &lt;/map&gt;
+    &lt;/map&gt;
+  &lt;/map&gt;
+&lt;/mapper&gt;
+
+</code></pre>
+<p>Now the Mapper response sample code is correct:</p>
+<pre><code>{
+   &quot;records&quot;: [
+    {
+      &quot;description&quot;: &quot;Implementation&quot;,
+      &quot;message&quot;: &quot;2022-03-02 10:21:26.0&quot;,
+      &quot;key&quot;: &quot;1&quot;
+    },
+    {
+      &quot;description&quot;: &quot;Chief Treasury Dealer -Interbank&quot;,
+      &quot;message&quot;: &quot;2022-03-02 10:21:27.0&quot;,
+      &quot;key&quot;: &quot;10&quot;
+    },
+    {
+      &quot;description&quot;: &quot;Implementation&quot;,
+      &quot;key&quot;: &quot;10009&quot;
+    }
+   ],
+  &quot;opstatus&quot;: 0,
+  &quot;httpStatusCode&quot;: 200
+}
+
+</code></pre>
+<h3 id="dynamic-map-support-for-objects-with-no-pre-defined-fields-free-form-objects">Dynamic Map Support for Objects with No Pre-defined Fields (Free form objects)</h3>
+<p>If there is a scenario where an object/record with no pre-defined fields can be passed in runtime during the service call, the Visual Mapper generates not a proper XML.</p>
+<p><img alt="" src="Resources/Images/MicroservicesAdapterLimitations2_visual%20mapper.png" /></p>
+<p>Here the requestIn is of type object with no pre-defined fields. Here the parent level mapping doesn’t happen and hence there will be no reference to that object in the generated visual mapper XML. These kinds of objects are supported with dynamic-map.</p>
+<p>Therefore, whenever we encounter such cases, we should add a <dynamic-map></dynamic-map> tags wherever required.</p>
+<p>So, The XML should be like</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;  
+&lt;mapper xmlns=&quot;http://www.voltmx.com/ns/mapper&quot;&gt;  
+&lt;map inputpath=&quot;request_in&quot; outputpath=&quot;request_out&quot;&gt;  
+&lt;set-param inputpath=&quot;account&quot; outputpath=&quot;account&quot;/&gt;  
+&lt;set-param inputpath=&quot;partyId&quot; outputpath=&quot;partyId&quot;/&gt;  
+&lt;set-param inputpath=&quot;serviceReqConfId&quot; outputpath=&quot;serviceReqConfId&quot;/&gt;  
+&lt;set-param inputpath=&quot;signatoryApprovalRequired&quot; outputpath=&quot;signatoryApprovalRequired&quot;/&gt;  
+&lt;set-param inputpath=&quot;subtypeId&quot; outputpath=&quot;subtypeId&quot;/&gt;  
+&lt;set-param inputpath=&quot;typeId&quot; outputpath=&quot;typeId&quot;/&gt;  
+&lt;set-param inputpath=&quot;uuid&quot; outputpath=&quot;uuid&quot;/&gt;  
+&lt;dynamic-map inputpath=&quot;requestIn&quot; outputpath=&quot;requestIn&quot;&gt;  
+&lt;/dynamic-map&gt;  
+&lt;/map&gt;  
+&lt;/mapper&gt;
+</code></pre>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<p>The OpenAPI Specification (formerly: Swagger specification) is a framework used to define interfaces with which you can design, build, document, and consume REST APIs.</p>
+<p>For more information about OpenAPI 3.0, you can refer to the following articles:</p>
+<ul>
+<li><a href="https://swagger.io/blog/news/whats-new-in-openapi-3-0/">A Guide to What’s New in OpenAPI 3.0</a></li>
+<li><a href="https://blog.readme.com/an-example-filled-guide-to-swagger-3-2/">A Visual Guide to What's New in Swagger 3.0</a></li>
+</ul>
+<h3 id="openapi-30">OpenAPI 3.0</h3>
+<ul>
+<li>With the OpenAPI 3.0 Specification, you can add multiple URLs to your definition and also include parameters in the URL. For more information, refer to <a href="https://blog.readme.com/an-example-filled-guide-to-swagger-3-2#urlstructure">A Visual Guide to What's New in Swagger 3.0</a>.<ul>
+<li>While creating a service for OpenAPI 3.0 in VoltMX Foundry V9 ServicePack 2, you can select only one URL as the Server URL. If your specification file contains multiple URLs, Foundry picks the first URL by default.</li>
+<li>You can change the URL before you publish the service to the run time by reconfiguring the service before a publish. For more information, refer to <a href="ServiceReconfig.html">Service Reconfiguration</a>.</li>
+<li>Parameters in the URL are not supported. Make sure that you add static server URLs to your specification file.</li>
+</ul>
+</li>
+<li>
+<p>Extension data is not supported as Foundry parses only one specification file. If your specification file contains references to any external files, the console displays an error.  </p>
+<p>For example, if your file contains the following code snippet, the console displays an error:  </p>
+</li>
+</ul>
+<pre><code>{
+    &quot;$ref&quot;: &quot;PayInOutExtension.json#/components/schemas/customFields&quot;
+    }
+</code></pre>
+<ul>
+<li>
+<p>The <strong>trace</strong> HTTP method is not supported and the APIs that use the trace method are ignored.<br />
+    APIs that use other HTTP methods are parsed by Foundry to create operations.  </p>
+</li>
+<li>
+<p>If the HTTP response code is not <strong>200</strong>, the console displays the response from the back-end server as is.  </p>
+</li>
+<li>
+<p><strong>OpenID Connect</strong> (OIDC) is not supported for authentication.  </p>
+</li>
+<li>
+<p><strong>Callbacks</strong>, which are used to define Webhooks, are not supported. <strong>Links</strong>, which are used to define the output of one operation as input for another operation, are not supported. Make sure that you remove Callbacks and Links from your OpenAPI 3.0 spec before you uploading it to Foundry.  </p>
+</li>
+<li>
+<p>Serialization of parameters, which includes <strong>style</strong> (defines the delimiter for multiple parameters) and <strong>explode</strong> (specifies whether objects of an array are generated as separate parameters), is not supported.  </p>
+</li>
+<li>
+<p>Foundry does not parse or validate <strong>examples</strong> from the specification file.  </p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
