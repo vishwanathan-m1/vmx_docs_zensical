@@ -1,0 +1,3485 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github01.hclpnp.com/pages/phoenix-temenos/volt-mx-doc-opnsrc/latest/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Installing Containers With Helm - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://support.hcltechsw.com/community?id=community_forum&sys_id=1cdf6e1a1bf31898beab64e6ec4bcbae" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installing Containers With Helm
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_Main_Page.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_Main_Page.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    All versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_5_Fix_Pack_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 5 Fix Pack 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_V9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#salient-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salient Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>You are here: <a href="#installation">Installation</a> &gt; Salient Features</p>
+<h1 id="overview">Overview</h1>
+<p>New in version 9.5 is the ability to deploy Foundry to Kubernetes via Helm.  This section covers how to deploy Foundry with Helm.  You should review <a href="../../voltmxfoundry_containers_solution_on-prem/Content/VoltMX_Foundry_Containers_Solution_On-Prem.html">Foundry Container Cluster Solution (On-Prem)</a> for more details on containerized solutions, supported platforms, software and overall architecture details.</p>
+<p>Helm is like a Unix package manager but for Kubernetes. In this sense, Helm is similar to Yum, Apt and Homebrew.  Helm installs software, but Helm is focused on helping you install software into an existing Kubernetes cluster.  HCL provides the deployment details in templates and exposes customizable parameters in a file called <code>values.yaml</code>.   You customize the values and then run the Helm templating engine to apply your customizations and deploy the metadata to Kubernetes.  Kubernetes processes the metadata and downloads Foundry docker images and installs them into your Kubernetes cluster.</p>
+<p>You should use this installation path if you plan to use containers to setup your on-premise or Cloud based production grade installation of Volt MX Foundry and you have an existing cluster to install into.</p>
+<p>Helm can also deploy to a development or test cluster (i.e. a single node with no high availability), but you should also be aware of lighter weight options that only require Docker (see our Docker solution at <a href="../../voltmxfoundry_single_container/Content/VoltMX_Foundry_Single_Container_Solution_On-Prem_.html">Single container setup (On-Prem)</a>).</p>
+<p>If you are doing an On-Prem Kubernetes installation and you want scripts to create your cluster, please utilize the solution documented at <a href="../../voltmxfoundry_containers_solution_on-prem/Content/VoltMX_Foundry_Containers_Solution_On-Prem.html#overview">Volt MX Foundry Container Cluster Solution</a></p>
+<p>More details about Helm and the Helm binaries can be found at <a href="https://helm.sh">https://helm.sh</a></p>
+<h2 id="salient-features">Salient Features</h2>
+<p>You can use the information to deploy Foundry to an existing Kubernetes clusters.  This solution will not create a Kubernetes deployment or new cluster for you.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li>
+<p>Kubernetes Cluster running version above 1.27.6.</p>
+<blockquote>
+<p><strong>Note</strong>: Customers who plan on installing Foundry with SSL will need to import the certificate into cacerts before Foundry is installed.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="software-requirements">Software Requirements</h2>
+<ul>
+<li>Helm version 3.  Find more details about Helm and how to install it at <a href="https://helm.sh/">https://helm.sh/</a>.  Installation is simple on most platforms:  go to the <a href="https://github.com/helm/helm/releases">Helm Releases page at GitHub</a> and download the latest zip file applicable for your platform.  Unzip and extract the helm executable and place it in an appropriate directory (/usr/local/bin on linux, perhaps c:\tools\bin for windows).  As long as it can be located via your PATH you should be set to use it.</li>
+</ul>
+<h3 id="supported-os-platform-databases">Supported OS Platform &amp; Databases</h3>
+<p>Foundry is supported on certified Kubernetes clusters.  Generally certified clusters are running a variant of Linux.  Please refer to the prerequisites listed in <a href="../../voltmxfoundry_containers_solution_on-prem/Content/VoltMX_Foundry_Containers_Solution_On-Prem.html#prerequisites">VoltMX Foundry Containers Solution On Prem</a> for more details and specifics.</p>
+<p>Download the Foundry Helm chart from <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Volt_Foundry_v9.5.x&amp;orgId=HCL">HCL Flexnet software portal</a>.</p>
+<h1 id="configuration">Configuration</h1>
+<p>The following parameters are specified in the values.yaml file within the Helm chart and should be reviewed and customized.  Alternatively, values can be overridden and specified with <code>--set parameterName=value</code> arguments with <code>helm install</code> but we encourage you to persist your changes in values.yaml.  There are two charts in this solution and both are required.  The database update chart must be installed first and performs the database creation or update.  The second installs the Foundry applications.  Both charts use the same values.yaml file.</p>
+<ol>
+<li>
+<p>Foundry uses several Global Unique IDs to distinguish different installations of Foundry. If you are upgrading an existing Volt MX Foundry deployment you should configure this deployment with the same account identifiers from your prior deployment.</p>
+<p>Upgrading from a prior version of Foundry:</p>
+<ul>
+<li>Obtain the <code>upgrade.properties</code> file from your prior deployment copying it into the same directory as values.yaml.</li>
+<li>Invoke the init-guids script specifying the file path of the prior deployment's upgrade.properties:  <code>./init-guids.sh --upgrade .</code></li>
+</ul>
+<p>For a new deployment (non upgrade):</p>
+<ul>
+<li>Invoke the init-guids script specifying the --new option:  <code>./init-guids.sh --new</code>.  Be aware that this script will create a new file called "upgrade.properties" that you should save in the event you want to later upgrade this deployment.</li>
+</ul>
+<p>Both of these steps will update <code>values.yaml</code> with the necessary configuration changes.  This step is required prior to installing with Helm.</p>
+</li>
+<li>
+<p><strong>installEnvName</strong>: The install environment name can be anything in lowercase (String). Example values are: <code>dev</code>, <code>qa</code>, <code>prod</code>, or <code>eastusprod</code>.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> The Install Environment Name must not contain numbers.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>hclImagePullSecret:</strong><br></p>
+<p>Please give the secret which is configured with login details of HCL Harbor site.</p>
+</li>
+</ol>
+<pre><code>    To create the secret from Username and Password, please run the following command then the secret will be created as foundry-image-pull     
+    Command: kubectl create secret docker-registry foundry-image-pull --docker-server=hclcr.io --docker-username=&lt; your-name &gt; --docker-password=&lt; your-pword &gt; --docker-email=&lt; your-email &gt; 
+    username: your-email
+    password: your-authentication-token
+    your-authentication-token - This is the CLI secret found under your User Profile in HCL .
+
+</code></pre>
+<ol>
+<li>
+<p><strong>foundryInstallType</strong>: The deployment must be marked as either production or non production.  This parameter must be specified and it must be either "PRODUCTION" or "NON-PRODUCTION".</p>
+</li>
+<li>
+<p><strong>Install Components</strong>: The following properties must be set to either true or false.  They specify if the component will be installed or not.</p>
+<ul>
+<li>identityEnabled</li>
+<li>consoleEnabled</li>
+<li>apiPortalEnabled</li>
+<li>integrationEnabled</li>
+<li>engagementEnabled</li>
+<li>dbUpdateEnabled</li>
+</ul>
+</li>
+<li>
+<p><strong>Application Server Details</strong></p>
+<ul>
+<li>
+<p><strong>enableCaCertsOverride</strong>: If you are utilizing a self signed cert or using a cert that was issued by a certificate authority (CA) not preloaded by the JRE trust store, you will need to add your certificate to the trust store located in <code>apps/certs/cacerts</code> and set this property to <code>true</code>.  At the present time you must leave the trust store password with the default of "changeit".</p>
+</li>
+<li>
+<p><strong>serverDomainName</strong>: The <strong>Domain Name</strong> for Volt MX Foundry deployment. This value should be the hostname of the LoadBalancer. For example: foundry.example.com  (DNS name).</p>
+</li>
+</ul>
+<blockquote>
+<p><strong><em>Note:</em></strong> This property cannot be an IP address or 'localhost'.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Ingress Details</strong></p>
+<ul>
+<li>
+<p><strong>Overview</strong>: Ingress provides external access to the services in your Kubernetes cluster.  It is required to enable browsers to access the applications and also used by the backend services to communicate with each other.</p>
+</li>
+<li>
+<p><strong>ingress.enabled</strong>: true if Ingress should be enabled.  Ingress must be enabled for Foundry to function properly, but there are certain conditions where you may want to temporarily disable Ingress.</p>
+</li>
+<li>
+<p><strong>ingress.protocol</strong>: The communication protocol for accessing Volt MX Foundry. This value can be either http or https.  This should reflect the type of traffic you want the Ingress or Load Balancer to accept. <strong>Note:</strong> If ingress.tls is enabled, this setting should be https or the Foundry setup will fail.</p>
+</li>
+<li>
+<p><strong>ingress.port</strong>: This port is the port that Ingress will be listening on for requests to Foundry.  Generally this is 80 or 443.  This property is used together with ingress.protocol to build URLs used for end users and for Foundry to communicate between applications. <strong>Note:</strong> If tls is enabled this setting should be 443.</p>
+</li>
+<li>
+<p><strong>ingress.class</strong>: The class property is used to set the class name on the Ingress object.  The default is empty string which will enable the Ingress objects to be processed by your cluster default Ingress controller.  If your cluster does not have a default Ingress controller or if you want to override that, you can set the class name here.  Common values you might use include "nginx", "traefik", and "openshift-default". When utilizing Azure Application Gateway in AKS specify "azure-application-gateway".</p>
+</li>
+<li>
+<p><strong>ingress.annotations</strong>:  ingress.annotations allow you to specify additional annotations that will be added to every ingress object.  Add one annotation per line, each annotation should be indented 2 spaces and should be of the format of <code>annotationName: value</code>.  When rendered, your annotation value will automatically be quoted. Please change the nginx according to ingress class name. Ex: use appgw for azure application gateway.</p>
+</li>
+<li>
+<p><strong>ingress.tls</strong>: Use this property to configure Ingress with either the Cluster or a Custom SSL certificate.</p>
+</li>
+<li>
+<p><strong>ingress.tls.enabled</strong>: When this property is set to true, Ingress is configured to use the Cluster SSL Certificate or the specified Custom SSL certificate.</p>
+</li>
+<li>
+<p><strong>ingress.tls.customCertSecretName</strong>: If
+customCertSecretName is not set the Cluster certificate will be used for tls. Provide secret name which has tls.crt and tls.key.</p>
+</li>
+</ul>
+</li>
+</ol>
+<details close="close">
+<p><summary>To create a custom secret from pem file.
+</summary>
+The secret can be created using the following commands:</p>
+<pre><code>kubectl create secret tls NAME --cert=path/to/cert/file --key=path/to/key/file
+
+</code></pre>
+<blockquote>
+<p><strong>Note :</strong> The cert should be fullchain.</p>
+</blockquote>
+</details>
+<ul>
+<li>
+<p><strong>ingress.sslTermination</strong>: This property is specific to OpenShift.  When this property is set to true, an annotation is added to each Ingress object signifying that the annotation <code>route.openshift.io/termination: "edge"</code> should be set.  This in turn causes OpenShift to configure routes and Ingress to accept connections on TLS/HTTPS and terminate the SSL connection while proxying the request over HTTP to the backend services.  This property should be used when configuring OpenShift with secured Ingress.</p>
+</li>
+<li>
+<p><strong>Database Details</strong></p>
+<ul>
+<li><strong>dbType</strong>: This is the Database type you want to use for hosting Volt MX Foundry. The possible values are:</li>
+<li>For MySQL DB server: <code>mysql</code></li>
+<li>For Azure MSSQL or SQL Server: <code>sqlserver</code></li>
+<li>For Oracle DB server: <code>oracle</code></li>
+<li><strong>dbHost</strong> - This is the Database Server hostname used to connect to the Database Server.</li>
+<li><strong>dbPort</strong> – This is the Port Number used to connect to the Database Server. This can be empty for cloud manage service.</li>
+<li><strong>dbUser</strong> - This is the Database Username used to connect to the Database Server.</li>
+<li><strong>dbPass</strong> - This is the Database Password used to connect to the Database Server.</li>
+<li><strong>dbPrefix</strong> – This is the Database server prefix for Volt MX Foundry databases.</li>
+<li><strong>dbSuffix</strong> – This is the Database server suffix for Volt MX Foundry databases.</li>
+<li><strong>useExistingDb</strong>: If you want to use existing databases from a previous Volt MX Foundry instance set this variable to true,  otherwise it should be false.</li>
+</ul>
+<p><br/></p>
+<blockquote>
+<p><strong>Notes:</strong></p>
+<p>If you use an IP address for dbHost, make certain it is a static IP address and does not change.</p>
+<p>Database Prefix and Suffix are optional inputs.
+- In case of upgrade, ensure that the values of the Database Prefix and Suffix that you provide are the same as you had provided during the initial installation.</p>
+<p>If <strong>dbType</strong> is set as <strong>oracle</strong>, the following String values need to be provided:</p>
+<ul>
+<li><strong>dbDataTS</strong>: Database Data tablespace name.</li>
+<li><strong>dbIndexTS</strong>: Database Index tablespace name.</li>
+<li><strong>dbLobTS</strong>: Database LOB tablespace name.</li>
+<li><strong>dbService</strong>: Database service name.</li>
+</ul>
+</blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>timeZone</strong> - The Time Zone of the Database used for Volt MX Foundry installation. The Time Zone variable must be set to maintain consistency between the Application server and the Database server. For determining what value to set for the time zone you can refer to <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of tz database time zones</a> on Wikipedia.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> The Time Zone is an optional value. If you do not provide any Time Zone, it is set to Etc/UTC.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Readiness and Liveness Probes Details</strong>: The following variables are set with default values in seconds. Readiness probes are used to determine if a service is available to handle requests. If it fails the configured thresholds, the service is marked as not ready and will not be routed requests. The liveness problem is similar, but when it fails the configured thresholds, the container is killed and restarted. These probes are present for each application and may be customized.</p>
+<ul>
+<li>readinessInitDelay: The readiness probe initial delay. The default value is 30.  This is the number of seconds after the container has started before readiness probes are initiated.</li>
+<li>livenessInitDelay: The liveness probe initial delay in seconds. The default value is 600. This is the number of seconds after the container has started before liveness probes are initiated.</li>
+<li>readinessPeriodSeconds: The readiness period seconds parameter signifies how frequently the kubelet will execute a readiness probe.  The default is 30 indicating that once every 30 seconds a readiness probe will be executed.</li>
+<li>readinessTimeoutSeconds:  The readiness timeout seconds parameter signifies how long kubelet will let a probe run before it times out and assumes the probe failed.  The default is 120 indicating 120 seconds.</li>
+<li>livenessPeriodSeconds:  The liveness period seconds parameter signifies how frequently the kubelet will execute a liveness probe.  The default is 30 indicating that once every 30 seconds a liveness probe will be executed.</li>
+<li>livenessTimeoutSeconds: The liveness timeout seconds parameter signifies how long kubelet will let a probe run before it times out and assumes the probe failed.  The default is 120 indicating 120 seconds.</li>
+</ul>
+</li>
+<li>
+<p><strong>Minimum and Maximum RAM percentage Details</strong>: The following variables are used to configure the amount of RAM used by the Java process in each container.  These have default values for each application container but may be customized for each application.</p>
+<ul>
+<li>minRamPercentage: Minimum RAM percentage, default is "50".</li>
+<li>maxRamPercentage: Maximum RAM percentage, default is "80".</li>
+</ul>
+</li>
+<li>
+<p><strong>Container resource limits for memory and CPU</strong>: The following variables are used to configure the memory and cpu resource limits for each application container.  These are string values and can be modified for each application.  Refer to <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</a> for additional details.</p>
+<ul>
+<li>
+<p>resourceRequestsCpu: specifies the minimum amount of CPU units the container is guaranteed to be allocated at startup.</p>
+</li>
+<li>
+<p>resourceRequestsMemory: specifies the minimum amount of memory the container is guaranteed to be allocated at startup.</p>
+</li>
+<li>
+<p>resourceMemoryLimit:  specifies the maximum amount of memory the container can consume. If the container tries to allocate more memory than this limit, the Linux kernel out-of-memory subsystem activates and, typically, intervenes by stopping one of the processes in the container that tried to allocate memory.</p>
+</li>
+</ul>
+<p>This table documents the defaults for each container.</p>
+<table>
+<thead>
+<tr>
+<th>App Container</th>
+<th>Resource</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identity</td>
+<td>resourceMemoryLimit</td>
+<td>"1.2G"</td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>resourceRequestsMemory</td>
+<td>"1G"</td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>resourceRequestsCpu</td>
+<td>"200m"</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>resourceMemoryLimit</td>
+<td>"2.2G"</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>resourceRequestsMemory</td>
+<td>"2G"</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>resourceRequestsCpu</td>
+<td>"300m"</td>
+</tr>
+<tr>
+<td>API Portal</td>
+<td>resourceMemoryLimit</td>
+<td>"1.2G"</td>
+</tr>
+<tr>
+<td>API Portal</td>
+<td>resourceRequestsMemory</td>
+<td>"1G"</td>
+</tr>
+<tr>
+<td>API Portal</td>
+<td>resourceRequestsCpu</td>
+<td>"200m"</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>resourceMemoryLimit</td>
+<td>"2.2G"</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>resourceRequestsMemory</td>
+<td>"2G"</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>resourceRequestsCpu</td>
+<td>"300m"</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>resourceMemoryLimit</td>
+<td>"1.2G"</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>resourceRequestsMemory</td>
+<td>"1G"</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>resourceRequestsCpu</td>
+<td>"200m"</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Custom JAVA_OPTS Details</strong>: Each application can be set with a custom Java options which will be used to configure the JVM.  Under each application locate the variable called <code>customJavaOpts</code>.</p>
+</li>
+<li>
+<p><strong>Number of instances to be deployed for each component</strong>: Each application can be configured to specify the number of container replicas.  The default value is 1.  Under each application locate the variable called <code>replicas</code>.</p>
+</li>
+<li>
+<p><strong>VoltMX Foundry Account Registration Details</strong>: Software license registration must be done after installation with Helm (prior versions of the install were capable of doing the registration during install).  After logging into the newly deployed console a link at the top of every page will take you to the registration page to activate the software license.</p>
+</li>
+</ul>
+<h1 id="installation">Installation</h1>
+<p><strong>Steps to Install Volt MX Foundry Container Cluster Solution:</strong></p>
+<ol>
+<li>
+<p>Download the Helm charts from <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Volt_Foundry_v9.5.x&amp;orgId=HCL">HCL Flexnet software portal</a> and unzip the contents.   With a command prompt, cd to the root of the unzipped content (you will see <code>values.yaml</code> here along with Charts in the subdirectories named <code>apps</code> and <code>dbupdate</code>).<br><br>
+    <strong>Note:</strong>
+        Substitute the version number for the version of Foundry you downloaded in the command example below such as <strong>Foundry_v9.5.15.0</strong> and <strong>HelmChart-9.5.15.0_GA.zip</strong>.</p>
+<p><pre><code>
+$ mkdir ~/Foundry-9.5.n.n_GA
+$ cd ~/Foundry-9.5.n.n_GA
+$ unzip ~/Downloads/HelmChart-9.5.n.n_GA.zip
+</code></pre></p>
+</li>
+<li>
+<p>Execute <code>init-guids.sh</code> to initialize account details.  Specify --upgrade if you are upgrading an existing installation.</p>
+<p><pre><code>
+$ ./init-guids.sh --new
+ACCOUNTS_ENCRYPTION_KEY=b28e44b3-a5c6-8561-12cd-ef95b37f5f3c
+WAAS_MASTER_KEY=a7d6b717-07f8-011a-8095-755c340dc976
+WAAS_MASTER_KEY_ID=7d58a92c-e9db-1ebc-084f-6f0640fb5b42
+AUTH_MASTER_KEY=84635bf0-bc1b-7139-bf95-f64afb1673a1
+AUTH_MASTER_KEY_ID=ec376ad5-4b29-b013-d8d6-b1b7d6fd5559
+useExistingDb=false
+New keys have been saved to values.yaml, you may proceed with 'helm install'.
+</code></pre></p>
+</li>
+<li>
+<p>Customize values.yaml with your deployment details.  Consult the configuration section above.</p>
+<p><pre><code>
+$ vi values.yaml
+</code></pre></p>
+</li>
+<li>
+<p>Verify you have access to the Kubernetes cluster with <code>kubectl</code>.</p>
+<p><pre><code>
+$ kubectl get nodes
+NAME              STATUS   ROLES                  AGE   VERSION
+master            Ready    control-plane,master   1h   v1.24.0+dc5a2fd
+worker1           Ready    worker                 1h   v1.24.0+dc5a2fd
+worker2           Ready    worker                 1h   v1.24.0+dc5a2fd
+....
+</code></pre></p>
+</li>
+<li>
+<p>Create the Foundry namespace and make it your current context.  This step is optional but suggested. <strong>Note:</strong> If you do not create the namespace and make it the current context, you will need to use the option to create the namespace on your first helm command and specify the namespace option on each of your subsequent helm and kubectl commands. The namespace option is shown on the helm commands on the following steps as an example.</p>
+<p><pre><code>
+$ kubectl create namespace foundry
+namespace/foundry created<br />
+$ kubectl config set-context --current --namespace=foundry
+Context "kube-cluster1" modified.
+</code></pre></p>
+</li>
+<li>
+<p>Install the Foundry applications with Helm.</p>
+<p><pre><code>
+$ helm install foundry apps -f values.yaml -n foundry --timeout 10m
+NAME: foundry
+LAST DEPLOYED: Fri Jan 20 08:21:36 2023
+NAMESPACE: foundry
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+Application has been deployed successfully.
+.
+.
+.
+To verify application is running visit the url below;
+http://foundry.example.com/mfconsole
+</code></pre></p>
+</li>
+<li>
+<p>The deployment will take some time.  Container images must be downloaded from the HCL container repository and then started and applications initialized.  You can watch the progress of the deployment with a variety of commands.   The command below watches the pod status and updates the output as the deployment progresses:</p>
+<p><pre><code>
+$ kubectl get pods -w
+NAME                                         READY   STATUS     RESTARTS   AGE
+foundry-db-update-zfd4b                      0/1     Completed  0          28s
+voltmx-foundry-apiportal-fff6c987b-nv5pw     0/1     Init:0/1   0          62s
+voltmx-foundry-console-64d579d5f7-c6p8r      0/1     Init:0/1   0          62s
+voltmx-foundry-engagement-569dcb594-9bt2s    0/1     Init:0/1   0          62s
+voltmx-foundry-identity-5454597447-jgd6b     0/1     Init:0/1   0          62s
+voltmx-foundry-integration-fb5b78bc9-j2n5q   0/1     Init:0/1   0          62s
+voltmx-foundry-identity-5454597447-jgd6b     0/1     PodInitializing   0          85s
+voltmx-foundry-integration-fb5b78bc9-j2n5q   0/1     PodInitializing   0          85s
+voltmx-foundry-apiportal-fff6c987b-nv5pw     0/1     PodInitializing   0          85s
+voltmx-foundry-console-64d579d5f7-c6p8r      0/1     PodInitializing   0          85s
+voltmx-foundry-engagement-569dcb594-9bt2s    0/1     PodInitializing   0          85s
+voltmx-foundry-console-64d579d5f7-c6p8r      0/1     Running           0          1m15s
+voltmx-foundry-identity-5454597447-jgd6b     0/1     Running           0          1m15s
+voltmx-foundry-integration-fb5b78bc9-j2n5q   0/1     Running           0          1m15s
+voltmx-foundry-apiportal-fff6c987b-nv5pw     0/1     Running           0          1m15s
+voltmx-foundry-apiportal-fff6c987b-nv5pw     1/1     Running           0          2m
+voltmx-foundry-identity-5454597447-jgd6b     1/1     Running           0          2m1s
+voltmx-foundry-engagement-569dcb594-9bt2s    0/1     Running           0          2m2s
+voltmx-foundry-integration-fb5b78bc9-j2n5q   1/1     Running           0          2m2s
+voltmx-foundry-console-64d579d5f7-c6p8r      1/1     Running           0          2m19s
+voltmx-foundry-engagement-569dcb594-9bt2s    1/1     Running           0          2m30s
+^C
+</code></pre></p>
+<p>The <code>-w</code> option is short for <code>watch</code> and it causes kubectl to monitor the status and update the output with any changes.  You must press <code>ctrl-c</code> to terminate this command.</p>
+</li>
+<li>
+<p>Verify the deployment.  Using the commands below, you should see similar output:</p>
+<p><pre><code>
+$ kubectl get pods
+NAME                                         READY   STATUS      RESTARTS   AGE
+foundry-db-update-zfd4b                      0/1     Completed   0          8m7s
+voltmx-foundry-apiportal-fff6c987b-nv5pw     1/1     Running     0          8m7s
+voltmx-foundry-console-64d579d5f7-c6p8r      1/1     Running     0          8m7s
+voltmx-foundry-engagement-569dcb594-9bt2s    1/1     Running     0          8m7s
+voltmx-foundry-identity-5454597447-jgd6b     1/1     Running     0          8m7s
+voltmx-foundry-integration-fb5b78bc9-j2n5q   1/1     Running     0          8m7s
+</code></pre></p>
+<p>Each pod should show a status of <code>Running</code> and it should display 1/1 in the Ready column indicating each pod has 1 out of 1 container in the Ready status.</p>
+<p><pre><code>
+$ kubectl get endpoints
+NAME                         ENDPOINTS           AGE
+voltmx-foundry-apiportal     10.130.3.124:8080   4m
+voltmx-foundry-console       10.130.3.125:8080   4m
+voltmx-foundry-engagement    10.130.3.129:8080   4m
+voltmx-foundry-identity      10.130.3.127:8080   4m
+voltmx-foundry-integration   10.130.3.126:8080   4m
+</code></pre></p>
+<p>Endpoints show what IP Address/port each service will route requests to.  If you change the replica count you should see an associated endpoint address for each replica.</p>
+<p><pre><code>
+$ kubectl get ingress
+NAME          CLASS    HOSTS                                   ADDRESS                                        PORTS   AGE
+auth                   foundry.apps.dsocp.nonprod.hclpnp.com   router-default.apps.dsocp.nonprod.hclpnp.com   80      11m
+console                foundry.apps.dsocp.nonprod.hclpnp.com   router-default.apps.dsocp.nonprod.hclpnp.com   80      11m
+engagement             foundry.apps.dsocp.nonprod.hclpnp.com   router-default.apps.dsocp.nonprod.hclpnp.com   80      11m
+integration            foundry.apps.dsocp.nonprod.hclpnp.com   router-default.apps.dsocp.nonprod.hclpnp.com   80      11m
+portal                 foundry.apps.dsocp.nonprod.hclpnp.com   router-default.apps.dsocp.nonprod.hclpnp.com   80      11m
+</code></pre></p>
+<p>For each Ingress we should see that an address has been assigned.  If there is no address listed, Ingress will not function.  Generally a lack of address means that no ingress controller has determined it should setup the ingress.  This is usually caused by incorrectly specifying the ingress.class in values.yaml.  You can correct this and then run <code>helm upgrade foundry apps -f values.yaml -n foundry</code> and Helm will apply the class name change for you.</p>
+<p>If the pods are all showing ready and your Ingress shows addresses, you should be ready to open the Foundry Console in your browser.   Using the <strong>host name</strong> shown in the output, open the console in your browser.  From the output above, we would use <a href="http://foundry.apps.dsocp.nonprod.hclpnp.com/mfconsole">http://foundry.apps.dsocp.nonprod.hclpnp.com/mfconsole</a>.</p>
+<p><strong>Note:</strong> All of these checks (validate pod status, ingress addresses, and health checks) are done for you if you run the command <code>helm test foundry -n foundry</code>.  This command will deploy a validation image from HCL which will run all of these tests to validate the application's health.  To see full details (and to help diagnose issues in the event of problems), run the test command and specify the <code>--logs</code> parameter.   For example:</p>
+<p><pre><code>
+  $ helm test foundry -n foundry --logs
+  NAME: foundry
+  LAST DEPLOYED: Tue Jan 31 21:23:43 2023
+  NAMESPACE: foundry
+  STATUS: deployed
+  REVISION: 1
+  TEST SUITE:     foundry-helm-test
+  Last Started:   Wed Feb  1 20:55:52 2023
+  Last Completed: Wed Feb  1 20:56:08 2023
+  Phase:          Succeeded
+  NOTES:
+  Application has been deployed successfully.</p>
+<pre><code>_______________________________________________
+
+            Release Information
+_______________________________________________
+
+RELEASE TYPE: NON-PRODUCTION
+NAMESPACE: foundry
+RELEASE NAME: foundry
+CHART VERSION: 1.1.0
+
+_______________________________________________
+
+            Build Information
+_______________________________________________
+
+IMAGE REGISTRY: hclcr.io/voltmx
+BUILD VERSION: 9.5.15.0_GA
+
+_______________________________________________
+
+            Database Information
+_______________________________________________
+
+DB TYPE: mysql
+DB HOST: mysql-service
+DP PORT: 3306
+DB SERVICE:
+
+_______________________________________________
+
+            Application Information
+_______________________________________________
+
+TIMEZONE: Etc/UTC
+INGRESS ENABLED: true
+PROTOCOL:  http
+
+To verify application is running visit the url below;
+http://foundry.apps.dsocp.nonprod.hclpnp.com/mfconsole
+
+POD LOGS: foundry-helm-test
+############################## Foundry Health Check ###############################
+&gt;&gt; Starting foundry health check...
+&gt;&gt; Foundry health check completed.
+&gt;&gt; STATUS: PASSED
+###################################################################################
+
+########################## Foundry Ingress Address Check ##########################
+&gt;&gt; Starting foundry ingress address check...
+&gt;&gt; Enabled services are auth console integration engagement portal
+
+&gt;&gt; Ingress: auth
+++ kubectl describe ingress auth
+++ grep Address
+++ awk '{print $2}'
+&gt;&gt; router-default.apps.dsocp.nonprod.hclpnp.com
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; Ingress: console
+++ kubectl describe ingress console
+++ grep Address
+++ awk '{print $2}'
+&gt;&gt; router-default.apps.dsocp.nonprod.hclpnp.com
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; Ingress: integration
+++ kubectl describe ingress integration
+++ grep Address
+++ awk '{print $2}'
+&gt;&gt; router-default.apps.dsocp.nonprod.hclpnp.com
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; Ingress: engagement
+++ kubectl describe ingress engagement
+++ grep Address
+++ awk '{print $2}'
+&gt;&gt; router-default.apps.dsocp.nonprod.hclpnp.com
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; Ingress: portal
+++ grep Address
+++ kubectl describe ingress portal
+++ awk '{print $2}'
+&gt;&gt; router-default.apps.dsocp.nonprod.hclpnp.com
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; Foundry ingress address check completed.
+###################################################################################
+
+############################ Foundry Pod Status Check #############################
+&gt;&gt; Starting foundry pod status check...
+&gt;&gt; Enabled services are identity console integration engagement apiportal
+
+&gt;&gt; CONTAINER: voltmx-foundry-identity
+++ kubectl wait pods -l app=voltmx-foundry-identity --for condition=Ready --timeout=90s
+++ grep -ic 'condition met'
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; CONTAINER: voltmx-foundry-console
+++ kubectl wait pods -l app=voltmx-foundry-console --for condition=Ready --timeout=90s
+++ grep -ic 'condition met'
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; CONTAINER: voltmx-foundry-integration
+++ kubectl wait pods -l app=voltmx-foundry-integration --for condition=Ready --timeout=90s
+++ grep -ic 'condition met'
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; CONTAINER: voltmx-foundry-engagement
+++ kubectl wait pods -l app=voltmx-foundry-engagement --for condition=Ready --timeout=90s
+++ grep -ic 'condition met'
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; CONTAINER: voltmx-foundry-apiportal
+++ kubectl wait pods -l app=voltmx-foundry-apiportal --for condition=Ready --timeout=90s
+++ grep -ic 'condition met'
+&gt;&gt; STATUS: PASSED
+
+&gt;&gt; Foundry pod status check completed.
+###################################################################################
+</code></pre>
+<p></code></pre></p>
+</li>
+</ol>
+<h2 id="uninstalling-foundry">Uninstalling Foundry</h2>
+<p>The Foundry database update job and Foundry applications can be uninstalled with two commands: <code>helm uninstall foundry</code> and <code>helm uninstall dbupdate</code>.  If your Kubernetes context is not set to the foundry namespace you may need to specify the <code>-n &lt;namespace&gt;</code> parameter as in <code>helm uninstall foundry -n foundry</code>.   This will uninstall the deployment of Foundry in Kubernetes (it will stop the containers and pods and delete them from the work load, along with any secrets, configmaps, ingress and other metadata).  This will not remove databases that were created during install: those must be manually deleted with your database tools.</p>
+<h2 id="modifying-foundry-configuration">Modifying Foundry configuration</h2>
+<p>With the exception of database changes (any database related parameters), you can usually modify the values.yaml file and then run <code>helm upgrade foundry apps -f values.yaml -n foundry</code> and Helm will update configuration and restart any impacted pods.   For instance, if you install foundry but find you failed to properly specify the ingress.class name, you could edit values.yaml, update the ingress.class parameter and then run <code>helm upgrade foundry apps -f values.yaml -n foundry</code>.  In the event that <code>helm upgrade</code> does not work for you, you could uninstall foundry with <code>helm uninstall foundry -n foundry</code> and then re-install the Foundry applications.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Review the general Foundry with Kubernetes troubleshooting section in <a href="../../voltmxfoundry_containers_solution_on-prem/Content/Containers_Solution_FAQs_and_Troubleshooting.html">Volt MX Foundry Container Cluster Solution</a></p>
+<h2 id="known-issues-and-limitations">Known Issues and Limitations</h2>
+<p>Volt MX Foundry Container Cluster Solution has the following known issues and limitations:</p>
+<ul>
+<li>Support for <strong>SPA / Desktop Web</strong> is only available for zipped SPA apps, not for WARs.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

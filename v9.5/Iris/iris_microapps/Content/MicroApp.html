@@ -1,0 +1,3739 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github01.hclpnp.com/pages/phoenix-temenos/volt-mx-doc-opnsrc/latest/Iris/iris_microapps/Content/MicroApp.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Micro Apps - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#micro-apps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://support.hcltechsw.com/community?id=community_forum&sys_id=1cdf6e1a1bf31898beab64e6ec4bcbae" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Micro Apps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_Main_Page.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_Main_Page.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    All versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_5_Fix_Pack_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 5 Fix Pack 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_V9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-micro-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Micro App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-micro-apps-to-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link Micro Apps to a Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Link Micro Apps to a Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-a-micro-app-into-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import a Micro App into a Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import a Micro App into a Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hide-a-micro-app-in-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hide a Micro App in the Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exclude-a-micro-app-from-the-build-process-selective-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exclude a Micro App from the Build Process - Selective Build
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exclude a Micro App from the Build Process - Selective Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-micro-apps-in-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter Micro Apps in the Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-resource-sharing-for-a-micro-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Resource Sharing for a Micro App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enable Resource Sharing for a Micro App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-order-of-micro-apps-in-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update the Order of Micro Apps in a Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-a-project-with-micro-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export a Project with Micro Apps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-a-project-with-micro-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import a Project with Micro Apps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import a Project with Micro Apps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlink-a-micro-app-from-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unlink a Micro App from the Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unlink a Micro App from the Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-a-volt-foundry-app-to-a-micro-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link a Volt Foundry App to a Micro App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-micro-app-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Micro App Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-level-settings-and-app-level-event-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project-level Settings and App-level Event Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project-level Settings and App-level Event Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-sharing-in-micro-app-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Sharing in Micro App Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Sharing in Micro App Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-composite-app-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Composite App Themes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guidelines-to-handle-themes-between-the-base-app-and-micro-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines to Handle Themes between the Base App and Micro Apps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micro-apps-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro Apps Limitations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="micro-apps">Micro Apps</h1>
+<p>From the V9 Service Pack 5 release, you can import and use Micro Apps that implement a single module of an envisioned larger application (hereby referred to as a Composite or Super App). Micro Apps are focused on a highly targeted functionality and can perform the task quickly and efficiently. Using Micro Apps, you can create a standalone app that can also be used as part of a larger application.</p>
+<p>A traditional business application contains a large suite of functionalities combined in a single UI that might lead to load or build time issues and the inability to quickly locate a specific functionality. Instead of managing a complex monolithic app, you can divide it into smaller and easily-manageable Micro Apps.</p>
+<p>Micro Apps are only supported in VoltMX Reference Architecture projects.</p>
+<p>Before you start using the Micro Apps feature, you must first configure the Base App. The <strong>Base App</strong> is the main app with which you start creating the project. The Base App may or may not contain linked Micro Apps. A collection of Micro Apps grouped together in a larger app (unified app) is called a Composite App (or Super App), which consists of a Base App and one or more Micro Apps. Any updates to a Micro App will reflect at every instance where that Micro App is used (composite applications, and modules). If a resource is referenced in more than two apps, you can place the resource in a common resource-sharing Micro App. When you enable resource sharing for a Micro App, the Base App can access the resources of that Micro App.</p>
+<p>From the V9 Service Pack 5 release, you can package logic for the app's wearables (such as Forms, Glances, Notifications, and Modules) in a linked Micro App. HCL recommends that you maintain all the logic for the app's wearables in a single Micro App to avoid issues during the build process.</p>
+<p><img alt="" src="Resources/Images/CompositeApp.png" /></p>
+<p>The following topics provide additional information about using Micro Apps:</p>
+<ul>
+<li><a href="#use-case-scenario">Use Case Scenario</a></li>
+<li><a href="#create-a-micro-app">Create a Micro App</a></li>
+<li><a href="#link-micro-apps-to-a-project">Link Micro Apps to a Project</a></li>
+<li><a href="#import-a-micro-app-into-a-project">Import a Micro App into a Project</a></li>
+<li><a href="#hide-a-micro-app-in-the-project">Hide a Micro App in the Project</a></li>
+<li><a href="#exclude-a-micro-app-from-the-build-process-selective-build">Exclude a Micro App from the Build Process</a></li>
+<li><a href="#filter-micro-apps-in-the-project">Filter Micro Apps in the Project</a></li>
+<li><a href="#enable-resource-sharing-for-a-micro-app">Enable Resource Sharing for a Micro App</a></li>
+<li><a href="#update-the-order-of-micro-apps-in-a-project">Update the Order of Micro Apps in a Project</a></li>
+<li><a href="#export-a-project-with-micro-apps">Export a Project with Micro Apps</a></li>
+<li><a href="#import-a-project-with-micro-apps">Import a Project with Micro Apps</a></li>
+<li><a href="#unlink-a-micro-app-from-the-project">Unlink a Micro App from the Project</a></li>
+<li><a href="#link-a">Link a VoltMX Foundry App to a Micro App</a></li>
+<li><a href="#build-micro-app-projects">Build Micro App Projects</a></li>
+<li><a href="#project-level-settings-and-app-level-event-handling">Project-level Settings and App-level Event Handling in Micro App Projects</a></li>
+<li><a href="#resource-sharing-in-micro-app-projects">Resource Sharing in Micro App Projects</a></li>
+</ul>
+<h2 id="use-case-scenario">Use Case Scenario</h2>
+<p>Let us consider that a team of developers wants to create a unified banking application that gives a high-level overview of the different verticals of a bank (such as Accounts, Loans, Credit Cards and Wealth Management) to the higher management. As there are different specialized teams that work on different verticals of the application flow, merging the functionalities and managing updates from different teams in a single unified app is challenging.</p>
+<p>In such cases, each team can create a Micro App that independently implements the business requirements for each vertical, and tests them independently. The developers can also maintain a shared app between these teams for the common modules or resources that can be used in any of the four Micro Apps. Once these individual apps are tested, the team can then create the Composite App by adding the four Micro Apps (each from a different vertical) as dependencies to the Base App, and then implement the application navigation logic between the Base App and the Micro Apps. Whenever there are changes made to any of the Micro Apps, the team can pull those updates individually and then test the end-to-end application. Upgrades, versioning, and maintenance of the application code becomes much more granular and efficient with Micro Apps.</p>
+<p><img alt="" src="Resources/Images/MicroAppExample.png" /></p>
+<h2 id="create-a-micro-app">Create a Micro App</h2>
+<p>Follow these steps to create a new Micro App in Volt MX Iris:</p>
+<ol>
+<li>Create a new project as a Base App.</li>
+<li>From the <strong>Project</strong> menu, select <strong>New Project</strong>.<br />
+    The Project Name dialog box appears.</li>
+<li>Type a name for the Micro App, and then click <strong>Create</strong>.</li>
+</ol>
+<h2 id="link-micro-apps-to-a-project">Link Micro Apps to a Project</h2>
+<p>Follow these steps to link a Micro App to a Volt Iris project:</p>
+<ol>
+<li>From the <strong>Project</strong> menu, select <strong>Link Micro App (From Workspace)</strong>.<br />
+    The <strong>Link Micro App</strong> dialog box appears.</li>
+<li>From the list of available applications, select the Micro Apps that you want to link to the project.<br />
+<img alt="" src="Resources/Images/LinkMicroApp.png" /></li>
+<li>Click <strong>Link</strong>.<br />
+    The selected Micro App is linked to the Base App.</li>
+</ol>
+<h3 id="important-considerations">Important Considerations</h3>
+<ul>
+<li>The <strong>Link Micro App</strong> dialog box contains a list of all the apps (of the same architecture) available in the currently active workspace.</li>
+<li>Volt Iris performs a project refresh when you link a Micro App to the Base App.</li>
+<li>You can only link Micro Apps of the same app type to a Base App.<br />
+    For example, you can only link Micro Apps that use the MVC architecture to a Base App that uses the MVC architecture, and you can only link Micro Apps that use the MVC 2.0 architecture to a Base App that uses the MVC 2.0 architecture.</li>
+<li>When you link a Micro App to a Base App, resource sharing for the Micro App is disabled by default.</li>
+<li>If you link a Micro App that was created using an older version of Volt Iris, an upgrade alert appears during the linking process.</li>
+<li>From the V9 Service Pack 5 release, if a Micro App that contains dependent apps is linked to the Base App, the dependent apps are also linked to the Base App as direct dependencies.</li>
+</ul>
+<h2 id="import-a-micro-app-into-a-project">Import a Micro App into a Project</h2>
+<p>Follow these steps to import a Micro App into Volt Iris:</p>
+<ol>
+<li>From the <strong>Project</strong> menu, select <strong>Import Micro App</strong>.</li>
+<li>
+<p>You can choose to import a file by using the following options:</p>
+<ul>
+<li>Click <strong>From an Archive</strong> to import the local project from an archive (.zip) file.</li>
+<li>Click <strong>From a Folder</strong> to import the local project from a folder.</li>
+</ul>
+<p>The <strong>Import Project</strong> wizard appears.</p>
+</li>
+<li>
+<p>Locate the file you want to import, select it, and then click <strong>Open</strong>.<br />
+    The Micro App is imported to the current project, and appears below the Base App in the Project Explorer.</p>
+</li>
+</ol>
+<h3 id="important-considerations_1">Important Considerations</h3>
+<ul>
+<li>Volt Iris performs a project refresh when you import a Micro App into the project.</li>
+<li>
+<p>If a Micro App with the same name already exists in the project, Volt Iris displays a Conflict message prompting you if you want to overwrite the existing project. Click <strong>OK</strong> to overwrite the existing project. Click <strong>Cancel</strong> to end the import process.</p>
+<p><img alt="" src="Resources/Images/Import_NameConflict.PNG" /></p>
+</li>
+<li>
+<p>After you overwrite a project, Volt Iris displays a Conflict Alert message with options to replace or use the existing Micro Apps.</p>
+<ul>
+<li>Click <strong>Replace</strong> to overwrite the existing Micro App with the new Micro App.</li>
+<li>Click <strong>Skip</strong> to use the existing Micro App present in the Workspace.</li>
+<li>
+<p>You can choose to import the Volt Iris services associated with the app during the project import process.<br />
+Suppose a Volt Iris service with the same name already exists in the Workspace. In that case, Volt Iris displays a Conflict Alert message with options to either replace or use the existing Micro Apps.</p>
+</li>
+<li>
+<p>Click <strong>Continue</strong> to overwrite the existing Micro App with the new Micro App.</p>
+</li>
+<li>Click <strong>Skip</strong> to use the existing Micro App present in the Workspace.</li>
+<li>
+<p>If you import a Micro App with dependent Micro Apps, Volt Iris displays an alert prompting you to import the dependent Micro Apps into the Base App.</p>
+</li>
+<li>
+<p>In the <strong>Micro App Configuration</strong> dialog box, from the <strong>Action</strong> context menu of the imported Micro App,</p>
+<ol>
+<li>Click <strong>Resolve</strong> to resolve the conflicts.</li>
+<li>Click <strong>Unlink</strong> to unlink the missing dependencies.</li>
+</ol>
+</li>
+<li>Locate the file you want to import, select it, and then click <strong>Open</strong>.<br />
+    The dependent Micro App is imported into the Base App.</li>
+<li>Click <strong>Save</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="hide-a-micro-app-in-the-project">Hide a Micro App in the Project</h2>
+<p>To hide Micro Apps from appearing in the Project Explorer and the App Storyboard, follow these steps:</p>
+<ol>
+<li>
+<p>In the Project Explorer, from the hamburger menu, click <strong>Micro App Configuration</strong>.<br />
+    The <strong>Micro App Configuration</strong> dialog box appears.  </p>
+</li>
+<li>
+<p>Select the <strong>Hide in Project</strong> check box for the Micro Apps that you want to hide.  </p>
+</li>
+</ol>
+<!--    ![](Resources/Images/GIFS/HideMicroApp.gif) -->
+
+<ul>
+<li>The <strong>Micro App Configuration</strong> dialog box displays a list of all the Micro Apps that are directly linked to the Base App. It does not list the dependent Micro Apps of those linked Micro Apps.</li>
+<li>To hide all the available Micro Apps from the project, click <strong>Hide All</strong>.</li>
+<li>If you want to show Micro Apps that were previously hidden from the project, clear the <strong><em>*</em></strong><em>Hide in Project</em><strong><em>*</em></strong> check box.</li>
+<li>
+<p>You can only hide or un-hide Micro Apps from the project that are marked as being directly dependent on the Base App.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.<br />
+    The selected Micro Apps are hidden from the Project Explorer and the Storyboard view.</p>
+</li>
+</ul>
+<p>Alternatively, you can perform the following actions to hide Micro Apps in the project at the Micro App level:</p>
+<ol>
+<li>In the <strong>Project Explorer</strong>, right-click the Micro App you want to hide.</li>
+<li>From the context menu that appears, select <strong>Hide</strong>.  </li>
+</ol>
+<!--    ![](Resources/Images/GIFS/MicroAppHideUnhide.gif)  -->
+<pre><code>The selected Micro App is hidden from the Project Explorer and the Storyboard view.
+</code></pre>
+<h2 id="exclude-a-micro-app-from-the-build-process-selective-build">Exclude a Micro App from the Build Process - Selective Build</h2>
+<p>To exclude Micro Apps from the build process at the project level, follow these steps:</p>
+<ol>
+<li>In the Project Explorer, from the hamburger menu, click <strong>Micro App Configuration</strong>.<br />
+    The <strong>Micro App Configuration</strong> dialog box appears.</li>
+<li>Select the <strong>Exclude from Build</strong> check box for the Micro Apps you want to exclude from the build process.  </li>
+</ol>
+<!--    ![](Resources/Images/GIFS/ExcludeBuildMicroApp.gif)  -->
+
+<ul>
+<li>The <strong>Micro App Configuration</strong> dialog box displays a list of all the Micro Apps that are directly linked to the Base App. It does not list the dependent Micro Apps of those linked Micro Apps.</li>
+<li>To exclude all the available Micro Apps from the build process, click <strong>Exclude All</strong>.</li>
+<li>If you want to include Micro Apps that were previously excluded from the build process, clear the <strong><em>*</em>*Exclude from Build</strong><strong><em>* check box.<br />
+    To include all available Micro Apps, clear the </em>*Exclude from Build</strong> check box in the header of the <strong>Micro App Configuration</strong> dialog box.</li>
+<li>
+<p>To exclude all available Micro Apps, select the <strong>Exclude from Build</strong> check box in the header of the <strong>Micro App Configuration</strong> dialog box.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.<br />
+    The selected Micro Apps are excluded from the build process.</p>
+</li>
+</ul>
+<p>Alternatively, you can perform the following actions to exclude or include Micro Apps in the build process at the Micro App level:</p>
+<ul>
+<li>
+<p><strong>To exclude Micro Apps from the build process</strong>:</p>
+<p>From the Project Explorer, right-click the Micro App you want to exclude from the build process, and then select <strong>Exclude from Build</strong>.</p>
+</li>
+<li>
+<p><strong>To include Micro Apps that were previously excluded from the build process</strong>:</p>
+<p>From the Project Explorer, right-click the Micro App you want to include in the build process, and then select <strong>Include in Build</strong>.  </p>
+</li>
+</ul>
+<!--![](Resources/Images/GIFS/MicAppIncludeExclude.gif)-->
+<h3 id="important-considerations_2">Important Considerations</h3>
+<ul>
+<li>You can only exclude Micro Apps from the build process that are marked as being directly dependent on the Base App.</li>
+<li>If you exclude a Micro App that has dependent Micro Apps from the build process, Volt Iris displays an alert with details of the dependent Micro Apps that will be impacted due to the dependent Micro App being excluded from the build.</li>
+</ul>
+<h2 id="filter-micro-apps-in-the-project">Filter Micro Apps in the Project</h2>
+<p>You can configure the visibility of the nodes in each tab of the Project Explorer for a Micro App by applying filters. Volt Iris only displays the resources that you select from the Project Filter dialog box in the Project Explorer.</p>
+<p>To filter the nodes of a Micro App in the Project Explorer, follow these steps:</p>
+<ol>
+<li>In the Project Explorer, navigate to the tab for which you want to apply the filter.<br />
+<img alt="" src="Resources/Images/FilterMicroApp.png" /></li>
+<li>From the hamburger menu in the Project Explorer, click <strong>Filter</strong>.<br />
+    The <strong>Filter</strong> dialog box appears.<br />
+<img alt="" src="Resources/Images/FilterAppResources.png" /></li>
+<li>From the <strong>Micro Apps</strong> field, select the Micro Apps that you want to filter.</li>
+<li>From the <strong>Resources</strong> section of the Project tab (or the <strong>Themes</strong>, <strong>Entities</strong>, or <strong>Assets</strong> sections of the Themes, Templates, or Assets tab of the Project Explorer respectively), select the filters that you want to apply for the Micro Apps.</li>
+<li>Click <strong>Save</strong>.<br />
+    The selected Micro Apps are filtered based on the selected resources.  </li>
+</ol>
+<p>Alternatively, you can perform the following actions to filter Micro Apps in the project at the Micro App level:</p>
+<ol>
+<li>In the <strong>Project Explorer</strong>, navigate to the tab that you want to filter.</li>
+<li>Right-click the Micro App that you want to filter.</li>
+<li>From the context menu that appears, select <strong>Filter</strong>.<br />
+    The <strong>Filter</strong> dialog box appears.</li>
+<li>From the <strong>Resources</strong> section, select the filters that you want to apply for the Micro Apps.  </li>
+</ol>
+<!--    ![](Resources/Images/GIFS/FilterMicroApp.gif) -->
+<ol>
+<li>Click <strong>Save</strong>.<br />
+    The selected Micro App is filtered based on the selected resources.  </li>
+</ol>
+<h2 id="enable-resource-sharing-for-a-micro-app">Enable Resource Sharing for a Micro App</h2>
+<p>When you enable resource sharing for a Micro App, all its dependent Micro Apps and the Base App can utilize the resources (such as Themes, Form Templates, Components, Images, Shared Controllers, and others) of the Micro App.</p>
+<p>For guidelines and information on handling resources in Micro App projects, refer <a href="#resource-sharing-in-micro-app-projects">Resource Handling in Micro App Projects</a>.</p>
+<p>To enable resource sharing for Micro Apps follow these steps:</p>
+<ol>
+<li>In the Project Explorer, from the hamburger menu, click <strong>Micro App Configuration</strong>.<br />
+    The <strong>Micro App Configuration</strong> dialog box appears.</li>
+<li>Select the <strong>Action</strong> context menu for the Micro App for which you want to enable resource sharing.  </li>
+</ol>
+<!--    ![](Resources/Images/GIFS/EnableResourceSharing.gif)-->
+<ol>
+<li>From the context menu that appears, select <strong>Enable Resource Sharing</strong>.<br />
+    Volt Iris displays an alert.</li>
+<li>Click <strong>Confirm</strong>, and then click <strong>Save</strong>.</li>
+</ol>
+<h3 id="important-considerations_3">Important Considerations</h3>
+<ul>
+<li>When you link a Micro App to a project, resource sharing for the Micro App is disabled by default.</li>
+<li>If you want to disable resource sharing for Micro Apps for which you had previously enabled resource sharing, from the <strong>Action</strong> context menu of the <strong>Micro App Configuration</strong> dialog box, click <strong>Disable Resource Sharing</strong>.<br />
+    Volt Iris displays a warning that if you disable resource sharing, the UI of the linked Micro Apps may get distorted.  </li>
+</ul>
+<!--    ![](Resources/Images/GIFS/DisableResourceSharing.gif)-->
+
+<h2 id="update-the-order-of-micro-apps-in-a-project">Update the Order of Micro Apps in a Project</h2>
+<p>To update the priority order of Micro Apps with respect to the Base App, follow these steps:</p>
+<ol>
+<li>In the Project Explorer, from the hamburger menu, click <strong>Micro App Configuration</strong>.<br />
+    The <strong>Micro App Configuration</strong> dialog box appears.</li>
+<li>Select the Micro App for which you want to change the order.</li>
+<li>Use the <strong>Up</strong> or <strong>Down</strong> arrow keys to reorder the Micro App.<br />
+<img alt="" src="Resources/Images/ReorderMicroApps.png" /></li>
+<li>
+<p>Click <strong>Save</strong>.  </p>
+<p>The new order is successfully applied.</p>
+</li>
+</ol>
+<p>Alternatively, you can change the order of the Micro App from the Project Explorer as follows:</p>
+<ol>
+<li>In the Project Explorer, right-click the Micro App for which you want to change the order.</li>
+<li>From the context menu that appears, select one of the following options:<ul>
+<li><strong>Move Up</strong>: To move the Micro App above the previous Micro App.</li>
+<li><strong>Move Down</strong>: To move the Micro App below the Micro App following it.</li>
+</ul>
+</li>
+</ol>
+<h2 id="export-a-project-with-micro-apps"><a id="export-a-project-with-micro-apps"></a> Export a Project with Micro Apps</h2>
+<p>Follow these steps to export a project that contains Micro Apps:</p>
+<ol>
+<li>From the <strong>Project</strong> menu, select <strong>Export</strong>.</li>
+<li>
+<p>From the context menu that appears, select <strong>Local Project</strong>.</p>
+<p>The <strong>Export</strong> dialog box appears.<br />
+<img alt="" src="Resources/Images/ExportMA.png" /></p>
+</li>
+<li>
+<p>You can choose to export a Micro App by using the following options:</p>
+<ul>
+<li><strong>Export only &lt;ProjectName&gt; Application</strong>: Exports only the Base App.</li>
+<li><strong>Export the &lt;ProjectName&gt; along with all its linked Micro Apps</strong>: Exports the entire Composite App along with all the linked Micro Apps.</li>
+</ul>
+<p>Select the <strong>Export Services along with the project</strong> check box to include the Volt Foundry Service associated with the app during the export process.</p>
+</li>
+<li>
+<p>Click <strong>Proceed</strong>.<br />
+    The selected Micro App is exported from the project.</p>
+</li>
+</ol>
+<h2 id="import-a-project-with-micro-apps"><a id="import-a-project-with-micro-apps"></a>Import a Project with Micro Apps</h2>
+<p>Follow these steps to import a project with linked Micro Apps:</p>
+<ol>
+<li>From the <strong>Project</strong> menu, point to <strong>Import</strong> &gt; <strong>Local Project</strong> &gt; <strong>Open as New Project</strong>.</li>
+<li>You can import a project in the following formats:<ul>
+<li>Click <strong>From an Archive</strong> to import the local project from an archive (.zip) file.</li>
+<li>Click <strong>From a Folder</strong> to import the local project from a folder.</li>
+</ul>
+</li>
+<li>Locate the file you want to import, select it, and then click <strong>Open</strong>.<br />
+    The project is imported. Volt Iris opens the app in the Storyboard view, and the startup form is displayed on the Iris Canvas.</li>
+</ol>
+<h3 id="important-considerations_4">Important Considerations</h3>
+<ul>
+<li>
+<p>If the project workspace contains Micro Apps with the same name, Volt Iris displays a Conflict Alert message with options to replace or use the existing Micro Apps.</p>
+<ul>
+<li>Click <strong>Replace</strong> to overwrite the existing Micro App with the new Micro App.</li>
+<li>Click <strong>Skip</strong> to use the existing Micro App present in the Workspace.</li>
+</ul>
+<p><img alt="" src="Resources/Images/ImportMAProject.PNG" /><br />
+Click <strong>OK</strong> to continue the import process. Click <strong>Cancel</strong> to end the import process.</p>
+</li>
+<li>
+<p>You can choose to import the Vot Foundry services associated with the app during the project import process.</p>
+</li>
+</ul>
+<h2 id="unlink-a-micro-app-from-the-project">Unlink a Micro App from the Project</h2>
+<p>To unlink Micro Apps from the Base App at the project level, follow these steps:</p>
+<ol>
+<li>In the Project Explorer, from the hamburger menu, click <strong>Micro App Configuration</strong>.<br />
+    The <strong>Micro App Configuration</strong> dialog box appears.</li>
+<li>Select the <strong>Action</strong> context menu for the Micro App you want to unlink.</li>
+<li>From the context menu that appears, select <strong>Unlink</strong>.<br />
+    The <strong>Confirm Unlink</strong> dialog box appears.  </li>
+</ol>
+<!--    ![](Resources/Images/GIFS/UnlinkConfiguration.gif)  -->
+
+<ol>
+<li>Click <strong>Save</strong>.<br />
+    The selected Micro App is unlinked from the project.</li>
+</ol>
+<p>Alternatively, you can perform the following actions to unlink Micro Apps at the Micro App level:</p>
+<ol>
+<li>From the <strong>Project Explorer</strong>, right-click the Micro App you want to unlink.</li>
+<li>From the context menu that appears, select <strong>Unlink</strong>.<br />
+    The <strong>Confirm Unlink</strong> dialog box appears.  </li>
+</ol>
+<!--    ![](Resources/Images/GIFS/UnlinkContextMenu.gif)-->
+
+<pre><code>The selected Micro App is unlinked from the Base App.
+</code></pre>
+<h3 id="important-considerations_5">Important Considerations</h3>
+<ul>
+<li>Volt Iris performs a Project refresh when you unlink a Micro App from the Base App.</li>
+<li>You cannot unlink a resource-sharing Micro App if it has multiple dependent Micro Apps. If you try to unlink a resource-sharing Micro App that has dependent Micro Apps, Volt Iris displays an alert with a list of the dependent Micro Apps that also need to be unlinked.<br />
+<img alt="" src="Resources/Images/ConfirmUnlinkSharing.PNG" /><br />
+    Click <strong>Close</strong> to continue.<br />
+    However, you can unlink a resource-sharing Micro App that shares its resources only with the Base App.</li>
+</ul>
+<h2 id="link-a-volt-foundry-app-to-a-micro-app">Link a Volt Foundry App to a Micro App</h2>
+<p>Each Micro App in Volt Iris can have a corresponding Volt Foundry app linked to it. When you add a dependent Micro App to a Base App, Volt Iris automatically verifies if the Micro App has a linked Volt Foundry app. If there is no linked app, Volt Iris displays a dialog box prompting you to link a Volt Foundry app to the dependent Micro App.</p>
+<p><img alt="" src="Resources/Images/MicroAppArch.png" /></p>
+<p>Volt Iris imports the Volt Foundry services as part of the Micro App import process. You can add, edit, or unlink a specific service at the Micro App-level.</p>
+<p>You cannot invoke the services of another Micro App in a Micro App, without linking the service to the linked Volt Foundry app of the Micro App. As part of the build process, Volt Iris fetches the details of the basVolt Foundry app, such as the appkey, appsecret, and service doc that will be integrated into the built binary.</p>
+<p>You can create, link, import, export, and view mapping for a specific Volt Foundry app at the Micro App-level, and generate object models for the app. You can use the <strong>Configure Environments</strong> and <strong>Publish Project Services</strong> (to the environment specified in the Base App) menu options of the Data and Services panel only at the Base App-level. Volt Iris publishes the associated Volt Foundry app along with all its dependencies.</p>
+<ul>
+<li>While in the Storyboard view, the Data and Services panel displays the details of the Volt Foundry app linked to the Base App.</li>
+<li>Volt Iris does not import the Volt Foundry services when you add a dependency to a Micro App.</li>
+</ul>
+<p>Follow these steps to link a Volt Foundry app to a Micro App:</p>
+<ol>
+<li>From the upper-right corner of the <strong>Data &amp; Services</strong> panel, click the hamburger menu icon.<br />
+<img alt="" src="Resources/Images/LinkExistingFoundry.png" /></li>
+<li>From the list of options that appears, click <strong>Link to Existing App</strong>.<br />
+    The Foundry Applications dialog box appears.<br />
+<img alt="" src="Resources/Images/AssociateFoundryMApp.png" /></li>
+<li>From the available Volt Foundry applications list, select the app you want to link to the Micro App, and click <strong>Associate</strong>.<br />
+    A confirmation dialog box appears.</li>
+<li>Click <strong>Confirm</strong>.<br />
+    The Volt Foundry app is linked to the Micro App, and appears in the Data &amp; Services panel.</li>
+</ol>
+<p>Generate Object Models for Micro App Projects</p>
+<p>With the introduction of the Micro Apps feature, you can generate the data model objects for individual Micro Apps as well as the complete composite app. If there are any updates made to a specific Micro App, you can use the Generate Object Models option to generate the data model objects for the individual Micro App. You can use the Generate All Object Models option to generate the data model objects for all the apps at the same time.</p>
+<h2 id="build-micro-app-projects">Build Micro App Projects</h2>
+<p>Micro Apps are individual applications at design time and are worked upon on their individual folders in the workspace. All the granular resources such as images, fonts, videos, FFIs, NFIs, i18n are merged based on the order of priority given to the linked applications in the Project Manifest file of the Base App. In case of conflicts, a higher priority is given based on the order of applications linked in the Project Manifest file of the Base App.</p>
+<p>You can build Micro Apps individually along with the Base App or build the complete composite app. When you build a composite app, all the dependent Micro Apps of the Base App are included in the build process, by default. However, you can select the dependent apps you want to include or exclude from the build through the <strong>Micro App Configuration</strong> dialog box.</p>
+<p>The Base App is always included during the build. You cannot exclude the Base App from the build process.</p>
+<p>When you build a composite app for the Native channel, Volt Iris generates the JS code for all the Micro Apps and merges them into a single folder during the generation of the binary. At the end of the build process, a single native binary is generated for the selected native platforms, and one zip/war file is generated for the selected web platforms. The Web binary is published via the linked Volt Foundry Base Application.</p>
+<p>From the Volt Iris V9 Service Pack 5 release, support for the Incremental Build option has been added for Micro Apps projects.</p>
+<p>The following build types are supported for Micro Apps:</p>
+<ul>
+<li><a href="../../iris_user_guide/Content/LocalBuildStarter.html">Build Native Local</a></li>
+<li><a href="../../iris_user_guide/Content/WebPublish.html">Build and Publish Web</a>  </li>
+</ul>
+<p>The Build and Publish Web option is disabled if a Volt Foundry app is not linked to the Base App.</p>
+<ul>
+<li><a href="../../iris_user_guide/Content/LivePreview.html">Run Live Preview</a></li>
+<li><a href="../../iris_user_guide/Content/LivePreview.html">Publish Live Preview</a></li>
+<li>The <a href="../../iris_user_guide/Content/CI_BUILD_VoltMX_Iris.html">CI build</a> tool validates the dependencies of the app and generates a single application binary for the Native or Web channels based on the platforms that you select for the build. If there are missing dependencies in the project, the CI build tool displays an error message.</li>
+</ul>
+<p>The Micro Apps architecture does not support builds for the following platforms:</p>
+<ul>
+<li>Windows Native Mobile/Tablet</li>
+<li>Windows Desktop Kiosk</li>
+<li>Universal Windows</li>
+<li>The Micro Apps architecture does not support the following build types.<ul>
+<li>Preview an app on the VoltMX App (Cloud build)</li>
+<li>Incremental Preview for Native Apps</li>
+<li>Hot Reload for Web Apps</li>
+</ul>
+</li>
+</ul>
+<h2 id="project-level-settings-and-app-level-event-handling">Project-level Settings and App-level Event Handling</h2>
+<p>The Micro Apps and the Base App each have their own app-level settings and app- level events. When you link a Micro App as a dependency to a Base App, the settings and app level events of the Base App are given a higher priority. However, if there are settings of a dependent Micro App that must be enabled for the Micro App to work appropriately, Volt Iris enables those settings for the composite app. Therefore, HCL recommends that you maintain uniformity in maintaining the same settings across the Base App and its dependent apps.</p>
+<p>All the app-level APIs only work for the composite app. The <a href="../../iris_widget_prog_guide/Content/Application_Events.html">app-level events</a> of the composite app are given the highest priority. Ensure that you provide unique key names across Micro Apps to avoid conflicts. For example, you must name the keys of the Data Store APIs with the appID added as a prefix to avoid conflicts. During the testing of independent Micro Apps, the settings, APIs and app-level events of those particular applications are given a higher priority. There is no option to execute the app-level events of individual Micro Apps. If there is any app-specific logic that needs to be handled, that logic must be migrated to the Base Application’s events</p>
+<ul>
+<li>Ensure that you maintain unique identifiers for database APIs that you use in different Micro Apps.</li>
+<li>If you invoke a Keychain API with an identifier that was used earlier, previously saved keychain keys will be overridden.</li>
+</ul>
+<p>To configure settings for a Micro App, follow these steps:</p>
+<ol>
+<li>From the <strong>Project Explorer</strong>, right-click the Micro App for which you want to configure the settings.<br />
+<img alt="" src="Resources/Images/MicroAppSettings.png" /><br />
+    A context menu appears.</li>
+<li>Select <strong>Settings</strong>.<br />
+    The <strong>Micro App Settings</strong> dialog box appears.<br />
+<img alt="" src="Resources/Images/SettingsScreen.png" /></li>
+<li>Configure the required settings, and then click <strong>Done</strong>.</li>
+</ol>
+<h3 id="important-considerations_6">Important Considerations</h3>
+<p>You must configure the following settings in the Base App:</p>
+<ul>
+<li><strong>General Settings</strong>: App ID, App Version, Vendor Name, Bundle ID, Bundle Version, App Icons.</li>
+<li><strong>Foundry Settings</strong>: Foundry Environment.</li>
+<li><strong>Native App Settings</strong>: Minimum Target SDK and Maximum Target SDK, Certificates, Store credentials, Signing keys, Map Keys, Push Certificates, Push Notifications.</li>
+<li><strong>Responsive Web App Settings</strong>: Search Engine Optimization, PWA Settings, and other related settings such as the Manifest file, Service Worker Enable ES5 build, and others.</li>
+<li><strong>Misc Settings</strong>: Cordova, Splash Screen, i18n, Default Font-Sizes, APM settings.</li>
+</ul>
+<p>Ensure that there are no conflicts in the following settings between a Base App and its dependent apps:</p>
+<ul>
+<li>Enable Desktopweb Legacy</li>
+<li>Enable JS Library Mode (Legacy)</li>
+<li>Enable Async Mode</li>
+</ul>
+<p>If you invoke the following app-level APIs multiple times, the previous configurations are overridden at runtime:</p>
+<ul>
+<li>setApplicationInitializationEvents()</li>
+<li>setApplicationCallbacks()</li>
+<li>setApplicationBehaviors()</li>
+<li>setApplicationProperties()</li>
+<li>addApplicationCallbacks()</li>
+</ul>
+<h2 id="resource-sharing-in-micro-app-projects">Resource Sharing in Micro App Projects</h2>
+<p>In the Micro App projects, resources can be shared across a Base App and its dependent Micro Apps. Resources that can be shared include Components, Images, Skins, Style Constants, Themes, i18n keys, Forms, Templates, and Controller Files.</p>
+<p>If a resource is referenced in more than two apps, place the resource in a shared Micro App. You can create a shared Micro App by enabling the Resource Sharing option in the Micro App Configuration screen.<br />
+When you enable the resource sharing option for a Micro App, the Base App can access the resources of that Micro App.</p>
+<p>Ensure that you have minimal resource-sharing Micro Apps in a project. If a project has multiple resource-sharing Micro Apps, it may result in distortions in the UI or navigation flow of the Base App when a dependent Micro App is unlinked. The UI distortions occur as the references of the resources between the Base App and its dependent Micro App are missing.</p>
+<p>The resources from the Base App and the Micro Apps are listed in the respective Project Explorer tabs. Within a specific tab of the Project Explorer, the resources are segregated based on the Micro App in which they are available.</p>
+<p>When you update a resource, the changes are saved within the resource’s corresponding Micro App or in the Base App.</p>
+<p>In case of any naming conflicts for any resources, the resource from the Micro App is overwritten with the corresponding assets from the Base App.</p>
+<p>In case of conflicts, Volt Iris decides the order of precedence of a resource based on the order of priority assigned to the Micro Apps in the Project Manifest file of the Base App. The Base App is given the highest priority by default. You can change the order of priority of the Micro Apps by manually updating the project.manifest file of the Base App (present in the Workspace folder of the Base App), and then refresh the project to view the changes.</p>
+<p>Here is a sample project.manifest file:</p>
+<pre><code>{
+    &quot;dependencies&quot;: \[
+        {
+            &quot;name&quot;: &quot;Accounts&quot;,
+            &quot;useResources&quot;: true,
+            &quot;isHidden&quot;: false,
+            &quot;excludeFromBuild&quot;: false
+        },
+        {
+            &quot;name&quot;: &quot;Authentication&quot;,
+            &quot;useResources&quot;: false,
+            &quot;isHidden&quot;: false,
+            &quot;excludeFromBuild&quot;: false
+        },
+        {
+            &quot;name&quot;: &quot;FundsTransfer&quot;,
+            &quot;isHidden&quot;: false,
+            &quot;excludeFromBuild&quot;: true
+        },
+     {
+            &quot;name&quot;: &quot;CardManagement&quot;  
+            &quot;isHidden&quot;: true,  
+            &quot;excludeFromBuild&quot;: false  
+        }
+    \]
+}
+</code></pre>
+<p>Micro Apps help in managing the application UI and code at the design time. However, after the composite app is built, Volt Iris generates a single app binary. Therefore, HCL recommends that you provide unique names to all the Components, Skins, Style Constants, Images, Fonts, i18n keys, and other project resources. This will help to avoid conflicts between Micro Apps when the final composite app is built.</p>
+<p>Forms and Templates present in different Micro Apps may have the same name.</p>
+<p>The Base App can access the following resources of its dependent Micro Apps:</p>
+<ul>
+<li><strong>Modules -</strong> All the global module.js files from each Micro App are merged and listed in an alphabetical order in the <appname> folder in the final binary.</li>
+<li><strong>Actions</strong> - The Action Editor of Micro App lists the resources of the Form that is present in the current app.<br />
+    From the Base App, you can navigate to any form of a dependent Micro App. The <strong>Navigate to Form</strong> action displays a list of Forms to which you can navigate. The Forms of the dependent Micro Apps are listed in the <code>FormName [App Name]</code> format.</li>
+<li><strong>Components</strong> - The Components section of the Project Explorer lists all the components available in the project, segregated based on the Micro App in which they are available. Any changes made to a component will reflect everywhere that the component is used.<br />
+    You can drag and drop a component from a resource-sharing Micro App into its dependent Micro Apps, and instantiate the component without having to duplicate the component.</li>
+<li><strong>Templates</strong> - The Templates section of the Project Explorer lists all the Templates available in the project, segregated based on the Micro App in which they are available.<br />
+    You can use Templates from a resource-sharing Micro App in another Micro App and assign the template without having to duplicate it.</li>
+<li><strong>Custom Widgets</strong> - All the Custom Widgets of the dependent Micro Apps are listed collectively in the main app. In case of conflicts, the custom widgets of the Base App and any dependent files are given higher priority. To edit a custom widget of a dependent app, you must navigate to the specific Micro App. This ensures that you are aware of the changes that you make at the app level.</li>
+<li><strong>i18n Resources</strong> - The context menu of each dependent Micro App has the option to open its corresponding project settings window, that lists its respective i18n locales. If the i18n keys or locales are defined in the Micro App, you can edit the key-value pair on the Volt Iris canvas.<br />
+    The i18n resources for the composite app are enabled only when the <code>isI18nConfigEnabled</code> and <code>isI18nLayoutConfigEnabled</code> flags are enabled in the project properties for both the Base App and the dependent Micro Apps. If the flags are not enabled for the Base App, the i18n resources are disabled for the complete app. In case of conflicts, Volt Iris decides the order of precedence based on the order of priority assigned to the Micro Apps in the project.manifest file of the Base App.</li>
+<li>
+<p><strong>Themes</strong> - All the Themes present in the project are listed in the Themes tab of the Project Explorer, segregated based on the Micro App in which they are available. The Base App and its dependent Micro Apps contain identical Themes. If there are any missing themes in a linked Micro App, Volt Iris creates identical themes from the Base App. At runtime, all the Themes present in the project are merged and listed based on the order of priority assigned to the Micro Apps in the project.manifest file of the Base App.<br />
+    For information on how to handle themes between a Base App and its dependent Micro Apps, refer <a href="#guidelines-to-handle-themes-between-the-base-app-and-micro-apps">Guidelines to Handle Themes between the Base App and Micro Apps</a>.  </p>
+</li>
+<li>
+<p><strong>NFIs</strong> - All the NFIs of the dependent Micro Apps are listed collectively in the main app. The NFIs of the dependent Micro Apps are read -only. To edit, delete, or update NFIs from a dependent app, you must navigate to the individual Micro App and make the updates. If you try to update the NFIs of a dependent Micro App in the main app, the following alert appears:<br />
+<code>This NFI is part of &lt;microapp_name&gt;. Please go to &lt;microapp_name&gt; to modify this NFI.</code></p>
+</li>
+<li><strong>FFIs</strong> - All the FFIs of the dependent Micro Apps are merged and packaged collectively in the main app during the build process. In case of conflicts, the FFIs of the Base App are given higher priority.</li>
+<li><strong>Global Variables -</strong> All the Global Variables of the dependent Micro Apps are listed collectively in the main app. In case of conflicts, the Global variables of the Base App are given higher priority followed by the defined dependency hierarchy of all the dependent Micro Apps. The global variables of the Base App are accessible across the project. However, if you want to declare global variables that will be used across multiple apps, you must declare those variables in an app that has shared resources enabled. If you declare global variables in the Micro App, the global variable of the last loaded file (at runtime) is given higher priority.</li>
+<li><strong>Require files/ define in controllers</strong> - All the require files of the composite app and all its dependent Micro Apps are listed in separate app folders within the require section of the root directory of the project. HCL recommends that you name the require files with unique names to be placed in the root directory of the project or use App Groups to sort files. All the require files are merged in the root folder as part of the build process. In case of conflicts, the require files that are merged last as part of the build process are given a higher priority. Volt Iris displays a warning in case of conflicts due to the usage of the same file name or app group name in the require folder, and prompt you to resolve the conflicts and correct all the references.</li>
+<li><strong>Web Wrapper Components</strong> - The Web wrapper components are listed collectively as part of the main app.</li>
+<li><strong>Workerthreads-</strong> All the global workerthreads from each Micro App are merged and listed in an alphabetical order in the JSSRC folder of the <appname> folder in the final binary.</li>
+</ul>
+<h3 id="general-guidelines">General Guidelines</h3>
+<ul>
+<li>You can reuse Skins and Style Constants from a resource-sharing app in other apps. Any changes made to the Skins and Style Constants will automatically reflect across the project. If you rename Style Constants independently, it may lead to broken references in other Micro Apps where they are used.</li>
+<li>If an app contains nested components, any rename or delete actions on the child component must be done only in the composite app. If you rename the child component in the individual Micro App, it may lead to broken references in the parent component that is used in the other apps.</li>
+<li>You can reuse Segment Templates from a resource-sharing app in Segments of other apps. If you want to rename the child widgets of a template, you must do so in the composite app. If you rename the child widgets of a template in the individual Micro App, it may lead to broken references in the Segment widget's widgetDataMap property.</li>
+<li>If you rename or delete any i18n keys of a resource sharing app, it may lead to broken references in other Micro Apps where the key is used.</li>
+<li>You can increase the re-usability of images or fonts by creating them in the skins of resource-sharing apps. You can then reference the skin or the images in other apps that are dependent on the resource sharing app. If you rename the image or font independently, it may lead to broken references in other Micro Apps where they are used.</li>
+</ul>
+<h3 id="export-composite-app-themes">Export Composite App Themes</h3>
+<p>You can export the Themes present in a project to import them for use in a different Volt Iris  project. For a Composite App, you can select the Themes that you want to export (export Base App Themes, or export Composite App Themes) during the export process.</p>
+<p>To export a theme, follow these steps:</p>
+<ol>
+<li>
+<p>On the <strong>Project</strong> menu in VoltMX Iris, point to <strong>Export</strong>, and then click <strong>Themes</strong>.<br />
+<img alt="" src="Resources/Images/ExportTheme.png" /><br />
+    The <strong>Export</strong> dialog box appears.  </p>
+</li>
+<li>
+<p>Select one of the options to export the Themes:  </p>
+<ul>
+<li><strong>Export only &lt;Base_App&gt; Themes</strong>: Exports only the Themes present in the Base App.</li>
+<li><strong>Export &lt;Base_App&gt; Themes along with all its linked MicroApps Themes.</strong>: Exports the Themes present in the Base App and its linked Micro Apps.</li>
+</ul>
+<p><img alt="" src="Resources/Images/ExportBaseTheme.png" />
+3.  Click <strong>Proceed</strong>.<br />
+The <strong>Export Themes</strong> dialog box appears.<br />
+<img alt="" src="Resources/Images/ExportTheme_Base.png" />  </p>
+</li>
+<li>
+<p>Select the skins that you want to export, and then click <strong>Finish</strong>.<br />
+    The <strong>Save As</strong> dialog box appears.</p>
+</li>
+<li>Navigate to the folder where you want to save the exported Themes, and then click <strong>Save</strong>.<br />
+    The Themes that you selected are bundled as a .zip file, and a status box informs you that the export was successful.</li>
+<li>Click <strong>Close</strong>.  </li>
+</ol>
+<p>If a Theme (or Skin) with the same name exists in both the Base App and a linked Micro App, VoltMX Iris exports the Theme (or Skin) of the Base App.</p>
+<h3 id="guidelines-to-handle-themes-between-the-base-app-and-micro-apps">Guidelines to Handle Themes between the Base App and Micro Apps</h3>
+<p>Following are a few Guidelines to handle themes in a Micro App architecture project:</p>
+<p>Before getting started with this feature, ensure that you have a good understanding of using <a href="../../iris_user_guide/Content/Customizing_the_Look_and_Feel_with_Skins.html">Skins and Themes in Volt Iris</a>.</p>
+<ul>
+<li>During the Micro App import process, if the Base App has a higher number of themes than the themes present in the dependent Micro App, Volt Iris automatically creates the missing themes in the imported Micro App to maintain identical themes across the Base App and its dependent Micro Apps.</li>
+<li>During the Micro App import process, if the dependent Micro App has a higher number of themes than the themes in the composite app, Volt Iris ignores the extra themes present in the imported Micro App.</li>
+<li>If you create new skins or skin constants for an individual Micro App, the details of the skin or skin constant are added to the theme of the Micro App.</li>
+<li>If you want to create new skins or skin constants that you can reuse across all the dependent Micro Apps of a Base App, you must create them in a theme of the Shared Resources App.</li>
+<li>If you create a new Micro App, it must have identical themes as the Base App. For example, if the Base App has two themes, Default theme and Theme1, the dependent Micro App must also have two themes, Default and Theme1.</li>
+<li>If you create a new theme in the Base App, Volt Iris automatically creates a similar theme for all the dependent Micro Apps of the Base App.</li>
+<li>If there are any conflicts between the themes that are used in the composite app and the themes of the Micro App, or if the Micro App has missing themes, creates the missing theme (by duplicating the last applied theme) during the Micro App import process.</li>
+<li>If you delete a theme from the Base App, Volt Iris deletes the theme from all the dependent Micro Apps.</li>
+<li>During the application build process, all the Skins and Style Constants from the Base App and its dependent Micro Apps are included in the build process (generation of a single binary) and are applied to the composite app.</li>
+</ul>
+<h2 id="micro-apps-limitations">Micro Apps Limitations</h2>
+<ul>
+<li>Micro Apps are only supported in the VoltMX Reference Architecture projects.</li>
+<li>You can only link Micro Apps of the same app type to a Base App.<br />
+    For example, you can only link Micro Apps that use the MVC architecture to a Base App that uses the MVC architecture, and you can only link Micro Apps that use the MVC 2.0 architecture to a Base App that uses the MVC 2.0 architecture.</li>
+<li>You can only hide or un-hide Micro Apps from the project that are marked as being directly dependent on the Base App.</li>
+<li>You can only exclude Micro Apps from the build process that are marked as being directly dependent on the Base App.</li>
+<li>The Micro Apps architecture does not support the following build types.<ul>
+<li>Preview an app on the VoltMX App (Cloud build)</li>
+<li>Incremental Preview for Native Apps</li>
+<li>Hot Reload for Web Apps</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

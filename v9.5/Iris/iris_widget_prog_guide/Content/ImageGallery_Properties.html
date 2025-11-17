@@ -1,0 +1,3959 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github01.hclpnp.com/pages/phoenix-temenos/volt-mx-doc-opnsrc/latest/Iris/iris_widget_prog_guide/Content/ImageGallery_Properties.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>ImageGallery Properties - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#imagegallery-basic-properties" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://support.hcltechsw.com/community?id=community_forum&sys_id=1cdf6e1a1bf31898beab64e6ec4bcbae" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ImageGallery Properties
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Whats_New_Main_Page.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_Main_Page.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    All versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_5_Fix_Pack_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 5 Fix Pack 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V9_Service_Pack_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_V9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VMX_release_notes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imagegallery-basic-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageGallery - Basic Properties
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ImageGallery Properties</h1>
+
+<h2 id="imagegallery-basic-properties">ImageGallery - Basic Properties</h2>
+<p>The basic properties for ImageGallery widget are:</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">accessibilityConfig Property</a></p>
+<hr />
+<p>Enables you to control accessibility behavior and alternative text for the widget.</p>
+<p>For more information on using accessibility features in your app, see the <a href="../../app_design_dev/Content/Accessibility_Overview.html">Accessibility</a> appendix in the Volt MX IrisUser Guide.</p>
+<p>Syntax</p>
+<p>accessibilityConfig</p>
+<p>Type</p>
+<p>Object</p>
+<p>Read/Write</p>
+<p>Read + Write</p>
+<p>Remarks</p>
+<ul>
+<li>The accessibilityConfig property is enabled for all the widgets which are supported under the Flex Layout.</li>
+</ul>
+<blockquote>
+<p><strong><em>Note:</em></strong> From Volt MX Iris V9 SP2 GA version, you can provide i18n keys as values to all the attributes used inside the <code>accessibilityConfig</code> property. Values provided in the i18n keys take precedence over values provided in <code>a11yLabel</code>, <code>a11yValue</code>, and <code>a11yHint</code> fields.</p>
+</blockquote>
+<p>The accessibilityConfig property is a JavaScript object which can contain the following key-value pairs.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>ARIA Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a11yIndex</td>
+<td>Integer with no floating or decimal number.</td>
+<td>This is an optional parameter. Specifies the order in which the widgets are focused on a screen.</td>
+<td>For all widgets, this parameter maps to the <code>aria-index</code>, <code>index</code>, or <code>taborder</code> properties.</td>
+</tr>
+<tr>
+<td>a11yLabel</td>
+<td>String</td>
+<td>This is an optional parameter. Specifies alternate text to identify the widget. Generally the label should be the text that is displayed on the screen.</td>
+<td>For all widgets, this parameter maps to the <code>aria-labelledby</code> property of ARIA in HTML. &gt; <strong><em>Note:</em></strong> For the Image widget, this parameter maps to the <strong>alt</strong> attribute of ARIA in HTML.</td>
+</tr>
+<tr>
+<td>a11yValue</td>
+<td>String</td>
+<td>This is an optional parameter. Specifies the descriptive text that explains the action associated with the widget. On the Android platform, the text specified for a11yValue is prefixed to the a11yHint.</td>
+<td>This parameter is similar to the a11yLabel parameter. If the a11yValue is defined, the value of a11yValue is appended to the value of a11yLabel. These values are separated by a space.</td>
+</tr>
+<tr>
+<td>a11yHint</td>
+<td>String</td>
+<td>This is an optional parameter. Specifies the descriptive text that explains the action associated with the widget. On the Android platform, the text specified for a11yValue is prefixed to the a11yHint.</td>
+<td>For all widgets, this parameter maps to the <code>aria-describedby</code> property of ARIA in HTML.</td>
+</tr>
+<tr>
+<td>a11yHidden</td>
+<td>Boolean</td>
+<td>This is an optional parameter. Specifies if the widget should be ignored by assistive technology. The default option is set to <em>false</em>. This option is supported on iOS 5.0 and above, Android 4.1 and above, and SPA</td>
+<td>For all widgets, this parameter maps to the <code>aria-hidden</code> property of ARIA in HTML.</td>
+</tr>
+<tr>
+<td>a11yARIA</td>
+<td>Object</td>
+<td>This is an optional parameter. For each widget, the key and value provided in this object are added as the attribute and value of the HTML tags respectively. Any values provided for attributes such as <code>aria-labelledby</code> and <code>aria-describedby</code> using this attribute, takes precedence over values given in <code>a11yLabel</code> and <code>a11yHint</code> fields. When a widget is provided with the following key value pair or attribute using the a11yARIA object, the tabIndex of the widget is automatically appended as zero.<code>{"role": "main"}``aria-label</code></td>
+<td>This parameter is only available on the Desktop Web platform.</td>
+</tr>
+</tbody>
+</table>
+<p>Android limitations</p>
+<ul>
+<li>If the results of the concatenation of a11y fields result in an empty string, then <code>accessibilityConfig</code> is ignored and the text that is on widget is read out.</li>
+<li>The soft keypad does not gain accessibility focus during the right/left swipe gesture when the keypad appears.</li>
+</ul>
+<p>SPA/Desktop Web limitations</p>
+<ul>
+<li>When <code>accessibilityConfig</code> property is configured for any widget, the <code>tabIndex</code> attribute is added automatically to the <code>accessibilityConfig</code> property.</li>
+<li>The behavior of accessibility depends on the Web browser, Web browser version, Voice Over Assistant, and Voice Over Assistant version.</li>
+<li>Currently SPA/Desktop web applications support only a few ARIA tags. To achieve more accessibility features, use the attribute a11yARIA. The corresponding tags will be added to the DOM as per these configurations.</li>
+</ul>
+<p>Example 1</p>
+<p>This example uses the button widget, but the principle remains the same for all widgets that have an accessibilityConfig property.</p>
+<pre><code>//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the accessibilityConfig Property for button widget.
+/*You need to make a corresponding use of the accessibilityConfig property for other applicable widgets.*/
+
+Form1.myButton.accessibilityConfig = {
+    &quot;a11yLabel&quot;: &quot;Label&quot;,
+    &quot;a11yValue&quot;: &quot;Value&quot;,
+    &quot;a11yHint&quot;: &quot;Hint&quot;    
+};
+</code></pre>
+<p>Example 2</p>
+<p>This example uses the button widget to implement internationalization in <code>accessibilityConfig</code> property, but the principle remains the same for all widgets.</p>
+<pre><code>/*Sample code to implement internationalization in accessibilityConfig property in Native platform.*/
+
+Form1.myButton.accessibilityConfig = {
+    &quot;a11yLabel&quot;: voltmx.i18n.getLocalizedString(&quot;key1&quot;)     
+};  
+/*Sample code to implement internationalization in accessibilityConfig property in Desktop Web platform.*/
+
+Form1.myButton.accessibilityConfig = {
+    &quot;a11yLabel&quot;: &quot;voltmx.i18n.getLocalizedString(\&quot;key3\&quot;)&quot;
+};
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>Available in the IDE</li>
+<li>iOS, Android, SPA, and Desktop Web</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">anchorPoint Property</a></p>
+<hr />
+<p>Specifies the anchor point of the widget bounds rectangle using the widget's coordinate space.</p>
+<p>Syntax</p>
+<p>anchorPoint</p>
+<p>Type</p>
+<p>JSObject</p>
+<p>Read/Write</p>
+<p>Read + Write</p>
+<p>Remarks</p>
+<p>The value for this property is a JavaScript dictionary object with the keys "x" and "y". The values for the "x" and "y" keys are floating-point numbers ranging from 0 to 1. All geometric manipulations to the widget occur about the specified point. For example, applying a rotation transform to a widget with the default anchor point causes the widget to rotate around its center.</p>
+<p>The default value for this property is center ( {"x":0.5, "y":0.5} ), that represents the center of the widgets bounds rectangle. The behavior is undefined if the values are outside the range zero (0) to one (1).</p>
+<p>Example</p>
+<pre><code>Form1.widget1.anchorPoint = {
+    &quot;x&quot;: 0.5,
+    &quot;y&quot;: 0.5
+};
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>iOS, Android, Windows, and SPA</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">data Property</a></p>
+<hr />
+<p>Represents the JSObject to represent the images to be rendered in ImageGallery. The format of the JSObject consists of an array of two elements:</p>
+<ul>
+<li>[0] is the array of objects with hashes</li>
+<li>[1] is the key's key in the data hash of [0]</li>
+</ul>
+<p>Example</p>
+<pre><code>formname.widgetname.data=
+  [
+  [{&quot;imagekey&quot;:&quot;image1.png&quot;},
+   {&quot;imagekey&quot;:&quot;image2.png&quot;},
+   {&quot;imagekey&quot;:&quot;imagen.png&quot;}]
+];
+</code></pre>
+<p>Syntax</p>
+<p>data</p>
+<p>Type</p>
+<p>Array</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Platform Availability</p>
+<p>Available in the IDE</p>
+<p>Available on all platforms</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">enableCache Property</a></p>
+<hr />
+<p>The property enables you to improve the performance of Positional Dimension Animations.</p>
+<p>Syntax</p>
+<p>enableCache</p>
+<p>Type</p>
+<p>Boolean</p>
+<p>Read/Write</p>
+<p>Read + Write</p>
+<p>Remarks</p>
+<p>The default value for this property is true.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> When the property is used, application consumes more memory. The usage of the property enables tradeoff between performance and visual quality of the content. Use the property cautiously.</p>
+</blockquote>
+<p>Example</p>
+<pre><code>Form1.widgetID.enableCache = true;
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>Available in the IDE.</li>
+<li>Windows</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">focusSkin Property</a></p>
+<hr />
+<p>Specifies the look and feel of the widget when in focus.</p>
+<p>Syntax</p>
+<p>focusSkin</p>
+<p>Type</p>
+<p>String</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Remarks</p>
+<p>You must be aware of the following:<br />
+On J2ME non-touch devices, if you do not specify the Focus skin, it is not possible to identify the focus change between the widgets.<br />
+Mobile Web does not support this property, instead browser specific focus will be applied.</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with focusSkin: &quot;gradroundfocusbtn&quot;
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true,
+    skin: &quot;gradroundfocusbtn&quot;,
+    **focusSkin: &quot;gradroundfocusbtn&quot;**};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+
+//Reading the focusSkin of ImageGallery
+alert(&quot;ImageGallery focusSkin is ::&quot;+imgGallery.focusSkin);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE</p>
+<p>Available on all platforms..</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">hoverSkin Property</a></p>
+<hr />
+<p>Specifies the look and feel of a widget when the cursor hovers on the widget.</p>
+<p>Syntax</p>
+<p>hoverSkin</p>
+<p>Type</p>
+<p>String</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with hoverSkin:&quot;hskin&quot;
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    selectedIndex:3, spaceBetweenImages: 50};
+
+var imgGalLayout = {containerWeight:100};
+
+var imgGalPSP = {**hoverSkin:&quot;hskin&quot;**};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,imgGalPSP);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>This property is available on Windows Tablet.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">id Property</a></p>
+<hr />
+<p>id is a unique identifier of ImageGallery consisting of alpha numeric characters. Every ImageGallery should have a unique id within a Form.</p>
+<p>Syntax</p>
+<p>id</p>
+<p>Type</p>
+<p>String - [Mandatory]</p>
+<p>Read/Write</p>
+<p>Yes - (Read only)</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with ID:&quot;imgGallery&quot;
+var imgGalBasic = { **id: &quot;imgGallery&quot;**, isVisible: true};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+
+//Reading the ID of ImageGallery
+alert(&quot;ImageGallery id is ::&quot;+imgGallery.id);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE</p>
+<p>Available on all platforms.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">imageWhenFailed Property</a></p>
+<hr />
+<p>Specifies the image to be displayed when the remote resource is not available. This image is taken from the resources folder.</p>
+<p>Syntax</p>
+<p>imageWhenFailed</p>
+<p>Type</p>
+<p>String</p>
+<p>Read/Write</p>
+<p>No</p>
+<p>Example</p>
+<pre><code>//Defining the properties for ImageGallery with imageWhenFailed: &quot;AppIcon.png&quot;.
+//Image with the same name should be in resources folder.
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    imageWhileDownloading: &quot;ApplicationIcon.png&quot;,
+    imageWhenFailed: &quot;AppIcon.png&quot;};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+</code></pre>
+<p>Platform Availability</p>
+<p>Not available in the IDE.</p>
+<p>Available on all platforms except and Windows Desktop platforms.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">imageWhileDownloading Property</a></p>
+<hr />
+<p>Specifies the image to be displayed when the remote source is still being downloaded. This image is taken from the resources folder.</p>
+<p>Syntax</p>
+<p>imageWhileDownloading</p>
+<p>Type</p>
+<p>String</p>
+<p>Read/Write</p>
+<p>No</p>
+<p>Example</p>
+<pre><code>//Defining the properties for ImageGallery with imageWhileDownloading: &quot;ApplicationIcon.png&quot;. 
+//Image with the same name should be in resources folder.
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    imageWhileDownloading: &quot;ApplicationIcon.png&quot;};
+    var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>Available on all platforms., BlackBerry 10, and Windows Desktop platforms.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">info Property</a></p>
+<hr />
+<p>A custom JSObject with the key value pairs that a developer can use to store the context with the widget. This will help in avoiding the globals to most part of the programming.</p>
+<p>Syntax</p>
+<p>info</p>
+<p>Type</p>
+<p>JSObject</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Remarks</p>
+<p>This is a <strong>non-Constructor</strong> property. You cannot set this property through widget constructor. But you can read and write data to it.</p>
+<p>Info property can hold any JSObject. After assigning the JSObject to info property, the JSObject should not be modified. For example,</p>
+<pre><code>var inf = {a: 'hello'};
+    widget.info = inf; //works
+    widget.info.a = 'hello world'; 
+/*This will not update the widget info a property to Hello world. 
+widget.info.a will have old value as hello.*/
+</code></pre>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with info property.
+var imgGalBasic = { id: &quot;imgGallery&quot;,isVisible: true};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+**imgGallery.info = {key:&quot;ImageGal&quot;};**
+
+//Reading the info of ImageGallery
+alert(&quot;ImageGallery info is ::&quot;+imgGallery.info);
+</code></pre>
+<p>Platform Availability</p>
+<p>Not available in the IDE.</p>
+<p>Available on all platforms.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">isVisible Property</a></p>
+<hr />
+<p>This property controls the visibility of a widget on the form.</p>
+<p>Syntax</p>
+<p>isVisible</p>
+<p>Type</p>
+<p>Boolean</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Remarks</p>
+<p>The default value for this property is true. If set to <em>false,</em> the widget is not displayed. If set to <em>true,</em> the widget is displayed.</p>
+<p>You can set the visibility of a widget dynamically from code using the setVisibility method.</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with isVisible: true
+var imgGalBasic = { id: &quot;imgGallery&quot;, **isVisible: true**};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+
+//Reading the Visibility of ImageGallery
+alert(&quot;ImageGallery Visibility is ::&quot;+imgGallery.isVisible);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>Available on all platforms.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">itemsPerRow Property</a></p>
+<hr />
+<p>Specifies the number of images to be displayed per row in an ImageGallery at a time.</p>
+<p>Syntax</p>
+<p>itemsPerRow</p>
+<p>Type</p>
+<p>Number</p>
+<p>Read/Write</p>
+<p>No</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with sitemsPerRow:3
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    selectedIndex:3, spaceBetweenImages: 50};
+    var imgGalLayout = {containerWeight:100};
+    var imgGalPSP = {**itemsPerRow:3**};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,imgGalPSP);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>This property is available only on Server side Mobile Web (advanced) platform.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">navigationBarPosition Property</a></p>
+<hr />
+<p>Specifies the position of the navigation bar for the ImageGallery. The pageview indicator either appears on the top or bottom of the ImageGallery.</p>
+<p>Syntax</p>
+<p>navigationBarPosition</p>
+<p>Type</p>
+<p>String</p>
+<p>Read/Write</p>
+<p>No</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with navigationBarPosition:&quot;Bottom&quot;
+var imgGalBasic = { id: &quot;imgGallery&quot;, 
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    selectedIndex:3, spaceBetweenImages: 50};
+
+var imgGalLayout = {containerWeight:100};
+
+var imgGalPSP = {itemsPerRow:3, **navigationBarPosition:&quot;Bottom&quot;**};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,imgGalPSP);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>This property is available only on Server side Mobile Web (advanced) platform.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">noofRowsPerPage Property</a></p>
+<hr />
+<p>Specifies the number of rows to be displayed in each page.</p>
+<p>Syntax</p>
+<p>noofRowsPerPage</p>
+<p>Type</p>
+<p>Number</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Remarks</p>
+<p>This property is displayed only when <a href="#viewType">viewType</a> is set to <em>IMAGE_GALLERY_VIEW_TYPE_PAGEVIEW</em>.</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with noofRowsPerPage:4.
+var imgGalBasic={id:&quot;imagegallery1&quot;,
+    isVisible:true, 
+    skin:&quot;imgGalskin&quot;,
+    focusSkin:&quot;imgGalFSkin&quot;,
+    text:&quot;Click Here&quot;,
+    **toolTip:&quot;sample text&quot;**};
+    var imgGalLayout={containerWeight:100, 
+    padding:[5,5,5,5], 
+    margin:[5,5,5,5], 
+    hExpand:true, 
+    vExpand:false, 
+    displayText:true};
+
+var imgGalPSP={viewType: constants.IMAGE_GALLERY_VIEW_TYPE_PAGEVIEW, **viewConfig: {noofRowsPerPage:4**}};
+
+//Creating the ImageGallery.
+var imagegallery1 = new voltmx.ui.ImageGallery(imgGalBasic,imgGalLayout,imgGalPSP);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>This property is available on Desktop Web.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">retainContentAlignment Property</a></p>
+<hr />
+<p>This property is used to retain the content alignment property value, as it was defined.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> Locale-level configurations take priority when invalid values are given to this property, or if it is not defined.</p>
+</blockquote>
+<p>The mirroring widget layout properties should be defined as follows.</p>
+<pre><code>function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
+    return (isI18nLayoutConfigEnabled &amp;&amp;
+    localeLayoutConfig[defaultLocale]
+    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
+    !widgetRetainFlexPositionPropertiesValue);
+}
+</code></pre>
+<p>The following table illustrates how widgets consider Local flag and Widget flag values.</p>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Local Flag Value</th>
+<th>Widget Flag Value</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>false</td>
+<td>Use Mirror FlexPositionProperties since locale-level Mirror is true.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>not specified</td>
+<td>Use Mirror FlexPositionProperties since locale-level Mirror is true.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>false</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>not specified</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>false</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>not specified</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+</tbody>
+</table>
+<p>Syntax</p>
+<p>retainContentAlignment</p>
+<p>Type</p>
+<p>Boolean</p>
+<p>Read/Write</p>
+<p>No (only during widget-construction time)</p>
+<p>Example</p>
+<pre><code>//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the retainContentAlignment property for Button widget.
+/*You need to make a corresponding use of the 
+retainContentAlignment property for other applicable widgets.*/
+var btn = new voltmx.ui.Button({
+    &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
+    &quot;height&quot;: &quot;50dp&quot;,
+    &quot;id&quot;: &quot;myButton&quot;,
+    &quot;isVisible&quot;: true,
+    &quot;left&quot;: &quot;0dp&quot;,
+    &quot;skin&quot;: &quot;defBtnNormal&quot;,
+    &quot;text&quot;: &quot;text always from top left&quot;,
+    &quot;top&quot;: &quot;0dp&quot;,
+    &quot;width&quot;: &quot;260dp&quot;,
+    &quot;zIndex&quot;: 1
+}, {
+    &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_TOP_LEFT,
+    &quot;displayText&quot;: true,
+    &quot;padding&quot;: [0, 0, 0, 0],
+    &quot;paddingInPixel&quot;: false,
+    &quot;retainFlexPositionProperties&quot;: false,
+    &quot;retainContentAlignment&quot;: true
+}, {});
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>Available in IDE</li>
+<li>Windows, iOS, Android, and SPA</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">retainFlexPositionProperties Property</a></p>
+<hr />
+<p>This property is used to retain flex positional property values as they were defined. The flex positional properties are left, right, and padding.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> Locale-level configurations take priority when invalid values are given to this property, or if it is not defined.</p>
+</blockquote>
+<p>The mirroring widget layout properties should be defined as follows.</p>
+<pre><code>function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
+    return (isI18nLayoutConfigEnabled &amp;&amp;
+    localeLayoutConfig[defaultLocale]
+    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
+    !widgetRetainFlexPositionPropertiesValue);
+}
+</code></pre>
+<p>The following table illustrates how widgets consider Local flag and Widget flag values.</p>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Local Flag Value</th>
+<th>Widget Flag Value</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>false</td>
+<td>Use Mirror FlexPositionProperties since locale-level Mirror is true.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>not specified</td>
+<td>Use Mirror FlexPositionProperties since locale-level Mirror is true.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>false</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>not specified</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>false</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>not specified</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+</tbody>
+</table>
+<p>Syntax</p>
+<p>retainFlexPositionProperties</p>
+<p>Type</p>
+<p>Boolean</p>
+<p>Read/Write</p>
+<p>No (only during widget-construction time)</p>
+<p>Example</p>
+<pre><code>//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the retainFlexPositionProperties property for Button widget.
+/*You need to make a corresponding use of the 
+retainFlexPositionProperties property for other applicable widgets.*/
+var btn = new voltmx.ui.Button({
+    &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
+    &quot;height&quot;: &quot;50dp&quot;,
+    &quot;id&quot;: &quot;myButton&quot;,
+    &quot;isVisible&quot;: true,
+    &quot;left&quot;: &quot;0dp&quot;,
+    &quot;skin&quot;: &quot;defBtnNormal&quot;,
+    &quot;text&quot;: &quot;always left&quot;,
+    &quot;top&quot;: &quot;0dp&quot;,
+    &quot;width&quot;: &quot;260dp&quot;,
+    &quot;zIndex&quot;: 1
+}, {
+    &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_CENTER,
+    &quot;displayText&quot;: true,
+    &quot;padding&quot;: [0, 0, 0, 0],
+    &quot;paddingInPixel&quot;: false,
+    &quot;retainFlexPositionProperties&quot;: true,
+    &quot;retainContentAlignment&quot;: false
+}, {});
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>Available in IDE</li>
+<li>Windows, iOS, Android, and SPA</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">retainFlowHorizontalAlignment Property</a></p>
+<hr />
+<p>This property is used to convert Flow Horizontal Left to Flow Horizontal Right.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> Locale-level configurations take priority when invalid values are given to this property, or if it is not defined.</p>
+</blockquote>
+<p>The mirroring widget layout properties should be defined as follows.</p>
+<pre><code>function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
+    return (isI18nLayoutConfigEnabled &amp;&amp;
+    localeLayoutConfig[defaultLocale]
+    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
+    !widgetRetainFlexPositionPropertiesValue);
+}
+</code></pre>
+<p>The following table illustrates how widgets consider Local flag and Widget flag values.</p>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Local Flag Value</th>
+<th>Widget Flag Value</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>false</td>
+<td>Use Mirror FlexPositionProperties since locale-level Mirror is true.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>true</td>
+<td>not specified</td>
+<td>Use Mirror FlexPositionProperties since locale-level Mirror is true.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>false</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>false</td>
+<td>not specified</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>true</td>
+<td>Use the designed layout from widget for all locales. Widget layout overrides everything else.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>false</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+<tr>
+<td>Mirror/retain FlexPositionProperties</td>
+<td>not specified</td>
+<td>not specified</td>
+<td>Use the Design/Model-specific default layout.</td>
+</tr>
+</tbody>
+</table>
+<p>Syntax</p>
+<p>retainFlowHorizontalAlignment</p>
+<p>Type</p>
+<p>Boolean</p>
+<p>Read/Write</p>
+<p>No (only during widget-construction time)</p>
+<p>Example</p>
+<pre><code>//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the retainFlowHorizontalAlignment property for Button widget.
+/*You need to make a corresponding use of the 
+retainFlowHorizontalAlignment property for other applicable widgets. */
+var btn = new voltmx.ui.Button({
+ &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
+ &quot;height&quot;: &quot;50dp&quot;,
+ &quot;id&quot;: &quot;myButton&quot;,
+ &quot;isVisible&quot;: true,
+ &quot;left&quot;: &quot;0dp&quot;,
+ &quot;skin&quot;: &quot;defBtnNormal&quot;,
+ &quot;text&quot;: &quot;always left&quot;,
+ &quot;top&quot;: &quot;0dp&quot;,
+ &quot;width&quot;: &quot;260dp&quot;,
+ &quot;zIndex&quot;: 1
+}, {
+ &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_CENTER,
+ &quot;displayText&quot;: true,
+ &quot;padding&quot;: [0, 0, 0, 0],
+ &quot;paddingInPixel&quot;: false,
+ &quot;retainFlexPositionProperties&quot;: true,
+ &quot;retainContentAlignment&quot;: false,
+ &quot;retainFlowHorizontalAlignment &quot;: false
+}, {});
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>Available in IDE</li>
+<li>Windows, iOS, Android, and SPA</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">selectedIndex Property</a></p>
+<hr />
+<p>Indicates the currently selected image in the ImageGallery. The index is with respect to the order in which data is set with <a href="#data">data</a> property. Programmatically setting the <em>selectedIndex</em> will not make any visible differences in the row, however it will bring the row at the index into the view able area on the screen. Setting it to <em>null/nil</em> clears the selection state.</p>
+<p>Syntax</p>
+<p>selectedIndex</p>
+<p>Type</p>
+<p>Number</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Remarks</p>
+<p>On Windows Phone platform, you cannot write data to this property.</p>
+<p>If data contains the sections then the <em>selectedIndex</em> indicates the selected row index within the section.</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with selectedIndex:3 (setSelectedIndex)
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    imageWhileDownloading: &quot;ApplicationIcon.png&quot;,
+    imageWhenFailed: &quot;AppIcon.png&quot;,
+    **selectedIndex:3**};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+
+//getSelectedIndex
+alert(&quot;Selected Index:&quot;+imgGallery.selectedIndex);
+</code></pre>
+<p>Platform Availability</p>
+<p>Not available in the IDE.</p>
+<p>Available on all platforms..</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">selectedItem Property</a></p>
+<hr />
+<p>Returns the selected data object (input array) corresponding to the selected image of the ImageGallery. If no image is selected, <em>null/nil</em> is returned.</p>
+<p>Syntax</p>
+<p>selectedItem</p>
+<p>Type</p>
+<p>JSObject</p>
+<p>Read/Write</p>
+<p>Read only</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with selectedIndex:3 (setSelectedIndex)
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    imageWhileDownloading: &quot;ApplicationIcon.png&quot;,
+    imageWhenFailed: &quot;AppIcon.png&quot;,
+    selectedIndex:3};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+
+//getSelectedItem
+**alert(&quot;selected Item:&quot;+imgGallery.selectedItem);** 
+</code></pre>
+<p>Platform Availability</p>
+<p>Not available in the IDE</p>
+<p>Available on all platforms..</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">skin Property</a></p>
+<hr />
+<p>Specifies the look and feel of the ImageGallery when not in focus.</p>
+<p>Syntax</p>
+<p>skin</p>
+<p>Type</p>
+<p>String</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with skin: &quot;gradroundfocusbtn&quot;
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    **skin: &quot;gradroundfocusbtn&quot;**};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+
+//Reading the skin of ImageGallery
+alert(&quot;ImageGallery skin is ::&quot;+imgGallery.skin);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE</p>
+<p>Available on all platforms..</p>
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">spaceBetweenImages Property</a></p>
+<hr />
+<p>Specifies the space between the images in the ImageGallery.</p>
+<p>Syntax</p>
+<p>spaceBetweenImages</p>
+<p>Type</p>
+<p>Number</p>
+<p>Read/Write</p>
+<p>No</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with spaceBetweenImages: 50
+var imgGalBasic = { id: &quot;imgGallery&quot;,
+    isVisible: true, 
+    skin: &quot;gradroundfocusbtn&quot;,
+    focusSkin: &quot;gradroundfocusbtn&quot;,
+    imageWhileDownloading: &quot;ApplicationIcon.png&quot;,
+    imageWhenFailed: &quot;AppIcon.png&quot;,
+    selectedIndex:3, **spaceBetweenImages: 50**};
+
+var imgGalLayout = {containerWeight:100};
+
+//Creating the ImageGallery.
+var imgGallery = new voltmx.ui.ImageGallery2(imgGalBasic,imgGalLayout,{});
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>Available on all platforms., and Windows Phone platforms.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">transform Property</a></p>
+<hr />
+<p>Contains an animation transformation that can be used to animate the widget.</p>
+<p>Syntax</p>
+<p>transform</p>
+<p>Type</p>
+<p>JSObject</p>
+<p>Read/Write</p>
+<p>Read + Write</p>
+<p>Remarks</p>
+<p>This property is set to the identify transform by default. Any transformations applied to the widget occur relative to the widget's anchor point. The transformation contained in this property must be created using the <a href="../../iris_api_dev_guide/content/voltmx.ui_functions.html#makeAffi">voltmx.ui.makeAffineTransform</a> function.</p>
+<p>Example</p>
+<p>This example uses the button widget, but the principle remains the same for all widgets that have a transform property.</p>
+<pre><code>//Animation sample
+var newTransform = voltmx.ui.makeAffineTransform();
+newTransform.translate3D(223, 12, 56);
+
+//translates by 223 xAxis,12 in yAxis,56 in zAxis
+widget.transform = newTransform;
+</code></pre>
+<p>Platform Availability</p>
+<ul>
+<li>iOS, Android, Windows, and SPA</li>
+</ul>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">viewType Property</a></p>
+<hr />
+<p>Specifies the appearance of the Image Gallery as Default view or Page view.</p>
+<p>Syntax</p>
+<p>viewType</p>
+<p>Type</p>
+<p>Number</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Remarks</p>
+<p>The default value for this property is IMAGE_GALLERY_VIEW_TYPE_DEFAULT.</p>
+<p>You can select one of the following available views:</p>
+<ul>
+<li><em>IMAGE_GALLERY_VIEW_TYPE_DEFAULT</em> - This is the default selection and if this option is unchanged, the appearance of the image gallery remains unchanged.</li>
+<li><em>IMAGE_GALLERY_VIEW_TYPE_PAGEVIEW</em> - The images appears as a pageview. When this option is selected, the <a href="#viewConf">noofRowsPerPage</a> is displayed.</li>
+</ul>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with viewType:IMAGE_GALLERY_VIEW_TYPE_DEFAULT.
+var imgGalBasic={id:&quot;imagegallery1&quot;,
+    isVisible:true, 
+    skin:&quot;imgGalskin&quot;,
+    focusSkin:&quot;imgGalFSkin&quot;,
+    text:&quot;Click Here&quot;,
+    toolTip:&quot;sample text&quot;};
+
+var imgGalLayout={containerWeight:100, 
+    padding:[5,5,5,5], 
+    margin:[5,5,5,5], 
+    hExpand:true, 
+    vExpand:false, 
+    displayText:true};
+
+var imgGalPSP={**viewType: constants.IMAGE_GALLERY_VIEW_TYPE_DEFAULT** };
+
+//Creating the ImageGallery.
+var imagegallery1 = new voltmx.ui.ImageGallery(imgGalBasic,imgGalLayout,imgGalPSP);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>This property is available on Desktop Web.</p>
+<hr />
+<p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" /></a><a href="javascript:void(0);">viewConfig Property</a></p>
+<hr />
+<p>Specifies the view configuration parameters when the <a href="#viewType">viewType</a> is set as IMAGE_GALLERY_VIEW_TYPE_PAGEVIEW for Desktop Web platform.</p>
+<p>Syntax</p>
+<p>viewConfig</p>
+<p>Type</p>
+<p>JSObject</p>
+<p>Read/Write</p>
+<p>Yes - (Read and Write)</p>
+<p>Example</p>
+<pre><code>
+//Defining the properties for ImageGallery with viewConfig:noofRowsPerPage.
+var imgGalBasic={id:&quot;imagegallery1&quot;,
+    isVisible:true, 
+    skin:&quot;imgGalskin&quot;,
+    focusSkin:&quot;imgGalFSkin&quot;,
+    text:&quot;Click Here&quot;,
+    toolTip:&quot;sample text&quot;};
+
+var imgGalLayout={containerWeight:100, 
+    padding:[5,5,5,5], 
+    margin:[5,5,5,5], 
+    hExpand:true, 
+    vExpand:false, 
+    displayText:true};
+
+var imgGalPSP={viewType: constants.IMAGE_GALLERY_VIEW_TYPE_PAGEVIEW,  
+ **viewConfig: {noofRowsPerPage: 5**} };
+
+//Creating the ImageGallery.
+var imagegallery1 = new voltmx.ui.ImageGallery(imgGalBasic,imgGalLayout,imgGalPSP);
+</code></pre>
+<p>Platform Availability</p>
+<p>Available in the IDE.</p>
+<p>This property is available on Desktop Web.</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
