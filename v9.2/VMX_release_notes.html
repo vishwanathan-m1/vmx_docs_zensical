@@ -1,0 +1,4883 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github01.hclpnp.com/pages/phoenix-temenos/volt-mx-doc-opnsrc/latest/VMX_release_notes.html">
+      
+      
+        <link rel="prev" href="Whats_New_V9.html">
+      
+      
+        <link rel="next" href="Iris/app_platform/Content/AppPlatform_Overview.html">
+      
+      
+      <link rel="icon" href="assets/images/Volt_Mx_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Release Notes - HCL Volt MX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/style.css">
+    
+      <link rel="stylesheet" href="stylesheets/vmx_style.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#volt-mx-release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm?id=volt_mx_support" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-voltmx" target="_blank">Self-Paced Training</a>
+  <a href="https://support.hcltechsw.com/community?id=community_forum&sys_id=1cdf6e1a1bf31898beab64e6ec4bcbae" target="_blank">Community Forums</a>
+
+</div>
+</div>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+<link rel="stylesheet" href="assets/stylesheets/banner.css">
+<!-- Custom Banner -->
+<div class="banner" style="background-color:#ff9;">
+    <p style="font-size:14px;text-align:center;"><b>Volt MX 9.2.x has reached End-Of-Support as of Feb 17, 2025. Kindly upgrade to v9.5.x or higher (if not done already) for continued support, and refer to the corresponding in-service product documentation.</b></p>
+</div>
+
+<!-- Original Header -->
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="HCL Volt MX Documentation" class="md-header__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Volt MX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Introducing Volt MX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Introducing_Volt_MX.html" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="Whats_New_Main_Page.html" class="md-tabs__link">
+          
+  
+    
+  
+  What&apos;s New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="VMX_release_notes.html" class="md-tabs__link">
+        
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
+          
+  
+    
+  
+  App Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tutorials/Tutorials.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Foundry/installationGuides.html" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Iris
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
+          
+  
+    
+  
+  Foundry
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="HCL Volt MX Documentation" class="md-nav__button md-logo" aria-label="HCL Volt MX Documentation" data-md-component="logo">
+      
+  <img src="assets/images/Volt_Mx_logo.png" alt="logo">
+
+    </a>
+    HCL Volt MX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/volt-mx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing Volt MX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Introducing_Volt_MX.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What&apos;s New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Whats_New_Main_Page.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    All versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Whats_New_in_V9_Service_Pack_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Whats_New_in_V9_Service_Pack_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9 Service Pack 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Whats_New_V9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="VMX_release_notes.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#volt-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volt Iris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volt Iris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-79" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 79
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-78" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 78
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-77" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 77
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-76" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 76
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-75" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 75
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-74" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 74
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-73" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 73
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 72
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-71" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 71
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 70
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-69" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 69
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-68" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 68
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-67" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 67
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-66" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 66
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 66">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-65" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 65
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-64" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 64
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 63
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 62
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-61" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 61
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-60" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 60
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-59" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 59
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-58" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 58
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-57" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 57
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 56
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-55" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 55
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-54" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 54
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-47" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 47
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-46" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 46
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 46">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-45" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 45
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 45">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-38" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 38
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 38">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 37
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 37">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous-iris-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous Iris changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volt-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volt Foundry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volt Foundry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 2 Hotfix 0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 19
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 10
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 8
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    App Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Foundry/installationGuides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/installing_iris.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/installing_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Installing Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#volt-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volt Iris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volt Iris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-79" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 79
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-78" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 78
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-77" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 77
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-76" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 76
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-75" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 75
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-74" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 74
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-73" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 73
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 72
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-71" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 71
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 70
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-69" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 69
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-68" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 68
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-67" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 67
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-66" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 66
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 66">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-65" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 65
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-64" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 64
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 63
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 62
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-61" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 61
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-60" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 60
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-59" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 59
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-58" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 58
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-57" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 57
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 56
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-55" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 55
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-54" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 54
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-47" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 47
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-46" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 46
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 46">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-45" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 45
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 45">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-38" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 38
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 38">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 37
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 37">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-enhancements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iris Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous-iris-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous Iris changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volt-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volt Foundry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volt Foundry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-2-hotfix-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 2 Hotfix 0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 2 Hotfix 0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 19
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 10
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 8
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v9-servicepack-2-fixpack-1-hotfix-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      V9 Servicepack 2 Fixpack 1 Hotfix 6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V9 Servicepack 2 Fixpack 1 Hotfix 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-enhancements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundry Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="volt-mx-release-notes">Volt MX Release Notes</h1>
+<p>This topic lists new features, enhancements, and changes in Volt MX.
+For detailed information about fixes and known issues in Volt MX, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<p><a href="#volt-iris">Volt Iris</a></p>
+<ul>
+<li><a href="#v9-servicepack-2-fixpack-79">V9 Servicepack 2 Fixpack 79</a></li>
+<li><a href="#v9-servicepack-2-fixpack-78">V9 Servicepack 2 Fixpack 78</a></li>
+<li><a href="#v9-servicepack-2-fixpack-77">V9 Servicepack 2 Fixpack 77</a></li>
+<li><a href="#v9-servicepack-2-fixpack-76">V9 Servicepack 2 Fixpack 76</a></li>
+<li><a href="#v9-servicepack-2-fixpack-75">V9 Servicepack 2 Fixpack 75</a></li>
+<li><a href="#v9-servicepack-2-fixpack-74">V9 Servicepack 2 Fixpack 74</a></li>
+<li><a href="#v9-servicepack-2-fixpack-73">V9 Servicepack 2 Fixpack 73</a></li>
+<li><a href="#v9-servicepack-2-fixpack-72">V9 Servicepack 2 Fixpack 72</a></li>
+<li><a href="#v9-servicepack-2-fixpack-71">V9 Servicepack 2 Fixpack 71</a></li>
+<li><a href="#v9-servicepack-2-fixpack-70">V9 Servicepack 2 Fixpack 70</a></li>
+<li><a href="#v9-servicepack-2-fixpack-69">V9 Servicepack 2 Fixpack 69</a></li>
+<li><a href="#v9-servicepack-2-fixpack-68">V9 Servicepack 2 Fixpack 68</a></li>
+<li><a href="#v9-servicepack-2-fixpack-67">V9 Servicepack 2 Fixpack 67</a></li>
+<li><a href="#v9-servicepack-2-fixpack-66">V9 Servicepack 2 Fixpack 66</a></li>
+<li><a href="#v9-servicepack-2-fixpack-65">V9 Servicepack 2 Fixpack 65</a></li>
+<li><a href="#v9-servicepack-2-fixpack-64">V9 Servicepack 2 Fixpack 64</a></li>
+<li><a href="#v9-servicepack-2-fixpack-63">V9 Servicepack 2 Fixpack 63</a></li>
+<li><a href="#v9-servicepack-2-fixpack-62">V9 Servicepack 2 Fixpack 62</a></li>
+<li><a href="#v9-servicepack-2-fixpack-61">V9 Servicepack 2 Fixpack 61</a></li>
+<li><a href="#v9-servicepack-2-fixpack-60">V9 Servicepack 2 Fixpack 60</a></li>
+<li><a href="#v9-servicepack-2-fixpack-59">V9 Servicepack 2 Fixpack 59</a></li>
+<li><a href="#v9-servicepack-2-fixpack-58">V9 Servicepack 2 Fixpack 58</a></li>
+<li><a href="#v9-servicepack-2-fixpack-57">V9 Servicepack 2 Fixpack 57</a></li>
+<li><a href="#v9-servicepack-2-fixpack-56">V9 Servicepack 2 Fixpack 56</a></li>
+<li><a href="#v9-servicepack-2-fixpack-55">V9 Servicepack 2 Fixpack 55</a></li>
+<li><a href="#v9-servicepack-2-fixpack-54">V9 Servicepack 2 Fixpack 54</a></li>
+<li><a href="#v9-servicepack-2-fixpack-47">V9 Servicepack 2 Fixpack 47</a></li>
+<li><a href="#v9-servicepack-2-fixpack-46">V9 Servicepack 2 Fixpack 46</a></li>
+<li><a href="#v9-servicepack-2-fixpack-45">V9 Servicepack 2 Fixpack 45</a></li>
+<li><a href="#v9-servicepack-2-fixpack-38">V9 Servicepack 2 Fixpack 38</a></li>
+<li><a href="#v9-servicepack-2-fixpack-37">V9 Servicepack 2 Fixpack 37</a></li>
+</ul>
+<p><a href="#volt-foundry">Volt Foundry</a></p>
+<ul>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-12">V9 Servicepack 2 Fixpack 2 Hotfix 12</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-11">V9 Servicepack 2 Fixpack 2 Hotfix 11</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-10">V9 Servicepack 2 Fixpack 2 Hotfix 10</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-9">V9 Servicepack 2 Fixpack 2 Hotfix 9</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-8">V9 Servicepack 2 Fixpack 2 Hotfix 8</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-7">V9 Servicepack 2 Fixpack 2 Hotfix 7</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-6">V9 Servicepack 2 Fixpack 2 Hotfix 6</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-5">V9 Servicepack 2 Fixpack 2 Hotfix 5</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-4">V9 Servicepack 2 Fixpack 2 Hotfix 4</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-3">V9 Servicepack 2 Fixpack 2 Hotfix 3</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-2">V9 Servicepack 2 Fixpack 2 Hotfix 2</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-1">V9 Servicepack 2 Fixpack 2 Hotfix 1</a></li>
+<li><a href="#v9-servicepack-2-fixpack-2-hotfix-0">V9 Servicepack 2 Fixpack 2 Hotfix 0</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-20">V9 Servicepack 2 Fixpack 1 Hotfix 20</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-19">V9 Servicepack 2 Fixpack 1 Hotfix 19</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-18">V9 Servicepack 2 Fixpack 1 Hotfix 18</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-17">V9 Servicepack 2 Fixpack 1 Hotfix 17</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-16">V9 Servicepack 2 Fixpack 1 Hotfix 16</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-15">V9 Servicepack 2 Fixpack 1 Hotfix 15</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-14">V9 Servicepack 2 Fixpack 1 Hotfix 14</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-13">V9 Servicepack 2 Fixpack 1 Hotfix 13</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-11">V9 Servicepack 2 Fixpack 1 Hotfix 11</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-10">V9 Servicepack 2 Fixpack 1 Hotfix 10</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-9">V9 Servicepack 2 Fixpack 1 Hotfix 9</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-8">V9 Servicepack 2 Fixpack 1 Hotfix 8</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-7">V9 Servicepack 2 Fixpack 1 Hotfix 7</a></li>
+<li><a href="#v9-servicepack-2-fixpack-1-hotfix-6">V9 Servicepack 2 Fixpack 1 Hotfix 6</a></li>
+</ul>
+<h2 id="volt-iris">Volt Iris</h2>
+<h3 id="v9-servicepack-2-fixpack-79">V9 Servicepack 2 Fixpack 79</h3>
+<p>March 07, 2025</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-78">V9 Servicepack 2 Fixpack 78</h3>
+<p>January 21, 2025</p>
+<ul>
+<li>Cleanup of usage of READ_MEDIA_IMAGES and READ_MEDIA_VIDEO permissions from API references to minimise impact of Google's new PlayStore regulations regarding file/media usage WEF Jan 22, 2025.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-77">V9 Servicepack 2 Fixpack 77</h3>
+<p>January 20, 2025</p>
+<ul>
+<li>Added support for web pushes using FCM HTTPSv1.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-76">V9 Servicepack 2 Fixpack 76</h3>
+<p>October 18, 2024</p>
+<ul>
+<li>Added support for iOS 18 builds and Xcode 16.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-75">V9 Servicepack 2 Fixpack 75</h3>
+<p>October 07, 2024</p>
+<blockquote>
+<p><strong>Note</strong> : This release includes a critical update to comply with Apple's revised Security Manifest requirements. You must use this version of Volt Iris/plugin (and later) to build and release applications to the Apple App Store, effective October 07, 2024.</p>
+</blockquote>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-74">V9 Servicepack 2 Fixpack 74</h3>
+<p>August 09, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-73">V9 Servicepack 2 Fixpack 73</h3>
+<p>July 11, 2024</p>
+<ul>
+<li>Included support for Android 14 and JDK 11 in SDK.</li>
+<li>Switched out AssetsLibrary (now deprecated by Apple) with the Photos framework.</li>
+<li>Added validation for Browser events related to originalURL and queryParams.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-72">V9 Servicepack 2 Fixpack 72</h3>
+<p>May 21, 2024</p>
+<ul>
+<li>Added signed XCFrameworks (.xcprivacyinfo file included) in accordance with Apple's updated privacy manifest guidelines.</li>
+<li>Upgraded Python to v3.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-71">V9 Servicepack 2 Fixpack 71</h3>
+<p>March 26, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-70">V9 Servicepack 2 Fixpack 70</h3>
+<p>February 29, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-69">V9 Servicepack 2 Fixpack 69</h3>
+<p>January 16, 2024</p>
+<ul>
+<li>Added support for Volt Iris to target Android API level 34 (Android 14) for generating binaries.</li>
+<li>Updated Gradle build engine to v7.5.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-68">V9 Servicepack 2 Fixpack 68</h3>
+<p>December 15, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-67">V9 Servicepack 2 Fixpack 67</h3>
+<p>November 23, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-66">V9 Servicepack 2 Fixpack 66</h3>
+<p>October 13, 2023</p>
+<h4 id="iris-enhancements">Iris Enhancements</h4>
+<ul>
+<li>
+<p>Xcode 15 support has been added.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> For Xcode 15 minimum target is iOS version 12.</p>
+</blockquote>
+</li>
+<li>
+<p>iOS 17 target and NFI support has been added.Since support for lower version than iOS 12 has been deprecated from the Xcode required to generate binaries compliant with Apple App Store, these lower versions have been removed from the build target list in Volt Iris.</p>
+<blockquote>
+<p><strong><em>Note:</em></strong> To get the latest list of iOS target versions in project settings, please ensure to build any app for iOS native platforms once, post upgrade.</p>If a project uses iOS target version less than 12, the version will be updated to 12 during the process of import into Iris.</p>
+</blockquote>
+</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-65">V9 Servicepack 2 Fixpack 65</h3>
+<p>September 20, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-64">V9 Servicepack 2 Fixpack 64</h3>
+<p>August 21, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-63">V9 Servicepack 2 Fixpack 63</h3>
+<p>July 07, 2023</p>
+<ul>
+<li>Added support for Volt Iris to target Android API level 33 (Android 13) for generating binaries in compliance with latest Google Play Store guidelines.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-62">V9 Servicepack 2 Fixpack 62</h3>
+<p>June 09, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-61">V9 Servicepack 2 Fixpack 61</h3>
+<p>May 10, 2023</p>
+<ul>
+<li>JavaScript debugging for iOS 16.4+ devices will work in Debug Mode</li>
+<li>Xcode 14 support is added</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-60">V9 Servicepack 2 Fixpack 60</h3>
+<p>April 28, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-59">V9 Servicepack 2 Fixpack 59</h3>
+<p>March 02, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-58">V9 Servicepack 2 Fixpack 58</h3>
+<p>January 19, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-57">V9 Servicepack 2 Fixpack 57</h3>
+<p>December 19, 2022</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-56">V9 Servicepack 2 Fixpack 56</h3>
+<p>December 1, 2022</p>
+<p>There are no new features or enhancements in this release. The purpose of this fix-pack is to enable Volt Iris upgrade from 9.2.55 or lower to 9.5.x or higher. Existing installations of Volt Iris at versions 9.2.55 or lower will not have an option to upgrade to 9.5.x and must be upgraded to 9.2.56 (or higher) first to have the 9.5.x upgrade option available. For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-55">V9 Servicepack 2 Fixpack 55</h3>
+<p>September 19, 2022</p>
+<p>Added support for Volt Iris to target Android API level 31(Android 12) for generating binaries in compliance with latest Google Play Store guidelines.</p>
+<p>This release also addresses an issue with offline objects for object services in ProgressCallback.Refer to the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>  for further info.</p>
+<h3 id="v9-servicepack-2-fixpack-54">V9 Servicepack 2 Fixpack 54</h3>
+<p>August 29, 2022</p>
+<ul>
+<li>Windows 11 support added for Iris.</li>
+<li>MacOS Monterey (on M1 chipsets) support added for Iris.</li>
+<li>Added support for <a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Iris/iris_api_dev_guide/content/voltmx.crypto_functions.html#crypto.newkey">voltmx.crypto.newKey API</a> in Volt MX Iris for Android 12 devices, with tripleDES algorithm and 192 key-size via a new property <strong>useExternalBouncyCastleLibrary</strong> as part of the androidbuild.properties.</li>
+<li>
+<p>On Android 12 devices, a generic web intent resolves to an activity only if the app is approved for a specific domain that is contained in that web intent. Therefore, Volt MX Iris has introduced the <a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Iris/iris_api_dev_guide/content/voltmx.net_functions.html#voltmx.net8">voltmx.net.getDomainVerificationUserState API</a> to query the the status of a domain. In addition, the following constants have been added to get the status of a domain:</p>
+<ul>
+<li>voltmx.constants.DOMAIN_STATE_VERIFIED</li>
+<li>voltmx.constants.DOMAIN_STATE_SELECTED</li>
+<li>voltmx.constants.DOMAIN_STATE_NONE</li>
+</ul>
+</li>
+<li>
+<p>A new action, <strong>ACTION_APP_OPEN_BY_DEFAULT_SETTINGS</strong>, has been added in the <a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Iris/iris_api_dev_guide/content/voltmx.application_functions.html#voltmx.app6">voltmx.application.openSettings API</a> to open the Default Settings Screen, where a user can associate an app with a Domain.</p>
+</li>
+<li>
+<p>Support has been added for the <a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Iris/iris_api_dev_guide/content/voltmx.automation_namespace.html#volt-mx-automation-namespace">voltmx.automation.webSocket.sendMessage</a> and the <a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Iris/iris_api_dev_guide/content/voltmx.automation_namespace.html#volt-mx-automation-namespace">voltmx.automation.webSocket.waitForMessage</a> APIs in Volt MX Iris to support cross-app testing between apps that use the same WebSocket Server. </p>
+</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-47">V9 Servicepack 2 Fixpack 47</h3>
+<p>August 18, 2022</p>
+<p>There are no new features or enhancements in this release. The purpose of this fixpack is to address a sync operation failure in apps that use Offline Objects. For the relevant support note, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-46">V9 Servicepack 2 Fixpack 46</h3>
+<p>July 5, 2022</p>
+<h4 id="iris-enhancements_1">Iris Enhancements</h4>
+<p>Starting with Mac OS Monterey version 12.3, Apple has removed Python 2.7 as being bundled by default. This version of Python is required for iOS builds from Iris.</p>
+<p>To enable customers to download Python version 2.7 and make use of the same for iOS application builds in Iris, a new preference is available in Iris preferences to
+set the path to Python installation. Details of the preference are as follows.</p>
+<ul>
+<li><a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Iris/iris_starter_install_mac/Content/Preferences.html">Setting the Python Installation Path</a>.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-45">V9 Servicepack 2 Fixpack 45</h3>
+<p>May 21, 2022</p>
+<h4 id="iris-enhancements_2">Iris Enhancements</h4>
+<p>There are new supported devices in this release in Iris, and they are listed below.
+<br /></p>
+<p><strong>iOS Devices:</strong>
+        iPhone 12,
+        iPhone 12 Pro,
+        iPhone 12 Pro Max,
+        iPhone 12 Mini,
+        iPhone 13,
+        iPhone 13 Pro,
+        iPhone 13 Pro Max,
+        iPhone 13 Mini <br />     <br />
+<strong>Android Devices:</strong>
+        Google Pixel 4,
+        Google Pixel 5,
+        Google Pixel 6,
+        Samsung Galaxy 9,
+        Samsung Galaxy 10,
+        Samsung Galaxy 21,
+        Samsung Galaxy 22</p>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-38">V9 Servicepack 2 Fixpack 38</h3>
+<p>December 17, 2021</p>
+<h4 id="iris-enhancements_3">Iris Enhancements</h4>
+<p>There are no new features or enhancements in this release. The purpose of this fixpack is to address the log4j threat. For the relevant support note, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-37">V9 Servicepack 2 Fixpack 37</h3>
+<p>November 22, 2021</p>
+<h4 id="iris-enhancements_4">Iris Enhancements</h4>
+<ul>
+<li>Support to add third-party framework dependencies (in the .framework and .tbd file formats) has been added in the Iris iOS plugin.</li>
+<li>Support for cross-application testing has been introduced in the Jasmine Test Framework for Responsive Web Apps.</li>
+<li>Support for the tagName key has been added in the accessibilityConfig property for the Label and Segment widgets in a Responsive Web app. By using the tagName property, you can define the HTML tags for the content of the Label and Segment widgets.</li>
+<li>Support to open the login page in the same browser window has been added to the OAuth Identity services. When you upgrade to Iris V9 ServicePack 2 Fixpack 37, ensure that you upgrade the Foundry Integration Server artifacts to 9.2.1.6 or later to use the updated APIs.</li>
+<li>Support for NFI version 3.0 has been added in the iOS plugins of Iris for compatibility with the XCFramework.</li>
+<li>Support for generating the third-party native bindings and outputs for the XCFramework has been added in Iris.</li>
+<li>Support for the Playback feature has been added for the voltmx.automation.playback.isLoadingScreenVisible and voltmx.automation.playback.waitForLoadingScreenToDismiss APIs in the Jasmine Test Automation Framework of Iris.</li>
+<li>Support for Cross Application Testing has been added in the Jasmine Test Automation Framework of Iris.</li>
+<li>Support for the Record and Playback features has been added for the Tap and Swipe gestures in the Jasmine Test Automation Framework of Iris.</li>
+<li>Support for the Record and Playback features has been added for the Action Sheet and Navigation Bar items through the voltmx.automation.actionSheet.click and voltmx.automation.navigationBar.click APIs.</li>
+<li>Support to provide an array or a JSON object as an input for the voltmx.store.getItem and voltmx.store.setItem APIs has been added in Iris.</li>
+<li>Improved the encryption level for datastore entries from 128 bit to 256 bit.</li>
+<li>Iris introduces support for the voltmx.automation.getCurrentForm and voltmx.automation.getWidgetsByFilter APIs. The voltmx.automation.getCurrentForm returns the Form ID of the current form and the voltmx.automation.getWidgetsByFilter API retrieves the paths of the child widgets of the specified container widget, based on the filters applied.</li>
+</ul>
+<h4 id="miscellaneous-iris-changes">Miscellaneous Iris changes</h4>
+<ul>
+<li>Support for the voltmx.application.setAppHeaders and voltmx.application.setAppFooters APIs has been deprecated from all the platforms on Iris.</li>
+</ul>
+<!--
+| 10/28/2020 | 1.2 | Document updated for the release with [V9 SP1 FP 10](Iris/iris_rel_notes/Content/V9SP1.md#v9sp1-fixpack-10-features) release. |
+| 08/24/2020 | 1.1 | Document updated for the V9 Service Pack 1 release with [New Features](Iris/iris_rel_notes/Content/V9SP1.md#new-features-and-enhancements-in-v9-service-pack-1) and [Known Issues](Iris/iris_rel_notes/Content/V9-SP1_Known_Issues.md#top). |
+| 04/06/2020 | 1.0 | Document updated for the V9 release with [New Features](Iris/iris_rel_notes/Content/V9.md#new-features-and-enhancements-in-v9) and [Known Issues](Iris/iris_rel_notes/Content/V9_Known_Issues.md#limitations-and-known-issues-in-v9). |
+
+FOUNDRY ENHANCEMENTS
+The purpose of this fixpack is to address upgraded tomcat version from 9.0.45 to 9.0.62 to fix spring4shell vulnerabilities and upgraded log4j version to 2.17.1 to fix security vulnerabilities.
+
+-->
+
+<h2 id="volt-foundry">Volt Foundry</h2>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-12">V9 Servicepack 2 Fixpack 2 Hotfix 12</h3>
+<p>March 25, 2025</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-11">V9 Servicepack 2 Fixpack 2 Hotfix 11</h3>
+<p>October 28, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-10">V9 Servicepack 2 Fixpack 2 Hotfix 10</h3>
+<p>August  26, 2024</p>
+<ul>
+<li>Added imagePullSecrets to single-container deployments for OpenShift, Amazon EKS, and Kubernetes to enable registry access.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-9">V9 Servicepack 2 Fixpack 2 Hotfix 9</h3>
+<p>August 09, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-8">V9 Servicepack 2 Fixpack 2 Hotfix 8</h3>
+<p>July 25, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-7">V9 Servicepack 2 Fixpack 2 Hotfix 7</h3>
+<p>July 08, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-6">V9 Servicepack 2 Fixpack 2 Hotfix 6</h3>
+<p>May 31, 2024</p>
+<ul>
+<li>Added support for FCM HTTP V1 API alongside legacy FCM support.</li>
+<li>Included support for MariaDB 10.11.4 for on-prem installation.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-5">V9 Servicepack 2 Fixpack 2 Hotfix 5</h3>
+<p>March 22, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-4">V9 Servicepack 2 Fixpack 2 Hotfix 4</h3>
+<p>February 15, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-3">V9 Servicepack 2 Fixpack 2 Hotfix 3</h3>
+<p>February 05, 2024</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-2">V9 Servicepack 2 Fixpack 2 Hotfix 2</h3>
+<p>December 01, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-1">V9 Servicepack 2 Fixpack 2 Hotfix 1</h3>
+<p>November 09, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-2-hotfix-0">V9 Servicepack 2 Fixpack 2 Hotfix 0</h3>
+<p>October 23, 2023</p>
+<h4 id="foundry-enhancements">Foundry Enhancements</h4>
+<ul>
+<li>utf8mb4 support has been introduced for MySQL database.</li>
+<li>Support for MySQL 5.7 has been removed as per the DB’s EOL.</li>
+<li>Support for Jasper 7.9.2. Refer <a href="https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_analytics_reporting/Content/How_to_Upgrade_JasperServer.html">here</a> for Jasper 7.9.2 steps to integrate with Foundry.</li>
+<li>Security fixes.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-20">V9 Servicepack 2 Fixpack 1 Hotfix 20</h3>
+<p>September 28, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-19">V9 Servicepack 2 Fixpack 1 Hotfix 19</h3>
+<p>September 25, 2023</p>
+<h4 id="foundry-enhancements_1">Foundry Enhancements</h4>
+<ul>
+<li>Support for incremental setup for Offline Objects across Volt Foundry app versions added.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-18">V9 Servicepack 2 Fixpack 1 Hotfix 18</h3>
+<p>August 21, 2023</p>
+<h4 id="foundry-enhancements_2">Foundry Enhancements</h4>
+<ul>
+<li>Enhanced Object Services <em>incremental setup</em> to account for object-model changes between Foundry app versions.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-17">V9 Servicepack 2 Fixpack 1 Hotfix 17</h3>
+<p>June 16, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-16">V9 Servicepack 2 Fixpack 1 Hotfix 16</h3>
+<p>May 16, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-15">V9 Servicepack 2 Fixpack 1 Hotfix 15</h3>
+<p>March 06, 2023</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-14">V9 Servicepack 2 Fixpack 1 Hotfix 14</h3>
+<p>December 19, 2022</p>
+<p>There are no new features or enhancements in this release.
+For relevant support note, see the<a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094476" target="_blank"> Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-13">V9 Servicepack 2 Fixpack 1 Hotfix 13</h3>
+<p>August 29, 2022</p>
+<ul>
+<li>Foundry libraries have been updated to address security vulnerabilities.</li>
+<li>OpenJDK 11 support added for HCL Volt MX Cloud.</li>
+<li>Certified configurations for Foundry has been updated with the addition of Microsoft SQL Server 2019 and deprecation of Microsoft SQL Server 2016.</li>
+<li>Foundry container is now supported on Openshift and Amazon Elastic Kubernetes Service cluster in production.</li>
+<li>The OAuth 2.0 type Identity Service on Volt MX Foundry has been enhanced with an option to enable/disable PKCE between Foundry and OAuth back-end. For more information about this feature, click <a href="https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Identity10_VoltMX_OAuth2.html">here</a>.</li>
+<li>Added the following parameter to the service.bat file for Windows services: -Dlog4j2.enableJndiJdbc=true. Please refer to <a href="https://logging.apache.org/log4j/2.x/manual/configuration.html">Log4j – Configuring Log4j 2 (apache.org)</a> for details.</li>
+</ul>
+<p>For detailed information about fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-11">V9 Servicepack 2 Fixpack 1 Hotfix 11</h3>
+<p>August 19, 2022</p>
+<p>There are no new features or enhancements in this release. The purpose
+of this fixpack is to address a problem with user re-registration. For the relevant support note, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-10">V9 Servicepack 2 Fixpack 1 Hotfix 10</h3>
+<p>July 8, 2022</p>
+<h4 id="foundry-enhancements_3">Foundry Enhancements</h4>
+<p>We have added support for Oracle overloaded stored procedures in the RDBMS adapter.</p>
+<p>For detailed information about any fixes and known issues in this release, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-9">V9 Servicepack 2 Fixpack 1 Hotfix 9</h3>
+<p>June 15, 2022</p>
+<h4 id="foundry-enhancements_4">Foundry Enhancements</h4>
+<p>The purpose of this fixpack is to address upgraded tomcat version from 9.0.45 to 9.0.62 to fix spring4shell vulnerabilities and upgraded log4j version to 2.17.1 to fix security vulnerabilities. Also, upgrade Spring from 4.3.22.RELEASE to 5.3.18 to resolve Spring4Shell vulnerability CVE-2022-22965 and upgrade Hibernate from 4.3.11.Final to 5.4.33.Final to resolve CVE-2020-25638.</p>
+<p>Following dependencies for Spring and Hibernate are also upgraded.
+- Spring security from 5.3.18 to 5.6.1
+- Spring-integration from 4.3.6.RELEASE to 5.5.7
+- Hibernate validator from 4.3.2.Final to 6.0.22.Final.</p>
+<p>For the relevant support note, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-8">V9 Servicepack 2 Fixpack 1 Hotfix 8</h3>
+<p>May 3, 2022</p>
+<h4 id="foundry-enhancements_5">Foundry Enhancements</h4>
+<p>There are no new features or enhancements in this release. For the relevant support note, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-7">V9 Servicepack 2 Fixpack 1 Hotfix 7</h3>
+<p>December 17, 2021</p>
+<h4 id="foundry-enhancements_6">Foundry Enhancements</h4>
+<p>There are no new features or enhancements in this release. The purpose of this fixpack is to address the log4j threat. For the relevant support note, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101445" target="_blank">Cumulative fix list for HCL Volt MX</a>.</p>
+<h3 id="v9-servicepack-2-fixpack-1-hotfix-6">V9 Servicepack 2 Fixpack 1 Hotfix 6</h3>
+<p>November 22, 2021</p>
+<h4 id="foundry-enhancements_7">Foundry Enhancements</h4>
+<p>Identity
+- Added support for Login Failure Tracking in the Custom Identity Service. This is an optional setting that can be used to add preventive measures and provide additional security against malicious traffic. For more information, refer to Volt MX Custom Identity Service.</p>
+<p>Installer
+- Support for CORS has been added to the apps.war file.
+- Enabled UTF-8 support for Foundry Object Services.
+- Removed the dependency of the MobileFabricException class from the transaction API.
+- Added support for Oracle CLOB and NCLOB data types.</p>
+<p>Integration Services
+- Support to remove the environment name from pre-signed URL generation has been added to cloud fsa.
+- Support for versions other than the default version of v37.0 has been added to the Salesforce adapter.
+- Support for the SameSite security attribute has been added to the cookies that are generated by the App Services.
+- Support for CORS has been added to the apps.war file.
+- Added support to use an existing identity provider for the Red Hat PAM adapter.
+- Added new APIs to the Red Hat PAM Adapter.
+- Support for the SameSite security attribute has been added to the cookies that are generated by the App Services.
+- Support for versions other than the default version of v37.0 has been added to the Salesforce adapter.</p>
+<p>Single Container Solution
+- Support for https has been added to the Single Container Solution for HCL Foundry.</p>
+<!--| 12/18/2020 | 2.6 | Document published for [VoltMX Foundry Identity Service Hotfix V9.1.0.4](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.1.0.4.md). |
+| 10/17/2020 | 2.5 | Document published for [VoltMX Foundry Identity Service Hotfix V9.1.0.3](Foundry/voltmx_foundry_release_notes/Content/IdentityHotFix9.1.0.3.md). |
+| 11/10/2020 | 2.4 | Document published for [VoltMX Foundry Integration Service Hotfix V9.0.1.1](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.0.1.1.md). |
+| 11/09/2020 | 2.3 | Document published for the following releases: <br><br>[VoltMX Foundry Integration Service Hotfix V9.1.0.3](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.1.0.3.md) <br><br>[VoltMX Foundry Integration Service Hotfix V9.0.0.6](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.0.0.6.md) |
+| 10/23/2020 | 2.2 | Document published for [VoltMX Foundry Installer Hotfix 9.1.0.3 (On-Premises)](Foundry/voltmx_foundry_release_notes/Content/InstallerHotFix9.1.0.3.md). |
+| 09/22/2020 | 2.1 | Document published for [](V9SP1_Main.md)[VoltMX Foundry Integration Service Hotfix V9.1.0.1](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.1.0.1.md). |
+| 08/24/2020 | 2.0 | Document published for [VoltMX Foundry V9 Service Pack 1](Foundry/voltmx_foundry_release_notes/Content/V9SP1_Main.md). |
+| 07/13/2020 | 1.6 | Document published for [VoltMX Foundry Installer Fix Pack 9.0.1](Foundry/voltmx_foundry_release_notes/Content/V9.0.1_New_Features.md). |
+| 06/22/2020 | 1.5 | Document published for [VoltMX Foundry Integration Service Hotfix V9.0.0.5](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.0.0.5.md). |
+| 05/21/2020 | 1.4 | Document published for [VoltMX Foundry Installer Hotfix 9.0.0.2 (On-Premises)](Foundry/voltmx_foundry_release_notes/Content/InstallerHotFix9.0.0.2.md). |
+| 05/07/2020 | 1.3 | Document published for [VoltMX Foundry Integration Service Hotfic V9.0.0.4](Foundry/voltmx_foundry_release_notes/Content/IntegrationHotFix9.0.0.4.md). |
+| 04/27/2020 | 1.2 | Document published to append [VoltMX Foundry V9 Known Issues on Console](Foundry/voltmx_foundry_release_notes/Content/V9_Knownissues.md#console). |
+| 04/20/2020 | 1.1 | Document published for [VoltMX Foundry V9.0.0.1 on MS Azure](Foundry/voltmx_foundry_release_notes/Content/Azure9.0.0.1GA.md) release. |
+| 04/06/2020 | 1.0 | Document published for [V9 GA](Foundry/voltmx_foundry_release_notes/Content/V9_Main.md) release. |
+-->
+
+<!--- The App Viewer has been upgraded to support the latest iOS and Android plugins on tablets. -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                <a href=" https://www.hcltechsw.com/ " title="MkDocs">Copyright &copy; 2021-2025, HCL Technologies Limited</a>
+                <br>Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                </a>
+            </div>
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com"
+                    class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
