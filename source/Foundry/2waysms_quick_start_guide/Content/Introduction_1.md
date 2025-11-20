@@ -1,6 +1,6 @@
                            
 
-2 Way SMS Quick Start Guide: Introduction to Engagement Services 2 Way SMS
+2 Way SMS Quick Start Guide: Introduction to Engagement Services 2 Way SMS.
 
 Volt MX  Foundry Engagement Services: 2 Way SMS QuickStart Guide
 ================================================================
