@@ -1,8 +1,4 @@
-git checkout gh-pages
-git pull origin gh-pages
 git checkout rel/10
-# git add .
-# git reset --hard HEAD
 git pull origin rel/10
 git fetch --tags --force
 git tag -f v10
