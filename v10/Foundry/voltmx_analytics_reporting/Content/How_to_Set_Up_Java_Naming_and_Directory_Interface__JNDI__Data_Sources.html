@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_analytics_reporting/Content/How_to_Set_Up_Java_Naming_and_Directory_Interface__JNDI__Data_Sources.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_analytics_reporting/Content/How_to_Set_Up_Java_Naming_and_Directory_Interface__JNDI__Data_Sources.html">
       
       
         <link rel="prev" href="How_to_Import_the_Repository_to_Jasper_Server.html">
@@ -18,53 +18,18 @@
         <link rel="next" href="How_to_Configure_PhantomJS_and_RequireJS_in_JasperReprots.html">
       
       
-        
-      
-      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="zensical-0.0.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
     
     
       
-        <title>How to Set Up Java Naming and Directory Interface JNDI Data Sources - HCL Volt MX Documentation</title>
+        <title>How to Set Up JNDI Data Sources - HCL Volt MX Documentation</title>
       
     
     
-      
-        
-      
-      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
       
       
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  <style>:root{}</style>
-
 
 
     
@@ -76,7 +41,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -85,10 +50,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -161,7 +127,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -173,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Set Up Java Naming and Directory Interface  JNDI  Data Sources
+              How to Set Up JNDI Data Sources
             
           </span>
         </div>
@@ -181,36 +147,67 @@
     </div>
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
-  <button type="button" class="md-search__button">
-    Search
-  </button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-      
     
-    <div class="md-header__source">
-      
+    
+      <div class="md-header__source">
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      
-    </div>
+      </div>
+    
   </nav>
   
 </header>
@@ -229,10 +226,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
+  
+    
   
   Introducing Volt MX
 
@@ -245,10 +243,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
+  
+    
   
   Getting Started
 
@@ -261,12 +260,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
+  
+    
   
   What&apos;s New
 
@@ -280,10 +280,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
+  
+    
   
   Release Notes
 
@@ -296,12 +297,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
+  
+    
   
   App Platform
 
@@ -315,12 +317,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
+  
+    
   
   Tutorials
 
@@ -334,10 +337,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
+  
+    
   
   Installation Guides
 
@@ -350,12 +354,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Iris
 
@@ -368,7 +373,6 @@
         
   
   
-  
     
   
   
@@ -377,6 +381,8 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Foundry
 
@@ -420,7 +426,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -440,16 +446,9 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introducing Volt MX
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -467,16 +466,9 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -498,42 +490,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     What&apos;s New
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -549,16 +558,9 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Release Notes
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -580,42 +582,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     App Platform
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -663,42 +682,353 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     Tutorials
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -714,16 +1044,9 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation Guides
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -769,13 +1092,79 @@
     
     
     
+    
       
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
         
+      
         
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -783,20 +1172,12 @@
         
   
   
-  
-    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
-    Iris
-  
-
-    
+    Installing Iris
   </span>
-  
   
 
       
@@ -805,6 +1186,875 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -846,17 +2096,13 @@
     
     
     
-      
-        
-        
-      
-      
     
-    
+      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -865,16 +2111,9 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Foundry
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -883,11 +2122,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Foundry
-  
-
+            Foundry
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -901,16 +2136,9 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Fundamentals
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -953,34 +2181,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../installing_foundry.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Foundry
-  
-
-    
   </span>
-  
   
 
       
@@ -1117,34 +2332,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1175,34 +2377,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     OAuth Sample App Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1235,13 +2424,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1249,20 +2433,12 @@
         
   
   
-  
     <a href="../../integration_services.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Integration Services
-  
-
-    
   </span>
-  
   
 
       
@@ -1297,14 +2473,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" checked>
@@ -1313,16 +2485,9 @@
           <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Administering Foundry
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1331,11 +2496,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Administering Foundry
-  
-
+            Administering Foundry
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1349,16 +2510,9 @@
       <a href="../../administering_foundry.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1385,13 +2539,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1399,20 +2548,12 @@
         
   
   
-  
     <a href="../../settings_and_configuration.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Settings and Configuration
-  
-
-    
   </span>
-  
   
 
       
@@ -1455,14 +2596,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_3" checked>
@@ -1471,16 +2608,9 @@
           <label class="md-nav__link" for="__nav_9_6_3" id="__nav_9_6_3_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Working with Reports
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1489,11 +2619,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_6_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Working with Reports
-  
-
+            Working with Reports
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1507,16 +2633,9 @@
       <a href="../../working_with_reports.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1561,13 +2680,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1575,20 +2689,12 @@
         
   
   
-  
     <a href="../../standard_metrics_reports_guide/Content/standard_metrics_reports_guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Analytics Standard Reports Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1627,13 +2733,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1641,20 +2742,12 @@
         
   
   
-  
     <a href="../../custom_metrics_and_reports/Content/Custom_Metrics_and_Reports_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Custom Metrics and Reports Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1679,16 +2772,9 @@
       <a href="../../VoltMX_Analytics_OnPrem_FAQs/Content/VoltMX_Analytics_OnPremise_FAQs.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Analytics & Reporting On-Premises FAQs
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1727,14 +2813,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_3_5" checked>
@@ -1743,16 +2825,9 @@
           <label class="md-nav__link" for="__nav_9_6_3_5" id="__nav_9_6_3_5_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Analytics and Reporting Installation Guide
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1761,11 +2836,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_6_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_6_3_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Volt MX Analytics and Reporting Installation Guide
-  
-
+            Volt MX Analytics and Reporting Installation Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1779,16 +2850,9 @@
       <a href="homepage.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1807,16 +2871,9 @@
       <a href="Preface.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Preface
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1835,16 +2892,9 @@
       <a href="Prereqs.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Prerequisites
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1863,16 +2913,9 @@
       <a href="How_to_Set_Up_the_Jasper_Server.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Set Up the JasperReports Server
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1891,16 +2934,9 @@
       <a href="Deploy_JasperWAR_using_js-install_Scripts.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Install JasperReports Server WAR file using js-install Scripts
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1919,16 +2955,9 @@
       <a href="How_to_Upgrade_JasperServer.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Upgrade the JasperReports Server
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1963,14 +2992,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_3_5_7" checked>
@@ -1979,16 +3004,9 @@
           <label class="md-nav__link" for="__nav_9_6_3_5_7" id="__nav_9_6_3_5_7_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Post-Installation Tasks
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1997,11 +3015,7 @@
         <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_3_5_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_6_3_5_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Post-Installation Tasks
-  
-
+            Post-Installation Tasks
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2015,16 +3029,9 @@
       <a href="Post-Installation_Tasks.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2043,16 +3050,9 @@
       <a href="How_to_Import_the_Repository_to_Jasper_Server.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Download and Import a Package to the JasperReports Server
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2078,16 +3078,9 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Set Up JNDI Data Sources
-  
-
-    
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2096,22 +3089,14 @@
       <a href="How_to_Set_Up_Java_Naming_and_Directory_Interface__JNDI__Data_Sources.html" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Set Up JNDI Data Sources
-  
-
-    
   </span>
-  
   
 
       </a>
       
         
-
 
   
 
@@ -2129,9 +3114,7 @@
         <li class="md-nav__item">
   <a href="#how-to-set-up-jndi-data-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How to Set Up JNDI Data Sources
-      
+      How to Set Up JNDI Data Sources
     </span>
   </a>
   
@@ -2156,16 +3139,9 @@
       <a href="How_to_Configure_PhantomJS_and_RequireJS_in_JasperReprots.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Configure Chromium JS Engine to Download Reports in PDF Format - JasperReports Server
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2184,16 +3160,9 @@
       <a href="How_to_Start_or_Stop_JasperReports_Server.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Start or Stop JasperReports Server
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2212,16 +3181,9 @@
       <a href="How_to_Run_Reports.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Run Reports
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2248,16 +3210,9 @@
       <a href="How_to_Configure_Foundry.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Configure Volt MX Foundry in the JasperReports Server
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2290,34 +3245,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_Foundry_analytics_mobile_app/Content/Analytics_Mobile_App_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Analytics Mobile App Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2364,34 +3306,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../user_journey_app_events_apm/Content/App_Events_and_APM_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     User Journey - App Events and APM Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2464,34 +3393,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     App Services Console User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2550,34 +3466,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     App Factory User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2626,13 +3529,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2640,20 +3538,12 @@
         
   
   
-  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Deployment Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2678,16 +3568,9 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Analytics & Reporting Cloud FAQs
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2714,13 +3597,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2728,20 +3606,12 @@
         
   
   
-  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Integration Services Troubleshooting Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2776,7 +3646,6 @@
                   <div class="md-sidebar__inner">
                     
 
-
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -2793,9 +3662,7 @@
         <li class="md-nav__item">
   <a href="#how-to-set-up-jndi-data-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How to Set Up JNDI Data Sources
-      
+      How to Set Up JNDI Data Sources
     </span>
   </a>
   
@@ -2811,24 +3678,14 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
-  
-    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_analytics_reporting/Content/How_to_Set_Up_Java_Naming_and_Directory_Interface__JNDI__Data_Sources.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
-    </a>
-  
-  
 
 
-  <h1>How to Set Up Java Naming and Directory Interface  JNDI  Data Sources</h1>
+  <h1>How to Set Up JNDI Data Sources</h1>
 
-<div class="language-text highlight"><pre><span></span><code>
-</code></pre></div>
-<h2 id="how-to-set-up-jndi-data-sources">How to Set Up JNDI Data Sources<a class="headerlink" href="#how-to-set-up-jndi-data-sources" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-set-up-jndi-data-sources">How to Set Up JNDI Data Sources</h2>
 <p>The Java Naming and Directory Interface (JNDI) configuration allows the JasperReports Server connectivity to appropriate databases using JDBC drivers. To run reports, the JNDI configuration is required.</p>
 <p>To set up the Jasper data sources, follow these steps:</p>
 <ul>
@@ -2838,7 +3695,7 @@
 <p><img alt="" src="Resources/Images/JNDI1.png" /></p>
 </li>
 <li>
-<p>In the <code>context.xml</code> file, add the following JNDI configurations for the reports to access the reports database. You must replace the following fields with appropriate values to access the reports database details. For more details, refer to <a href="../../../Foundry/voltmx_foundry_windows_install_guide/Content/Installing_VoltMX_Foundry_on_Windows.html">VoltMX Foundry_Installer_Guide &gt; Installing Volt MX Foundry &gt; Database Details window</a>.</p>
+<p>In the <code>context.xml</code> file, add the following JNDI configurations for the reports to access the reports database. You must replace the following fields with appropriate values to access the reports database details. For more details, refer to <a href="../../voltmx_foundry_windows_install_guide/Content/Installing_VoltMX_Foundry_on_Windows.html">VoltMX Foundry_Installer_Guide &gt; Installing Volt MX Foundry &gt; Database Details window</a>.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> JasperReports Server V8.2.0, uses Tomcat9 JasperReports Server V7.9.2, V7.1.0 and V6.2.0 use Tomcat 8.  whereas JasperReports Server v 6.0 is bundled with Tomcat 7.
 And the data source factory is different for both Tomcat 7, Tomcat 8 and Tomcat 9. 
@@ -2876,181 +3733,191 @@ And the data source factory is different for both Tomcat 7, Tomcat 8 and Tomcat 
 </table>
 </li>
 <li>
-<p>The following JNDI configuration is for the DB2 Server:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports Server 8.2.0/7.9.2/7.1.
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;!-- Add the following sample code for the Reports DB, to the existing
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>context.xml --&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&lt;Resource name=&quot;jdbc/onpremdb2&quot; auth=&quot;Container&quot;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Reports
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Database
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>ServerIP:DatabasePORT&gt;/&lt;reports_database_name&gt;:driverType=4;
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>currentSchema=&lt;Schema_name&gt;;
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>eFactory&quot;/&gt;
-</span></code></pre></div></p>
+<p>The following JNDI configuration is for the DB2 Server:</p>
 </li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;!-- Add the following sample code for the Accounts DB, to the existing
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>context.xml --&gt;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Accounts Database
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>ServerIP:DatabasePORT&gt;/&lt;accounts_database_name&gt;:driverType=4;
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>currentSchema=&lt;Schema_name&gt;;
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>eFactory&quot;/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Server 6.0
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;!-- Add the following sample code for the Reports DB, to the existing
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>context.xml --&gt;
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&lt;Resource name=&quot;jdbc/onpremdb2&quot; auth=&quot;Container&quot;
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Reports
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>Database Server IP: Database
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>PORT&gt;/&lt;reports_database_name&gt;:driverType=4;
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>currentSchema=&lt;Schema_name&gt;;
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;!-- Add the following sample code for the Accounts DB, to the existing context.xml--&gt;
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Accounts Database Server IP: Database
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>PORT&gt;/&lt;accounts_database_name&gt;:driverType=4;
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>currentSchema=&lt;Schema_name&gt;;
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>/&gt;
-</span></code></pre></div>
+<pre><code>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports Server 8.2.0/7.9.2/7.1.
+
+&lt;!-- Add the following sample code for the Reports DB, to the existing
+context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremdb2&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
+from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Reports
+Database
+ServerIP:DatabasePORT&gt;/&lt;reports_database_name&gt;:driverType=4;
+currentSchema=&lt;Schema_name&gt;;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>&lt;!-- Add the following sample code for the Accounts DB, to the existing
+context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
+from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Accounts Database
+ServerIP:DatabasePORT&gt;/&lt;accounts_database_name&gt;:driverType=4;
+currentSchema=&lt;Schema_name&gt;;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports
+Server 6.0
+
+&lt;!-- Add the following sample code for the Reports DB, to the existing
+context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremdb2&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
+from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Reports
+Database Server IP: Database
+PORT&gt;/&lt;reports_database_name&gt;:driverType=4;
+currentSchema=&lt;Schema_name&gt;;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
+/&gt;
+
+</code></pre>
+<pre><code>&lt;!-- Add the following sample code for the Accounts DB, to the existing context.xml--&gt;
+
+&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.ibm.db2.jcc.DB2Driver&quot; validationQuery=&quot;SELECT 1
+from SYSIBM.SYSDUMMY1&quot; testOnBorrow=&quot;true&quot; url=&quot;jdbc:db2://&lt;Accounts Database Server IP: Database
+PORT&gt;/&lt;accounts_database_name&gt;:driverType=4;
+currentSchema=&lt;Schema_name&gt;;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
+/&gt;
+</code></pre>
 <ul>
 <li>The following JNDI configuration is for the MSSQL:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports Server 8.2.0/7.9.2/7.1
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&lt;!-- Add the following sample code for the Reports DB, to the existing context.xml --&gt;
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>&lt;Resource name=&quot;jdbc/onpremmssql&quot; auth=&quot;Container&quot;
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>url=&quot;jdbc:sqlserver://&lt;Reports Database Server IP: Database
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>PORT&gt;;databaseName=&lt;reports_database_name&gt;&quot;
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>eFactory&quot;/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;!-- Add the following sample code for the Accounts DB, to the existing context.xml --&gt;
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>url=&quot;jdbc:sqlserver://&lt;Accounts Database Server IP: Database
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>PORT&gt;;databaseName=&lt;accounts_database_name&gt;&quot;
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>eFactory&quot;/&gt;
-</span></code></pre></div>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports Server 6.0
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&lt;!-- Add the following sample code for the Reports DB, to the existing context.xml --&gt;
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>&lt;Resource name=&quot;jdbc/onpremmssql&quot; auth=&quot;Container&quot;
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>url=&quot;jdbc:sqlserver://&lt;Reports Database Server IP: Database
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>PORT&gt;;databaseName=&lt;reports_database_name&gt;&quot;
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;!-- Add the following sample code for the Accounts DB, to the existing context.xml --&gt;
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>url=&quot;jdbc:sqlserver://&lt;Accounts Database Server IP: Database
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>PORT&gt;;databaseName=&lt;accounts_database_name&gt;&quot;
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>/&gt;
-</span></code></pre></div></p>
+<pre><code>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports Server 8.2.0/7.9.2/7.1
+
+&lt;!-- Add the following sample code for the Reports DB, to the existing context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremmssql&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
+validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
+url=&quot;jdbc:sqlserver://&lt;Reports Database Server IP: Database
+PORT&gt;;databaseName=&lt;reports_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>&lt;!-- Add the following sample code for the Accounts DB, to the existing context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
+validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
+url=&quot;jdbc:sqlserver://&lt;Accounts Database Server IP: Database
+PORT&gt;;databaseName=&lt;accounts_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>&lt;!-- Add the following to the existing context.xml --&gt; For JasperReports Server 6.0
+
+&lt;!-- Add the following sample code for the Reports DB, to the existing context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremmssql&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
+validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
+url=&quot;jdbc:sqlserver://&lt;Reports Database Server IP: Database
+PORT&gt;;databaseName=&lt;reports_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
+/&gt;
+
+</code></pre>
+<pre><code>&lt;!-- Add the following sample code for the Accounts DB, to the existing context.xml --&gt;
+
+&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;
+validationQuery=&quot;SELECT 1&quot; testOnBorrow=&quot;true&quot;
+url=&quot;jdbc:sqlserver://&lt;Accounts Database Server IP: Database
+PORT&gt;;databaseName=&lt;accounts_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
+/&gt;
+
+</code></pre>
 <ul>
-<li>The following JNDI configuration is for the MySQL:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>// MySQL For JasperReports Server 7.9.2/7.1
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>//Add the following Sample code for Reports DB for MySQL
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>&lt;Resource name=&quot;jdbc/onpremmysql&quot; auth=&quot;Container&quot; type=&quot;javax.sql.DataSource&quot;
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        maxActive=&quot;100&quot; maxIdle=&quot;30&quot; maxWait=&quot;10000&quot;
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot;
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        validationQuery=&quot;SELECT 1&quot;
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        testOnBorrow=&quot;true&quot;
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    url=&quot;jdbc:mysql://&lt;Database Server IP: Database PORT&gt;/&lt;database_name&gt;&quot;
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory&quot;/&gt;
-</span></code></pre></div></li>
+<li>The following JNDI configuration is for the MySQL:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>// MySQL For JasperReports Server 8.2.0/7.9.2/7.1
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>&lt;Resource name=&quot;jdbc/onpremmysql&quot; auth=&quot;Container&quot;
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Reports Database Server IP: Database PORT&gt;/&lt;reports_database_name&gt;&quot;
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>eFactory&quot;/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>//Add the following Sample code for Accounts DB for MySQL
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Accounts Database Server IP: Database PORT&gt;/&lt;accounts_database_name&gt;&quot;
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>eFactory&quot;/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>// MySQL For JasperReports Server 6.0
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>//Add the following Sample code for Reports DB for MySQL
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>&lt;Resource name=&quot;jdbc/onpremmysql&quot; auth=&quot;Container&quot;
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>driverClassName=&quot;com.mysql.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Reports Database Server IP: Database PORT&gt;/&lt;reports_database_name&gt;&quot;
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>/Add the following Sample code for Accounts DB for MySQL
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>driverClassName=&quot;com.mysql.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Accounts Database Server IP:
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Database PORT&gt;/&lt;accounts_database_name&gt;&quot;
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>/&gt;
-</span></code></pre></div>
+<pre><code>// MySQL For JasperReports Server 7.9.2/7.1
+
+//Add the following Sample code for Reports DB for MySQL
+
+&lt;Resource name=&quot;jdbc/onpremmysql&quot; auth=&quot;Container&quot; type=&quot;javax.sql.DataSource&quot;
+        maxActive=&quot;100&quot; maxIdle=&quot;30&quot; maxWait=&quot;10000&quot;
+        username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+        driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot;
+        validationQuery=&quot;SELECT 1&quot;
+        testOnBorrow=&quot;true&quot;
+    url=&quot;jdbc:mysql://&lt;Database Server IP: Database PORT&gt;/&lt;database_name&gt;&quot;
+        factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory&quot;/&gt;
+</code></pre>
+<pre><code>// MySQL For JasperReports Server 8.2.0/7.9.2/7.1
+
+&lt;Resource name=&quot;jdbc/onpremmysql&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
+testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Reports Database Server IP: Database PORT&gt;/&lt;reports_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>//Add the following Sample code for Accounts DB for MySQL
+
+&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.mysql.cj.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
+testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Accounts Database Server IP: Database PORT&gt;/&lt;accounts_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>// MySQL For JasperReports Server 6.0
+
+//Add the following Sample code for Reports DB for MySQL
+
+&lt;Resource name=&quot;jdbc/onpremmysql&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.mysql.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
+testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Reports Database Server IP: Database PORT&gt;/&lt;reports_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
+/&gt;
+</code></pre>
+<pre><code>/Add the following Sample code for Accounts DB for MySQL
+
+&lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+maxWait=&quot;10000&quot; username=&quot;&lt;username&gt;&quot; password=&quot;&lt;password&gt;&quot;
+driverClassName=&quot;com.mysql.jdbc.Driver&quot; validationQuery=&quot;SELECT 1&quot;
+testOnBorrow=&quot;true&quot; url=&quot;jdbc:mysql://&lt;Accounts Database Server IP:
+Database PORT&gt;/&lt;accounts_database_name&gt;&quot;
+factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSBasicDataSourceFactory&quot;
+/&gt;
+
+</code></pre>
 <ul>
 <li>
 <p>The following JNDI configuration is for the Oracle:  </p>
@@ -3066,29 +3933,31 @@ Based on your Oracle database version, select the following options:<br />
 </blockquote>
 </li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>//Sample code for Oracle
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    &lt;Resource name=&quot;jdbc/onpremoracle&quot; auth=&quot;Container&quot;
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        maxWait=&quot;10000&quot; username=&quot;&lt;reportDatabaseName&gt;&quot;
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        password=&quot;&lt;password&gt;&quot; driverClassName=&quot;oracle.jdbc.OracleDriver&quot;
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        validationQuery=&quot;SELECT 1 from Dual&quot; testOnBorrow=&quot;true&quot;
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        url=&quot;jdbc:oracle:thin:@ &lt;Reports Database Server IP:
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        DatabasePORT&gt;:Service_ID
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        eFactory&quot;/&gt;
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>        &lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>        type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        maxWait=&quot;10000&quot; username=&quot;&lt;accountsDatabaseName&gt;&quot;
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        password=&quot;&lt;password&gt;&quot; driverClassName=&quot;oracle.jdbc.OracleDriver&quot;
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        validationQuery=&quot;SELECT 1 from Dual&quot; testOnBorrow=&quot;true&quot;
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>        url=&quot;jdbc:oracle:thin:@ &lt;Accounts Database Server IP:
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>        DatabasePORT&gt;:Service_ID
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>        factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>        eFactory&quot;/&gt;
-</span></code></pre></div>
+<pre><code>//Sample code for Oracle
+
+    &lt;Resource name=&quot;jdbc/onpremoracle&quot; auth=&quot;Container&quot;
+        type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+        maxWait=&quot;10000&quot; username=&quot;&lt;reportDatabaseName&gt;&quot;
+        password=&quot;&lt;password&gt;&quot; driverClassName=&quot;oracle.jdbc.OracleDriver&quot;
+        validationQuery=&quot;SELECT 1 from Dual&quot; testOnBorrow=&quot;true&quot;
+        url=&quot;jdbc:oracle:thin:@ &lt;Reports Database Server IP:
+        DatabasePORT&gt;:Service_ID
+        factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+        eFactory&quot;/&gt;
+
+</code></pre>
+<pre><code>        &lt;Resource name=&quot;jdbc/onpremaccounts&quot; auth=&quot;Container&quot;
+
+        type=&quot;javax.sql.DataSource&quot; maxActive=&quot;100&quot; maxIdle=&quot;30&quot;
+        maxWait=&quot;10000&quot; username=&quot;&lt;accountsDatabaseName&gt;&quot;
+        password=&quot;&lt;password&gt;&quot; driverClassName=&quot;oracle.jdbc.OracleDriver&quot;
+        validationQuery=&quot;SELECT 1 from Dual&quot; testOnBorrow=&quot;true&quot;
+        url=&quot;jdbc:oracle:thin:@ &lt;Accounts Database Server IP:
+        DatabasePORT&gt;:Service_ID
+        factory=&quot;com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourc
+        eFactory&quot;/&gt;
+
+</code></pre>
 <blockquote>
 <p><strong><em>Important:</em></strong>  For versions of Oracle 12 c and earlier, where the database service ID is used instead of service name, used the following URL:<code>"url="jdbc:oracle:thin:@ &lt;Database Server IP: Database PORT&gt;:&lt;database_name&gt;"</code> </p>
 <p><strong><em>Important:</em></strong> If you are using the latest JasperReports Server V6.2 or higher, <a href="#Step2">add a new JNDI configuration</a> as custom dashboard feature is available in the latest package. The resource name value should be <code>jdbc/onpremaccounts</code> for all supported database types.  </p>
@@ -3117,8 +3986,6 @@ Based on your Oracle database version, select the following options:<br />
 
 
 
-
-
                 
               </article>
             </div>
@@ -3129,7 +3996,7 @@ Based on your Oracle database version, select the following options:<br />
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -3167,14 +4034,10 @@ Based on your Oracle database version, select the following options:<br />
     </div>
     
     
-    
-      
-      
-      
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>
