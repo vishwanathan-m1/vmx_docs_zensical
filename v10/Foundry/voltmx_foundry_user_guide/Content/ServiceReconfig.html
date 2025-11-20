@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#service-reconfiguration" class="md-skip">
+        <a href="#service-re-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -3699,18 +3699,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reconfigure-the-schema-name-in-relational-database-connectors" class="md-nav__link">
+  <a href="#re-configure-the-schema-name-in-relational-database-connectors" class="md-nav__link">
     <span class="md-ellipsis">
-      Reconfigure the Schema Name in Relational Database Connectors
+      Re-configure the Schema Name in Relational Database Connectors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reset-values-for-reconfigured-services" class="md-nav__link">
+  <a href="#reset-values-for-re-configured-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Reset Values for Reconfigured Services
+      Reset Values for Re-configured Services
     </span>
   </a>
   
@@ -4619,18 +4619,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reconfigure-the-schema-name-in-relational-database-connectors" class="md-nav__link">
+  <a href="#re-configure-the-schema-name-in-relational-database-connectors" class="md-nav__link">
     <span class="md-ellipsis">
-      Reconfigure the Schema Name in Relational Database Connectors
+      Re-configure the Schema Name in Relational Database Connectors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reset-values-for-reconfigured-services" class="md-nav__link">
+  <a href="#reset-values-for-re-configured-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Reset Values for Reconfigured Services
+      Reset Values for Re-configured Services
     </span>
   </a>
   
@@ -4651,31 +4651,39 @@
                   
 
 
-<p>User Guide: <a href="Publish.html">Publish</a> &gt; <a href="ReconfigPublish.html">Reconfiguration at Publish</a> &gt; Use Case</p>
-<h1 id="service-reconfiguration">Service Reconfiguration</h1>
-<p>In an Enterprise, as a best practice, the development enterprise backend systems are maintained separately from the production enterprise backend systems. Foundry supports the ability to follow the best practice by providing DEV, QA and PROD environments. DEV and QA environments are typically configured to communicate with development enterprise backend and PROD is configured to communicate with Production enterprise backend.</p>
-<p>Service Reconfiguration lets you use the same service against different environments by providing the ability to change the connection parameters to a backend while publishing an app to an environment.</p>
+<p>User Guide: <a href="Publish.html">Publish</a> &gt; <a href="ReconfigPublish.html">Re-configuration at Publish</a> &gt; Use Case</p>
+<h1 id="service-re-configuration">Service Re-configuration</h1>
+<p>In an Enterprise, as a best practice, the development enterprise back-end systems are maintained separately from the production enterprise back-end systems. Foundry supports the ability to follow the best practice by providing DEV, QA and PROD environments. DEV and QA environments are typically configured to communicate with development enterprise back-end and PROD is configured to communicate with Production enterprise back-end.</p>
+<p>Service Re-configuration lets you use the same service against different environments by providing the ability to change the connection parameters to a back-end while publishing an app to an environment.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> <strong>Full</strong> publish method is selected by default, you can switch to <strong>Incremental</strong> publish to reduce publish duration. Refer to <a href="Publish.html">Publish &gt; Delta Publish</a>.</p>
 </blockquote>
 <h2 id="use-case">Use Case</h2>
-<p>You can use service reconfiguration based on the following scenarios:</p>
-<p>A developer can use an app configuration in the current workspace and publish the reconfigured app to another environment. A developer can reconfigure only a few entities (such as base URL, User ID, and password).</p>
-<p>For example, currently, an endpoint URL of an integration service of the app is configured as <code>https://qa.sample.com</code>, which is a QA environment. But after an app is published in a PROD environment, a developer wants the integration service to communicate to a production endpoint - for example, <code>https://sample.com</code>. In such cases, a developer can reconfigure the endpoint URL from http://sample.test.com  to  https://sample.com, and publish the app to a PROD environment. </p>
-<p>Reconfiguring a Service  </p>
+<p>You can use service re-configuration based on the following scenarios:</p>
+<p>A developer can use an app configuration in the current workspace and publish the re-configured app to another environment. A developer can re-configure only a few entities (such as base URL, User ID, and password).</p>
+<p>For example, currently, an endpoint URL of an integration service of the app is configured as <code>https://qa.sample.com</code>, which is a QA environment. But after an app is published in a PROD environment, a developer wants the integration service to communicate to a production endpoint - for example, <code>https://sample.com</code>. In such cases, a developer can re-configure the endpoint URL from http://sample.test.com  to  https://sample.com, and publish the app to a PROD environment. </p>
+<p>Re-configuring a Service  </p>
 <hr />
-<p>To reconfigure a service from the <strong>Publish</strong> tab, do the following:</p>
+<p>To re-configure a service from the <strong>Publish</strong> tab, do the following:</p>
 <ol>
-<li>From the <strong>Services and Web Client</strong> tab, select the required environment.</li>
-<li>Click <strong>Configure and Publish</strong>. The <strong>Configuration</strong> page is displayed.<br />
-<a href="Resources/Images/AppReconfigPublish1.png"><img alt="" src="Resources/Images/AppReconfigPublish1_thumb_0_48.png" /></a></li>
-<li>Select the required service type from the list. You can also configure the <a href="AppReconfig.html">app</a> related information from here. The service types available in the list are as follows:<ul>
+<li>
+<p>From the <strong>Services and Web Client</strong> tab, select the required environment.</p>
+</li>
+<li>
+<p>Click <strong>Configure and Publish</strong>. The <strong>Configuration</strong> page is displayed.<br />
+<a href="Resources/Images/AppReconfigPublish1.png"><img alt="" src="Resources/Images/AppReconfigPublish1_thumb_0_48.png" /></a></p>
+</li>
+<li>
+<p>Select the required service type from the list. You can also configure the <a href="AppReconfig.html">app</a> related information from here. The service types available in the list are as follows:</p>
+<ul>
 <li>Identity Services</li>
 <li>Integration Services</li>
 <li>Object Service</li>
 </ul>
 </li>
-<li>The app displays the selected service details with default connection parameters and configurable connection parameters.</li>
+<li>
+<p>The app displays the selected service details with default connection parameters and configurable connection parameters.</p>
+</li>
 </ol>
 <p>The list of the configurable connection parameters vary for each service type. Following is the list of configurable connection parameters with respect to each service type and adapter.</p>
 <p><a href="javascript:void(0);"><img alt="Closed" src="../Skins/Default/Stylesheets/Images/transparent.gif" />Identity Service</a></p>
@@ -4689,7 +4697,7 @@
 <tbody>
 <tr>
 <td>Okta Login</td>
-<td>Domain name&gt; <strong><em>Note:</em></strong> Refresh the other URLs on the domain name to point to the new reconfigured URL. Client ID Client Secret</td>
+<td>Domain name&gt; <strong><em>Note:</em></strong> Refresh the other URLs on the domain name to point to the new re-configured URL. Client ID Client Secret</td>
 </tr>
 <tr>
 <td>OAuth Services (Out of the box OAuth connectors like Microsoft, Linkedin)</td>
@@ -4732,23 +4740,23 @@
 <tbody>
 <tr>
 <td>XML</td>
-<td>Base URL - you can reconfigure the base URL. Web Authentication - you can configure the authentication modes. ignore proxy - you can reconfigure the proxy (for on-premises only).</td>
+<td>Base URL - you can re-configure the base URL. Web Authentication - you can configure the authentication modes. ignore proxy - you can re-configure the proxy (for on-premises only).</td>
 </tr>
 <tr>
 <td>JSON</td>
-<td>Base URL - you can reconfigure the base URL. Web Authentication - you can configure the authentication modes. ignore proxy - you can reconfigure the proxy (for on-premises only).</td>
+<td>Base URL - you can re-configure the base URL. Web Authentication - you can configure the authentication modes. ignore proxy - you can re-configure the proxy (for on-premises only).</td>
 </tr>
 <tr>
 <td>SOAP</td>
-<td>Base URL - you can reconfigure the base URL. Web Authentication - you can configure the authentication modes. ignore proxy - you can reconfigure the proxy (for on-premises only).</td>
+<td>Base URL - you can re-configure the base URL. Web Authentication - you can configure the authentication modes. ignore proxy - you can re-configure the proxy (for on-premises only).</td>
 </tr>
 <tr>
 <td>SAP</td>
-<td>If you choose Select authentication service as <strong>Use Existing Identity Provider</strong>, you cannot reconfigure any entities. If you choose Select authentication service as <strong>Specify Login Endpoint</strong>, you can reconfigure the entities such as gateway address, port, and header prefix.</td>
+<td>If you choose Select authentication service as <strong>Use Existing Identity Provider</strong>, you cannot re-configure any entities. If you choose Select authentication service as <strong>Specify Login Endpoint</strong>, you can re-configure the entities such as gateway address, port, and header prefix.</td>
 </tr>
 <tr>
 <td>Salesforce</td>
-<td>If you choose Salesforce Authentication Type as <strong>Use Existing Identity Provider</strong>, you cannot reconfigure any entities. If you choose Salesforce Authentication Type as <strong>Specify Login Endpoint</strong>, you can reconfigure the entities such as client ID, client secret, username, and password.</td>
+<td>If you choose Salesforce Authentication Type as <strong>Use Existing Identity Provider</strong>, you cannot re-configure any entities. If you choose Salesforce Authentication Type as <strong>Specify Login Endpoint</strong>, you can re-configure the entities such as client ID, client secret, username, and password.</td>
 </tr>
 <tr>
 <td>Java</td>
@@ -4776,7 +4784,15 @@
 </tr>
 <tr>
 <td>OpenAPI (Swagger)</td>
-<td>Connection Parameters: <br>- Host URL <br>- Base Path <br>- Scheme (for Swagger 2.0 only)<br><strong><em>Note:</em></strong> If the Swagger file does not contain a scheme, <strong>https</strong> is selected by default. If the Swagger file contains both <strong>http</strong> and <strong>https</strong>, <strong>http</strong> is selected by default.<br>Reconfiguring the scheme is only available on VoltMX Foundry versions V9 SP3 or later. If your runtime server version is V9 SP2 or earlier, the reconfigured scheme from the Foundry Console is not honored at run time.</td>
+<td>Connection Parameters: <br>- Host URL <br>- Base Path <br>- Scheme (for Swagger 2.0 only)<br><strong><em>Note:</em></strong> If the Swagger file does not contain a scheme, <strong>https</strong> is selected by default. If the Swagger file contains both <strong>http</strong> and <strong>https</strong>, <strong>http</strong> is selected by default.<br>Re-configuring the scheme is only available on Volt Foundry versions V9 SP3 or later. If your runtime server version is V9 SP2 or earlier, the re-configured scheme from the Foundry Console is not honored at run time.</td>
+</tr>
+<tr>
+<td>HCL Universal Orchestrator</td>
+<td>Connection Parameters: <br>- Server URL <br>- Server Description <br><strong><em>Note:</em></strong> Re-configuring the Server URL is only available on Volt Foundry versions V10 FP2 or later.</td>
+</tr>
+<tr>
+<td>HCL AION</td>
+<td>Connection Parameters: <br>- Server URL <br>- Server Description <br><strong><em>Note:</em></strong> Re-configuring the Server URL is only available on Volt Foundry versions V10 FP2 or later.</td>
 </tr>
 <tr>
 <td>Salesforce</td>
@@ -4803,11 +4819,11 @@
 <tbody>
 <tr>
 <td>SAP</td>
-<td>If you choose Select authentication service as <strong>Use Existing Identity Provider</strong>, you cannot reconfigure any entities. If you choose Select authentication service as <strong>Specify Login Endpoint</strong>, you can reconfigure the entities such as gateway address, port, and header prefix.</td>
+<td>If you choose Select authentication service as <strong>Use Existing Identity Provider</strong>, you cannot re-configure any entities. If you choose Select authentication service as <strong>Specify Login Endpoint</strong>, you can re-configure the entities such as gateway address, port, and header prefix.</td>
 </tr>
 <tr>
 <td>Salesforce</td>
-<td>If you choose Salesforce Authentication Type as <strong>Use Existing Identity Provider</strong>, you cannot reconfigure any entities. If you choose Salesforce Authentication Type as <strong>Specify Login Endpoint</strong>, you can reconfigure the entities such as client ID, client secret, username, and password.</td>
+<td>If you choose Salesforce Authentication Type as <strong>Use Existing Identity Provider</strong>, you cannot re-configure any entities. If you choose Salesforce Authentication Type as <strong>Specify Login Endpoint</strong>, you can re-configure the entities such as client ID, client secret, username, and password.</td>
 </tr>
 <tr>
 <td>Relational Database</td>
@@ -4849,7 +4865,7 @@
 <tr>
 <td>1</td>
 <td>Identity Service Configuration</td>
-<td>Displays the Identity Services configuration details for app reconfiguration.</td>
+<td>Displays the Identity Services configuration details for app rec-onfiguration.</td>
 </tr>
 <tr>
 <td>1. a</td>
@@ -4879,17 +4895,17 @@
 <tr>
 <td>1. f</td>
 <td>Configurations</td>
-<td>Compares the reconfigured services.</td>
+<td>Compares the re-configured services.</td>
 </tr>
 <tr>
 <td>1. g</td>
 <td><strong>Reset to Default Values</strong> Reset to Default Value Reset to Current Env. Config</td>
-<td>Resets the values of reconfigured services.</td>
+<td>Resets the values of re-configured services.</td>
 </tr>
 <tr>
 <td>2</td>
 <td><strong>SAVE &amp; PUBLISH</strong></td>
-<td>Saves and publishes the reconfigured app to an environment.</td>
+<td>Saves and publishes the re-configured app to an environment.</td>
 </tr>
 </tbody>
 </table>
@@ -4915,19 +4931,19 @@
 <p>In <strong>Show Content</strong>, you can select the required option to change the view of the content within the service based on their values. The options available are as follows:</p>
 <ul>
 <li>
-<p><strong>All Values</strong>: Click <strong>All Values</strong> if you want to view all values including reconfigured values for the selected filter in the <strong>View By</strong> section.<br />
+<p><strong>All Values</strong>: Click <strong>All Values</strong> if you want to view all values including re-configured values for the selected filter in the <strong>View By</strong> section.<br />
     For example, if you change User ID and Password for Salesforce service, shown below.</p>
 <p><img alt="" src="Resources/Images/AllValues_555x110.bmp" />  </p>
 </li>
 <li>
-<p><strong>Edited Values</strong>: Click <strong>Edited Values</strong> if you want to view only the reconfigured values for the selected filter in the <strong>View By</strong> section.<br />
+<p><strong>Edited Values</strong>: Click <strong>Edited Values</strong> if you want to view only the re-configured values for the selected filter in the <strong>View By</strong> section.<br />
     For example, if you change User ID and Password for Salesforce service, shown below.</p>
 <p><img alt="" src="Resources/Images/Edited_Values_551x107.bmp" /></p>
 </li>
 </ul>
 </li>
 <li>
-<p>In the work area, follow these steps to reconfigure values in the services:</p>
+<p>In the work area, follow these steps to re-configure values in the services:</p>
 <ol>
 <li>
 <p>To change any value, click the value. For example, to change the base URL, click it.</p>
@@ -4938,11 +4954,11 @@
 <li>
 <p>Edit the value in the text box . For example, change  <code>com</code>   to  <code>net</code>.</p>
 <blockquote>
-<p><strong><em>Important:</em></strong>  When you reconfigure a value, click the <strong>save</strong> button to save the changes. If you click anywhere else on the page, the changes will be lost, and you will get only the previous data.</p>
+<p><strong><em>Important:</em></strong>  When you re-configure a value, click the <strong>save</strong> button to save the changes. If you click anywhere else on the page, the changes will be lost, and you will get only the previous data.</p>
 </blockquote>
 </li>
 <li>
-<p>Click <strong>save</strong>. The system adds an <strong>undo</strong> button next to each reconfigured values.</p>
+<p>Click <strong>save</strong>. The system adds an <strong>undo</strong> button next to each re-configured values.</p>
 <p><img alt="" src="Resources/Images/Reconfig3.png" /></p>
 </li>
 </ol>
@@ -4953,11 +4969,11 @@
 </ul>
 <p>You can also do the following tasks from the service details page:</p>
 <ul>
-<li><a href="#compare-reconfigured-services">Compare Reconfigured Integration Services</a></li>
-<li><a href="#reset-values-for-reconfigured-services">Reset Values for Reconfigured Integration Services</a></li>
+<li><a href="#compare-reconfigured-services">Compare Re-configured Integration Services</a></li>
+<li><a href="#reset-values-for-reconfigured-services">Reset Values for Re-configured Integration Services</a></li>
 </ul>
-<h2 id="reconfigure-the-schema-name-in-relational-database-connectors">Reconfigure the Schema Name in Relational Database Connectors</h2>
-<p>In <strong>Integration Service Configuration</strong>, you can reconfigure the schema name in Relational Database Connectors using JSON. To reconfigure the schema name, follow these steps:</p>
+<h2 id="re-configure-the-schema-name-in-relational-database-connectors">Re-configure the Schema Name in Relational Database Connectors</h2>
+<p>In <strong>Integration Service Configuration</strong>, you can re-configure the schema name in Relational Database Connectors using JSON. To re-configure the schema name, follow these steps:</p>
 <ul>
 <li>
 <p>Under <strong>Schema Mapping JSON</strong>, click against the service to enter the schema name.</p>
@@ -4969,13 +4985,13 @@
 </ul>
 </li>
 </ul>
-<p>The system adds an <strong>undo</strong> button next to each reconfigured value.</p>
+<p>The system adds an <strong>undo</strong> button next to each re-configured value.</p>
 <ul>
 <li>Click <strong>Save and Publish</strong> to start the publishing.</li>
 </ul>
-<p>Compare Reconfigured Services  </p>
+<p>Compare Re-configured Services  </p>
 <hr />
-<p>In the service details page, after you reconfigure values of services, you can compare the details of all services. You cannot edit any fields in the compare dialog.</p>
+<p>In the service details page, after you re-configure values of services, you can compare the details of all services. You cannot edit any fields in the compare dialog.</p>
 <ol>
 <li>
 <p>In the App configuration page, click <strong>Configurations</strong> on the required service configuration row.<br />
@@ -4986,9 +5002,9 @@
 <li>
 <p>Service Name: Displays the service name.</p>
 </li>
-<li>Parameter: Displays the field name that is reconfigurable.</li>
+<li>Parameter: Displays the field name that is re-configurable.</li>
 <li>Default Value: Displays the value configured in the design time.</li>
-<li>Current Env. Value:Displays reconfigured value in the current environment.</li>
+<li>Current Env. Value:Displays re-configured value in the current environment.</li>
 <li>
 <p>Edited Value: Displays the edited value for the selected environment.</p>
 <blockquote>
@@ -4999,16 +5015,16 @@
 <p>Click the <strong>Close</strong> button at the top-right corner to exit the dialog.</p>
 </li>
 </ol>
-<h2 id="reset-values-for-reconfigured-services">Reset Values for Reconfigured Services</h2>
-<p>In the service details page, after you reconfigure values of services, you can reset the values to the default configuration or to the current environment configuration.<br />
+<h2 id="reset-values-for-re-configured-services">Reset Values for Re-configured Services</h2>
+<p>In the service details page, after you re-configure values of services, you can reset the values to the default configuration or to the current environment configuration.<br />
 <img alt="" src="Resources/Images/reset1.PNG" />  </p>
 <blockquote>
 <p><strong><em>Important:</em></strong>  When you modify a field and save the service, the system overrides old values with the new values in the current environment clipboard.</p>
 </blockquote>
 <p>To reset to default values, follow these steps:</p>
 <ul>
-<li><strong>Reset to Default Value</strong>: After you reconfigure a value in the work area, and when you choose <strong>Reset to Default Value</strong>, the system resets the reconfigured values to the default values that are configured in the current workspace - for example, Developer environment.</li>
-<li><strong>Reset to Current Environment Config</strong>: Contains last saved values. After you reconfigure a value in the work area, when you choose <strong>Reset to Current Environment Config</strong>, the system resets all values to the current environment (last saved values).</li>
+<li><strong>Reset to Default Value</strong>: After you re-configure a value in the work area, and when you choose <strong>Reset to Default Value</strong>, the system resets the re-configured values to the default values that are configured in the current workspace - for example, Developer environment.</li>
+<li><strong>Reset to Current Environment Config</strong>: Contains last saved values. After you re-configure a value in the work area, when you choose <strong>Reset to Current Environment Config</strong>, the system resets all values to the current environment (last saved values).</li>
 </ul>
 
 

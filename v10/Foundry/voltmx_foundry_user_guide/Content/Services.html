@@ -3137,6 +3137,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4635,10 +4639,10 @@
 <h1 id="integration">Integration</h1>
 <h2 id="overview">Overview</h2>
 <p>An Integration Service is an application component that represents the application interaction with an external system or data source. A service definition comprises the meta-data or the configurations required to exchange data with the external system or data source. For example, the configurations can be service type, Endpoint URL, service ID, type (HTTP/HTTPS), request parameters, response parameters, preprocessors and postprocessors, and authentication credentials if required.</p>
-<p>For more hands-on approach on how to implement Integration Services, import and preview the <strong>News and Weather</strong> app using Volt MX Iris.<br />
+<p>For more hands-on approach on how to implement Integration Services, import and preview the <strong>News and Weather</strong> app using Volt Iris.<br />
 <img alt="" src="Resources/Images/Download_Button_08_202x33.png" /></p>
 <h2 id="use-cases">Use Cases</h2>
-<p>If you want to develop an app which enables users to browse through news headlines with different categories such as <em>Top Stories</em>, <em>World</em>, <em>Science</em>, <em>Technology</em>, <em>Sports</em>, weather conditions and so on. In this scenario, you need to use Integration services of Volt MX Foundry to fetch data from 3rd party news and weather APIs, which populates the same data in the front end of the app.</p>
+<p>If you want to develop an app which enables users to browse through news headlines with different categories such as <em>Top Stories</em>, <em>World</em>, <em>Science</em>, <em>Technology</em>, <em>Sports</em>, weather conditions and so on. In this scenario, you need to use Integration services of Volt Foundry to fetch data from 3rd party news and weather APIs, which populates the same data in the front end of the app.</p>
 <h2 id="workflow-of-integration-services">Workflow of Integration Services</h2>
 <p>The following workflow describes the various stages of Integration services:</p>
 <p><img alt="" src="Resources/Images/Integration-workflow_740x416.png" /></p>
@@ -4650,7 +4654,7 @@
 </thead>
 <tbody>
 <tr>
-<td>a. <strong>Request</strong> A client sends a <strong>request</strong> to Volt MX Foundry.<br> b. <strong>Filter</strong><br> c. <strong>Message Parser (JSON, Form Encoded)</strong><br> d. <strong>Pre-Processor</strong> After Volt MX Foundry receives the call from the device, Volt MX Foundry executes custom Java/JS code based on the configured <strong>Pre-Processor</strong> before making any outbound calls.The custom Java/JS code is typically used to decide on what service to call. The custom code can also perform data validation on the request input.<br> e. <strong>Request Builder (Velocity Template)</strong> For adapters (such as XML, JSON), user can format the request sent to an enterprise backend by defining a <a href="http://velocity.apache.org/">velocity template</a>.<br> f. <strong>Adapters</strong> An adapter is the component that communicates to the backend. it takes the formatted request from the request builder and sends it to the enterprise backend. In addition to the out of the box adapters, we can import adapters from <a href="https://marketplace.voltmx.com/domain/general?category=2124">VoltMX Marketplace</a>.<br> <strong><em>Note</em>:</strong> You can select the <strong>Enable pass-through</strong> check box in the <strong>Request Input</strong> tab for Volt MX Foundry to forward the headers and body of clients request to the back end as is.</td>
+<td>a. <strong>Request</strong> A client sends a <strong>request</strong> to Volt Foundry.<br> b. <strong>Filter</strong><br> c. <strong>Message Parser (JSON, Form Encoded)</strong><br> d. <strong>Pre-Processor</strong> After Volt Foundry receives the call from the device, Volt Foundry executes custom Java/JS code based on the configured <strong>Pre-Processor</strong> before making any outbound calls. The custom Java/JS code is typically used to decide on what service to call. The custom code can also perform data validation on the request input.<br> e. <strong>Request Builder (Velocity Template)</strong> For adapters (such as XML, JSON), user can format the request sent to an enterprise backend by defining a <a href="http://velocity.apache.org/">velocity template</a>.<br> f. <strong>Adapters</strong> An adapter is the component that communicates to the backend. it takes the formatted request from the request builder and sends it to the enterprise back-end. In addition to the out of the box adapters, we can import adapters from <a href="https://marketplace.voltmx.com/domain/general?category=2124">VoltMX Marketplace</a>.<br> <strong><em>Note</em>:</strong> You can select the <strong>Enable pass-through</strong> check box in the <strong>Request Input</strong> tab for Volt Foundry to forward the headers and body of clients request to the back end as is.</td>
 </tr>
 </tbody>
 </table>
@@ -4662,13 +4666,13 @@
 </thead>
 <tbody>
 <tr>
-<td>a. <strong>Adapters</strong> An adapter receives the response from the enterprise backend for further processing in Volt MX Foundry.<br> b. <strong>Response Builder</strong> Volt MX Foundry extracts data from the backend payload using <strong>XPath</strong> or <strong>JSON Path</strong> in the form of response parameters.<br> c.<strong>Post-Processor</strong> After extracting the data, Foundry executes the custom Java/JS code based on the configured <strong>Post-Processor</strong>.The custom Java/JS code is typically used to process the data before returning the data to the client. The custom code can also determine whether Foundry needs to make additional service calls.<br> c. <strong>Message Formatter (JSON)</strong><br> e. <strong>Filter</strong> <br> f. <strong>Response</strong> Volt MX Foundry sends the transformed <strong>response</strong> (in JSON) to the client.<br> <strong><em>Note:</em></strong> You can select the <strong>Enable pass-through</strong> check box in the <strong>Response Output</strong> tab for Volt MX Foundry to forward the response from the back end as is to clients.</td>
+<td>a. <strong>Adapters</strong> An adapter receives the response from the enterprise backend for further processing in Volt Foundry.<br> b. <strong>Response Builder</strong> Volt Foundry extracts data from the backend payload using <strong>XPath</strong> or <strong>JSON Path</strong> in the form of response parameters.<br> c.<strong>Post-Processor</strong> After extracting the data, Foundry executes the custom Java/JS code based on the configured <strong>Post-Processor</strong>.The custom Java/JS code is typically used to process the data before returning the data to the client. The custom code can also determine whether Foundry needs to make additional service calls.<br> c. <strong>Message Formatter (JSON)</strong><br> e. <strong>Filter</strong> <br> f. <strong>Response</strong> Volt Foundry sends the transformed <strong>response</strong> (in JSON) to the client.<br> <strong><em>Note:</em></strong> You can select the <strong>Enable pass-through</strong> check box in the <strong>Response Output</strong> tab for Volt Foundry to forward the response from the back-end as is to clients.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="supported-endpoint-adapters">Supported Endpoint Adapters</h2>
 <p>Volt MX Integration supports back-end connectivity to Web services such as XML, JSON, JavaScript, Database, Salesforce and so on. If external data sources do not expose the services to these well-known interfaces, you can build a Java service with a custom code.</p>
-<p>Out of the box Volt MX Foundry Integration Services support connectivity to the following different endpoint adapters.</p>
+<p>Out of the box Volt Foundry Integration Services support connectivity to the following different endpoint adapters.</p>
 <table>
   <tr>
     <th>Endpoint Type</th>
@@ -4775,7 +4779,7 @@
     <td>
       <a href="JavaScript_Adapter.html">JavaScript</a>
     </td>
-    <td>JavaScript integrates plain JavaScript services to applications in Volt MX Foundry.</td>
+    <td>JavaScript integrates plain JavaScript services to applications in Volt Foundry.</td>
     <td>
       <ul>
         <li>
@@ -4863,7 +4867,7 @@
     <td>
       <a href="Mulesoft.html">MuleSoft</a>
     </td>
-    <td>MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt MX Foundry, developers can interact with more than 50 types of adapters.</td>
+    <td>MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt Foundry, developers can interact with more than 50 types of adapters.</td>
     <td>
       <ul>
         <li>
@@ -4911,7 +4915,7 @@
     <td>
       <a href="Relational_Database_Adapter.html">Database</a>
     </td>
-    <td>With Volt MX Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt MX Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views.</td>
+    <td>With Volt Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views.</td>
     <td>
       <ul>
         <li>
@@ -4944,7 +4948,7 @@
     <td>
       <a href="MongoDB_Adapter.html">MongoDB</a>
     </td>
-    <td>With Volt MX Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents.</td>
+    <td>With Volt Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents.</td>
     <td>
       <ul>
         <li>
@@ -5032,7 +5036,7 @@
     <td>
       <a href="SAP_JCO.html">SAP JCo</a>
     </td>
-    <td>Volt MX Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions.</td>
+    <td>Volt Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions.</td>
     <td>
       <ul>
         <li>
@@ -5052,7 +5056,7 @@
       </ul>
     </td>
   </tr>
-  <tr>
+<tr>
     <td>
       <a href="Open_API__Swagger_.html">Open API (Swagger)</a>
     </td>
@@ -5078,9 +5082,57 @@
   </tr>
   <tr>
     <td>
+      <a href="HCL_Universal_Orchestrator_.html">HCL Universal Orchestrator</a>
+    </td>
+    <td>HCL Universal Orchestrator framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="HCL_Universal_Orchestrator_.html#configuring-an-HCL-Universal-Ochestrator-end-point-adapter">HCL Universal Orchestrator Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="HCL_Universal_Orchestrator_.html#creating-operations-for-HCL-Universal-Orchestrator">Create Operations for HCL Universal Orchestrator</a>
+          <ul>
+            <li>
+              <a href="HCL_Universal_Orchestrator_.html#configuring-request-parameters">Configure Request Operation for HCL Universal Orchestrator</a>
+            </li>
+            <li>
+              <a href="HCL_Universal_Orchestrator_.html#configuring-response-parameters">Configure Response Operation for HCL Universal Orchestrator</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="HCL_AION_.html">HCL AION</a>
+    </td>
+    <td>HCL AION framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs.</td>
+    <td>
+      <ul>
+        <li>
+          <a href="HCL_AION_.html#configuring-an-HCL-AION-end-point-adapter">HCL AION Endpoint Adapter</a>
+        </li>
+        <li>
+          <a href="HCL_AION_.html#creating-operations-for-HCL-AION">Create Operations for HCL AION</a>
+          <ul>
+            <li>
+              <a href="HCL_AION_.html#configuring-request-parameters">Configure Request Operation for HCL AION</a>
+            </li>
+            <li>
+              <a href="HCL_AION_.html#configuring-response-parameters">Configure Response Operation for HCL AION</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <a href="Email_Adapter.html">Email Adapter</a>
     </td>
-    <td>The Email Adapter is used to send emails from the client app. You can also view the status of the emails that were sent by using the Email service. The email requests are sent to the Volt MX Foundry server which in-turn redirects them to the Volt MX Engagement server.</td>
+    <td>The Email Adapter is used to send emails from the client app. You can also view the status of the emails that were sent by using the Email service. The email requests are sent to the Volt Foundry server which in-turn redirects them to the Volt MX Engagement server.</td>
     <td>
       <ul>
         <li>
@@ -5104,7 +5156,7 @@
     <td>
       <a href="S3_File_Storage.html">AWS S3</a>
     </td>
-    <td>The AWS S3 service on Volt MX Foundry connects to the specified S3 bucket, and also performs supported operations.</td>
+    <td>The AWS S3 service on Volt Foundry connects to the specified S3 bucket, and also performs supported operations.</td>
     <td>
       <ul>
         <li>
@@ -5128,7 +5180,7 @@
     <td>
       <a href="Cloudian_File_Storage.html">Cloudian</a>
     </td>
-    <td>The Cloudian service on Volt MX Foundry connects to the specified S3 bucket on a HyperStore, and also performs supported operations.</td>
+    <td>The Cloudian service on Volt Foundry connects to the specified S3 bucket on a HyperStore, and also performs supported operations.</td>
     <td>
       <ul>
         <li>
@@ -5213,18 +5265,18 @@
 | [SOAP](SOAP.md#top) | Simple Object Access Protocol (SOAP) is a messaging protocol that uses WSDL to describe the functionality of a SOAP based web service. | [Configure SOAP Endpoint Adapter](SOAP.md#configure-soap-end-point-adapter) [Create Operations for SOAP](SOAP.md#create-operations-for-soap) [Configure Request Operation for SOAP](SOAP.md#configure-request-operation-for-soap) [](XML.md#configure-response-operation-for-xml)[Configure Response Operation for SOAP](SOAP.md#configure-response-operation-for-soap) |
 | [JSON](JSON.md) | JavaScript Object Notation (JSON) communicates with an external data source over the HTTP protocol, and returns a response in JSON format. | [Configure JSON Endpoint Adapter](JSON.md#configure-json-end-point-adapter) [Create Operations for JSON](JSON.md#create-operations-for-json) [Configure Request Operation for JSON](JSON.md#configure-request-operation-for-json) [Configure Response Operation for JSON](JSON.md#configure-response-operation-for-json) |
 | [Java](Java_Adapter.md) | Java Adapter interacts with the software application that does not support restful APIs using a custom Java code. | [Configure Java Endpoint Adapter](Java_Adapter.md#configure-java-endpoint-adapter) [Create Operations for Java](Java_Adapter.md#create-operations-for-java) [Configure Request Operation for Java](Java_Adapter.md#configure-request-operation-for-java) [Configure Response Operation for Java](Java_Adapter.md#configure-response-operation-for-java) |
-| [JavaScript](JavaScript_Adapter.md) | JavaScript integrates plain JavaScript services to applications in Volt MX Foundry. | [Configure JavaScript Endpoint Adapter](JavaScript_Adapter.md#JavaScript_Service) [Create Operations for JavaScript](JavaScript_Adapter.md#create-operations-for-javascript) [Configure Request Operation for JavaScript](JavaScript_Adapter.md#configure-request-operation-for-javascript) [Configure Response Operation for JavaScript](JavaScript_Adapter.md#configure-response-operation-for-javascript) |
+| [JavaScript](JavaScript_Adapter.md) | JavaScript integrates plain JavaScript services to applications in Volt Foundry. | [Configure JavaScript Endpoint Adapter](JavaScript_Adapter.md#JavaScript_Service) [Create Operations for JavaScript](JavaScript_Adapter.md#create-operations-for-javascript) [Configure Request Operation for JavaScript](JavaScript_Adapter.md#configure-request-operation-for-javascript) [Configure Response Operation for JavaScript](JavaScript_Adapter.md#configure-response-operation-for-javascript) |
 | [API Proxy](API_Proxy_Adapter.md) | API Proxy forwards the request and response without intermediate transformation (without affecting the actual request and response). | [Configure API Proxy Endpoint Adapter](API_Proxy_Adapter.md#configure-api-proxy-endpoint-adapter) [Create Operations for API Proxy](API_Proxy_Adapter.md#create-operations-for-api-proxy) |
 | [Mock Data](MockData_Adapter.md) | The Volt MX Mock Data adapter capability helps you to continue to develop apps when the back-end services that an app connects to are not ready to be leveraged. | [Configure Mock Data Endpoint Adapter](MockData_Adapter.md#StubOperations) [Create Operations for Mock Data](MockData_Adapter.md#StubOperations) [Configure Request Operation for Mock Data](MockData_Adapter.md#Stub_Request) [Configure Response Operation for Mock Data](MockData_Adapter.md#Stub_Output) |
 | [VoltMX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md) | Volt MX SAP Gateway communicates with external SAP services over supported HTTP methods. | [Configure Volt MX SAP Gateway Endpoint Adapter](VoltMX_SAP_Gateway_Adapter.md#configure-sap-gateway-endpoint-adapter) [Create Operations for Volt MX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md#create-operations-for-sap-gateway) [Configure Request Operation for Volt MX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md#configure-request-operation-for-sap-gateway) [Configure Response Operation for Volt MX SAP Gateway](VoltMX_SAP_Gateway_Adapter.md#configure-response-operation-for-sap-gateway) |
-| [MuleSoft](Mulesoft.md) | MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt MX Foundry, developers can interact with more than 50 types of adapters. | [Configure MuleSoft Endpoint Adapter](Mulesoft.md#configure-mulesoft-end-point-adapter) [Create Operations for MuleSoft](Mulesoft.md#create-operations-for-mulesoft) [Configure Request Operation for MuleSoft](Mulesoft.md#configure-request-operation-for-mulesoft) [Configure Response Operation for MuleSoft](Mulesoft.md#configure-response-operation-for-mulesoft) |
+| [MuleSoft](Mulesoft.md) | MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt Foundry, developers can interact with more than 50 types of adapters. | [Configure MuleSoft Endpoint Adapter](Mulesoft.md#configure-mulesoft-end-point-adapter) [Create Operations for MuleSoft](Mulesoft.md#create-operations-for-mulesoft) [Configure Request Operation for MuleSoft](Mulesoft.md#configure-request-operation-for-mulesoft) [Configure Response Operation for MuleSoft](Mulesoft.md#configure-response-operation-for-mulesoft) |
 | [AWS API Gateway](AWS_API_Gateway_Adapter.md) | AWS API Gateway connects to the services configured and deployed under API Gateway Service in Amazon Web Services. | [Configure AWS API Gateway Endpoint Adapter](AWS_API_Gateway_Adapter.md#configure-aws-api-gateway-endpoint-adapter) [Create Operations for AWS API Gateway](AWS_API_Gateway_Adapter.md#create-operations-for-aws-api-gateway) [Configure Request Operation for AWS API Gateway](AWS_API_Gateway_Adapter.md#configure-request-operation-for-aws-api-gateway) [Configure Response Operation for AWS API Gateway](AWS_API_Gateway_Adapter.md#configure-response-operation-for-aws-api-gateway) |
-| [Database](Relational_Database_Adapter.md) | With Volt MX Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt MX Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views. | [Configure Database Endpoint Adapter](Relational_Database_Adapter.md#configure-database-end-point-adapter) [Create CRUD Operations for Database Adapter](Relational_Database_Adapter.md#create-crud-operations-for-database-adapter) [Configure CRUD Operations for a Database Adapter](Relational_Database_Adapter.md#configure-crud-operations-for-a-database-adapter) [Create a Database Record with Create Operation](Relational_Database_Adapter.md#create-a-database-record-with-create-operation)[Query a Database and Display Information with Read Operation](Relational_Database_Adapter.md#how-to-query-a-database-and-display-information-with-the-read-operation)[Update a Database Record with Update Operation](Relational_Database_Adapter.md#how-to-update-a-database-record-with-update-operation)[Delete a Database Record with Delete Operation](Relational_Database_Adapter.md#how-to-delete-a-database-record-with-delete-operation) |
-| [MongoDB](MongoDB_Adapter.md) | With Volt MX Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents. | [Configure MongoDB Adapter](MongoDB_Adapter.md#configure-mongodb-end-point-adapter) [Create and Configure CRUD Operations for a MongoDB Adapter](MongoDB_Adapter.md#create-and-configure-operations-for-mongodb-adapter) |
+| [Database](Relational_Database_Adapter.md) | With Volt Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views. | [Configure Database Endpoint Adapter](Relational_Database_Adapter.md#configure-database-end-point-adapter) [Create CRUD Operations for Database Adapter](Relational_Database_Adapter.md#create-crud-operations-for-database-adapter) [Configure CRUD Operations for a Database Adapter](Relational_Database_Adapter.md#configure-crud-operations-for-a-database-adapter) [Create a Database Record with Create Operation](Relational_Database_Adapter.md#create-a-database-record-with-create-operation)[Query a Database and Display Information with Read Operation](Relational_Database_Adapter.md#how-to-query-a-database-and-display-information-with-the-read-operation)[Update a Database Record with Update Operation](Relational_Database_Adapter.md#how-to-update-a-database-record-with-update-operation)[Delete a Database Record with Delete Operation](Relational_Database_Adapter.md#how-to-delete-a-database-record-with-delete-operation) |
+| [MongoDB](MongoDB_Adapter.md) | With Volt Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents. | [Configure MongoDB Adapter](MongoDB_Adapter.md#configure-mongodb-end-point-adapter) [Create and Configure CRUD Operations for a MongoDB Adapter](MongoDB_Adapter.md#create-and-configure-operations-for-mongodb-adapter) |
 | [RAML](RAML_Adapter.md) | RESTful API Modeling Language (RAML) is a YAML-based language for describing RESTful APIs. | [Configure RAML Endpoint Adapter](RAML_Adapter.md#configure-raml-endpoint-adapter) [Create Operations for RAML](RAML_Adapter.md#create-operations-for-raml) [Configure Request Operation for RAML](RAML_Adapter.md#configure-request-operation-for-raml) [Configure Response Operation for RAML](RAML_Adapter.md#configure-response-operation-for-raml) |
 | [Salesforce](Salesforce_Adapter.md) | Salesforce uses a protocol-specific adapter to connect to an external system and access its data. | [Configure Salesforce Endpoint Adapter](Salesforce_Adapter.md#configure-salesforce-endpoint-adapter) [Create Operations for Salesforce](Salesforce_Adapter.md#create-operations-for-salesforce) [Configure Request Operation for Salesforce](Salesforce_Adapter.md#configure-request-operation-for-salesforce) [Configure Response Operation for Salesforce](Salesforce_Adapter.md#configure-response-operation-for-salesforce) |
 | [IBM MQ](IBM_MQ_service.md) | IBM MQ server 9.0.0 version is a messaging middleware that simplifies and accelerates the integration of diverse applications and business data across multiple platforms. Volt MX uses the IBM MQ service to secure the message delivery and reduce the risk of data loss. | [Configure IBM MQ Endpoint Adapter](IBM_MQ_service.md#configure-ibm-mq-end-point-adapter) [Create Operations for IBM MQ](IBM_MQ_service.md#create-operations-for-ibm-mq-service) [Configure Request Operation for IBM MQ](IBM_MQ_service.md#configure-request-operation-for-ibm-mq) [Configure Response Operation for IBM MQ](IBM_MQ_service.md#configure-response-operation-for-ibm-mq) |
-| [SAP JCo](SAP_JCO.md) | Volt MX Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions. | [Configure SAP JCo Endpoint Adapter](SAP_JCO.md#configure-sap-jco-end-point-adapter) [Create Operations for SAP JCo](SAP_JCO.md#create-operations-for-sap-jco) [Configure Request Operation for SAP JCo](SAP_JCO.md#configure-request-operation-for-sap-jco) [Configure Response Operation for SAP JCo](SAP_JCO.md#configure-response-operation-for-sap-jco) |
+| [SAP JCo](SAP_JCO.md) | Volt Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions. | [Configure SAP JCo Endpoint Adapter](SAP_JCO.md#configure-sap-jco-end-point-adapter) [Create Operations for SAP JCo](SAP_JCO.md#create-operations-for-sap-jco) [Configure Request Operation for SAP JCo](SAP_JCO.md#configure-request-operation-for-sap-jco) [Configure Response Operation for SAP JCo](SAP_JCO.md#configure-response-operation-for-sap-jco) |
 | [Open API (Swagger)](Open_API__Swagger_.md) | Swagger is a powerful open API specification framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs. | [Configure Open API (Swagger) Endpoint Adapter](Open_API__Swagger_.md#configuring-an-openapi-swagger-end-point-adapter) [Create Operations for Open API (Swagger)](Open_API__Swagger_.md#creating-operations-for-openapi-swagger) [Configure Request Operation for Open API (Swagger)](Open_API__Swagger_.md#configuring-request-parameters) [Configure Response Operation for Open API (Swagger)](Open_API__Swagger_.md#configuring-response-parameters) | -->
 
 
