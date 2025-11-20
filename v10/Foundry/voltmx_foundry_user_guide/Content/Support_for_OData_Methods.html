@@ -9,13 +9,16 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/Support_for_OData_Methods.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_user_guide/Content/Support_for_OData_Methods.html">
       
       
+      
+      
+        
       
       
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -23,9 +26,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -37,7 +72,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -46,11 +81,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -123,7 +157,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -143,67 +177,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -222,11 +225,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -239,11 +241,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -256,13 +257,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -276,11 +276,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -293,13 +292,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -313,13 +311,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -333,11 +330,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -350,13 +346,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -370,13 +365,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -420,7 +414,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -440,9 +434,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -460,9 +461,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -484,59 +492,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -552,9 +543,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -576,59 +574,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -676,353 +657,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1038,9 +708,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1086,92 +763,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1184,10 +803,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -1217,55 +835,16 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
     
     
     
       
+      
+    
+    
+      
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1273,921 +852,20 @@
         
   
   
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+  
+    <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
       
+  
   
   <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
   
-  <span class="md-ellipsis">
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -2196,579 +874,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -2787,6 +892,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -2803,7 +909,9 @@
         <li class="md-nav__item">
   <a href="#support-for-odata-methods-substringof-and-indexof" class="md-nav__link">
     <span class="md-ellipsis">
-      Support for ODATA Methods (substringof and indexof)
+      
+        Support for ODATA Methods (substringof and indexof)
+      
     </span>
   </a>
   
@@ -2812,7 +920,9 @@
         <li class="md-nav__item">
   <a href="#odata-v2-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      ODATA V2 Methods
+      
+        ODATA V2 Methods
+      
     </span>
   </a>
   
@@ -2822,7 +932,9 @@
           <li class="md-nav__item">
   <a href="#startswith" class="md-nav__link">
     <span class="md-ellipsis">
-      startswith
+      
+        startswith
+      
     </span>
   </a>
   
@@ -2831,7 +943,9 @@
           <li class="md-nav__item">
   <a href="#endswith" class="md-nav__link">
     <span class="md-ellipsis">
-      endswith
+      
+        endswith
+      
     </span>
   </a>
   
@@ -2840,7 +954,9 @@
           <li class="md-nav__item">
   <a href="#substringof" class="md-nav__link">
     <span class="md-ellipsis">
-      substringof
+      
+        substringof
+      
     </span>
   </a>
   
@@ -2849,7 +965,9 @@
           <li class="md-nav__item">
   <a href="#tolower" class="md-nav__link">
     <span class="md-ellipsis">
-      tolower
+      
+        tolower
+      
     </span>
   </a>
   
@@ -2858,7 +976,9 @@
           <li class="md-nav__item">
   <a href="#toupper" class="md-nav__link">
     <span class="md-ellipsis">
-      toupper
+      
+        toupper
+      
     </span>
   </a>
   
@@ -2872,7 +992,9 @@
         <li class="md-nav__item">
   <a href="#odata-v4-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      ODATA V4 Methods
+      
+        ODATA V4 Methods
+      
     </span>
   </a>
   
@@ -2882,7 +1004,9 @@
           <li class="md-nav__item">
   <a href="#in" class="md-nav__link">
     <span class="md-ellipsis">
-      in
+      
+        in
+      
     </span>
   </a>
   
@@ -2891,7 +1015,9 @@
           <li class="md-nav__item">
   <a href="#startswith_1" class="md-nav__link">
     <span class="md-ellipsis">
-      startswith
+      
+        startswith
+      
     </span>
   </a>
   
@@ -2900,7 +1026,9 @@
           <li class="md-nav__item">
   <a href="#not-startswith" class="md-nav__link">
     <span class="md-ellipsis">
-      not startswith
+      
+        not startswith
+      
     </span>
   </a>
   
@@ -2909,7 +1037,9 @@
           <li class="md-nav__item">
   <a href="#endswith_1" class="md-nav__link">
     <span class="md-ellipsis">
-      endswith
+      
+        endswith
+      
     </span>
   </a>
   
@@ -2918,7 +1048,9 @@
           <li class="md-nav__item">
   <a href="#not-endswith" class="md-nav__link">
     <span class="md-ellipsis">
-      not endswith
+      
+        not endswith
+      
     </span>
   </a>
   
@@ -2927,7 +1059,9 @@
           <li class="md-nav__item">
   <a href="#length" class="md-nav__link">
     <span class="md-ellipsis">
-      length
+      
+        length
+      
     </span>
   </a>
   
@@ -2936,7 +1070,9 @@
           <li class="md-nav__item">
   <a href="#date-and-time" class="md-nav__link">
     <span class="md-ellipsis">
-      Date and Time
+      
+        Date and Time
+      
     </span>
   </a>
   
@@ -2945,7 +1081,9 @@
           <li class="md-nav__item">
   <a href="#year" class="md-nav__link">
     <span class="md-ellipsis">
-      year
+      
+        year
+      
     </span>
   </a>
   
@@ -2954,7 +1092,9 @@
           <li class="md-nav__item">
   <a href="#month" class="md-nav__link">
     <span class="md-ellipsis">
-      month
+      
+        month
+      
     </span>
   </a>
   
@@ -2963,7 +1103,9 @@
           <li class="md-nav__item">
   <a href="#day" class="md-nav__link">
     <span class="md-ellipsis">
-      day
+      
+        day
+      
     </span>
   </a>
   
@@ -2972,7 +1114,9 @@
           <li class="md-nav__item">
   <a href="#hour" class="md-nav__link">
     <span class="md-ellipsis">
-      hour
+      
+        hour
+      
     </span>
   </a>
   
@@ -2981,7 +1125,9 @@
           <li class="md-nav__item">
   <a href="#minute" class="md-nav__link">
     <span class="md-ellipsis">
-      minute
+      
+        minute
+      
     </span>
   </a>
   
@@ -2990,7 +1136,9 @@
           <li class="md-nav__item">
   <a href="#second" class="md-nav__link">
     <span class="md-ellipsis">
-      second
+      
+        second
+      
     </span>
   </a>
   
@@ -2999,7 +1147,9 @@
           <li class="md-nav__item">
   <a href="#data-comparison-filters" class="md-nav__link">
     <span class="md-ellipsis">
-      Data comparison filters
+      
+        Data comparison filters
+      
     </span>
   </a>
   
@@ -3008,7 +1158,9 @@
           <li class="md-nav__item">
   <a href="#round" class="md-nav__link">
     <span class="md-ellipsis">
-      Round
+      
+        Round
+      
     </span>
   </a>
   
@@ -3017,7 +1169,9 @@
           <li class="md-nav__item">
   <a href="#trim" class="md-nav__link">
     <span class="md-ellipsis">
-      trim
+      
+        trim
+      
     </span>
   </a>
   
@@ -3026,7 +1180,9 @@
           <li class="md-nav__item">
   <a href="#indexof" class="md-nav__link">
     <span class="md-ellipsis">
-      indexof
+      
+        indexof
+      
     </span>
   </a>
   
@@ -3035,7 +1191,9 @@
           <li class="md-nav__item">
   <a href="#expand-with-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      Expand with $filter
+      
+        Expand with $filter
+      
     </span>
   </a>
   
@@ -3044,7 +1202,9 @@
           <li class="md-nav__item">
   <a href="#concat" class="md-nav__link">
     <span class="md-ellipsis">
-      concat
+      
+        concat
+      
     </span>
   </a>
   
@@ -3053,7 +1213,9 @@
           <li class="md-nav__item">
   <a href="#arithmetic-operators" class="md-nav__link">
     <span class="md-ellipsis">
-      Arithmetic Operators
+      
+        Arithmetic Operators
+      
     </span>
   </a>
   
@@ -3062,7 +1224,9 @@
           <li class="md-nav__item">
   <a href="#1-addition" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Addition
+      
+        1. Addition
+      
     </span>
   </a>
   
@@ -3071,7 +1235,9 @@
           <li class="md-nav__item">
   <a href="#2-subtraction" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Subtraction
+      
+        2. Subtraction
+      
     </span>
   </a>
   
@@ -3080,7 +1246,9 @@
           <li class="md-nav__item">
   <a href="#3-multiplication" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Multiplication
+      
+        3. Multiplication
+      
     </span>
   </a>
   
@@ -3089,7 +1257,9 @@
           <li class="md-nav__item">
   <a href="#4-division" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Division
+      
+        4. Division
+      
     </span>
   </a>
   
@@ -3098,7 +1268,9 @@
           <li class="md-nav__item">
   <a href="#5-modulo" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Modulo
+      
+        5. Modulo
+      
     </span>
   </a>
   
@@ -3119,17 +1291,27 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_user_guide/Content/Support_for_OData_Methods.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
   <h1>Support for OData Methods</h1>
 
-<h2 id="support-for-odata-methods-substringof-and-indexof">Support for ODATA Methods (substringof and indexof)</h2>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
+<h2 id="support-for-odata-methods-substringof-and-indexof">Support for ODATA Methods (substringof and indexof)<a class="headerlink" href="#support-for-odata-methods-substringof-and-indexof" title="Permanent link">&para;</a></h2>
 <p>A URL with a $filter query (for RDBMS/ business adapter) identifies a subset of the entries from the collection of entries identified by the expression of the URL. The subset is determined by selecting only the entries that satisfy the predicate expression specified by the query option.</p>
-<pre><code> $filter=expression
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> $filter=expression
+</span></code></pre></div>
 <p>The expression language that is used in $filter operators are limited across business adapters. The values can be strings enclosed in single quotes, numbers, Boolean values (such as true or false), and nested values.</p>
 <p>$filter for RDBMS connector supports the following string methods.</p>
 <ul>
@@ -3140,290 +1322,292 @@
 <p><a href="#odata-v4-methods">ODATA V4 Methods</a></p>
 </li>
 </ul>
-<h2 id="odata-v2-methods">ODATA V2 Methods</h2>
-<h3 id="startswith">startswith</h3>
+<h2 id="odata-v2-methods">ODATA V2 Methods<a class="headerlink" href="#odata-v2-methods" title="Permanent link">&para;</a></h2>
+<h3 id="startswith">startswith<a class="headerlink" href="#startswith" title="Permanent link">&para;</a></h3>
 <p>String function to filters all the records where column starts with provided String.</p>
 <p><strong>API Usage</strong></p>
-<pre><code> $filter=startswith('colname', 'expression') eq [true|false]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> $filter=startswith(&#39;colname&#39;, &#39;expression&#39;) eq [true|false]
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filters all the records where <code>lastname</code> startswith <code>doe</code>.</p>
-<pre><code> startswith('lastname','doe') eq true
-</code></pre>
-<h3 id="endswith">endswith</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> startswith(&#39;lastname&#39;,&#39;doe&#39;) eq true
+</span></code></pre></div>
+<h3 id="endswith">endswith<a class="headerlink" href="#endswith" title="Permanent link">&para;</a></h3>
 <p>String function to filters all the records where column endswith provided String.</p>
 <p>API Usage</p>
-<pre><code> $filter=endswith('colname', 'expression') eq [true|false]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> $filter=endswith(&#39;colname&#39;, &#39;expression&#39;) eq [true|false]
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filters all the records where <code>firstname</code> endswith <code>hon</code>.</p>
-<pre><code> endswith('firstname', 'hon') eq true
-</code></pre>
-<h3 id="substringof">substringof</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> endswith(&#39;firstname&#39;, &#39;hon&#39;) eq true
+</span></code></pre></div>
+<h3 id="substringof">substringof<a class="headerlink" href="#substringof" title="Permanent link">&para;</a></h3>
 <p>String function to filters all the records where column contains provided String.</p>
 <p>API Usage</p>
-<pre><code> $filter=substringof('colname', 'expression') eq [true|false]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> $filter=substringof(&#39;colname&#39;, &#39;expression&#39;) eq [true|false]
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filters all the records where <code>email</code> contains <code>gmail</code>.</p>
-<pre><code> substringof('email', 'gmail') eq true
-</code></pre>
-<h3 id="tolower">tolower</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> substringof(&#39;email&#39;, &#39;gmail&#39;) eq true
+</span></code></pre></div>
+<h3 id="tolower">tolower<a class="headerlink" href="#tolower" title="Permanent link">&para;</a></h3>
 <p>String filters all the records by matching the exact value with all the values present in the column after changing them to lower case.</p>
 <p>API Usage</p>
-<pre><code> $filter=tolower('colname') eq 'value'
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> $filter=tolower(&#39;colname&#39;) eq &#39;value&#39;
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filters all the records where <code>name</code> equals to  <code>alfreds futterkiste</code>.</p>
-<pre><code> $filter=tolower('name') eq 'alfreds futterkiste'
-</code></pre>
-<h3 id="toupper">toupper</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> $filter=tolower(&#39;name&#39;) eq &#39;alfreds futterkiste&#39;
+</span></code></pre></div>
+<h3 id="toupper">toupper<a class="headerlink" href="#toupper" title="Permanent link">&para;</a></h3>
 <p>String function filters all the records by matching the exact value with all the values present in the column after changing them to uppercase.</p>
 <p>API Usage</p>
-<pre><code> $filter=toupper('colname') eq 'value'
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a> $filter=toupper(&#39;colname&#39;) eq &#39;value&#39;
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filters all the records where <code>name</code> equals to  <code>ALFREDS FUTTERKISTE</code>.</p>
-<pre><code> $filter=toupper('name') eq 'ALFREDS FUTTERKISTE'
-</code></pre>
-<h2 id="odata-v4-methods">ODATA V4 Methods</h2>
-<h3 id="in">in</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a> $filter=toupper(&#39;name&#39;) eq &#39;ALFREDS FUTTERKISTE&#39;
+</span></code></pre></div>
+<h2 id="odata-v4-methods">ODATA V4 Methods<a class="headerlink" href="#odata-v4-methods" title="Permanent link">&para;</a></h2>
+<h3 id="in">in<a class="headerlink" href="#in" title="Permanent link">&para;</a></h3>
 <p><strong>A</strong>. 'in' with eq(equals) verb:</p>
 <p>This 'in' operator filter all the records that equals the list of values in the column of the table.
 Syntax rules are comma separated list of values without spaces and enclosed in parentheses(). Don't use square brackets [] or braces {}.</p>
 <p>API Usage</p>
-<pre><code> $filter=colname eq in ('value','value')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a> $filter=colname eq in (&#39;value&#39;,&#39;value&#39;)
+</span></code></pre></div>
 <p>Example:</p>
-<pre><code> Name eq in ('Milk','Cheese')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a> Name eq in (&#39;Milk&#39;,&#39;Cheese&#39;)
+</span></code></pre></div>
 <p><strong>B</strong>. 'in' with ne(not equals) verb:</p>
 <p>This 'in' operator filter all the records that not equals the list of values in the column of the table.
 Syntax rules are comma separated list of values without spaces and enclosed in parentheses(). Don't use square brackets [] or braces {}.</p>
 <p>API Usage</p>
-<pre><code> $filter=colname ne in ('value','value')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a> $filter=colname ne in (&#39;value&#39;,&#39;value&#39;)
+</span></code></pre></div>
 <p>Example:</p>
-<pre><code> Name ne in ('butter','bread')
-</code></pre>
-<p><strong>C</strong>. 'in' with possible pair values verb:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a> Name ne in (&#39;butter&#39;,&#39;bread&#39;)
+</span></code></pre></div>
+<strong>C</strong>. 'in' with possible pair values verb:</p>
 <p>This 'in' operator checks whether a pair of columns has one of several possible pair values. If a pair matches the values in the column, gets the respone.Syntax rules are comma separated list of values without spaces and enclosed in square brackets []. Max 30 colnames are allowed.</p>
 <p>API Usage</p>
-<pre><code>$filter=[colname,colname,..] in [['value1','value3'],['value1','value4'],..]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$filter=[colname,colname,..] in [[&#39;value1&#39;,&#39;value3&#39;],[&#39;value1&#39;,&#39;value4&#39;],..]
+</span></code></pre></div>
 <p>Example:</p>
-<pre><code>[FirstName,LastName] in [['John','Doe'],['Jane','Smith']]
-</code></pre>
-<h3 id="startswith_1">startswith</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>[FirstName,LastName] in [[&#39;John&#39;,&#39;Doe&#39;],[&#39;Jane&#39;,&#39;Smith&#39;]]
+</span></code></pre></div>
+<h3 id="startswith_1">startswith<a class="headerlink" href="#startswith_1" title="Permanent link">&para;</a></h3>
 <p>String function to filter all the records where column startswith provided String. </p>
 <p>API Usage</p>
-<pre><code> $filter=startswith('colname','expression')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a> $filter=startswith(&#39;colname&#39;,&#39;expression&#39;)
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>firstname</code> startswith <code>nas</code>.</p>
-<pre><code> startswith('firstname','nas')
-</code></pre>
-<h3 id="not-startswith">not startswith</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a> startswith(&#39;firstname&#39;,&#39;nas&#39;)
+</span></code></pre></div>
+<h3 id="not-startswith">not startswith<a class="headerlink" href="#not-startswith" title="Permanent link">&para;</a></h3>
 <p>String function to filter all the records where column does not startswith provided String.</p>
 <p>API Usage</p>
-<pre><code> $filter=not startswith('colname','expression')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a> $filter=not startswith(&#39;colname&#39;,&#39;expression&#39;)
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>lastname</code> does not startswith <code>daq</code>.</p>
-<pre><code> not startswith('lastname','daq')
-</code></pre>
-<h3 id="endswith_1">endswith</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a> not startswith(&#39;lastname&#39;,&#39;daq&#39;)
+</span></code></pre></div>
+<h3 id="endswith_1">endswith<a class="headerlink" href="#endswith_1" title="Permanent link">&para;</a></h3>
 <p>String function to filter all the records where column endswith provided String.</p>
 <p>API Usage</p>
-<pre><code> $filter=endswith('colname','expression')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a> $filter=endswith(&#39;colname&#39;,&#39;expression&#39;)
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>firstname</code> endswith <code>nse</code>.</p>
-<pre><code> endswith('firstname','nse')
-</code></pre>
-<h3 id="not-endswith">not endswith</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a> endswith(&#39;firstname&#39;,&#39;nse&#39;)
+</span></code></pre></div>
+<h3 id="not-endswith">not endswith<a class="headerlink" href="#not-endswith" title="Permanent link">&para;</a></h3>
 <p>String function to filter all the records where column does not endswith provided String.</p>
 <p>API Usage</p>
-<pre><code> $filter=not endswith('colname','expression')
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a> $filter=not endswith(&#39;colname&#39;,&#39;expression&#39;)
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>firstname</code> does not endswith <code>dow</code>.</p>
-<pre><code> not endswith('firstname','dow')
-</code></pre>
-<h3 id="length">length</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a> not endswith(&#39;firstname&#39;,&#39;dow&#39;)
+</span></code></pre></div>
+<h3 id="length">length<a class="headerlink" href="#length" title="Permanent link">&para;</a></h3>
 <p>Length function to fillter all the records where column lenght equals to value. </p>
 <p>API Usage</p>
-<pre><code> $filter=length(colname) eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a> $filter=length(colname) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>Name</code> lenght eq <code>19</code>.</p>
-<pre><code> length(Name) eq 19
-</code></pre>
-<h3 id="date-and-time">Date and Time</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a> length(Name) eq 19
+</span></code></pre></div>
+<h3 id="date-and-time">Date and Time<a class="headerlink" href="#date-and-time" title="Permanent link">&para;</a></h3>
 <p>Date-time filters operates on date type column value. Column would contain date/time data. Filters will compare date/time fields to provided value and returns matched records </p>
-<h3 id="year">year</h3>
+<h3 id="year">year<a class="headerlink" href="#year" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=year('colname') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a> $filter=year(&#39;colname&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>year(BirthDate)</code> eq <code>1999</code>.</p>
-<pre><code> year(BirthDate) eq 1999
-</code></pre>
-<h3 id="month">month</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a> year(BirthDate) eq 1999
+</span></code></pre></div>
+<h3 id="month">month<a class="headerlink" href="#month" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=month('colname') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a> $filter=month(&#39;colname&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>month(BirthDate)</code> eq <code>5</code>.</p>
-<pre><code> month(BirthDate) eq 5
-</code></pre>
-<h3 id="day">day</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a> month(BirthDate) eq 5
+</span></code></pre></div>
+<h3 id="day">day<a class="headerlink" href="#day" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=day('colname') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a> $filter=day(&#39;colname&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>day(BirthDate)</code> eq <code>5</code>.</p>
-<pre><code> DAY(BirthDate) eq 5
-</code></pre>
-<h3 id="hour">hour</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a> DAY(BirthDate) eq 5
+</span></code></pre></div>
+<h3 id="hour">hour<a class="headerlink" href="#hour" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=hour('colname') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a> $filter=hour(&#39;colname&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>hour(BirthDate)</code> eq <code>10</code>.</p>
-<pre><code> hour(BirthDate) eq 10
-</code></pre>
-<h3 id="minute">minute</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a> hour(BirthDate) eq 10
+</span></code></pre></div>
+<h3 id="minute">minute<a class="headerlink" href="#minute" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=minute('colname') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a> $filter=minute(&#39;colname&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>minute(BirthDate)</code> eq <code>45</code>.</p>
-<pre><code> minute(BirthDate) eq 45
-</code></pre>
-<h3 id="second">second</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a> minute(BirthDate) eq 45
+</span></code></pre></div>
+<h3 id="second">second<a class="headerlink" href="#second" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=secound('colname') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a> $filter=secound(&#39;colname&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>second(BirthDate)</code> eq <code>40</code>.</p>
-<pre><code> second(BirthDate) eq 40
-</code></pre>
-<h3 id="data-comparison-filters">Data comparison filters</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a> second(BirthDate) eq 40
+</span></code></pre></div>
+<h3 id="data-comparison-filters">Data comparison filters<a class="headerlink" href="#data-comparison-filters" title="Permanent link">&para;</a></h3>
 <p>Filters to list all the recodrs where post rounding the column value is equal to provided number.</p>
 <p>### Ceiling </p>
 <p>API Usage</p>
-<pre><code> $filter=ceiling(colname) eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a> $filter=ceiling(colname) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>ceiling</code> rounds upto <code>32</code>.</p>
-<pre><code> ceiling(Freight) eq 32
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a> ceiling(Freight) eq 32
+</span></code></pre></div>
 <p>### Floor</p>
 <p>API Usage</p>
-<pre><code> $filter=floor(colname) eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a> $filter=floor(colname) eq value
+</span></code></pre></div>
 <p>Example:</p>
-<p>Below syntax filter all the records where <code>floor</code> rounds upto <code>32</code>.</p>
-<pre><code> floor(Freight) eq 32
-</code></pre>
-<h3 id="round">Round</h3>
+<p>Below syntax filter all the records where <code>floor</code> rounds upto <code>32</code>.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a> floor(Freight) eq 32
+</span></code></pre></div></p>
+<h3 id="round">Round<a class="headerlink" href="#round" title="Permanent link">&para;</a></h3>
 <p>API Usage</p>
-<pre><code> $filter=round(colname) eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a> $filter=round(colname) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where <code>round</code> rounds to  <code>32</code>.</p>
-<pre><code> round(Freight) eq 32
-</code></pre>
-<h3 id="trim">trim</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a> round(Freight) eq 32
+</span></code></pre></div>
+<h3 id="trim">trim<a class="headerlink" href="#trim" title="Permanent link">&para;</a></h3>
 <p>Trim function to filter all the records where column name with leading and trailing whitespace.</p>
 <p>API Usage</p>
-<pre><code> $filter=trim(colname) eq colname
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a> $filter=trim(colname) eq colname
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filter all the records where trim gives CompanyName without leading or trailing whitespace characters.</p>
-<pre><code> trim(CompanyName) eq CompanyName
-</code></pre>
-<h3 id="indexof">indexof</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a> trim(CompanyName) eq CompanyName
+</span></code></pre></div>
+<h3 id="indexof">indexof<a class="headerlink" href="#indexof" title="Permanent link">&para;</a></h3>
 <p>The indexof function to fillter all the records where parameter values returns the zero-based character position of the first occurrence of the second parameter in the first parameter, or -1 if the first parameter does not contain the second parameter. </p>
 <p>API Usage</p>
-<pre><code> $filter=indexof('colname','expression') eq value
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a> $filter=indexof(&#39;colname&#39;,&#39;expression&#39;) eq value
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax filters all the records where <code>Name</code> containing 'lfreds' starting at the second character.</p>
-<pre><code> indexof(Name,'lfreds') eq 1
-</code></pre>
-<p>Note : As of now it is supported only in the MySQL and in the Oracle backend databases.</p>
-<h3 id="expand-with-filter">Expand with $filter</h3>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a> indexof(Name,&#39;lfreds&#39;) eq 1
+</span></code></pre></div>
+Note : As of now it is supported only in the MySQL and in the Oracle backend databases.</p>
+<h3 id="expand-with-filter">Expand with $filter<a class="headerlink" href="#expand-with-filter" title="Permanent link">&para;</a></h3>
 <p>The <code>$expand</code> query option specifies the related resources to be included in line with retrieved resources and
 <code>$filter</code> is used to specify conditions that the data must meet.</p>
 <p>API Usage</p>
-<pre><code> $expand=Products($filter=location eq USA) 
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a> $expand=Products($filter=location eq USA) 
+</span></code></pre></div>
 <p>Example:</p>
 <p>Below syntax fetches a list of Categories. For each Category, retrieves the related Products, but only the products where the location field is equal to 'USA'.</p>
-<pre><code> Categories?$expand=Products($filter=location eq USA) 
-</code></pre>
-<p>Note : As of now it is supported only <code>eq</code></p>
-<h3 id="concat">concat</h3>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a> Categories?$expand=Products($filter=location eq USA) 
+</span></code></pre></div>
+Note : As of now it is supported only <code>eq</code></p>
+<h3 id="concat">concat<a class="headerlink" href="#concat" title="Permanent link">&para;</a></h3>
 <p>The concat function is used to concatenate (combine) two or three string values into a single string and filters data based on combined string values.</p>
 <p>API usage</p>
-<pre><code> $filter=concat(concat(colname1,', ')colname2) eq 'value1,value2'
-</code></pre>
-<p>Example</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a> $filter=concat(concat(colname1,&#39;, &#39;)colname2) eq &#39;value1,value2&#39;
+</span></code></pre></div>
+Example</p>
 <p>Below syntax fetches all the records where the concatenation of two fields(City,Country)  equals a specific value that is  Berlin, Germany</p>
-<pre><code> $filter=concat(concat(City,', '),Country) eq 'Berlin, Germany'
-</code></pre>
-<p>Note : concat supports up to three levels of concatenation</p>
-<h3 id="arithmetic-operators">Arithmetic Operators</h3>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a> $filter=concat(concat(City,&#39;, &#39;),Country) eq &#39;Berlin, Germany&#39;
+</span></code></pre></div>
+Note : concat supports up to three levels of concatenation</p>
+<h3 id="arithmetic-operators">Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permanent link">&para;</a></h3>
 <p>OData defines a set of arithmetic operators that require operands that evaluate to numeric types. Arithmetic operators are typically used to filter a collection of resources. 
 If an operand of an arithmetic operator is null, the result is null. </p>
 <p><code>$filter</code> is used to specify conditions that the data must meet.</p>
-<h3 id="1-addition">1. Addition</h3>
+<h3 id="1-addition">1. Addition<a class="headerlink" href="#1-addition" title="Permanent link">&para;</a></h3>
 <p>The add operator adds the left and right numeric operands.</p>
-<p>API Usage</p>
-<pre><code> $filter=&lt;colname&gt; add &lt;Value&gt; eq &lt;resultent_value&gt; 
-</code></pre>
+<p>API Usage
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a> $filter=&lt;colname&gt; add &lt;Value&gt; eq &lt;resultent_value&gt; 
+</span></code></pre></div></p>
 <p>Example:</p>
 <p>Below syntax fetches a list of all products with a Price of 2.55</p>
-<pre><code> $filter=Price add 2.45 eq 5.00 
-</code></pre>
-<h3 id="2-subtraction">2. Subtraction</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a> $filter=Price add 2.45 eq 5.00 
+</span></code></pre></div>
+<h3 id="2-subtraction">2. Subtraction<a class="headerlink" href="#2-subtraction" title="Permanent link">&para;</a></h3>
 <p>The sub operator subtracts the right numeric operand from the left numeric operand.</p>
-<p>API Usage</p>
-<pre><code> $filter=&lt;colname&gt; sub &lt;Value&gt; eq &lt;resultent_value&gt; 
-</code></pre>
+<p>API Usage
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a> $filter=&lt;colname&gt; sub &lt;Value&gt; eq &lt;resultent_value&gt; 
+</span></code></pre></div></p>
 <p>Example:</p>
 <p>Below syntax fetches a list of all products with a Price of 2.55:</p>
-<pre><code> filter=Price sub 0.55 eq 2.00 
-</code></pre>
-<h3 id="3-multiplication">3. Multiplication</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a> filter=Price sub 0.55 eq 2.00 
+</span></code></pre></div>
+<h3 id="3-multiplication">3. Multiplication<a class="headerlink" href="#3-multiplication" title="Permanent link">&para;</a></h3>
 <p>The mul operator multiplies the left and right numeric operands. The mul operator is also valid for multiplying a Duration value with a numeric value.</p>
-<p>API Usage</p>
-<pre><code> $filter=&lt;colname&gt; mul &lt;Value&gt; eq &lt;resultent_value&gt; 
-</code></pre>
+<p>API Usage
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a> $filter=&lt;colname&gt; mul &lt;Value&gt; eq &lt;resultent_value&gt; 
+</span></code></pre></div></p>
 <p>Example:</p>
 <p>Below syntax fetches a list of all products with a Price of 2.55</p>
-<pre><code> $filter=Price mul 2.0 eq 5.10
-</code></pre>
-<h3 id="4-division">4. Division</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a> $filter=Price mul 2.0 eq 5.10
+</span></code></pre></div>
+<h3 id="4-division">4. Division<a class="headerlink" href="#4-division" title="Permanent link">&para;</a></h3>
 <p>The div and divby operators divide the left numeric operand by the right numeric operand. They are also valid for dividing a Duration value by a numeric value.</p>
-<p>API Usage</p>
-<pre><code> $filter=&lt;colname&gt; div &lt;Value&gt; eq &lt;resultent_value&gt; 
-</code></pre>
+<p>API Usage
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a> $filter=&lt;colname&gt; div &lt;Value&gt; eq &lt;resultent_value&gt; 
+</span></code></pre></div></p>
 <p>Example:</p>
 <p>Below syntax fetches a list of all products with a Price of 2.55</p>
-<pre><code> $filter=Price div 2.55 eq 1
-</code></pre>
-<h3 id="5-modulo">5. Modulo</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a> $filter=Price div 2.55 eq 1
+</span></code></pre></div>
+<h3 id="5-modulo">5. Modulo<a class="headerlink" href="#5-modulo" title="Permanent link">&para;</a></h3>
 <p>The mod operator returns the remainder when the left numeric operand is divided by the right numeric operand.  The sign of the result is the same as the sign of the left operand. If the right operand is zero, the request fails.</p>
-<p>API Usage</p>
-<pre><code> $filter=&lt;colname&gt; mod &lt;Value&gt; eq &lt;resultent_value&gt; 
-</code></pre>
+<p>API Usage
+<div class="language-text highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a> $filter=&lt;colname&gt; mod &lt;Value&gt; eq &lt;resultent_value&gt; 
+</span></code></pre></div></p>
 <p>Example:</p>
 <p>Below syntax fetches a list of all products with a Rating exactly divisible by 5</p>
-<pre><code> $filter=Rating mod 5 eq 0 
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a> $filter=Rating mod 5 eq 0 
+</span></code></pre></div>
+
+
 
 
 
@@ -3446,7 +1630,7 @@ If an operand of an arithmetic operator is null, the result is null. </p>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -3484,10 +1668,14 @@ If an operand of an arithmetic operator is null, the result is null. </p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

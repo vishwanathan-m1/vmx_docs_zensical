@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_appfactory_user_guide/Content/TestingAnApp.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_appfactory_user_guide/Content/TestingAnApp.html">
       
       
         <link rel="prev" href="Configuring_Device_Pools.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="TestingAnAppJasmine.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -354,13 +350,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -373,6 +368,7 @@
         
   
   
+  
     
   
   
@@ -381,8 +377,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,92 +769,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1190,919 +809,54 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
     
       
       
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
   
-
-              
-            
-              
-                
   
-  
-  
-  
-    
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
   
   
   
-  
     
     
-      
-        
-      
-        
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
       
-      
-  
-  
     
-  
-  
-  
     
     
-      
-        
-      
-        
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
-        
       
     
     
-    
-    
-      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -2111,9 +865,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2122,7 +883,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Foundry
+            
+  
+    Foundry
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2136,9 +901,16 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2181,21 +953,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2332,21 +1117,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2377,21 +1175,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth Sample App Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2424,21 +1235,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../integration_services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       
@@ -2471,21 +1295,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../administering_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Administering Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2542,8 +1379,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2551,12 +1393,20 @@
         
   
   
+  
     <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Services Console User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2617,10 +1467,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" checked>
@@ -2629,9 +1483,16 @@
           <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2640,7 +1501,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_8">
             <span class="md-nav__icon md-icon"></span>
-            App Factory User Guide
+            
+  
+    App Factory User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2654,9 +1519,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2675,9 +1547,16 @@
       <a href="../../devOps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     DevOps
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2696,9 +1575,16 @@
       <a href="AppFactory_CICD_Runtime.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory CI&sol;CD Runtime
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2731,8 +1617,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2740,12 +1631,20 @@
         
   
   
+  
     <a href="Prerequisites.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       
@@ -2770,9 +1669,16 @@
       <a href="Project_Settings.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Project Settings
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2801,8 +1707,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2810,12 +1721,20 @@
         
   
   
+  
     <a href="Microservice_Projects.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Microservice Projects
+  
+
+    
   </span>
+  
   
 
       
@@ -2866,10 +1785,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8_7" checked>
@@ -2878,9 +1801,16 @@
           <label class="md-nav__link" for="__nav_9_8_7" id="__nav_9_8_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Projects
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2889,7 +1819,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_8_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_8_7">
             <span class="md-nav__icon md-icon"></span>
-            Iris Projects
+            
+  
+    Iris Projects
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2903,9 +1837,16 @@
       <a href="RunningIrisApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2924,9 +1865,16 @@
       <a href="IrisProjectVersioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Versioning an Iris project in SCM
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2945,9 +1893,16 @@
       <a href="BuildingAnApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Building an Iris App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2966,9 +1921,16 @@
       <a href="AutoTriggeredJobs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Scheduling an Iris build
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2987,9 +1949,16 @@
       <a href="BuildOnPush.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build on Push for Iris apps
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3008,9 +1977,16 @@
       <a href="Configuring_Device_Pools.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuring Device Pools
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3038,9 +2014,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Testing an App - TestNG
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3049,14 +2032,22 @@
       <a href="TestingAnApp.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Testing an App - TestNG
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3076,7 +2067,9 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisites
+      
     </span>
   </a>
   
@@ -3085,7 +2078,9 @@
         <li class="md-nav__item">
   <a href="#building-and-running-a-test" class="md-nav__link">
     <span class="md-ellipsis">
-      Building and running a test
+      
+        Building and running a test
+      
     </span>
   </a>
   
@@ -3094,7 +2089,9 @@
         <li class="md-nav__item">
   <a href="#native-test-environments" class="md-nav__link">
     <span class="md-ellipsis">
-      Native Test Environments
+      
+        Native Test Environments
+      
     </span>
   </a>
   
@@ -3104,7 +2101,9 @@
           <li class="md-nav__item">
   <a href="#standard-test-environment-run" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Test Environment Run
+      
+        Standard Test Environment Run
+      
     </span>
   </a>
   
@@ -3113,7 +2112,9 @@
           <li class="md-nav__item">
   <a href="#custom-test-environment-run-raw-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom Test Environment Run (Raw Mode)
+      
+        Custom Test Environment Run (Raw Mode)
+      
     </span>
   </a>
   
@@ -3127,7 +2128,9 @@
         <li class="md-nav__item">
   <a href="#running-tests-from-buildirisapp-job" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Tests from buildIrisApp job
+      
+        Running Tests from buildIrisApp job
+      
     </span>
   </a>
   
@@ -3136,7 +2139,9 @@
         <li class="md-nav__item">
   <a href="#test-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Results
+      
+        Test Results
+      
     </span>
   </a>
   
@@ -3146,7 +2151,9 @@
           <li class="md-nav__item">
   <a href="#native-test-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Native Test Results
+      
+        Native Test Results
+      
     </span>
   </a>
   
@@ -3155,7 +2162,9 @@
           <li class="md-nav__item">
   <a href="#desktop-web-test-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Web Test Results
+      
+        Desktop Web Test Results
+      
     </span>
   </a>
   
@@ -3164,7 +2173,9 @@
           <li class="md-nav__item">
   <a href="#test-status" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Status
+      
+        Test Status
+      
     </span>
   </a>
   
@@ -3178,7 +2189,9 @@
         <li class="md-nav__item">
   <a href="#troubleshooting-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Troubleshooting Issues
+      
+        Troubleshooting Issues
+      
     </span>
   </a>
   
@@ -3187,7 +2200,9 @@
         <li class="md-nav__item">
   <a href="#auto-triggering-tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Auto Triggering Tests
+      
+        Auto Triggering Tests
+      
     </span>
   </a>
   
@@ -3212,9 +2227,16 @@
       <a href="TestingAnAppJasmine.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Testing an App - Jasmine
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3239,8 +2261,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3248,12 +2275,20 @@
         
   
   
+  
     <a href="CustomHooksIris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Hooks for Iris jobs
+  
+
+    
   </span>
+  
   
 
       
@@ -3278,9 +2313,16 @@
       <a href="Troubleshooting.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Troubleshooting
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3299,9 +2341,16 @@
       <a href="MicroApps_BestPractices.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Micro Apps - Best Practices
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3348,8 +2397,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3357,12 +2411,20 @@
         
   
   
+  
     <a href="RunningFoundryApp.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry Projects
+  
+
+    
   </span>
+  
   
 
       
@@ -3397,8 +2459,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3406,12 +2473,20 @@
         
   
   
+  
     <a href="Database.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Database Projects
+  
+
+    
   </span>
+  
   
 
       
@@ -3436,9 +2511,16 @@
       <a href="Project_Upgrade.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Upgrading a Project
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3457,9 +2539,16 @@
       <a href="ManagingCredentials.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Managing Credentials
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3478,9 +2567,16 @@
       <a href="Results.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Results
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3499,9 +2595,16 @@
       <a href="Known_Issues.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Known Issues
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3520,9 +2623,16 @@
       <a href="Known_Issues.html#limitations" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3541,9 +2651,16 @@
       <a href="Configuration.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuration
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3562,9 +2679,16 @@
       <a href="FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Frequently Asked Questions (FAQs)
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3615,8 +2739,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3624,12 +2753,20 @@
         
   
   
+  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Deployment Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3654,9 +2791,16 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Analytics & Reporting Cloud FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3683,8 +2827,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3692,12 +2841,20 @@
         
   
   
+  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services Troubleshooting Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3732,6 +2889,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -3750,7 +2908,9 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisites
+      
     </span>
   </a>
   
@@ -3759,7 +2919,9 @@
         <li class="md-nav__item">
   <a href="#building-and-running-a-test" class="md-nav__link">
     <span class="md-ellipsis">
-      Building and running a test
+      
+        Building and running a test
+      
     </span>
   </a>
   
@@ -3768,7 +2930,9 @@
         <li class="md-nav__item">
   <a href="#native-test-environments" class="md-nav__link">
     <span class="md-ellipsis">
-      Native Test Environments
+      
+        Native Test Environments
+      
     </span>
   </a>
   
@@ -3778,7 +2942,9 @@
           <li class="md-nav__item">
   <a href="#standard-test-environment-run" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Test Environment Run
+      
+        Standard Test Environment Run
+      
     </span>
   </a>
   
@@ -3787,7 +2953,9 @@
           <li class="md-nav__item">
   <a href="#custom-test-environment-run-raw-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom Test Environment Run (Raw Mode)
+      
+        Custom Test Environment Run (Raw Mode)
+      
     </span>
   </a>
   
@@ -3801,7 +2969,9 @@
         <li class="md-nav__item">
   <a href="#running-tests-from-buildirisapp-job" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Tests from buildIrisApp job
+      
+        Running Tests from buildIrisApp job
+      
     </span>
   </a>
   
@@ -3810,7 +2980,9 @@
         <li class="md-nav__item">
   <a href="#test-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Results
+      
+        Test Results
+      
     </span>
   </a>
   
@@ -3820,7 +2992,9 @@
           <li class="md-nav__item">
   <a href="#native-test-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Native Test Results
+      
+        Native Test Results
+      
     </span>
   </a>
   
@@ -3829,7 +3003,9 @@
           <li class="md-nav__item">
   <a href="#desktop-web-test-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Web Test Results
+      
+        Desktop Web Test Results
+      
     </span>
   </a>
   
@@ -3838,7 +3014,9 @@
           <li class="md-nav__item">
   <a href="#test-status" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Status
+      
+        Test Status
+      
     </span>
   </a>
   
@@ -3852,7 +3030,9 @@
         <li class="md-nav__item">
   <a href="#troubleshooting-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Troubleshooting Issues
+      
+        Troubleshooting Issues
+      
     </span>
   </a>
   
@@ -3861,7 +3041,9 @@
         <li class="md-nav__item">
   <a href="#auto-triggering-tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Auto Triggering Tests
+      
+        Auto Triggering Tests
+      
     </span>
   </a>
   
@@ -3877,14 +3059,24 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_appfactory_user_guide/Content/TestingAnApp.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
-<h1 id="testing-an-app-testng">Testing an App - TestNG</h1>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
+<h1 id="testing-an-app-testng">Testing an App - TestNG<a class="headerlink" href="#testing-an-app-testng" title="Permanent link">&para;</a></h1>
 <p>TestNG is a testing framework that can be used for unit testing and integration testing. With the TestNG framework, App Factory uses Appium to run test cases on the Native platform, and Selenium to run test cases on the Desktop Web platform. For more information, refer to the following sections.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <details close="close">
 <p><summary>Native Prerequisites</summary></p>
 <ul>
@@ -3927,20 +3119,18 @@ The newly supported channel specific test code will not work on standard environ
 <img alt="" src="Resources/Images/dweb_641x342.png" /></li>
 <li>Make sure that the Desktop Web tests are run by using Selenium and TestNG</li>
 <li>Make sure that you run the tests on Google Chrome in headless mode before you run them on App Factory</li>
-<li>If you are running the test on App Factory, refer to the chrome driver path and browser path as follows:</li>
-</ul>
-<pre><code>System.setProperty(&quot;webdriver.chrome.driver&quot;, System.getProperty(&quot;DRIVER_PATH&quot;));  
-    String browserPath = System.getProperty(&quot;BROWSER_PATH&quot;);
-</code></pre>
-<ul>
+<li>If you are running the test on App Factory, refer to the chrome driver path and browser path as follows:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>System.setProperty(&quot;webdriver.chrome.driver&quot;, System.getProperty(&quot;DRIVER_PATH&quot;));  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    String browserPath = System.getProperty(&quot;BROWSER_PATH&quot;);
+</span></code></pre></div></li>
 <li>If you are using appscommon.jar in the test code, you can set driver path and browser path as follows:</li>
 </ul>
-<pre><code>System.setProperty(&quot;webdriver.chrome.driver&quot;, sgConfig.getDriverPath());  
-    chromeOptions.setBinary(sg.getKeyValue(browserPath));
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>System.setProperty(&quot;webdriver.chrome.driver&quot;, sgConfig.getDriverPath());  
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    chromeOptions.setBinary(sg.getKeyValue(browserPath));
+</span></code></pre></div>
 <p>where <strong>sg</strong> is an instance of SgConfiguration class and <strong>chromeOptions</strong> is an instance of ChromeOptions.</p>
 </details>
-<h2 id="building-and-running-a-test">Building and running a test</h2>
+<h2 id="building-and-running-a-test">Building and running a test<a class="headerlink" href="#building-and-running-a-test" title="Permanent link">&para;</a></h2>
 <p><strong><em>Important:</em></strong>  </p>
 <ul>
 <li>To run tests that are independent from the build process, you need a Binary URL that is public (open) and accessible on the internet. For example, a URL to an S3 bucket from the email notification that is sent by the <strong>buildIrisApp</strong> job.</li>
@@ -3985,22 +3175,22 @@ The newly supported channel specific test code will not work on standard environ
 <table cellspacing="0" class="TableStyle-Basic" style="mc-table-style: url]('Resources/TableStyles/Basic.css');width: 90%;"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 35%;"><col class="TableStyle-Basic-Column-Column1" style="width: 55%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">ANDROID_UNIVERSAL_NATIVE_BINARY_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the Android universal binaries that are generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">ANDROID_MOBILE_NATIVE_BINARY_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the Android Mobile binary that is generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">ANDROID_TABLET_NATIVE_BINARY_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the Android Tablet binary that is generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">IOS_UNIVERSAL_NATIVE_BINARY_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the iOS universal binaries that are generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">IOS_MOBILE_NATIVE_BINARY_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the iPhone binary that is generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">IOS_TABLET_NATIVE_BINARY_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the iPad binary that is generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">NATIVE_TESTS_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the binaries for the compiled test project. If you provide Git parameters, you can skip this parameter.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">TEST_ENVIRONMENT</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the environment on which the Device Farm runs the test. You can select a Standard Test Environment, or select a Custom Test Environment.For more information, refer to <a href="#Native" class="selected">Native Testing Environments</a>.If you select a Custom Test Environment, the console displays additional parameters. For more information, refer to Custom Test Environment parameters.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1">AVAILABLE_TEST_POOLS</td><td class="TableStyle-Basic-BodyA-Column1-Body1">Specifies the device pool that must be used for the tests. If a device pool is empty, the build fails.For more information, refer to <a href="Configuring_Device_Pools.md" target="_blank">Configuring Device Pools</a>.</td></tr></tbody></table>
 <p><strong>Custom Test Environment parameters</strong></p>
 <table cellspacing="0" class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 90%;"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 35%;"><col class="TableStyle-Basic-Column-Column1" style="width: 55%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">APPIUM_VERSION</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the Appium version that is used to run the tests. For information about the artifacts that are available in the notification mail for AWS Custom Environment Run, refer to <a href="BuildingAnApp.html">Building an App in AWS Custom Environment.</a></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1">TESTNG_FILES</td><td class="TableStyle-Basic-BodyA-Column1-Body1">Specifies the relative path of the TestNG.xml file in the test jar file, for example: <code class="file_names" style="font-size: 11pt;">appfactory/Testng.xml</code>.If the path is not specified, the root of the test jar file is taken as the default path.You can specify multiple file paths by using comma separated path values. For example:<code class="codefirst">voltmx/Testng.xml,voltmx/appfactory/Testng.xml,testng.xml</code><span class="autonumber"><span><b><i><span style="color: #0a9c4a;" class="mcFormatColor">Note: </span></i></b></span></span>If the specified TestNG file is not found in the source, the tests run independently similar to Standard Test Environment.</td></tr></tbody></table>
-<pre><code>
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 </details>
 <details close="close">
 <p><summary>Desktop Web build parameters</summary></p>
 <table cellspacing="0" class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 90%;"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 35%;"><col class="TableStyle-Basic-Column-Column1" style="width: 55%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">FOUNDRY_APP_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the Foundry app with which the Desktop Web WAR file is published.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">DESKTOPWEB_TESTS_URL</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the URL of the Desktop Web binary that is generated by a build job or generated locally.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">AVAILABLE_BROWSERS</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the browser on which you want to run the Desktop Web tests.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1">SCREEN_RESOLUTIONS</td><td class="TableStyle-Basic-BodyD-Column1-Body1">Specifies the resolution at which the browser must launch and run the tests.</td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1">RUN_DESKTOPWEB_TESTS_ARGUMENTS</td><td class="TableStyle-Basic-BodyA-Column1-Body1">Specifies additional arguments (parameters) that must be passed in the Maven command for the Desktop Web tests.For Example: If you pass <span style="font-family: monospace;">-Dsurefire.suiteXmlFiles=resources/Testng.xml</span>, the argument triggers the tests from the <span style="font-family: monospace;">resources/Testng.xml</span> file. If you do not pass the argument, <span style="font-family: monospace;">Testng.xml</span> is selected as a default file.</td></tr></tbody></table>
-<pre><code>
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 </details>
 <details close="close">
 <p><summary>Custom Hooks</summary></p>
 <table cellspacing="0" class="TableStyle-Basic" style="mc-table-style: url]('Resources/TableStyles/Basic.css');width: 90%;"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 35%;"><col class="TableStyle-Basic-Column-Column1" style="width: 55%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><th class="TableStyle-Basic-BodyE-Column1-Body1">Parameter</th><th class="TableStyle-Basic-BodyD-Column1-Body1">Description</th></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1">RUN_CUSTOM_HOOKS</td><td class="TableStyle-Basic-BodyA-Column1-Body1">Specifies whether Custom Hooks must be run in the after the tests are executed (the Post-Test stage). For more information, refer to <a href="CustomHooks.md" target="_blank">Custom Hooks</a>.</td></tr></tbody></table>
-<pre><code>
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 </details>
-<h2 id="native-test-environments">Native Test Environments</h2>
+<h2 id="native-test-environments">Native Test Environments<a class="headerlink" href="#native-test-environments" title="Permanent link">&para;</a></h2>
 <p>App Factory uses the AWS Device farm to run test cases on specific devices. The Device Farm offers two types of environments to run the tests.</p>
 <ul>
 <li>
@@ -4018,7 +3208,7 @@ The newly supported channel specific test code will not work on standard environ
 <blockquote>
 <p><strong><em>Note:</em></strong> For information about the difference between Standard and Custom Test Environments, refer to <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0083659">Standard and Custom test Environments</a>.</p>
 </blockquote>
-<h3 id="standard-test-environment-run">Standard Test Environment Run</h3>
+<h3 id="standard-test-environment-run">Standard Test Environment Run<a class="headerlink" href="#standard-test-environment-run" title="Permanent link">&para;</a></h3>
 <p>The test run process consists of the following steps:</p>
 <ol>
 <li>Checkout of test project if GIT_BRANCH and GIT_CREDENTIALS are selected.</li>
@@ -4035,11 +3225,11 @@ The newly supported channel specific test code will not work on standard environ
 <img alt="" src="Resources/Images/TA_RunTestsStageView.png" /></p>
 <blockquote>
 <p><strong>Note:</strong><br />
-<em>   You can capture screenshots and display them in the email template under the respective test cases, when the tests are running through AWS Device Farm.  <br />
+*   You can capture screenshots and display them in the email template under the respective test cases, when the tests are running through AWS Device Farm.  <br />
     For more information, refer to <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0083618">Run Appium Test Cases for Iris Application through App Factory</a>.<br />
-</em>   For more information about writing test cases for native Iris applications from scratch, and running them through App Factory using AWS Device Farm, refer to <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0083618">Run Appium Test Cases</a>.  </p>
+*   For more information about writing test cases for native Iris applications from scratch, and running them through App Factory using AWS Device Farm, refer to <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0083618">Run Appium Test Cases</a>.  </p>
 </blockquote>
-<h3 id="custom-test-environment-run-raw-mode">Custom Test Environment Run (Raw Mode)</h3>
+<h3 id="custom-test-environment-run-raw-mode">Custom Test Environment Run (Raw Mode)<a class="headerlink" href="#custom-test-environment-run-raw-mode" title="Permanent link">&para;</a></h3>
 <p>When you customize the test environment, you can specify the commands that must be run on the Device Farm to execute your tests. Running a test on a Custom Test Environment ensures that the tests on Device Farm run similar to the tests that run on your local machine. A Custom Test Environment does not generate granular reports for every test case.</p>
 <p>In a Custom test environment, you can select the Appium version on which the test must be run. All the TestNG annotations, such as grouping and parallel tests/methods, are supported.</p>
 <blockquote>
@@ -4050,8 +3240,8 @@ The newly supported channel specific test code will not work on standard environ
 <p>You can configure the Maven build to package the <code>testng.xml</code> with the Testing jar file as part of the maven build.</p>
 <blockquote>
 <p><strong>Note:</strong><br />
-<em>   In Device Farm's standard environment, only a subset of features are supported for the testng.xml file.<br />
-</em>   Use Custom environment if the following are required for the project:<br />
+*   In Device Farm's standard environment, only a subset of features are supported for the testng.xml file.<br />
+*   Use Custom environment if the following are required for the project:<br />
     *   Priority tag<br />
     *   Include and Exclude tag<br />
     *   Complex Grouping<br />
@@ -4075,11 +3265,12 @@ The newly supported channel specific test code will not work on standard environ
 </li>
 <li>
 <p>To explicitly reference a directory, include the <strong>testresources</strong> tags in the <strong>pom.xml</strong>.
-    <code>&lt;testResources&gt;
-            &lt;testResource&gt;
-                &lt;directory&gt;${project.basedir}/&lt;root_test_folder&gt;/src/test/resources&lt;/directory&gt;
-            &lt;/testResource&gt;
-    &lt;/testResources&gt;</code>  </p>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;testResources&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        &lt;testResource&gt;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            &lt;directory&gt;${project.basedir}/&lt;root_test_folder&gt;/src/test/resources&lt;/directory&gt;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        &lt;/testResource&gt;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;/testResources&gt;
+</span></code></pre></div></p>
 </li>
 <li>
 <p>To reference the TestNG XML file for local executions, modify the <strong>pom.xml</strong> to include the <strong>surefire</strong> plugin. </p>
@@ -4115,10 +3306,10 @@ The newly supported channel specific test code will not work on standard environ
 <p><strong><em>Important:</em></strong> You can use the universal application binary and run the tests on both mobile and tablet devices based on the availability in the device pool.<br />
 You can trigger a run test job either with universal binary or with individual mobile/tablet.</p>
 </blockquote>
-<h2 id="running-tests-from-buildirisapp-job">Running Tests from buildIrisApp job</h2>
+<h2 id="running-tests-from-buildirisapp-job">Running Tests from buildIrisApp job<a class="headerlink" href="#running-tests-from-buildirisapp-job" title="Permanent link">&para;</a></h2>
 <p>You can also trigger the tests from the buildIrisApp job available at <strong>Project Name</strong> &gt; <strong>Iris</strong> &gt; <strong>Builds</strong> folder. It is the simplest way to validate your code by launching tests right after Building the application. There is no need to specify all parameters as they are provided while running the tests manually. The results can be viewed in line to the Test Results of Manual Tests. For more information, refer to <a href="BuildingAnApp.html">Building a Iris App</a>.</p>
-<h2 id="test-results">Test Results</h2>
-<h3 id="native-test-results">Native Test Results</h3>
+<h2 id="test-results">Test Results<a class="headerlink" href="#test-results" title="Permanent link">&para;</a></h2>
+<h3 id="native-test-results">Native Test Results<a class="headerlink" href="#native-test-results" title="Permanent link">&para;</a></h3>
 <p>When the project test build is complete and the test results are published at S3, e-mail notifications are sent to recipients:</p>
 <p>On unsuccessful build for the tests run, the following e-mail is sent to the recipients:</p>
 <p><img alt="" src="Resources/Images/TA_TestBuildFailure1.png" /> <img alt="" src="Resources/Images/TA_TestBuildFailure2.png" /></p>
@@ -4126,7 +3317,7 @@ You can trigger a run test job either with universal binary or with individual m
 <p>Sample email for Native tests</p>
 <p><img alt="" src="Resources/Images/native-test-result.PNG" /></p>
 <p>To download test data fetched from AWS Device Farm, click <strong>Download File</strong> link. Data is stored at S3 and available for review without time limitations.</p>
-<h3 id="desktop-web-test-results">Desktop Web Test Results</h3>
+<h3 id="desktop-web-test-results">Desktop Web Test Results<a class="headerlink" href="#desktop-web-test-results" title="Permanent link">&para;</a></h3>
 <p>When the project test build is complete and the test results are published at S3, e-mail notifications are sent to recipients:</p>
 <p>On unsuccessful build for the tests run, the following e-mail is sent to the recipients:</p>
 <p><img alt="" src="Resources/Images/dweb-test-fail.png" /></p>
@@ -4136,7 +3327,7 @@ You can trigger a run test job either with universal binary or with individual m
 <p>The summary of the test results are shown based on the tests executed on specified browser that includes passed, failed, skipped. Usually the tests are skipped when the driver initialization fails.</p>
 <p>You can click the respective links in Brief Summary table to view the test summary.</p>
 <p>To download the log files for each test case, click the respective <strong>Download File</strong> link. If you have any test failures, you can use these files to debug them.</p>
-<h3 id="test-status">Test Status</h3>
+<h3 id="test-status">Test Status<a class="headerlink" href="#test-status" title="Permanent link">&para;</a></h3>
 <p>Test Status is available in the test result email which is sent to the recipient after you execute the test cases. Following are different statuses in the test result email:</p>
 <p><strong>PASSED</strong>: The status of the test result is <strong>PASSED</strong> when the test case is run without any issues, and when the assertion is successful.</p>
 <p><strong>FAILED</strong>: The status of the test result is <strong>FAILED</strong> when the expected result does not match with the actual result of the test case, the assertion will fail and hence the test case status will be set to <strong>FAILED</strong>.</p>
@@ -4151,7 +3342,7 @@ You can trigger a run test job either with universal binary or with individual m
 <blockquote>
 <p><strong><em>Note:</em></strong> WARNED, STOPPED, and ERRORED statuses are not applicable for DesktopWeb tests.</p>
 </blockquote>
-<h2 id="troubleshooting-issues">Troubleshooting Issues</h2>
+<h2 id="troubleshooting-issues">Troubleshooting Issues<a class="headerlink" href="#troubleshooting-issues" title="Permanent link">&para;</a></h2>
 <p>The following errors can help you during troubleshooting runTests job fail:</p>
 <ul>
 <li><strong>Error</strong>: Jasmine Tests can only be executed when the app is built in Debug mode.<br />
@@ -4217,7 +3408,7 @@ You can trigger a run test job either with universal binary or with individual m
 <ol>
 <li>Check whether the ANDROID_TABLET_NATIVE_BINARY_URL parameter is valid.</li>
 </ol>
-<h2 id="auto-triggering-tests">Auto Triggering Tests</h2>
+<h2 id="auto-triggering-tests">Auto Triggering Tests<a class="headerlink" href="#auto-triggering-tests" title="Permanent link">&para;</a></h2>
 <p>Currently, there are two types of auto-triggered test jobs: scm-triggered (Watchers) and cron-triggered (Schedulers). Every project structure has folder called "Tests" in "Iris" sub-folder, that contains job for creation of auto-triggered jobs (createTrigger) and two sub-folders where created jobs are stored.</p>
 <p>To setup auto-triggered job, perform the following steps:</p>
 <ol>
@@ -4258,6 +3449,8 @@ You can trigger a run test job either with universal binary or with individual m
 
 
 
+
+
                 
               </article>
             </div>
@@ -4268,7 +3461,7 @@ You can trigger a run test job either with universal binary or with individual m
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -4306,10 +3499,14 @@ You can trigger a run test job either with universal binary or with individual m
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

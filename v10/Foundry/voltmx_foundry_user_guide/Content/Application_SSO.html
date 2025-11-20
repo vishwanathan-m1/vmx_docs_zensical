@@ -9,13 +9,16 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/Application_SSO.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_user_guide/Content/Application_SSO.html">
       
       
+      
+      
+        
       
       
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -23,9 +26,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -37,7 +72,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -46,11 +81,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -123,7 +157,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -143,67 +177,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -222,11 +225,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -239,11 +241,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -256,13 +257,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -276,11 +276,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -293,13 +292,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -313,13 +311,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -333,11 +330,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -350,13 +346,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -370,13 +365,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -420,7 +414,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -440,9 +434,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -460,9 +461,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -484,59 +492,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -552,9 +543,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -576,59 +574,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -676,353 +657,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1038,9 +708,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1086,92 +763,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1184,10 +803,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -1217,55 +835,16 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
     
     
     
       
+      
+    
+    
+      
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1273,921 +852,20 @@
         
   
   
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+  
+    <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
       
+  
   
   <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
   
-  <span class="md-ellipsis">
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -2196,579 +874,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -2787,6 +892,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -2803,7 +909,9 @@
         <li class="md-nav__item">
   <a href="#use-case-scenarios-app-sso" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Case Scenarios - App SSO
+      
+        Use Case Scenarios - App SSO
+      
     </span>
   </a>
   
@@ -2812,7 +920,9 @@
         <li class="md-nav__item">
   <a href="#introduction-to-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Scenario
+      
+        Introduction to Scenario
+      
     </span>
   </a>
   
@@ -2821,7 +931,9 @@
         <li class="md-nav__item">
   <a href="#sample-apps-from-iris" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Apps from Iris
+      
+        Sample Apps from Iris
+      
     </span>
   </a>
   
@@ -2831,7 +943,9 @@
           <li class="md-nav__item">
   <a href="#expected-end-user-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Expected End-User Flow
+      
+        Expected End-User Flow
+      
     </span>
   </a>
   
@@ -2845,7 +959,9 @@
         <li class="md-nav__item">
   <a href="#process-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Process Flow
+      
+        Process Flow
+      
     </span>
   </a>
   
@@ -2854,7 +970,9 @@
         <li class="md-nav__item">
   <a href="#enabling-sso" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling SSO
+      
+        Enabling SSO
+      
     </span>
   </a>
   
@@ -2864,7 +982,9 @@
           <li class="md-nav__item">
   <a href="#enabling-sso-on-volt-mx-foundry-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling SSO on Volt MX Foundry Console
+      
+        Enabling SSO on Volt MX Foundry Console
+      
     </span>
   </a>
   
@@ -2873,7 +993,9 @@
           <li class="md-nav__item">
   <a href="#client-app-code-changes-to-enable-sso" class="md-nav__link">
     <span class="md-ellipsis">
-      Client App Code Changes to Enable SSO
+      
+        Client App Code Changes to Enable SSO
+      
     </span>
   </a>
   
@@ -2883,7 +1005,9 @@
           <li class="md-nav__item">
   <a href="#code-changes-in-login-for-sso-code-changes-in-the-identity-service-call-for-both-apps" class="md-nav__link">
     <span class="md-ellipsis">
-      Code changes in Login for SSO / code changes in the identity service call for both apps.
+      
+        Code changes in Login for SSO / code changes in the identity service call for both apps.
+      
     </span>
   </a>
   
@@ -2892,7 +1016,9 @@
           <li class="md-nav__item">
   <a href="#code-changes-in-logout-for-sso" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Changes in Logout for SSO
+      
+        Code Changes in Logout for SSO
+      
     </span>
   </a>
   
@@ -2901,7 +1027,9 @@
           <li class="md-nav__item">
   <a href="#coding-guidelines-error-handling-and-recommended-use-of-feature" class="md-nav__link">
     <span class="md-ellipsis">
-      Coding Guidelines (Error Handling and Recommended use of feature)
+      
+        Coding Guidelines (Error Handling and Recommended use of feature)
+      
     </span>
   </a>
   
@@ -2910,7 +1038,9 @@
           <li class="md-nav__item">
   <a href="#error-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Codes
+      
+        Error Codes
+      
     </span>
   </a>
   
@@ -2929,7 +1059,9 @@
         <li class="md-nav__item">
   <a href="#sso-permissions" class="md-nav__link">
     <span class="md-ellipsis">
-      SSO Permissions
+      
+        SSO Permissions
+      
     </span>
   </a>
   
@@ -2939,7 +1071,9 @@
           <li class="md-nav__item">
   <a href="#android" class="md-nav__link">
     <span class="md-ellipsis">
-      Android
+      
+        Android
+      
     </span>
   </a>
   
@@ -2949,7 +1083,9 @@
           <li class="md-nav__item">
   <a href="#enabling-sso-for-iris-from-version-v8-sp4-onwards" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling SSO for Iris from version V8 SP4 onwards
+      
+        Enabling SSO for Iris from version V8 SP4 onwards
+      
     </span>
   </a>
   
@@ -2958,7 +1094,9 @@
           <li class="md-nav__item">
   <a href="#enabling-sso-for-the-upgraded-versions-of-iris" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling SSO for the upgraded versions of Iris
+      
+        Enabling SSO for the upgraded versions of Iris
+      
     </span>
   </a>
   
@@ -2967,7 +1105,9 @@
           <li class="md-nav__item">
   <a href="#enabling-sso-for-iris-version-v8-sp3-or-previous-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling SSO for Iris version V8 SP3 or previous versions
+      
+        Enabling SSO for Iris version V8 SP3 or previous versions
+      
     </span>
   </a>
   
@@ -2981,7 +1121,9 @@
           <li class="md-nav__item">
   <a href="#ios" class="md-nav__link">
     <span class="md-ellipsis">
-      iOS
+      
+        iOS
+      
     </span>
   </a>
   
@@ -2995,7 +1137,9 @@
         <li class="md-nav__item">
   <a href="#build-apps-for-distribution" class="md-nav__link">
     <span class="md-ellipsis">
-      Build Apps for Distribution
+      
+        Build Apps for Distribution
+      
     </span>
   </a>
   
@@ -3011,14 +1155,24 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_user_guide/Content/Application_SSO.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
   <h1>Application SSO</h1>
 
-<h2 id="use-case-scenarios-app-sso">Use Case Scenarios - App SSO</h2>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
+<h2 id="use-case-scenarios-app-sso">Use Case Scenarios - App SSO<a class="headerlink" href="#use-case-scenarios-app-sso" title="Permanent link">&para;</a></h2>
 <p>Single sign-on is a feature that permits the user to log in to one application and access the supported applications automatically with out logging again. For more information, refer <a href="Overview_AppSSO.html">Overview of Application SSO</a>.</p>
 <p>The following sections explain the SSO functionality using sample apps with different scenarios and code examples.</p>
 <p><a href="#introduction-to-scenario">Introduction to Scenario</a></p>
@@ -3029,7 +1183,7 @@
 <p><a href="#client-app-code-changes-to-enable-sso">Client App Code Changes</a></p>
 <p><a href="#sso-permissions">SSO Permissions</a></p>
 <p><a href="#build-apps-for-distribution">Build Apps for Distribution</a></p>
-<h2 id="introduction-to-scenario">Introduction to Scenario</h2>
+<h2 id="introduction-to-scenario">Introduction to Scenario<a class="headerlink" href="#introduction-to-scenario" title="Permanent link">&para;</a></h2>
 <p>Volt MX  supports the following scenarios for the Single Sign-On feature:</p>
 <table>
 <thead>
@@ -3053,7 +1207,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="sample-apps-from-iris">Sample Apps from Iris</h2>
+<h2 id="sample-apps-from-iris">Sample Apps from Iris<a class="headerlink" href="#sample-apps-from-iris" title="Permanent link">&para;</a></h2>
 <p>To understand the functionality of SSO feature, let’s take an example of two apps. Assume we have a BankApp and a TradeApp. With the SSO functionality implemented, if you log into one app and then opens the other app, the second app should automatically display the Home screen instead of the login screen.</p>
 <p>The following describes two different scenarios for implementing the SSO functionality:</p>
 <p><strong>Scenario 1</strong>: If the identity service is the same for both apps.</p>
@@ -3063,31 +1217,31 @@
 <p><strong>TradeApp</strong></p>
 <p><img alt="" src="Resources/Images/TradeApp-UserStore.png" /></p>
 <p>The Iris apps (client apps) use the following code to call this service. Here, the BankApp and the TradeApp will use the same code listed below to connect to the Volt MX Foundry backend as both the apps share the same identity service.</p>
-<pre><code> // login call
-function bankapp_login2() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
-    var options = {};
-    options.userid = &lt; userid textfield &gt; .text;
-    options.password = &lt; password textfield &gt; .text;
-    voltmxIdent.login(options, function(res) {
-        showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
-        frm2.show();
-    }, function(res) {
-        showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
-    });
-}   
-// logout call
-function bankapp_logout() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
-    var options = {};
-    voltmxIdent.logout(function(response) {
-            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
-        },
-        function(error) {
-            voltmx.print(&quot;Error in mobilefoundry logout : &quot; + JSON.stringify(error));
-        }, options);
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> // login call
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>function bankapp_login2() {
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    var options = {};
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    options.userid = &lt; userid textfield &gt; .text;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    options.password = &lt; password textfield &gt; .text;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    voltmxIdent.login(options, function(res) {
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        frm2.show();
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    }, function(res) {
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    });
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>}   
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>// logout call
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>function bankapp_logout() {
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    var options = {};
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    voltmxIdent.logout(function(response) {
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        },
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        function(error) {
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            voltmx.print(&quot;Error in mobilefoundry logout : &quot; + JSON.stringify(error));
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        }, options);
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>}
+</span></code></pre></div>
 <p><strong>Scenario 2</strong>: The identity service is different for the apps.</p>
 <p>Assume the BankApp uses the<strong>User Store</strong> identity service and the TradeApp uses the <strong><a href="Identity4_LDAP.html#Identity.md#OpenLDAP">Open LDAP</a></strong> identity service in their Volt MX Foundry backend.</p>
 <p><strong>BankApp with Volt MX userstore as identity service</strong></p>
@@ -3095,35 +1249,35 @@ function bankapp_logout() {
 <p><strong>TradeApp with OpenLDAP as Identity Service</strong></p>
 <p><img alt="" src="Resources/Images/Trade_589x315.png" /></p>
 <p>The TradeApp uses the following code as it uses <strong>Open LDAP</strong> identity service. The BankApp uses the code described in the first scenario as it uses the <strong>User Store</strong> identity service.</p>
-<pre><code> // login call
-function tradeapp_login2() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
-    var options = {};
-    options.userid = &lt; userid textfield &gt; .text;
-    options.password = &lt; password textfield &gt; .text;
-    voltmxIdent.login(options, function(res) {
-            showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
-            frm2.show();
-        },
-        function(res) {
-            showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
-        });
-}
-
-// logout call
-function tradeapp_logout() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
-    var options = {};
-    voltmxIdent.logout(function(response) {
-            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
-        },
-        function(error) {
-            voltmx.print(&quot;Error in mobilefoundry logout : &quot; +
-                JSON.stringify(error));
-        }, options);
-}
-</code></pre>
-<h4 id="expected-end-user-flow">Expected End-User Flow</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> // login call
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>function tradeapp_login2() {
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    var options = {};
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    options.userid = &lt; userid textfield &gt; .text;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    options.password = &lt; password textfield &gt; .text;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    voltmxIdent.login(options, function(res) {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            frm2.show();
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        },
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        function(res) {
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        });
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>}
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>// logout call
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>function tradeapp_logout() {
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    var options = {};
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    voltmxIdent.logout(function(response) {
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        },
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        function(error) {
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>            voltmx.print(&quot;Error in mobilefoundry logout : &quot; +
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>                JSON.stringify(error));
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        }, options);
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>}
+</span></code></pre></div>
+<h4 id="expected-end-user-flow">Expected End-User Flow<a class="headerlink" href="#expected-end-user-flow" title="Permanent link">&para;</a></h4>
 <p>With the SSO feature, we can simplify the app usage for the end-users. The app developers has the power to leverage the login of other apps to identify and validate the user.</p>
 <p>The expected end-user flow for both scenarios is described in the following:</p>
 <p><strong>Scenario 1</strong>:</p>
@@ -3143,19 +1297,19 @@ function tradeapp_logout() {
 <li>SSO login triggered at the login form init of the TradeApp.</li>
 <li>The <strong>Home</strong> screen is is displayed without the need for the user to enter their login credentials again.</li>
 </ol>
-<h2 id="process-flow">Process Flow</h2>
+<h2 id="process-flow">Process Flow<a class="headerlink" href="#process-flow" title="Permanent link">&para;</a></h2>
 <p>The following diagrams show the process flow for each scenario.</p>
 <p><strong>Scenario 1</strong>:</p>
 <p><img alt="" src="Resources/Images/Scenario_1_-_Process_flow_588x393.png" /></p>
 <p><strong>Scenario 2</strong></p>
 <p><img alt="" src="Resources/Images/Scenario_2-_Process_flow_589x443.png" /></p>
-<h2 id="enabling-sso">Enabling SSO</h2>
+<h2 id="enabling-sso">Enabling SSO<a class="headerlink" href="#enabling-sso" title="Permanent link">&para;</a></h2>
 <p>To enable SSO for BankApp and TradeApp, you must do the following:</p>
 <ol>
 <li><a href="#EnablingSSO_MF">Enable SSO on Volt MX Foundry Console</a></li>
 <li><a href="#Client">Enable SSO through code changes</a></li>
 </ol>
-<h3 id="enabling-sso-on-volt-mx-foundry-console">Enabling SSO on Volt MX Foundry Console</h3>
+<h3 id="enabling-sso-on-volt-mx-foundry-console">Enabling SSO on Volt MX Foundry Console<a class="headerlink" href="#enabling-sso-on-volt-mx-foundry-console" title="Permanent link">&para;</a></h3>
 <p>To enable SSO on Volt MX Foundry Console follow these scenarios:</p>
 <p><strong>Scenario 1</strong>: The identity service is the same for both apps. (The BankApp and TradeApp use the same identity service <strong>User Store</strong>).</p>
 <ul>
@@ -3221,136 +1375,136 @@ function tradeapp_logout() {
 <blockquote>
 <p><strong><em>Note:</em></strong> If you unpublish and republish the app, make sure that you link the app to Volt MX Iris client app because the app key and secret key changes with the unpublish event.</p>
 </blockquote>
-<h3 id="client-app-code-changes-to-enable-sso">Client App Code Changes to Enable SSO</h3>
+<h3 id="client-app-code-changes-to-enable-sso">Client App Code Changes to Enable SSO<a class="headerlink" href="#client-app-code-changes-to-enable-sso" title="Permanent link">&para;</a></h3>
 <p>In the previous section, we mentioned enabling SSO at backend Volt MX Foundry services. Similarly, we must enable SSO on client side by modifying the identity service code in the client app.</p>
-<h4 id="code-changes-in-login-for-sso-code-changes-in-the-identity-service-call-for-both-apps">Code changes in Login for SSO / code changes in the identity service call for both apps.</h4>
+<h4 id="code-changes-in-login-for-sso-code-changes-in-the-identity-service-call-for-both-apps">Code changes in Login for SSO / code changes in the identity service call for both apps.<a class="headerlink" href="#code-changes-in-login-for-sso-code-changes-in-the-identity-service-call-for-both-apps" title="Permanent link">&para;</a></h4>
 <p>SSO options property in the login call of the identity service requires to pass a property. We have to set the loginOption.isSSOEnabled key to enable the SSO for the identity services. Set the property to <strong>True</strong> to enable the SSO and automatically access the relative apps. Otherwise, set the property to <strong>False</strong> to disable the SSO functionality.</p>
 <p><strong>Login Call</strong></p>
 <blockquote>
 <p><strong><em>Note:</em></strong> In scenario 1, both apps will use the first function below to connect to the Volt MX Foundry backend app identity service. In scenario 2, the trade app uses the second function.</p>
 </blockquote>
-<pre><code> function bankapp_login2() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
-    var options = {};
-    var loginOption = {};
-    loginOption.isSSOEnabled = true;
-    options.loginOptions = loginOption;
-    options.userid = &lt; userid textfield &gt; .text;
-    options.password = &lt; password textfield &gt; .text;
-    voltmxIdent.login(options, function(res) {
-            showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
-            frm2.show();
-        },
-        function(res) {
-            showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
-        });
-}
-</code></pre>
-<pre><code> function tradeapp\_login2() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
-    var options = {};
-    var loginOption = {};
-    loginOption.isSSOEnabled = true;
-    options.loginOptions = loginOption;
-    options.userid = &lt; userid textfield &gt; .text;
-    options.password = &lt; password textfield &gt; .text;
-    voltmxIdent.login(options, function(res) {
-            showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
-            frm2.show();
-        },
-        function(res) {
-            showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
-        });
-}
-</code></pre>
-<h4 id="code-changes-in-logout-for-sso">Code Changes in Logout for SSO</h4>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> function bankapp_login2() {
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    var options = {};
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    var loginOption = {};
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    loginOption.isSSOEnabled = true;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    options.loginOptions = loginOption;
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    options.userid = &lt; userid textfield &gt; .text;
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    options.password = &lt; password textfield &gt; .text;
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    voltmxIdent.login(options, function(res) {
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            frm2.show();
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        },
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        function(res) {
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        });
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> function tradeapp\_login2() {
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    var options = {};
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    var loginOption = {};
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    loginOption.isSSOEnabled = true;
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    options.loginOptions = loginOption;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    options.userid = &lt; userid textfield &gt; .text;
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    options.password = &lt; password textfield &gt; .text;
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    voltmxIdent.login(options, function(res) {
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>            showAlert(&quot;SSO userstore success&quot; + JSON.stringify(res));
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>            frm2.show();
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        },
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        function(res) {
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            showAlert(&quot;SSO userstore failed&quot; + JSON.stringify(res));
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        });
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>}
+</span></code></pre></div></p>
+<h4 id="code-changes-in-logout-for-sso">Code Changes in Logout for SSO<a class="headerlink" href="#code-changes-in-logout-for-sso" title="Permanent link">&para;</a></h4>
 <p>SSO options property in the logout call of the identity service requires one more property to be passed. We have to set the slo key of the options property in the logout call to handle the SSO scenarios. By default the property value of the slo key is set to <strong>false</strong>.</p>
 <p>Set the property to <strong>True</strong> to log out of all the SSO logins/apps. Otherwise, set it to <strong>false</strong> to logout of the current app without disturbing the SSO functionality of the relative apps.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> In scenario 1, both the apps will use the first function below to connect to the Volt MX Foundry backend app identity service. In scenario 2, the trade app uses the second function.</p>
 </blockquote>
-<pre><code> //logout call bank app
-function bankapp_logout() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
-    var options = {};
-    options.slo = true;
-    voltmxIdent.logout(function(response) {
-            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
-        },
-        function(error) {
-            voltmx.print(&quot;Error in mobilefoundry logout : &quot; + JSON.stringify(error));
-        }, options);
-}
-//logout call Trade app
-function tradeapp_logout() {
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
-    var options = {};
-    options.slo = true;
-    voltmxIdent.logout(function(response) {
-            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
-        },
-        function(error) {
-            voltmx.print(&quot;Error in mobilefoundry logout : &quot; + JSON.stringify(error));
-        }, options);
-}
-</code></pre>
-<h4 id="coding-guidelines-error-handling-and-recommended-use-of-feature">Coding Guidelines (Error Handling and Recommended use of feature)</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> //logout call bank app
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>function bankapp_logout() {
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    var options = {};
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    options.slo = true;
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    voltmxIdent.logout(function(response) {
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        },
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        function(error) {
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            voltmx.print(&quot;Error in mobilefoundry logout : &quot; + JSON.stringify(error));
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        }, options);
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>}
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>//logout call Trade app
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>function tradeapp_logout() {
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    var options = {};
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    options.slo = true;
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    voltmxIdent.logout(function(response) {
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>            voltmx.print(&quot;Success in mobilefoundry logout&quot;);
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        },
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        function(error) {
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>            voltmx.print(&quot;Error in mobilefoundry logout : &quot; + JSON.stringify(error));
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        }, options);
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>}
+</span></code></pre></div>
+<h4 id="coding-guidelines-error-handling-and-recommended-use-of-feature">Coding Guidelines (Error Handling and Recommended use of feature)<a class="headerlink" href="#coding-guidelines-error-handling-and-recommended-use-of-feature" title="Permanent link">&para;</a></h4>
 <p>The changes described in the previous section for the login call events are called/triggered when the user clicks the <strong>Login</strong> button. However, when the SSO is enabled the ideal user scenario would be for the user to skip the login page, if the user had already signed into a relative app (that is, both apps are SSO linked and enabled).</p>
 <p>To get this experience, the user needs to call the similar login function at the preshow/init of the login. In the case of SSO login failure, show the login screen for the user to enter the login credentials. The user should write the code to handle the errors thrown by the SSO login.</p>
 <p>Sample code to handle the error:</p>
-<pre><code> function init_BankApp_loginpage() {
-    //voltmx.sdk.getCurrentInstance().getIdentityService(&quot;userstore&quot;);
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
-    var options = {};
-    var loginOption = {};
-    loginOption.isSSOEnabled = true;
-    options.loginOptions = loginOption;
-    voltmxIdent.login(options, function(res) {
-            alert(&quot;SSO userstore success&quot; + JSON.stringify(res)); &lt; welcomeform &gt; .show();
-        },
-        function(res) {
-            //alert(&quot;SSO userstore failed&quot;+JSON.stringify(res));
-            if (res.code == -58) {
-                alert(&quot;SSO login token expired please login again&quot;);
-            } else if (res.code == -5) {
-                alert(&quot;SSO login is not possible due to invalid token&quot;);
-            } else if (res.code == -3) {
-                alert(&quot;invalid app key / app secret Please contact admin / download the latest version of the app from store&quot;);
-            } else if (res.code == -48) {
-                alert(&quot;need to provide username password first time for ssologin&quot;);
-            } else {
-                alert(&quot;invalid error state&quot;);
-            } &lt; loginform &gt; .show();
-        });
-}
-</code></pre>
-<pre><code> function init\_TradeApp\_loginpage() {
-    //voltmx.sdk.getCurrentInstance().getIdentityService(&quot;openldap&quot;);
-    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
-    var options = {};
-    var loginOption = {};
-    loginOption.isSSOEnabled = true;
-    options.loginOptions = loginOption;
-    voltmxIdent.login(options, function(res) {
-            alert(&quot;SSO userstore success&quot; + JSON.stringify(res)); &lt; welcomeform &gt; .show();
-        },
-        function(res) {
-            //alert(&quot;SSO userstore failed&quot;+JSON.stringify(res));
-            if (res.code == -58) {
-                alert(&quot;SSO login token expired please login again&quot;);
-            } else if (res.code == -5) {
-                alert(&quot;SSO login is not possible due to invalid token&quot;);
-            } else if (res.code == -3) {
-                alert(&quot;invalid app key / app secret Please contact admin / download the latest version of the app from store&quot;);
-            } else if (res.code == -48) {
-                alert(&quot;need to provide username password first time for ssologin&quot;);
-            } else {
-                alert(&quot;invalid error state&quot;);
-            } &lt; loginform &gt; .show();
-        });
-}
-</code></pre>
-<h4 id="error-codes">Error Codes</h4>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> function init_BankApp_loginpage() {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    //voltmx.sdk.getCurrentInstance().getIdentityService(&quot;userstore&quot;);
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;userstore&quot;);
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    var options = {};
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    var loginOption = {};
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    loginOption.isSSOEnabled = true;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    options.loginOptions = loginOption;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    voltmxIdent.login(options, function(res) {
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>            alert(&quot;SSO userstore success&quot; + JSON.stringify(res)); &lt; welcomeform &gt; .show();
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        },
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        function(res) {
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>            //alert(&quot;SSO userstore failed&quot;+JSON.stringify(res));
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>            if (res.code == -58) {
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>                alert(&quot;SSO login token expired please login again&quot;);
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>            } else if (res.code == -5) {
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>                alert(&quot;SSO login is not possible due to invalid token&quot;);
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>            } else if (res.code == -3) {
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>                alert(&quot;invalid app key / app secret Please contact admin / download the latest version of the app from store&quot;);
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>            } else if (res.code == -48) {
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>                alert(&quot;need to provide username password first time for ssologin&quot;);
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>            } else {
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>                alert(&quot;invalid error state&quot;);
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>            } &lt; loginform &gt; .show();
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>        });
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> function init\_TradeApp\_loginpage() {
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    //voltmx.sdk.getCurrentInstance().getIdentityService(&quot;openldap&quot;);
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    var voltmxIdent = VMXFoundry.getIdentityService(&quot;openldap&quot;);
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    var options = {};
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    var loginOption = {};
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    loginOption.isSSOEnabled = true;
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    options.loginOptions = loginOption;
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    voltmxIdent.login(options, function(res) {
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>            alert(&quot;SSO userstore success&quot; + JSON.stringify(res)); &lt; welcomeform &gt; .show();
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        },
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        function(res) {
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>            //alert(&quot;SSO userstore failed&quot;+JSON.stringify(res));
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            if (res.code == -58) {
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>                alert(&quot;SSO login token expired please login again&quot;);
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>            } else if (res.code == -5) {
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>                alert(&quot;SSO login is not possible due to invalid token&quot;);
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>            } else if (res.code == -3) {
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>                alert(&quot;invalid app key / app secret Please contact admin / download the latest version of the app from store&quot;);
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>            } else if (res.code == -48) {
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>                alert(&quot;need to provide username password first time for ssologin&quot;);
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>            } else {
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>                alert(&quot;invalid error state&quot;);
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>            } &lt; loginform &gt; .show();
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>        });
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>}
+</span></code></pre></div></p>
+<h4 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h4>
 <p>The following list describes the error codes that you might encounter while adding SSO functionality:</p>
 <ul>
 <li><strong>-58</strong> : The SSO login token has expired, so the user has to login again to get a fresh token.</li>
@@ -3362,14 +1516,14 @@ function tradeapp_logout() {
 </li>
 <li><strong>-48</strong> : This error is hit only once in the lifetime for apps that use different identity services in their Volt MX Foundry backend apps and are linked to work for SSO. In this scenario the user has to provide the credentials for the second app also even though the SSO token from the first app exists. This is required to validate the login of the second app once in life time and link the accounts of the first and second apps in the Volt MX Foundry backend Identity service.</li>
 </ul>
-<h2 id="sso-permissions">SSO Permissions</h2>
+<h2 id="sso-permissions">SSO Permissions<a class="headerlink" href="#sso-permissions" title="Permanent link">&para;</a></h2>
 <p>The SSO tokens are stored in the shared space/keychains in the devices and some application settings have to be modified to ensure these tokens are shared among all the SSO enabled apps so that the single sign-on is implemented and others can access these tokens.</p>
-<h3 id="android"><strong>Android</strong></h3>
+<h3 id="android"><strong>Android</strong><a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
 <p>We need to modify the Android native specific project settings of the Iris client app for SSO to work in the Android devices.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> If the applications built in V8 SP3 or earlier versions are used in V8 SP4, SSO does not work in those applications. Update all the applications to V8 SP4 or later versions for the SSO to work efficiently.</p>
 </blockquote>
-<h4 id="enabling-sso-for-iris-from-version-v8-sp4-onwards">Enabling SSO for Iris from version V8 SP4 onwards</h4>
+<h4 id="enabling-sso-for-iris-from-version-v8-sp4-onwards">Enabling SSO for Iris from version V8 SP4 onwards<a class="headerlink" href="#enabling-sso-for-iris-from-version-v8-sp4-onwards" title="Permanent link">&para;</a></h4>
 <p>To enable SSO for Iris from version V8 SP4 onwards, do the following:</p>
 <ol>
 <li>
@@ -3380,7 +1534,7 @@ function tradeapp_logout() {
 <p>Click <strong>Finish</strong>.</p>
 </li>
 </ol>
-<h4 id="enabling-sso-for-the-upgraded-versions-of-iris">Enabling SSO for the upgraded versions of Iris</h4>
+<h4 id="enabling-sso-for-the-upgraded-versions-of-iris">Enabling SSO for the upgraded versions of Iris<a class="headerlink" href="#enabling-sso-for-the-upgraded-versions-of-iris" title="Permanent link">&para;</a></h4>
 <p>To enable SSO when Iris is upgraded from V8 SP3 or previous versions to V8 SP4 or higher versions, do the following:</p>
 <ol>
 <li>Under <strong>Project Settings</strong> &gt; <strong>Native</strong> &gt; <strong>Android</strong> &gt; <strong>Mobile/Tablet</strong>, select the <strong>Enable SSO</strong> check box in <strong>Miscellaneous</strong>.</li>
@@ -3394,7 +1548,7 @@ function tradeapp_logout() {
 <p><img alt="" src="Resources/Images/SSO2_649x690.png" /></p>
 </li>
 </ol>
-<h4 id="enabling-sso-for-iris-version-v8-sp3-or-previous-versions">Enabling SSO for Iris version V8 SP3 or previous versions</h4>
+<h4 id="enabling-sso-for-iris-version-v8-sp3-or-previous-versions">Enabling SSO for Iris version V8 SP3 or previous versions<a class="headerlink" href="#enabling-sso-for-iris-version-v8-sp3-or-previous-versions" title="Permanent link">&para;</a></h4>
 <p>To enable SSO for Iris version V8 SP3 or previous versions, do the following:</p>
 <ol>
 <li>
@@ -3406,13 +1560,13 @@ function tradeapp_logout() {
 <p>Add the below code to declare a permission in the child tag entries under the manifest tag:</p>
 </li>
 </ol>
-<pre><code> &lt;permission android:name=&quot;com.voltmx.sso&quot; android:protectionLevel=&quot;signature&quot;&gt;
-  &lt;uses-permission android:name=&quot;com.voltmx.sso&quot;&gt; 
-  &lt;/uses-permission&gt;
-&lt;/permission&gt; 
-```4.  The permission must be added to the receiver tag present in the child tag entries under the applications tag:
-</code></pre>
-<p><receiver android:name="com.voltmx.sso.SSOTokenReceiver" android:permission="com.voltmx.sso">
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> &lt;permission android:name=&quot;com.voltmx.sso&quot; android:protectionLevel=&quot;signature&quot;&gt;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  &lt;uses-permission android:name=&quot;com.voltmx.sso&quot;&gt; 
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  &lt;/uses-permission&gt;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>&lt;/permission&gt; 
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>```4.  The permission must be added to the receiver tag present in the child tag entries under the applications tag:
+</span></code></pre></div>
+ <receiver android:name="com.voltmx.sso.SSOTokenReceiver" android:permission="com.voltmx.sso">
   <intent-filter> 
          <action android:name="com.voltmx.ssobroadcast"/>
   </intent-filter>
@@ -3438,7 +1592,7 @@ function tradeapp_logout() {
 <p>To initiate SSO in the newly installed applications on Android device, call <code>voltmx.sdk.util.initializeSSO()</code> in the Pre-App Init of the application.</p>
 </li>
 </ol>
-<h3 id="ios"><strong>iOS</strong></h3>
+<h3 id="ios"><strong>iOS</strong><a class="headerlink" href="#ios" title="Permanent link">&para;</a></h3>
 <p><strong>Follow the below steps to enable SSO in iOS:</strong></p>
 <ol>
 <li>Open the project in Xcode.</li>
@@ -3457,17 +1611,17 @@ function tradeapp_logout() {
 <p>For example:</p>
 </li>
 </ol>
-<pre><code> VOLTMX_SHARED_KEYCHAIN_GROUP = PM7352S8QE.com.voltmx.sso
-</code></pre>
-<pre><code>![](Resources/Images/add_required_key_and_value_613x333.png)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> VOLTMX_SHARED_KEYCHAIN_GROUP = PM7352S8QE.com.voltmx.sso
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>![](Resources/Images/add_required_key_and_value_613x333.png)
 
 Here `PM7352S8QE` is an Organizational Unit value in the certificate as shown in the following, which can be obtained from the developer certificate.
 
 ![](Resources/Images/ApplePushServiceCertificate_615x515.png)
 
 &gt; **_Important:_** For all apps that intend to share the same SSO group, the key name string must be the same. The key name string must be different for different SSO groups.
-</code></pre>
-<h2 id="build-apps-for-distribution">Build Apps for Distribution</h2>
+</code></pre></div>
+<h2 id="build-apps-for-distribution">Build Apps for Distribution<a class="headerlink" href="#build-apps-for-distribution" title="Permanent link">&para;</a></h2>
 <p>After the apps are built, they can be pushed to the Enterprise app store (EAS) / any public app store. Users can select the required apps (BankApp and TradeApp) to download and install on their device.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> Ensure the new version of the apps are consumed by the end user specifically in scenarios where Volt MX Foundry apps were unpublished and then republished.</p>
@@ -3498,6 +1652,8 @@ Here `PM7352S8QE` is an Organizational Unit value in the certificate as shown in
 
 
 
+
+
                 
               </article>
             </div>
@@ -3508,7 +1664,7 @@ Here `PM7352S8QE` is an Organizational Unit value in the certificate as shown in
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -3546,10 +1702,14 @@ Here `PM7352S8QE` is an Organizational Unit value in the certificate as shown in
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

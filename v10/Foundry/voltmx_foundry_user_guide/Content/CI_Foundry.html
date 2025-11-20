@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/CI_Foundry.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_user_guide/Content/CI_Foundry.html">
       
       
         <link rel="prev" href="AppPromotion.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="../../heradlessAndContinuousIntegration.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -354,13 +350,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -373,6 +368,7 @@
         
   
   
+  
     
   
   
@@ -381,8 +377,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,92 +769,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1190,919 +809,54 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
     
       
       
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
   
-
-              
-            
-              
-                
   
-  
-  
-  
-    
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
   
   
   
-  
     
     
-      
-        
-      
-        
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
       
-      
-  
-  
     
-  
-  
-  
     
     
-      
-        
-      
-        
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
-        
       
     
     
-    
-    
-      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -2111,9 +865,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2122,7 +883,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Foundry
+            
+  
+    Foundry
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2136,9 +901,16 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2181,8 +953,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2190,12 +967,20 @@
         
   
   
+  
     <a href="../../installing_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2334,10 +1119,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" checked>
@@ -2346,9 +1135,16 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2357,7 +1153,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3">
             <span class="md-nav__icon md-icon"></span>
-            Volt MX Foundry User Guide
+            
+  
+    Volt MX Foundry User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2371,9 +1171,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2392,9 +1199,16 @@
       <a href="Preface.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Preface
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2413,9 +1227,16 @@
       <a href="../../foundrySDKs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry SDKs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2434,9 +1255,16 @@
       <a href="Accessing_VoltMX_MBaaS_Portal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2455,9 +1283,16 @@
       <a href="Environments-Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2476,9 +1311,16 @@
       <a href="Account_Settings_User_ACLs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Default Access Control Lists (ACLs) on New Apps and Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2497,9 +1339,16 @@
       <a href="UpgradeCloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Updates on Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2518,9 +1367,16 @@
       <a href="How_to_access_VoltMX_Foundry_Portal_on-Prem.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2539,9 +1395,16 @@
       <a href="Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2560,9 +1423,16 @@
       <a href="Published_Apps-Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Viewing Applications Published to a Runtime Environment
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2581,9 +1451,16 @@
       <a href="Features.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Features
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2602,9 +1479,16 @@
       <a href="Adding_Applications.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Apps - How to Add Applications
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2623,9 +1507,16 @@
       <a href="ConsoleAccessControl.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Console Access Control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2644,9 +1535,16 @@
       <a href="Continuous_Integration_with_Foundry_Governanc_%20APIs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Foundry Governanc APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2671,8 +1569,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2680,12 +1583,20 @@
         
   
   
+  
     <a href="API_Management.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     APIs in API Management
+  
+
+    
   </span>
+  
   
 
       
@@ -2710,9 +1621,16 @@
       <a href="API_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2731,9 +1649,16 @@
       <a href="App_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2752,9 +1677,16 @@
       <a href="CustomDataConfig.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Data Adapters on Volt MX Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2773,9 +1705,16 @@
       <a href="JAR_Management.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Managing JAR Files
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2794,9 +1733,16 @@
       <a href="CLI_Analytics.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Analytics for Third-party Client App Binaries
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2815,9 +1761,16 @@
       <a href="Export-Import_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exporting and Importing an Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2854,21 +1807,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Identity.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Identity
+  
+
+    
   </span>
+  
   
 
       
@@ -2901,21 +1867,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Legacy_Serivces.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Services
+  
+
+    
   </span>
+  
   
 
       
@@ -2948,21 +1927,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -2995,21 +1987,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Orchestration.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Orchestration
+  
+
+    
   </span>
+  
   
 
       
@@ -3058,8 +2063,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3067,12 +2077,20 @@
         
   
   
+  
     <a href="Objectservices.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Object Services
+  
+
+    
   </span>
+  
   
 
       
@@ -3097,9 +2115,16 @@
       <a href="../../voltmx_foundry_workflow/Content/Workflow.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Workflow
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3118,9 +2143,16 @@
       <a href="offline_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Offline Enablement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3139,9 +2171,16 @@
       <a href="Legacy_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Sync
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3160,9 +2199,16 @@
       <a href="VoltMXDevPortal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Developer Portal
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3181,9 +2227,16 @@
       <a href="Logic_in_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logic
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3202,9 +2255,16 @@
       <a href="Rules_as_a_Service.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Rules as a Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3223,9 +2283,16 @@
       <a href="Engagement.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Engagement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3254,8 +2321,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3263,12 +2335,20 @@
         
   
   
+  
     <a href="Manage_Client_App_Assets.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Manage Client App Assets
+  
+
+    
   </span>
+  
   
 
       
@@ -3293,9 +2373,16 @@
       <a href="EnterpriseAppStore.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Enterprise App Store Service for Digital App Distribution
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3314,9 +2401,16 @@
       <a href="PushNotificationsEas.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sending Push Notification to EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3335,9 +2429,16 @@
       <a href="AppVersionUpgradePolicyEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Checking App Versions in EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3356,9 +2457,16 @@
       <a href="EAS_NativeApp_Walk-through.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Walk-through of Volt MX Enterprise App Store (EAS) Source Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3377,9 +2485,16 @@
       <a href="KnownIssuesEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Known Issues - EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3398,9 +2513,16 @@
       <a href="Governance_for_Foundry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Governance for Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3431,8 +2553,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3440,12 +2567,20 @@
         
   
   
+  
     <a href="Publish.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Publish
+  
+
+    
   </span>
+  
   
 
       
@@ -3470,9 +2605,16 @@
       <a href="AppPromotion.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Promoting a Deployment Package
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3517,10 +2659,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_43" checked>
@@ -3529,9 +2675,16 @@
           <label class="md-nav__link" for="__nav_9_3_43" id="__nav_9_3_43_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Command Line Utility - Continuous Integration
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3540,7 +2693,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_43_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3_43">
             <span class="md-nav__icon md-icon"></span>
-            Volt MX Foundry Command Line Utility - Continuous Integration
+            
+  
+    Volt MX Foundry Command Line Utility - Continuous Integration
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3563,9 +2720,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Volt MX Foundry
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3574,14 +2738,22 @@
       <a href="CI_Foundry.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Volt MX Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3601,7 +2773,9 @@
         <li class="md-nav__item">
   <a href="#volt-mx-foundry-command-line-utility" class="md-nav__link">
     <span class="md-ellipsis">
-      Volt MX Foundry Command Line Utility
+      
+        Volt MX Foundry Command Line Utility
+      
     </span>
   </a>
   
@@ -3611,7 +2785,9 @@
           <li class="md-nav__item">
   <a href="#download-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Download Links
+      
+        Download Links
+      
     </span>
   </a>
   
@@ -3620,7 +2796,9 @@
           <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      
+        Examples
+      
     </span>
   </a>
   
@@ -3629,7 +2807,9 @@
           <li class="md-nav__item">
   <a href="#minor-difference-between-on-premise-volt-mx-foundry-and-volt-mx-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      Minor difference between on-premise Volt MX Foundry and Volt MX Cloud
+      
+        Minor difference between on-premise Volt MX Foundry and Volt MX Cloud
+      
     </span>
   </a>
   
@@ -3638,7 +2818,9 @@
           <li class="md-nav__item">
   <a href="#miscellaneous-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous Features
+      
+        Miscellaneous Features
+      
     </span>
   </a>
   
@@ -3648,7 +2830,9 @@
           <li class="md-nav__item">
   <a href="#get-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Usage
+      
+        Get Usage
+      
     </span>
   </a>
   
@@ -3657,7 +2841,9 @@
           <li class="md-nav__item">
   <a href="#unpublish-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Unpublish Command
+      
+        Unpublish Command
+      
     </span>
   </a>
   
@@ -3666,7 +2852,9 @@
           <li class="md-nav__item">
   <a href="#authenticate-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Authenticate API
+      
+        Authenticate API
+      
     </span>
   </a>
   
@@ -3675,7 +2863,9 @@
           <li class="md-nav__item">
   <a href="#force-release-lock" class="md-nav__link">
     <span class="md-ellipsis">
-      Force Release Lock
+      
+        Force Release Lock
+      
     </span>
   </a>
   
@@ -3694,7 +2884,9 @@
         <li class="md-nav__item">
   <a href="#governance-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Governance Commands
+      
+        Governance Commands
+      
     </span>
   </a>
   
@@ -3704,7 +2896,9 @@
           <li class="md-nav__item">
   <a href="#sample-mfcli-commands-for-governance" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample MFCLI commands for Governance.
+      
+        Sample MFCLI commands for Governance.
+      
     </span>
   </a>
   
@@ -3734,9 +2928,16 @@
       <a href="../../heradlessAndContinuousIntegration.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Headless and Continuous Integration Build
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3755,9 +2956,16 @@
       <a href="CI_with_Foundry_APIs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Foundry APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3776,9 +2984,16 @@
       <a href="CI_NativeUploadPublish.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CI_NativeBinary Upload and Publish
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3797,9 +3012,16 @@
       <a href="CI_CloudBuild.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CI Cloud Build
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3818,9 +3040,16 @@
       <a href="MFA_for_CLI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Support for Multi-Factor Authentication from MFCLI
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3839,9 +3068,16 @@
       <a href="MFCLI_Governance_Commands_Reference_Guide%20.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     MFCLI Governance Commands Reference Guide
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3860,9 +3096,16 @@
       <a href="Export_Import_Custom_Reports_Dashboards_MFCLI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Export and Import Custom Reports and Custom Dashboards through MFCLI
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3881,9 +3124,16 @@
       <a href="Export_Import_Configuration_Parameters_AppServices_MFCLI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Export and Import Configurable Parameters for App Services through MFCLI
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3902,9 +3152,16 @@
       <a href="Lock_Unlock_Fields_ObjectServices_MFCLI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuring Read-only Fields for Object Services through MFCLI
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3923,9 +3180,16 @@
       <a href="Merge_Templates_using_MFCLI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Merge Templates using MFCLI
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3964,8 +3228,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3973,12 +3242,20 @@
         
   
   
+  
     <a href="Foundry_SDKs.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SDKs
+  
+
+    
   </span>
+  
   
 
       
@@ -4003,9 +3280,16 @@
       <a href="Settings_Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4024,9 +3308,16 @@
       <a href="Settings.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - On-premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4045,9 +3336,16 @@
       <a href="Review_Requests_Dashboard.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Review Requests Dashboard
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4066,9 +3364,16 @@
       <a href="Reports.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4087,9 +3392,16 @@
       <a href="Support.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Support
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4108,9 +3420,16 @@
       <a href="Telemetry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Telemetry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4129,9 +3448,16 @@
       <a href="Samples/Samples.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4150,9 +3476,16 @@
       <a href="Appendix_-_Sync_Strategy.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Sync Strategy
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4177,8 +3510,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4186,12 +3524,20 @@
         
   
   
+  
     <a href="Appendix_-_App_Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - App Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4216,9 +3562,16 @@
       <a href="Appendix_-_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Frequently Asked Questions (FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4237,9 +3590,16 @@
       <a href="Limitations.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4272,21 +3632,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth Sample App Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4319,21 +3692,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../integration_services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4366,21 +3752,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../administering_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Administering Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -4437,21 +3836,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Services Console User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4510,21 +3922,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4573,8 +3998,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4582,12 +4012,20 @@
         
   
   
+  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Deployment Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4612,9 +4050,16 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Analytics & Reporting Cloud FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4641,8 +4086,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4650,12 +4100,20 @@
         
   
   
+  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services Troubleshooting Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4690,6 +4148,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -4708,7 +4167,9 @@
         <li class="md-nav__item">
   <a href="#volt-mx-foundry-command-line-utility" class="md-nav__link">
     <span class="md-ellipsis">
-      Volt MX Foundry Command Line Utility
+      
+        Volt MX Foundry Command Line Utility
+      
     </span>
   </a>
   
@@ -4718,7 +4179,9 @@
           <li class="md-nav__item">
   <a href="#download-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Download Links
+      
+        Download Links
+      
     </span>
   </a>
   
@@ -4727,7 +4190,9 @@
           <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      
+        Examples
+      
     </span>
   </a>
   
@@ -4736,7 +4201,9 @@
           <li class="md-nav__item">
   <a href="#minor-difference-between-on-premise-volt-mx-foundry-and-volt-mx-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      Minor difference between on-premise Volt MX Foundry and Volt MX Cloud
+      
+        Minor difference between on-premise Volt MX Foundry and Volt MX Cloud
+      
     </span>
   </a>
   
@@ -4745,7 +4212,9 @@
           <li class="md-nav__item">
   <a href="#miscellaneous-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous Features
+      
+        Miscellaneous Features
+      
     </span>
   </a>
   
@@ -4755,7 +4224,9 @@
           <li class="md-nav__item">
   <a href="#get-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Usage
+      
+        Get Usage
+      
     </span>
   </a>
   
@@ -4764,7 +4235,9 @@
           <li class="md-nav__item">
   <a href="#unpublish-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Unpublish Command
+      
+        Unpublish Command
+      
     </span>
   </a>
   
@@ -4773,7 +4246,9 @@
           <li class="md-nav__item">
   <a href="#authenticate-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Authenticate API
+      
+        Authenticate API
+      
     </span>
   </a>
   
@@ -4782,7 +4257,9 @@
           <li class="md-nav__item">
   <a href="#force-release-lock" class="md-nav__link">
     <span class="md-ellipsis">
-      Force Release Lock
+      
+        Force Release Lock
+      
     </span>
   </a>
   
@@ -4801,7 +4278,9 @@
         <li class="md-nav__item">
   <a href="#governance-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Governance Commands
+      
+        Governance Commands
+      
     </span>
   </a>
   
@@ -4811,7 +4290,9 @@
           <li class="md-nav__item">
   <a href="#sample-mfcli-commands-for-governance" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample MFCLI commands for Governance.
+      
+        Sample MFCLI commands for Governance.
+      
     </span>
   </a>
   
@@ -4832,36 +4313,44 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_user_guide/Content/CI_Foundry.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
 <p>User Guide: Continuous Integration with Volt MX Foundry MFCLI</p>
-<h1 id="continuous-integration-with-volt-mx-foundry">Continuous Integration with Volt MX Foundry</h1>
+<h1 id="continuous-integration-with-volt-mx-foundry">Continuous Integration with Volt MX Foundry<a class="headerlink" href="#continuous-integration-with-volt-mx-foundry" title="Permanent link">&para;</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> is a key modern day software development practice. Any software development project doing Agile development probably would be doing Continuous Integration (CI) too.</p>
 <p>Volt MX Foundry being a SDLC tool, supports Continuous Integration.  Volt MX Foundry has REST APIs for import/export of an application and publish/unpublish of an application to facilitate CI.  You can consume these REST APIs directly if needed.  For this, refer to the <a href="CI_with_Foundry_APIs.html">Continuous Integration with Volt MX Foundry APIs</a>documentation.</p>
 <p>While deploying the application to different environments, you may need to reconfigure certain properties, such as the end-point URL to which the application should talk in the production environment. For these kind of reconfiguration, you can use the <a href="ReconfigPublish.html">Reconfiguration at Publish</a> support. You can set environment specific properties as one time activity using Volt MX Foundry Console and these will automatically get applied during publish in CI flow.</p>
-<h2 id="volt-mx-foundry-command-line-utility">Volt MX Foundry Command Line Utility</h2>
+<h2 id="volt-mx-foundry-command-line-utility">Volt MX Foundry Command Line Utility<a class="headerlink" href="#volt-mx-foundry-command-line-utility" title="Permanent link">&para;</a></h2>
 <p>Using REST APIs may not be ideal in some cases.  For example, a developer uses a shell script for Continuous Integration, then calls REST APIs and does all the response handling. The process can become tedious and time-consuming.  To make such scenarios easier, we offer Volt MX Foundry Command Line Utility.  The utility helps you export/import or publish/unpublish an application on on-premise Volt MX Foundry and Volt MX Cloud environments.</p>
-<h3 id="download-links">Download Links</h3>
+<h3 id="download-links">Download Links<a class="headerlink" href="#download-links" title="Permanent link">&para;</a></h3>
 <p>Volt MX Foundry Command Line Utility can be downloaded from <a href="https://my.hcl-software.com/downloads/voltmx/foundrycurrent">MHS Portal</a>.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p>This section will help you better understand the utility. For example, company MoBoCo is developing the app MoBoApp. Some of the app's developers use the development environment called DevEnv1. As part of the continuous integration job that runs every night, the team wants to push the MoBoApp from DevEnv1 to QAEnv1 . The team wants automation and testing to occur at night and the following day. Consider the following scenarios.</p>
 <p><strong>Scenario 1 – Promoting an app from the local development environment to local QA environment every night</strong></p>
 <p>There is <strong>one Volt MX Foundry Console connected to two environments – DevEnv1 and QAEnv1</strong>.  The following image shows the Volt MX Foundry topology:</p>
 <p><img alt="" src="Resources/Images/CI_MF_655x372.png" /></p>
 <p>Using the preceding topology to promote the MoBoApp from DevEnv1 to QAEnv1 every night, a user can do the following:</p>
-<pre><code> java -jar mfcli.jar Publish -u ciuser@moboco.com -p ciuserpwd -e QAEnv1 -a MoBoApp -au http://10.10.25.18:8080 -cu http://10.10.25.18:8080
-</code></pre>
-<p>Here, ciuser@moboco.com is the user with password ciuserpwd. The user's account helps to promote the MoBoApp to QAEnv1. Identity (Auth) Service and Console are running on http://10.10.25.18:8080. You can also encrypt the password before exporting an app.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> java -jar mfcli.jar Publish -u ciuser@moboco.com -p ciuserpwd -e QAEnv1 -a MoBoApp -au http://10.10.25.18:8080 -cu http://10.10.25.18:8080
+</span></code></pre></div>
+<p>Here, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#105;&#117;&#115;&#101;&#114;&#64;&#109;&#111;&#98;&#111;&#99;&#111;&#46;&#99;&#111;&#109;">&#99;&#105;&#117;&#115;&#101;&#114;&#64;&#109;&#111;&#98;&#111;&#99;&#111;&#46;&#99;&#111;&#109;</a> is the user with password ciuserpwd. The user's account helps to promote the MoBoApp to QAEnv1. Identity (Auth) Service and Console are running on <a href="http://10.10.25.18:8080">http://10.10.25.18:8080</a>. You can also encrypt the password before exporting an app.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> The publish command could be used to publish a new application or to overwrite an existing application.</p>
 </blockquote>
 <p>The following example shows how the publish command is used:</p>
-<pre><code> To publish an application from an on-premise installation,  
-java -jar mfcli.jar Publish -u [user] -p [password] -e [environment name] -a [app name] -au [Identity Service URL] -cu [Console URL]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> To publish an application from an on-premise installation,  
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>java -jar mfcli.jar Publish -u [user] -p [password] -e [environment name] -a [app name] -au [Identity Service URL] -cu [Console URL]
+</span></code></pre></div>
 <p>If the end-point URL or any other property is different in QA environment, you can use the <a href="ServiceReconfig.html">Application Reconfiguration</a> support to set these properties at one time action in Volt MX Foundry Console. The environment specific properties will automatically get applied every time you publish.</p>
 <p><strong>Scenario 2 – Promoting an app from the local development environment to QA environment running on Volt MX Cloud every night</strong></p>
 <p>This case is more complex. Developers are working against a local environment (DevEnv1), but QA is testing through an environment in Volt MX Cloud (QAEnv1). There are <strong>two MF Consoles</strong>. The example is a hybrid scenario of on-premise and the cloud. The following image shows the Volt MX Foundry topology:</p>
@@ -4873,52 +4362,59 @@ java -jar mfcli.jar Publish -u [user] -p [password] -e [environment name] -a [ap
 <li>Import the app (as a .zip file) into Volt MX Cloud account.</li>
 <li>Publish the app to QAEnv1.</li>
 </ol>
-<h3 id="minor-difference-between-on-premise-volt-mx-foundry-and-volt-mx-cloud">Minor difference between on-premise Volt MX Foundry and Volt MX Cloud</h3>
+<h3 id="minor-difference-between-on-premise-volt-mx-foundry-and-volt-mx-cloud">Minor difference between on-premise Volt MX Foundry and Volt MX Cloud<a class="headerlink" href="#minor-difference-between-on-premise-volt-mx-foundry-and-volt-mx-cloud" title="Permanent link">&para;</a></h3>
 <p>The command line utility supports on-premise Volt MX Foundry and Volt MX Cloud. However, there are minor differences in command-line arguments. For on-premise, the utility needs to know the URL of the Identity Services and Console. For Volt MX Cloud, since the URL is constant (<a href="https://manage.hclvoltmx.com/"></a><a href="https://manage.hclvoltmx.com/">https://manage.hclvoltmx.com</a>), and is hard-coded into the utility for convenience. However, Volt MX Cloud is a multiple account (tenant) service, and a user must specify the account ID using –t option. The Volt MX Cloud account ID is a nine-digit number (such as 100054321) and is located in the top-right corner of the console.</p>
 <p>In the scenario, a user must perform the following steps:</p>
 <ol>
 <li>
 <p><strong>Encrypt the password</strong>.</p>
 <p>To encrypt the password, run the following command.</p>
-<p><code>java -jar mfcli.jar  encrypt password ciuserpwd</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>java -jar mfcli.jar  encrypt password ciuserpwd
+</span></code></pre></div>
 <p>An encrypted password is generated for the preceding ciuserpwd. Use the encrypted password in the following commands in the scenario.</p>
 </li>
 <li>
 <p><strong>Export the app from DevEnv1 (as a zip file)</strong></p>
 <p>To export the app, a user must run the following command.</p>
-<p><code>java -jar mfcli.jar Export -u ciuser@moboco.com -p encrypted_password -a MoBoApp –f .\MoBoApp.zip -au http://10.10.25.18:8080 -cu http://10.10.25.18:8080.</code></p>
-<p>In the scenario, ciuser@moboco.com is the user with password  encrypted_password. The user's account helps to export the MoBoApp as MoBoApp.zip. The Identity (Auth) Services and console are running on http://10.10.25.18:8080.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>java -jar mfcli.jar Export -u ciuser@moboco.com -p encrypted_password -a MoBoApp –f .\MoBoApp.zip -au http://10.10.25.18:8080 -cu http://10.10.25.18:8080.
+</span></code></pre></div>
+<p>In the scenario, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#105;&#117;&#115;&#101;&#114;&#64;&#109;&#111;&#98;&#111;&#99;&#111;&#46;&#99;&#111;&#109;">&#99;&#105;&#117;&#115;&#101;&#114;&#64;&#109;&#111;&#98;&#111;&#99;&#111;&#46;&#99;&#111;&#109;</a> is the user with password  encrypted_password. The user's account helps to export the MoBoApp as MoBoApp.zip. The Identity (Auth) Services and console are running on <a href="http://10.10.25.18:8080">http://10.10.25.18:8080</a>.</p>
 <p>The following is an example of how the export command is used:
 To export an application from an on premise installation - </p>
-<p><code>java -jar mfcli.jar Export -u [user] -p [encrypted_password] -a [app name] -f [file name] -au [Identity URL] -cu [Console URL]</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>java -jar mfcli.jar Export -u [user] -p [encrypted_password] -a [app name] -f [file name] -au [Identity URL] -cu [Console URL]
+</span></code></pre></div>
 </li>
 <li>
 <p><strong>Import the app (as a zip file) into Volt MX Cloud Account</strong>  </p>
-<p><code>java -jar mfcli.jar Import -u ciuser@moboco.com -p encrypted_password -a MoBoApp –f .\MoBoApp.zip –t 100054321</code></p>
-<p>In the example, ciuser@moboco.com is the user with encrypted_password. The user's account helps to import the MoBoApp from MoBoApp.zip.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>java -jar mfcli.jar Import -u ciuser@moboco.com -p encrypted_password -a MoBoApp –f .\MoBoApp.zip –t 100054321
+</span></code></pre></div>
+<p>In the example, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#105;&#117;&#115;&#101;&#114;&#64;&#109;&#111;&#98;&#111;&#99;&#111;&#46;&#99;&#111;&#109;">&#99;&#105;&#117;&#115;&#101;&#114;&#64;&#109;&#111;&#98;&#111;&#99;&#111;&#46;&#99;&#111;&#109;</a> is the user with encrypted_password. The user's account helps to import the MoBoApp from MoBoApp.zip.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> Since no URL is provided for Identity Service and console, it is assumed that the URL is Volt MX Cloud (<a href="https://manage.hclvoltmx.com/"></a><a href="https://manage.hclvoltmx.com/">https://manage.hclvoltmx.com</a>). Since Volt MX Cloud is a multiple tenants (account) service, a user must specify the account ID using –t. The account ID in the preceding example is 100054321.</p>
 <p><strong><em>Note:</em></strong> In the example, it is assumed a user is trying to overwrite the existing MoBoApp in the account. If this is new application, then do not specify any name with -a option.</p>
 </blockquote>
 <p>The following is an example of how the import command is used:
 To import an application to manage.hclvoltmx.com,
-<code>java -jar mfcli.jar import -u &lt;user&gt; -p &lt;password&gt; -t &lt;account id&gt; [-f &lt;file name&gt; | -r &lt;directory name&gt;] [-a &lt;app name&gt;] [-v &lt;app version&gt;] [-ay] [-to &lt;time in secs&gt;]</code>  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>java -jar mfcli.jar import -u &lt;user&gt; -p &lt;password&gt; -t &lt;account id&gt; [-f &lt;file name&gt; | -r &lt;directory name&gt;] [-a &lt;app name&gt;] [-v &lt;app version&gt;] [-ay] [-to &lt;time in secs&gt;]
+</span></code></pre></div></p>
 </li>
 <li>
 <p><strong>Publish the app to QAEnv1</strong></p>
-<p><code>java -jar mfcli.jar Publish -u ciuser@moboco.com -p encrypted_password -e QAEnv1 -a MoBoApp –t 100054321</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>java -jar mfcli.jar Publish -u ciuser@moboco.com -p encrypted_password -e QAEnv1 -a MoBoApp –t 100054321
+</span></code></pre></div>
 <p>This method is similar to local publish, except the -t option specifies the account ID.</p>
 <p>The following is an example of how the publish command is used:
 To publish an application to manage.hclvoltmx.com,</p>
-<p><code>java -jar mfcli.jar Publish -u [user] -p [encrypted_password] -e [environment name] -a [app name] -t [account id]</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>java -jar mfcli.jar Publish -u [user] -p [encrypted_password] -e [environment name] -a [app name] -t [account id]
+</span></code></pre></div>
 <p>If the end-point URL or any other property is different in QA environment running on Volt MX Cloud, you can use the <a href="ServiceReconfig.html">Application Reconfiguration</a> support to set these properties at one time action in Volt MX Foundry Console. The environment specific properties will automatically get applied every time you publish.  </p>
 </li>
 </ol>
-<h3 id="miscellaneous-features">Miscellaneous Features</h3>
+<h3 id="miscellaneous-features">Miscellaneous Features<a class="headerlink" href="#miscellaneous-features" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong><em>Note:</em></strong> The following section provides the supported list of MFCLI commands with the links to Foundry Console features. </p>
 </blockquote>
-<h4 id="get-usage">Get Usage</h4>
+<h4 id="get-usage">Get Usage<a class="headerlink" href="#get-usage" title="Permanent link">&para;</a></h4>
 <p>Get the usage:</p>
 <pre><code style="display:block;background-color:#eee;border:1px solid #999;padding:20px;">For example, to get summary help on all the commands,  
 java -jar mfcli.jar help
@@ -5147,48 +4643,46 @@ For example, to encrypt password 'mypassword',
 java -jar mfcli.jar encrypt mypasswordOr,
 java -DVOLTMX_MFCLI_ENCRYPTION_KEY=2d04b412-64cc-4066-a6c8-9c1417b9b85f -jar mfcli.jar encrypt mypassword </code></pre>
 
-<h4 id="unpublish-command">Unpublish Command</h4>
+<h4 id="unpublish-command">Unpublish Command<a class="headerlink" href="#unpublish-command" title="Permanent link">&para;</a></h4>
 <p>The Unpublish feature helps you undo the publish command. The syntax for the Unpublish command is that same as the publish command's. For republish, do not unpublish.  To overwrite an existing publish, republish by executing the publish command again.  When a user does unpublish, all of the app's metadata are removed. The next publish creates fresh metadata, such as a new app key/secret. In case of republishing, when a user does publish multiple times to republish an app, all of the app's metadata are retained.</p>
-<h4 id="authenticate-api">Authenticate API</h4>
+<h4 id="authenticate-api">Authenticate API<a class="headerlink" href="#authenticate-api" title="Permanent link">&para;</a></h4>
 <p>If you have log in credentials, this authenticate command helps you to get the Auth Token out of your login credentials. For example, you can use this command to get a valid Volt MX Identity token and be able to use that token with subsequent REST API calls to interact directly like using Engagement service APIs or AppFactory APIs.</p>
 <p>The API supports for Volt MX Auth and External auth services.</p>
-<pre><code>for Volt MX Cloud (manage.hclvoltmx.com) environment,
-java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;password&gt; -t &lt;account id&gt;
-java -jar mfcli.jar authenticate -u abc@voltmx.com -p password -t 100054321
-</code></pre>
-<pre><code>for on-premise installation,
-java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;password&gt; -au &lt;Identity URL&gt; -cu &lt;Console URL&gt;
-java -jar mfcli.jar authenticate -u abc@voltmx.com -p password -au http://10.10.24.79:8080 -cu http://10.10.24.78:8081
-</code></pre>
-<pre><code>To use external authentication
-java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;pasword&gt; -t &lt;accountid&gt; --external-auth
-</code></pre>
-<h4 id="force-release-lock">Force Release Lock</h4>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>for Volt MX Cloud (manage.hclvoltmx.com) environment,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;password&gt; -t &lt;account id&gt;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>java -jar mfcli.jar authenticate -u abc@voltmx.com -p password -t 100054321
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>for on-premise installation,
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;password&gt; -au &lt;Identity URL&gt; -cu &lt;Console URL&gt;
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>java -jar mfcli.jar authenticate -u abc@voltmx.com -p password -au http://10.10.24.79:8080 -cu http://10.10.24.78:8081
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>To use external authentication
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;pasword&gt; -t &lt;accountid&gt; --external-auth
+</span></code></pre></div></p>
+<h4 id="force-release-lock">Force Release Lock<a class="headerlink" href="#force-release-lock" title="Permanent link">&para;</a></h4>
 <p>This utility guarantees a consistent operation during the preceding import/export/publish/unpublish commands.  The utility ensures that only one such operation per app occurs at a given time.  To do this, the utility takes a lock in the database. If there is a software defect, the DB lock is not freed. A user can use --release-lock to force the lock release. This option should be used with caution because it can cancel any existing app publish.</p>
-<h2 id="governance-commands">Governance Commands</h2>
+<h2 id="governance-commands">Governance Commands<a class="headerlink" href="#governance-commands" title="Permanent link">&para;</a></h2>
 <p>Governance specific commands are added to MFCLI for a seamless continuous integration with the new deployment steps. </p>
-<h3 id="sample-mfcli-commands-for-governance">Sample MFCLI commands for Governance.</h3>
+<h3 id="sample-mfcli-commands-for-governance">Sample MFCLI commands for Governance.<a class="headerlink" href="#sample-mfcli-commands-for-governance" title="Permanent link">&para;</a></h3>
 <p><strong>Check Governance Status</strong></p>
 <p>Checks whether Governance is enabled for a particular environment:</p>
-<pre><code>java -jar mfcli.jar governanceStatus -u [user] -p [password] -e [env] -au [auth URL] -cu [console URL
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>java -jar mfcli.jar governanceStatus -u [user] -p [password] -e [env] -au [auth URL] -cu [console URL
+</span></code></pre></div>
 <p><strong>Create a Publish Request</strong></p>
 <p>Creates a review request which gets queued for review.</p>
-<pre><code>java -jar mfcli.jar createPublishRequest -u [user] -p [password] -e [env] -a [app] -v [version] -au [auth URL] -cu [console URL] -r publish -s true -md text -d changes
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>java -jar mfcli.jar createPublishRequest -u [user] -p [password] -e [env] -a [app] -v [version] -au [auth URL] -cu [console URL] -r publish -s true -md text -d changes
+</span></code></pre></div>
 <p><strong>Check Request Status</strong></p>
 <p>Checks status of a review request raised.</p>
-<pre><code>java -jar mfcli.jar publishRequestStatus -u [user] -p [password] -a [app] -v [version] -e [env]
-
-</code></pre>
-<p><strong>View Diff</strong></p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>java -jar mfcli.jar publishRequestStatus -u [user] -p [password] -a [app] -v [version] -e [env]
+</span></code></pre></div>
+<strong>View Diff</strong></p>
 <p>Fetches diff to review before raising a request.</p>
-<pre><code>java -jar mfcli.jar publishDiff -u [user] -p [password] -e [env] -a [app] -v [version] -r publish -au [auth URL] -cu [console URL]
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>java -jar mfcli.jar publishDiff -u [user] -p [password] -e [env] -a [app] -v [version] -r publish -au [auth URL] -cu [console URL]
+</span></code></pre></div>
 <p>click <a href="https://help.hcl-software.com/voltmx/v10/Foundry/voltmx_foundry_user_guide/Content/MFCLI_Governance_Commands_Reference_Guide%20.html">here</a> for all Governance MFCLI commands and options</p>
+
+
 
 
 
@@ -5211,7 +4705,7 @@ java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;pasword&gt; -t &lt;accou
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -5249,10 +4743,14 @@ java -jar mfcli.jar authenticate -u &lt;user&gt; -p &lt;pasword&gt; -t &lt;accou
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

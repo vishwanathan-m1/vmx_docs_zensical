@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_api_dev_guide/content/voltmx.io.filesystem_functions.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_api_dev_guide/content/voltmx.io.filesystem_functions.html">
       
       
         <link rel="prev" href="voltmx.io.filelist_functions.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="voltmx.types.rawbytes_namespace.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,21 +984,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1349,21 +1074,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1420,8 +1158,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1429,12 +1172,20 @@
         
   
   
+  
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1597,10 +1348,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" checked>
@@ -1609,9 +1364,16 @@
           <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1620,7 +1382,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_6">
             <span class="md-nav__icon md-icon"></span>
-            Volt Iris API Developers Guide
+            
+  
+    Volt Iris API Developers Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1634,9 +1400,16 @@
       <a href="introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1661,21 +1434,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="accelereometer_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Accelerometer API
+  
+
+    
   </span>
+  
   
 
       
@@ -1716,21 +1502,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="actionsheet_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Action Sheet API for iOS
+  
+
+    
   </span>
+  
   
 
       
@@ -1761,21 +1560,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="alert_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Alert API
+  
+
+    
   </span>
+  
   
 
       
@@ -1818,8 +1630,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1827,12 +1644,20 @@
         
   
   
+  
     <a href="animationapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Animation API
+  
+
+    
   </span>
+  
   
 
       
@@ -1857,9 +1682,16 @@
       <a href="Android_NFC_Manifest_Configuration.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Android NFC Manifest Configuration
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1894,21 +1726,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="app-extension-ios.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Extension API for iOS
+  
+
+    
   </span>
+  
   
 
       
@@ -1939,21 +1784,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="application_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application API
+  
+
+    
   </span>
+  
   
 
       
@@ -1984,21 +1842,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="application_settings.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Settings API
+  
+
+    
   </span>
+  
   
 
       
@@ -2029,21 +1900,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="voltmx_automation_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Automation API
+  
+
+    
   </span>
+  
   
 
       
@@ -2074,21 +1958,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="badge.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Badge API
+  
+
+    
   </span>
+  
   
 
       
@@ -2121,8 +2018,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2130,12 +2032,20 @@
         
   
   
+  
     <a href="battery_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Battery API
+  
+
+    
   </span>
+  
   
 
       
@@ -2160,9 +2070,16 @@
       <a href="bookmark_refresh_apis.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Bookmark and Refresh API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2187,8 +2104,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2196,12 +2118,20 @@
         
   
   
+  
     <a href="caching_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Caching API
+  
+
+    
   </span>
+  
   
 
       
@@ -2232,8 +2162,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2241,12 +2176,20 @@
         
   
   
+  
     <a href="camera.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Camera API
+  
+
+    
   </span>
+  
   
 
       
@@ -2271,9 +2214,16 @@
       <a href="client-authentication.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Client Authentication API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2298,21 +2248,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="corehaptics.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Core Haptics
+  
+
+    
   </span>
+  
   
 
       
@@ -2345,21 +2308,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="communication_api_for_react_native.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Communication API for React Native App
+  
+
+    
   </span>
+  
   
 
       
@@ -2390,21 +2366,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Credential Manager API
+  
+
+    
   </span>
+  
   
 
       
@@ -2435,21 +2424,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="cryptography.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Cryptography APIs
+  
+
+    
   </span>
+  
   
 
       
@@ -2480,21 +2482,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="drag_and_drop_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Drag and Drop API
+  
+
+    
   </span>
+  
   
 
       
@@ -2525,21 +2540,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="forcetouch_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ForceTouch API
+  
+
+    
   </span>
+  
   
 
       
@@ -2570,21 +2598,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="modules.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Functional Modules API
+  
+
+    
   </span>
+  
   
 
       
@@ -2615,21 +2656,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="geolocation_api_watchposition.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     GeoLocation API
+  
+
+    
   </span>
+  
   
 
       
@@ -2660,21 +2714,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="gestures.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Gesture API
+  
+
+    
   </span>
+  
   
 
       
@@ -2711,21 +2778,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="gms_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Google Mobile Services APIs
+  
+
+    
   </span>
+  
   
 
       
@@ -2762,21 +2842,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="imageapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Image API
+  
+
+    
   </span>
+  
   
 
       
@@ -2809,21 +2902,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="imageclassificationapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Image Classification API
+  
+
+    
   </span>
+  
   
 
       
@@ -2854,8 +2960,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2863,12 +2974,20 @@
         
   
   
+  
     <a href="in-app_updates_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     In-App Updates API
+  
+
+    
   </span>
+  
   
 
       
@@ -2911,10 +3030,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_30" checked>
@@ -2923,9 +3046,16 @@
           <label class="md-nav__link" for="__nav_8_6_30" id="__nav_8_6_30_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Input and Output API
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2934,7 +3064,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_6_30_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_6_30">
             <span class="md-nav__icon md-icon"></span>
-            Input and Output API
+            
+  
+    Input and Output API
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2948,9 +3082,16 @@
       <a href="inputoutput_api.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2969,9 +3110,16 @@
       <a href="voltmx.io.file_functions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     voltmx.io.File Namespace
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2990,9 +3138,16 @@
       <a href="voltmx.io.filelist_functions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     voltmx.io.FileList Namespace
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3020,9 +3175,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     voltmx.io.FileSystem Namespace
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3031,14 +3193,22 @@
       <a href="voltmx.io.filesystem_functions.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     voltmx.io.FileSystem Namespace
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3058,7 +3228,9 @@
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions
+      
+        Functions
+      
     </span>
   </a>
   
@@ -3068,7 +3240,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystembrowse" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.browse
+      
+        voltmx.io.FileSystem.browse
+      
     </span>
   </a>
   
@@ -3077,7 +3251,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemcopybundledrawfileto" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.copyBundledRawFileTo
+      
+        voltmx.io.FileSystem.copyBundledRawFileTo
+      
     </span>
   </a>
   
@@ -3086,7 +3262,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetappgroupdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getAppGroupDirectoryPath
+      
+        voltmx.io.FileSystem.getAppGroupDirectoryPath
+      
     </span>
   </a>
   
@@ -3095,7 +3273,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetapplicationdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getApplicationDirectoryPath
+      
+        voltmx.io.FileSystem.getApplicationDirectoryPath
+      
     </span>
   </a>
   
@@ -3104,7 +3284,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetcachedirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getCacheDirectoryPath
+      
+        voltmx.io.FileSystem.getCacheDirectoryPath
+      
     </span>
   </a>
   
@@ -3113,7 +3295,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetdatabasedirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getDatabaseDirectoryPath
+      
+        voltmx.io.FileSystem.getDatabaseDirectoryPath
+      
     </span>
   </a>
   
@@ -3122,7 +3306,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetdatadirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getDataDirectoryPath
+      
+        voltmx.io.FileSystem.getDataDirectoryPath
+      
     </span>
   </a>
   
@@ -3131,7 +3317,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalcachedir" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalCacheDir
+      
+        voltmx.io.FileSystem.getExternalCacheDir
+      
     </span>
   </a>
   
@@ -3140,7 +3328,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalcachedirs" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalCacheDirs
+      
+        voltmx.io.FileSystem.getExternalCacheDirs
+      
     </span>
   </a>
   
@@ -3149,7 +3339,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalfilesdir" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalFilesDir
+      
+        voltmx.io.FileSystem.getExternalFilesDir
+      
     </span>
   </a>
   
@@ -3158,7 +3350,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalfilesdirs" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalFilesDirs
+      
+        voltmx.io.FileSystem.getExternalFilesDirs
+      
     </span>
   </a>
   
@@ -3167,7 +3361,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalstoragedirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalStorageDirectoryPath
+      
+        voltmx.io.FileSystem.getExternalStorageDirectoryPath
+      
     </span>
   </a>
   
@@ -3176,7 +3372,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalstoragestate" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalStorageState
+      
+        voltmx.io.FileSystem.getExternalStorageState
+      
     </span>
   </a>
   
@@ -3185,7 +3383,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetfile" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getFile
+      
+        voltmx.io.FileSystem.getFile
+      
     </span>
   </a>
   
@@ -3194,7 +3394,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetfilesystemstats" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getFileSystemStats
+      
+        voltmx.io.FileSystem.getFileSystemStats
+      
     </span>
   </a>
   
@@ -3203,7 +3405,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetnobackupfilesdir" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getNoBackupFilesDir
+      
+        voltmx.io.FileSystem.getNoBackupFilesDir
+      
     </span>
   </a>
   
@@ -3212,7 +3416,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetrawdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getRawDirectoryPath
+      
+        voltmx.io.FileSystem.getRawDirectoryPath
+      
     </span>
   </a>
   
@@ -3221,7 +3427,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetsupportdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getSupportDirectoryPath
+      
+        voltmx.io.FileSystem.getSupportDirectoryPath
+      
     </span>
   </a>
   
@@ -3230,7 +3438,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstorageavailable" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageAvailable
+      
+        voltmx.io.FileSystem.isExternalStorageAvailable
+      
     </span>
   </a>
   
@@ -3239,7 +3449,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstorageemulated" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageEmulated
+      
+        voltmx.io.FileSystem.isExternalStorageEmulated
+      
     </span>
   </a>
   
@@ -3248,7 +3460,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstoragelegacy" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageLegacy
+      
+        voltmx.io.FileSystem.isExternalStorageLegacy
+      
     </span>
   </a>
   
@@ -3257,7 +3471,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstorageremovable" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageRemovable
+      
+        voltmx.io.FileSystem.isExternalStorageRemovable
+      
     </span>
   </a>
   
@@ -3266,7 +3482,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemuploadfiles" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.uploadFiles
+      
+        voltmx.io.FileSystem.uploadFiles
+      
     </span>
   </a>
   
@@ -3296,9 +3514,16 @@
       <a href="voltmx.types.rawbytes_namespace.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     voltmx.types Namespace
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3317,9 +3542,16 @@
       <a href="voltmx.types_objects_rawbytes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     RawBytes Object
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3338,9 +3570,16 @@
       <a href="voltmx.types_objects.html#secure-text-exchange-between-native-android-code-and-javascript" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Secure Text Exchange between Native Android Code and JavaScript
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3373,21 +3612,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="internationalization.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Internationalization API
+  
+
+    
   </span>
+  
   
 
       
@@ -3418,21 +3670,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="keychain_api_for_ios.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Keychain API
+  
+
+    
   </span>
+  
   
 
       
@@ -3463,21 +3728,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="language_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Language API
+  
+
+    
   </span>
+  
   
 
       
@@ -3508,21 +3786,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="localauthapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Local Authentication API
+  
+
+    
   </span>
+  
   
 
       
@@ -3553,8 +3844,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3562,12 +3858,20 @@
         
   
   
+  
     <a href="mapapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Map API
+  
+
+    
   </span>
+  
   
 
       
@@ -3592,9 +3896,16 @@
       <a href="map_styling_api.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Map Styling API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3619,8 +3930,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3628,12 +3944,20 @@
         
   
   
+  
     <a href="math_library.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Math API
+  
+
+    
   </span>
+  
   
 
       
@@ -3670,8 +3994,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3679,12 +4008,20 @@
         
   
   
+  
     <a href="media_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Media API
+  
+
+    
   </span>
+  
   
 
       
@@ -3706,12 +4043,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.md" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3740,21 +4084,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="network_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Network API
+  
+
+    
   </span>
+  
   
 
       
@@ -3793,21 +4150,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Near_Field_Communication_API.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     NFC API
+  
+
+    
   </span>
+  
   
 
       
@@ -3842,21 +4212,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="notifications.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Notifications API
+  
+
+    
   </span>
+  
   
 
       
@@ -3891,21 +4274,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="data_store_library.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Offline Data Access API
+  
+
+    
   </span>
+  
   
 
       
@@ -3940,21 +4336,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="operating_system.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Operating System API
+  
+
+    
   </span>
+  
   
 
       
@@ -3989,21 +4398,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="passbook.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Passbook API
+  
+
+    
   </span>
+  
   
 
       
@@ -4034,21 +4456,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="payment_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Payment API
+  
+
+    
   </span>
+  
   
 
       
@@ -4081,21 +4516,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="phone.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Phone API
+  
+
+    
   </span>
+  
   
 
       
@@ -4128,21 +4576,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="request_app_review_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Request App Review API
+  
+
+    
   </span>
+  
   
 
       
@@ -4173,8 +4634,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4182,12 +4648,20 @@
         
   
   
+  
     <a href="runtime_permissions.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Runtime Permission API
+  
+
+    
   </span>
+  
   
 
       
@@ -4212,9 +4686,16 @@
       <a href="sharedappgroupcontainerapi.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Shared App Group Container API for iOS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4239,21 +4720,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="signinwithapple_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SignInWithApple API
+  
+
+    
   </span>
+  
   
 
       
@@ -4284,21 +4778,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="generic_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Standard Volt MX API
+  
+
+    
   </span>
+  
   
 
       
@@ -4329,21 +4836,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="string.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     String API
+  
+
+    
   </span>
+  
   
 
       
@@ -4376,21 +4896,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="sync_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Sync API
+  
+
+    
   </span>
+  
   
 
       
@@ -4421,21 +4954,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="themes.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Theme API
+  
+
+    
   </span>
+  
   
 
       
@@ -4466,21 +5012,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="threading_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Threading API
+  
+
+    
   </span>
+  
   
 
       
@@ -4511,21 +5070,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="timer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Timer API
+  
+
+    
   </span>
+  
   
 
       
@@ -4558,21 +5130,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="toast_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Toast API
+  
+
+    
   </span>
+  
   
 
       
@@ -4601,21 +5186,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="voltmx.ui_functions.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     UI API
+  
+
+    
   </span>
+  
   
 
       
@@ -4648,8 +5246,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4657,12 +5260,20 @@
         
   
   
+  
     <a href="worker_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Worker Thread API
+  
+
+    
   </span>
+  
   
 
       
@@ -4687,9 +5298,16 @@
       <a href="unsupportedapis.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Deprecated/Unsupported APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4708,9 +5326,16 @@
       <a href="exceptions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; Exceptions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4729,9 +5354,16 @@
       <a href="appendix_general_frequently_asked_questions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; General FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4750,9 +5382,16 @@
       <a href="appendix_javascript_frequently_asked_questions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; JavaScript FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4771,9 +5410,16 @@
       <a href="appendix_preprocesor_directives.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; Preprocessor Directives
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4792,9 +5438,16 @@
       <a href="sqllite.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; SQLite
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4833,21 +5486,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="background_tasks_in_ios.html#background-fetch" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; Background Jobs in iOS 7
+  
+
+    
   </span>
+  
   
 
       
@@ -4890,21 +5556,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5035,21 +5714,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5080,21 +5772,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5129,21 +5834,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5178,21 +5896,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -5225,21 +5956,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -5272,21 +6016,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5342,106 +6099,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -5450,579 +6135,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -6040,6 +6152,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -6059,7 +6172,9 @@
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions
+      
+        Functions
+      
     </span>
   </a>
   
@@ -6069,7 +6184,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystembrowse" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.browse
+      
+        voltmx.io.FileSystem.browse
+      
     </span>
   </a>
   
@@ -6078,7 +6195,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemcopybundledrawfileto" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.copyBundledRawFileTo
+      
+        voltmx.io.FileSystem.copyBundledRawFileTo
+      
     </span>
   </a>
   
@@ -6087,7 +6206,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetappgroupdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getAppGroupDirectoryPath
+      
+        voltmx.io.FileSystem.getAppGroupDirectoryPath
+      
     </span>
   </a>
   
@@ -6096,7 +6217,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetapplicationdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getApplicationDirectoryPath
+      
+        voltmx.io.FileSystem.getApplicationDirectoryPath
+      
     </span>
   </a>
   
@@ -6105,7 +6228,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetcachedirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getCacheDirectoryPath
+      
+        voltmx.io.FileSystem.getCacheDirectoryPath
+      
     </span>
   </a>
   
@@ -6114,7 +6239,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetdatabasedirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getDatabaseDirectoryPath
+      
+        voltmx.io.FileSystem.getDatabaseDirectoryPath
+      
     </span>
   </a>
   
@@ -6123,7 +6250,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetdatadirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getDataDirectoryPath
+      
+        voltmx.io.FileSystem.getDataDirectoryPath
+      
     </span>
   </a>
   
@@ -6132,7 +6261,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalcachedir" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalCacheDir
+      
+        voltmx.io.FileSystem.getExternalCacheDir
+      
     </span>
   </a>
   
@@ -6141,7 +6272,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalcachedirs" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalCacheDirs
+      
+        voltmx.io.FileSystem.getExternalCacheDirs
+      
     </span>
   </a>
   
@@ -6150,7 +6283,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalfilesdir" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalFilesDir
+      
+        voltmx.io.FileSystem.getExternalFilesDir
+      
     </span>
   </a>
   
@@ -6159,7 +6294,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalfilesdirs" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalFilesDirs
+      
+        voltmx.io.FileSystem.getExternalFilesDirs
+      
     </span>
   </a>
   
@@ -6168,7 +6305,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalstoragedirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalStorageDirectoryPath
+      
+        voltmx.io.FileSystem.getExternalStorageDirectoryPath
+      
     </span>
   </a>
   
@@ -6177,7 +6316,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetexternalstoragestate" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getExternalStorageState
+      
+        voltmx.io.FileSystem.getExternalStorageState
+      
     </span>
   </a>
   
@@ -6186,7 +6327,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetfile" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getFile
+      
+        voltmx.io.FileSystem.getFile
+      
     </span>
   </a>
   
@@ -6195,7 +6338,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetfilesystemstats" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getFileSystemStats
+      
+        voltmx.io.FileSystem.getFileSystemStats
+      
     </span>
   </a>
   
@@ -6204,7 +6349,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetnobackupfilesdir" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getNoBackupFilesDir
+      
+        voltmx.io.FileSystem.getNoBackupFilesDir
+      
     </span>
   </a>
   
@@ -6213,7 +6360,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetrawdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getRawDirectoryPath
+      
+        voltmx.io.FileSystem.getRawDirectoryPath
+      
     </span>
   </a>
   
@@ -6222,7 +6371,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemgetsupportdirectorypath" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.getSupportDirectoryPath
+      
+        voltmx.io.FileSystem.getSupportDirectoryPath
+      
     </span>
   </a>
   
@@ -6231,7 +6382,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstorageavailable" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageAvailable
+      
+        voltmx.io.FileSystem.isExternalStorageAvailable
+      
     </span>
   </a>
   
@@ -6240,7 +6393,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstorageemulated" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageEmulated
+      
+        voltmx.io.FileSystem.isExternalStorageEmulated
+      
     </span>
   </a>
   
@@ -6249,7 +6404,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstoragelegacy" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageLegacy
+      
+        voltmx.io.FileSystem.isExternalStorageLegacy
+      
     </span>
   </a>
   
@@ -6258,7 +6415,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemisexternalstorageremovable" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.isExternalStorageRemovable
+      
+        voltmx.io.FileSystem.isExternalStorageRemovable
+      
     </span>
   </a>
   
@@ -6267,7 +6426,9 @@
           <li class="md-nav__item">
   <a href="#voltmxiofilesystemuploadfiles" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.io.FileSystem.uploadFiles
+      
+        voltmx.io.FileSystem.uploadFiles
+      
     </span>
   </a>
   
@@ -6288,21 +6449,31 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_api_dev_guide/content/voltmx.io.filesystem_functions.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
-<h1 id="voltmxiofilesystem-namespace">voltmx.io.FileSystem Namespace</h1>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
+<h1 id="voltmxiofilesystem-namespace">voltmx.io.FileSystem Namespace<a class="headerlink" href="#voltmxiofilesystem-namespace" title="Permanent link">&para;</a></h1>
 <p>The voltmx.io.FileSystem namespace includes APIs to create, read, and navigate through the device file system.</p>
 <p>Information about the voltmx.io.FileSystem namespace is presented in the following topic.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <p>The voltmx.io.FileSystem namespace contains the following functions.</p>
-<h3 id="voltmxiofilesystembrowse">voltmx.io.FileSystem.browse</h3>
+<h3 id="voltmxiofilesystembrowse">voltmx.io.FileSystem.browse<a class="headerlink" href="#voltmxiofilesystembrowse" title="Permanent link">&para;</a></h3>
 <p>This API provides the ability to browse and select files from your local system.</p>
 <p><b>Syntax</b></p>
-<pre><code>voltmx.io.FileSystem.browse(browseConfig,browseCallBack);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>voltmx.io.FileSystem.browse(browseConfig,browseCallBack);
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <table>
 <thead>
@@ -6323,21 +6494,21 @@
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>function selectBtn_onClick_seq0() { // Event on button click
-    var config = {
-        selectMultipleFiles: true,
-        filter: [&quot;image/png&quot;, &quot;image/jpeg&quot;]
-    };
-    voltmx.io.FileSystem.browse(config, selectedFileCallback);
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>function selectBtn_onClick_seq0() { // Event on button click
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    var config = {
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        selectMultipleFiles: true,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        filter: [&quot;image/png&quot;, &quot;image/jpeg&quot;]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    };
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    voltmx.io.FileSystem.browse(config, selectedFileCallback);
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>}
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>None.</p>
 <p><b>Platform Availability</b></p>
 <ul>
 <li>Desktop Web only</li>
 </ul>
-<h3 id="voltmxiofilesystemcopybundledrawfileto">voltmx.io.FileSystem.copyBundledRawFileTo</h3>
+<h3 id="voltmxiofilesystemcopybundledrawfileto">voltmx.io.FileSystem.copyBundledRawFileTo<a class="headerlink" href="#voltmxiofilesystemcopybundledrawfileto" title="Permanent link">&para;</a></h3>
 <p>This API copies a bundled file from the application binary to the specified destination path on the device. While copying the pre-bundled file, the destination file name can be different from the source.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.copyBundledRawFileTo (String rawFileName, String destFilePath)</code></p>
@@ -6361,24 +6532,24 @@
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>//The destination file name can be different from the source.
-var destFilePath = voltmx.io.FileSystem.getDataDirectoryPath() + &quot;/Destinationfile.pdf&quot;;
-var fileObj = null;
-try {    
-    var file = new voltmx.io.File(destFilePath);    
-    //copyBundledRawFileTo API overrides the destination file with new one.   
-    //Hence check before copying    
-    if (!file.exists()) {      
-        var fileObj = voltmx.io.FileSystem.copyBundledRawFileTo(“Sourcefile.pdf”, destFilePath);    
-    } else {     
-        fileObj = file;      
-        alert(&quot;File is already available&quot;);     
-        return;    
-    }
-} catch (e) {    
-    voltmx.print(“Exception“ + e);
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>//The destination file name can be different from the source.
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>var destFilePath = voltmx.io.FileSystem.getDataDirectoryPath() + &quot;/Destinationfile.pdf&quot;;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>var fileObj = null;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>try {    
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    var file = new voltmx.io.File(destFilePath);    
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    //copyBundledRawFileTo API overrides the destination file with new one.   
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    //Hence check before copying    
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    if (!file.exists()) {      
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        var fileObj = voltmx.io.FileSystem.copyBundledRawFileTo(“Sourcefile.pdf”, destFilePath);    
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    } else {     
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        fileObj = file;      
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        alert(&quot;File is already available&quot;);     
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        return;    
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    }
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>} catch (e) {    
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    voltmx.print(“Exception“ + e);
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>}
+</span></code></pre></div>
 <p><b>Remarks </b></p>
 <ul>
 <li>When the app functionality is tested in functional preview application, the voltmx.io.FileSystem.copyBundledRawFileTo API looks for the file in the child app (Downloaded test application). If not found, searches for the same file in the parent app (Functional Preview application).</li>
@@ -6419,7 +6590,7 @@ try {    
 <li>iOS</li>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetappgroupdirectorypath"><a name="getAppGroupDirectoryPath"></a>voltmx.io.FileSystem.getAppGroupDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetappgroupdirectorypath"><a name="getAppGroupDirectoryPath"></a>voltmx.io.FileSystem.getAppGroupDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetappgroupdirectorypath" title="Permanent link">&para;</a></h3>
 <p>This API retrieves the root path of an app group.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getAppGroupDirectoryPath(appGroupID)</code></p>
@@ -6439,23 +6610,23 @@ try {    
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var appGroupPath = voltmx.io.FileSystem.getAppGroupDirectoryPath(&quot;String&quot;);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>var appGroupPath = voltmx.io.FileSystem.getAppGroupDirectoryPath(&quot;String&quot;);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>A string containing the fully-qualified path to the root directory of the app group.</p>
 <p><b>Platform Availability</b></p>
 <ul>
 <li>iOS only</li>
 </ul>
-<h3 id="voltmxiofilesystemgetapplicationdirectorypath">voltmx.io.FileSystem.getApplicationDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetapplicationdirectorypath">voltmx.io.FileSystem.getApplicationDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetapplicationdirectorypath" title="Permanent link">&para;</a></h3>
 <p>The getApplicationDirectoryPath API returns the application directory path.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getApplicationDirectoryPath()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var appDirectoryPath = voltmx.io.FileSystem.getApplicationDirectoryPath();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>var appDirectoryPath = voltmx.io.FileSystem.getApplicationDirectoryPath();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <p><b>Exceptions </b></p>
@@ -6464,15 +6635,15 @@ try {    
 <ul>
 <li>iOS only</li>
 </ul>
-<h3 id="voltmxiofilesystemgetcachedirectorypath">voltmx.io.FileSystem.getCacheDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetcachedirectorypath">voltmx.io.FileSystem.getCacheDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetcachedirectorypath" title="Permanent link">&para;</a></h3>
 <p>The getCacheDirectoryPath API returns the application's cache directory path.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getCacheDirectoryPath()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var cacheDirectoryPath = voltmx.io.FileSystem.getCacheDirectoryPath();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>var cacheDirectoryPath = voltmx.io.FileSystem.getCacheDirectoryPath();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <p><b>Exceptions </b></p>
@@ -6482,7 +6653,7 @@ try {    
 <li>All native platforms</li>
 <li>Desktop Web</li>
 </ul>
-<h3 id="voltmxiofilesystemgetdatabasedirectorypath">voltmx.io.FileSystem.getDatabaseDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetdatabasedirectorypath">voltmx.io.FileSystem.getDatabaseDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetdatabasedirectorypath" title="Permanent link">&para;</a></h3>
 <p>This API returns the application's database directory path (from application's private file system) where <a href="voltmx.db_functions.html">voltmx.db</a> APIs access the database files.</p>
 <p>This API is useful in accessing the pre-bundled SQLite database file. You need to copy the pre-bundled database file to the directory path returned by the voltmx.io.FileSystem.getDatabaseDirectoryPath API, using the voltmx.io.FileSystem.copyBundledRawFileTo API. You can then use the <a href="voltmx.db_functions.html#volt-mx-db-opendatabase">voltmx.db.openDatabase</a> API to open the SQLite database files after copying.</p>
 <p><b>Syntax</b></p>
@@ -6490,32 +6661,31 @@ try {    
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>//Example for opening the pre-bundled database
-//The destination file name can be different from the source.
-var destFilePath = voltmx.io.FileSystem.getDatabaseDirectoryPath() + ”test.db”;
-var fileObj = null;
-try {    
-    var file = new voltmx.io.File(destFilePath);    
-    //copyBundledRawFileTo API overrides the destination file with new one.    
-    //Hence check before copying    
-    if (!file.exists()) {      
-        fileObj = voltmx.io.FileSystem.copyBundledRawFileTo(dbName, destFilePath);    
-    } else {      
-        fileObj = file;      
-        alert(&quot;File is already available&quot;);      
-        return;    
-    }
-} catch (e) {    
-    voltmx.print(“Exception“ + e);  
-}  
-if (fileObj == null) {   
-    voltmx.print(“Copy failed”);  
-} else {   
-    voltmx.print(“Copy Success”); 
-}
-dbObject = voltmx.db.openDatabase(&quot;test.db&quot;, &quot;1.0&quot;, &quot;Prebundled SQL Database&quot;, 5 * 1024 * 1024);  
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>//Example for opening the pre-bundled database
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>//The destination file name can be different from the source.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>var destFilePath = voltmx.io.FileSystem.getDatabaseDirectoryPath() + ”test.db”;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>var fileObj = null;
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>try {    
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    var file = new voltmx.io.File(destFilePath);    
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    //copyBundledRawFileTo API overrides the destination file with new one.    
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    //Hence check before copying    
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    if (!file.exists()) {      
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        fileObj = voltmx.io.FileSystem.copyBundledRawFileTo(dbName, destFilePath);    
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    } else {      
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        fileObj = file;      
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        alert(&quot;File is already available&quot;);      
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>        return;    
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    }
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>} catch (e) {    
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    voltmx.print(“Exception“ + e);  
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>}  
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>if (fileObj == null) {   
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    voltmx.print(“Copy failed”);  
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>} else {   
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    voltmx.print(“Copy Success”); 
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>}
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>dbObject = voltmx.db.openDatabase(&quot;test.db&quot;, &quot;1.0&quot;, &quot;Prebundled SQL Database&quot;, 5 * 1024 * 1024);  
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Application's database directory path in the form of String.</p>
 <p><b>Remarks </b></p>
@@ -6527,15 +6697,15 @@ dbObject = voltmx.db.openDatabase(&quot;test.db&quot;, &quot;1.0&quot;, &quot;Pr
 <li>iOS</li>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetdatadirectorypath">voltmx.io.FileSystem.getDataDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetdatadirectorypath">voltmx.io.FileSystem.getDataDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetdatadirectorypath" title="Permanent link">&para;</a></h3>
 <p>This API returns the application’s data directory path.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getDataDirectoryPath()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var dataDirectoryPath = voltmx.io.FileSystem.getDataDirectoryPath();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>var dataDirectoryPath = voltmx.io.FileSystem.getDataDirectoryPath();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <p><b>Remarks </b>
@@ -6546,13 +6716,13 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 <ul>
 <li>Applicable for all native platforms, except Desktop Web</li>
 </ul>
-<h3 id="voltmxiofilesystemgetexternalcachedir">voltmx.io.FileSystem.getExternalCacheDir</h3>
+<h3 id="voltmxiofilesystemgetexternalcachedir">voltmx.io.FileSystem.getExternalCacheDir<a class="headerlink" href="#voltmxiofilesystemgetexternalcachedir" title="Permanent link">&para;</a></h3>
 <p>The getExternalCacheDir API returns the absolute path to the directory on the primary shared or external storage device where the application can store its cached files.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getExternalCacheDir();</code></p>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalCacheDir();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>var dirPath = voltmx.io.FileSystem.getExternalCacheDir();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <blockquote>
@@ -6564,13 +6734,13 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 <ul>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetexternalcachedirs">voltmx.io.FileSystem.getExternalCacheDirs</h3>
+<h3 id="voltmxiofilesystemgetexternalcachedirs">voltmx.io.FileSystem.getExternalCacheDirs<a class="headerlink" href="#voltmxiofilesystemgetexternalcachedirs" title="Permanent link">&para;</a></h3>
 <p>The getExternalCacheDirs API returns the absolute paths to the application-specific directories on all the shared or external storage devices where the application can store its cached files.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getExternalCacheDirs();</code></p>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalCacheDirs();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>var dirPath = voltmx.io.FileSystem.getExternalCacheDirs();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Array of Strings</p>
 <blockquote>
@@ -6585,7 +6755,7 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 <blockquote>
 <p><strong><em>Note:</em></strong> If your device runs on Android versions before Android KitKat, the voltmx.io.FileSystem.getExternalFilesDirs API returns the same result as the voltmx.io.FileSystem.getExternalFilesDir API.</p>
 </blockquote>
-<h3 id="voltmxiofilesystemgetexternalfilesdir">voltmx.io.FileSystem.getExternalFilesDir</h3>
+<h3 id="voltmxiofilesystemgetexternalfilesdir">voltmx.io.FileSystem.getExternalFilesDir<a class="headerlink" href="#voltmxiofilesystemgetexternalfilesdir" title="Permanent link">&para;</a></h3>
 <p>The getExternalFilesDir API returns the absolute path to the directory on the primary shared or external storage device where the application can store its persistent files.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong>  
@@ -6610,8 +6780,8 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalFilesDir(voltmx.io.FileSystem.DIRECTORY_PICTURES);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>var dirPath = voltmx.io.FileSystem.getExternalFilesDir(voltmx.io.FileSystem.DIRECTORY_PICTURES);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <blockquote>
@@ -6623,7 +6793,7 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 <ul>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetexternalfilesdirs">voltmx.io.FileSystem.getExternalFilesDirs</h3>
+<h3 id="voltmxiofilesystemgetexternalfilesdirs">voltmx.io.FileSystem.getExternalFilesDirs<a class="headerlink" href="#voltmxiofilesystemgetexternalfilesdirs" title="Permanent link">&para;</a></h3>
 <p>The getExternalFilesDirs API returns the absolute paths to the application-specific directories on all the shared or external storage devices where the application can store its persistent files.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong>  
@@ -6648,8 +6818,8 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Array of Strings</p>
 <blockquote>
@@ -6664,15 +6834,15 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 <blockquote>
 <p><strong><em>Note:</em></strong> If your device runs on Android versions before Android KitKat, the voltmx.io.FileSystem.getExternalFilesDirs API returns the same result as the voltmx.io.FileSystem.getExternalFilesDir API.</p>
 </blockquote>
-<h3 id="voltmxiofilesystemgetexternalstoragedirectorypath">voltmx.io.FileSystem.getExternalStorageDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetexternalstoragedirectorypath">voltmx.io.FileSystem.getExternalStorageDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetexternalstoragedirectorypath" title="Permanent link">&para;</a></h3>
 <p>The getExternalStorageDirectoryPath API returns the path to the external storage, typically sdcard.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getExternalStorageDirectoryPath()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var mainLoc = voltmx.io.FileSystem.getExternalStorageDirectoryPath();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>var mainLoc = voltmx.io.FileSystem.getExternalStorageDirectoryPath();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <p><b>Exceptions </b></p>
@@ -6684,7 +6854,7 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 <blockquote>
 <p><strong><em>Note:</em></strong> If the targetSdk version used is above version 28, scoped storage is enabled by default, and the legacy Storage APIs (getExternalStorageDirectoryPath) will not work. You must use scoped Storage APIs such as <a href="#volt-mx-io-filesystem-getexternalfilesdir">getExternalFilesDir</a> and <a href="#volt-mx-io-filesystem-getexternalfilesdirs">getExternalFilesDirs</a> on devices that run on Android version 11, and above.</p>
 </blockquote>
-<h3 id="voltmxiofilesystemgetexternalstoragestate">voltmx.io.FileSystem.getExternalStorageState</h3>
+<h3 id="voltmxiofilesystemgetexternalstoragestate">voltmx.io.FileSystem.getExternalStorageState<a class="headerlink" href="#voltmxiofilesystemgetexternalstoragestate" title="Permanent link">&para;</a></h3>
 <p>The getExternalStorageState API returns the current state of the shared or external storage media at the specified path.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getExternalStorageState([path](#Path1));</code></p>
@@ -6704,9 +6874,9 @@ For Functional Preview, the path returned by the getDataDirectoryPath API points
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var path = voltmx.io.FileSystem.getExternalFilesDir();  
-var stats = voltmx.io.FileSystem.getExternalStorageState(path);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>var path = voltmx.io.FileSystem.getExternalFilesDir();  
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>var stats = voltmx.io.FileSystem.getExternalStorageState(path);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>File System Constant</p>
 <p>The <strong>File System Constant</strong> can have one of the following values:</p>
@@ -6727,7 +6897,7 @@ var stats = voltmx.io.FileSystem.getExternalStorageState(path);
 <ul>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetfile">voltmx.io.FileSystem.getFile</h3>
+<h3 id="voltmxiofilesystemgetfile">voltmx.io.FileSystem.getFile<a class="headerlink" href="#voltmxiofilesystemgetfile" title="Permanent link">&para;</a></h3>
 <p>The getFile API returns a voltmx.io.File object representing the file for the given path. It returns a voltmx.io.File object for the specified file path. getFile API does not create a File.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getFile(string path)</code></p>
@@ -6747,16 +6917,16 @@ var stats = voltmx.io.FileSystem.getExternalStorageState(path);
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var mainLoc = voltmx.io.FileSystem.getDataDirectoryPath();
-var myFileLoc = mainLoc + constants.FILE_PATH_SEPARATOR + &quot;myFileToGet.txt&quot;;
-var myFile = new voltmx.io.File(myFileLoc).createFile();
-var getMyFile = voltmx.io.FileSystem.getFile(myFileLoc);
-if (getMyFile === null) {
-    alert(&quot;getting File failed with null&quot;);
-} else {
-    alert(JSON.stringify(getMyFile.name));
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>var mainLoc = voltmx.io.FileSystem.getDataDirectoryPath();
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>var myFileLoc = mainLoc + constants.FILE_PATH_SEPARATOR + &quot;myFileToGet.txt&quot;;
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>var myFile = new voltmx.io.File(myFileLoc).createFile();
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>var getMyFile = voltmx.io.FileSystem.getFile(myFileLoc);
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>if (getMyFile === null) {
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    alert(&quot;getting File failed with null&quot;);
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>} else {
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    alert(JSON.stringify(getMyFile.name));
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>}
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>VoltMX.io.File</p>
 <p><b>Platform Availability</b></p>
@@ -6764,7 +6934,7 @@ if (getMyFile === null) {
 <li>All native platforms</li>
 <li>Desktop Web</li>
 </ul>
-<h3 id="voltmxiofilesystemgetfilesystemstats">voltmx.io.FileSystem.getFileSystemStats</h3>
+<h3 id="voltmxiofilesystemgetfilesystemstats">voltmx.io.FileSystem.getFileSystemStats<a class="headerlink" href="#voltmxiofilesystemgetfilesystemstats" title="Permanent link">&para;</a></h3>
 <p>The getFileSystemStats API retrieves the detailed information about the space on a file system.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getFileSystemStats([path](#Path));</code></p>
@@ -6784,9 +6954,9 @@ if (getMyFile === null) {
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var path = voltmx.io.FileSystem.getExternalFilesDir();  
-var stats = voltmx.io.FileSystem.getFileSystemStats(path);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>var path = voltmx.io.FileSystem.getExternalFilesDir();  
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>var stats = voltmx.io.FileSystem.getFileSystemStats(path);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>A <strong>JSON Object</strong> that contains the values for the following parameters</p>
 <p><code>freeBytes</code>: Number of bytes that are free, including reserved blocks, on the file system.</p>
@@ -6802,15 +6972,15 @@ On devices that run Android version 18 (or earlier), the value for totalBytes pa
 <ul>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetnobackupfilesdir">voltmx.io.FileSystem.getNoBackupFilesDir</h3>
+<h3 id="voltmxiofilesystemgetnobackupfilesdir">voltmx.io.FileSystem.getNoBackupFilesDir<a class="headerlink" href="#voltmxiofilesystemgetnobackupfilesdir" title="Permanent link">&para;</a></h3>
 <p>The getNoBackupFilesDirAPI returns the absolute path to the directory on the file system that is similar to the <a href="#volt-mx-io-filesystem-getdatadirectorypath">voltmx.io.FileSystem.getDataDirectoryPath</a> API. However, the files present in the directory returned by this API are excluded during the automatic backup process to the remote storage.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getNoBackupFilesDir();</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getNoBackupFilesDir();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>var dirPath = voltmx.io.FileSystem.getNoBackupFilesDir();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <p><b>Exceptions </b></p>
@@ -6819,15 +6989,15 @@ On devices that run Android version 18 (or earlier), the value for totalBytes pa
 <ul>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemgetrawdirectorypath">voltmx.io.FileSystem.getRawDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetrawdirectorypath">voltmx.io.FileSystem.getRawDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetrawdirectorypath" title="Permanent link">&para;</a></h3>
 <p>The getRawDirectoryPath API returns the application’s “raw” directory path. getRawDirectoryPath API API is applicable only on Android.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getRawDirectoryPath()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var rawDirectoryPath =  voltmx.io.FileSystem.getRawDirectoryPath();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>var rawDirectoryPath =  voltmx.io.FileSystem.getRawDirectoryPath();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Returns the directory path in the form of String.</p>
 <p><b>Exceptions </b></p>
@@ -6841,15 +7011,15 @@ On devices that run Android version 18 (or earlier), the value for totalBytes pa
 <li>Android</li>
 <li>iOS</li>
 </ul>
-<h3 id="voltmxiofilesystemgetsupportdirectorypath">voltmx.io.FileSystem.getSupportDirectoryPath</h3>
+<h3 id="voltmxiofilesystemgetsupportdirectorypath">voltmx.io.FileSystem.getSupportDirectoryPath<a class="headerlink" href="#voltmxiofilesystemgetsupportdirectorypath" title="Permanent link">&para;</a></h3>
 <p>This API returns the application’s support directory path. This is only applicable for iOS.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.getSupportDirectoryPath()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var supportDirectoryPath = voltmx.io.FileSystem.getSupportDirectoryPath();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>var supportDirectoryPath = voltmx.io.FileSystem.getSupportDirectoryPath();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>String</p>
 <p><b>Remarks </b></p>
@@ -6860,15 +7030,15 @@ On devices that run Android version 18 (or earlier), the value for totalBytes pa
 <ul>
 <li>iOS</li>
 </ul>
-<h3 id="voltmxiofilesystemisexternalstorageavailable">voltmx.io.FileSystem.isExternalStorageAvailable</h3>
+<h3 id="voltmxiofilesystemisexternalstorageavailable">voltmx.io.FileSystem.isExternalStorageAvailable<a class="headerlink" href="#voltmxiofilesystemisexternalstorageavailable" title="Permanent link">&para;</a></h3>
 <p>The isExternalStorageAvailable API is used to check, if the external storage is available and accessible on the device. The isExternalStorageAvailable API returns boolean value as true/false accordingly on Android platform.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.isExternalStorageAvailable()</code></p>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Example</b></p>
-<pre><code>var isExternalStorageAvialable = voltmx.io.FileSystem.isExternalStorageAvailable();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>var isExternalStorageAvialable = voltmx.io.FileSystem.isExternalStorageAvailable();
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Boolean</p>
 <p><b>Exceptions </b></p>
@@ -6878,7 +7048,7 @@ On devices that run Android version 18 (or earlier), the value for totalBytes pa
 <li>iOS</li>
 <li>Android</li>
 </ul>
-<h3 id="voltmxiofilesystemisexternalstorageemulated">voltmx.io.FileSystem.isExternalStorageEmulated</h3>
+<h3 id="voltmxiofilesystemisexternalstorageemulated">voltmx.io.FileSystem.isExternalStorageEmulated<a class="headerlink" href="#voltmxiofilesystemisexternalstorageemulated" title="Permanent link">&para;</a></h3>
 <p>The isExternalStorageEmulated API is used to check if the primary shared or external storage media is emulated. The isExternalStorageAvailable API returns a boolean value as true/false accordingly.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.isExternalStorageEmulated([File](#File))</code></p>
@@ -6898,9 +7068,9 @@ On devices that run Android version 18 (or earlier), the value for totalBytes pa
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
-var isEmulated = voltmx.io.FileSystem.isExternalStorageEmulated(dirPath);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>var isEmulated = voltmx.io.FileSystem.isExternalStorageEmulated(dirPath);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Boolean</p>
 <p><b>Exceptions </b></p>
@@ -6912,7 +7082,7 @@ var isEmulated = voltmx.io.FileSystem.isExternalStorageEmulated(dirPath);
 <blockquote>
 <p><strong><em>Note:</em></strong> If this API is invoked on a device that runs on Android version KitKat, it always returns a  <code>false</code> value.</p>
 </blockquote>
-<h3 id="voltmxiofilesystemisexternalstoragelegacy">voltmx.io.FileSystem.isExternalStorageLegacy</h3>
+<h3 id="voltmxiofilesystemisexternalstoragelegacy">voltmx.io.FileSystem.isExternalStorageLegacy<a class="headerlink" href="#voltmxiofilesystemisexternalstoragelegacy" title="Permanent link">&para;</a></h3>
 <p>The isExternalStorageLegacy API is used to check if the primary shared or external storage media at the specified path is from the legacy view and includes files that are not specific to the app. The isExternalStorageLegacy API returns a boolean value as true/false accordingly.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.isExternalStorageLegacy([File](#File2))</code></p>
@@ -6932,9 +7102,9 @@ var isEmulated = voltmx.io.FileSystem.isExternalStorageEmulated(dirPath);
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
-var isLegacy = voltmx.io.FileSystem.isExternalStorageLegacy(dirPath);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>var isLegacy = voltmx.io.FileSystem.isExternalStorageLegacy(dirPath);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Boolean</p>
 <p><b>Exceptions </b></p>
@@ -6946,7 +7116,7 @@ var isLegacy = voltmx.io.FileSystem.isExternalStorageLegacy(dirPath);
 <blockquote>
 <p><strong><em>Note:</em></strong> If this API is invoked on a device that runs on Android versions prior to Android Q, it always returns a  <code>true</code> value.</p>
 </blockquote>
-<h3 id="voltmxiofilesystemisexternalstorageremovable">voltmx.io.FileSystem.isExternalStorageRemovable</h3>
+<h3 id="voltmxiofilesystemisexternalstorageremovable">voltmx.io.FileSystem.isExternalStorageRemovable<a class="headerlink" href="#voltmxiofilesystemisexternalstorageremovable" title="Permanent link">&para;</a></h3>
 <p>The isExternalStorageRemovable API is used to check if the primary shared or external storage media at the specified path is physically removable. The isExternalStorageRemovable API returns a boolean value as true/false accordingly.</p>
 <p><b>Syntax</b></p>
 <p><code>voltmx.io.FileSystem.isExternalStorageRemovable([File](#File1))</code></p>
@@ -6966,9 +7136,9 @@ var isLegacy = voltmx.io.FileSystem.isExternalStorageLegacy(dirPath);
 </tbody>
 </table>
 <p><b>Example</b></p>
-<pre><code>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
-var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>var dirPath = voltmx.io.FileSystem.getExternalFilesDirs(voltmx.io.FileSystem.DIRECTORY_PICTURES);
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
+</span></code></pre></div>
 <p><b>Return Values</b></p>
 <p>Boolean</p>
 <p><b>Exceptions </b></p>
@@ -6980,7 +7150,7 @@ var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
 <blockquote>
 <p><strong><em>Note:</em></strong> If this API is invoked on a device that runs on Android version KitKat, it always returns a  <code>false</code> value.</p>
 </blockquote>
-<h3 id="voltmxiofilesystemuploadfiles">voltmx.io.FileSystem.uploadFiles</h3>
+<h3 id="voltmxiofilesystemuploadfiles">voltmx.io.FileSystem.uploadFiles<a class="headerlink" href="#voltmxiofilesystemuploadfiles" title="Permanent link">&para;</a></h3>
 <p>When the developer invokes this API with the list of files, the API internally iterates through the fileList and makes the network call to the URL mentioned and uploads the files. The API assumes that the application using this API has the necessary server side infrastructure to handle the upload.</p>
 <p>Internally, the API uses AJAX-based multi-part upload of the files to the URL mentioned in all browsers except IE 8 and 9. In the case of IE 8 and 9, we provide frame-based submit as the multi-part through AJAX (as it is not handled by the browser).</p>
 <blockquote>
@@ -7020,16 +7190,16 @@ var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
 | uploadConfig \[Object\] | Configuration parameters, which is a simple JSON object of key value pairs, that provides the possible options during the upload. Currently there are no keys. | -->
 
 <p><b>Example</b></p>
-<pre><code>function UploadBtn_onClick_seq0() { // Event on upload button click
-    var uploadURL = &quot;http://10.10.4.17:8080/fileupload/upload&quot;;
-    var filesQueue = [{
-        File object
-    }, {
-        File Object
-    }]; //Array of File objects got in browseCallBack()
-    voltmx.io.FileSystem.uploadFiles(uploadURL, filesQueue, upLoadCallBack);
-};
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>function UploadBtn_onClick_seq0() { // Event on upload button click
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    var uploadURL = &quot;http://10.10.4.17:8080/fileupload/upload&quot;;
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    var filesQueue = [{
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>        File object
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>    }, {
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>        File Object
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    }]; //Array of File objects got in browseCallBack()
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>    voltmx.io.FileSystem.uploadFiles(uploadURL, filesQueue, upLoadCallBack);
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>};
+</span></code></pre></div>
 <p>Limitations for File Browse and Upload APIs</p>
 <ol>
 <li>API cannot be used in pre-show, post-show, appService, pre-appinit, or post-app init.</li>
@@ -7112,6 +7282,8 @@ var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
 
 
 
+
+
                 
               </article>
             </div>
@@ -7122,7 +7294,7 @@ var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -7160,10 +7332,14 @@ var isRemovable = voltmx.io.FileSystem.isExternalStorageRemovable(dirPath);
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

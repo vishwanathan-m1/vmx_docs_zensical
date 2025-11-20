@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/app_design_dev/Content/Animation.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/app_design_dev/Content/Animation.html">
       
       
         <link rel="prev" href="Flex_SampleCode.html">
@@ -18,18 +18,53 @@
         <link rel="next" href="Appendix.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
-        <title>Flex Layout Animation - HCL Volt MX Documentation</title>
+        <title>Animation - HCL Volt MX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -139,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flex Layout Animation
+              Animation
             
           </span>
         </div>
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,21 +984,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1349,8 +1074,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1358,12 +1088,20 @@
         
   
   
+  
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1422,10 +1160,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" checked>
@@ -1434,9 +1176,16 @@
           <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1445,7 +1194,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_5">
             <span class="md-nav__icon md-icon"></span>
-            Application Design and Development Guidelines
+            
+  
+    Application Design and Development Guidelines
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1459,9 +1212,16 @@
       <a href="homepage.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1480,9 +1240,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Preface
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1501,9 +1268,16 @@
       <a href="Application_Design_Guidelines_Overview.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Design Guidelines Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1560,8 +1334,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1569,12 +1348,20 @@
         
   
   
+  
     <a href="UI_Guidelines.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     UI Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1605,8 +1392,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1614,12 +1406,20 @@
         
   
   
+  
     <a href="Coding_Guidelines.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Coding Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1644,9 +1444,16 @@
       <a href="Performance_and_Memory.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Performance Management Guidelines
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1673,8 +1480,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1682,12 +1494,20 @@
         
   
   
+  
     <a href="Memory_Management_Guidelines.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Memory Management Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1712,9 +1532,16 @@
       <a href="Security.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Device-side Security Guidelines
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1733,9 +1560,16 @@
       <a href="Pre_and_Post_Processors.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Pre/Post Processors and URL Provider Guidelines
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1754,9 +1588,16 @@
       <a href="SuperApps_and_MicroApps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SuperApps and MicroApps
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1783,21 +1624,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Application_Development_Guidelines_Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1836,8 +1690,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1845,12 +1704,20 @@
         
   
   
+  
     <a href="Accessibility_Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessibility (508 Compliance)
+  
+
+    
   </span>
+  
   
 
       
@@ -1889,10 +1756,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5_13" checked>
@@ -1901,9 +1772,16 @@
           <label class="md-nav__link" for="__nav_8_5_13" id="__nav_8_5_13_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Flex Layout Guidelines
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1912,7 +1790,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_5_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_5_13">
             <span class="md-nav__icon md-icon"></span>
-            Flex Layout Guidelines
+            
+  
+    Flex Layout Guidelines
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1926,9 +1808,16 @@
       <a href="Flex_Layout_Guidelines_Overview.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1947,9 +1836,16 @@
       <a href="Limitations_Animations.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Animation & Flex Layout Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1968,9 +1864,16 @@
       <a href="Flex_Backward_Compatibility.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Flex Backwards Compatibility
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1989,9 +1892,16 @@
       <a href="Flex_SampleCode.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Flex Pseudocode Examples
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2017,9 +1927,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Flex Layout Animation
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2028,14 +1945,22 @@
       <a href="Animation.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Flex Layout Animation
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -2053,7 +1978,9 @@
         <li class="md-nav__item">
   <a href="#widget-level-animation-using-flex-forms" class="md-nav__link">
     <span class="md-ellipsis">
-      Widget Level Animation Using Flex Forms
+      
+        Widget Level Animation Using Flex Forms
+      
     </span>
   </a>
   
@@ -2062,7 +1989,9 @@
         <li class="md-nav__item">
   <a href="#key-frame-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Frame Animations
+      
+        Key Frame Animations
+      
     </span>
   </a>
   
@@ -2072,7 +2001,9 @@
           <li class="md-nav__item">
   <a href="#key-frame-animation-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Frame Animation Definition
+      
+        Key Frame Animation Definition
+      
     </span>
   </a>
   
@@ -2086,7 +2017,9 @@
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      
+        References
+      
     </span>
   </a>
   
@@ -2095,7 +2028,9 @@
         <li class="md-nav__item">
   <a href="#animation-properties-events-and-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Animation Properties Events and Methods
+      
+        Animation Properties Events and Methods
+      
     </span>
   </a>
   
@@ -2105,7 +2040,9 @@
           <li class="md-nav__item">
   <a href="#widget-skin-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Widget Skin Properties
+      
+        Widget Skin Properties
+      
     </span>
   </a>
   
@@ -2119,7 +2056,9 @@
         <li class="md-nav__item">
   <a href="#animation-configurations" class="md-nav__link">
     <span class="md-ellipsis">
-      Animation Configurations
+      
+        Animation Configurations
+      
     </span>
   </a>
   
@@ -2128,7 +2067,9 @@
         <li class="md-nav__item">
   <a href="#applying-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Applying Animations
+      
+        Applying Animations
+      
     </span>
   </a>
   
@@ -2137,7 +2078,9 @@
         <li class="md-nav__item">
   <a href="#sequential-and-parallel-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Sequential and Parallel Animations
+      
+        Sequential and Parallel Animations
+      
     </span>
   </a>
   
@@ -2146,7 +2089,9 @@
         <li class="md-nav__item">
   <a href="#querying-widget-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Querying Widget Properties
+      
+        Querying Widget Properties
+      
     </span>
   </a>
   
@@ -2155,7 +2100,9 @@
         <li class="md-nav__item">
   <a href="#layout-callbacks-during-animation" class="md-nav__link">
     <span class="md-ellipsis">
-      Layout Callbacks during Animation
+      
+        Layout Callbacks during Animation
+      
     </span>
   </a>
   
@@ -2164,7 +2111,9 @@
         <li class="md-nav__item">
   <a href="#flex-container-and-child-widgets" class="md-nav__link">
     <span class="md-ellipsis">
-      Flex Container and Child Widgets
+      
+        Flex Container and Child Widgets
+      
     </span>
   </a>
   
@@ -2173,7 +2122,9 @@
         <li class="md-nav__item">
   <a href="#multiple-parallel-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Multiple Parallel Animations
+      
+        Multiple Parallel Animations
+      
     </span>
   </a>
   
@@ -2182,7 +2133,9 @@
         <li class="md-nav__item">
   <a href="#interactions-on-the-widget-during-animation" class="md-nav__link">
     <span class="md-ellipsis">
-      Interactions on the Widget during Animation
+      
+        Interactions on the Widget during Animation
+      
     </span>
   </a>
   
@@ -2215,9 +2168,16 @@
       <a href="Appendix.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Platform Specific Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2236,9 +2196,16 @@
       <a href="FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Common UI Issues
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2401,21 +2368,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2450,21 +2430,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2595,21 +2588,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2640,21 +2646,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2689,21 +2708,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2738,21 +2770,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -2785,21 +2830,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -2832,21 +2890,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2902,106 +2973,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -3010,579 +3009,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -3601,6 +3027,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -3617,7 +3044,9 @@
         <li class="md-nav__item">
   <a href="#widget-level-animation-using-flex-forms" class="md-nav__link">
     <span class="md-ellipsis">
-      Widget Level Animation Using Flex Forms
+      
+        Widget Level Animation Using Flex Forms
+      
     </span>
   </a>
   
@@ -3626,7 +3055,9 @@
         <li class="md-nav__item">
   <a href="#key-frame-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Frame Animations
+      
+        Key Frame Animations
+      
     </span>
   </a>
   
@@ -3636,7 +3067,9 @@
           <li class="md-nav__item">
   <a href="#key-frame-animation-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Frame Animation Definition
+      
+        Key Frame Animation Definition
+      
     </span>
   </a>
   
@@ -3650,7 +3083,9 @@
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      
+        References
+      
     </span>
   </a>
   
@@ -3659,7 +3094,9 @@
         <li class="md-nav__item">
   <a href="#animation-properties-events-and-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Animation Properties Events and Methods
+      
+        Animation Properties Events and Methods
+      
     </span>
   </a>
   
@@ -3669,7 +3106,9 @@
           <li class="md-nav__item">
   <a href="#widget-skin-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Widget Skin Properties
+      
+        Widget Skin Properties
+      
     </span>
   </a>
   
@@ -3683,7 +3122,9 @@
         <li class="md-nav__item">
   <a href="#animation-configurations" class="md-nav__link">
     <span class="md-ellipsis">
-      Animation Configurations
+      
+        Animation Configurations
+      
     </span>
   </a>
   
@@ -3692,7 +3133,9 @@
         <li class="md-nav__item">
   <a href="#applying-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Applying Animations
+      
+        Applying Animations
+      
     </span>
   </a>
   
@@ -3701,7 +3144,9 @@
         <li class="md-nav__item">
   <a href="#sequential-and-parallel-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Sequential and Parallel Animations
+      
+        Sequential and Parallel Animations
+      
     </span>
   </a>
   
@@ -3710,7 +3155,9 @@
         <li class="md-nav__item">
   <a href="#querying-widget-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Querying Widget Properties
+      
+        Querying Widget Properties
+      
     </span>
   </a>
   
@@ -3719,7 +3166,9 @@
         <li class="md-nav__item">
   <a href="#layout-callbacks-during-animation" class="md-nav__link">
     <span class="md-ellipsis">
-      Layout Callbacks during Animation
+      
+        Layout Callbacks during Animation
+      
     </span>
   </a>
   
@@ -3728,7 +3177,9 @@
         <li class="md-nav__item">
   <a href="#flex-container-and-child-widgets" class="md-nav__link">
     <span class="md-ellipsis">
-      Flex Container and Child Widgets
+      
+        Flex Container and Child Widgets
+      
     </span>
   </a>
   
@@ -3737,7 +3188,9 @@
         <li class="md-nav__item">
   <a href="#multiple-parallel-animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Multiple Parallel Animations
+      
+        Multiple Parallel Animations
+      
     </span>
   </a>
   
@@ -3746,7 +3199,9 @@
         <li class="md-nav__item">
   <a href="#interactions-on-the-widget-during-animation" class="md-nav__link">
     <span class="md-ellipsis">
-      Interactions on the Widget during Animation
+      
+        Interactions on the Widget during Animation
+      
     </span>
   </a>
   
@@ -3762,15 +3217,25 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/app_design_dev/Content/Animation.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
-  <h1>Flex Layout Animation</h1>
+  <h1>Animation</h1>
 
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 <p>Volt MX Application Design and Development Guidelines: <a href="Flex_Layout_Guidelines_Overview.html">Flex Layout Guidelines</a> &gt; Flex Layout Animation</p>
-<h2 id="widget-level-animation-using-flex-forms">Widget Level Animation Using Flex Forms</h2>
+<h2 id="widget-level-animation-using-flex-forms">Widget Level Animation Using Flex Forms<a class="headerlink" href="#widget-level-animation-using-flex-forms" title="Permanent link">&para;</a></h2>
 <p>Widget Level Animation feature enables you to animate widgets placed in a container (for example, Form). This feature supports 2D and 3D animations and transformations. The 2D animations are supported on iOS, Android, Windows, and SPA platforms and the 3D animations are supported on iOS, SPA and Android (limited support) for the applications created in JavaScript language using the Volt MX Platform.</p>
 <p>When the transformation matrix is identity, the 3D directions are as follows:</p>
 <ul>
@@ -3786,46 +3251,45 @@
 <li><a href="#key-frame-animations">Key Frame Animations</a></li>
 <li><a href="#animation-properties-events-and-methods">Animation Properties Events and Methods</a></li>
 </ul>
-<h2 id="key-frame-animations">Key Frame Animations</h2>
+<h2 id="key-frame-animations">Key Frame Animations<a class="headerlink" href="#key-frame-animations" title="Permanent link">&para;</a></h2>
 <p>Key frame animations allows you to define animations by changing the widget level properties.</p>
-<h3 id="key-frame-animation-definition">Key Frame Animation Definition</h3>
+<h3 id="key-frame-animation-definition">Key Frame Animation Definition<a class="headerlink" href="#key-frame-animation-definition" title="Permanent link">&para;</a></h3>
 <p>Key frame definition consists of one or more properties of the widget along with changes in their values and the steps (key frame) involved in changing the value from the initial value to final value. Each step from initial value to the final value can be configured with an animation behavior.</p>
 <p>Key frame animation can be defined dictionary of steps with each step configured again using a JavaScript Object (Dictionary). Step-config is optional parameter. Following is the syntax:</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> If the animation definition does not follow the above syntax then animate API throws Invalid Animation Definition exception.</p>
 </blockquote>
-<pre><code>{  
-
-&lt;step&gt;: { 
-
-&lt;widget_property&gt; : &lt;value&gt; , 
-
-&lt;widget_property&gt; : &lt;value&gt; ,
-
- …
-
-stepConfig : { … }
-}
-
-        ,
-&lt;step&gt;: { 
-
-&lt;widget_property&gt;  : &lt;value&gt; , 
-
-&lt;widget_property&gt;  : &lt;value&gt; ,  
-
-…
-
-stepConfig : { … }
-
-}
-,
-       ….
-
-}
-
-</code></pre>
-<h2 id="references">References</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;step&gt;: { 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;widget_property&gt; : &lt;value&gt; , 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&lt;widget_property&gt; : &lt;value&gt; ,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> …
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>stepConfig : { … }
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>}
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        ,
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>&lt;step&gt;: { 
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>&lt;widget_property&gt;  : &lt;value&gt; , 
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&lt;widget_property&gt;  : &lt;value&gt; ,  
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>…
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>stepConfig : { … }
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>}
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>,
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>       ….
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>}
+</span></code></pre></div>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <p>APIs does not completely adhere to the CSS3 specifications but is influenced by CSS3 animations and transformations. </p>
 <p>The following URLs help as a reference:</p>
 <ul>
@@ -3835,19 +3299,18 @@ stepConfig : { … }
 <li><a href="http://dev.w3.org/csswg/css3-2d-transforms/">http://dev.w3.org/csswg/css3-2d-transforms/</a></li>
 <li><a href="http://dev.w3.org/csswg/css3-3d-transforms/">http://dev.w3.org/csswg/css3-3d-transforms/</a></li>
 </ul>
-<h2 id="animation-properties-events-and-methods">Animation Properties Events and Methods</h2>
+<h2 id="animation-properties-events-and-methods">Animation Properties Events and Methods<a class="headerlink" href="#animation-properties-events-and-methods" title="Permanent link">&para;</a></h2>
 <p>Following are the widget level properties, events, and methods that are allowed to be part of the animation definition.</p>
 <details close="close">
 <p><summary id="animateH">animate</summary></p>
 <p>This method applies the animation to the widget immediately, if the widget is part of the currently visible view hierarchy. If widget is not part of the currently visible view hierarchy then this API invocation is ignored. This method is asynchronous and immediately returns and do not wait for the animation to start or complete.</p>
 <p>All the animation callbacks will receive animate as a second parameter.</p>
 <p><b>Signature</b></p>
-<pre><code>
-animate(  
-   animationObj,  
-  animationConfig,  
-   animationCallbacks)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>animate(  
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   animationObj,  
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  animationConfig,  
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   animationCallbacks)
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <p>animationObj</p>
 <p>An object defined using voltmx.ui.createAnimation() API. Refer voltmx.ui.createAnimation for more details.</p>
@@ -3873,22 +3336,21 @@ animate(
 <p><b>Remarks</b></p>
 <p>This method throws Invalid Animation Definition Exception if animation definition, does not follow the dictionary structure expected. This method is ignored if this is called on widget whose immediate parent is not FlexForm, FlexContainer or FlexScrollContainer.</p>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation   
-
-function AnimateBoth()
-{
-  var getFuncName = frm1.listbox18.selectedKey;
-
-    if(getFuncName == &quot;BothLT&quot;) {
-        frm1.textbox26.animate(myAnimDefinition(), animConfiguration(), {});
-    }
-    else if(getFuncName == &quot;BothTBL&quot;){
-    frm1.textbox26.animate(myAnimDefinitionsc1(), animConfiguration(), {});
-
-    }
-}  
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>//Sample code of animation   
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>function AnimateBoth()
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>{
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  var getFuncName = frm1.listbox18.selectedKey;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    if(getFuncName == &quot;BothLT&quot;) {
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        frm1.textbox26.animate(myAnimDefinition(), animConfiguration(), {});
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    }
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    else if(getFuncName == &quot;BothTBL&quot;){
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    frm1.textbox26.animate(myAnimDefinitionsc1(), animConfiguration(), {});
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    }
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>}  
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <ul>
 <li>iOS</li>
@@ -3898,10 +3360,9 @@ function AnimateBoth()
 </ul>
 <p>This method creates an animation object that can be used to animate the widgets using animate API.</p>
 <p><b>Signature</b></p>
-<pre><code>
-voltmx.ui.createAnimation (  
-   animationDef)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>voltmx.ui.createAnimation (  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   animationDef)
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <p>animationDef [Number]</p>
 <p>A sample animation definition.</p>
@@ -3909,21 +3370,21 @@ voltmx.ui.createAnimation (
 <p>```
 {
     <step>: {</p>
-<pre><code>    &lt;widget_property&gt;: &lt;value&gt;,
+<div class="language-text highlight"><pre><span></span><code>    &lt;widget_property&gt;: &lt;value&gt;,
     &lt;widget_property&gt;: &lt;value&gt;,
     ---
-</code></pre>
+</code></pre></div>
 <p>stepConfig: {…}
     }
   <step>: {</p>
-<pre><code>    &lt;widget_property&gt;: &lt;value&gt;,
+<div class="language-text highlight"><pre><span></span><code>    &lt;widget_property&gt;: &lt;value&gt;,
     &lt;widget_property&gt;: &lt;value&gt;,
     ---
 
 stepConfig: {…}
 },
   ---
-</code></pre>
+</code></pre></div>
 <p>}</p>
 <p>```</p>
 </blockquote>
@@ -3934,28 +3395,27 @@ stepConfig: {…}
 <p><b>Remarks</b></p>
 <p>Values cannot be specified using pixels.</p>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation   
-
-function myAnimDefinition()
-{
-    var animDefinition = 
-    {
-       0 : 
-       {
-         &quot;width&quot;:50,
-         &quot;left&quot;:0
-        },
-       100 : 
-       {
-         &quot;width&quot;:50,
-         &quot;left&quot;:90
-        }
-      } ;
-    animDef = voltmx.ui.createAnimation(animDefinition);
-    return animDef;
-}  
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>//Sample code of animation   
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>function myAnimDefinition()
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>{
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    var animDefinition = 
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    {
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>       0 : 
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>       {
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>         &quot;width&quot;:50,
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>         &quot;left&quot;:0
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        },
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>       100 : 
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>       {
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>         &quot;width&quot;:50,
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>         &quot;left&quot;:90
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        }
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>      } ;
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    animDef = voltmx.ui.createAnimation(animDefinition);
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    return animDef;
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>}  
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <ul>
 <li>iOS</li>
@@ -3968,9 +3428,8 @@ function myAnimDefinition()
 <p><summary>anchorPoint</summary></p>
 <p>Specifies the anchor point of the widget bounds rectangle using the widgets coordinate space. The possible values are dictionary with x,y as possible keys with the values as numbers ranging from 0 to 1. All geometric manipulations to the widget occur about the specified point. For example, applying a rotation transform to a widget with the default anchor point causes the widget to rotate around its center.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-anchorPoint
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>anchorPoint
+</span></code></pre></div>
 <p><b>Type</b></p>
 <p>JSObject</p>
 <p><b>Permissions</b></p>
@@ -3990,47 +3449,44 @@ anchorPoint
 <p><summary>transform</summary></p>
 <p>This property is set to identify transform by default. Any transformations applied to the widget, occur relative to the widget anchor point. Values that can be set to this property must be created using voltmx.ui.makeAffineTransform.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-transform
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>transform
+</span></code></pre></div>
 <p><b>Type</b></p>
 <p>JSObject</p>
 <p><b>Permissions</b></p>
 <p>Read + Write</p>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation 
-function animDeftranslate() {
-    var transformProp1 = voltmx.ui.makeAffineTransform();
-    transformProp1.translate(100, 100);
-    var transformProp2 = voltmx.ui.makeAffineTransform();
-    transformProp2.scale(2, 2);
-    var transformProp3 = voltmx.ui.makeAffineTransform();
-    transformProp3.rotate(90);
-    var animDefinitionOne = {
-        0: {
-            &quot;transform&quot;: transformProp1
-        },
-        50: {
-
-            &quot;transform&quot;: transformProp2
-        },
-        100: {
-
-            &quot;transform&quot;: transformProp3
-        }
-    }
-    animDef = voltmx.ui.createAnimation(animDefinitionOne);
-    return animDef;
-
-}
-
-Function getParent() {
-
-    Var result = this.parent;
-}  
-
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>//Sample code of animation 
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>function animDeftranslate() {
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    var transformProp1 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    transformProp1.translate(100, 100);
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    var transformProp2 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    transformProp2.scale(2, 2);
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    var transformProp3 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    transformProp3.rotate(90);
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    var animDefinitionOne = {
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        0: {
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>            &quot;transform&quot;: transformProp1
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        },
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        50: {
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>            &quot;transform&quot;: transformProp2
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        },
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>        100: {
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>            &quot;transform&quot;: transformProp3
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>        }
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    }
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>    animDef = voltmx.ui.createAnimation(animDefinitionOne);
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    return animDef;
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>}
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>Function getParent() {
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>    Var result = this.parent;
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>}  
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <p>Not available in the IDE.</p>
 <ul>
@@ -4044,9 +3500,8 @@ Function getParent() {
 <p><summary>voltmx.ui.makeAffineTransform</summary></p>
 <p>This method creates a 2D transform object. A 2D transform object can be used to scale, translate, and rotate the widgets in a two-dimensional space.</p>
 <p><b>Signature</b></p>
-<pre><code>
-voltmx.ui.makeAffineTransform( )
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>voltmx.ui.makeAffineTransform( )
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <p>None</p>
 <p><b>Return Values</b></p>
@@ -4056,49 +3511,47 @@ voltmx.ui.makeAffineTransform( )
 <p><b>Remarks</b></p>
 <p>Irrespective of the invocation order of operations, voltmx.ui.makeAffineTransform method applies the transform in the sequence of scale, translate, and rotate operations.</p>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation 
-function animDeftranslate() {
-    var transformProp1 = voltmx.ui.makeAffineTransform();
-    transformProp1.translate(10, 10);
-    var transformProp2 = voltmx.ui.makeAffineTransform();
-    transformProp2.translate(20, 20);
-    var transformProp3 = voltmx.ui.makeAffineTransform();
-    transformProp3.translate(30, 30);
-    var animDefinitionOne = {
-        0: {
-            &quot;anchorPoint&quot;: {
-                &quot;x&quot;: 0.5,
-                &quot;y&quot;: 0.5
-            },
-            &quot;transform&quot;: transformProp1
-        },
-        50: {
-            &quot;anchorPoint&quot;: {
-                &quot;x&quot;: 0.5,
-                &quot;y&quot;: 0.5
-            },
-            &quot;transform&quot;: transformProp2
-        },
-        100: {
-            &quot;anchorPoint&quot;: {
-                &quot;x&quot;: 0.5,
-                &quot;y&quot;: 0.5
-            },
-            &quot;transform&quot;: transformProp3
-        }
-    }
-    animDef = voltmx.ui.createAnimation(animDefinitionOne);
-    return animDef;
-
-}
-
-Function getParent() {
-
-    Var result = this.parent;
-}  
-
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>//Sample code of animation 
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>function animDeftranslate() {
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    var transformProp1 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    transformProp1.translate(10, 10);
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    var transformProp2 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    transformProp2.translate(20, 20);
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    var transformProp3 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    transformProp3.translate(30, 30);
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    var animDefinitionOne = {
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        0: {
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>            &quot;anchorPoint&quot;: {
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>                &quot;x&quot;: 0.5,
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>                &quot;y&quot;: 0.5
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>            },
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>            &quot;transform&quot;: transformProp1
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>        },
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>        50: {
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>            &quot;anchorPoint&quot;: {
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>                &quot;x&quot;: 0.5,
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>                &quot;y&quot;: 0.5
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>            },
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>            &quot;transform&quot;: transformProp2
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>        },
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>        100: {
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>            &quot;anchorPoint&quot;: {
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>                &quot;x&quot;: 0.5,
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>                &quot;y&quot;: 0.5
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>            },
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>            &quot;transform&quot;: transformProp3
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>        }
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>    }
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>    animDef = voltmx.ui.createAnimation(animDefinitionOne);
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>    return animDef;
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>}
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>Function getParent() {
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>    Var result = this.parent;
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>}  
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <ul>
 <li>iOS</li>
@@ -4111,9 +3564,8 @@ Function getParent() {
 <p><summary>rotate</summary></p>
 <p>This method returns an affine transformation matrix constructed by rotating receivers affine transform. Angle is a number in degrees and always measured from x-axis as shown.</p>
 <p><b>Signature</b></p>
-<pre><code>
-rotate(angle)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>rotate(angle)
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <p>angle [Number]</p>
 <p>A number represents the angle, in degrees, by which this matrix rotates the coordinate system axes. A positive value specifies counterclockwise rotation and a negative value specifies clockwise rotation.</p>
@@ -4131,37 +3583,37 @@ rotate(angle)
 </blockquote>
 <p>Any value greater than 180 degrees may lead to shortest path rotation from its current position. For cross platform values, for example 190 degrees will make the object rotate -170 (190-360) in negative direction, as 170 is shortest path compared to 190.</p>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation 
-function animDeftranslate() {
-    var transformProp1 = voltmx.ui.makeAffineTransform();
-    transformProp1.translate(100, 100);
-    var transformProp2 = voltmx.ui.makeAffineTransform();
-    transformProp2.scale(2, 2);
-    var transformProp3 = voltmx.ui.makeAffineTransform();
-    transformProp3.rotate(90);
-    var animDefinitionOne = {
-        0: {
-            &quot;transform&quot;: transformProp1
-        },
-        50: {
-
-            &quot;transform&quot;: transformProp2
-        },
-        100: {
-
-            &quot;transform&quot;: transformProp3
-        }
-    }
-    animDef = voltmx.ui.createAnimation(animDefinitionOne);
-    return animDef;
-
-}
-
-Function getParent() {
-
-    var result = this.parent;
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>//Sample code of animation 
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>function animDeftranslate() {
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    var transformProp1 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    transformProp1.translate(100, 100);
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    var transformProp2 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    transformProp2.scale(2, 2);
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    var transformProp3 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    transformProp3.rotate(90);
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    var animDefinitionOne = {
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        0: {
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>            &quot;transform&quot;: transformProp1
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        },
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>        50: {
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>            &quot;transform&quot;: transformProp2
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>        },
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>        100: {
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>            &quot;transform&quot;: transformProp3
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>        }
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    }
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>    animDef = voltmx.ui.createAnimation(animDefinitionOne);
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>    return animDef;
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>}
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>Function getParent() {
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>    var result = this.parent;
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>}
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <ul>
 <li>iOS</li>
@@ -4174,13 +3626,12 @@ Function getParent() {
 <p><summary>rotate3D ()</summary></p>
 <p>This method rotates the widget by angle on the unit directional vector formed by rx, ry, and rz.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-rotate3D(  
-    angle,  
-    rx,  
-    ry,  
-    rz)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>rotate3D(  
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    angle,  
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    rx,  
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    ry,  
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    rz)
+</span></code></pre></div>
 <p><b>Parameters</b></p>
 <p>angle</p>
 <p>Specify the angle, by which a widget to be rotated around rx, ry, and rz axises.</p>
@@ -4215,10 +3666,10 @@ rotate3D(
 <p>In the Android platform, the values between 0 - 1 are not accepted. Only '0' or '1' is accepted.</p>
 <p>All the input parameters need to be specified. If any parameter found missing will result in an exception 101.</p>
 <p><b>Example</b></p>
-<pre><code>var newTransform = voltmx.ui.makeAffineTransform();  
-newTransform.rotate3D(45, 1,0,1); //rotates by 45degrees in x and z Axis.  
-widget.transform = newTransform;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>var newTransform = voltmx.ui.makeAffineTransform();  
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>newTransform.rotate3D(45, 1,0,1); //rotates by 45degrees in x and z Axis.  
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>widget.transform = newTransform;
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <p>Available in the IDE</p>
 <p>iOS</p>
@@ -4229,11 +3680,10 @@ widget.transform = newTransform;
 <p><summary>scale</summary></p>
 <p>This method returns an affine transformation matrix constructed by scaling receivers affine transform. It is a JSObject with keys sx and sy and allow numbers only.</p>
 <p><b>Signature</b></p>
-<pre><code>
-scale (  
-   sx,   
-   sy)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>scale (  
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>   sx,   
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>   sy)
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <p>sx [Number]</p>
 <p>The factor by which to scale the x-axis of the widget coordinate system.</p>
@@ -4247,37 +3697,37 @@ scale (
 <p><b>Remarks</b></p>
 <p>Scaling does not result in any layout changes to parent or peer widgets. This is applicable to the widgets placed inside horizontal or vertical flex containers. Negative values for sx and sy will make the widget flip in that direction.</p>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation 
-function animDeftranslate() {
-    var transformProp1 = voltmx.ui.makeAffineTransform();
-    transformProp1.translate(100, 100);
-    var transformProp2 = voltmx.ui.makeAffineTransform();
-    transformProp2.scale(2, 2);
-    var transformProp3 = voltmx.ui.makeAffineTransform();
-    transformProp3.rotate(90);
-    var animDefinitionOne = {
-        0: {
-            &quot;transform&quot;: transformProp1
-        },
-        50: {
-
-            &quot;transform&quot;: transformProp2
-        },
-        100: {
-
-            &quot;transform&quot;: transformProp3
-        }
-    }
-    animDef = voltmx.ui.createAnimation(animDefinitionOne);
-    return animDef;
-
-}
-
-Function getParent() {
-
-    Var result = this.parent;
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>//Sample code of animation 
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>function animDeftranslate() {
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    var transformProp1 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    transformProp1.translate(100, 100);
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    var transformProp2 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    transformProp2.scale(2, 2);
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    var transformProp3 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    transformProp3.rotate(90);
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    var animDefinitionOne = {
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        0: {
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>            &quot;transform&quot;: transformProp1
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>        },
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>        50: {
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>            &quot;transform&quot;: transformProp2
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>        },
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>        100: {
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>            &quot;transform&quot;: transformProp3
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>        }
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>    }
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>    animDef = voltmx.ui.createAnimation(animDefinitionOne);
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>    return animDef;
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>}
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>Function getParent() {
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>    Var result = this.parent;
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>}
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <ul>
 <li>iOS</li>
@@ -4290,12 +3740,11 @@ Function getParent() {
 <p><summary>scale3D ()</summary></p>
 <p>Scales a widget in three dimensions (x, y, z) coordinate system.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-scale3D(  
-    sx,  
-    sy,  
-    sz)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>scale3D(  
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    sx,  
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    sy,  
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    sz)
+</span></code></pre></div>
 <p><b>Parameters</b></p>
 <p>sx</p>
 <p>Specify the value to be scaled in the x direction.</p>
@@ -4326,11 +3775,11 @@ scale3D(
 <p>The default values of the sx, sy, and sz directions are (1, 1, 1). Any value with in the 0 - 1 range scales down the widget and the value greater than '1' scales up in the specified directions. As all the widgets are not 3D meshes, this function may not be applicable for z-axis and may have platform-specific behavior. The scale3D method should not be applied on zero dimension widgets. If applied, the behavior is undefined.</p>
 <p>All the input parameters need to be specified. If any parameter found missing will result in an exception 101.</p>
 <p><b>Example</b></p>
-<pre><code>var newTransform = voltmx.ui.makeAffineTransform();  
-newTransform.scale3D(2, 0.5, 1);  
-//scales by 200% in xDirection, 50% in yDirection and no scale happening in zDirection.  
-widget.transform = newTransform;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>var newTransform = voltmx.ui.makeAffineTransform();  
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>newTransform.scale3D(2, 0.5, 1);  
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>//scales by 200% in xDirection, 50% in yDirection and no scale happening in zDirection.  
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>widget.transform = newTransform;
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <p>Available in the IDE</p>
 <p>iOS</p>
@@ -4340,11 +3789,10 @@ widget.transform = newTransform;
 <p><summary>translate</summary></p>
 <p>This method returns an affine transformation matrix constructed by translating receivers affine transform. It is a JavaScript object with keys tx and ty and allow numbers in dp.</p>
 <p><b>Signature</b></p>
-<pre><code>
-translate (  
-   tx,  
-   ty)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>translate (  
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>   tx,  
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>   ty)
+</span></code></pre></div>
 <p><b>Input Parameters</b></p>
 <p>tx [Number]</p>
 <p>The value by which to move the x-axis of the widget coordinate system.</p>
@@ -4361,37 +3809,37 @@ translate (
 <p><strong><em>Note:</em></strong> Values cannot be specified using percentage and pixels.</p>
 </blockquote>
 <p><b>Example</b></p>
-<pre><code>//Sample code of animation 
-function animDeftranslate() {
-    var transformProp1 = voltmx.ui.makeAffineTransform();
-    transformProp1.translate(100, 100);
-    var transformProp2 = voltmx.ui.makeAffineTransform();
-    transformProp2.scale(2, 2);
-    var transformProp3 = voltmx.ui.makeAffineTransform();
-    transformProp3.rotate(90);
-    var animDefinitionOne = {
-        0: {
-            &quot;transform&quot;: transformProp1
-        },
-        50: {
-
-            &quot;transform&quot;: transformProp2
-        },
-        100: {
-
-            &quot;transform&quot;: transformProp3
-        }
-    }
-    animDef = voltmx.ui.createAnimation(animDefinitionOne);
-    return animDef;
-
-}
-
-Function getParent() {
-
-    Var result = this.parent;
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>//Sample code of animation 
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>function animDeftranslate() {
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    var transformProp1 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    transformProp1.translate(100, 100);
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    var transformProp2 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    transformProp2.scale(2, 2);
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    var transformProp3 = voltmx.ui.makeAffineTransform();
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    transformProp3.rotate(90);
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    var animDefinitionOne = {
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>        0: {
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>            &quot;transform&quot;: transformProp1
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>        },
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>        50: {
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>            &quot;transform&quot;: transformProp2
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>        },
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>        100: {
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>            &quot;transform&quot;: transformProp3
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>        }
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>    }
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>    animDef = voltmx.ui.createAnimation(animDefinitionOne);
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>    return animDef;
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>
+</span><span id="__span-19-25"><a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a>}
+</span><span id="__span-19-26"><a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a>
+</span><span id="__span-19-27"><a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a>Function getParent() {
+</span><span id="__span-19-28"><a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a>
+</span><span id="__span-19-29"><a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a>    Var result = this.parent;
+</span><span id="__span-19-30"><a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a>}
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <ul>
 <li>iOS</li>
@@ -4404,12 +3852,11 @@ Function getParent() {
 <p><summary>translate3D ()</summary></p>
 <p>Translate the widget from present location to new location by x, y, z amount.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-translate3D(  
-    tx,  
-    ty,  
-    tz)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>translate3D(  
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    tx,  
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    ty,  
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    tz)
+</span></code></pre></div>
 <p><b>Parameters</b></p>
 <p>tx</p>
 <p>Specify the value to be moved in the x direction from present location.</p>
@@ -4440,10 +3887,10 @@ translate3D(
 <p>The values of tx, ty, and tz should be floating numbers. If the <a href="#setPersp">setPerspective</a> method is not used, the widget moving in the z direction will not have any visual effect.</p>
 <p>All the input parameters need to be specified. If any parameter found missing will result in an exception 101.</p>
 <p><b>Example</b></p>
-<pre><code>var newTransform = voltmx.ui.makeAffineTransform();  
-newTransform.translate3D(223,12,56); //translates by 223 xAxis,12 in yAxis,56 in zAxis  
-widget.transform = newTransform;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>var newTransform = voltmx.ui.makeAffineTransform();  
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>newTransform.translate3D(223,12,56); //translates by 223 xAxis,12 in yAxis,56 in zAxis  
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>widget.transform = newTransform;
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <p>Available in the IDE</p>
 <p>iOS</p>
@@ -4453,10 +3900,9 @@ widget.transform = newTransform;
 <p><summary>setPerspective ()</summary></p>
 <p>This method sets the perspective and sets the vanishing point at the center of the widget.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-setPerspective(  
-    distanceOfViewerToPlane)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>setPerspective(  
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    distanceOfViewerToPlane)
+</span></code></pre></div>
 <p><b>Parameters</b></p>
 <p>distanceOfViewerToPlane</p>
 <p>The distance between the viewer and object. Always the value of this parameter should be greater than zero. Otherwise results an exception 100.</p>
@@ -4486,27 +3932,26 @@ setPerspective(
 <p>For the iOS platform, the value of the distanceOfViewerToPlane parameter should be greater than max (width, height) values of the widget view's frame. For example, if the value of (width, height) is (100, 50), the parameter value should be greater than 100. The effect of this parameter vary visually on different platforms for the same value. The units of the distanceOfViewerToPlane parameter is platform-specific.</p>
 <p>All the input parameters need to be specified. If any parameter found missing will result in an exception 101.</p>
 <p><b>Example</b></p>
-<pre><code>var newTransform = voltmx.ui.makeAffineTransform();  
-newTransform.setPerspective(1000.0);  
-//Sets the perspective as such this will have no effect until it is combined with other transformation matrix.  
-newTransform.rotate3D(45, 1,0,1);  
-//rotates by 45degrees in x and z Axis. Now the perspective can be observed  
-widget.transform = newTransform;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>var newTransform = voltmx.ui.makeAffineTransform();  
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>newTransform.setPerspective(1000.0);  
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>//Sets the perspective as such this will have no effect until it is combined with other transformation matrix.  
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>newTransform.rotate3D(45, 1,0,1);  
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>//rotates by 45degrees in x and z Axis. Now the perspective can be observed  
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>widget.transform = newTransform;
+</span></code></pre></div>
 <p><b>Availability</b></p>
 <p>Available in the IDE</p>
 <p>iOS</p>
 <p>SPA</p>
-<h3 id="widget-skin-properties">Widget Skin Properties</h3>
+<h3 id="widget-skin-properties">Widget Skin Properties<a class="headerlink" href="#widget-skin-properties" title="Permanent link">&para;</a></h3>
 <p>Following widget skin properties can be animated: </p>
 </details>
 <details close="close">
 <p><summary>backgroundColor</summary></p>
 <p>Specifies the background color of the widget in hex format.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-backgroundColor
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>backgroundColor
+</span></code></pre></div>
 <p><b>Type</b></p>
 <p>String</p>
 <p><b>Permissions</b></p>
@@ -4531,9 +3976,8 @@ backgroundColor
 <p><summary>opacity</summary></p>
 <p>Specifies the opacity of the widget. The value of this property must be in the range 0.0 (transparent) to 1.0 (opaque). Any values outside this range are fixed to the nearest minimum or maximum value.</p>
 <p><b>Syntax</b></p>
-<pre><code>
-opacity
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>opacity
+</span></code></pre></div>
 <p><b>Type</b></p>
 <p>Number</p>
 <p><b>Permissions</b></p>
@@ -4548,7 +3992,7 @@ opacity
 <li>Windows</li>
 <li>SPA</li>
 </ul>
-<h2 id="animation-configurations">Animation Configurations</h2>
+<h2 id="animation-configurations">Animation Configurations<a class="headerlink" href="#animation-configurations" title="Permanent link">&para;</a></h2>
 <p>Animation configuration specifies the render behavior of an object during the animation. For example, you can specify how long an animation occur or the direction the animation should occur. The animation configurations are part of overall animation and not the step level configuration.</p>
 <p>Following are the components of animation configuration:</p>
 </details>
@@ -4641,21 +4085,21 @@ opacity
 <td>Y</td>
 <td>RGB</td>
 <td>B</td>
-<td>A.E.A update with 100th step</td>
+<td>A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Backwards</td>
 <td>R</td>
 <td>RGB</td>
 <td>Y</td>
-<td>A.B.A update with 0th step, A.E.A update with initial value</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with initial value</td>
 </tr>
 <tr>
 <td>Both</td>
 <td>R</td>
 <td>RGB</td>
 <td>B</td>
-<td>A.B.A update with 0th step, A.E.A update with 100th step</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Direction: Alternate,   Iteration Count = even  value</td>
@@ -4676,21 +4120,21 @@ opacity
 <td>Y</td>
 <td>RGB =&gt; BGR</td>
 <td>R</td>
-<td>A.E.A update with 0th step</td>
+<td>A.E.A update with 0<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Backwards</td>
 <td>R</td>
 <td>RGB =&gt; BGR</td>
 <td>Y</td>
-<td>A.B.A update with 0th step, A.E.A update with initial value</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with initial value</td>
 </tr>
 <tr>
 <td>Both</td>
 <td>R</td>
 <td>RGB =&gt; BGR</td>
 <td>R</td>
-<td>A.B.A update with 0th step, A.E.A update with 0th step</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with 0<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Direction: : Alternate,  Iteration Count = odd value</td>
@@ -4711,21 +4155,21 @@ opacity
 <td>Y</td>
 <td>RGB =&gt; BGR =&gt; RGB</td>
 <td>B</td>
-<td>A.E.A update with 100th step</td>
+<td>A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Backwards</td>
 <td>R</td>
 <td>RGB =&gt; BGR =&gt; RGB</td>
 <td>Y</td>
-<td>A.B.A update with 0th step, A.E.A update with initial value</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with initial value</td>
 </tr>
 <tr>
 <td>Both</td>
 <td>R</td>
 <td>RGB =&gt; BGR =&gt; RGB</td>
 <td>B</td>
-<td>A.B.A update with 0th step, A.E.A update with 100th step</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 </tbody>
 </table>
@@ -4733,17 +4177,17 @@ opacity
 <p><strong><em>Note:</em></strong> This is overall animation level configuration and not the step level configuration. Values will be specified as string containing one of the above values and any other values would be ignored or may lead to undefined behavior.</p>
 </blockquote>
 <p><b>Example</b></p>
-<pre><code>function animConfig(){
- var config = {
-    &quot;duration&quot;:1,
-    &quot;iterationCount&quot;:1,
-    &quot;delay&quot;:0,
-    &quot;fillMode&quot;:voltmx.anim.FILL_MODE_FORWARDS
- };
- return config;
-}
-</code></pre>
-<h2 id="applying-animations">Applying Animations</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>function animConfig(){
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a> var config = {
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    &quot;duration&quot;:1,
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    &quot;iterationCount&quot;:1,
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>    &quot;delay&quot;:0,
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    &quot;fillMode&quot;:voltmx.anim.FILL_MODE_FORWARDS
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a> };
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a> return config;
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>}
+</span></code></pre></div>
+<h2 id="applying-animations">Applying Animations<a class="headerlink" href="#applying-animations" title="Permanent link">&para;</a></h2>
 <p>Every widget provides animate API to animate the widgets.</p>
 <p>Following are the types of animations you can apply:</p>
 <ol>
@@ -4754,10 +4198,10 @@ opacity
 <li><a href="#multiple-parallel-animations">Multiple Parallel Animations</a></li>
 <li><a href="#interactions-on-the-widget-during-animation">Interactions on the Widget during Animation</a></li>
 </ol>
-<h2 id="sequential-and-parallel-animations">Sequential and Parallel Animations</h2>
+<h2 id="sequential-and-parallel-animations">Sequential and Parallel Animations<a class="headerlink" href="#sequential-and-parallel-animations" title="Permanent link">&para;</a></h2>
 <p>To sequence the animations one after the other, animation events have to be used. You can start a new animation at the end of the existing animation using <code>animationEnd</code> event.</p>
 <p>All animations initiated by animate API gets executed asynchronously. Essentially calling animate API on widgets sequentially one after the other leads to parallel execution of the animations.</p>
-<h2 id="querying-widget-properties">Querying Widget Properties</h2>
+<h2 id="querying-widget-properties">Querying Widget Properties<a class="headerlink" href="#querying-widget-properties" title="Permanent link">&para;</a></h2>
 <p>Following is the table showing the behavior of the animatable properties when queried during or at the end of the animation. Only when the model is updated (last column) then the values are available when queried.</p>
 <table>
 <thead>
@@ -4789,21 +4233,21 @@ opacity
 <td>Y</td>
 <td>RGB</td>
 <td>B</td>
-<td>A.E.A update with 100th step</td>
+<td>A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Backwards</td>
 <td>R</td>
 <td>RGB</td>
 <td>Y</td>
-<td>A.B.A update with 0th step, A.E.A update with initial value</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with initial value</td>
 </tr>
 <tr>
 <td>Both</td>
 <td>R</td>
 <td>RGB</td>
 <td>B</td>
-<td>A.B.A update with 0th step, A.E.A update with 100th step</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Direction: Alternate,   Iteration Count = even  value</td>
@@ -4824,21 +4268,21 @@ opacity
 <td>Y</td>
 <td>RGB =&gt; BGR</td>
 <td>R</td>
-<td>A.E.A update with 0th step</td>
+<td>A.E.A update with 0<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Backwards</td>
 <td>R</td>
 <td>RGB =&gt; BGR</td>
 <td>Y</td>
-<td>A.B.A update with 0th step, A.E.A update with initial value</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with initial value</td>
 </tr>
 <tr>
 <td>Both</td>
 <td>R</td>
 <td>RGB =&gt; BGR</td>
 <td>R</td>
-<td>A.B.A update with 0th step, A.E.A update with 0th step</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with 0<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Direction: : Alternate,  Iteration Count = odd value</td>
@@ -4859,31 +4303,31 @@ opacity
 <td>Y</td>
 <td>RGB =&gt; BGR =&gt; RGB</td>
 <td>B</td>
-<td>A.E.A update with 100th step</td>
+<td>A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 <tr>
 <td>Backwards</td>
 <td>R</td>
 <td>RGB =&gt; BGR =&gt; RGB</td>
 <td>Y</td>
-<td>A.B.A update with 0th step, A.E.A update with initial value</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with initial value</td>
 </tr>
 <tr>
 <td>Both</td>
 <td>R</td>
 <td>RGB =&gt; BGR =&gt; RGB</td>
 <td>B</td>
-<td>A.B.A update with 0th step, A.E.A update with 100th step</td>
+<td>A.B.A update with 0<sup>th</sup> step, A.E.A update with 100<sup>th</sup> step</td>
 </tr>
 </tbody>
 </table>
-<h2 id="layout-callbacks-during-animation">Layout Callbacks during Animation</h2>
+<h2 id="layout-callbacks-during-animation">Layout Callbacks during Animation<a class="headerlink" href="#layout-callbacks-during-animation" title="Permanent link">&para;</a></h2>
 <p>doLayout callbacks are not guaranteed to be called in synchronization with steps configured in animation and may not get called in any determined fashion. It is suggested to unhook any layout events during the animations.</p>
-<h2 id="flex-container-and-child-widgets">Flex Container and Child Widgets</h2>
+<h2 id="flex-container-and-child-widgets">Flex Container and Child Widgets<a class="headerlink" href="#flex-container-and-child-widgets" title="Permanent link">&para;</a></h2>
 <p>When dimensional and positional properties of the flex container are animated then all child widgets sharing percentage (%) relationship with the parent also gets animated.Percentage (%) Relationship between parent and child can be established by specifying one or positional, dimensional properties of the widgets in percentage (%) units.</p>
 <p>Actual animation that child widget goes through depends on the property that is animated on the container and the property of the child widget that shares the percentage (%) relationship with the parent.</p>
 <p>If there is no percentage (%) relationship between the parent and child then child will not go through any animation as parent gets animated.</p>
-<h2 id="multiple-parallel-animations">Multiple Parallel Animations</h2>
+<h2 id="multiple-parallel-animations">Multiple Parallel Animations<a class="headerlink" href="#multiple-parallel-animations" title="Permanent link">&para;</a></h2>
 <p>Parallel animations on widgets that do not have any dependencies on other widgets (for example, widgets can share dependency through parent and child widgets with percentage % relationship or the widgets inside HORIZONTAL_FLOW, VERTICAL_FLOW share dependency on siblings) will work across platforms consistently without any issues.</p>
 <ul>
 <li>
@@ -4902,13 +4346,15 @@ opacity
 <blockquote>
 <p><strong><em>Note:</em></strong> Any implicit animations due to widget dependency are not treated as parallel animations.</p>
 </blockquote>
-<h2 id="interactions-on-the-widget-during-animation">Interactions on the Widget during Animation</h2>
+<h2 id="interactions-on-the-widget-during-animation">Interactions on the Widget during Animation<a class="headerlink" href="#interactions-on-the-widget-during-animation" title="Permanent link">&para;</a></h2>
 <p>Interacting with the widget during animation may also lead to undefined behaviors. Behavior depends on underlying platform.</p>
 <p>As a guideline, developers must avoid writing code that changes the widget properties if they are being animated.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> For example, changing properties of the widget immediately after widget.animate() may lead to undefined behaviors. Ideally, any changes on the widget must happen after animation, in animationEnd() event.</p>
 </blockquote>
 </details>
+
+
 
 
 
@@ -4931,7 +4377,7 @@ opacity
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -4969,10 +4415,14 @@ opacity
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_user_guide/Content/CommandLine.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_user_guide/Content/CommandLine.html">
       
       
         <link rel="prev" href="DisablePrintStatementsInBuilds.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="CI_BUILD_VoltMX_Iris.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,8 +984,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1281,12 +998,20 @@
         
   
   
+  
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1351,10 +1076,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" checked>
@@ -1363,9 +1092,16 @@
           <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1374,7 +1110,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4">
             <span class="md-nav__icon md-icon"></span>
-            Iris User Guide
+            
+  
+    Iris User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1388,9 +1128,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1409,9 +1156,16 @@
       <a href="Mobile_Channels.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Supported Digital Channels
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1430,9 +1184,16 @@
       <a href="Hikes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Hikes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1451,9 +1212,16 @@
       <a href="Third-Party_Licenses.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Third-Party Licenses
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1498,21 +1266,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Part_I__Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuring Your Computer
+  
+
+    
   </span>
+  
   
 
       
@@ -1623,21 +1404,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Part_II_CreatingAnApplication.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Designing an Application
+  
+
+    
   </span>
+  
   
 
       
@@ -1672,21 +1466,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="C_DesigningWorkingWithComponents.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Creating Applications with Components
+  
+
+    
   </span>
+  
   
 
       
@@ -1727,8 +1534,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1736,12 +1548,20 @@
         
   
   
+  
     <a href="PartIII_Adding_functionality.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Adding Functionality
+  
+
+    
   </span>
+  
   
 
       
@@ -1818,10 +1638,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_9" checked>
@@ -1830,9 +1654,16 @@
           <label class="md-nav__link" for="__nav_8_4_9" id="__nav_8_4_9_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Building and Viewing an Application
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1841,7 +1672,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4_9">
             <span class="md-nav__icon md-icon"></span>
-            Building and Viewing an Application
+            
+  
+    Building and Viewing an Application
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1855,9 +1690,16 @@
       <a href="BuildingAndViewAnApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1876,9 +1718,16 @@
       <a href="buildAndPublish.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build and Publish
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1897,9 +1746,16 @@
       <a href="BuildAnAppForiOS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build an iOS Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1918,9 +1774,16 @@
       <a href="BuildAnAppForAndroid.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build an Android Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1939,9 +1802,16 @@
       <a href="BuildUniversalApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build a Universal Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1960,9 +1830,16 @@
       <a href="BuildApplicationsForWindows10.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build a Windows 10 Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1981,9 +1858,16 @@
       <a href="BuildAnSPAApplication.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build an Adaptive Web Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2002,9 +1886,16 @@
       <a href="Build_a_Progressive_Web_App.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build a Progressive Web App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2023,9 +1914,16 @@
       <a href="SecureyourWebApplication.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Secure your Web Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2044,9 +1942,16 @@
       <a href="LivePreview.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Live Preview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2065,9 +1970,16 @@
       <a href="HotReload.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Hot Reload
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2086,9 +1998,16 @@
       <a href="LocalBuildStarter.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build a Native App on a Local machine
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2107,9 +2026,16 @@
       <a href="Package_AppViewer.html#customize-volt-mx-app" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Customize Volt MX App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2128,9 +2054,16 @@
       <a href="Integrate_React_Native_App_into_VoltMX_App.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Integrate React Native App into a Volt MX App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2149,9 +2082,16 @@
       <a href="DisablePrintStatementsInBuilds.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Disable Print Statements in Builds
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2179,9 +2119,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Perform a Headless Build
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2190,14 +2137,22 @@
       <a href="CommandLine.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Perform a Headless Build
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -2217,7 +2172,9 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisites
+      
     </span>
   </a>
   
@@ -2226,7 +2183,9 @@
         <li class="md-nav__item">
   <a href="#configure-the-headlessbuildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the HeadlessBuild.properties File
+      
+        Configure the HeadlessBuild.properties File
+      
     </span>
   </a>
   
@@ -2236,7 +2195,9 @@
           <li class="md-nav__item">
   <a href="#how-to-find-the-headlessbuildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Find the HeadlessBuild.properties File
+      
+        How to Find the HeadlessBuild.properties File
+      
     </span>
   </a>
   
@@ -2245,7 +2206,9 @@
           <li class="md-nav__item">
   <a href="#example-of-headlessbuildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of HeadlessBuild.properties file
+      
+        Example of HeadlessBuild.properties file
+      
     </span>
   </a>
   
@@ -2254,7 +2217,9 @@
           <li class="md-nav__item">
   <a href="#configure-the-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the Mode
+      
+        Configure the Mode
+      
     </span>
   </a>
   
@@ -2264,7 +2229,9 @@
           <li class="md-nav__item">
   <a href="#mode-0-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 0 Properties
+      
+        Mode 0 Properties
+      
     </span>
   </a>
   
@@ -2273,7 +2240,9 @@
           <li class="md-nav__item">
   <a href="#mode-1-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 1 Properties
+      
+        Mode 1 Properties
+      
     </span>
   </a>
   
@@ -2282,7 +2251,9 @@
           <li class="md-nav__item">
   <a href="#mode-2-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 2 Properties
+      
+        Mode 2 Properties
+      
     </span>
   </a>
   
@@ -2291,7 +2262,9 @@
           <li class="md-nav__item">
   <a href="#mode-3-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 3 Properties
+      
+        Mode 3 Properties
+      
     </span>
   </a>
   
@@ -2300,7 +2273,9 @@
           <li class="md-nav__item">
   <a href="#mode-4-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 4 Properties
+      
+        Mode 4 Properties
+      
     </span>
   </a>
   
@@ -2319,7 +2294,9 @@
         <li class="md-nav__item">
   <a href="#configure-the-headlessbuild-globalproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the HeadlessBuild-Global.properties File
+      
+        Configure the HeadlessBuild-Global.properties File
+      
     </span>
   </a>
   
@@ -2329,7 +2306,9 @@
           <li class="md-nav__item">
   <a href="#how-to-find-the-buildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Find the build.properties File
+      
+        How to Find the build.properties File
+      
     </span>
   </a>
   
@@ -2338,7 +2317,9 @@
           <li class="md-nav__item">
   <a href="#example-of-headlessbuild-globalproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of HeadlessBuild-Global.properties File
+      
+        Example of HeadlessBuild-Global.properties File
+      
     </span>
   </a>
   
@@ -2347,7 +2328,9 @@
           <li class="md-nav__item">
   <a href="#increase-heap-memory" class="md-nav__link">
     <span class="md-ellipsis">
-      Increase Heap Memory
+      
+        Increase Heap Memory
+      
     </span>
   </a>
   
@@ -2361,7 +2344,9 @@
         <li class="md-nav__item">
   <a href="#build-the-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the Application
+      
+        Build the Application
+      
     </span>
   </a>
   
@@ -2386,9 +2371,16 @@
       <a href="CI_BUILD_VoltMX_Iris.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration for Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2407,9 +2399,16 @@
       <a href="Cloud_Build_in_VoltMX_Iris.html#build-and-publish-in" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Build and Publish on Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2428,9 +2427,16 @@
       <a href="EAS.html#publish-apps-to-the-enterprise-app-store" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Publishing Apps to Enterprise App Store
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2449,9 +2455,16 @@
       <a href="WebPublish.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Publish a Web App within Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2470,9 +2483,16 @@
       <a href="PreviewAnAppOnADevice.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Preview an App on a Device
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2491,9 +2511,16 @@
       <a href="MonitorAppPerformance.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Monitor App Performance
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2512,9 +2539,16 @@
       <a href="iOS_Automatic_Output_Generation.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Build Automation
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2533,9 +2567,16 @@
       <a href="OpenBuildFolder.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Open Webapp and Build Folders
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2578,8 +2619,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2587,12 +2633,20 @@
         
   
   
+  
     <a href="TestingandDebugginganApplication.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Testing and Debugging an Application
+  
+
+    
   </span>
+  
   
 
       
@@ -2623,8 +2677,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2632,12 +2691,20 @@
         
   
   
+  
     <a href="Internationalization.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix A&colon; Internationalization
+  
+
+    
   </span>
+  
   
 
       
@@ -2662,9 +2729,16 @@
       <a href="Inputs_to_Android_Application_Developers.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix B&colon; Android Build Environment and Configurations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2683,9 +2757,16 @@
       <a href="Generating_Map_Keys.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix C&colon; Generating and Configuring Map API Keys
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2704,9 +2785,16 @@
       <a href="AppServiceEvent.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix D&colon; The App Service Event
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2725,9 +2813,16 @@
       <a href="CameraAccessAndroidBrowser.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix E&colon; Camera Access in Android Browser
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2746,9 +2841,16 @@
       <a href="Support_for_iPhoneX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix F&colon; Support for iPhone X
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2767,9 +2869,16 @@
       <a href="Universal_Links.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix G&colon; Universal Links iOS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2788,9 +2897,16 @@
       <a href="FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Frequently Asked Questions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2849,21 +2965,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -3024,21 +3153,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3073,21 +3215,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3218,21 +3373,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3263,21 +3431,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3312,21 +3493,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3361,21 +3555,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -3408,21 +3615,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -3455,21 +3675,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3525,106 +3758,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -3633,579 +3794,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -4223,6 +3811,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -4242,7 +3831,9 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisites
+      
     </span>
   </a>
   
@@ -4251,7 +3842,9 @@
         <li class="md-nav__item">
   <a href="#configure-the-headlessbuildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the HeadlessBuild.properties File
+      
+        Configure the HeadlessBuild.properties File
+      
     </span>
   </a>
   
@@ -4261,7 +3854,9 @@
           <li class="md-nav__item">
   <a href="#how-to-find-the-headlessbuildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Find the HeadlessBuild.properties File
+      
+        How to Find the HeadlessBuild.properties File
+      
     </span>
   </a>
   
@@ -4270,7 +3865,9 @@
           <li class="md-nav__item">
   <a href="#example-of-headlessbuildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of HeadlessBuild.properties file
+      
+        Example of HeadlessBuild.properties file
+      
     </span>
   </a>
   
@@ -4279,7 +3876,9 @@
           <li class="md-nav__item">
   <a href="#configure-the-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the Mode
+      
+        Configure the Mode
+      
     </span>
   </a>
   
@@ -4289,7 +3888,9 @@
           <li class="md-nav__item">
   <a href="#mode-0-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 0 Properties
+      
+        Mode 0 Properties
+      
     </span>
   </a>
   
@@ -4298,7 +3899,9 @@
           <li class="md-nav__item">
   <a href="#mode-1-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 1 Properties
+      
+        Mode 1 Properties
+      
     </span>
   </a>
   
@@ -4307,7 +3910,9 @@
           <li class="md-nav__item">
   <a href="#mode-2-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 2 Properties
+      
+        Mode 2 Properties
+      
     </span>
   </a>
   
@@ -4316,7 +3921,9 @@
           <li class="md-nav__item">
   <a href="#mode-3-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 3 Properties
+      
+        Mode 3 Properties
+      
     </span>
   </a>
   
@@ -4325,7 +3932,9 @@
           <li class="md-nav__item">
   <a href="#mode-4-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode 4 Properties
+      
+        Mode 4 Properties
+      
     </span>
   </a>
   
@@ -4344,7 +3953,9 @@
         <li class="md-nav__item">
   <a href="#configure-the-headlessbuild-globalproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the HeadlessBuild-Global.properties File
+      
+        Configure the HeadlessBuild-Global.properties File
+      
     </span>
   </a>
   
@@ -4354,7 +3965,9 @@
           <li class="md-nav__item">
   <a href="#how-to-find-the-buildproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Find the build.properties File
+      
+        How to Find the build.properties File
+      
     </span>
   </a>
   
@@ -4363,7 +3976,9 @@
           <li class="md-nav__item">
   <a href="#example-of-headlessbuild-globalproperties-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Example of HeadlessBuild-Global.properties File
+      
+        Example of HeadlessBuild-Global.properties File
+      
     </span>
   </a>
   
@@ -4372,7 +3987,9 @@
           <li class="md-nav__item">
   <a href="#increase-heap-memory" class="md-nav__link">
     <span class="md-ellipsis">
-      Increase Heap Memory
+      
+        Increase Heap Memory
+      
     </span>
   </a>
   
@@ -4386,7 +4003,9 @@
         <li class="md-nav__item">
   <a href="#build-the-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Build the Application
+      
+        Build the Application
+      
     </span>
   </a>
   
@@ -4402,12 +4021,20 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_user_guide/Content/CommandLine.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
-<h1 id="perform-a-headless-build">Perform a Headless Build</h1>
+<h1 id="perform-a-headless-build">Perform a Headless Build<a class="headerlink" href="#perform-a-headless-build" title="Permanent link">&para;</a></h1>
 <p>A headless build is a method of building and publishing an app without launching the Eclipse environment that hosts Volt MX Iris. Instead, <strong><a href="#," title="An open-source software tool developed by the Apache Software Foundation that automates software build processes.">Ant</a></strong> manages the build and publish process.</p>
 <p>Conducting headless builds has a number of advantages.</p>
 <ul>
@@ -4443,7 +4070,7 @@
 <li><strong>Mode 3</strong> - This mode generates a web archive file that is combined with the Volt MX Foundry archive and also generates either a <code>.war</code> or <code>.ear</code> file, depending on what you specify. You must manually deploy the app on the server, or use a separate script.</li>
 <li><strong>Mode 4.</strong> A combination of modes 0 and 3. The application is built and a web archive file that is combined with the Volt MX Foundry archive also is generated, along with either a <code>.war</code> or <code>.ear</code> file, depending on what you specify. You must manually deploy the app on the server, or use a separate script.</li>
 </ul>
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>Following are the prerequisites for doing headless build:</p>
 <ul>
 <li>Before doing headless builds, you have to do a blank publish to Volt MX Foundry to use services in your app. Building the application is not required in this case.</li>
@@ -4455,261 +4082,258 @@
 </ul>
 <p><img alt="" src="Resources/Images/AppleTeamID_534x441.png" /><br />
 Note: The Team ID must not include spaces. Otherwise, the IPA generation in Volt MX Iris fails.</p>
-<h3 id="configure-the-headlessbuildproperties-file">Configure the HeadlessBuild.properties File</h3>
+<h3 id="configure-the-headlessbuildproperties-file">Configure the HeadlessBuild.properties File<a class="headerlink" href="#configure-the-headlessbuildproperties-file" title="Permanent link">&para;</a></h3>
 <p>The following sections explain where to find the <code>HeadlessBuild.properties</code> file and how to configure it. Depending on what mode you are building (either 0, 1, 2, 3, or 4), you need to set particular values in the <code>HeadlessBuild.properties</code> file. These are detailed in <a href="#configure-the-mode">Configure the Mode</a>.</p>
 <ol>
 <li><a href="#how-to-find-the-headlessbuild-properties-file">How to Find the HeadlessBuild.properties File</a></li>
 <li><a href="#configure-the-mode">Configure the Mode</a></li>
 </ol>
-<h5 id="how-to-find-the-headlessbuildproperties-file">How to Find the HeadlessBuild.properties File</h5>
+<h5 id="how-to-find-the-headlessbuildproperties-file">How to Find the HeadlessBuild.properties File<a class="headerlink" href="#how-to-find-the-headlessbuildproperties-file" title="Permanent link">&para;</a></h5>
 <p>The file <code>HeadlessBuild.properties</code> is stored in the project folder of your workspace. For example, if the name of your project is HelloWorld, and the name of your workspace folder is <code>Workspace</code>, the path in Microsoft Windows will be:</p>
 <p><code>C:\Users\&lt;username&gt;\Workspace\HelloWorld</code></p>
-<h5 id="example-of-headlessbuildproperties-file">Example of HeadlessBuild.properties file</h5>
+<h5 id="example-of-headlessbuildproperties-file">Example of HeadlessBuild.properties file<a class="headerlink" href="#example-of-headlessbuildproperties-file" title="Permanent link">&para;</a></h5>
 <p>Following is an example of sections that are present in the <code>HeadlessBuild.properties</code> file and the values that can be used.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> If the values for any variables are left blank, then the values set through Volt MX Iris will be retained while building the application.</p>
 </blockquote>
-<pre><code>#Note: Please escape '\' with '\\' in all file paths#
-#This file represents the Application level properties used by headless build.
-project.name=CIBuildProject
-
-#mode 0-Build; 1-Publish; 2-Build &amp; Publish; 3-Combine Web Application+Kony Server Archive; 4-Build &amp; Combine Web Application+Kony Server Archive;
-#mode-0: Application will be built for the selected build platforms
-#mode-1: Foundry app will be published along with services and web archive.
-#mode-2: Application will be built for selected build platforms Foundry app publish will be performed, Binary upload conditional on &quot;web.binary.upload&quot; flag
-#mode-3: Combines web archive of app &amp; kony server archive and generates combined war/ear file
-#mode-4: Application will be built &amp; Generated web archive will be combined with Kony server archive and final war/ear will be generated
-mode=0
-
-#build mode [release | debug]
-build.mode=release
-
-#Application details
-appid=app1
-#Please ensure that this is incremented while doing multiple Headless builds involving the modes 0 or 1 or 2
-version=1.0.0
-map_google_key=
-default_locale=
-#The android packagename can follow the pattern com.&lt;orgname&gt;.&lt;appid&gt;
-android.packagename=com.orgname.app1
-android.versioncode=1
-
-ios.bundleversion=1.0
-
-#Foundry credentials, applicable for on-premise/cloud Foundry
-cloud.username=
-cloud.password=
-
-#Foundry claims token if not providing user credentials, user can pass the token for authentication.
-fabric.token=
-
-#Provide mobilefabric specific details 
-mobilefabric.url=
-
-#These are required if your application is using services and needs Foundry integration.
-environment.name=
-account.id =
-mf.appname =
-mf.app.version=
-upLoadBinary =
-
-#Specify the environment you want to publish Ex:qa,dev,stg
-cloud.environment=q
-
-#Specify the web binary extension to upload into cloud
-#possible values war, zip. Note zip can only be published to runtime version 8.2 and above. 
-web.binary.extension = 
-#web.binary.upload = true by default. Set to false to stop web binary upload to Foundry.
-web.binary.upload = true
-#Specify the platforms for which the headless build needs to run.
-#Mobile Channel.
-iphone=false
-android=false
-androidwearos=false
-windowsphone81s=false
-windowsphone10=false
-
-spa.iphone=false
-spa.android=false
-spa.winphone=false
-
-#Tablet Channel.
-ipad=false
-androidtablet=false
-
-#Selecting Windows8.1 or Windows10 will also trigger builds for X86,X64,ARM architectures.
-windows8.1=false
-windows10=false
-
-spa.ipad=false
-spa.androidtablet=false
-spa.windowstablet=false
-
-
-#Desktop Channel.
-desktop_kiosk=false
-desktopweb=false
-
-#Wearbles channel.
-iphonewatch=false
-
-#Universal Channel.
-universal.iphone=false
-universal.android=false
-
-#App Extensions
-iosappextension=false
-
-#Provide iOS deployment target details in the case of iPhone or iPad.
-
-#Ex: 8.0, 9.0, 10.0
-mac.iosdeploymenttarget=
-#Ex: 2.0, 3.0, 4.0
-mac.watchosdeploymenttarget=
-#Ex: 4.0, 5.0
-mac.swiftversion=
-
-#Provide following details to generate IPA file in the case of iPhone or iPad.
-mac.ipaddress=
-mac.username=
-mac.password=
-
-
-
-keychain.password=
-development.team.id=
-#Possible value  Ex:  method= &quot;app-store&quot;,&quot;package&quot;,&quot;ad-hoc&quot;,&quot;enterprise&quot;,&quot;development&quot;,&quot;developer-id&quot;
-method=
-
-
-#Possible values are true/false
-genipaiphone=false
-genipaipad=false
-
-
-#iOS push certificate type. Possible values are none, development, production
-pushcertificatetype=
-
-#If not specified, by default final binaries will be copied to 'binaries' folder inside project
-binaries.location=
-
-#Specify to skip porting of project
-skip.porting=
-
-#Stub the print statements in custom modules during release build (Recommended setting for production release)
-stub.kony.print=true
-
-#Combine Web Application+Kony Server Archive. Applicable for mode = 3 or 4 #
-#Full path of middleware archive (war/ear).If project has Kony session Manager, 
-#provide with-cache archive, for Http session Manager, provide without-cache archive.
-combinewar.middlewarearchive=
-combinewar.context=
-#combinewar.war,combinewar.ear are mutually exclusive(Only one of them should be true)
-combinewar.war=false
-combinewar.ear=false
-#Provide full path of dependant libraries,Separate with semicolon(;) if there are multiple libraries
-combinewar.dependencylibraries=
-
-
-#Specify contexts for Foundry components
-context.path.identity=
-context.path.workspace=
-context.path.accounts=
-context.path.console=
-
-#To build binaries with protected mode enabled.
-protectedmodeenabled.ios=false
-protectedmodeenabled.android=false
-
-#Siteminder login url if Foundry instance is protected by SiteMinder
-login.siteminder.url=
-
-#Android Signing Keys
-keyAlias=
-keyPassword=
-keyStoreFilePath=
-keyStorePassword=
-
-#Test Automation Server URL
-test.automation.server.url=
-
-#Set the value to true to fetch automation scripts from local device storage
-test.automation.storage.local=
-
-#properties for doing Web Protected build.
-#This feature only supports web platforms
-
-#Set the value to true to enable Web obfuscation
-protectedmodeenabled.web=false
-
-#Provide Absolute path of securejs properties file
-web.protection.properties=
-
-#Provide Absolute path of web encryption directory
-web.encryption.dirs=
-
-#Provide Web Protection Configuration Options: BASIC,MODERATE
-web.protection.preset=BASIC
-
-#Provide Absolute path of custom protection blueprint json file
-web.protection.custom.blueprint=
-
-#Provide Absolute path of excludelist.txt file
-web.protection.excludelist=
-
-#used for CI App Factory
-plugin.dir=
-javaloc=
-androidHome=
-proxy.host=
-proxy.port=
-proxy.username=
-proxy.password=
-proxy.bypass.list=
-proxy.scheme=
-
-#Configure path to Python installation. Applicable for Mac Monterey version &gt;= 12.3.
-PYTHON_HOME=
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#Note: Please escape &#39;\&#39; with &#39;\\&#39; in all file paths#
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>#This file represents the Application level properties used by headless build.
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>project.name=CIBuildProject
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>#mode 0-Build; 1-Publish; 2-Build &amp; Publish; 3-Combine Web Application+Kony Server Archive; 4-Build &amp; Combine Web Application+Kony Server Archive;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>#mode-0: Application will be built for the selected build platforms
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>#mode-1: Foundry app will be published along with services and web archive.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>#mode-2: Application will be built for selected build platforms Foundry app publish will be performed, Binary upload conditional on &quot;web.binary.upload&quot; flag
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>#mode-3: Combines web archive of app &amp; kony server archive and generates combined war/ear file
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>#mode-4: Application will be built &amp; Generated web archive will be combined with Kony server archive and final war/ear will be generated
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>mode=0
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>#build mode [release | debug]
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>build.mode=release
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>#Application details
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>appid=app1
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>#Please ensure that this is incremented while doing multiple Headless builds involving the modes 0 or 1 or 2
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>version=1.0.0
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>map_google_key=
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>default_locale=
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>#The android packagename can follow the pattern com.&lt;orgname&gt;.&lt;appid&gt;
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>android.packagename=com.orgname.app1
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>android.versioncode=1
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>ios.bundleversion=1.0
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>#Foundry credentials, applicable for on-premise/cloud Foundry
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>cloud.username=
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>cloud.password=
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>#Foundry claims token if not providing user credentials, user can pass the token for authentication.
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>fabric.token=
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>#Provide mobilefabric specific details 
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>mobilefabric.url=
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>#These are required if your application is using services and needs Foundry integration.
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>environment.name=
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>account.id =
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>mf.appname =
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>mf.app.version=
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>upLoadBinary =
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>#Specify the environment you want to publish Ex:qa,dev,stg
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>cloud.environment=q
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>#Specify the web binary extension to upload into cloud
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>#possible values war, zip. Note zip can only be published to runtime version 8.2 and above. 
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>web.binary.extension = 
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>#web.binary.upload = true by default. Set to false to stop web binary upload to Foundry.
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>web.binary.upload = true
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>#Specify the platforms for which the headless build needs to run.
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>#Mobile Channel.
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>iphone=false
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>android=false
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>androidwearos=false
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>windowsphone81s=false
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>windowsphone10=false
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>spa.iphone=false
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>spa.android=false
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>spa.winphone=false
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>#Tablet Channel.
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>ipad=false
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>androidtablet=false
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>#Selecting Windows8.1 or Windows10 will also trigger builds for X86,X64,ARM architectures.
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>windows8.1=false
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>windows10=false
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>spa.ipad=false
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>spa.androidtablet=false
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>spa.windowstablet=false
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>#Desktop Channel.
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>desktop_kiosk=false
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>desktopweb=false
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>#Wearbles channel.
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>iphonewatch=false
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>#Universal Channel.
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>universal.iphone=false
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>universal.android=false
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>#App Extensions
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>iosappextension=false
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>#Provide iOS deployment target details in the case of iPhone or iPad.
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>#Ex: 8.0, 9.0, 10.0
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>mac.iosdeploymenttarget=
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>#Ex: 2.0, 3.0, 4.0
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>mac.watchosdeploymenttarget=
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>#Ex: 4.0, 5.0
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>mac.swiftversion=
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>#Provide following details to generate IPA file in the case of iPhone or iPad.
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>mac.ipaddress=
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>mac.username=
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>mac.password=
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>keychain.password=
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>development.team.id=
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>#Possible value  Ex:  method= &quot;app-store&quot;,&quot;package&quot;,&quot;ad-hoc&quot;,&quot;enterprise&quot;,&quot;development&quot;,&quot;developer-id&quot;
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>method=
+</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>#Possible values are true/false
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>genipaiphone=false
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>genipaipad=false
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>#iOS push certificate type. Possible values are none, development, production
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>pushcertificatetype=
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>#If not specified, by default final binaries will be copied to &#39;binaries&#39; folder inside project
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>binaries.location=
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>#Specify to skip porting of project
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>skip.porting=
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>#Stub the print statements in custom modules during release build (Recommended setting for production release)
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>stub.kony.print=true
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>#Combine Web Application+Kony Server Archive. Applicable for mode = 3 or 4 #
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>#Full path of middleware archive (war/ear).If project has Kony session Manager, 
+</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a>#provide with-cache archive, for Http session Manager, provide without-cache archive.
+</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a>combinewar.middlewarearchive=
+</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a>combinewar.context=
+</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a>#combinewar.war,combinewar.ear are mutually exclusive(Only one of them should be true)
+</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a>combinewar.war=false
+</span><span id="__span-0-138"><a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a>combinewar.ear=false
+</span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>#Provide full path of dependant libraries,Separate with semicolon(;) if there are multiple libraries
+</span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a>combinewar.dependencylibraries=
+</span><span id="__span-0-141"><a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a>
+</span><span id="__span-0-142"><a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a>
+</span><span id="__span-0-143"><a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a>#Specify contexts for Foundry components
+</span><span id="__span-0-144"><a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a>context.path.identity=
+</span><span id="__span-0-145"><a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a>context.path.workspace=
+</span><span id="__span-0-146"><a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a>context.path.accounts=
+</span><span id="__span-0-147"><a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a>context.path.console=
+</span><span id="__span-0-148"><a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a>
+</span><span id="__span-0-149"><a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a>#To build binaries with protected mode enabled.
+</span><span id="__span-0-150"><a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a>protectedmodeenabled.ios=false
+</span><span id="__span-0-151"><a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a>protectedmodeenabled.android=false
+</span><span id="__span-0-152"><a id="__codelineno-0-152" name="__codelineno-0-152" href="#__codelineno-0-152"></a>
+</span><span id="__span-0-153"><a id="__codelineno-0-153" name="__codelineno-0-153" href="#__codelineno-0-153"></a>#Siteminder login url if Foundry instance is protected by SiteMinder
+</span><span id="__span-0-154"><a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a>login.siteminder.url=
+</span><span id="__span-0-155"><a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a>
+</span><span id="__span-0-156"><a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a>#Android Signing Keys
+</span><span id="__span-0-157"><a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a>keyAlias=
+</span><span id="__span-0-158"><a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a>keyPassword=
+</span><span id="__span-0-159"><a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a>keyStoreFilePath=
+</span><span id="__span-0-160"><a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a>keyStorePassword=
+</span><span id="__span-0-161"><a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a>
+</span><span id="__span-0-162"><a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a>#Test Automation Server URL
+</span><span id="__span-0-163"><a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>test.automation.server.url=
+</span><span id="__span-0-164"><a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a>
+</span><span id="__span-0-165"><a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a>#Set the value to true to fetch automation scripts from local device storage
+</span><span id="__span-0-166"><a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a>test.automation.storage.local=
+</span><span id="__span-0-167"><a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>
+</span><span id="__span-0-168"><a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a>#properties for doing Web Protected build.
+</span><span id="__span-0-169"><a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a>#This feature only supports web platforms
+</span><span id="__span-0-170"><a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>
+</span><span id="__span-0-171"><a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a>#Set the value to true to enable Web obfuscation
+</span><span id="__span-0-172"><a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a>protectedmodeenabled.web=false
+</span><span id="__span-0-173"><a id="__codelineno-0-173" name="__codelineno-0-173" href="#__codelineno-0-173"></a>
+</span><span id="__span-0-174"><a id="__codelineno-0-174" name="__codelineno-0-174" href="#__codelineno-0-174"></a>#Provide Absolute path of securejs properties file
+</span><span id="__span-0-175"><a id="__codelineno-0-175" name="__codelineno-0-175" href="#__codelineno-0-175"></a>web.protection.properties=
+</span><span id="__span-0-176"><a id="__codelineno-0-176" name="__codelineno-0-176" href="#__codelineno-0-176"></a>
+</span><span id="__span-0-177"><a id="__codelineno-0-177" name="__codelineno-0-177" href="#__codelineno-0-177"></a>#Provide Absolute path of web encryption directory
+</span><span id="__span-0-178"><a id="__codelineno-0-178" name="__codelineno-0-178" href="#__codelineno-0-178"></a>web.encryption.dirs=
+</span><span id="__span-0-179"><a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a>
+</span><span id="__span-0-180"><a id="__codelineno-0-180" name="__codelineno-0-180" href="#__codelineno-0-180"></a>#Provide Web Protection Configuration Options: BASIC,MODERATE
+</span><span id="__span-0-181"><a id="__codelineno-0-181" name="__codelineno-0-181" href="#__codelineno-0-181"></a>web.protection.preset=BASIC
+</span><span id="__span-0-182"><a id="__codelineno-0-182" name="__codelineno-0-182" href="#__codelineno-0-182"></a>
+</span><span id="__span-0-183"><a id="__codelineno-0-183" name="__codelineno-0-183" href="#__codelineno-0-183"></a>#Provide Absolute path of custom protection blueprint json file
+</span><span id="__span-0-184"><a id="__codelineno-0-184" name="__codelineno-0-184" href="#__codelineno-0-184"></a>web.protection.custom.blueprint=
+</span><span id="__span-0-185"><a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a>
+</span><span id="__span-0-186"><a id="__codelineno-0-186" name="__codelineno-0-186" href="#__codelineno-0-186"></a>#Provide Absolute path of excludelist.txt file
+</span><span id="__span-0-187"><a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a>web.protection.excludelist=
+</span><span id="__span-0-188"><a id="__codelineno-0-188" name="__codelineno-0-188" href="#__codelineno-0-188"></a>
+</span><span id="__span-0-189"><a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a>#used for CI App Factory
+</span><span id="__span-0-190"><a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a>plugin.dir=
+</span><span id="__span-0-191"><a id="__codelineno-0-191" name="__codelineno-0-191" href="#__codelineno-0-191"></a>javaloc=
+</span><span id="__span-0-192"><a id="__codelineno-0-192" name="__codelineno-0-192" href="#__codelineno-0-192"></a>androidHome=
+</span><span id="__span-0-193"><a id="__codelineno-0-193" name="__codelineno-0-193" href="#__codelineno-0-193"></a>proxy.host=
+</span><span id="__span-0-194"><a id="__codelineno-0-194" name="__codelineno-0-194" href="#__codelineno-0-194"></a>proxy.port=
+</span><span id="__span-0-195"><a id="__codelineno-0-195" name="__codelineno-0-195" href="#__codelineno-0-195"></a>proxy.username=
+</span><span id="__span-0-196"><a id="__codelineno-0-196" name="__codelineno-0-196" href="#__codelineno-0-196"></a>proxy.password=
+</span><span id="__span-0-197"><a id="__codelineno-0-197" name="__codelineno-0-197" href="#__codelineno-0-197"></a>proxy.bypass.list=
+</span><span id="__span-0-198"><a id="__codelineno-0-198" name="__codelineno-0-198" href="#__codelineno-0-198"></a>proxy.scheme=
+</span><span id="__span-0-199"><a id="__codelineno-0-199" name="__codelineno-0-199" href="#__codelineno-0-199"></a>
+</span><span id="__span-0-200"><a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a>#Configure path to Python installation. Applicable for Mac Monterey version &gt;= 12.3.
+</span><span id="__span-0-201"><a id="__codelineno-0-201" name="__codelineno-0-201" href="#__codelineno-0-201"></a>PYTHON_HOME=
+</span></code></pre></div>
 <blockquote>
 <p><strong><em>Important:</em></strong> If you do not want to store your password in the headless build.properties file, you can use mfcli to encrypt your password. You can download the mfcli.jar from <a href="https://community.hclvoltmx.com/downloads">https://community.hclvoltmx.com/downloads</a>.<br />
 Ensure that you use the corresponding version of MFCLI as that of the Iris. i.e 7.x iris, 7.x mfcli, 8.x iris, 8.x mfcli.<br />
 To encrypt the password using mfcli (using default password.encryption.key),<br />
 <code>java -jar mfcli.jar encrypt "VoltMX@1234" Encrypted password is: en1801f1abee7b9e12426c062509e1b18epd</code></p>
 </blockquote>
-<h5 id="configure-the-mode">Configure the Mode</h5>
+<h5 id="configure-the-mode">Configure the Mode<a class="headerlink" href="#configure-the-mode" title="Permanent link">&para;</a></h5>
 <p>Depending on what mode you are building for (either 0, 1, 2, 3, or 4), you need to set values in the <code>HeadlessBuild.properties</code> file.</p>
-<h6 id="mode-0-properties">Mode 0 Properties</h6>
+<h6 id="mode-0-properties">Mode 0 Properties<a class="headerlink" href="#mode-0-properties" title="Permanent link">&para;</a></h6>
 <p>In Mode 0, the application is built, binaries are generated at the location specified in HeadlessBuild.properties, additionally if no location is specified they will also be copied to <drive>/<workspace>/<project>/binaries, apart from the temp folder. To configure <code>build.properties</code> for mode 0, in addition to setting <code>mode=0</code>, simply set the platform you are building for to <em>true</em>.</p>
 <pre><code style="display:block;background-color:#eee;">For example, iphone=true</code></pre>
 
-<h6 id="mode-1-properties">Mode 1 Properties</h6>
+<h6 id="mode-1-properties">Mode 1 Properties<a class="headerlink" href="#mode-1-properties" title="Permanent link">&para;</a></h6>
 <p>In mode 1, the application or services are published, the application or services are published to Volt MX Foundry, depending on the Volt MX Foundry details in <code>HeadlessBuild.properties</code> file. The properties are in addition to setting <code>mode=1</code>.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> In order to publish, initial build has to be done in mode 0 before you execute mode 1 and mode 2.</p>
 </blockquote>
-<h6 id="mode-2-properties">Mode 2 Properties</h6>
+<h6 id="mode-2-properties">Mode 2 Properties<a class="headerlink" href="#mode-2-properties" title="Permanent link">&para;</a></h6>
 <p>Because mode 2 is a combination of modes 0 and 1, you must set the properties described in the Mode 0 properties and Mode 1 properties, and set the property <code>mode=2</code> in order to build and publish to Volt MX Foundry. For example:</p>
-<pre><code>#Cloud Mode credentials (Applicable only for cloud)
-cloud.username=username@voltmx.com
-cloud.password=Abc@123
-
-#Provide Volt MX Foundry specific details
-voltmxfoundry.url=https://mbaastest25.hcl.net:443
-
-#Environment.Name used for publishing example using the format LocalDevEnv  
-#For example, if your Volt MX Foundry Environment URL is:  
-#https://mycompany.voltmxcloud.com  
-#then the value is as follows: environment.name=mycompany
-environment.name=
-
-#web.binary.upload = true by default. Set to false to stop web binary upload to Foundry.
-web.binary.upload = true
-
-
-</code></pre>
-<h6 id="mode-3-properties">Mode 3 Properties</h6>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#Cloud Mode credentials (Applicable only for cloud)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cloud.username=username@voltmx.com
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>cloud.password=Abc@123
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>#Provide Volt MX Foundry specific details
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>voltmxfoundry.url=https://mbaastest25.hcl.net:443
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>#Environment.Name used for publishing example using the format LocalDevEnv  
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>#For example, if your Volt MX Foundry Environment URL is:  
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>#https://mycompany.voltmxcloud.com  
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>#then the value is as follows: environment.name=mycompany
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>environment.name=
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>#web.binary.upload = true by default. Set to false to stop web binary upload to Foundry.
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>web.binary.upload = true
+</span></code></pre></div>
+<h6 id="mode-3-properties">Mode 3 Properties<a class="headerlink" href="#mode-3-properties" title="Permanent link">&para;</a></h6>
 <p>In mode 3, Volt MX Iris combines the web archive and the Volt MX Foundry archive which presumes the web archive is already built and generates a combined war/ear file. If the application is not built or the web archive is not available, then Volt MX Iris displays an error. To configure <code>HeadlessBuild.properties</code> for mode 3, in addition to setting <code>mode=3</code>, the following properties must be set:</p>
 <pre><code style="display:block;background-color:#eee;"><p>Full path of middleware archive (war/ear). If project has Volt MX session Manager, provide with-cache archive, for Http session Manager, provide without-cache</p>
 <p>archive.combinewar.middlewarearchive= &lt;Path to middleware archive (war/ear, based on whether combinewar.ear / combinewar.war properties)&gt;<br/>combinewar.context= &lt;Provide context name with which final war/ear will be generated.&gt;</p>
@@ -4717,7 +4341,7 @@ web.binary.upload = true
 <p>#Provide full path of dependent libraries, separated by semicolons(;) if there are multiple libraries<br/>combinewar.dependencylibraries= &lt;All MobileWeb dependency jars (full path) separated by semicolons(;) should be provided.&gt;</p>
 </code></pre>
 
-<h6 id="mode-4-properties">Mode 4 Properties</h6>
+<h6 id="mode-4-properties">Mode 4 Properties<a class="headerlink" href="#mode-4-properties" title="Permanent link">&para;</a></h6>
 <p>Because mode 4 is a combination of modes 0 and 3, you must set the properties described in the headings <em>Mode 0 Properties</em> and <em>Mode 3 Properties</em>, and set the property <code>mode=4</code>.</p>
 <h4>CONFIGURE VOLT MX FOUNDRY PARAMETERS</h4>
 <p>To configure Volt MX Foundry parameters, follow these steps:</p>
@@ -4746,31 +4370,30 @@ web.binary.upload = true
   <li>In order to enable services, you need to publish the app at least once from IDE.</li>
 </ol>
 
-<h3 id="configure-the-headlessbuild-globalproperties-file">Configure the HeadlessBuild-Global.properties File</h3>
+<h3 id="configure-the-headlessbuild-globalproperties-file">Configure the HeadlessBuild-Global.properties File<a class="headerlink" href="#configure-the-headlessbuild-globalproperties-file" title="Permanent link">&para;</a></h3>
 <p>The following sections explain where to find the <code>HeadlessBuild-Global.properties</code> file and how to configure it.</p>
-<h5 id="how-to-find-the-buildproperties-file">How to Find the build.properties File</h5>
+<h5 id="how-to-find-the-buildproperties-file">How to Find the build.properties File<a class="headerlink" href="#how-to-find-the-buildproperties-file" title="Permanent link">&para;</a></h5>
 <p>The file <code>HeadlessBuild-Global.properties</code> is stored in the root folder of your workspace. For example, if the name of your workspace folder is Workspace, the path in Microsoft Windows would be something like this:</p>
 <p><code>C:\Users\&lt;username&gt;\Workspace</code></p>
-<h5 id="example-of-headlessbuild-globalproperties-file">Example of HeadlessBuild-Global.properties File</h5>
+<h5 id="example-of-headlessbuild-globalproperties-file">Example of HeadlessBuild-Global.properties File<a class="headerlink" href="#example-of-headlessbuild-globalproperties-file" title="Permanent link">&para;</a></h5>
 <p>The following illustrates the sections that comprise the global.properties file and the values that can be used.</p>
-<pre><code>#The file represents the workspace level properties relevant for Headless Build
-#Note: Please escape '\' with '\\' in file paths (Ex: C:\\workspace\\project)
-
-#Specify the eclipse workspace path where the project exists.
-workspace.location=
-
-#Full Path to a jar file whose name starts with 'org.eclipse.equinox.launcher\_' in eclipse plugins folder
-#Example: D:\\eclipse\\plugins\\org.eclipse.equinox.launcher_1.1.0.v20100507.jar
-eclipse.equinox.path=
-
-#Android Home-Please specify the path of Android SDK. This is needed only if Android Builds are being triggered
-android.home=
-
-</code></pre>
-<h4 id="increase-heap-memory">Increase Heap Memory</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>#The file represents the workspace level properties relevant for Headless Build
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>#Note: Please escape &#39;\&#39; with &#39;\\&#39; in file paths (Ex: C:\\workspace\\project)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>#Specify the eclipse workspace path where the project exists.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>workspace.location=
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>#Full Path to a jar file whose name starts with &#39;org.eclipse.equinox.launcher\_&#39; in eclipse plugins folder
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>#Example: D:\\eclipse\\plugins\\org.eclipse.equinox.launcher_1.1.0.v20100507.jar
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>eclipse.equinox.path=
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>#Android Home-Please specify the path of Android SDK. This is needed only if Android Builds are being triggered
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>android.home=
+</span></code></pre></div>
+<h4 id="increase-heap-memory">Increase Heap Memory<a class="headerlink" href="#increase-heap-memory" title="Permanent link">&para;</a></h4>
 <p>If required, you can increase the heap memory available to your build by modifying the <code>run</code> file (either <code>run.bat</code> or <code>run.sh</code>). To increase the heap memory, type the following memory options in the <code>run</code> file.</p>
-<pre><code>java -Xms40m -Xmx512m -Dinput.file=%1 -Dglobal.file=%4 -cp %3 org.eclipse.core.launcher.Main -data %2 -application com.pat.tool.keditor.voltmxapplication
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>java -Xms40m -Xmx512m -Dinput.file=%1 -Dglobal.file=%4 -cp %3 org.eclipse.core.launcher.Main -data %2 -application com.pat.tool.keditor.voltmxapplication
+</span></code></pre></div>
 <h3>Generating IPA</h3>
 <p>To generate IPA, following fields need to be configured before triggering the build.</p>
 <ol>
@@ -4801,7 +4424,7 @@ android.home=
 <li>Build the application to generate IPA.</li>
 </ol>
 
-<h3 id="build-the-application"><strong>Build the Application</strong></h3>
+<h3 id="build-the-application"><strong>Build the Application</strong><a class="headerlink" href="#build-the-application" title="Permanent link">&para;</a></h3>
 <p>To build the application, follow these steps:</p>
 <ol>
 <li>Navigate to your application's workspace.</li>
@@ -4838,6 +4461,8 @@ eclipse.equinox.path = c:\\Eclipse_6.5\\plugins\\org.eclipse.equinox.launcher_1.
 
 
 
+
+
                 
               </article>
             </div>
@@ -4848,7 +4473,7 @@ eclipse.equinox.path = c:\\Eclipse_6.5\\plugins\\org.eclipse.equinox.launcher_1.
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -4886,10 +4511,14 @@ eclipse.equinox.path = c:\\Eclipse_6.5\\plugins\\org.eclipse.equinox.launcher_1.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>
