@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/Orchestration.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_user_guide/Content/Orchestration.html">
       
       
         <link rel="prev" href="Manage_Existing_Integration_Services.html">
@@ -18,18 +18,53 @@
         <link rel="next" href="ImportExportServices.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
-        <title>Overview - HCL Volt MX Documentation</title>
+        <title>Orchestration - HCL Volt MX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -139,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Orchestration
             
           </span>
         </div>
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -354,13 +350,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -373,6 +368,7 @@
         
   
   
+  
     
   
   
@@ -381,8 +377,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,92 +769,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1190,919 +809,54 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
     
       
       
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
   
-
-              
-            
-              
-                
   
-  
-  
-  
-    
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
   
   
   
-  
     
     
-      
-        
-      
-        
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
       
-      
-  
-  
     
-  
-  
-  
     
     
-      
-        
-      
-        
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
-        
       
     
     
-    
-    
-      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -2111,9 +865,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2122,7 +883,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Foundry
+            
+  
+    Foundry
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2136,9 +901,16 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2181,8 +953,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2190,12 +967,20 @@
         
   
   
+  
     <a href="../../installing_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2334,10 +1119,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" checked>
@@ -2346,9 +1135,16 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2357,7 +1153,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3">
             <span class="md-nav__icon md-icon"></span>
-            Volt MX Foundry User Guide
+            
+  
+    Volt MX Foundry User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2371,9 +1171,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2392,9 +1199,16 @@
       <a href="Preface.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Preface
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2413,9 +1227,16 @@
       <a href="../../foundrySDKs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry SDKs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2434,9 +1255,16 @@
       <a href="Accessing_VoltMX_MBaaS_Portal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2455,9 +1283,16 @@
       <a href="Environments-Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2476,9 +1311,16 @@
       <a href="Account_Settings_User_ACLs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Default Access Control Lists (ACLs) on New Apps and Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2497,9 +1339,16 @@
       <a href="UpgradeCloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Updates on Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2518,9 +1367,16 @@
       <a href="How_to_access_VoltMX_Foundry_Portal_on-Prem.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2539,9 +1395,16 @@
       <a href="Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2560,9 +1423,16 @@
       <a href="Published_Apps-Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Viewing Applications Published to a Runtime Environment
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2581,9 +1451,16 @@
       <a href="Features.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Features
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2602,9 +1479,16 @@
       <a href="Adding_Applications.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Apps - How to Add Applications
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2623,9 +1507,16 @@
       <a href="ConsoleAccessControl.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Console Access Control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2644,9 +1535,16 @@
       <a href="Continuous_Integration_with_Foundry_Governanc_%20APIs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Foundry Governanc APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2671,8 +1569,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2680,12 +1583,20 @@
         
   
   
+  
     <a href="API_Management.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     APIs in API Management
+  
+
+    
   </span>
+  
   
 
       
@@ -2710,9 +1621,16 @@
       <a href="API_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2731,9 +1649,16 @@
       <a href="App_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2752,9 +1677,16 @@
       <a href="CustomDataConfig.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Data Adapters on Volt MX Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2773,9 +1705,16 @@
       <a href="JAR_Management.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Managing JAR Files
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2794,9 +1733,16 @@
       <a href="CLI_Analytics.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Analytics for Third-party Client App Binaries
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2815,9 +1761,16 @@
       <a href="Export-Import_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exporting and Importing an Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2854,21 +1807,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Identity.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Identity
+  
+
+    
   </span>
+  
   
 
       
@@ -2901,21 +1867,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Legacy_Serivces.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Services
+  
+
+    
   </span>
+  
   
 
       
@@ -2948,8 +1927,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2957,12 +1941,20 @@
         
   
   
+  
     <a href="Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -2997,10 +1989,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_25" checked>
@@ -3009,9 +2005,16 @@
           <label class="md-nav__link" for="__nav_9_3_25" id="__nav_9_3_25_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Orchestration
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3020,7 +2023,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_25_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3_25">
             <span class="md-nav__icon md-icon"></span>
-            Orchestration
+            
+  
+    Orchestration
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3043,9 +2050,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3054,14 +2068,22 @@
       <a href="Orchestration.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3081,7 +2103,9 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      
+        Overview
+      
     </span>
   </a>
   
@@ -3090,7 +2114,9 @@
         <li class="md-nav__item">
   <a href="#use-case" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Case
+      
+        Use Case
+      
     </span>
   </a>
   
@@ -3099,7 +2125,9 @@
         <li class="md-nav__item">
   <a href="#orchestration-service-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Orchestration Service Operations
+      
+        Orchestration Service Operations
+      
     </span>
   </a>
   
@@ -3108,7 +2136,9 @@
         <li class="md-nav__item">
   <a href="#orchestration-service-tab" class="md-nav__link">
     <span class="md-ellipsis">
-      Orchestration Service Tab
+      
+        Orchestration Service Tab
+      
     </span>
   </a>
   
@@ -3117,7 +2147,9 @@
         <li class="md-nav__item">
   <a href="#create-a-new-orchestration-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a New Orchestration Service
+      
+        Create a New Orchestration Service
+      
     </span>
   </a>
   
@@ -3127,7 +2159,9 @@
           <li class="md-nav__item">
   <a href="#create-a-service-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a Service Definition
+      
+        Create a Service Definition
+      
     </span>
   </a>
   
@@ -3136,7 +2170,9 @@
           <li class="md-nav__item">
   <a href="#create-an-operation" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an Operation
+      
+        Create an Operation
+      
     </span>
   </a>
   
@@ -3150,7 +2186,9 @@
         <li class="md-nav__item">
   <a href="#use-existing-service-to-create-a-new-orchestration-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Existing Service to Create a New Orchestration Service
+      
+        Use Existing Service to Create a New Orchestration Service
+      
     </span>
   </a>
   
@@ -3159,7 +2197,9 @@
         <li class="md-nav__item">
   <a href="#manage-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Manage Services
+      
+        Manage Services
+      
     </span>
   </a>
   
@@ -3168,7 +2208,9 @@
         <li class="md-nav__item">
   <a href="#service-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Service Versions
+      
+        Service Versions
+      
     </span>
   </a>
   
@@ -3193,9 +2235,16 @@
       <a href="ImportExportServices.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Importing and Exporting Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3214,9 +2263,16 @@
       <a href="Test_an_Orechestration_Service_Operation.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Test an Orchestration Service Operation
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3267,8 +2323,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3276,12 +2337,20 @@
         
   
   
+  
     <a href="Objectservices.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Object Services
+  
+
+    
   </span>
+  
   
 
       
@@ -3306,9 +2375,16 @@
       <a href="../../voltmx_foundry_workflow/Content/Workflow.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Workflow
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3327,9 +2403,16 @@
       <a href="offline_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Offline Enablement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3348,9 +2431,16 @@
       <a href="Legacy_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Sync
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3369,9 +2459,16 @@
       <a href="VoltMXDevPortal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Developer Portal
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3390,9 +2487,16 @@
       <a href="Logic_in_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logic
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3411,9 +2515,16 @@
       <a href="Rules_as_a_Service.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Rules as a Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3432,9 +2543,16 @@
       <a href="Engagement.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Engagement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3463,8 +2581,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3472,12 +2595,20 @@
         
   
   
+  
     <a href="Manage_Client_App_Assets.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Manage Client App Assets
+  
+
+    
   </span>
+  
   
 
       
@@ -3502,9 +2633,16 @@
       <a href="EnterpriseAppStore.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Enterprise App Store Service for Digital App Distribution
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3523,9 +2661,16 @@
       <a href="PushNotificationsEas.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sending Push Notification to EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3544,9 +2689,16 @@
       <a href="AppVersionUpgradePolicyEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Checking App Versions in EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3565,9 +2717,16 @@
       <a href="EAS_NativeApp_Walk-through.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Walk-through of Volt MX Enterprise App Store (EAS) Source Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3586,9 +2745,16 @@
       <a href="KnownIssuesEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Known Issues - EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3607,9 +2773,16 @@
       <a href="Governance_for_Foundry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Governance for Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3640,8 +2813,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3649,12 +2827,20 @@
         
   
   
+  
     <a href="Publish.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Publish
+  
+
+    
   </span>
+  
   
 
       
@@ -3679,9 +2865,16 @@
       <a href="AppPromotion.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Promoting a Deployment Package
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3724,8 +2917,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3733,12 +2931,20 @@
         
   
   
+  
     <a href="CI_Foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Command Line Utility - Continuous Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -3775,8 +2981,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3784,12 +2995,20 @@
         
   
   
+  
     <a href="Foundry_SDKs.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SDKs
+  
+
+    
   </span>
+  
   
 
       
@@ -3814,9 +3033,16 @@
       <a href="Settings_Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3835,9 +3061,16 @@
       <a href="Settings.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - On-premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3856,9 +3089,16 @@
       <a href="Review_Requests_Dashboard.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Review Requests Dashboard
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3877,9 +3117,16 @@
       <a href="Reports.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3898,9 +3145,16 @@
       <a href="Support.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Support
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3919,9 +3173,16 @@
       <a href="Telemetry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Telemetry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3940,9 +3201,16 @@
       <a href="Samples/Samples.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3961,9 +3229,16 @@
       <a href="Appendix_-_Sync_Strategy.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Sync Strategy
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3988,8 +3263,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3997,12 +3277,20 @@
         
   
   
+  
     <a href="Appendix_-_App_Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - App Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4027,9 +3315,16 @@
       <a href="Appendix_-_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Frequently Asked Questions (FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4048,9 +3343,16 @@
       <a href="Limitations.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4083,21 +3385,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth Sample App Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4130,21 +3445,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../integration_services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4177,21 +3505,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../administering_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Administering Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -4248,21 +3589,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Services Console User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4321,21 +3675,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4384,8 +3751,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4393,12 +3765,20 @@
         
   
   
+  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Deployment Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4423,9 +3803,16 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Analytics & Reporting Cloud FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4452,8 +3839,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4461,12 +3853,20 @@
         
   
   
+  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services Troubleshooting Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4501,6 +3901,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -4519,7 +3920,9 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      
+        Overview
+      
     </span>
   </a>
   
@@ -4528,7 +3931,9 @@
         <li class="md-nav__item">
   <a href="#use-case" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Case
+      
+        Use Case
+      
     </span>
   </a>
   
@@ -4537,7 +3942,9 @@
         <li class="md-nav__item">
   <a href="#orchestration-service-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Orchestration Service Operations
+      
+        Orchestration Service Operations
+      
     </span>
   </a>
   
@@ -4546,7 +3953,9 @@
         <li class="md-nav__item">
   <a href="#orchestration-service-tab" class="md-nav__link">
     <span class="md-ellipsis">
-      Orchestration Service Tab
+      
+        Orchestration Service Tab
+      
     </span>
   </a>
   
@@ -4555,7 +3964,9 @@
         <li class="md-nav__item">
   <a href="#create-a-new-orchestration-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a New Orchestration Service
+      
+        Create a New Orchestration Service
+      
     </span>
   </a>
   
@@ -4565,7 +3976,9 @@
           <li class="md-nav__item">
   <a href="#create-a-service-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a Service Definition
+      
+        Create a Service Definition
+      
     </span>
   </a>
   
@@ -4574,7 +3987,9 @@
           <li class="md-nav__item">
   <a href="#create-an-operation" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an Operation
+      
+        Create an Operation
+      
     </span>
   </a>
   
@@ -4588,7 +4003,9 @@
         <li class="md-nav__item">
   <a href="#use-existing-service-to-create-a-new-orchestration-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Existing Service to Create a New Orchestration Service
+      
+        Use Existing Service to Create a New Orchestration Service
+      
     </span>
   </a>
   
@@ -4597,7 +4014,9 @@
         <li class="md-nav__item">
   <a href="#manage-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Manage Services
+      
+        Manage Services
+      
     </span>
   </a>
   
@@ -4606,7 +4025,9 @@
         <li class="md-nav__item">
   <a href="#service-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Service Versions
+      
+        Service Versions
+      
     </span>
   </a>
   
@@ -4622,19 +4043,29 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_user_guide/Content/Orchestration.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 <p>User Guide: Orchestration Service</p>
-<h1 id="orchestration">Orchestration</h1>
-<h2 id="overview">Overview</h2>
+<h1 id="orchestration">Orchestration<a class="headerlink" href="#orchestration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Orchestration Services leverage the concept of combining multiple integration services, object services or orchestration services into a single service to simplify business logic in client apps and reduce the number of service invocations.</p>
-<h2 id="use-case">Use Case</h2>
+<h2 id="use-case">Use Case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h2>
 <p>An HR executive wants to fill a vacancy in the company available for a developer with 3-6 years of experience. The HR uses an HR tool to search for the suitable candidates. The tool sends the initial request to an Orchestration service which then invokes other services that connect to various data sources, for example, Naukri, LinkedIn, Monster, Indeed and get the list of suitable candidates.</p>
 <p>Finally, the orchestration service gets the list of eligible candidates suitable for the vacancy and the data is displayed in the HR tool.</p>
-<h2 id="orchestration-service-operations">Orchestration Service Operations</h2>
+<h2 id="orchestration-service-operations">Orchestration Service Operations<a class="headerlink" href="#orchestration-service-operations" title="Permanent link">&para;</a></h2>
 <p>Operations are the functional entities that are invoked from the client-side core functions that define the capabilities of any service. Operations in an orchestration service can be defined to invoke operations from multiple services. You can create Orchestration service operations from the existing Integration service operations, Object service operations, and other Orchestration service operations; and assign an execution strategy to these operations so that they are executed in the defined order.</p>
 <p>There are two major execution types for Orchestration service Operations:</p>
 <ul>
@@ -4661,7 +4092,7 @@
 <blockquote>
 <p><strong><em>Important:</em></strong> You cannot add any service to an Orchestration Service in which the <strong>Enable Pass-through</strong> feature is enabled.</p>
 </blockquote>
-<h2 id="orchestration-service-tab">Orchestration Service Tab</h2>
+<h2 id="orchestration-service-tab">Orchestration Service Tab<a class="headerlink" href="#orchestration-service-tab" title="Permanent link">&para;</a></h2>
 <p>To go to the Orchestration tab from the Volt MX Foundry Console dashboard, click <strong>Add New</strong> or select any existing app &gt; <strong>Configure Services</strong> &gt; <strong>Orchestration</strong>.</p>
 <p>If you have not configured any Orchestration service before, the Volt MX Foundry displays a message that there are no Orchestration services configured on the Orchestration tab landing page.</p>
 <p>You can do the following from the Orchestration service landing page:</p>
@@ -4676,12 +4107,12 @@
 <p><a href="#manage-services">Manage</a> the available Orchestration services</p>
 </li>
 </ul>
-<h2 id="create-a-new-orchestration-service">Create a New Orchestration Service</h2>
+<h2 id="create-a-new-orchestration-service">Create a New Orchestration Service<a class="headerlink" href="#create-a-new-orchestration-service" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong><em>Note:</em></strong> If you want to create an Orchestration service without associating it with any Volt MX Foundry app, from the side menu, click API Management &gt; APIs &gt; Orchestration &gt; Configure New. For more information on API Management, refer <a href="API_Management.html">API Management</a>.</p>
 </blockquote>
 <p>To configure a new Orchestration service, you must first create a service definition and add operations to that service definition.</p>
-<h3 id="create-a-service-definition">Create a Service Definition</h3>
+<h3 id="create-a-service-definition">Create a Service Definition<a class="headerlink" href="#create-a-service-definition" title="Permanent link">&para;</a></h3>
 <p>To create a new Service Definition, in the Orchestration page click <strong>Configure New</strong> or in the left pane click the “+” icon and select <strong>Add New Service</strong>. The Volt MX Foundry displays the <strong>Service Definition</strong> screen. You can do the following on the <strong>Service Definition</strong> screen:</p>
 <ul>
 <li>
@@ -4727,7 +4158,7 @@
 </blockquote>
 <p>Once all the required parameters are configured in the <strong>Service Definition</strong> page, click <strong>Save</strong> if you want to save the new service and add operations to it later. Click <strong>Save and Add Operation</strong> if you want to add operations to that service immediately.</p>
 <p>The new service is added to the All Services list and to the Orchestration tab landing page.</p>
-<h3 id="create-an-operation">Create an Operation</h3>
+<h3 id="create-an-operation">Create an Operation<a class="headerlink" href="#create-an-operation" title="Permanent link">&para;</a></h3>
 <p>If you have clicked <strong>Save</strong> on the <strong>Service Definition</strong> page, Volt MX Foundry displays an <strong>Operations List</strong> tab when you open the service next time. Select the <strong>Operations List</strong> tab and click <strong>Add Operation</strong> or in the left pane, click the “+” icon and select <strong>Add New Operation</strong>. Volt MX Foundry displays the <strong>NewOperation</strong> tab.</p>
 <p>If you have clicked <strong>Save and Add Operation</strong> in the <strong>Service Definition</strong> page, it directly opens the <strong>NewOperation</strong> tab.</p>
 <p>You can do the following to add an operation to the service:</p>
@@ -4819,7 +4250,7 @@
 <p>Click <strong>Save Operations</strong>. The new operation is added in the <strong>Operations</strong> tab of that Orchestration service.</p>
 </li>
 </ul>
-<h2 id="use-existing-service-to-create-a-new-orchestration-service">Use Existing Service to Create a New Orchestration Service</h2>
+<h2 id="use-existing-service-to-create-a-new-orchestration-service">Use Existing Service to Create a New Orchestration Service<a class="headerlink" href="#use-existing-service-to-create-a-new-orchestration-service" title="Permanent link">&para;</a></h2>
 <p>This feature helps you to use an existing Orchestration service in a Volt MX Foundry account and use it to configure a new Orchestration service. You can either clone or add existing services and make changes to them accordingly.</p>
 <p>To create a new Orchestration service from the available services, perform the following steps:</p>
 <ul>
@@ -4848,7 +4279,7 @@
 <p>Click the newly added service or open the Contextual menu and click <strong>Edit</strong> to configure the details of the service. For more information on configuring the details, refer to <a href="#create-a-service-definition">Create a Service Definition</a> and <a href="#create-an-operation">Create an Operation.</a></p>
 </li>
 </ul>
-<h2 id="manage-services">Manage Services</h2>
+<h2 id="manage-services">Manage Services<a class="headerlink" href="#manage-services" title="Permanent link">&para;</a></h2>
 <p>All the services related to a service type are listed on the landing page of the respective service type. You can manage the details of a service from the Contextual menu available adjacent to each service. The following options are available in the Contextual Menu:</p>
 <ul>
 <li>
@@ -4871,7 +4302,7 @@
 <li><strong>Export as XML</strong> - Exports the current version of a service in the form of an XML file.</li>
 <li><strong>Export</strong> – Exports the service details in the form of a zip file. You can import this zip file to another Volt MX Foundry app and use it. For more information, refer to <a href="Export-Import_Apps.html">Export and Import an Application</a>.</li>
 </ul>
-<h2 id="service-versions">Service Versions</h2>
+<h2 id="service-versions">Service Versions<a class="headerlink" href="#service-versions" title="Permanent link">&para;</a></h2>
 <p>You can use Service Versioning if you want to save the changes made to a service as another version of the same service. When you create a new version for a service, the Volt MX Foundry app associated with the service will use the latest version of the service automatically.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> A Volt MX Foundry app can be associated with only one version of an orchestration service.</p>
@@ -4907,6 +4338,8 @@
 
 
 
+
+
                 
               </article>
             </div>
@@ -4917,7 +4350,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -4955,10 +4388,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

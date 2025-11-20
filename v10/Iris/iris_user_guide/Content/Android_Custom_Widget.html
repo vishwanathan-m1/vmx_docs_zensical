@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_user_guide/Content/Android_Custom_Widget.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_user_guide/Content/Android_Custom_Widget.html">
       
       
         <link rel="prev" href="iOS_Custom_Widget.html">
@@ -18,18 +18,53 @@
         <link rel="next" href="SPA_Custom_Widget.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
-        <title>Custom Widgets for Android - HCL Volt MX Documentation</title>
+        <title>Android Custom Widget - HCL Volt MX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -139,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Custom Widgets for Android
+              Android Custom Widget
             
           </span>
         </div>
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,8 +984,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1281,12 +998,20 @@
         
   
   
+  
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1351,10 +1076,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" checked>
@@ -1363,9 +1092,16 @@
           <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1374,7 +1110,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4">
             <span class="md-nav__icon md-icon"></span>
-            Iris User Guide
+            
+  
+    Iris User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1388,9 +1128,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1409,9 +1156,16 @@
       <a href="Mobile_Channels.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Supported Digital Channels
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1430,9 +1184,16 @@
       <a href="Hikes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Hikes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1451,9 +1212,16 @@
       <a href="Third-Party_Licenses.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Third-Party Licenses
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1498,8 +1266,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1507,12 +1280,20 @@
         
   
   
+  
     <a href="Part_I__Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuring Your Computer
+  
+
+    
   </span>
+  
   
 
       
@@ -1625,10 +1406,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_6" checked>
@@ -1637,9 +1422,16 @@
           <label class="md-nav__link" for="__nav_8_4_6" id="__nav_8_4_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Designing an Application
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1648,7 +1440,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4_6">
             <span class="md-nav__icon md-icon"></span>
-            Designing an Application
+            
+  
+    Designing an Application
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1662,9 +1458,16 @@
       <a href="Part_II_CreatingAnApplication.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1683,9 +1486,16 @@
       <a href="appUserInterface.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     App User Interface
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1704,9 +1514,16 @@
       <a href="dataBackEndIntergration.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Data and Backend Integration
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1725,9 +1542,16 @@
       <a href="webAppDevelopment.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Web App Development
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1746,9 +1570,16 @@
       <a href="TypesOfApplications.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Types of Applications
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1767,9 +1598,16 @@
       <a href="Ensuring_You_Have_All_Needed_Resources.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Ensure You Have All the Resources You Need
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1788,9 +1626,16 @@
       <a href="PlanningYourMobileApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Plan Your Mobile App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1829,8 +1674,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1838,12 +1688,20 @@
         
   
   
+  
     <a href="CreateMigrateOrImportProject.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Create, Migrate, or Import a Project
+  
+
+    
   </span>
+  
   
 
       
@@ -1868,9 +1726,16 @@
       <a href="Create_the_Storyboard_of_your_App.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Create the Storyboard of your App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1903,21 +1768,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="ExportImportResources.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Export and Import Resources
+  
+
+    
   </span>
+  
   
 
       
@@ -1950,8 +1828,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1959,12 +1842,20 @@
         
   
   
+  
     <a href="Adding_Forms_to_a_New_Application.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Create Wearables Screens
+  
+
+    
   </span>
+  
   
 
       
@@ -2007,10 +1898,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_6_12" checked>
@@ -2019,9 +1914,16 @@
           <label class="md-nav__link" for="__nav_8_4_6_12" id="__nav_8_4_6_12_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Populate Screens with Widgets
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2030,7 +1932,11 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_4_6_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4_6_12">
             <span class="md-nav__icon md-icon"></span>
-            Populate Screens with Widgets
+            
+  
+    Populate Screens with Widgets
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2044,9 +1950,16 @@
       <a href="PopulatingWidgets.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2077,21 +1990,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PopulatingWidgets.html#container-widgets" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Container Widgets
+  
+
+    
   </span>
+  
   
 
       
@@ -2144,21 +2070,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PopulatingWidgets.html#basic-widgets" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Basic Widgets
+  
+
+    
   </span>
+  
   
 
       
@@ -2205,21 +2144,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PopulatingWidgets.html#advanced-widgets" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Advanced Widgets
+  
+
+    
   </span>
+  
   
 
       
@@ -2256,8 +2208,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2265,12 +2222,20 @@
         
   
   
+  
     <a href="AddAppleWatchWidgets.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Add Watch Widgets
+  
+
+    
   </span>
+  
   
 
       
@@ -2292,12 +2257,19 @@
   
   
     <li class="md-nav__item">
-      <a href="NativePlatformWidgets.html" class="md-nav__link">
+      <a href="NativePlatformWidgets.md" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Native UI Container
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2328,10 +2300,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_6_12_7" checked>
@@ -2340,9 +2316,16 @@
           <label class="md-nav__link" for="__nav_8_4_6_12_7" id="__nav_8_4_6_12_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Using Custom Widgets
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2351,7 +2334,11 @@
         <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_4_6_12_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_4_6_12_7">
             <span class="md-nav__icon md-icon"></span>
-            Using Custom Widgets
+            
+  
+    Using Custom Widgets
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2365,9 +2352,16 @@
       <a href="Using_Custom_Widgets.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2386,9 +2380,16 @@
       <a href="iOS_Custom_Widget.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Widgets for iOS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2414,9 +2415,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Widgets for Android
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2425,14 +2433,22 @@
       <a href="Android_Custom_Widget.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Widgets for Android
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -2450,7 +2466,9 @@
         <li class="md-nav__item">
   <a href="#importing-custom-widgets-for-android" class="md-nav__link">
     <span class="md-ellipsis">
-      Importing Custom Widgets for Android
+      
+        Importing Custom Widgets for Android
+      
     </span>
   </a>
   
@@ -2460,7 +2478,9 @@
           <li class="md-nav__item">
   <a href="#android-wrapper" class="md-nav__link">
     <span class="md-ellipsis">
-      Android Wrapper
+      
+        Android Wrapper
+      
     </span>
   </a>
   
@@ -2469,7 +2489,9 @@
           <li class="md-nav__item">
   <a href="#creating-a-custom-widget-wrapper-java-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Custom Widget Wrapper Java Project
+      
+        Creating a Custom Widget Wrapper Java Project
+      
     </span>
   </a>
   
@@ -2479,7 +2501,9 @@
           <li class="md-nav__item">
   <a href="#sample-wrapperclass-file-for-android" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample wrapper.class File for Android
+      
+        Sample wrapper.class File for Android
+      
     </span>
   </a>
   
@@ -2493,7 +2517,9 @@
           <li class="md-nav__item">
   <a href="#importing-custom-widgets-for-android_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Importing Custom Widgets for Android
+      
+        Importing Custom Widgets for Android
+      
     </span>
   </a>
   
@@ -2502,7 +2528,9 @@
           <li class="md-nav__item">
   <a href="#important-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Considerations
+      
+        Important Considerations
+      
     </span>
   </a>
   
@@ -2532,9 +2560,16 @@
       <a href="SPA_Custom_Widget.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SPA and Desktop&colon; Importing Custom Widgets
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2569,9 +2604,16 @@
       <a href="OrganizingAppElementsInGroups.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Organizing Application Elements
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2590,9 +2632,16 @@
       <a href="AddCustomCSSCodeToSPAApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Add Custom CSS Code to an SPA App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2611,9 +2660,16 @@
       <a href="AddLocalHTMLContent.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Add Local HTML Content
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2632,9 +2688,16 @@
       <a href="AddALocalDatabaseToAnApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Add a Local Database to an App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2653,9 +2716,16 @@
       <a href="CreateCordovaApplications.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Create Cordova Applications
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2674,9 +2744,16 @@
       <a href="SetAppLifecycleEvents.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Set App Lifecycle Events
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2703,21 +2780,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="UsingNativeFunctionAPIsAndWidgets.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using Native Function APIs and Widgets
+  
+
+    
   </span>
+  
   
 
       
@@ -2780,21 +2870,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="working_with_Action_Editor.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Add Actions
+  
+
+    
   </span>
+  
   
 
       
@@ -2845,21 +2948,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Customizing_the_Look_and_Feel_with_Skins.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Understanding Skins
+  
+
+    
   </span>
+  
   
 
       
@@ -2902,8 +3018,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2911,12 +3032,20 @@
         
   
   
+  
     <a href="Using_Themes_Applying_a_Collection_of_Skins_as_a_Group.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Understanding Themes
+  
+
+    
   </span>
+  
   
 
       
@@ -2941,9 +3070,16 @@
       <a href="Templates.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Using Templates
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2962,9 +3098,16 @@
       <a href="FormTemplates.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Create and Use Form Templates
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2983,9 +3126,16 @@
       <a href="ResponsiveGridLayout.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Responsive Grid Layout
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3004,9 +3154,16 @@
       <a href="Responsive_Design_8_2.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Design a Responsive Web App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3025,9 +3182,16 @@
       <a href="ProgressiveWebApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Design a Progressive Web App
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3058,8 +3222,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3067,12 +3236,20 @@
         
   
   
+  
     <a href="Adding_and_Managing_Images.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Add and Manage Images and Other Media
+  
+
+    
   </span>
+  
   
 
       
@@ -3097,9 +3274,16 @@
       <a href="RefreshTheProject.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Refresh the Project
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3118,9 +3302,16 @@
       <a href="File_Update_Notification.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     File Update Notification
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3139,9 +3330,16 @@
       <a href="OpenAnExternalFile.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Open an External File
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3160,9 +3358,16 @@
       <a href="OpenConsoleLogs.html#open-console-logs" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Open Console Logs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3181,9 +3386,16 @@
       <a href="Forking.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Forking
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3202,9 +3414,16 @@
       <a href="Project_Properties_in_VoltMX_Iris.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuring Project Settings
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3223,9 +3442,16 @@
       <a href="Native_App_Properties.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Set Native App Properties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3244,9 +3470,16 @@
       <a href="AndroidManifest_File.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     The Android Manifest File
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3265,9 +3498,16 @@
       <a href="Global_Variables_and_Data_Store_Keys.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Add Global Variables
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3286,9 +3526,16 @@
       <a href="Invoke_Sublime_Text_from_Iris.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoke Sublime Text from Iris
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3307,9 +3554,16 @@
       <a href="FindAndReplace.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Find and Replace
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3328,9 +3582,16 @@
       <a href="CapProdReqsWithNotes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Capture Product Requirements with Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3349,9 +3610,16 @@
       <a href="AddCommentsToForms.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Add Comments to Forms
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3402,8 +3670,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3411,12 +3684,20 @@
         
   
   
+  
     <a href="TimeAndEffortSavers.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Time and Effort Savers
+  
+
+    
   </span>
+  
   
 
       
@@ -3459,21 +3740,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="C_DesigningWorkingWithComponents.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Creating Applications with Components
+  
+
+    
   </span>
+  
   
 
       
@@ -3514,21 +3808,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PartIII_Adding_functionality.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Adding Functionality
+  
+
+    
   </span>
+  
   
 
       
@@ -3603,21 +3910,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="BuildingAndViewAnApp.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Building and Viewing an Application
+  
+
+    
   </span>
+  
   
 
       
@@ -3658,21 +3978,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="TestingandDebugginganApplication.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Testing and Debugging an Application
+  
+
+    
   </span>
+  
   
 
       
@@ -3703,8 +4036,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3712,12 +4050,20 @@
         
   
   
+  
     <a href="Internationalization.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix A&colon; Internationalization
+  
+
+    
   </span>
+  
   
 
       
@@ -3742,9 +4088,16 @@
       <a href="Inputs_to_Android_Application_Developers.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix B&colon; Android Build Environment and Configurations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3763,9 +4116,16 @@
       <a href="Generating_Map_Keys.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix C&colon; Generating and Configuring Map API Keys
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3784,9 +4144,16 @@
       <a href="AppServiceEvent.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix D&colon; The App Service Event
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3805,9 +4172,16 @@
       <a href="CameraAccessAndroidBrowser.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix E&colon; Camera Access in Android Browser
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3826,9 +4200,16 @@
       <a href="Support_for_iPhoneX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix F&colon; Support for iPhone X
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3847,9 +4228,16 @@
       <a href="Universal_Links.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix G&colon; Universal Links iOS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3868,9 +4256,16 @@
       <a href="FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Frequently Asked Questions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3929,21 +4324,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -4104,21 +4512,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4153,21 +4574,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4298,21 +4732,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4343,21 +4790,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4392,21 +4852,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4441,21 +4914,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -4488,21 +4974,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -4535,21 +5034,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4605,106 +5117,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -4713,579 +5153,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -5304,6 +5171,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -5320,7 +5188,9 @@
         <li class="md-nav__item">
   <a href="#importing-custom-widgets-for-android" class="md-nav__link">
     <span class="md-ellipsis">
-      Importing Custom Widgets for Android
+      
+        Importing Custom Widgets for Android
+      
     </span>
   </a>
   
@@ -5330,7 +5200,9 @@
           <li class="md-nav__item">
   <a href="#android-wrapper" class="md-nav__link">
     <span class="md-ellipsis">
-      Android Wrapper
+      
+        Android Wrapper
+      
     </span>
   </a>
   
@@ -5339,7 +5211,9 @@
           <li class="md-nav__item">
   <a href="#creating-a-custom-widget-wrapper-java-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Custom Widget Wrapper Java Project
+      
+        Creating a Custom Widget Wrapper Java Project
+      
     </span>
   </a>
   
@@ -5349,7 +5223,9 @@
           <li class="md-nav__item">
   <a href="#sample-wrapperclass-file-for-android" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample wrapper.class File for Android
+      
+        Sample wrapper.class File for Android
+      
     </span>
   </a>
   
@@ -5363,7 +5239,9 @@
           <li class="md-nav__item">
   <a href="#importing-custom-widgets-for-android_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Importing Custom Widgets for Android
+      
+        Importing Custom Widgets for Android
+      
     </span>
   </a>
   
@@ -5372,7 +5250,9 @@
           <li class="md-nav__item">
   <a href="#important-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Considerations
+      
+        Important Considerations
+      
     </span>
   </a>
   
@@ -5393,17 +5273,27 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_user_guide/Content/Android_Custom_Widget.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
-  <h1>Custom Widgets for Android</h1>
+  <h1>Android Custom Widget</h1>
 
-<h2 id="importing-custom-widgets-for-android">Importing Custom Widgets for Android</h2>
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
+<h2 id="importing-custom-widgets-for-android">Importing Custom Widgets for Android<a class="headerlink" href="#importing-custom-widgets-for-android" title="Permanent link">&para;</a></h2>
 <p>You can import and create your own custom widgets for the Android platform. Volt MX Irisplatform has defined a contract that any custom widget should implement. This contract is referred to as a widget wrapper. The main purpose of the widget wrapper is to enable Volt MX IrisPlatform to initialize the widget when it is placed in a form that is currently being rendered. The wrapper notifies the custom widget when there is a change in its state. The change in state can be a programmatic change to one of the properties exposed by it or a user driven event raised on the custom widget.</p>
-<p>All changes in state are notified to the custom widget through the widget wrapper contract. If you want to use a widget developed by using any 3rd party library or framework, you should expose the widget to the Volt MX Iris Android platform by implementing a Java abstract class defined by the Volt MX Iris Android platform. This java class implementation should be done in a separate java project which should be exported as a library jar file. These class files in the library jar are imported using the <a href="#importing-custom-widgets-for-android-1">Importing Custom Widgets</a> procedure.</p>
-<h3 id="android-wrapper">Android Wrapper</h3>
+<p>All changes in state are notified to the custom widget through the widget wrapper contract. If you want to use a widget developed by using any 3<sup>rd</sup> party library or framework, you should expose the widget to the Volt MX Iris Android platform by implementing a Java abstract class defined by the Volt MX Iris Android platform. This java class implementation should be done in a separate java project which should be exported as a library jar file. These class files in the library jar are imported using the <a href="#importing-custom-widgets-for-android-1">Importing Custom Widgets</a> procedure.</p>
+<h3 id="android-wrapper">Android Wrapper<a class="headerlink" href="#android-wrapper" title="Permanent link">&para;</a></h3>
 <p>The contract definition is as follows:</p>
 <p>public abstract android.view.View onCreateView (android.content.Context context)</p>
 <p>This mandatory method is called by the platform whenever a new instance of custom widget view is required. The subclasses should not hold the reference to the created View and the context argument in any local instance variables. If reference is held, it should be nullified in onDestroyView callback, otherwise would lead to Out of Memory issues.</p>
@@ -5427,7 +5317,7 @@
 <li>Location in the <strong>Android-SDK</strong> folder: <strong>\android-sdk\platforms\android-18\android.jar</strong></li>
 </ul>
 <p>Android wrapper Java class for custom widget implementation should be done in a separate java project that should be exported as a library JAR file. Then this library JAR is imported using the <a href="#importing-custom-widgets-for-android-1">Importing Custom Widgets</a> procedure.</p>
-<h3 id="creating-a-custom-widget-wrapper-java-project">Creating a Custom Widget Wrapper Java Project</h3>
+<h3 id="creating-a-custom-widget-wrapper-java-project">Creating a Custom Widget Wrapper Java Project<a class="headerlink" href="#creating-a-custom-widget-wrapper-java-project" title="Permanent link">&para;</a></h3>
 <p>The java project implementing custom widget require methods/interfaces from Volt MX Iris Android platform to be able to compile the project. These methods are available in the <code>voltmxwidgets.jar</code> file. The project must include this JAR file in its project properties as a dependent library.</p>
 <p>To get <code>voltmxwidgets.jar</code> file, do the following:</p>
 <ol>
@@ -5444,92 +5334,91 @@
 </li>
 </ol>
 <p>Java application has to be compiled and exported as a JAR file. It will be used during custom widget importing in Volt MX Iris.</p>
-<h4 id="sample-wrapperclass-file-for-android">Sample wrapper.class File for Android</h4>
-<pre><code>package com.example.bar;
-
-//The following APIs are part of android.jar file
-
-import android.content.Context;
-import android.util.Log;
-import android.view.View;
-
-//The following APIs are part of voltmxwidgets.jar file
-
-import com.example.bar.RangeSeekBar.OnRangeSeekBarChangeListener;
-import com.konylabs.api.ui.KonyCustomWidget;
-import com.hcl.vm.Function;
-
-//The class name specified must be the same as the name of the custom widget in Volt MX Iris
-public class CustomRange extends KonyCustomWidget {
-
-    Function jsCallback;
-    RangeSeekBar &lt; Integer &gt; rangeBar;
-    private static String TAG = &quot;CustomRange&quot;;
-    //This is a mandatory method
-    public View onCreateView(Context context) {
-        int low = ((Double) getPropertyFromModel(&quot;low&quot;)).intValue();
-        int high = ((Double) getPropertyFromModel(&quot;high&quot;)).intValue();
-        rangeBar = new RangeSeekBar &lt; Integer &gt; (low, high, context);
-        rangeBar.setOnRangeSeekBarChangeListener(new OnRangeSeekBarChangeListener &lt; Integer &gt; () {@
-            Override
-            public void onRangeSeekBarValuesChanged(RangeSeekBar &lt;? &gt; bar, Integer minValue, Integer maxValue) {
-                // handle changed range values
-                try {
-                    jsCallback.execute(new Object[] {
-                        minValue, maxValue
-                    });
-                } catch (Exception e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-                Log.i(&quot;FullscreenActivity&quot;, &quot;User selected new range values: MIN=&quot; + minValue + &quot;, MAX=&quot; + maxValue);
-            }
-        });
-        jsCallback = (Function) getPropertyFromModel(&quot;slideCheck&quot;);
-        return rangeBar;
-    }
-    //Destroys the widget instance when the form goes out of view
-    public void onDestroyView(View widgetInstance) {
-        // TODO Auto-generated method stub
-        //setPropertyToModel(&quot;text&quot;,b.gettext());
-
-        widgetInstance = null;
-    }
-
-    public void printLog() {
-        Log.d(TAG, &quot;**********************CUSTOM WIDGET***************************************&quot;);
-    }
-
-
-    public void onPropertySet(View widgetInstance, Object key, Object value) {
-        Log.d(TAG, &quot;**********************onPropertySet***************************************&quot;);
-        String k = ((String) key).intern();
-        if (k == &quot;low&quot;)
-            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).setSelectedMinValue(((Double) value).intValue());
-        else if (k == &quot;high&quot;)
-            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).setSelectedMaxValue(((Double) value).intValue());
-    }
-
-    public Object onPropertyGet(View widgetInstance, Object key) {
-        String k = ((String) key).intern();
-        Log.d(TAG, &quot;**********************onPropertyGet***************************************&quot;);
-        if (k == &quot;low&quot;)
-            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).getSelectedMinValue();
-        else if (k == &quot;high&quot;)
-            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).getSelectedMaxValue();
-        return null;
-    }
-
-    public void onOrientationChanged(int orientation) {}
-}                   
-
-</code></pre>
+<h4 id="sample-wrapperclass-file-for-android">Sample wrapper.class File for Android<a class="headerlink" href="#sample-wrapperclass-file-for-android" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>package com.example.bar;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>//The following APIs are part of android.jar file
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>import android.content.Context;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>import android.util.Log;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>import android.view.View;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>//The following APIs are part of voltmxwidgets.jar file
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>import com.example.bar.RangeSeekBar.OnRangeSeekBarChangeListener;
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>import com.konylabs.api.ui.KonyCustomWidget;
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>import com.hcl.vm.Function;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>//The class name specified must be the same as the name of the custom widget in Volt MX Iris
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>public class CustomRange extends KonyCustomWidget {
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    Function jsCallback;
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    RangeSeekBar &lt; Integer &gt; rangeBar;
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    private static String TAG = &quot;CustomRange&quot;;
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    //This is a mandatory method
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    public View onCreateView(Context context) {
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        int low = ((Double) getPropertyFromModel(&quot;low&quot;)).intValue();
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        int high = ((Double) getPropertyFromModel(&quot;high&quot;)).intValue();
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        rangeBar = new RangeSeekBar &lt; Integer &gt; (low, high, context);
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        rangeBar.setOnRangeSeekBarChangeListener(new OnRangeSeekBarChangeListener &lt; Integer &gt; () {@
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>            Override
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            public void onRangeSeekBarValuesChanged(RangeSeekBar &lt;? &gt; bar, Integer minValue, Integer maxValue) {
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>                // handle changed range values
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>                try {
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>                    jsCallback.execute(new Object[] {
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>                        minValue, maxValue
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>                    });
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>                } catch (Exception e) {
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>                    // TODO Auto-generated catch block
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>                    e.printStackTrace();
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                }
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>                Log.i(&quot;FullscreenActivity&quot;, &quot;User selected new range values: MIN=&quot; + minValue + &quot;, MAX=&quot; + maxValue);
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>            }
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>        });
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        jsCallback = (Function) getPropertyFromModel(&quot;slideCheck&quot;);
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>        return rangeBar;
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    }
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    //Destroys the widget instance when the form goes out of view
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    public void onDestroyView(View widgetInstance) {
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        // TODO Auto-generated method stub
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        //setPropertyToModel(&quot;text&quot;,b.gettext());
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>        widgetInstance = null;
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    }
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    public void printLog() {
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>        Log.d(TAG, &quot;**********************CUSTOM WIDGET***************************************&quot;);
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    }
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    public void onPropertySet(View widgetInstance, Object key, Object value) {
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>        Log.d(TAG, &quot;**********************onPropertySet***************************************&quot;);
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>        String k = ((String) key).intern();
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>        if (k == &quot;low&quot;)
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).setSelectedMinValue(((Double) value).intValue());
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>        else if (k == &quot;high&quot;)
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).setSelectedMaxValue(((Double) value).intValue());
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    }
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    public Object onPropertyGet(View widgetInstance, Object key) {
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>        String k = ((String) key).intern();
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>        Log.d(TAG, &quot;**********************onPropertyGet***************************************&quot;);
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>        if (k == &quot;low&quot;)
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).getSelectedMinValue();
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>        else if (k == &quot;high&quot;)
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>            ((RangeSeekBar &lt; Number &gt; ) widgetInstance).getSelectedMaxValue();
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>        return null;
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    }
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    public void onOrientationChanged(int orientation) {}
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>}                   
+</span></code></pre></div>
 <p>Limitations</p>
 <ul>
 <li>As JavaScript is dynamic typed language, all it understands is a number which can hold any float number. So, all number type arguments are mapped to Double always. It is the responsibility of the custom widget implementer to convert the double type to the respective types. If not, you would see class cast exception.</li>
 <li>You cannot pass any kind of java object to JavaScript. It should be either Vector (for JS array) or Hashtable (for JS Object).</li>
 </ul>
-<h3 id="importing-custom-widgets-for-android_1">Importing Custom Widgets for Android</h3>
+<h3 id="importing-custom-widgets-for-android_1">Importing Custom Widgets for Android<a class="headerlink" href="#importing-custom-widgets-for-android_1" title="Permanent link">&para;</a></h3>
 <p>To import files for a third-party widget, execute the following:</p>
 <ol>
 <li>On the <strong>Edit</strong> menu of Volt MX Iris, point to <strong>Integrate Third Party</strong>, then <strong>Manage Custom Widgets</strong>, and then click <strong>Android</strong>.</li>
@@ -5638,26 +5527,25 @@ public class CustomRange extends KonyCustomWidget {
 </ul>
 </li>
 </ul>
-<pre><code>public void printLog(String name, Function callbackJS) {
-        try {
-            callbackJS.execute(new Object[] {
-                infotable
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    If the callback / method has time taking tasks then it should use the method &quot;executeAsync” instead of &quot;
-    execute”. And it is always advised not to perform time taking tasks in these callbacks.Also use &quot;executeAsync” as much as possible.try {            callbackJS.executeAsync(new Object[] {infotable});}catch(Exception e) {e.printStackTrace();}}                   
-
-</code></pre>
-<p>Click <strong>Finish</strong> to import the Custom Widget. A confirmation dialog appears. Click <strong>Yes</strong>.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>public void printLog(String name, Function callbackJS) {
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        try {
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>            callbackJS.execute(new Object[] {
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                infotable
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            });
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        } catch (Exception e) {
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            e.printStackTrace();
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        }
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    }
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    If the callback / method has time taking tasks then it should use the method &quot;executeAsync” instead of &quot;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    execute”. And it is always advised not to perform time taking tasks in these callbacks.Also use &quot;executeAsync” as much as possible.try {            callbackJS.executeAsync(new Object[] {infotable});}catch(Exception e) {e.printStackTrace();}}                   
+</span></code></pre></div>
+Click <strong>Finish</strong> to import the Custom Widget. A confirmation dialog appears. Click <strong>Yes</strong>.</p>
 <p>The custom widget is now available at the bottom of the Widget tab, located on the Volt MX IrisLibrary pane, and you can drag it into a container like any other widget, and view its properties on the Properties pane.</p>
 <p>The Preview feature is not available for custom widgets. After you build the application you can view the library files which are built in the <em>....webapps/<appname>/platform/jslib/thirdparty/widgets</em> folder.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> If you edit the properties of a defined custom widget after you drag and drop it on a form, ensure that you delete the added instances of the custom widget on the form and add it on the form again, since the custom widgets added on the form before the edit will not reflect the newly changed properties.</p>
 </blockquote>
-<h3 id="important-considerations">Important Considerations</h3>
+<h3 id="important-considerations">Important Considerations<a class="headerlink" href="#important-considerations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>All resources related to custom widget must reside in this location: <code>&lt;workspace&gt;/&lt;app&gt;/resources/mobile/native/android</code>.</li>
 <li>Under resources folder, sub-directories include: assets, drawable, layout, anim, values, xml, raw, and so on.</li>
@@ -5666,43 +5554,34 @@ public class CustomRange extends KonyCustomWidget {
 <p>These resources can be accessed as follows:</p>
 </li>
 </ul>
-<pre><code>int resId = VoltMXMain.getAppContext().getResources().getIdentifier(resName, type, VoltMXMain.getAppContext().getPackageName());                        
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>int resId = VoltMXMain.getAppContext().getResources().getIdentifier(resName, type, VoltMXMain.getAppContext().getPackageName());                        
+</span></code></pre></div>
+    *   <strong>Scenario 1:</strong> If the resource name is <code>logo.png</code> and it is present in <code>drawable</code> (type) directory, then resource ID can be retrieved as follows:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>int resId = VoltMXMain.getAppContext().getResources().getIdentifier(“logo.png”, “drawable”, VoltMXMain.getAppContext().getPackageName());                       
+</span></code></pre></div>
+    *   <strong>Scenario 2</strong>: If the xml layout resource <code>calendar_view.xml</code> is present in <code>layout</code> directory, then it can be retrieved as follows:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VoltMXMain.getAppContext().getResources().getLayout(VoltMXMain.getAppContext().getResources().getIdentifier(&quot;calendar_view&quot;, &quot;layout&quot;, VoltMXMain.getAppContext().getPackageName()))                        
+</span></code></pre></div>
+*   Any UI update made to custom widget must be posted as a runnable to UI Thread as follows:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>KVoltMXMain.getAppContext().getResources().getLayout(VoltMXMain.getAppContext().getResources().getIdentifier(&quot;calendar_view&quot;, &quot;layout&quot;, VoltMXMain.getAppContext().getPackageName()))((Activity) VoltMXMain.getActivtiyContext()).runOnUIThread(new Runnable() {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>        public void run() {
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>            //Do necessary Custom widget UI updates
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        }
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    });                     
+</span></code></pre></div>
+*   To receive touch events for the widget (If custom widget is placed inside a scrollable container), it needs to override below function and the widget or view must be changed to ViewGroup.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>public boolean onInterceptTouchEvent(MotionEvent ev) {
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>        int action = ev.getAction();
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        switch (action) {
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>            case MotionEvent.ACTION_DOWN:
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>                this.getParent().requestDisallowInterceptTouchEvent(true);
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>                break;
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        }
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        return super.onInterceptTouchEvent(ev);
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    }                       
+</span></code></pre></div>
 
-</code></pre>
-<pre><code>*   **Scenario 1:** If the resource name is `logo.png` and it is present in `drawable` (type) directory, then resource ID can be retrieved as follows:
-</code></pre>
-<pre><code>int resId = VoltMXMain.getAppContext().getResources().getIdentifier(“logo.png”, “drawable”, VoltMXMain.getAppContext().getPackageName());                       
 
-</code></pre>
-<pre><code>*   **Scenario 2**: If the xml layout resource `calendar_view.xml` is present in `layout` directory, then it can be retrieved as follows:
-</code></pre>
-<pre><code>VoltMXMain.getAppContext().getResources().getLayout(VoltMXMain.getAppContext().getResources().getIdentifier(&quot;calendar_view&quot;, &quot;layout&quot;, VoltMXMain.getAppContext().getPackageName()))                        
-
-</code></pre>
-<ul>
-<li>Any UI update made to custom widget must be posted as a runnable to UI Thread as follows:</li>
-</ul>
-<pre><code>KVoltMXMain.getAppContext().getResources().getLayout(VoltMXMain.getAppContext().getResources().getIdentifier(&quot;calendar_view&quot;, &quot;layout&quot;, VoltMXMain.getAppContext().getPackageName()))((Activity) VoltMXMain.getActivtiyContext()).runOnUIThread(new Runnable() {
-        public void run() {
-            //Do necessary Custom widget UI updates
-        }
-    });                     
-
-</code></pre>
-<ul>
-<li>To receive touch events for the widget (If custom widget is placed inside a scrollable container), it needs to override below function and the widget or view must be changed to ViewGroup.</li>
-</ul>
-<pre><code>public boolean onInterceptTouchEvent(MotionEvent ev) {
-        int action = ev.getAction();
-        switch (action) {
-            case MotionEvent.ACTION_DOWN:
-                this.getParent().requestDisallowInterceptTouchEvent(true);
-                break;
-        }
-        return super.onInterceptTouchEvent(ev);
-    }                       
-
-</code></pre>
 
 
 
@@ -5725,7 +5604,7 @@ public class CustomRange extends KonyCustomWidget {
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -5763,10 +5642,14 @@ public class CustomRange extends KonyCustomWidget {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_widget_prog_guide/Content/TextBox_Events.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_widget_prog_guide/Content/TextBox_Events.html">
       
       
         <link rel="prev" href="TextBox.html">
@@ -18,18 +18,53 @@
         <link rel="next" href="TextBox_Methods.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
-        <title>Events - HCL Volt MX Documentation</title>
+        <title>TextBox Events - HCL Volt MX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -139,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Events
+              TextBox Events
             
           </span>
         </div>
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,21 +984,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1349,21 +1074,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1420,21 +1158,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1595,21 +1346,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1644,8 +1408,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1653,12 +1422,20 @@
         
   
   
+  
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1791,10 +1568,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" checked>
@@ -1803,9 +1584,16 @@
           <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1814,7 +1602,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris Widget Programmer Guide
+            
+  
+    Iris Widget Programmer Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1828,9 +1620,16 @@
       <a href="Overview.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1849,9 +1648,16 @@
       <a href="widgetApiReference.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Widgets and API reference
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1870,9 +1676,16 @@
       <a href="GestureAPI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Gesture Methods and 3D Touch
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1891,9 +1704,16 @@
       <a href="Widget_Skins.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Widget Skins
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1912,9 +1732,16 @@
       <a href="Dynamic_Skinning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Dynamic Skinning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1933,9 +1760,16 @@
       <a href="Application_Events.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Application  Initialization Events
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1960,8 +1794,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1969,12 +1808,20 @@
         
   
   
+  
     <a href="Animation.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Widget Animation Using Flex Forms
+  
+
+    
   </span>
+  
   
 
       
@@ -1999,9 +1846,16 @@
       <a href="API_Simplification.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Simplification
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2020,9 +1874,16 @@
       <a href="Masters.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Masters
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2041,9 +1902,16 @@
       <a href="Widget_Common_Properties.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Widget Common Properties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2068,8 +1936,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2077,12 +1950,20 @@
         
   
   
+  
     <a href="PlatformSpecificCapabilities.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Platform Specific Capabilities
+  
+
+    
   </span>
+  
   
 
       
@@ -2107,9 +1988,16 @@
       <a href="Appendix.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Platform Specific Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2138,21 +2026,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Alert.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Alert Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2185,21 +2086,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="App_Menu.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Menu Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2234,21 +2148,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="ARRenderer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ARRenderer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2283,21 +2210,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="BottomSheet.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     BottomSheet Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2332,21 +2272,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Browser.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Browser Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2381,21 +2334,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Button.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Button Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2430,21 +2396,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Calendar.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Calendar Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2479,21 +2458,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Camera.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Camera Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2528,21 +2520,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="canvas.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Canvas Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2577,21 +2582,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="CheckBox.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     CheckBoxGroup Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2626,21 +2644,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="CollectionView.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     CollectionView Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2675,21 +2706,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="CordovaBrowser.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     CordovaBrowser Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2726,21 +2770,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="DataGrid.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     DataGrid Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2779,21 +2836,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="FlexContainer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     FlexContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2834,21 +2904,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="FlexForm.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     FlexForm Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2887,21 +2970,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="FlexScrollContainer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     FlexScrollContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2936,21 +3032,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Image.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Image Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2985,21 +3094,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="label.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Label Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3034,21 +3156,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="ListBox.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ListBox Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3087,21 +3222,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Map.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Map Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3136,21 +3284,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="MLCamera.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     MLCamera Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3185,21 +3346,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="nativeContainer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     NativeContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3234,21 +3408,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PDFView.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     PDFView Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3283,21 +3470,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Phone.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Phone Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3332,21 +3532,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PickerView.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     PickerView Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3381,21 +3594,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="RadioButtonGroup.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     RadioButtonGroup Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3426,21 +3652,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="react_Native_Container.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ReactNativeContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3475,21 +3714,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="RichText.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     RichText Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3526,21 +3778,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Segment.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SegmentedUI Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3575,21 +3840,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Signature.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SignatureCapture Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3622,21 +3900,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="SigninWithApple.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SigninWithApple Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3673,21 +3964,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Slider.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Slider Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3722,21 +4026,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Switch.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Switch Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3771,21 +4088,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="TabPane.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     TabPane Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3820,8 +4150,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3829,12 +4164,20 @@
         
   
   
+  
     <a href="TextArea.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     TextArea2 Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3871,10 +4214,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_48" checked>
@@ -3883,9 +4230,16 @@
           <label class="md-nav__link" for="__nav_8_8_48" id="__nav_8_8_48_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     TextBox2 Widget
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3894,7 +4248,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_48_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_8_48">
             <span class="md-nav__icon md-icon"></span>
-            TextBox2 Widget
+            
+  
+    TextBox2 Widget
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3908,9 +4266,16 @@
       <a href="TextBox.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     TextBox2 Widget Basics
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3938,9 +4303,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Events
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3949,14 +4321,22 @@
       <a href="TextBox_Events.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Events
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3976,7 +4356,9 @@
         <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -3985,7 +4367,9 @@
         <li class="md-nav__item">
   <a href="#readwrite" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -3994,7 +4378,9 @@
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4003,7 +4389,9 @@
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4012,7 +4400,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4021,7 +4411,9 @@
         <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4030,7 +4422,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4039,7 +4433,9 @@
         <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4048,7 +4444,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4057,7 +4455,9 @@
         <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4066,7 +4466,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4075,7 +4477,9 @@
         <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4084,7 +4488,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4093,7 +4499,9 @@
         <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4102,7 +4510,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4111,7 +4521,9 @@
         <li class="md-nav__item">
   <a href="#remarks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4120,7 +4532,9 @@
         <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4129,7 +4543,9 @@
         <li class="md-nav__item">
   <a href="#availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -4138,7 +4554,9 @@
         <li class="md-nav__item">
   <a href="#syntax_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4147,7 +4565,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4156,7 +4576,9 @@
         <li class="md-nav__item">
   <a href="#remarks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4165,7 +4587,9 @@
         <li class="md-nav__item">
   <a href="#example_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4174,7 +4598,9 @@
         <li class="md-nav__item">
   <a href="#availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -4183,7 +4609,9 @@
         <li class="md-nav__item">
   <a href="#syntax_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4192,7 +4620,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4201,7 +4631,9 @@
         <li class="md-nav__item">
   <a href="#remarks_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4210,7 +4642,9 @@
         <li class="md-nav__item">
   <a href="#example_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4219,7 +4653,9 @@
         <li class="md-nav__item">
   <a href="#availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -4228,7 +4664,9 @@
         <li class="md-nav__item">
   <a href="#syntax_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4237,7 +4675,9 @@
         <li class="md-nav__item">
   <a href="#input-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -4246,7 +4686,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4255,7 +4697,9 @@
         <li class="md-nav__item">
   <a href="#remarks_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4264,7 +4708,9 @@
         <li class="md-nav__item">
   <a href="#example_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4273,7 +4719,9 @@
         <li class="md-nav__item">
   <a href="#syntax_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4282,7 +4730,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4291,7 +4741,9 @@
         <li class="md-nav__item">
   <a href="#example_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4300,7 +4752,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4309,7 +4763,9 @@
         <li class="md-nav__item">
   <a href="#syntax_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4318,7 +4774,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4327,7 +4785,9 @@
         <li class="md-nav__item">
   <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitation
+      
+        Limitation
+      
     </span>
   </a>
   
@@ -4336,7 +4796,9 @@
         <li class="md-nav__item">
   <a href="#example_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4345,7 +4807,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4354,7 +4818,9 @@
         <li class="md-nav__item">
   <a href="#syntax_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4363,7 +4829,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4372,7 +4840,9 @@
         <li class="md-nav__item">
   <a href="#example_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4381,7 +4851,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4390,7 +4862,9 @@
         <li class="md-nav__item">
   <a href="#syntax_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4399,7 +4873,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4408,7 +4884,9 @@
         <li class="md-nav__item">
   <a href="#limitation_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitation
+      
+        Limitation
+      
     </span>
   </a>
   
@@ -4417,7 +4895,9 @@
         <li class="md-nav__item">
   <a href="#example_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4426,7 +4906,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4435,7 +4917,9 @@
         <li class="md-nav__item">
   <a href="#syntax_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4444,7 +4928,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4453,7 +4939,9 @@
         <li class="md-nav__item">
   <a href="#example_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4462,7 +4950,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4471,7 +4961,9 @@
         <li class="md-nav__item">
   <a href="#syntax_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4480,7 +4972,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4489,7 +4983,9 @@
         <li class="md-nav__item">
   <a href="#example_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4498,7 +4994,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4507,7 +5005,9 @@
         <li class="md-nav__item">
   <a href="#syntax_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4516,7 +5016,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4525,7 +5027,9 @@
         <li class="md-nav__item">
   <a href="#remarks_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4534,7 +5038,9 @@
         <li class="md-nav__item">
   <a href="#example_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4543,7 +5049,9 @@
         <li class="md-nav__item">
   <a href="#availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -4552,7 +5060,9 @@
         <li class="md-nav__item">
   <a href="#syntax_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4561,7 +5071,9 @@
         <li class="md-nav__item">
   <a href="#optional-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Parameters
+      
+        Optional Parameters
+      
     </span>
   </a>
   
@@ -4570,7 +5082,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4579,7 +5093,9 @@
         <li class="md-nav__item">
   <a href="#remarks_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4588,7 +5104,9 @@
         <li class="md-nav__item">
   <a href="#example_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4597,7 +5115,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4606,7 +5126,9 @@
         <li class="md-nav__item">
   <a href="#syntax_15" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4615,7 +5137,9 @@
         <li class="md-nav__item">
   <a href="#optional-parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Parameters
+      
+        Optional Parameters
+      
     </span>
   </a>
   
@@ -4624,7 +5148,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_15" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4633,7 +5159,9 @@
         <li class="md-nav__item">
   <a href="#remarks_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4642,7 +5170,9 @@
         <li class="md-nav__item">
   <a href="#example_15" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4651,7 +5181,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4660,7 +5192,9 @@
         <li class="md-nav__item">
   <a href="#syntax_16" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4669,7 +5203,9 @@
         <li class="md-nav__item">
   <a href="#optional-parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Parameters
+      
+        Optional Parameters
+      
     </span>
   </a>
   
@@ -4678,7 +5214,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_16" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4687,7 +5225,9 @@
         <li class="md-nav__item">
   <a href="#remarks_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4696,7 +5236,9 @@
         <li class="md-nav__item">
   <a href="#example_16" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4705,7 +5247,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4714,7 +5258,9 @@
         <li class="md-nav__item">
   <a href="#syntax_17" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4723,7 +5269,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_17" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4732,7 +5280,9 @@
         <li class="md-nav__item">
   <a href="#example_17" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4741,7 +5291,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4750,7 +5302,9 @@
         <li class="md-nav__item">
   <a href="#syntax_18" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4759,7 +5313,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_18" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4768,7 +5324,9 @@
         <li class="md-nav__item">
   <a href="#remarks_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4777,7 +5335,9 @@
         <li class="md-nav__item">
   <a href="#example_18" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4786,7 +5346,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4795,7 +5357,9 @@
         <li class="md-nav__item">
   <a href="#syntax_19" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4804,7 +5368,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_19" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -4813,7 +5379,9 @@
         <li class="md-nav__item">
   <a href="#remarks_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -4822,7 +5390,9 @@
         <li class="md-nav__item">
   <a href="#example_19" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4831,7 +5401,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4856,9 +5428,16 @@
       <a href="TextBox_Methods.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Methods
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4877,9 +5456,16 @@
       <a href="TextBox_Properties.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Properties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4918,8 +5504,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4927,12 +5518,20 @@
         
   
   
+  
     <a href="Toolbar.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Toolbar Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4967,8 +5566,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4976,12 +5580,20 @@
         
   
   
+  
     <a href="Video.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Video Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -5006,9 +5618,16 @@
       <a href="Deprecated.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Deprecated Widgets
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5027,9 +5646,16 @@
       <a href="Glossary.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Glossary
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5062,21 +5688,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5111,21 +5750,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5160,21 +5812,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -5207,21 +5872,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -5254,21 +5932,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5324,106 +6015,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -5432,579 +6051,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -6022,6 +6068,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -6041,7 +6088,9 @@
         <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6050,7 +6099,9 @@
         <li class="md-nav__item">
   <a href="#readwrite" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6059,7 +6110,9 @@
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6068,7 +6121,9 @@
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6077,7 +6132,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6086,7 +6143,9 @@
         <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6095,7 +6154,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6104,7 +6165,9 @@
         <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6113,7 +6176,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6122,7 +6187,9 @@
         <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6131,7 +6198,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6140,7 +6209,9 @@
         <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6149,7 +6220,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6158,7 +6231,9 @@
         <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6167,7 +6242,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6176,7 +6253,9 @@
         <li class="md-nav__item">
   <a href="#remarks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6185,7 +6264,9 @@
         <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6194,7 +6275,9 @@
         <li class="md-nav__item">
   <a href="#availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -6203,7 +6286,9 @@
         <li class="md-nav__item">
   <a href="#syntax_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6212,7 +6297,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6221,7 +6308,9 @@
         <li class="md-nav__item">
   <a href="#remarks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6230,7 +6319,9 @@
         <li class="md-nav__item">
   <a href="#example_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6239,7 +6330,9 @@
         <li class="md-nav__item">
   <a href="#availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -6248,7 +6341,9 @@
         <li class="md-nav__item">
   <a href="#syntax_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6257,7 +6352,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6266,7 +6363,9 @@
         <li class="md-nav__item">
   <a href="#remarks_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6275,7 +6374,9 @@
         <li class="md-nav__item">
   <a href="#example_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6284,7 +6385,9 @@
         <li class="md-nav__item">
   <a href="#availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -6293,7 +6396,9 @@
         <li class="md-nav__item">
   <a href="#syntax_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6302,7 +6407,9 @@
         <li class="md-nav__item">
   <a href="#input-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -6311,7 +6418,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6320,7 +6429,9 @@
         <li class="md-nav__item">
   <a href="#remarks_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6329,7 +6440,9 @@
         <li class="md-nav__item">
   <a href="#example_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6338,7 +6451,9 @@
         <li class="md-nav__item">
   <a href="#syntax_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6347,7 +6462,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6356,7 +6473,9 @@
         <li class="md-nav__item">
   <a href="#example_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6365,7 +6484,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6374,7 +6495,9 @@
         <li class="md-nav__item">
   <a href="#syntax_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6383,7 +6506,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6392,7 +6517,9 @@
         <li class="md-nav__item">
   <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitation
+      
+        Limitation
+      
     </span>
   </a>
   
@@ -6401,7 +6528,9 @@
         <li class="md-nav__item">
   <a href="#example_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6410,7 +6539,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6419,7 +6550,9 @@
         <li class="md-nav__item">
   <a href="#syntax_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6428,7 +6561,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6437,7 +6572,9 @@
         <li class="md-nav__item">
   <a href="#example_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6446,7 +6583,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6455,7 +6594,9 @@
         <li class="md-nav__item">
   <a href="#syntax_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6464,7 +6605,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6473,7 +6616,9 @@
         <li class="md-nav__item">
   <a href="#limitation_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitation
+      
+        Limitation
+      
     </span>
   </a>
   
@@ -6482,7 +6627,9 @@
         <li class="md-nav__item">
   <a href="#example_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6491,7 +6638,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6500,7 +6649,9 @@
         <li class="md-nav__item">
   <a href="#syntax_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6509,7 +6660,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6518,7 +6671,9 @@
         <li class="md-nav__item">
   <a href="#example_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6527,7 +6682,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6536,7 +6693,9 @@
         <li class="md-nav__item">
   <a href="#syntax_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6545,7 +6704,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6554,7 +6715,9 @@
         <li class="md-nav__item">
   <a href="#example_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6563,7 +6726,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6572,7 +6737,9 @@
         <li class="md-nav__item">
   <a href="#syntax_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6581,7 +6748,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6590,7 +6759,9 @@
         <li class="md-nav__item">
   <a href="#remarks_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6599,7 +6770,9 @@
         <li class="md-nav__item">
   <a href="#example_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6608,7 +6781,9 @@
         <li class="md-nav__item">
   <a href="#availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Availability
+      
+        Availability
+      
     </span>
   </a>
   
@@ -6617,7 +6792,9 @@
         <li class="md-nav__item">
   <a href="#syntax_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6626,7 +6803,9 @@
         <li class="md-nav__item">
   <a href="#optional-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Parameters
+      
+        Optional Parameters
+      
     </span>
   </a>
   
@@ -6635,7 +6814,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6644,7 +6825,9 @@
         <li class="md-nav__item">
   <a href="#remarks_6" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6653,7 +6836,9 @@
         <li class="md-nav__item">
   <a href="#example_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6662,7 +6847,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6671,7 +6858,9 @@
         <li class="md-nav__item">
   <a href="#syntax_15" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6680,7 +6869,9 @@
         <li class="md-nav__item">
   <a href="#optional-parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Parameters
+      
+        Optional Parameters
+      
     </span>
   </a>
   
@@ -6689,7 +6880,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_15" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6698,7 +6891,9 @@
         <li class="md-nav__item">
   <a href="#remarks_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6707,7 +6902,9 @@
         <li class="md-nav__item">
   <a href="#example_15" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6716,7 +6913,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6725,7 +6924,9 @@
         <li class="md-nav__item">
   <a href="#syntax_16" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6734,7 +6935,9 @@
         <li class="md-nav__item">
   <a href="#optional-parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Parameters
+      
+        Optional Parameters
+      
     </span>
   </a>
   
@@ -6743,7 +6946,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_16" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6752,7 +6957,9 @@
         <li class="md-nav__item">
   <a href="#remarks_8" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6761,7 +6968,9 @@
         <li class="md-nav__item">
   <a href="#example_16" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6770,7 +6979,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_11" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6779,7 +6990,9 @@
         <li class="md-nav__item">
   <a href="#syntax_17" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6788,7 +7001,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_17" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6797,7 +7012,9 @@
         <li class="md-nav__item">
   <a href="#example_17" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6806,7 +7023,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_12" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6815,7 +7034,9 @@
         <li class="md-nav__item">
   <a href="#syntax_18" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6824,7 +7045,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_18" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6833,7 +7056,9 @@
         <li class="md-nav__item">
   <a href="#remarks_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6842,7 +7067,9 @@
         <li class="md-nav__item">
   <a href="#example_18" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6851,7 +7078,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_13" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6860,7 +7089,9 @@
         <li class="md-nav__item">
   <a href="#syntax_19" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6869,7 +7100,9 @@
         <li class="md-nav__item">
   <a href="#readwrite_19" class="md-nav__link">
     <span class="md-ellipsis">
-      Read/Write
+      
+        Read/Write
+      
     </span>
   </a>
   
@@ -6878,7 +7111,9 @@
         <li class="md-nav__item">
   <a href="#remarks_10" class="md-nav__link">
     <span class="md-ellipsis">
-      Remarks
+      
+        Remarks
+      
     </span>
   </a>
   
@@ -6887,7 +7122,9 @@
         <li class="md-nav__item">
   <a href="#example_19" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6896,7 +7133,9 @@
         <li class="md-nav__item">
   <a href="#platform-availability_14" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6912,41 +7151,47 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_widget_prog_guide/Content/TextBox_Events.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
-<h1 id="textbox-events">TextBox Events</h1>
+<h1 id="textbox-events">TextBox Events<a class="headerlink" href="#textbox-events" title="Permanent link">&para;</a></h1>
 <p>The TextBox widget has the following events associated with it:</p>
 <hr />
 <details close="close">
 <p><summary>doLayout Event</summary></p>
 <hr />
 <p>This event is invoked for every widget when the widget position and dimensions are computed.</p>
-<h3 id="syntax">Syntax</h3>
-<pre><code>
-doLayout()
-</code></pre>
-<h3 id="readwrite">Read/Write</h3>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>doLayout()
+</span></code></pre></div>
+<h3 id="readwrite">Read/Write<a class="headerlink" href="#readwrite" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks">Remarks</h3>
+<h3 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h3>
 <p>This event is invoked for all the widgets placed inside flex containers. This event is invoked in the order in which the widgets are added to the widget hierarchy and expect the frame property of the widget is calculated and available for use within this event.</p>
 <p>This event is used to set the layout properties of child widgets in the relation to self and peer widgets whose layout is not yet performed.</p>
 <p>The number of times this event invoked may vary per platform. It is not recommended to write business logic assuming that this function is invoked only once when there is a change in positional or dimensional properties. This event will not trigger when transformations are applied though widget is moved or scaled or rotated from its original location.</p>
-<h3 id="example">Example</h3>
-<pre><code>
-//Sample code to set doLayout event callback to a button widget.
-/*This code changes the top property of button2 and makes it appear below button1.*/
-myForm.button1.doLayout=doLayoutButton1;
-
-
-function doLayoutButton1(){
-
-    myForm.button2.top = myForm.button1.frame.height;
-}
-</code></pre>
-<h3 id="platform-availability">Platform Availability</h3>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>//Sample code to set doLayout event callback to a button widget.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>/*This code changes the top property of button2 and makes it appear below button1.*/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>myForm.button1.doLayout=doLayoutButton1;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>function doLayoutButton1(){
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    myForm.button2.top = myForm.button1.frame.height;
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability">Platform Availability<a class="headerlink" href="#platform-availability" title="Permanent link">&para;</a></h3>
 <ul>
 <li>iOS, Android, and SPA</li>
 </ul>
@@ -6958,25 +7203,23 @@ function doLayoutButton1(){
 <hr />
 <p>This is event callback is invoked by the Android platform when the soft- keyboard is open and the back button of the device is clicked.</p>
 <p>This event is not be triggered when you use gestures in the mobile device for back navigation.</p>
-<h3 id="syntax_1">Syntax</h3>
-<pre><code>
-onBackKeyPress()
-</code></pre>
-<h3 id="readwrite_1">Read/Write</h3>
+<h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>onBackKeyPress()
+</span></code></pre></div>
+<h3 id="readwrite_1">Read/Write<a class="headerlink" href="#readwrite_1" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_1">Example</h3>
-<pre><code>
-/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
-
-/*This example demonstrates how to assign callback to onBackKeyPress event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onBackKeyPress event in TextArea widget in a similar manner.*/
-frmTextBox.myTxtBox.onBackKeyPress= onBackKeyPressCallback;
-
-function onBackKeyPressCallback(wdgRef) {
- // handle the event here
- // wdgRef returns the handle of the widget.
-}
-</code></pre>
-<h3 id="platform-availability_1">Platform Availability</h3>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>/*This example demonstrates how to assign callback to onBackKeyPress event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onBackKeyPress event in TextArea widget in a similar manner.*/
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>frmTextBox.myTxtBox.onBackKeyPress= onBackKeyPressCallback;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>function onBackKeyPressCallback(wdgRef) {
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a> // handle the event here
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a> // wdgRef returns the handle of the widget.
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_1">Platform Availability<a class="headerlink" href="#platform-availability_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 </ul>
@@ -6986,24 +7229,21 @@ function onBackKeyPressCallback(wdgRef) {
 <p><summary>onBeginEditing Event</summary></p>
 <hr />
 <p>This is an event callback that is invoked by the platform when the user clicks within the TextBox and is about to start editing.</p>
-<h3 id="syntax_2">Syntax</h3>
-<pre><code>
-onBeginEditing()
-</code></pre>
-<h3 id="readwrite_2">Read/Write</h3>
+<h3 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>onBeginEditing()
+</span></code></pre></div>
+<h3 id="readwrite_2">Read/Write<a class="headerlink" href="#readwrite_2" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_2">Example</h3>
-<pre><code>
-//Sample code to set the onBeginEditing event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onBeginEditing =onBeginEditingCallback;
-
-function onBeginEditingCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="platform-availability_2">Platform Availability</h3>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>//Sample code to set the onBeginEditing event callback to a TextBox widget.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>frmTxtBox.myTxtBox.onBeginEditing =onBeginEditingCallback;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>function onBeginEditingCallback(txtBox){
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>      //Write your logic here.
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_2">Platform Availability<a class="headerlink" href="#platform-availability_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>iOS, Android, and Desktop Web  </li>
@@ -7014,26 +7254,23 @@ function onBeginEditingCallback(txtBox){
 <p><summary>onCancel Event</summary></p>
 <hr />
 <p>This event is a callback that is invoked by the platform then the user performs a click action on the <em>Cancel</em> button.</p>
-<h3 id="syntax_3">Syntax</h3>
-<pre><code>
-onCancel()
-</code></pre>
-<h3 id="readwrite_3">Read/Write</h3>
+<h3 id="syntax_3">Syntax<a class="headerlink" href="#syntax_3" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>onCancel()
+</span></code></pre></div>
+<h3 id="readwrite_3">Read/Write<a class="headerlink" href="#readwrite_3" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_1">Remarks</h3>
+<h3 id="remarks_1">Remarks<a class="headerlink" href="#remarks_1" title="Permanent link">&para;</a></h3>
 <p>This event is triggered only when the viewType is set as TEXTBOX_VIEW_TYPE_SEARCH_VIEW.</p>
-<h3 id="example_3">Example</h3>
-<pre><code>
-//Sample code to set the onCancel event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onCancel=onCancelCallback;
-
-function onCancelCallback(eventobject){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="availability">Availability</h3>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>//Sample code to set the onCancel event callback to a TextBox widget.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>frmTxtBox.myTxtBox.onCancel=onCancelCallback;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>function onCancelCallback(eventobject){
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      //Write your logic here.
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>}
+</span></code></pre></div>
+<h3 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">&para;</a></h3>
 <ul>
 <li>iOS</li>
 </ul>
@@ -7043,26 +7280,23 @@ function onCancelCallback(eventobject){
 <p><summary>onDone Event</summary></p>
 <hr />
 <p>This event is a callback that is invoked by the platform then the user performs a click action on the <em>Go</em> or <em>Enter</em> button.</p>
-<h3 id="syntax_4">Syntax</h3>
-<pre><code>
-onDone()
-</code></pre>
-<h3 id="readwrite_4">Read/Write</h3>
+<h3 id="syntax_4">Syntax<a class="headerlink" href="#syntax_4" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>onDone()
+</span></code></pre></div>
+<h3 id="readwrite_4">Read/Write<a class="headerlink" href="#readwrite_4" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_2">Remarks</h3>
+<h3 id="remarks_2">Remarks<a class="headerlink" href="#remarks_2" title="Permanent link">&para;</a></h3>
 <p>In Desktop Web platform, this event is fired when the enter key is pressed when the textbox has focus.</p>
-<h3 id="example_4">Example</h3>
-<pre><code>
-//Sample code to set the onDone event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onDone=onDoneCallback;
-
-function onDoneCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="availability_1">Availability</h3>
+<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>//Sample code to set the onDone event callback to a TextBox widget.
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>frmTxtBox.myTxtBox.onDone=onDoneCallback;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>function onDoneCallback(txtBox){
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>      //Write your logic here.
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>}
+</span></code></pre></div>
+<h3 id="availability_1">Availability<a class="headerlink" href="#availability_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>Available on all platforms.</li>
@@ -7073,13 +7307,12 @@ function onDoneCallback(txtBox){
 <p><summary>onEndEditing Event</summary></p>
 <hr />
 <p>This is an event callback that is invoked by the platform.</p>
-<h3 id="syntax_5">Syntax</h3>
-<pre><code>
-onEndEditing()
-</code></pre>
-<h3 id="readwrite_5">Read/Write</h3>
+<h3 id="syntax_5">Syntax<a class="headerlink" href="#syntax_5" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>onEndEditing()
+</span></code></pre></div>
+<h3 id="readwrite_5">Read/Write<a class="headerlink" href="#readwrite_5" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_3">Remarks</h3>
+<h3 id="remarks_3">Remarks<a class="headerlink" href="#remarks_3" title="Permanent link">&para;</a></h3>
 <p>When the user performs one of the below actions:</p>
 <ul>
 <li>Click on any other focusable widget(for example, another TextBox)</li>
@@ -7095,19 +7328,17 @@ onEndEditing()
 <blockquote>
 <p><img alt="" src="Resources/Images/onendediting_358x360.png" /></p>
 </blockquote>
-<h3 id="example_5">Example</h3>
+<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
 <p>Please note that the use of alerts is not recommended inside the event handler. Print statements are recommended.</p>
-<pre><code>
-//Sample code to set the onEndEditing event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onEndEditing=onEndEditingCallback;
-
-function onEndEditingCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="availability_2">Availability</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>//Sample code to set the onEndEditing event callback to a TextBox widget.
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>frmTxtBox.myTxtBox.onEndEditing=onEndEditingCallback;
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>function onEndEditingCallback(txtBox){
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>      //Write your logic here.
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>}
+</span></code></pre></div>
+<h3 id="availability_2">Availability<a class="headerlink" href="#availability_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>iOS and Android</li>
 </ul>
@@ -7117,29 +7348,29 @@ function onEndEditingCallback(txtBox){
 <p><summary>onFocus Event</summary></p>
 <hr />
 <p>An event that accepts a callback function as an input and executes the functionality defined in the callback function when the widget is in focus.</p>
-<h3 id="syntax_6">Syntax</h3>
-<pre><code>onFocus()
-</code></pre>
-<h3 id="input-parameters">Input Parameters</h3>
+<h3 id="syntax_6">Syntax<a class="headerlink" href="#syntax_6" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>onFocus()
+</span></code></pre></div>
+<h3 id="input-parameters">Input Parameters<a class="headerlink" href="#input-parameters" title="Permanent link">&para;</a></h3>
 <p>Callback function</p>
 <p>A function that contains the logic to be implemented when the widget is in focus.</p>
 <p>The callback function of the onFocus Event contains a new parameter, <strong>activeElement</strong>. The activeElement parameter specifies the widget that is currently in focus.</p>
-<h3 id="readwrite_6">Read/Write</h3>
+<h3 id="readwrite_6">Read/Write<a class="headerlink" href="#readwrite_6" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_4">Remarks</h3>
+<h3 id="remarks_4">Remarks<a class="headerlink" href="#remarks_4" title="Permanent link">&para;</a></h3>
 <p>Assign a null value to the onFocus event of a widget to remove focus from the widget.</p>
-<h3 id="example_6">Example</h3>
-<pre><code> //This is a generic event that is applicable for various widgets.
-/* Here, we have shown how to use the onFocus event for a Button widget. 
-   You need to make a corresponding use of the onFocus event for other 
-   applicable widgets.*/
-
-frmButton.myButton.onFocus = onFocusCallBack;
-
-function onFocusCallBack(widget, activeElement) {
-    console.log('onFocus event triggered');
-}
-</code></pre>
+<h3 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a> //This is a generic event that is applicable for various widgets.
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>/* Here, we have shown how to use the onFocus event for a Button widget. 
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>   You need to make a corresponding use of the onFocus event for other 
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>   applicable widgets.*/
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>frmButton.myButton.onFocus = onFocusCallBack;
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>function onFocusCallBack(widget, activeElement) {
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    console.log(&#39;onFocus event triggered&#39;);
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>}
+</span></code></pre></div>
 <p>Platform Availability</p>
 <ul>
 <li>Available in the IDE</li>
@@ -7152,25 +7383,23 @@ function onFocusCallBack(widget, activeElement) {
 <hr />
 <hr />
 <p>This is event callback is invoked by the Android platform when the soft keyboard has been closed.</p>
-<h3 id="syntax_7">Syntax</h3>
-<pre><code>
-onKeyboardDidHide()
-</code></pre>
-<h3 id="readwrite_7">Read/Write</h3>
+<h3 id="syntax_7">Syntax<a class="headerlink" href="#syntax_7" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>onKeyboardDidHide()
+</span></code></pre></div>
+<h3 id="readwrite_7">Read/Write<a class="headerlink" href="#readwrite_7" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_7">Example</h3>
-<pre><code>
-/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
-
-/*This example demonstrates how to assign callback to onKeyBoardDidHide event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardDidHide event in TextArea widget in a similar manner.*/
-frmTextBox.myTxtBox.onKeyboardDidHide = keyboardCallbacksDidHide;
-
-function keyboardCallbacksDidHide(wdgRef) {
- // handle the event here
- // wdgRef returns the handle of the widget.
-}
-</code></pre>
-<h3 id="platform-availability_3">Platform Availability</h3>
+<h3 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>/*This example demonstrates how to assign callback to onKeyBoardDidHide event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardDidHide event in TextArea widget in a similar manner.*/
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>frmTextBox.myTxtBox.onKeyboardDidHide = keyboardCallbacksDidHide;
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>function keyboardCallbacksDidHide(wdgRef) {
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a> // handle the event here
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a> // wdgRef returns the handle of the widget.
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_3">Platform Availability<a class="headerlink" href="#platform-availability_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 </ul>
@@ -7181,29 +7410,27 @@ function keyboardCallbacksDidHide(wdgRef) {
 <hr />
 <hr />
 <p>This is event callback is invoked by the Android platform when the soft keyboard has been just brought into view.</p>
-<h3 id="syntax_8">Syntax</h3>
-<pre><code>
-onKeyboardDidShow()
-</code></pre>
-<h3 id="readwrite_8">Read/Write</h3>
+<h3 id="syntax_8">Syntax<a class="headerlink" href="#syntax_8" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>onKeyboardDidShow()
+</span></code></pre></div>
+<h3 id="readwrite_8">Read/Write<a class="headerlink" href="#readwrite_8" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="limitation">Limitation</h3>
+<h3 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>In Android platform, when you close the soft keyboard using back button, and then re-select the text by long-press in TextArea and TextBox widget, the <code>onKeyBoardDidShow</code> event is not triggered.</li>
 </ul>
-<h3 id="example_8">Example</h3>
-<pre><code>
-/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
-
-/*This example demonstrates how to assign callback to onKeyBoardDidShow event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardDidShow event in TextArea widget in a similar manner.*/
-frmTextBox.myTxtBox.onKeyboardDidShow = keyboardCallbacksDidShow;
-
-function keyboardCallbacksDidShow(wdgRef) {
- // handle the event here
- // wdgRef returns the handle of the widget.
-}
-</code></pre>
-<h3 id="platform-availability_4">Platform Availability</h3>
+<h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>/*This example demonstrates how to assign callback to onKeyBoardDidShow event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardDidShow event in TextArea widget in a similar manner.*/
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>frmTextBox.myTxtBox.onKeyboardDidShow = keyboardCallbacksDidShow;
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>function keyboardCallbacksDidShow(wdgRef) {
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a> // handle the event here
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a> // wdgRef returns the handle of the widget.
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_4">Platform Availability<a class="headerlink" href="#platform-availability_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 </ul>
@@ -7214,25 +7441,23 @@ function keyboardCallbacksDidShow(wdgRef) {
 <hr />
 <hr />
 <p>This is event callback is invoked by the Android platform when the soft keyboard is about to be hidden.</p>
-<h3 id="syntax_9">Syntax</h3>
-<pre><code>
-onKeyboardWillHide()
-</code></pre>
-<h3 id="readwrite_9">Read/Write</h3>
+<h3 id="syntax_9">Syntax<a class="headerlink" href="#syntax_9" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>onKeyboardWillHide()
+</span></code></pre></div>
+<h3 id="readwrite_9">Read/Write<a class="headerlink" href="#readwrite_9" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_9">Example</h3>
-<pre><code>
-/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
-
-/*This example demonstrates how to assign callback to onKeyBoardWillHide event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardWillHide event in TextArea widget in a similar manner.*/
-frmTextBox.myTxtBox.onKeyboardWillHide = keyboardCallbacksWillHide;
-
-function keyboardCallbacksWillHide(wdgRef) {
- // handle the event here
- // wdgRef returns the handle of the widget.
-}
-</code></pre>
-<h3 id="platform-availability_5">Platform Availability</h3>
+<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>/*This example demonstrates how to assign callback to onKeyBoardWillHide event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardWillHide event in TextArea widget in a similar manner.*/
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>frmTextBox.myTxtBox.onKeyboardWillHide = keyboardCallbacksWillHide;
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>function keyboardCallbacksWillHide(wdgRef) {
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a> // handle the event here
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a> // wdgRef returns the handle of the widget.
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_5">Platform Availability<a class="headerlink" href="#platform-availability_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 </ul>
@@ -7243,29 +7468,27 @@ function keyboardCallbacksWillHide(wdgRef) {
 <hr />
 <hr />
 <p>This is event callback is invoked by the Android platform when the soft keyboard is about to be displayed.</p>
-<h3 id="syntax_10">Syntax</h3>
-<pre><code>
-onKeyboardWillShow()
-</code></pre>
-<h3 id="readwrite_10">Read/Write</h3>
+<h3 id="syntax_10">Syntax<a class="headerlink" href="#syntax_10" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>onKeyboardWillShow()
+</span></code></pre></div>
+<h3 id="readwrite_10">Read/Write<a class="headerlink" href="#readwrite_10" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="limitation_1">Limitation</h3>
+<h3 id="limitation_1">Limitation<a class="headerlink" href="#limitation_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>In Android platform, when you close the soft keyboard using back button, and then re-select the text by long-press in TextArea and TextBox widget, the <code>onKeyBoardWillShow</code> event is not triggered.</li>
 </ul>
-<h3 id="example_10">Example</h3>
-<pre><code>
-/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
-
-/*This example demonstrates how to assign callback to onKeyBoardWillShow event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardWillShow event in TextArea widget in a similar manner.*/
-frmTextBox.myTxtBox.onKeyboardWillShow = keyboardCallbacksWillShow;
-
-function keyboardCallbacksWillShow(wdgRef) {
- // handle the event here
- // wdgRef returns the handle of the widget.
-}
-</code></pre>
-<h3 id="platform-availability_6">Platform Availability</h3>
+<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>/*This event is triggered in both TextBox and TextArea widgets for Android platform.*/
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>/*This example demonstrates how to assign callback to onKeyBoardWillShow event myTxtBox TextBox widget in frmTextBox FlexForm. Use the onKeyBoardWillShow event in TextArea widget in a similar manner.*/
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>frmTextBox.myTxtBox.onKeyboardWillShow = keyboardCallbacksWillShow;
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>function keyboardCallbacksWillShow(wdgRef) {
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a> // handle the event here
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a> // wdgRef returns the handle of the widget.
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_6">Platform Availability<a class="headerlink" href="#platform-availability_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 </ul>
@@ -7275,24 +7498,21 @@ function keyboardCallbacksWillShow(wdgRef) {
 <p><summary>onKeyDown Event</summary></p>
 <hr />
 <p>This is an event callback that is invoked by the platform when the user presses a key (on the keyboard).</p>
-<h3 id="syntax_11">Syntax</h3>
-<pre><code>
-onKeyDown()
-</code></pre>
-<h3 id="readwrite_11">Read/Write</h3>
+<h3 id="syntax_11">Syntax<a class="headerlink" href="#syntax_11" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>onKeyDown()
+</span></code></pre></div>
+<h3 id="readwrite_11">Read/Write<a class="headerlink" href="#readwrite_11" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_11">Example</h3>
-<pre><code>
-//Sample code to set the onKeyDown event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onKeyDown=onKeyDownCallback;
-
-function onKeyDownCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="platform-availability_7">Platform Availability</h3>
+<h3 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>//Sample code to set the onKeyDown event callback to a TextBox widget.
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>frmTxtBox.myTxtBox.onKeyDown=onKeyDownCallback;
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>function onKeyDownCallback(txtBox){
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>      //Write your logic here.
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_7">Platform Availability<a class="headerlink" href="#platform-availability_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>Desktop Web</li>
@@ -7303,24 +7523,21 @@ function onKeyDownCallback(txtBox){
 <p><summary>onKeyUp Event</summary></p>
 <hr />
 <p>This is an event callback that is invoked by the platform when the user releases a key (on the keyboard).</p>
-<h3 id="syntax_12">Syntax</h3>
-<pre><code>
-onKeyUp()
-</code></pre>
-<h3 id="readwrite_12">Read/Write</h3>
+<h3 id="syntax_12">Syntax<a class="headerlink" href="#syntax_12" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>onKeyUp()
+</span></code></pre></div>
+<h3 id="readwrite_12">Read/Write<a class="headerlink" href="#readwrite_12" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_12">Example</h3>
-<pre><code>
-//Sample code to set the onKeyUp event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onKeyUp=onKeyUpCallback;
-
-function onKeyUpCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="platform-availability_8">Platform Availability</h3>
+<h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>//Sample code to set the onKeyUp event callback to a TextBox widget.
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>frmTxtBox.myTxtBox.onKeyUp=onKeyUpCallback;
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>function onKeyUpCallback(txtBox){
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>      //Write your logic here.
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_8">Platform Availability<a class="headerlink" href="#platform-availability_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>Desktop Web</li>
@@ -7331,27 +7548,24 @@ function onKeyUpCallback(txtBox){
 <p><summary>onTextChange Event</summary></p>
 <hr />
 <p>This is an event callback triggered when text in the text box changes.</p>
-<h3 id="syntax_13">Syntax</h3>
-<pre><code>
-onTextChange()
-</code></pre>
-<h3 id="readwrite_13">Read/Write</h3>
+<h3 id="syntax_13">Syntax<a class="headerlink" href="#syntax_13" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>onTextChange()
+</span></code></pre></div>
+<h3 id="readwrite_13">Read/Write<a class="headerlink" href="#readwrite_13" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_5">Remarks</h3>
+<h3 id="remarks_5">Remarks<a class="headerlink" href="#remarks_5" title="Permanent link">&para;</a></h3>
 <p>This event is not fired when the text is changed programmatically.</p>
 <p>In SPA platform, this event is fired also when the focus is out after changing the text in the textbox.</p>
-<h3 id="example_13">Example</h3>
-<pre><code>
-//Sample code to set the onTextChange event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.onTextChange=onTextChangeCallback;
-
-function onTextChangeCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="availability_3">Availability</h3>
+<h3 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>//Sample code to set the onTextChange event callback to a TextBox widget.
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>frmTxtBox.myTxtBox.onTextChange=onTextChangeCallback;
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>function onTextChangeCallback(txtBox){
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>      //Write your logic here.
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>}
+</span></code></pre></div>
+<h3 id="availability_3">Availability<a class="headerlink" href="#availability_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>Available on all platforms</li>
@@ -7362,11 +7576,10 @@ function onTextChangeCallback(txtBox){
 <p><summary>onTouchEnd Event</summary></p>
 <hr />
 <p>An event callback is invoked by the platform when the user touch is released from the touch surface.</p>
-<h3 id="syntax_14">Syntax</h3>
-<pre><code>
-onTouchEnd ()
-</code></pre>
-<h3 id="optional-parameters">Optional Parameters</h3>
+<h3 id="syntax_14">Syntax<a class="headerlink" href="#syntax_14" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>onTouchEnd ()
+</span></code></pre></div>
+<h3 id="optional-parameters">Optional Parameters<a class="headerlink" href="#optional-parameters" title="Permanent link">&para;</a></h3>
 <p>source</p>
 <p>Handle to the widget reference on which the user touch has ended.</p>
 <p>x</p>
@@ -7378,21 +7591,20 @@ onTouchEnd ()
 <blockquote>
 <p><strong><em>Note:</em></strong> 3D Touch is available only on iOS 9.0 and later.</p>
 </blockquote>
-<h3 id="readwrite_14">Read/Write</h3>
+<h3 id="readwrite_14">Read/Write<a class="headerlink" href="#readwrite_14" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_6">Remarks</h3>
+<h3 id="remarks_6">Remarks<a class="headerlink" href="#remarks_6" title="Permanent link">&para;</a></h3>
 <p>This event is invoked asynchronously.</p>
-<h3 id="example_14">Example</h3>
-<pre><code>
-function onTouchEndCallback(source, x, y, contextInfo) {
-    if (contextInfo) {
-        var force = contextInfo[“force”];
-        voltmx.print(“value of force is” + force)
-    }
-}
-Form1.widget1.onTouchEnd = onTouchEndCallback;
-</code></pre>
-<h3 id="platform-availability_9">Platform Availability</h3>
+<h3 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>function onTouchEndCallback(source, x, y, contextInfo) {
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    if (contextInfo) {
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>        var force = contextInfo[“force”];
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>        voltmx.print(“value of force is” + force)
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>    }
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>}
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>Form1.widget1.onTouchEnd = onTouchEndCallback;
+</span></code></pre></div>
+<h3 id="platform-availability_9">Platform Availability<a class="headerlink" href="#platform-availability_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>iOS, Android,and SPA</li>
 </ul>
@@ -7402,11 +7614,10 @@ Form1.widget1.onTouchEnd = onTouchEndCallback;
 <p><summary>onTouchMove Event</summary></p>
 <hr />
 <p>An event callback is invoked by the platform when the touch moves on the touch surface continuously until movement ends.</p>
-<h3 id="syntax_15">Syntax</h3>
-<pre><code>
-onTouchMove ()
-</code></pre>
-<h3 id="optional-parameters_1">Optional Parameters</h3>
+<h3 id="syntax_15">Syntax<a class="headerlink" href="#syntax_15" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>onTouchMove ()
+</span></code></pre></div>
+<h3 id="optional-parameters_1">Optional Parameters<a class="headerlink" href="#optional-parameters_1" title="Permanent link">&para;</a></h3>
 <p>source</p>
 <p>Handle to the widget reference on which touch moves.</p>
 <p>x</p>
@@ -7418,21 +7629,19 @@ onTouchMove ()
 <blockquote>
 <p><strong><em>Note:</em></strong> 3D Touch is available only on iOS 9.0 and later.</p>
 </blockquote>
-<h3 id="readwrite_15">Read/Write</h3>
+<h3 id="readwrite_15">Read/Write<a class="headerlink" href="#readwrite_15" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_7">Remarks</h3>
+<h3 id="remarks_7">Remarks<a class="headerlink" href="#remarks_7" title="Permanent link">&para;</a></h3>
 <p>This event is invoked asynchronously.</p>
-<h3 id="example_15">Example</h3>
-<pre><code>
-function onTouchMoveCallback(source, x, y, contextInfo) {
-    if (contextInfo) {
-        var force = contextInfo[“force”];
-        voltmx.print(“value of force is” + force)
-    }
-    Form1.widget1.onTouchMove = onTouchMoveCallback;  
-
-</code></pre>
-<h3 id="platform-availability_10">Platform Availability</h3>
+<h3 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>function onTouchMoveCallback(source, x, y, contextInfo) {
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    if (contextInfo) {
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>        var force = contextInfo[“force”];
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>        voltmx.print(“value of force is” + force)
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>    }
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>    Form1.widget1.onTouchMove = onTouchMoveCallback;  
+</span></code></pre></div>
+<h3 id="platform-availability_10">Platform Availability<a class="headerlink" href="#platform-availability_10" title="Permanent link">&para;</a></h3>
 <ul>
 <li>iOS, Android and SPA</li>
 </ul>
@@ -7442,11 +7651,10 @@ function onTouchMoveCallback(source, x, y, contextInfo) {
 <p><summary>onTouchStart Event</summary></p>
 <hr />
 <p>An event callback is invoked by the platform when the user touches the touch surface.</p>
-<h3 id="syntax_16">Syntax</h3>
-<pre><code>
-onTouchStart ()
-</code></pre>
-<h3 id="optional-parameters_2">Optional Parameters</h3>
+<h3 id="syntax_16">Syntax<a class="headerlink" href="#syntax_16" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>onTouchStart ()
+</span></code></pre></div>
+<h3 id="optional-parameters_2">Optional Parameters<a class="headerlink" href="#optional-parameters_2" title="Permanent link">&para;</a></h3>
 <p>source</p>
 <p>Handle to the widget reference on which the user touches.</p>
 <p>x</p>
@@ -7458,22 +7666,20 @@ onTouchStart ()
 <blockquote>
 <p><strong><em>Note:</em></strong> 3D Touch is available only on iOS 9.0 and later.</p>
 </blockquote>
-<h3 id="readwrite_16">Read/Write</h3>
+<h3 id="readwrite_16">Read/Write<a class="headerlink" href="#readwrite_16" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_8">Remarks</h3>
+<h3 id="remarks_8">Remarks<a class="headerlink" href="#remarks_8" title="Permanent link">&para;</a></h3>
 <p>This event is invoked asynchronously.</p>
-<h3 id="example_16">Example</h3>
-<pre><code>
-function onTouchStartCallback(source, x, y, contextInfo) {
-    if (contextInfo) {
-        var force = contextInfo[“force”];
-        voltmx.print(“value of force is” + force)
-    }
-}
-Form1.widget1.onTouchStart = onTouchStartCallback;  
-
-</code></pre>
-<h3 id="platform-availability_11">Platform Availability</h3>
+<h3 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>function onTouchStartCallback(source, x, y, contextInfo) {
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    if (contextInfo) {
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>        var force = contextInfo[“force”];
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>        voltmx.print(“value of force is” + force)
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    }
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>}
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>Form1.widget1.onTouchStart = onTouchStartCallback;  
+</span></code></pre></div>
+<h3 id="platform-availability_11">Platform Availability<a class="headerlink" href="#platform-availability_11" title="Permanent link">&para;</a></h3>
 <ul>
 <li>iOS, Android, and SPA</li>
 </ul>
@@ -7483,28 +7689,26 @@ Form1.widget1.onTouchStart = onTouchStartCallback;
 <p><summary>onScrollWidgetPosition Event</summary></p>
 <hr />
 <p>This event callback is invoked by the platform when the widget location position gets changed on scrolling. The onScrollWidgetPosition event returns the positional coordinates of the widget's location with respect to the screen (screenX and screenY) and the parent container (frameX and frameY). This event is invoked asynchronously, and is not available for FlexForm widget.</p>
-<h3 id="syntax_17">Syntax</h3>
-<pre><code>
-onScrollWidgetPosition()
-</code></pre>
-<h3 id="readwrite_17">Read/Write</h3>
+<h3 id="syntax_17">Syntax<a class="headerlink" href="#syntax_17" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>onScrollWidgetPosition()
+</span></code></pre></div>
+<h3 id="readwrite_17">Read/Write<a class="headerlink" href="#readwrite_17" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="example_17">Example</h3>
-<pre><code>
-var LabelWdg = new voltmx.ui.Label(basicConf, layoutConf, pspConf);
-form.add(LabelWdg);
-LabelWdg.onScrollWidgetPosition = onScrollWidgetPositionCallBack;
-
-function onScrollWidgetPositionCallBack(wdg, screenX, screenY, frameX, frameY) { //wdg : Widget that is registered for onScrollWidgetPosition.
-    /*screenX : Position of widget with respect to 
-the screen's X - coordinates (after downsizing the navigation bar and status bar).*/
-    /*screenY : Position of widget with respect to the screen's Y - 
-coordinates (after downsizing the navigation bar and status bar).*/
-    //frameX : Position of widget with respect to parent container's X- coordinates.
-    //frameY : Position of widget with respect to parent container's Y- coordinates.
-}
-</code></pre>
-<h3 id="platform-availability_12">Platform Availability</h3>
+<h3 id="example_17">Example<a class="headerlink" href="#example_17" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>var LabelWdg = new voltmx.ui.Label(basicConf, layoutConf, pspConf);
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>form.add(LabelWdg);
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>LabelWdg.onScrollWidgetPosition = onScrollWidgetPositionCallBack;
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>function onScrollWidgetPositionCallBack(wdg, screenX, screenY, frameX, frameY) { //wdg : Widget that is registered for onScrollWidgetPosition.
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>    /*screenX : Position of widget with respect to 
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>the screen&#39;s X - coordinates (after downsizing the navigation bar and status bar).*/
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>    /*screenY : Position of widget with respect to the screen&#39;s Y - 
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>coordinates (after downsizing the navigation bar and status bar).*/
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>    //frameX : Position of widget with respect to parent container&#39;s X- coordinates.
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>    //frameY : Position of widget with respect to parent container&#39;s Y- coordinates.
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_12">Platform Availability<a class="headerlink" href="#platform-availability_12" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Not Accessible from IDE</li>
 <li>Android, iOS and SPA</li>
@@ -7515,26 +7719,23 @@ coordinates (after downsizing the navigation bar and status bar).*/
 <p><summary>postOnclickJS Event</summary></p>
 <hr />
 <p>This event allows the developer to execute custom javascript function after the <em>onClick</em> callback of the widget is invoked.</p>
-<h3 id="syntax_18">Syntax</h3>
-<pre><code>
-postOnclickJS()
-</code></pre>
-<h3 id="readwrite_18">Read/Write</h3>
+<h3 id="syntax_18">Syntax<a class="headerlink" href="#syntax_18" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>postOnclickJS()
+</span></code></pre></div>
+<h3 id="readwrite_18">Read/Write<a class="headerlink" href="#readwrite_18" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_9">Remarks</h3>
+<h3 id="remarks_9">Remarks<a class="headerlink" href="#remarks_9" title="Permanent link">&para;</a></h3>
 <p>This is applicable only for Mobile Web channel.The function must exist in a javascript file under project&gt;module&gt;js folder.</p>
-<h3 id="example_18">Example</h3>
-<pre><code>
-//Sample code to set the postOnclickJS event callback to a TextBox widget.
-
-frmTxtBox.myTxtBox.postOnclickJS=postOnclickJSCallback;
-
-function postOnclickJSCallback(txtBox){
-      //Write your logic here.
-}
-
-</code></pre>
-<h3 id="platform-availability_13">Platform Availability</h3>
+<h3 id="example_18">Example<a class="headerlink" href="#example_18" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>//Sample code to set the postOnclickJS event callback to a TextBox widget.
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>frmTxtBox.myTxtBox.postOnclickJS=postOnclickJSCallback;
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>function postOnclickJSCallback(txtBox){
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>      //Write your logic here.
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>}
+</span></code></pre></div>
+<h3 id="platform-availability_13">Platform Availability<a class="headerlink" href="#platform-availability_13" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>Available on Server side Mobile Web (Advanced) platform only</li>
@@ -7545,17 +7746,16 @@ function postOnclickJSCallback(txtBox){
 <p><summary>preOnclickJS Event</summary></p>
 <hr />
 <p>This event allows the developer to execute custom javascript function before the <em>onClick</em> callback of the widget is invoked.</p>
-<h3 id="syntax_19">Syntax</h3>
-<pre><code>
-preOnclickJS()
-</code></pre>
-<h3 id="readwrite_19">Read/Write</h3>
+<h3 id="syntax_19">Syntax<a class="headerlink" href="#syntax_19" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>preOnclickJS()
+</span></code></pre></div>
+<h3 id="readwrite_19">Read/Write<a class="headerlink" href="#readwrite_19" title="Permanent link">&para;</a></h3>
 <p>Read + Write</p>
-<h3 id="remarks_10">Remarks</h3>
+<h3 id="remarks_10">Remarks<a class="headerlink" href="#remarks_10" title="Permanent link">&para;</a></h3>
 <p>This is applicable only for Mobile Web channel. The function must exist in a javascript file under project&gt;module&gt;js folder.</p>
 <p>In for the events preOnclickJS and postOnclickJS you will not be able to access application model or APIs, as these functions are executed in browser whereas the remaining JS modules are executed in server. For these events you can access browser objects ( window, document etc..) to change UI or perform some validation before server event. If the event preOnclickJS returns true, only then the request is sent to server for subsequent action.  </p>
 <p>You have to specify the modules to be loaded in browser using import JS tab, only then these files get included in.html script tag otherwise you will not be able to access the objects defined in those modules.</p>
-<h3 id="example_19">Example</h3>
+<h3 id="example_19">Example<a class="headerlink" href="#example_19" title="Permanent link">&para;</a></h3>
 <p>```</p>
 <p>//Sample code to set the preOnclickJS event callback to a TextBox widget.</p>
 <p>frmTxtBox.myTxtBox.preOnclickJS=preOnclickJSCallback;</p>
@@ -7563,13 +7763,15 @@ preOnclickJS()
       //Write your logic here.
 }</p>
 <p>```s</p>
-<h3 id="platform-availability_14">Platform Availability</h3>
+<h3 id="platform-availability_14">Platform Availability<a class="headerlink" href="#platform-availability_14" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Available in the IDE</li>
 <li>Available on Server side Mobile Web (BJS and Advanced) platform only</li>
 </ul>
 <hr />
 </details>
+
+
 
 
 
@@ -7592,7 +7794,7 @@ preOnclickJS()
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -7630,10 +7832,14 @@ preOnclickJS()
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

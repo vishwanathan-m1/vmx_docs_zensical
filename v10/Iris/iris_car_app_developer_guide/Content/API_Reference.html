@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_car_app_developer_guide/Content/API_Reference.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_car_app_developer_guide/Content/API_Reference.html">
       
       
         <link rel="prev" href="Getting_started_with_CarApp.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="CarForm.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,21 +984,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1349,21 +1074,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1420,21 +1158,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1595,21 +1346,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1644,21 +1408,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1789,21 +1566,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1834,8 +1624,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1843,12 +1638,20 @@
         
   
   
+  
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1885,10 +1688,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" checked>
@@ -1897,9 +1704,16 @@
           <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1908,7 +1722,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_10">
             <span class="md-nav__icon md-icon"></span>
-            Iris CarApp Developer Guide
+            
+  
+    Iris CarApp Developer Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1922,9 +1740,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1943,9 +1768,16 @@
       <a href="Getting_started_with_CarApp.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting started with CarApp Development in Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1971,9 +1803,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     API Reference
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -1982,14 +1821,22 @@
       <a href="API_Reference.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Reference
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -2007,7 +1854,9 @@
         <li class="md-nav__item">
   <a href="#other-supported-helper-namespaces" class="md-nav__link">
     <span class="md-ellipsis">
-      Other supported helper namespaces
+      
+        Other supported helper namespaces
+      
     </span>
   </a>
   
@@ -2016,7 +1865,9 @@
         <li class="md-nav__item">
   <a href="#voltmxauto-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.auto API’s
+      
+        voltmx.auto API’s
+      
     </span>
   </a>
   
@@ -2026,7 +1877,9 @@
           <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -2035,7 +1888,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -2044,7 +1899,9 @@
           <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -2053,7 +1910,9 @@
           <li class="md-nav__item">
   <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -2062,7 +1921,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -2071,7 +1932,9 @@
           <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -2080,7 +1943,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -2089,7 +1954,9 @@
           <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -2098,7 +1965,9 @@
           <li class="md-nav__item">
   <a href="#return-values_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -2107,7 +1976,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -2116,7 +1987,9 @@
           <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -2125,7 +1998,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -2134,7 +2009,9 @@
           <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -2143,7 +2020,9 @@
           <li class="md-nav__item">
   <a href="#return-values_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -2152,7 +2031,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -2161,7 +2042,9 @@
           <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -2170,7 +2053,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -2179,7 +2064,9 @@
           <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -2188,7 +2075,9 @@
           <li class="md-nav__item">
   <a href="#return-values_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -2197,7 +2086,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -2227,9 +2118,16 @@
       <a href="CarForm.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CarForm
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2266,21 +2164,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -2313,21 +2224,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -2360,21 +2284,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2430,106 +2367,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -2538,579 +2403,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -3129,6 +2421,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -3145,7 +2438,9 @@
         <li class="md-nav__item">
   <a href="#other-supported-helper-namespaces" class="md-nav__link">
     <span class="md-ellipsis">
-      Other supported helper namespaces
+      
+        Other supported helper namespaces
+      
     </span>
   </a>
   
@@ -3154,7 +2449,9 @@
         <li class="md-nav__item">
   <a href="#voltmxauto-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      voltmx.auto API’s
+      
+        voltmx.auto API’s
+      
     </span>
   </a>
   
@@ -3164,7 +2461,9 @@
           <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -3173,7 +2472,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -3182,7 +2483,9 @@
           <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -3191,7 +2494,9 @@
           <li class="md-nav__item">
   <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -3200,7 +2505,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -3209,7 +2516,9 @@
           <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -3218,7 +2527,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -3227,7 +2538,9 @@
           <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -3236,7 +2549,9 @@
           <li class="md-nav__item">
   <a href="#return-values_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -3245,7 +2560,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -3254,7 +2571,9 @@
           <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -3263,7 +2582,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -3272,7 +2593,9 @@
           <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -3281,7 +2604,9 @@
           <li class="md-nav__item">
   <a href="#return-values_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -3290,7 +2615,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -3299,7 +2626,9 @@
           <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -3308,7 +2637,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -3317,7 +2648,9 @@
           <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -3326,7 +2659,9 @@
           <li class="md-nav__item">
   <a href="#return-values_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -3335,7 +2670,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -3356,9 +2693,17 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_car_app_developer_guide/Content/API_Reference.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
   <h1>API Reference</h1>
@@ -3371,37 +2716,37 @@
 <li><strong>voltmx.auto.CarForm</strong> - Namespace for the car app forms.  </li>
 <li><strong>voltmx.auto.*Template</strong> - Namespace for the templates.</li>
 </ul>
-<h2 id="other-supported-helper-namespaces">Other supported helper namespaces</h2>
+<h2 id="other-supported-helper-namespaces">Other supported helper namespaces<a class="headerlink" href="#other-supported-helper-namespaces" title="Permanent link">&para;</a></h2>
 <p>Volt MX supports other namespaces for Car Application development. 
 Use the APIs provided in these namespaces to access CarApp related data from the device data base, download CarApp related data from a remote server, and more.</p>
 <ul>
-<li><a href="../../iris_api_dev_guide/content/voltmx.net_functions.html">voltmx.net</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.crypto_functions.html">voltmx.crypto</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.keychain_functions.html">voltmx.keychain</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.db_functions.html">voltmx.db</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.ds_functions.html">voltmx.ds</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.os_functions.html">voltmx.os</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.application_functions.html">voltmx.application</a>  </li>
-<li><a href="../../iris_api_dev_guide/content/voltmx.location_functions.html">voltmx.location</a></li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.net_functions.html">voltmx.net</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.crypto_functions.html">voltmx.crypto</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.keychain_functions.html">voltmx.keychain</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.db_functions.html">voltmx.db</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.ds_functions.html">voltmx.ds</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.os_functions.html">voltmx.os</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.application_functions.html">voltmx.application</a>  </li>
+<li><a href="./../../iris_api_dev_guide/content/voltmx.location_functions.html">voltmx.location</a></li>
 </ul>
 <blockquote>
 <p><strong><em>Note</em></strong>: Only the voltmx.application namespace supports permission related API’s. It is not recommended to use other APIs from that namespace. </p>
 </blockquote>
-<h2 id="voltmxauto-apis">voltmx.auto API’s</h2>
+<h2 id="voltmxauto-apis">voltmx.auto API’s<a class="headerlink" href="#voltmxauto-apis" title="Permanent link">&para;</a></h2>
 <details close="close">
 <p><summary>voltmx.auto.setApplicationCallbacks</summary></p>
 <hr />
 <p>This API is used to register and manage various lifecycle events for a car application. </p>
-<h3 id="syntax">Syntax</h3>
-<pre><code class="language-javascript">voltmx.auto.setApplicationCallbacks({
-  onCarAppInit,
-  onCarAppDataUpdated,
-  onCarAppForeground,
-  onCarAppBackground,
-  onCarAppTerminate
-});
-</code></pre>
-<h3 id="input-parameters">Input Parameters</h3>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">setApplicationCallbacks</span><span class="p">({</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">onCarAppInit</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">onCarAppDataUpdated</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">onCarAppForeground</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">onCarAppBackground</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nx">onCarAppTerminate</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">});</span>
+</span></code></pre></div>
+<h3 id="input-parameters">Input Parameters<a class="headerlink" href="#input-parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3432,27 +2777,27 @@ Use the APIs provided in these namespaces to access CarApp related data from the
 </tr>
 </tbody>
 </table>
-<h3 id="example">Example</h3>
-<pre><code class="language-javascript">voltmx.auto.setApplicationCallbacks({
-  &quot;onCarAppInit&quot;: function() {
-    /* CarPlay CarForm show needs to be invoked where carform1 is CarForm identifier and which is defined globally.*/
-    carform1.show()
-  },
-  &quot;onCarAppDataUpdated&quot;: function onUpdate(data) {},
-  &quot;onCarAppForeground&quot;: function() {},
-  &quot;onCarAppBackground&quot;: function() {},
-  &quot;onCarAppTerminate&quot;: function() {}
-});
-</code></pre>
-<h3 id="return-values">Return Values</h3>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">setApplicationCallbacks</span><span class="p">({</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="s2">&quot;onCarAppInit&quot;</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="cm">/* CarPlay CarForm show needs to be invoked where carform1 is CarForm identifier and which is defined globally.*/</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">carform1</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="s2">&quot;onCarAppDataUpdated&quot;</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">onUpdate</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{},</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="s2">&quot;onCarAppForeground&quot;</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="s2">&quot;onCarAppBackground&quot;</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{},</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="s2">&quot;onCarAppTerminate&quot;</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">});</span>
+</span></code></pre></div>
+<h3 id="return-values">Return Values<a class="headerlink" href="#return-values" title="Permanent link">&para;</a></h3>
 <p>None</p>
-<h3 id="platform-availability">Platform Availability</h3>
+<h3 id="platform-availability">Platform Availability<a class="headerlink" href="#platform-availability" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 <li>iOS</li>
 </ul>
 <blockquote>
-<p><strong><em>Note</em></strong>: The events are described in the <a href="Introduction.html">CarApp Integration Guide</a> topic.  </p>
+<p><strong><em>Note</em></strong>: The events are described in the <a href="./Introduction.html">CarApp Integration Guide</a> topic.  </p>
 </blockquote>
 <hr />
 </details>
@@ -3460,10 +2805,10 @@ Use the APIs provided in these namespaces to access CarApp related data from the
 <p><summary>voltmx.auto.setUncaughtExceptionHandler</summary></p>
 <hr />
 <p>Exceptions that occur during runtime are usually handled by using try/catch blocks. This API is implemented for exceptions that are not handled using try/catch blocks.  </p>
-<h3 id="syntax_1">Syntax</h3>
-<pre><code class="language-javascript">voltmx.auto.setUncaughtExceptionHandler(uncaughtExceptionHandler);
-</code></pre>
-<h3 id="input-parameters_1">Input Parameters</h3>
+<h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">setUncaughtExceptionHandler</span><span class="p">(</span><span class="nx">uncaughtExceptionHandler</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="input-parameters_1">Input Parameters<a class="headerlink" href="#input-parameters_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3478,31 +2823,30 @@ Use the APIs provided in these namespaces to access CarApp related data from the
 </tr>
 </tbody>
 </table>
-<h3 id="example_1">Example</h3>
-<pre><code class="language-javascript">
-function uncaughtExceptionHandler(exceptionObject) {
-    // Converting exception object into a readable string
-    var exceptionString = &quot;&quot;;
-
-    if (&quot;sourceURL&quot; in exceptionObject) {
-        exceptionString += exceptionObject.sourceURL;
-    }
-    if (&quot;line&quot; in exceptionObject) {
-        exceptionString += &quot; line # &quot; + exceptionObject.line;
-    }
-    if (&quot;message&quot; in exceptionObject) {
-        exceptionString += &quot; : &quot; + exceptionObject.message;
-    }
-
-    //Logging the exception string to console
-    voltmx.print(&quot;Unhandled Exception:&quot; + exceptionString);
-}
-
-voltmx.auto.setUncaughtExceptionHandler(uncaughtExceptionHandler);
-</code></pre>
-<h3 id="return-values_1">Return Values</h3>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">uncaughtExceptionHandler</span><span class="p">(</span><span class="nx">exceptionObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="c1">// Converting exception object into a readable string</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">exceptionString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;sourceURL&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">exceptionObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="nx">exceptionString</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">exceptionObject</span><span class="p">.</span><span class="nx">sourceURL</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">exceptionObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nx">exceptionString</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot; line # &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">exceptionObject</span><span class="p">.</span><span class="nx">line</span><span class="p">;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">exceptionObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nx">exceptionString</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot; : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">exceptionObject</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="c1">//Logging the exception string to console</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="nx">voltmx</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Unhandled Exception:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">exceptionString</span><span class="p">);</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">setUncaughtExceptionHandler</span><span class="p">(</span><span class="nx">uncaughtExceptionHandler</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="return-values_1">Return Values<a class="headerlink" href="#return-values_1" title="Permanent link">&para;</a></h3>
 <p>None</p>
-<h3 id="platform-availability_1">Platform Availability</h3>
+<h3 id="platform-availability_1">Platform Availability<a class="headerlink" href="#platform-availability_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 <li>iOS</li>
@@ -3513,10 +2857,10 @@ voltmx.auto.setUncaughtExceptionHandler(uncaughtExceptionHandler);
 <p><summary>voltmx.auto.invokeCarApp</summary></p>
 <hr />
 <p>This API is used to invoke native call and map applications in car systems. The specific protocol to be followed depends on whether the system is Android or Apple. If the invocation is successful the success callback is executed; otherwise the failure callback is executed.  </p>
-<h3 id="syntax_2">Syntax</h3>
-<pre><code class="language-javascript">voltmx.auto.invokeCarApp(URL,onSuccessCallback,onFailureCallback);
-</code></pre>
-<h3 id="input-parameters_2">Input Parameters</h3>
+<h3 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">invokeCarApp</span><span class="p">(</span><span class="nx">URL</span><span class="p">,</span><span class="nx">onSuccessCallback</span><span class="p">,</span><span class="nx">onFailureCallback</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="input-parameters_2">Input Parameters<a class="headerlink" href="#input-parameters_2" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3550,32 +2894,31 @@ To invoke Maps application<br />
 To invoke dialer application, use a URL like this.<br />
 “tel:123456”<br />
 where 123456 is the number to dial.</p>
-<h3 id="example_2">Example</h3>
-<pre><code class="language-javascript">
-// For invoking dialer application to make a call on iOS
-voltmx.auto.invokeCarApp(&quot;tel://+1234567890&quot;,onSuccessCallback,onFailureCallback);
-
-/* For invoking maps application on iOS */
-voltmx.auto.invokeCarApp(&quot;maps://?daddr=37.7749,-122.4194&quot;,onSuccessCallback,onFailureCallback);
-
-//Android example
-//Dial number
-voltmx.auto.invokeCarApp(&quot;tel:1234567890&quot;,onSuccessCallback,onFailureCallback);
-//Invoke map application
-voltmx.auto.invokeCarApp(&quot;geo:12.345,14.8767&quot;,onSuccessCallback,onFailureCallback);
-
-
-function onSuccessCallback(){
-voltmx.print();
-}
-
-function onFailureCallback(exceptionMsg){
-voltmx.print(&quot;error occured: &quot;+exceptionMsg);
-}
-</code></pre>
-<h3 id="return-values_2">Return Values</h3>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// For invoking dialer application to make a call on iOS</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">invokeCarApp</span><span class="p">(</span><span class="s2">&quot;tel://+1234567890&quot;</span><span class="p">,</span><span class="nx">onSuccessCallback</span><span class="p">,</span><span class="nx">onFailureCallback</span><span class="p">);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cm">/* For invoking maps application on iOS */</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">invokeCarApp</span><span class="p">(</span><span class="s2">&quot;maps://?daddr=37.7749,-122.4194&quot;</span><span class="p">,</span><span class="nx">onSuccessCallback</span><span class="p">,</span><span class="nx">onFailureCallback</span><span class="p">);</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1">//Android example</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1">//Dial number</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">invokeCarApp</span><span class="p">(</span><span class="s2">&quot;tel:1234567890&quot;</span><span class="p">,</span><span class="nx">onSuccessCallback</span><span class="p">,</span><span class="nx">onFailureCallback</span><span class="p">);</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">//Invoke map application</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">auto</span><span class="p">.</span><span class="nx">invokeCarApp</span><span class="p">(</span><span class="s2">&quot;geo:12.345,14.8767&quot;</span><span class="p">,</span><span class="nx">onSuccessCallback</span><span class="p">,</span><span class="nx">onFailureCallback</span><span class="p">);</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="kd">function</span><span class="w"> </span><span class="nx">onSuccessCallback</span><span class="p">(){</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">print</span><span class="p">();</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="kd">function</span><span class="w"> </span><span class="nx">onFailureCallback</span><span class="p">(</span><span class="nx">exceptionMsg</span><span class="p">){</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;error occured: &quot;</span><span class="o">+</span><span class="nx">exceptionMsg</span><span class="p">);</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="return-values_2">Return Values<a class="headerlink" href="#return-values_2" title="Permanent link">&para;</a></h3>
 <p>None</p>
-<h3 id="platform-availability_2">Platform Availability</h3>
+<h3 id="platform-availability_2">Platform Availability<a class="headerlink" href="#platform-availability_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 <li>iOS</li>
@@ -3587,10 +2930,10 @@ voltmx.print(&quot;error occured: &quot;+exceptionMsg);
 <hr />
 <p>This API is used to update the car application with data changes from the phone application. <br />
 The phone application calls this API by sending a dictionary.  </p>
-<h3 id="syntax_3">Syntax</h3>
-<pre><code class="language-javascript">voltmx.application.updateCarAppDatar(jsObject);
-</code></pre>
-<h3 id="input-parameters_3">Input Parameters</h3>
+<h3 id="syntax_3">Syntax<a class="headerlink" href="#syntax_3" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">application</span><span class="p">.</span><span class="nx">updateCarAppDatar</span><span class="p">(</span><span class="nx">jsObject</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="input-parameters_3">Input Parameters<a class="headerlink" href="#input-parameters_3" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3605,21 +2948,23 @@ The phone application calls this API by sending a dictionary.  </p>
 </tr>
 </tbody>
 </table>
-<h3 id="example_3">Example</h3>
-<pre><code class="language-javascript">voltmx.application.updateCarAppData({
-    &quot;key&quot; : {// key is an example, can be anything and value is of type Dictionary
-     }  
-});
-</code></pre>
-<h3 id="return-values_3">Return Values</h3>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">voltmx</span><span class="p">.</span><span class="nx">application</span><span class="p">.</span><span class="nx">updateCarAppData</span><span class="p">({</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="s2">&quot;key&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="c1">// key is an example, can be anything and value is of type Dictionary</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">     </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">});</span>
+</span></code></pre></div>
+<h3 id="return-values_3">Return Values<a class="headerlink" href="#return-values_3" title="Permanent link">&para;</a></h3>
 <p>None</p>
-<h3 id="platform-availability_3">Platform Availability</h3>
+<h3 id="platform-availability_3">Platform Availability<a class="headerlink" href="#platform-availability_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Android</li>
 <li>iOS</li>
 </ul>
 <hr />
 </details>
+
+
 
 
 
@@ -3642,7 +2987,7 @@ The phone application calls this API by sending a dictionary.  </p>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -3680,10 +3025,14 @@ The phone application calls this API by sending a dictionary.  </p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

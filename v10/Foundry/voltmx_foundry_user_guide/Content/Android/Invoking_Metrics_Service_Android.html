@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/Android/Invoking_Metrics_Service_Android.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_user_guide/Content/Android/Invoking_Metrics_Service_Android.html">
       
       
         <link rel="prev" href="OnlineObjectService_Class.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="../Settings_Cloud.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -354,13 +350,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -373,6 +368,7 @@
         
   
   
+  
     
   
   
@@ -381,8 +377,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,92 +769,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1190,919 +809,54 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
     
       
       
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
   
-
-              
-            
-              
-                
   
-  
-  
-  
-    
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
   
   
   
-  
     
     
-      
-        
-      
-        
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
       
-      
-  
-  
     
-  
-  
-  
     
     
-      
-        
-      
-        
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
-        
       
     
     
-    
-    
-      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -2111,9 +865,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2122,7 +883,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Foundry
+            
+  
+    Foundry
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2136,9 +901,16 @@
       <a href="../../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2181,8 +953,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2190,12 +967,20 @@
         
   
   
+  
     <a href="../../../installing_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2334,10 +1119,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" checked>
@@ -2346,9 +1135,16 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2357,7 +1153,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3">
             <span class="md-nav__icon md-icon"></span>
-            Volt MX Foundry User Guide
+            
+  
+    Volt MX Foundry User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2371,9 +1171,16 @@
       <a href="../Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2392,9 +1199,16 @@
       <a href="../Preface.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Preface
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2413,9 +1227,16 @@
       <a href="../../../foundrySDKs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry SDKs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2434,9 +1255,16 @@
       <a href="../Accessing_VoltMX_MBaaS_Portal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2455,9 +1283,16 @@
       <a href="../Environments-Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2476,9 +1311,16 @@
       <a href="../Account_Settings_User_ACLs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Default Access Control Lists (ACLs) on New Apps and Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2497,9 +1339,16 @@
       <a href="../UpgradeCloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Updates on Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2518,9 +1367,16 @@
       <a href="../How_to_access_VoltMX_Foundry_Portal_on-Prem.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2539,9 +1395,16 @@
       <a href="../Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2560,9 +1423,16 @@
       <a href="../Published_Apps-Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Viewing Applications Published to a Runtime Environment
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2581,9 +1451,16 @@
       <a href="../Features.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Features
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2602,9 +1479,16 @@
       <a href="../Adding_Applications.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Apps - How to Add Applications
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2623,9 +1507,16 @@
       <a href="../ConsoleAccessControl.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Console Access Control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2644,9 +1535,16 @@
       <a href="../Continuous_Integration_with_Foundry_Governanc_%20APIs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Foundry Governanc APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2671,8 +1569,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2680,12 +1583,20 @@
         
   
   
+  
     <a href="../API_Management.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     APIs in API Management
+  
+
+    
   </span>
+  
   
 
       
@@ -2710,9 +1621,16 @@
       <a href="../API_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2731,9 +1649,16 @@
       <a href="../App_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2752,9 +1677,16 @@
       <a href="../CustomDataConfig.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Data Adapters on Volt MX Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2773,9 +1705,16 @@
       <a href="../JAR_Management.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Managing JAR Files
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2794,9 +1733,16 @@
       <a href="../CLI_Analytics.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Analytics for Third-party Client App Binaries
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2815,9 +1761,16 @@
       <a href="../Export-Import_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exporting and Importing an Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2854,21 +1807,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../Identity.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Identity
+  
+
+    
   </span>
+  
   
 
       
@@ -2901,21 +1867,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../Legacy_Serivces.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Services
+  
+
+    
   </span>
+  
   
 
       
@@ -2948,21 +1927,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -2995,21 +1987,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../Orchestration.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Orchestration
+  
+
+    
   </span>
+  
   
 
       
@@ -3058,8 +2063,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3067,12 +2077,20 @@
         
   
   
+  
     <a href="../Objectservices.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Object Services
+  
+
+    
   </span>
+  
   
 
       
@@ -3097,9 +2115,16 @@
       <a href="../../../voltmx_foundry_workflow/Content/Workflow.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Workflow
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3118,9 +2143,16 @@
       <a href="../offline_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Offline Enablement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3139,9 +2171,16 @@
       <a href="../Legacy_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Sync
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3160,9 +2199,16 @@
       <a href="../VoltMXDevPortal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Developer Portal
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3181,9 +2227,16 @@
       <a href="../Logic_in_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logic
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3202,9 +2255,16 @@
       <a href="../Rules_as_a_Service.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Rules as a Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3223,9 +2283,16 @@
       <a href="../Engagement.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Engagement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3254,8 +2321,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3263,12 +2335,20 @@
         
   
   
+  
     <a href="../Manage_Client_App_Assets.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Manage Client App Assets
+  
+
+    
   </span>
+  
   
 
       
@@ -3293,9 +2373,16 @@
       <a href="../EnterpriseAppStore.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Enterprise App Store Service for Digital App Distribution
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3314,9 +2401,16 @@
       <a href="../PushNotificationsEas.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sending Push Notification to EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3335,9 +2429,16 @@
       <a href="../AppVersionUpgradePolicyEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Checking App Versions in EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3356,9 +2457,16 @@
       <a href="../EAS_NativeApp_Walk-through.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Walk-through of Volt MX Enterprise App Store (EAS) Source Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3377,9 +2485,16 @@
       <a href="../KnownIssuesEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Known Issues - EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3398,9 +2513,16 @@
       <a href="../Governance_for_Foundry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Governance for Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3431,8 +2553,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3440,12 +2567,20 @@
         
   
   
+  
     <a href="../Publish.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Publish
+  
+
+    
   </span>
+  
   
 
       
@@ -3470,9 +2605,16 @@
       <a href="../AppPromotion.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Promoting a Deployment Package
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3515,8 +2657,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3524,12 +2671,20 @@
         
   
   
+  
     <a href="../CI_Foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Command Line Utility - Continuous Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -3568,10 +2723,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_44" checked>
@@ -3580,9 +2739,16 @@
           <label class="md-nav__link" for="__nav_9_3_44" id="__nav_9_3_44_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     SDKs
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3591,7 +2757,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_44_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3_44">
             <span class="md-nav__icon md-icon"></span>
-            SDKs
+            
+  
+    SDKs
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3605,9 +2775,16 @@
       <a href="../Foundry_SDKs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3668,21 +2845,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../VoltMXStudio/Installing_VoltMXJS_SDK.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Iris SDK
+  
+
+    
   </span>
+  
   
 
       
@@ -3729,21 +2919,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../JS/Installing_JS_SDK.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     JavaScript SDK
+  
+
+    
   </span>
+  
   
 
       
@@ -3790,8 +2993,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3799,12 +3007,20 @@
         
   
   
+  
     <a href="../iOS/Installing.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS SDK
+  
+
+    
   </span>
+  
   
 
       
@@ -3855,10 +3071,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_44_5" checked>
@@ -3867,9 +3087,16 @@
           <label class="md-nav__link" for="__nav_9_3_44_5" id="__nav_9_3_44_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Android SDK
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3878,7 +3105,11 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_3_44_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3_44_5">
             <span class="md-nav__icon md-icon"></span>
-            Android SDK
+            
+  
+    Android SDK
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3892,9 +3123,16 @@
       <a href="Installing_Android_SDK.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3913,9 +3151,16 @@
       <a href="Prerequisites_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Prerequisites
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3934,9 +3179,16 @@
       <a href="Download_VoltMX_SDK_Files_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Downloading Volt MX Android SDK
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3955,9 +3207,16 @@
       <a href="Android_Studio.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Configuring the Volt MX Android SDK
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3976,9 +3235,16 @@
       <a href="Initializing_Client_SDK_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Initializing the Android Client SDK
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3997,9 +3263,16 @@
       <a href="Invoking_Identity_Service_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking an Identity Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4018,9 +3291,16 @@
       <a href="Invoking_Integration_Service_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking an Integration Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4039,9 +3319,16 @@
       <a href="Invoking_Messaging_Service_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking a Messaging Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4060,9 +3347,16 @@
       <a href="Invoking_Sync_Service_Android.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking a Sync Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4089,8 +3383,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4098,12 +3397,20 @@
         
   
   
+  
     <a href="Invoking_an_Object_Service.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking an Object Service
+  
+
+    
   </span>
+  
   
 
       
@@ -4137,9 +3444,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking a Metrics Service
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -4148,14 +3462,22 @@
       <a href="Invoking_Metrics_Service_Android.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Invoking a Metrics Service
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -4175,7 +3497,9 @@
         <li class="md-nav__item">
   <a href="#create-an-instance-of-metricsservice" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an instance of MetricsService
+      
+        Create an instance of MetricsService
+      
     </span>
   </a>
   
@@ -4185,7 +3509,9 @@
           <li class="md-nav__item">
   <a href="#setuserid" class="md-nav__link">
     <span class="md-ellipsis">
-      setUserID
+      
+        setUserID
+      
     </span>
   </a>
   
@@ -4194,7 +3520,9 @@
           <li class="md-nav__item">
   <a href="#sendevent" class="md-nav__link">
     <span class="md-ellipsis">
-      sendEvent
+      
+        sendEvent
+      
     </span>
   </a>
   
@@ -4203,7 +3531,9 @@
           <li class="md-nav__item">
   <a href="#flushevents" class="md-nav__link">
     <span class="md-ellipsis">
-      flushEvents
+      
+        flushEvents
+      
     </span>
   </a>
   
@@ -4212,7 +3542,9 @@
           <li class="md-nav__item">
   <a href="#geteventsinbuffer" class="md-nav__link">
     <span class="md-ellipsis">
-      getEventsInBuffer
+      
+        getEventsInBuffer
+      
     </span>
   </a>
   
@@ -4221,7 +3553,9 @@
           <li class="md-nav__item">
   <a href="#setflowtag" class="md-nav__link">
     <span class="md-ellipsis">
-      setFlowTag
+      
+        setFlowTag
+      
     </span>
   </a>
   
@@ -4230,7 +3564,9 @@
           <li class="md-nav__item">
   <a href="#clearflowtag" class="md-nav__link">
     <span class="md-ellipsis">
-      clearFlowTag
+      
+        clearFlowTag
+      
     </span>
   </a>
   
@@ -4239,7 +3575,9 @@
           <li class="md-nav__item">
   <a href="#getflowtag" class="md-nav__link">
     <span class="md-ellipsis">
-      getFlowTag
+      
+        getFlowTag
+      
     </span>
   </a>
   
@@ -4248,7 +3586,9 @@
           <li class="md-nav__item">
   <a href="#reporterror" class="md-nav__link">
     <span class="md-ellipsis">
-      reportError
+      
+        reportError
+      
     </span>
   </a>
   
@@ -4258,7 +3598,9 @@
           <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -4272,7 +3614,9 @@
           <li class="md-nav__item">
   <a href="#reporthandledexception" class="md-nav__link">
     <span class="md-ellipsis">
-      reportHandledException
+      
+        reportHandledException
+      
     </span>
   </a>
   
@@ -4282,7 +3626,9 @@
           <li class="md-nav__item">
   <a href="#parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -4296,7 +3642,9 @@
           <li class="md-nav__item">
   <a href="#seteventconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      setEventConfig
+      
+        setEventConfig
+      
     </span>
   </a>
   
@@ -4306,7 +3654,9 @@
           <li class="md-nav__item">
   <a href="#parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -4320,7 +3670,9 @@
           <li class="md-nav__item">
   <a href="#setbatchsize" class="md-nav__link">
     <span class="md-ellipsis">
-      setBatchSize
+      
+        setBatchSize
+      
     </span>
   </a>
   
@@ -4329,7 +3681,9 @@
           <li class="md-nav__item">
   <a href="#sendcustommetrics" class="md-nav__link">
     <span class="md-ellipsis">
-      sendCustomMetrics
+      
+        sendCustomMetrics
+      
     </span>
   </a>
   
@@ -4339,7 +3693,9 @@
           <li class="md-nav__item">
   <a href="#parameters_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -4358,7 +3714,9 @@
         <li class="md-nav__item">
   <a href="#event-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Event Details
+      
+        Event Details
+      
     </span>
   </a>
   
@@ -4368,7 +3726,9 @@
           <li class="md-nav__item">
   <a href="#formentry" class="md-nav__link">
     <span class="md-ellipsis">
-      FormEntry
+      
+        FormEntry
+      
     </span>
   </a>
   
@@ -4377,7 +3737,9 @@
           <li class="md-nav__item">
   <a href="#formexit" class="md-nav__link">
     <span class="md-ellipsis">
-      FormExit
+      
+        FormExit
+      
     </span>
   </a>
   
@@ -4386,7 +3748,9 @@
           <li class="md-nav__item">
   <a href="#touch" class="md-nav__link">
     <span class="md-ellipsis">
-      Touch
+      
+        Touch
+      
     </span>
   </a>
   
@@ -4395,7 +3759,9 @@
           <li class="md-nav__item">
   <a href="#servicerequest" class="md-nav__link">
     <span class="md-ellipsis">
-      ServiceRequest
+      
+        ServiceRequest
+      
     </span>
   </a>
   
@@ -4404,7 +3770,9 @@
           <li class="md-nav__item">
   <a href="#serviceresponse" class="md-nav__link">
     <span class="md-ellipsis">
-      ServiceResponse
+      
+        ServiceResponse
+      
     </span>
   </a>
   
@@ -4413,7 +3781,9 @@
           <li class="md-nav__item">
   <a href="#gesture" class="md-nav__link">
     <span class="md-ellipsis">
-      Gesture
+      
+        Gesture
+      
     </span>
   </a>
   
@@ -4422,7 +3792,9 @@
           <li class="md-nav__item">
   <a href="#orientation" class="md-nav__link">
     <span class="md-ellipsis">
-      Orientation
+      
+        Orientation
+      
     </span>
   </a>
   
@@ -4431,7 +3803,9 @@
           <li class="md-nav__item">
   <a href="#error" class="md-nav__link">
     <span class="md-ellipsis">
-      Error
+      
+        Error
+      
     </span>
   </a>
   
@@ -4440,7 +3814,9 @@
           <li class="md-nav__item">
   <a href="#handledexception" class="md-nav__link">
     <span class="md-ellipsis">
-      HandledException
+      
+        HandledException
+      
     </span>
   </a>
   
@@ -4449,7 +3825,9 @@
           <li class="md-nav__item">
   <a href="#crash" class="md-nav__link">
     <span class="md-ellipsis">
-      Crash
+      
+        Crash
+      
     </span>
   </a>
   
@@ -4458,7 +3836,9 @@
           <li class="md-nav__item">
   <a href="#custom" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom
+      
+        Custom
+      
     </span>
   </a>
   
@@ -4467,7 +3847,9 @@
           <li class="md-nav__item">
   <a href="#apptransition" class="md-nav__link">
     <span class="md-ellipsis">
-      AppTransition
+      
+        AppTransition
+      
     </span>
   </a>
   
@@ -4476,7 +3858,9 @@
           <li class="md-nav__item">
   <a href="#appload" class="md-nav__link">
     <span class="md-ellipsis">
-      AppLoad
+      
+        AppLoad
+      
     </span>
   </a>
   
@@ -4522,9 +3906,16 @@
       <a href="../Settings_Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4543,9 +3934,16 @@
       <a href="../Settings.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - On-premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4564,9 +3962,16 @@
       <a href="../Review_Requests_Dashboard.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Review Requests Dashboard
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4585,9 +3990,16 @@
       <a href="../Reports.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4606,9 +4018,16 @@
       <a href="../Support.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Support
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4627,9 +4046,16 @@
       <a href="../Telemetry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Telemetry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4648,9 +4074,16 @@
       <a href="../Samples/Samples.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4669,9 +4102,16 @@
       <a href="../Appendix_-_Sync_Strategy.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Sync Strategy
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4696,8 +4136,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4705,12 +4150,20 @@
         
   
   
+  
     <a href="../Appendix_-_App_Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - App Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4735,9 +4188,16 @@
       <a href="../Appendix_-_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Frequently Asked Questions (FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4756,9 +4216,16 @@
       <a href="../Limitations.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4791,21 +4258,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth Sample App Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4838,21 +4318,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../../integration_services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4885,21 +4378,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../../administering_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Administering Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -4956,21 +4462,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Services Console User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5029,21 +4548,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5092,8 +4624,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -5101,12 +4638,20 @@
         
   
   
+  
     <a href="../../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Deployment Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5131,9 +4676,16 @@
       <a href="../../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Analytics & Reporting Cloud FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5160,8 +4712,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -5169,12 +4726,20 @@
         
   
   
+  
     <a href="../../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services Troubleshooting Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5209,6 +4774,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -5227,7 +4793,9 @@
         <li class="md-nav__item">
   <a href="#create-an-instance-of-metricsservice" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an instance of MetricsService
+      
+        Create an instance of MetricsService
+      
     </span>
   </a>
   
@@ -5237,7 +4805,9 @@
           <li class="md-nav__item">
   <a href="#setuserid" class="md-nav__link">
     <span class="md-ellipsis">
-      setUserID
+      
+        setUserID
+      
     </span>
   </a>
   
@@ -5246,7 +4816,9 @@
           <li class="md-nav__item">
   <a href="#sendevent" class="md-nav__link">
     <span class="md-ellipsis">
-      sendEvent
+      
+        sendEvent
+      
     </span>
   </a>
   
@@ -5255,7 +4827,9 @@
           <li class="md-nav__item">
   <a href="#flushevents" class="md-nav__link">
     <span class="md-ellipsis">
-      flushEvents
+      
+        flushEvents
+      
     </span>
   </a>
   
@@ -5264,7 +4838,9 @@
           <li class="md-nav__item">
   <a href="#geteventsinbuffer" class="md-nav__link">
     <span class="md-ellipsis">
-      getEventsInBuffer
+      
+        getEventsInBuffer
+      
     </span>
   </a>
   
@@ -5273,7 +4849,9 @@
           <li class="md-nav__item">
   <a href="#setflowtag" class="md-nav__link">
     <span class="md-ellipsis">
-      setFlowTag
+      
+        setFlowTag
+      
     </span>
   </a>
   
@@ -5282,7 +4860,9 @@
           <li class="md-nav__item">
   <a href="#clearflowtag" class="md-nav__link">
     <span class="md-ellipsis">
-      clearFlowTag
+      
+        clearFlowTag
+      
     </span>
   </a>
   
@@ -5291,7 +4871,9 @@
           <li class="md-nav__item">
   <a href="#getflowtag" class="md-nav__link">
     <span class="md-ellipsis">
-      getFlowTag
+      
+        getFlowTag
+      
     </span>
   </a>
   
@@ -5300,7 +4882,9 @@
           <li class="md-nav__item">
   <a href="#reporterror" class="md-nav__link">
     <span class="md-ellipsis">
-      reportError
+      
+        reportError
+      
     </span>
   </a>
   
@@ -5310,7 +4894,9 @@
           <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -5324,7 +4910,9 @@
           <li class="md-nav__item">
   <a href="#reporthandledexception" class="md-nav__link">
     <span class="md-ellipsis">
-      reportHandledException
+      
+        reportHandledException
+      
     </span>
   </a>
   
@@ -5334,7 +4922,9 @@
           <li class="md-nav__item">
   <a href="#parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -5348,7 +4938,9 @@
           <li class="md-nav__item">
   <a href="#seteventconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      setEventConfig
+      
+        setEventConfig
+      
     </span>
   </a>
   
@@ -5358,7 +4950,9 @@
           <li class="md-nav__item">
   <a href="#parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -5372,7 +4966,9 @@
           <li class="md-nav__item">
   <a href="#setbatchsize" class="md-nav__link">
     <span class="md-ellipsis">
-      setBatchSize
+      
+        setBatchSize
+      
     </span>
   </a>
   
@@ -5381,7 +4977,9 @@
           <li class="md-nav__item">
   <a href="#sendcustommetrics" class="md-nav__link">
     <span class="md-ellipsis">
-      sendCustomMetrics
+      
+        sendCustomMetrics
+      
     </span>
   </a>
   
@@ -5391,7 +4989,9 @@
           <li class="md-nav__item">
   <a href="#parameters_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters:
+      
+        Parameters:
+      
     </span>
   </a>
   
@@ -5410,7 +5010,9 @@
         <li class="md-nav__item">
   <a href="#event-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Event Details
+      
+        Event Details
+      
     </span>
   </a>
   
@@ -5420,7 +5022,9 @@
           <li class="md-nav__item">
   <a href="#formentry" class="md-nav__link">
     <span class="md-ellipsis">
-      FormEntry
+      
+        FormEntry
+      
     </span>
   </a>
   
@@ -5429,7 +5033,9 @@
           <li class="md-nav__item">
   <a href="#formexit" class="md-nav__link">
     <span class="md-ellipsis">
-      FormExit
+      
+        FormExit
+      
     </span>
   </a>
   
@@ -5438,7 +5044,9 @@
           <li class="md-nav__item">
   <a href="#touch" class="md-nav__link">
     <span class="md-ellipsis">
-      Touch
+      
+        Touch
+      
     </span>
   </a>
   
@@ -5447,7 +5055,9 @@
           <li class="md-nav__item">
   <a href="#servicerequest" class="md-nav__link">
     <span class="md-ellipsis">
-      ServiceRequest
+      
+        ServiceRequest
+      
     </span>
   </a>
   
@@ -5456,7 +5066,9 @@
           <li class="md-nav__item">
   <a href="#serviceresponse" class="md-nav__link">
     <span class="md-ellipsis">
-      ServiceResponse
+      
+        ServiceResponse
+      
     </span>
   </a>
   
@@ -5465,7 +5077,9 @@
           <li class="md-nav__item">
   <a href="#gesture" class="md-nav__link">
     <span class="md-ellipsis">
-      Gesture
+      
+        Gesture
+      
     </span>
   </a>
   
@@ -5474,7 +5088,9 @@
           <li class="md-nav__item">
   <a href="#orientation" class="md-nav__link">
     <span class="md-ellipsis">
-      Orientation
+      
+        Orientation
+      
     </span>
   </a>
   
@@ -5483,7 +5099,9 @@
           <li class="md-nav__item">
   <a href="#error" class="md-nav__link">
     <span class="md-ellipsis">
-      Error
+      
+        Error
+      
     </span>
   </a>
   
@@ -5492,7 +5110,9 @@
           <li class="md-nav__item">
   <a href="#handledexception" class="md-nav__link">
     <span class="md-ellipsis">
-      HandledException
+      
+        HandledException
+      
     </span>
   </a>
   
@@ -5501,7 +5121,9 @@
           <li class="md-nav__item">
   <a href="#crash" class="md-nav__link">
     <span class="md-ellipsis">
-      Crash
+      
+        Crash
+      
     </span>
   </a>
   
@@ -5510,7 +5132,9 @@
           <li class="md-nav__item">
   <a href="#custom" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom
+      
+        Custom
+      
     </span>
   </a>
   
@@ -5519,7 +5143,9 @@
           <li class="md-nav__item">
   <a href="#apptransition" class="md-nav__link">
     <span class="md-ellipsis">
-      AppTransition
+      
+        AppTransition
+      
     </span>
   </a>
   
@@ -5528,7 +5154,9 @@
           <li class="md-nav__item">
   <a href="#appload" class="md-nav__link">
     <span class="md-ellipsis">
-      AppLoad
+      
+        AppLoad
+      
     </span>
   </a>
   
@@ -5549,50 +5177,60 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_user_guide/Content/Android/Invoking_Metrics_Service_Android.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 <p>User Guide: <a href="../Foundry_SDKs.html">SDKs</a> &gt; <a href="Installing_Android_SDK.html">Android SDK</a> &gt; Metrics Service Object APIs</p>
-<h1 id="invoking-a-metrics-service">Invoking a Metrics Service</h1>
+<h1 id="invoking-a-metrics-service">Invoking a Metrics Service<a class="headerlink" href="#invoking-a-metrics-service" title="Permanent link">&para;</a></h1>
 <p>When the Android SDK is initialized, it will automatically collect various standard metrics from a client and the standard metrics will be accessible using the Standard Reports within Volt MX Foundry Console.</p>
 <p>The AndroidSDK also provides the ability for a developer to send additional custom metrics from a client app to Volt MX Foundry back-end to capture additional information. These custom data sets will be accessible using the Custom Reporting feature within Volt MX Foundry Console where a business analyst can design and share reports using a combination of standard and custom metrics.</p>
-<p>Additionally, the Android SDK provides an Events API that allows an app to track user actions within the app to gain insight into the user journey.The developer can send various standard events such as form entry, touch events, service requests, gestures and errors. The developer can also send custom events to capture any app specific scenarios or transactions. These events can be analyzed within Volt MX Foundry Console by using the Standard Reports or user defined Custom Reports. For more details, refer to <a href="../../../custom_metrics_and_reports/Content/Custom_Metrics_and_Reports_Guide.html">Custom Metrics and Reports Guide</a>.</p>
+<p>Additionally, the Android SDK provides an Events API that allows an app to track user actions within the app to gain insight into the user journey.The developer can send various standard events such as form entry, touch events, service requests, gestures and errors. The developer can also send custom events to capture any app specific scenarios or transactions. These events can be analyzed within Volt MX Foundry Console by using the Standard Reports or user defined Custom Reports. For more details, refer to <a href="../../../../Foundry/custom_metrics_and_reports/Content/Custom_Metrics_and_Reports_Guide.html">Custom Metrics and Reports Guide</a>.</p>
 <p>This section lists all <code>MetricsService</code> object APIs.</p>
-<h2 id="create-an-instance-of-metricsservice">Create an instance of MetricsService</h2>
+<h2 id="create-an-instance-of-metricsservice">Create an instance of MetricsService<a class="headerlink" href="#create-an-instance-of-metricsservice" title="Permanent link">&para;</a></h2>
 <p>The <strong>MetricsService</strong> class sets the configuration for APM event reporting.</p>
-<pre><code> //Sample code to create an instance of MetricService with variable name &quot;getMetricsService&quot;
-mKonyClient = new KonyClient();
-MetricsService metricsClient = null;
-try {
-    metricsClient = mKonyClient.getMetricsService();
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-</code></pre>
-<h3 id="setuserid">setUserID</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> //Sample code to create an instance of MetricService with variable name &quot;getMetricsService&quot;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mKonyClient = new KonyClient();
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>MetricsService metricsClient = null;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>try {
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    metricsClient = mKonyClient.getMetricsService();
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>} catch (KonyCMSException e) {
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    e.printStackTrace();
+</span></code></pre></div>
+<h3 id="setuserid">setUserID<a class="headerlink" href="#setuserid" title="Permanent link">&para;</a></h3>
 <p>The <strong>setUserID</strong> API sets the user ID for the data gathered from an application. The user ID allows the data to be tracked on a user basis for broad analysis like how many different users used the application. It also helps to track activities of a specific user, which can help in seeing what activities were done before a crash, or what events led to a transaction not passing through. The user ID allows the same user to be tracked across different devices as well.</p>
-<pre><code> //Sample code to set up the user ID of application user
-String mUserId = &quot;&lt;user-id&gt;&quot;;
-metricsClient.setUserId(mUserId);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> //Sample code to set up the user ID of application user
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>String mUserId = &quot;&lt;user-id&gt;&quot;;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>metricsClient.setUserId(mUserId);
+</span></code></pre></div>
 <blockquote>
 <p><strong><em>Note:</em></strong>  The UserId related to metrics. The UserId length cannot be more than 100 characters.</p>
 </blockquote>
-<h3 id="sendevent">sendEvent</h3>
+<h3 id="sendevent">sendEvent<a class="headerlink" href="#sendevent" title="Permanent link">&para;</a></h3>
 <p>The <strong>sendEvent</strong> API allows a developer to send event details from an application to server for analytics and reporting purposes. The event data is added to a buffer and sent to server as per configuration values set by the developer using setEventConfig API.</p>
-<pre><code>  //Sample code to send reports
-String eventSubType = &quot;&lt;event-sub-type&gt;&quot;;
-String formID = &quot;&lt;form-id&gt;&quot;;
-String widgetID = &quot;&lt;widget-id&gt;&quot;;
-String flowTag = &quot;&lt;flow-tag&gt;&quot;;
-String metaData = &quot;&lt;meta-data&gt;&quot;;
-try {
-    metricsClient.sendEvent(MetricsService.EventType.EVENT_TYPE_CUSTOM, eventSubType, formID, widgetID, flowTag, metaData);
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  //Sample code to send reports
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>String eventSubType = &quot;&lt;event-sub-type&gt;&quot;;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>String formID = &quot;&lt;form-id&gt;&quot;;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>String widgetID = &quot;&lt;widget-id&gt;&quot;;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>String flowTag = &quot;&lt;flow-tag&gt;&quot;;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>String metaData = &quot;&lt;meta-data&gt;&quot;;
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>try {
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    metricsClient.sendEvent(MetricsService.EventType.EVENT_TYPE_CUSTOM, eventSubType, formID, widgetID, flowTag, metaData);
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>} catch (KonyCMSException e) {
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    e.printStackTrace();
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>}
+</span></code></pre></div>
 <p>The following are the enums event types with values:</p>
 <ul>
 <li>EVENT_TYPE_FORM_ENTRY("FormEntry", 0)</li>
@@ -5625,89 +5263,88 @@ try {
 <li>flowTag - string literal to override flow tag (max 256 characters)</li>
 <li>metaData - string literal that can be set by developer while setting a custom event for sending custom data as part of an event.</li>
 </ul>
-<h3 id="flushevents">flushEvents</h3>
+<h3 id="flushevents">flushEvents<a class="headerlink" href="#flushevents" title="Permanent link">&para;</a></h3>
 <p>The <strong>flushEvents</strong> API allows a developer to force events to be sent to the server. The entire current event buffer is loaded and sent to the server for processing. The flushEvents API used as an override to send event data to server before the configured value or a service call that flushes the buffer.</p>
-<pre><code> //Sample code to flushEvents  
-
-metricsClient.flushEvents();
-</code></pre>
-<h3 id="geteventsinbuffer">getEventsInBuffer</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> //Sample code to flushEvents  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>metricsClient.flushEvents();
+</span></code></pre></div>
+<h3 id="geteventsinbuffer">getEventsInBuffer<a class="headerlink" href="#geteventsinbuffer" title="Permanent link">&para;</a></h3>
 <p>The <strong>getEventsInBuffer</strong> returns a list of the buffered events.</p>
-<pre><code> //Sample code to eventsInBuffer
-Vector &lt; Hashtable &gt; bufferEvents = metricsClient.getEventsInBuffer();
-</code></pre>
-<h3 id="setflowtag">setFlowTag</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> //Sample code to eventsInBuffer
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Vector &lt; Hashtable &gt; bufferEvents = metricsClient.getEventsInBuffer();
+</span></code></pre></div>
+<h3 id="setflowtag">setFlowTag<a class="headerlink" href="#setflowtag" title="Permanent link">&para;</a></h3>
 <p>The <strong>setFlowTag</strong> API sets an event flow tag to be associated with all new events that are reported by using the sendEvent API.The flow tag is used to ease searching event data in terms of application flows like loginflow, searchflow. The setFlowTag also helps sorting and filtering data while building custom reports or running standard reports for the application events.</p>
-<pre><code> //Sample code to setFlowTagString myFowTag = &quot;&lt;flow-tag&gt;&quot;;
-try {
-    metricsClient.setFlowTag(myFowTag);
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-}
-</code></pre>
-<h3 id="clearflowtag">clearFlowTag</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> //Sample code to setFlowTagString myFowTag = &quot;&lt;flow-tag&gt;&quot;;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>try {
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    metricsClient.setFlowTag(myFowTag);
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>} catch (KonyCMSException e) {
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    e.printStackTrace();
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>}
+</span></code></pre></div>
+<h3 id="clearflowtag">clearFlowTag<a class="headerlink" href="#clearflowtag" title="Permanent link">&para;</a></h3>
 <p>The <strong>clearFlowTag</strong> API clears the currently set event flow tag.</p>
-<pre><code> //Sample code to clearFlowTag
-metricsClient.clearFlowTag();
-
-</code></pre>
-<h3 id="getflowtag">getFlowTag</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> //Sample code to clearFlowTag
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>metricsClient.clearFlowTag();
+</span></code></pre></div>
+<h3 id="getflowtag">getFlowTag<a class="headerlink" href="#getflowtag" title="Permanent link">&para;</a></h3>
 <p>The getFlowTag API gets the currently set event flow tag.</p>
-<pre><code> //Sample code to getFlowTag
-String mFlowTag = metricsClient.getFlowTag();
-</code></pre>
-<h3 id="reporterror">reportError</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> //Sample code to getFlowTag
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>String mFlowTag = metricsClient.getFlowTag();
+</span></code></pre></div>
+<h3 id="reporterror">reportError<a class="headerlink" href="#reporterror" title="Permanent link">&para;</a></h3>
 <p>The <strong>reportError</strong> API enables an app to report an error event to metrics server.</p>
-<pre><code>  //Sample code to reportError
-String errorcode = &quot;&lt;error-code&gt;&quot;;
-String errorType = &quot;&lt;error-type&gt;&quot;;
-String errorMessage = &quot;&lt;error-message&gt;&quot;;
-String errorDetails = &quot;&lt;error-details&gt;&quot;;
-try {
-    metricsClient.reportError(errorcode, errorType, errorMessage, errorDetails);
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-}
-</code></pre>
-<h4 id="parameters">Parameters:</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  //Sample code to reportError
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>String errorcode = &quot;&lt;error-code&gt;&quot;;
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>String errorType = &quot;&lt;error-type&gt;&quot;;
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>String errorMessage = &quot;&lt;error-message&gt;&quot;;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>String errorDetails = &quot;&lt;error-details&gt;&quot;;
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>try {
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    metricsClient.reportError(errorcode, errorType, errorMessage, errorDetails);
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>} catch (KonyCMSException e) {
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    e.printStackTrace();
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>}
+</span></code></pre></div>
+<h4 id="parameters">Parameters:<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
 <li>errorCode - string errorCode can be nil if not applicable.</li>
 <li>errorType - string errorType can be nil if not applicable.</li>
 <li>errorMessage - string errorMessage can be nil if not applicable.</li>
 <li>errorDetails - string(JSON) errorDetails is a json string that can have key-value pairs for the following keys errfile, errmethod, errline, errstacktrace, errcustommsg, errcrashreport, formID, widgetID, and flowTag.</li>
 </ul>
-<h3 id="reporthandledexception">reportHandledException</h3>
+<h3 id="reporthandledexception">reportHandledException<a class="headerlink" href="#reporthandledexception" title="Permanent link">&para;</a></h3>
 <p>The <strong>reportHandledException</strong> API enables apps to report a handled exception event.</p>
-<pre><code>  //Sample code to send exception to metrics server
-String exceptioncode = &quot;&lt;exception-code&gt;&quot;;
-String exceptionType = &quot;&lt;exception-type&gt;&quot;;
-String exceptionMessage = &quot;&lt;exception-message&gt;&quot;;
-String exceptionDetails = &quot;&lt;exception-details&gt;&quot;;
-try {
-    metricsClient.reportHandledException(exceptioncode, exceptionType, exceptionMessage, exceptionDetails);
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-}
-</code></pre>
-<h4 id="parameters_1">Parameters:</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  //Sample code to send exception to metrics server
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>String exceptioncode = &quot;&lt;exception-code&gt;&quot;;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>String exceptionType = &quot;&lt;exception-type&gt;&quot;;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>String exceptionMessage = &quot;&lt;exception-message&gt;&quot;;
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>String exceptionDetails = &quot;&lt;exception-details&gt;&quot;;
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>try {
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    metricsClient.reportHandledException(exceptioncode, exceptionType, exceptionMessage, exceptionDetails);
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>} catch (KonyCMSException e) {
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    e.printStackTrace();
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>}
+</span></code></pre></div>
+<h4 id="parameters_1">Parameters:<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>exceptionCode - string exceptionCode can be nil if not applicable.</li>
 <li>exceptionType - string type of exception, such as Eval Error or syntax error. The exceptionType can be nil if not applicable.</li>
 <li>exceptionMessage - string exceptionMessage can be nil if not applicable.</li>
 <li>exceptionDetails - string(JSON) exceptionDetails is a JSON string that can have key-value pairs for the following keys exceptionfile, exceptionmethod, exceptionline, exceptionstacktrace, formID, widgetID, and flowTag.</li>
 </ul>
-<h3 id="seteventconfig">setEventConfig</h3>
+<h3 id="seteventconfig">setEventConfig<a class="headerlink" href="#seteventconfig" title="Permanent link">&para;</a></h3>
 <p>The <strong>setEventConfig</strong> API takes the required values to set the event configuration values. When eventConfigType is - CONF_TYPE_BUFFER event autoFlushCount and maxBufferCount are considered.  </p>
-<pre><code>  //Sample code to setEventConfig
-int autoFlushCount = 20;
-int maxBufferCount = 800;
-try {
-    metricsClient.setEventConfig(MetricsService.EventConfigType.CONF_TYPE_BUFFER, autoFlushCount, maxBufferCount);
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-}
-</code></pre>
-<h4 id="parameters_2">Parameters:</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>  //Sample code to setEventConfig
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>int autoFlushCount = 20;
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>int maxBufferCount = 800;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>try {
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    metricsClient.setEventConfig(MetricsService.EventConfigType.CONF_TYPE_BUFFER, autoFlushCount, maxBufferCount);
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>} catch (KonyCMSException e) {
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    e.printStackTrace();
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>}
+</span></code></pre></div>
+<h4 id="parameters_2">Parameters:<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>eventConfigType - sets the current configuration type</p>
@@ -5720,32 +5357,32 @@ try {
 </li>
 <li>maxBufferCount - Maximum event buffer count to store the events possible values any positive integer. Default value os 1000.</li>
 </ul>
-<h3 id="setbatchsize">setBatchSize</h3>
+<h3 id="setbatchsize">setBatchSize<a class="headerlink" href="#setbatchsize" title="Permanent link">&para;</a></h3>
 <p>The <strong>setBatchSize</strong> API allows a developer to specify the batch size to be set to flush events. Default batch size is 50.</p>
-<pre><code> //Sample code to set batch size to flush eventsint batchSize = 20;
-try {
-    metricsClient.setBatchSize(batchSize);
-} catch (KonyCMSException e) {
-    e.printStackTrace();
-}
-</code></pre>
-<h3 id="sendcustommetrics">sendCustomMetrics</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a> //Sample code to set batch size to flush eventsint batchSize = 20;
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>try {
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    metricsClient.setBatchSize(batchSize);
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>} catch (KonyCMSException e) {
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    e.printStackTrace();
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>}
+</span></code></pre></div>
+<h3 id="sendcustommetrics">sendCustomMetrics<a class="headerlink" href="#sendcustommetrics" title="Permanent link">&para;</a></h3>
 <p>The <strong>sendCustomMetrics</strong> API sends custom metrics event.</p>
-<pre><code> //Sample code to send data to reporting service with group id as &quot;formID&quot;
-Hashtable mtable = new Hashtable();
-mtable.put(&quot;&lt;key&gt;&quot;, &quot;&lt;Values&gt;&quot;);
-String key = &quot;&lt;metrics-key&gt;&quot;;
-metricsClient.sendCustomMetrics(formID, mtable);
-</code></pre>
-<p>For more details about custom metrics and reports, refer to <a href="../../../custom_metrics_and_reports/Content/Custom_Metrics_and_Reports_Guide.html">Custom Metrics and Reports Guide</a>.</p>
-<h4 id="parameters_3">Parameters:</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a> //Sample code to send data to reporting service with group id as &quot;formID&quot;
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Hashtable mtable = new Hashtable();
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>mtable.put(&quot;&lt;key&gt;&quot;, &quot;&lt;Values&gt;&quot;);
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>String key = &quot;&lt;metrics-key&gt;&quot;;
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>metricsClient.sendCustomMetrics(formID, mtable);
+</span></code></pre></div>
+<p>For more details about custom metrics and reports, refer to <a href="../../../../Foundry/custom_metrics_and_reports/Content/Custom_Metrics_and_Reports_Guide.html">Custom Metrics and Reports Guide</a>.</p>
+<h4 id="parameters_3">Parameters:<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
 <ul>
 <li>groupId - formID length cannot be more than 250 characters.</li>
 <li>data - data to be send</li>
 </ul>
-<h2 id="event-details">Event Details</h2>
+<h2 id="event-details">Event Details<a class="headerlink" href="#event-details" title="Permanent link">&para;</a></h2>
 <p>For all event details, <strong>ts</strong> and <strong>SID</strong> values are automatically filled by MBaaS Client SDK, as part of the reportEvent, reportError and reportHandledException API calls. In case of automatically captured events, flowTag is also automatically filled with the currently set flowTag. Following are event specific details to be used while interfacing with MBaaS SDK.</p>
-<h3 id="formentry">FormEntry</h3>
+<h3 id="formentry">FormEntry<a class="headerlink" href="#formentry" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - FormEntry</li>
@@ -5754,7 +5391,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <li>evtSubType - Value of the ID property of the form widget</li>
 <li>metadata - null</li>
 </ul>
-<h3 id="formexit">FormExit</h3>
+<h3 id="formexit">FormExit<a class="headerlink" href="#formexit" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - FormExit</li>
@@ -5766,7 +5403,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 </ul>
 </li>
 </ul>
-<h3 id="touch">Touch</h3>
+<h3 id="touch">Touch<a class="headerlink" href="#touch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - Touch</li>
@@ -5805,7 +5442,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <p>metadata - null</p>
 </li>
 </ul>
-<h3 id="servicerequest">ServiceRequest</h3>
+<h3 id="servicerequest">ServiceRequest<a class="headerlink" href="#servicerequest" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - ServiceRequest (constant, exposed by MBaaS SDK)</li>
@@ -5820,7 +5457,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <p>metadata - null</p>
 </li>
 </ul>
-<h3 id="serviceresponse">ServiceResponse</h3>
+<h3 id="serviceresponse">ServiceResponse<a class="headerlink" href="#serviceresponse" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - ServiceResponse (constant, exposed by MBaaS SDK)</li>
@@ -5838,7 +5475,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 </ul>
 </li>
 </ul>
-<h3 id="gesture">Gesture</h3>
+<h3 id="gesture">Gesture<a class="headerlink" href="#gesture" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - Gesture (constant, exposed by MBaaS SDK)</li>
@@ -5853,7 +5490,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <p>metadata - null</p>
 </li>
 </ul>
-<h3 id="orientation">Orientation</h3>
+<h3 id="orientation">Orientation<a class="headerlink" href="#orientation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - Orientation (constant, exposed by MBaaS SDK)</li>
@@ -5870,7 +5507,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <p>metadata - null</p>
 </li>
 </ul>
-<h3 id="error">Error</h3>
+<h3 id="error">Error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>FormID - value of the ID property of the form widget currently displayed on the screen</li>
@@ -5892,7 +5529,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 </ul>
 </li>
 </ul>
-<h3 id="handledexception">HandledException</h3>
+<h3 id="handledexception">HandledException<a class="headerlink" href="#handledexception" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>FormID - value of the ID property of the form widget currently displayed on the screen</li>
@@ -5915,7 +5552,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 </ul>
 </li>
 </ul>
-<h3 id="crash">Crash</h3>
+<h3 id="crash">Crash<a class="headerlink" href="#crash" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>FormID - value of the ID property of the form widget currently displayed on the screen</li>
@@ -5937,7 +5574,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 </ul>
 </li>
 </ul>
-<h3 id="custom">Custom</h3>
+<h3 id="custom">Custom<a class="headerlink" href="#custom" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - Custom</li>
@@ -5946,7 +5583,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <li>evtSubType - any supplied event subtype</li>
 <li>metadata - string or a dictionary</li>
 </ul>
-<h3 id="apptransition">AppTransition</h3>
+<h3 id="apptransition">AppTransition<a class="headerlink" href="#apptransition" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - AppTransition</li>
@@ -5961,7 +5598,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
 <li>Dictionary (hash table) that contains the following key value pairs:<br />
     foredur - Duration spent in milliseconds.</li>
 </ul>
-<h3 id="appload">AppLoad</h3>
+<h3 id="appload">AppLoad<a class="headerlink" href="#appload" title="Permanent link">&para;</a></h3>
 <ul>
 <li>API to be used - sendEvent</li>
 <li>evtType - AppLoad</li>
@@ -5984,6 +5621,8 @@ metricsClient.sendCustomMetrics(formID, mtable);
 
 
 
+
+
                 
               </article>
             </div>
@@ -5994,7 +5633,7 @@ metricsClient.sendCustomMetrics(formID, mtable);
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -6032,10 +5671,14 @@ metricsClient.sendCustomMetrics(formID, mtable);
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

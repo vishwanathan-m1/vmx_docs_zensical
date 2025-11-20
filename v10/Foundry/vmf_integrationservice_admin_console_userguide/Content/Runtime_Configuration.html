@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html">
       
       
         <link rel="prev" href="Configurable_Parameters.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="Environment_Details.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -354,13 +350,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -373,6 +368,7 @@
         
   
   
+  
     
   
   
@@ -381,8 +377,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,92 +769,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1190,919 +809,54 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
     
       
       
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
   
-
-              
-            
-              
-                
   
-  
-  
-  
-    
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
   
   
   
-  
     
     
-      
-        
-      
-        
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
       
-      
-  
-  
     
-  
-  
-  
     
     
-      
-        
-      
-        
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
-        
       
     
     
-    
-    
-      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -2111,9 +865,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2122,7 +883,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Foundry
+            
+  
+    Foundry
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2136,9 +901,16 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2181,21 +953,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2332,21 +1117,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2377,21 +1175,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth Sample App Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -2424,21 +1235,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../integration_services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       
@@ -2471,8 +1295,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2480,12 +1309,20 @@
         
   
   
+  
     <a href="../../administering_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Administering Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2544,10 +1381,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" checked>
@@ -2556,9 +1397,16 @@
           <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     App Services Console User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2567,7 +1415,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_7">
             <span class="md-nav__icon md-icon"></span>
-            App Services Console User Guide
+            
+  
+    App Services Console User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2581,9 +1433,16 @@
       <a href="App_Services_User_Guide.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2602,9 +1461,16 @@
       <a href="Launching_Admin_Console.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Launching App Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2623,9 +1489,16 @@
       <a href="Web_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Web Apps
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2654,8 +1527,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2663,12 +1541,20 @@
         
   
   
+  
     <a href="Monitoring.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Monitoring
+  
+
+    
   </span>
+  
   
 
       
@@ -2693,9 +1579,16 @@
       <a href="Integration_Services.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2714,9 +1607,16 @@
       <a href="Object_Services.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Object Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2735,9 +1635,16 @@
       <a href="Orchestration_Services.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Orchestration Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2756,9 +1663,16 @@
       <a href="Workflow.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Workflow Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2777,9 +1691,16 @@
       <a href="Rules_Services.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Rules
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2804,8 +1725,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2813,12 +1739,20 @@
         
   
   
+  
     <a href="Jobs.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Jobs
+  
+
+    
   </span>
+  
   
 
       
@@ -2843,9 +1777,16 @@
       <a href="Health_Check.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Health Check
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2872,8 +1813,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2881,12 +1827,20 @@
         
   
   
+  
     <a href="Logs.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Logs
+  
+
+    
   </span>
+  
   
 
       
@@ -2925,10 +1879,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7_13" checked>
@@ -2937,9 +1895,16 @@
           <label class="md-nav__link" for="__nav_9_7_13" id="__nav_9_7_13_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2948,7 +1913,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_7_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_7_13">
             <span class="md-nav__icon md-icon"></span>
-            Settings
+            
+  
+    Settings
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2962,9 +1931,16 @@
       <a href="Settings.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2983,9 +1959,16 @@
       <a href="Configurable_Parameters.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Configurable Parameters
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3011,9 +1994,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Runtime Configuration
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3022,14 +2012,22 @@
       <a href="Runtime_Configuration.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Runtime Configuration
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3047,7 +2045,9 @@
         <li class="md-nav__item">
   <a href="#runtime-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Runtime Configuration
+      
+        Runtime Configuration
+      
     </span>
   </a>
   
@@ -3057,7 +2057,9 @@
           <li class="md-nav__item">
   <a href="#general-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      General Configuration
+      
+        General Configuration
+      
     </span>
   </a>
   
@@ -3066,7 +2068,9 @@
           <li class="md-nav__item">
   <a href="#log-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Log Configuration
+      
+        Log Configuration
+      
     </span>
   </a>
   
@@ -3075,7 +2079,9 @@
           <li class="md-nav__item">
   <a href="#cors-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      CORS Configuration
+      
+        CORS Configuration
+      
     </span>
   </a>
   
@@ -3084,7 +2090,9 @@
           <li class="md-nav__item">
   <a href="#ssl-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      SSL Configuration
+      
+        SSL Configuration
+      
     </span>
   </a>
   
@@ -3093,7 +2101,9 @@
           <li class="md-nav__item">
   <a href="#storage-database-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Storage Database Configuration
+      
+        Storage Database Configuration
+      
     </span>
   </a>
   
@@ -3102,7 +2112,9 @@
           <li class="md-nav__item">
   <a href="#gdpr-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      GDPR Policy
+      
+        GDPR Policy
+      
     </span>
   </a>
   
@@ -3111,7 +2123,9 @@
           <li class="md-nav__item">
   <a href="#file-storage-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      File Storage Configuration
+      
+        File Storage Configuration
+      
     </span>
   </a>
   
@@ -3120,7 +2134,9 @@
           <li class="md-nav__item">
   <a href="#web-apps-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Web Apps Configuration
+      
+        Web Apps Configuration
+      
     </span>
   </a>
   
@@ -3129,7 +2145,9 @@
           <li class="md-nav__item">
   <a href="#cache-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Cache Configuration
+      
+        Cache Configuration
+      
     </span>
   </a>
   
@@ -3138,7 +2156,9 @@
           <li class="md-nav__item">
   <a href="#global-throttling-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Global Throttling Configuration
+      
+        Global Throttling Configuration
+      
     </span>
   </a>
   
@@ -3168,9 +2188,16 @@
       <a href="Environment_Details.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environment Details
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3189,9 +2216,16 @@
       <a href="SSL_Certificates.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SSL Certificates
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3218,9 +2252,16 @@
       <a href="Downloads.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Downloads
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3249,8 +2290,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3258,12 +2304,20 @@
         
   
   
+  
     <a href="reports.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       
@@ -3330,8 +2384,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3339,12 +2398,20 @@
         
   
   
+  
     <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3393,8 +2460,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3402,12 +2474,20 @@
         
   
   
+  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Deployment Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3432,9 +2512,16 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Analytics & Reporting Cloud FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3461,8 +2548,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3470,12 +2562,20 @@
         
   
   
+  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services Troubleshooting Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -3510,6 +2610,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -3526,7 +2627,9 @@
         <li class="md-nav__item">
   <a href="#runtime-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Runtime Configuration
+      
+        Runtime Configuration
+      
     </span>
   </a>
   
@@ -3536,7 +2639,9 @@
           <li class="md-nav__item">
   <a href="#general-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      General Configuration
+      
+        General Configuration
+      
     </span>
   </a>
   
@@ -3545,7 +2650,9 @@
           <li class="md-nav__item">
   <a href="#log-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Log Configuration
+      
+        Log Configuration
+      
     </span>
   </a>
   
@@ -3554,7 +2661,9 @@
           <li class="md-nav__item">
   <a href="#cors-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      CORS Configuration
+      
+        CORS Configuration
+      
     </span>
   </a>
   
@@ -3563,7 +2672,9 @@
           <li class="md-nav__item">
   <a href="#ssl-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      SSL Configuration
+      
+        SSL Configuration
+      
     </span>
   </a>
   
@@ -3572,7 +2683,9 @@
           <li class="md-nav__item">
   <a href="#storage-database-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Storage Database Configuration
+      
+        Storage Database Configuration
+      
     </span>
   </a>
   
@@ -3581,7 +2694,9 @@
           <li class="md-nav__item">
   <a href="#gdpr-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      GDPR Policy
+      
+        GDPR Policy
+      
     </span>
   </a>
   
@@ -3590,7 +2705,9 @@
           <li class="md-nav__item">
   <a href="#file-storage-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      File Storage Configuration
+      
+        File Storage Configuration
+      
     </span>
   </a>
   
@@ -3599,7 +2716,9 @@
           <li class="md-nav__item">
   <a href="#web-apps-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Web Apps Configuration
+      
+        Web Apps Configuration
+      
     </span>
   </a>
   
@@ -3608,7 +2727,9 @@
           <li class="md-nav__item">
   <a href="#cache-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Cache Configuration
+      
+        Cache Configuration
+      
     </span>
   </a>
   
@@ -3617,7 +2738,9 @@
           <li class="md-nav__item">
   <a href="#global-throttling-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Global Throttling Configuration
+      
+        Global Throttling Configuration
+      
     </span>
   </a>
   
@@ -3638,15 +2761,25 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
   <h1>Runtime Configuration</h1>
 
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 <p>Volt MX  Foundry console User Guide: <a href="Settings.html">Settings</a> &gt; Runtime Configuration</p>
-<h2 id="runtime-configuration">Runtime Configuration</h2>
+<h2 id="runtime-configuration">Runtime Configuration<a class="headerlink" href="#runtime-configuration" title="Permanent link">&para;</a></h2>
 <p>The <strong>Runtime Configuration</strong> tab on the <strong>Settings</strong> screen of App Services enables you to view and edit the runtime configuration settings of the Foundry Server. The configuration details comprise of the following sections:</p>
 <ul>
 <li><a href="#general-configuration">General Configuration</a></li>
@@ -3660,7 +2793,7 @@
 <li><a href="#cache-configuration">Cache Configuration</a></li>
 <li><a href="#global-throttling-configuration">Global Throttling Configuration</a></li>
 </ul>
-<h3 id="general-configuration"><strong>General Configuration</strong></h3>
+<h3 id="general-configuration"><strong>General Configuration</strong><a class="headerlink" href="#general-configuration" title="Permanent link">&para;</a></h3>
 <p>The <strong>General Configuration</strong> section displays the general settings of the Foundry server. You can modify any setting and click <strong>Save</strong> to update the change.</p>
 <p>The following table describes the settings in the <strong>General Configuration</strong> section:</p>
 <table>
@@ -3729,7 +2862,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="log-configuration"><strong>Log Configuration</strong></h3>
+<h3 id="log-configuration"><strong>Log Configuration</strong><a class="headerlink" href="#log-configuration" title="Permanent link">&para;</a></h3>
 <p>The <strong>Log Configuration</strong> section displays the configuration settings related to the server logs. You can modify any setting and click <strong>Save</strong> to update the changes.</p>
 <p>The following table describes the settings in the <strong>Log Configuration</strong> section:</p>
 <table>
@@ -3754,7 +2887,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="cors-configuration"><strong>CORS Configuration</strong></h3>
+<h3 id="cors-configuration"><strong>CORS Configuration</strong><a class="headerlink" href="#cors-configuration" title="Permanent link">&para;</a></h3>
 <p>The <strong>CORS Configuration</strong> section displays the configuration settings related to Cross Origin Resource Sharing (CORS) access. You can modify any setting and click <strong>Save</strong> to update the changes.</p>
 <p>The following table describes the settings in the <strong>CORS Configuration</strong> section:</p>
 <table>
@@ -3787,7 +2920,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ssl-configuration"><strong>SSL Configuration</strong></h3>
+<h3 id="ssl-configuration"><strong>SSL Configuration</strong><a class="headerlink" href="#ssl-configuration" title="Permanent link">&para;</a></h3>
 <p>The <strong>SSL Configuration</strong> section is used to connect the Foundry Server to the customer enterprise server using appropriate SSL certificates and settings. This type of configuration is required only when you want to connect the Foundry Server by using the HTTPS protocol. You can modify any setting and click <strong>Save</strong> to update the changes.</p>
 <p>The following table describes the settings in the <strong>SSL Configuration</strong> section:</p>
 <table>
@@ -3840,7 +2973,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="storage-database-configuration"><strong>Storage Database Configuration</strong></h3>
+<h3 id="storage-database-configuration"><strong>Storage Database Configuration</strong><a class="headerlink" href="#storage-database-configuration" title="Permanent link">&para;</a></h3>
 <p>The <strong>Storage Database Configuration</strong> section displays the database properties of storage services of Foundry server. This is used only for on-premise installs. You can modify any setting and click <strong>Save</strong> to update the changes.</p>
 <p>The following table describes the settings in the <strong>Storage Database Configuration</strong> section:</p>
 <table>
@@ -3925,7 +3058,7 @@ The following table describes the UI elements of the **Memcache Configuration** 
 | Memcache Cookie Secured | Select the check box to secure the cookie header.|
 | Save | Click **Save** to save your changes.| -->
 
-<h3 id="gdpr-policy">GDPR Policy</h3>
+<h3 id="gdpr-policy">GDPR Policy<a class="headerlink" href="#gdpr-policy" title="Permanent link">&para;</a></h3>
 <p>The GDPR Policy section provides settings that enable the protection of the Personally Identifiable Information (PII) of a user. When the settings are enabled, data such as the User ID and the IP Address is not stored in the integration server logs. Additionally, a flag variable is sent to the metrics pipeline along with the PII to protect the data.</p>
 <p>The <strong>GDPR Policy</strong> section contains the following settings:</p>
 <table>
@@ -3948,7 +3081,7 @@ The following table describes the UI elements of the **Memcache Configuration** 
 <table cellspacing="0" class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 60%;"><colgroup><col class="TableStyle-Basic-Column-Column1" style="width: 20%;"> <col class="TableStyle-Basic-Column-Column1" style="width: 20%;"> <col class="TableStyle-Basic-Column-Column1" style="width: 20%;"></colgroup><tbody><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1">Austria<br>Belgium<br>Bulgaria<br>Germany<br>Denmark<br>Estonia<br>Spain<br>Finland<br>France</td><td class="TableStyle-Basic-BodyB-Column1-Body1">Greece<br>Croatia<br>Hungary<br>Ireland<br>Iceland<br>Italy<br>Liechtenstein<br>Luxembourg<br>Latvia</td><td class="TableStyle-Basic-BodyA-Column1-Body1">Malta<br>Netherlands<br>Norway<br>Poland<br>Portugal<br>Romania<br>Sweden<br>Slovenia<br>Slovakia</td></tr></tbody></table>
 <p>If the Protect PII property is enabled, the metrics pipeline encodes the PII (userID and IP Address) for all requests (irrespective of the country of origin).</p>
 </details>
-<h3 id="file-storage-configuration">File Storage Configuration</h3>
+<h3 id="file-storage-configuration">File Storage Configuration<a class="headerlink" href="#file-storage-configuration" title="Permanent link">&para;</a></h3>
 <p>The File Storage Configuration section displays the configuration properties related to File Storage adapter. It is applicable only for on-premise install.</p>
 <p>The following table describes the settings in the <strong>File Storage Configuration</strong> section:</p>
 <table>
@@ -3965,7 +3098,7 @@ The following table describes the UI elements of the **Memcache Configuration** 
 </tr>
 </tbody>
 </table>
-<h3 id="web-apps-configuration">Web Apps Configuration</h3>
+<h3 id="web-apps-configuration">Web Apps Configuration<a class="headerlink" href="#web-apps-configuration" title="Permanent link">&para;</a></h3>
 <p>The <strong>Web Apps configuration</strong> section displays the configuring properties of the new optimized web apps package format that improves the app performance and minimize the downtime during deployments. The section displays the properties such as Response Content Type Mappings, Cache Control age, HTTP session caching, and Custom Response Headers. You can modify any setting and click <strong>Save</strong> to update the changes.</p>
 <p>The following table describes the settings in the <strong>Web Apps Configuration</strong> section:</p>
 <table>
@@ -3998,7 +3131,7 @@ The following table describes the UI elements of the **Memcache Configuration** 
 </tr>
 </tbody>
 </table>
-<h3 id="cache-configuration">Cache Configuration</h3>
+<h3 id="cache-configuration">Cache Configuration<a class="headerlink" href="#cache-configuration" title="Permanent link">&para;</a></h3>
 <p>Volt MX  Foundry supports EHCache, Memcached, and Redis cache vendors. An On-premise setup of Volt MX Foundry uses EHCache as the default cache mechanism. A cloud environment uses Memcached as the default cache mechanism. The <strong>Cache Configuration</strong> section displays the configuration properties of the new cache mechanism. The section displays the properties such as Cache Type, Expiry time, Cache Server URLs, Advanced Cache properties, and Enable Session Distribution. You can modify any setting and click <strong>Save</strong> to update the change.</p>
 <p>The following table describes the settings in the <strong>Cache Configuration</strong> section:</p>
 <table>
@@ -4031,7 +3164,7 @@ The following table describes the UI elements of the **Memcache Configuration** 
 </tr>
 </tbody>
 </table>
-<h3 id="global-throttling-configuration">Global Throttling Configuration</h3>
+<h3 id="global-throttling-configuration">Global Throttling Configuration<a class="headerlink" href="#global-throttling-configuration" title="Permanent link">&para;</a></h3>
 <p>Apart from configuring the service level throttling from the Volt MX Foundry console, you can also configure the operation level throttling from the Global Throttling Configuration field. The throttling limit set for a service is applicable to all the operations within the service, whereas, the throttling information given here will be implied to the respective operation of the service that you mention here.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> If you have set the throttling limit at both service and operation level, then the service will not respond when either of the limit is met first.</p>
@@ -4053,42 +3186,44 @@ The following table describes the UI elements of the **Memcache Configuration** 
 </table>
 <p>Following are the parameters required to define the throttling limit for the respective service type:</p>
 <p><strong>Integration and Orchestration Service:</strong></p>
-<pre><code>[ 
-   { 
-      &quot;resourcePath&quot;:&quot;NameService/getFirstName&quot;,
-      &quot;httpMethod&quot;:&quot;POST&quot;,
-      &quot;totalRateLimitPerMinute&quot;:100,
-      &quot;ipRateLimitPerMinute&quot;:10
-   },
-   { 
-      &quot;resourcePath&quot;:&quot;NameService/getLastName&quot;,
-      &quot;httpMethod&quot;:&quot;POST&quot;,
-      &quot;totalRateLimitPerMinute&quot;:110,
-      &quot;ipRateLimitPerMinute&quot;:11
-   }  
-]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[ 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   { 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      &quot;resourcePath&quot;:&quot;NameService/getFirstName&quot;,
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      &quot;httpMethod&quot;:&quot;POST&quot;,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      &quot;totalRateLimitPerMinute&quot;:100,
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      &quot;ipRateLimitPerMinute&quot;:10
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   },
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   { 
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      &quot;resourcePath&quot;:&quot;NameService/getLastName&quot;,
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      &quot;httpMethod&quot;:&quot;POST&quot;,
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      &quot;totalRateLimitPerMinute&quot;:110,
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      &quot;ipRateLimitPerMinute&quot;:11
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>   }  
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>]
+</span></code></pre></div>
 <p><strong>Object Service:</strong></p>
-<pre><code>[ 
-   { 
-      &quot;resourcePath&quot;:&quot;ObjectServiceName/Object&quot;,
-      &quot;httpMethod&quot;:&quot;GET&quot;,
-      &quot;totalRateLimitPerMinute&quot;:100,
-      &quot;ipRateLimitPerMinute&quot;:10
-   },
-   { 
-      &quot;resourcePath&quot;:&quot;ObjectServiceName/Object&quot;,
-      &quot;httpMethod&quot;:&quot;GET&quot;,
-      &quot;totalRateLimitPerMinute&quot;:100,
-      &quot;ipRateLimitPerMinute&quot;:10
-   }
-]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[ 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   { 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      &quot;resourcePath&quot;:&quot;ObjectServiceName/Object&quot;,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      &quot;httpMethod&quot;:&quot;GET&quot;,
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      &quot;totalRateLimitPerMinute&quot;:100,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      &quot;ipRateLimitPerMinute&quot;:10
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   },
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>   { 
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      &quot;resourcePath&quot;:&quot;ObjectServiceName/Object&quot;,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      &quot;httpMethod&quot;:&quot;GET&quot;,
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      &quot;totalRateLimitPerMinute&quot;:100,
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      &quot;ipRateLimitPerMinute&quot;:10
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>   }
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>]
+</span></code></pre></div>
 <blockquote>
 <p><strong><em>Important:</em></strong> You can only configure the POST <em>httpMethod</em> for Integration service and Orchestration service types. For Object service, you can configure GET and DELETE <em>httpMethod</em> as is, whereas, the POST and PUT <em>httpMethod</em> should be configured as CREATE and UPDATE respectively.</p>
 <p><strong><em>Note:</em></strong> If you want to apply throttling on some custom verb, then you can configure the custom verb as the <em>httpMethod</em>.</p>
 <p><strong><em>Note:</em></strong> ** displayed beside the property implies the changes to the property groups required restart of the server to reflect modified values.</p>
 </blockquote>
+
+
 
 
 
@@ -4111,7 +3246,7 @@ The following table describes the UI elements of the **Memcache Configuration** 
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -4149,10 +3284,14 @@ The following table describes the UI elements of the **Memcache Configuration** 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

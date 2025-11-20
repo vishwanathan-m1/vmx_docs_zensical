@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_api_dev_guide/content/worker_apis.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_api_dev_guide/content/worker_apis.html">
       
       
         <link rel="prev" href="voltmx.ui_functions.html">
@@ -18,18 +18,53 @@
         <link rel="next" href="voltmx.worker_functions.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
-        <title>Overview - HCL Volt MX Documentation</title>
+        <title>Worker Thread API - HCL Volt MX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -139,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Worker Thread API
             
           </span>
         </div>
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,21 +984,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1349,21 +1074,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1420,8 +1158,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1429,12 +1172,20 @@
         
   
   
+  
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1597,10 +1348,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" checked>
@@ -1609,9 +1364,16 @@
           <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1620,7 +1382,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_6">
             <span class="md-nav__icon md-icon"></span>
-            Volt Iris API Developers Guide
+            
+  
+    Volt Iris API Developers Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1634,9 +1400,16 @@
       <a href="introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1661,21 +1434,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="accelereometer_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Accelerometer API
+  
+
+    
   </span>
+  
   
 
       
@@ -1716,21 +1502,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="actionsheet_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Action Sheet API for iOS
+  
+
+    
   </span>
+  
   
 
       
@@ -1761,21 +1560,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="alert_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Alert API
+  
+
+    
   </span>
+  
   
 
       
@@ -1818,8 +1630,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1827,12 +1644,20 @@
         
   
   
+  
     <a href="animationapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Animation API
+  
+
+    
   </span>
+  
   
 
       
@@ -1857,9 +1682,16 @@
       <a href="Android_NFC_Manifest_Configuration.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Android NFC Manifest Configuration
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1894,21 +1726,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="app-extension-ios.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Extension API for iOS
+  
+
+    
   </span>
+  
   
 
       
@@ -1939,21 +1784,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="application_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application API
+  
+
+    
   </span>
+  
   
 
       
@@ -1984,21 +1842,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="application_settings.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Settings API
+  
+
+    
   </span>
+  
   
 
       
@@ -2029,21 +1900,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="voltmx_automation_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Automation API
+  
+
+    
   </span>
+  
   
 
       
@@ -2074,21 +1958,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="badge.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Badge API
+  
+
+    
   </span>
+  
   
 
       
@@ -2121,8 +2018,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2130,12 +2032,20 @@
         
   
   
+  
     <a href="battery_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Battery API
+  
+
+    
   </span>
+  
   
 
       
@@ -2160,9 +2070,16 @@
       <a href="bookmark_refresh_apis.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Bookmark and Refresh API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2187,8 +2104,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2196,12 +2118,20 @@
         
   
   
+  
     <a href="caching_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Caching API
+  
+
+    
   </span>
+  
   
 
       
@@ -2232,8 +2162,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2241,12 +2176,20 @@
         
   
   
+  
     <a href="camera.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Camera API
+  
+
+    
   </span>
+  
   
 
       
@@ -2271,9 +2214,16 @@
       <a href="client-authentication.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Client Authentication API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2298,21 +2248,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="corehaptics.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Core Haptics
+  
+
+    
   </span>
+  
   
 
       
@@ -2345,21 +2308,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="communication_api_for_react_native.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Communication API for React Native App
+  
+
+    
   </span>
+  
   
 
       
@@ -2390,21 +2366,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Credential Manager API
+  
+
+    
   </span>
+  
   
 
       
@@ -2435,21 +2424,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="cryptography.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Cryptography APIs
+  
+
+    
   </span>
+  
   
 
       
@@ -2480,21 +2482,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="drag_and_drop_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Drag and Drop API
+  
+
+    
   </span>
+  
   
 
       
@@ -2525,21 +2540,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="forcetouch_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ForceTouch API
+  
+
+    
   </span>
+  
   
 
       
@@ -2570,21 +2598,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="modules.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Functional Modules API
+  
+
+    
   </span>
+  
   
 
       
@@ -2615,21 +2656,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="geolocation_api_watchposition.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     GeoLocation API
+  
+
+    
   </span>
+  
   
 
       
@@ -2660,21 +2714,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="gestures.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Gesture API
+  
+
+    
   </span>
+  
   
 
       
@@ -2711,21 +2778,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="gms_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Google Mobile Services APIs
+  
+
+    
   </span>
+  
   
 
       
@@ -2762,21 +2842,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="imageapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Image API
+  
+
+    
   </span>
+  
   
 
       
@@ -2809,21 +2902,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="imageclassificationapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Image Classification API
+  
+
+    
   </span>
+  
   
 
       
@@ -2854,21 +2960,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="in-app_updates_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     In-App Updates API
+  
+
+    
   </span>
+  
   
 
       
@@ -2909,21 +3028,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="inputoutput_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Input and Output API
+  
+
+    
   </span>
+  
   
 
       
@@ -2954,21 +3086,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="internationalization.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Internationalization API
+  
+
+    
   </span>
+  
   
 
       
@@ -2999,21 +3144,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="keychain_api_for_ios.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Keychain API
+  
+
+    
   </span>
+  
   
 
       
@@ -3044,21 +3202,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="language_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Language API
+  
+
+    
   </span>
+  
   
 
       
@@ -3089,21 +3260,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="localauthapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Local Authentication API
+  
+
+    
   </span>
+  
   
 
       
@@ -3134,8 +3318,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3143,12 +3332,20 @@
         
   
   
+  
     <a href="mapapi.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Map API
+  
+
+    
   </span>
+  
   
 
       
@@ -3173,9 +3370,16 @@
       <a href="map_styling_api.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Map Styling API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3200,8 +3404,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3209,12 +3418,20 @@
         
   
   
+  
     <a href="math_library.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Math API
+  
+
+    
   </span>
+  
   
 
       
@@ -3251,8 +3468,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3260,12 +3482,20 @@
         
   
   
+  
     <a href="media_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Media API
+  
+
+    
   </span>
+  
   
 
       
@@ -3287,12 +3517,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.md" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3321,21 +3558,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="network_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Network API
+  
+
+    
   </span>
+  
   
 
       
@@ -3374,21 +3624,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Near_Field_Communication_API.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     NFC API
+  
+
+    
   </span>
+  
   
 
       
@@ -3423,21 +3686,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="notifications.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Notifications API
+  
+
+    
   </span>
+  
   
 
       
@@ -3472,21 +3748,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="data_store_library.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Offline Data Access API
+  
+
+    
   </span>
+  
   
 
       
@@ -3521,21 +3810,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="operating_system.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Operating System API
+  
+
+    
   </span>
+  
   
 
       
@@ -3570,21 +3872,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="passbook.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Passbook API
+  
+
+    
   </span>
+  
   
 
       
@@ -3615,21 +3930,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="payment_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Payment API
+  
+
+    
   </span>
+  
   
 
       
@@ -3662,21 +3990,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="phone.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Phone API
+  
+
+    
   </span>
+  
   
 
       
@@ -3709,21 +4050,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="request_app_review_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Request App Review API
+  
+
+    
   </span>
+  
   
 
       
@@ -3754,8 +4108,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3763,12 +4122,20 @@
         
   
   
+  
     <a href="runtime_permissions.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Runtime Permission API
+  
+
+    
   </span>
+  
   
 
       
@@ -3793,9 +4160,16 @@
       <a href="sharedappgroupcontainerapi.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Shared App Group Container API for iOS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3820,21 +4194,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="signinwithapple_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SignInWithApple API
+  
+
+    
   </span>
+  
   
 
       
@@ -3865,21 +4252,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="generic_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Standard Volt MX API
+  
+
+    
   </span>
+  
   
 
       
@@ -3910,21 +4310,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="string.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     String API
+  
+
+    
   </span>
+  
   
 
       
@@ -3957,21 +4370,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="sync_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Sync API
+  
+
+    
   </span>
+  
   
 
       
@@ -4002,21 +4428,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="themes.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Theme API
+  
+
+    
   </span>
+  
   
 
       
@@ -4047,21 +4486,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="threading_apis.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Threading API
+  
+
+    
   </span>
+  
   
 
       
@@ -4092,21 +4544,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="timer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Timer API
+  
+
+    
   </span>
+  
   
 
       
@@ -4139,21 +4604,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="toast_api.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Toast API
+  
+
+    
   </span>
+  
   
 
       
@@ -4182,8 +4660,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4191,12 +4674,20 @@
         
   
   
+  
     <a href="voltmx.ui_functions.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     UI API
+  
+
+    
   </span>
+  
   
 
       
@@ -4231,10 +4722,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6_60" checked>
@@ -4243,9 +4738,16 @@
           <label class="md-nav__link" for="__nav_8_6_60" id="__nav_8_6_60_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Worker Thread API
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4254,7 +4756,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_6_60_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_6_60">
             <span class="md-nav__icon md-icon"></span>
-            Worker Thread API
+            
+  
+    Worker Thread API
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4277,9 +4783,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -4288,14 +4801,22 @@
       <a href="worker_apis.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -4315,7 +4836,9 @@
         <li class="md-nav__item">
   <a href="#introduction-to-constructor-workerthread" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Constructor - WorkerThread()
+      
+        Introduction to Constructor - WorkerThread()
+      
     </span>
   </a>
   
@@ -4325,7 +4848,9 @@
           <li class="md-nav__item">
   <a href="#worker-thread-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Thread Scenarios
+      
+        Worker Thread Scenarios
+      
     </span>
   </a>
   
@@ -4334,7 +4859,9 @@
           <li class="md-nav__item">
   <a href="#worker-thread-life-cycle" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Thread Life Cycle
+      
+        Worker Thread Life Cycle
+      
     </span>
   </a>
   
@@ -4348,7 +4875,9 @@
         <li class="md-nav__item">
   <a href="#message-event-handler" class="md-nav__link">
     <span class="md-ellipsis">
-      message event handler
+      
+        message event handler
+      
     </span>
   </a>
   
@@ -4358,7 +4887,9 @@
           <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4367,7 +4898,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -4376,7 +4909,9 @@
           <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4385,7 +4920,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4399,7 +4936,9 @@
         <li class="md-nav__item">
   <a href="#importing-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Importing scripts
+      
+        Importing scripts
+      
     </span>
   </a>
   
@@ -4409,7 +4948,9 @@
           <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -4418,7 +4959,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -4427,7 +4970,9 @@
           <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -4436,7 +4981,9 @@
           <li class="md-nav__item">
   <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -4445,7 +4992,9 @@
           <li class="md-nav__item">
   <a href="#exceptions" class="md-nav__link">
     <span class="md-ellipsis">
-      Exceptions
+      
+        Exceptions
+      
     </span>
   </a>
   
@@ -4454,7 +5003,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -4468,7 +5019,9 @@
         <li class="md-nav__item">
   <a href="#using-worker-threads-feature" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Worker Threads Feature
+      
+        Using Worker Threads Feature
+      
     </span>
   </a>
   
@@ -4478,7 +5031,9 @@
           <li class="md-nav__item">
   <a href="#communicating-and-data-processing-between-threads" class="md-nav__link">
     <span class="md-ellipsis">
-      Communicating and Data Processing Between Threads
+      
+        Communicating and Data Processing Between Threads
+      
     </span>
   </a>
   
@@ -4487,7 +5042,9 @@
           <li class="md-nav__item">
   <a href="#nesting-of-threads-and-performing-parallel-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Nesting of Threads and Performing Parallel Tasks
+      
+        Nesting of Threads and Performing Parallel Tasks
+      
     </span>
   </a>
   
@@ -4496,7 +5053,9 @@
           <li class="md-nav__item">
   <a href="#scope-rules-and-supported-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope Rules and Supported APIs
+      
+        Scope Rules and Supported APIs
+      
     </span>
   </a>
   
@@ -4505,7 +5064,9 @@
           <li class="md-nav__item">
   <a href="#ffi-and-custom-widgets" class="md-nav__link">
     <span class="md-ellipsis">
-      FFI and Custom Widgets
+      
+        FFI and Custom Widgets
+      
     </span>
   </a>
   
@@ -4514,7 +5075,9 @@
           <li class="md-nav__item">
   <a href="#guidelines-and-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Guidelines and Limitations
+      
+        Guidelines and Limitations
+      
     </span>
   </a>
   
@@ -4523,7 +5086,9 @@
           <li class="md-nav__item">
   <a href="#worker-life-cycle-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Life Cycle Notes
+      
+        Worker Life Cycle Notes
+      
     </span>
   </a>
   
@@ -4553,9 +5118,16 @@
       <a href="voltmx.worker_functions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     voltmx.worker Namespace
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4574,9 +5146,16 @@
       <a href="workerthreadobject_methods.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     WorkerThread Object
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4603,9 +5182,16 @@
       <a href="unsupportedapis.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Deprecated/Unsupported APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4624,9 +5210,16 @@
       <a href="exceptions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; Exceptions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4645,9 +5238,16 @@
       <a href="appendix_general_frequently_asked_questions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; General FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4666,9 +5266,16 @@
       <a href="appendix_javascript_frequently_asked_questions.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; JavaScript FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4687,9 +5294,16 @@
       <a href="appendix_preprocesor_directives.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; Preprocessor Directives
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4708,9 +5322,16 @@
       <a href="sqllite.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; SQLite
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4749,21 +5370,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="background_tasks_in_ios.html#background-fetch" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix&colon; Background Jobs in iOS 7
+  
+
+    
   </span>
+  
   
 
       
@@ -4806,21 +5440,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4951,21 +5598,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4996,21 +5656,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5045,21 +5718,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5094,21 +5780,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -5141,21 +5840,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -5188,21 +5900,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -5258,106 +5983,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -5366,579 +6019,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -5956,6 +6036,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -5975,7 +6056,9 @@
         <li class="md-nav__item">
   <a href="#introduction-to-constructor-workerthread" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Constructor - WorkerThread()
+      
+        Introduction to Constructor - WorkerThread()
+      
     </span>
   </a>
   
@@ -5985,7 +6068,9 @@
           <li class="md-nav__item">
   <a href="#worker-thread-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Thread Scenarios
+      
+        Worker Thread Scenarios
+      
     </span>
   </a>
   
@@ -5994,7 +6079,9 @@
           <li class="md-nav__item">
   <a href="#worker-thread-life-cycle" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Thread Life Cycle
+      
+        Worker Thread Life Cycle
+      
     </span>
   </a>
   
@@ -6008,7 +6095,9 @@
         <li class="md-nav__item">
   <a href="#message-event-handler" class="md-nav__link">
     <span class="md-ellipsis">
-      message event handler
+      
+        message event handler
+      
     </span>
   </a>
   
@@ -6018,7 +6107,9 @@
           <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6027,7 +6118,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -6036,7 +6129,9 @@
           <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6045,7 +6140,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6059,7 +6156,9 @@
         <li class="md-nav__item">
   <a href="#importing-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Importing scripts
+      
+        Importing scripts
+      
     </span>
   </a>
   
@@ -6069,7 +6168,9 @@
           <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      
+        Syntax
+      
     </span>
   </a>
   
@@ -6078,7 +6179,9 @@
           <li class="md-nav__item">
   <a href="#input-parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Parameters
+      
+        Input Parameters
+      
     </span>
   </a>
   
@@ -6087,7 +6190,9 @@
           <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      
+        Example
+      
     </span>
   </a>
   
@@ -6096,7 +6201,9 @@
           <li class="md-nav__item">
   <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Values
+      
+        Return Values
+      
     </span>
   </a>
   
@@ -6105,7 +6212,9 @@
           <li class="md-nav__item">
   <a href="#exceptions" class="md-nav__link">
     <span class="md-ellipsis">
-      Exceptions
+      
+        Exceptions
+      
     </span>
   </a>
   
@@ -6114,7 +6223,9 @@
           <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Availability
+      
+        Platform Availability
+      
     </span>
   </a>
   
@@ -6128,7 +6239,9 @@
         <li class="md-nav__item">
   <a href="#using-worker-threads-feature" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Worker Threads Feature
+      
+        Using Worker Threads Feature
+      
     </span>
   </a>
   
@@ -6138,7 +6251,9 @@
           <li class="md-nav__item">
   <a href="#communicating-and-data-processing-between-threads" class="md-nav__link">
     <span class="md-ellipsis">
-      Communicating and Data Processing Between Threads
+      
+        Communicating and Data Processing Between Threads
+      
     </span>
   </a>
   
@@ -6147,7 +6262,9 @@
           <li class="md-nav__item">
   <a href="#nesting-of-threads-and-performing-parallel-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Nesting of Threads and Performing Parallel Tasks
+      
+        Nesting of Threads and Performing Parallel Tasks
+      
     </span>
   </a>
   
@@ -6156,7 +6273,9 @@
           <li class="md-nav__item">
   <a href="#scope-rules-and-supported-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope Rules and Supported APIs
+      
+        Scope Rules and Supported APIs
+      
     </span>
   </a>
   
@@ -6165,7 +6284,9 @@
           <li class="md-nav__item">
   <a href="#ffi-and-custom-widgets" class="md-nav__link">
     <span class="md-ellipsis">
-      FFI and Custom Widgets
+      
+        FFI and Custom Widgets
+      
     </span>
   </a>
   
@@ -6174,7 +6295,9 @@
           <li class="md-nav__item">
   <a href="#guidelines-and-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Guidelines and Limitations
+      
+        Guidelines and Limitations
+      
     </span>
   </a>
   
@@ -6183,7 +6306,9 @@
           <li class="md-nav__item">
   <a href="#worker-life-cycle-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Life Cycle Notes
+      
+        Worker Life Cycle Notes
+      
     </span>
   </a>
   
@@ -6204,13 +6329,21 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_api_dev_guide/content/worker_apis.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
 <p>You are here: Worker Thread API</p>
-<h1 id="worker-thread-api">Worker Thread API</h1>
+<h1 id="worker-thread-api">Worker Thread API<a class="headerlink" href="#worker-thread-api" title="Permanent link">&para;</a></h1>
 <p>Worker threads are a means to execute different tasks in multiple parallel contexts of execution in a concurrent manner, which can take advantage of multiprocessor and multithreaded environments as well as to keep UI Thread in Application responsive by delegating or offloading work which need not be handled in UI Main thread, to a different secondary thread.</p>
 <p>Worker thread is a continuous parallel thread that runs and accepts messages until the time it is explicitly closed or terminated. Messages to a worker thread can be sent from the parent thread or its child worker threads. Through out this document, parent thread is referred as thread where a worker thread is spawned.</p>
 <p>Worker can have logic that gets executed parallel for each of the messages that it receives. If worker thread is busy handling messages, incoming messages that it receives will be queued for processing.</p>
@@ -6317,7 +6450,7 @@
 </li>
 </ol>
 
-<h2 id="introduction-to-constructor-workerthread">Introduction to Constructor - WorkerThread()</h2>
+<h2 id="introduction-to-constructor-workerthread">Introduction to Constructor - WorkerThread()<a class="headerlink" href="#introduction-to-constructor-workerthread" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The <em>WorkerThread()</em> constructor creates and returns the handle to the newly created worker thread. The new worker thread can be used by the Parent thread for any further communication with the worker thread.</li>
 <li>To create a worker thread, it requires a JavaScript file name or a functional module name. The <em>WorkerThread()</em> constructor is invoked with the JavaScript file or a functional module name as its only argument and a worker thread instance is then created and returned.</li>
@@ -6325,7 +6458,7 @@
 <li>If a Javascript file name with ".js" extension is passed as <em>WorkerThread()</em> constructor argument, it looks up only in the <code>workerthreads</code> directory in <code>modules/js</code> path and loads if the file is found. This holds good for functional modules based projects as well as non-functional modules based projects.</li>
 <li>If a function module name is provided as an argument for <em>WorkerThread()</em> constructor, in case of functional modules based project then the module will be loaded if found in the modules listing.</li>
 </ul>
-<h3 id="worker-thread-scenarios">Worker Thread Scenarios</h3>
+<h3 id="worker-thread-scenarios">Worker Thread Scenarios<a class="headerlink" href="#worker-thread-scenarios" title="Permanent link">&para;</a></h3>
 <p>The scenarios of using <em>WorkerThread()</em> constructor are as follows:</p>
 <ul>
 <li>
@@ -6354,7 +6487,7 @@
 <li>To receive a messages inside the worker thread from parent thread, the <em>message</em> event handler can be registered using <em>addEventListener()</em> inside worker thread.</li>
 </ul>
 <p><code> self.addEventListener( "message", function (event) { ... });</code></p>
-<h3 id="worker-thread-life-cycle">Worker Thread Life Cycle</h3>
+<h3 id="worker-thread-life-cycle">Worker Thread Life Cycle<a class="headerlink" href="#worker-thread-life-cycle" title="Permanent link">&para;</a></h3>
 <p>The following steps provide the work flow to use worker thread:</p>
 <ol>
 <li>Call to Worker constructor will create a new Worker instance and a new parallel execution environment context is created, and immediately starts execution in the new parallel thread of control in an asynchronous manner. In this new thread, first the Worker will try to load the ‘workerjs’ script.</li>
@@ -6362,14 +6495,14 @@
 <li>Every Worker thread will have its own event loop which takes care of the execution of all the received message tasks which are queued for this worker in that order until ‘self.close()’ in worker scope or ‘worker.terminate()’ in parent worker scope are invoked.</li>
 <li>From the moment of successful creation of worker thread and until ‘self.close()’ in worker scope or ‘worker.terminate()’ in parent worker scope are invoked, the worker thread will be alive and can receive and process messages which are sent to this worker form its parent or from its child workers if created, as well as it can send messages using postMessage() to its parent thread and its child worker threads if created.</li>
 </ol>
-<h2 id="message-event-handler">message event handler</h2>
+<h2 id="message-event-handler">message event handler<a class="headerlink" href="#message-event-handler" title="Permanent link">&para;</a></h2>
 <p>"message" event handler receives an "event" object which contains the JSON or string message that is passed to postMessage() during invocation and the same message can be accessed from its "event.data" field. The data passed to postMessage() should be a String or JSON object.</p>
 <p>Adhering to the JSON standard, the JSON object passed to postMessage() API should be serializable JSON without opaque object handles or function object handles etc. The data which is passed between the parent thread and worker thread using postMessage() API are copied, not shared, so the end result is that a duplicate is created on each end.</p>
 <p>Multiple "message" event handlers can also be registered in Parent scope and in workers inner scope and all the registered event handlers will be invoked in the registered order whenever a postMessage() is called.</p>
-<h3 id="syntax">Syntax</h3>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
 <pre><code style="display:block;background-color:#eee;border:1px solid #999;padding:10px;">function(event) { });</code></pre>
 
-<h3 id="input-parameters">Input Parameters</h3>
+<h3 id="input-parameters">Input Parameters<a class="headerlink" href="#input-parameters" title="Permanent link">&para;</a></h3>
 <p>String / JSON Object</p>
 <ul>
 <li>"message" event handler receives an "event" object which contains the JSON or string message that is passed to postMessage() during invocation and the same message can be accessed from its "event.data" field.</li>
@@ -6378,48 +6511,44 @@
 <li>The data which is passed between the parent thread and worker thread using postMessage() API are copied, not shared, so the end result is that a duplicate is created on each end.</li>
 <li>Multiple "message" event handlers can also be registered in Parent scope and in workers inner scope and all the registered event handlers will be invoked in the registered order whenever a postMessage() is called.</li>
 </ul>
-<h3 id="example">Example</h3>
-<pre><code>
-var evtMessageHandler_1 = function(event) {
-//In case of JSONvoltmx.print (&quot;Received message :&quot; + event.data[&quot;msg&quot;]);&quot;
-
-//In case of string
-voltmx.print (&quot;Received message :&quot; + event.data);
-};
-
-</code></pre>
-<h3 id="platform-availability">Platform Availability</h3>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>var evtMessageHandler_1 = function(event) {
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>//In case of JSONvoltmx.print (&quot;Received message :&quot; + event.data[&quot;msg&quot;]);&quot;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>//In case of string
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>voltmx.print (&quot;Received message :&quot; + event.data);
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>};
+</span></code></pre></div>
+<h3 id="platform-availability">Platform Availability<a class="headerlink" href="#platform-availability" title="Permanent link">&para;</a></h3>
 <p>Available for iOS, Android, SPA, and Desktop Web. For more information, see <a href="#scope">Scope</a>.</p>
-<h2 id="importing-scripts">Importing scripts</h2>
+<h2 id="importing-scripts">Importing scripts<a class="headerlink" href="#importing-scripts" title="Permanent link">&para;</a></h2>
 <p>Worker threads can use importScripts() function to import external scripts their scope by providing the JS file name to import. This method takes one or more JavaScript file names to import.</p>
 <p>This API is only available in worker thread scope and not in main parent thread scope.</p>
 <p>In case of Functional modules based project " voltmx.modules.loadFunctionalModule()" API can be used to import a functional module into workers scope. Refer <a href="modules.html">Functional Modules</a> specification document for usage help on loadFunctionalModule() API.</p>
 <p>importScripts() if invoked with .js file, looks up only in the "workerthreads" directory under "modules/js/" in Volt MX Iris IDE Project structure to import scripts into workers scope. This holds good for both functional modules based projects and non-functional modules based projects.</p>
 <p>In case of loading multiple files using importScripts(), if an error occurs while loading one of the script, then the remaining scripts are not loaded into context scope.</p>
 <p>For more information on Functional Module APIs, refer <a href="modules.html">Functional Modules APIs</a>.</p>
-<h3 id="syntax_1">Syntax</h3>
+<h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
 <pre><code style="display:block;background-color:#eee;border:1px solid #999;padding:10px;">importScripts(".js_file_name");</code></pre>
 
 <p>or</p>
 <pre><code style="display:block;background-color:#eee;border:1px solid #999;padding:10px;">importScripts("functional_module_name");</code></pre>
 
-<h3 id="input-parameters_1">Input Parameters</h3>
+<h3 id="input-parameters_1">Input Parameters<a class="headerlink" href="#input-parameters_1" title="Permanent link">&para;</a></h3>
 <p>JSFileNames [Object]</p>
 <p>or</p>
 <p>Functional_Module_Name [Object]</p>
 <ul>
 <li>One or more comma separated list of JavaScript file names.</li>
 </ul>
-<h3 id="example_1">Example</h3>
-<pre><code>
-importScripts(&quot;Utility.js&quot;); // loads Util.js
-
-importScripts(&quot;Utility1.js&quot;, &quot;Utility2.js&quot;, &quot;Utility3.js&quot;);
-
-</code></pre>
-<h3 id="return-values">Return Values</h3>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>importScripts(&quot;Utility.js&quot;); // loads Util.js
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>importScripts(&quot;Utility1.js&quot;, &quot;Utility2.js&quot;, &quot;Utility3.js&quot;);
+</span></code></pre></div>
+<h3 id="return-values">Return Values<a class="headerlink" href="#return-values" title="Permanent link">&para;</a></h3>
 <p>None</p>
-<h3 id="exceptions">Exceptions</h3>
+<h3 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong><em>Note:</em></strong> If no argument is given, no exception is raised and it does nothing.</p>
 </blockquote>
@@ -6455,7 +6584,7 @@ importScripts(&quot;Utility1.js&quot;, &quot;Utility2.js&quot;, &quot;Utility3.j
 <p>Exception 1 - message: "importScripts: InvalidParameter. Invalid script name"</p>
 <p>Exception 2 - message: "importScripts: InvalidParameter. Invalid script name"</p>
 </blockquote>
-<p>Differences in behavior of <em>importScripts</em>() and _<a href="voltmx.modules*functions.md#loadfunctionalmodule">_voltmx.modules.loadFunctionalModule_()</a>* API with respect to Functional Modules:</p>
+<p>Differences in behavior of <em>importScripts</em>() and _<a href="voltmx.modules*functions.html#loadfunctionalmodule">_voltmx.modules.loadFunctionalModule_()</a>* API with respect to Functional Modules:</p>
 <table>
 <thead>
 <tr>
@@ -6474,9 +6603,9 @@ importScripts(&quot;Utility1.js&quot;, &quot;Utility2.js&quot;, &quot;Utility3.j
 </tr>
 </tbody>
 </table>
-<h3 id="platform-availability_1">Platform Availability</h3>
+<h3 id="platform-availability_1">Platform Availability<a class="headerlink" href="#platform-availability_1" title="Permanent link">&para;</a></h3>
 <p>Available for iOS, Android, SPA, and Desktop Web. For more information, see <a href="#scope">Scope</a>.</p>
-<h2 id="using-worker-threads-feature">Using Worker Threads Feature</h2>
+<h2 id="using-worker-threads-feature">Using Worker Threads Feature<a class="headerlink" href="#using-worker-threads-feature" title="Permanent link">&para;</a></h2>
 <p>The following topics helps you to use the worker thread feature:</p>
 <ul>
 <li><a href="#getMonit2"></a><a href="#communicating-and-data-processing-between-threads">Communicating and Data Processing Between Threads</a></li>
@@ -6486,184 +6615,182 @@ importScripts(&quot;Utility1.js&quot;, &quot;Utility2.js&quot;, &quot;Utility3.j
 <li><a href="#guidelines-and-limitations">Guidelines and Limitations</a></li>
 <li><a href="#debugger-support">Debugger Support</a></li>
 </ul>
-<h3 id="communicating-and-data-processing-between-threads">Communicating and Data Processing Between Threads</h3>
+<h3 id="communicating-and-data-processing-between-threads">Communicating and Data Processing Between Threads<a class="headerlink" href="#communicating-and-data-processing-between-threads" title="Permanent link">&para;</a></h3>
 <p>Main.js</p>
-<pre><code>//create new worker
-var worker = new voltmx.worker.WorkerThread('1_worker.js');
-
-//invoked when worker calls postmessage() from its inner scope
-worker.addEventListener(&quot;message&quot;, function (event) {
-voltmx.print('Parent Scope : onmessage : event.data : ' + event.data[&quot;message&quot;]);
-});
-
-voltmx.print('Parent Scope : Invoking worker.postmessage()');
-//will invoke worker's inner scope onmessage()
-worker.postMessage({
-'message': 'Hello World From Parent'
-});
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>//create new worker
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>var worker = new voltmx.worker.WorkerThread(&#39;1_worker.js&#39;);
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>//invoked when worker calls postmessage() from its inner scope
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>worker.addEventListener(&quot;message&quot;, function (event) {
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>voltmx.print(&#39;Parent Scope : onmessage : event.data : &#39; + event.data[&quot;message&quot;]);
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>});
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>voltmx.print(&#39;Parent Scope : Invoking worker.postmessage()&#39;);
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>//will invoke worker&#39;s inner scope onmessage()
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>worker.postMessage({
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>&#39;message&#39;: &#39;Hello World From Parent&#39;
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>});
+</span></code></pre></div>
 <p>1_worker.js</p>
-<pre><code>//workers inner scope
-//invoked when Parent calls worker.postmessage()
-self.addEventListener(&quot;message&quot;, function (event) {
-voltmx.print('Worker Scope : onmessage : event.data : ' + event.data[&quot;message&quot;]);
-//call func
-do_something_in_worker();
-});
-
-function do_something_in_worker() {
-voltmx.print('Worker Scope : invoking postMessage()');
-//will invoke Parent worker.onmessage()
-postMessage({
-'message': &quot;Hello World From Worker &quot;
-});
-};
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>//workers inner scope
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>//invoked when Parent calls worker.postmessage()
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>self.addEventListener(&quot;message&quot;, function (event) {
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>voltmx.print(&#39;Worker Scope : onmessage : event.data : &#39; + event.data[&quot;message&quot;]);
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>//call func
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>do_something_in_worker();
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>});
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>function do_something_in_worker() {
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>voltmx.print(&#39;Worker Scope : invoking postMessage()&#39;);
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>//will invoke Parent worker.onmessage()
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>postMessage({
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&#39;message&#39;: &quot;Hello World From Worker &quot;
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>});
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>};
+</span></code></pre></div>
 <p>Expected Output</p>
-<pre><code>&quot;Parent Scope: Invoking worker.postmessage()&quot;
-&quot;Worker Scope: onmessage : event.data : &quot; &quot;Hello World From Parent&quot;
-&quot;Worker Scope: invoking postMessage()&quot;
-&quot;Parent Scope: onmessage : event.data : &quot; &quot;Hello World From Worker &quot;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&quot;Parent Scope: Invoking worker.postmessage()&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;Worker Scope: onmessage : event.data : &quot; &quot;Hello World From Parent&quot;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&quot;Worker Scope: invoking postMessage()&quot;
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>&quot;Parent Scope: onmessage : event.data : &quot; &quot;Hello World From Worker &quot;
+</span></code></pre></div>
 <p>Explanation</p>
 <ol>
 <li>In Parent Scope: Creates new worker using new <em>voltmx.worker.WorkerThread</em> ()</li>
 <li>In Parent Scope: Call to <em>worker.postMessage</em>() invokes <em>message</em> event handler registered using <em>addEventListener</em>() in worker threads inner scope.</li>
 <li>In Worker Scope: Call to <em>postMessage</em>() invokes <em>message</em> event handler registered using <em>addEventListener</em>() in the parent thread scope.</li>
 </ol>
-<h3 id="nesting-of-threads-and-performing-parallel-tasks">Nesting of Threads and Performing Parallel Tasks</h3>
+<h3 id="nesting-of-threads-and-performing-parallel-tasks">Nesting of Threads and Performing Parallel Tasks<a class="headerlink" href="#nesting-of-threads-and-performing-parallel-tasks" title="Permanent link">&para;</a></h3>
 <p>Main.js</p>
-<pre><code>try {
-voltmx.print(&quot;Parent Scope: Init test_case_parent_thread()&quot;);
-voltmx.print(&quot;Parent Scope: In try block&quot;);
-
-    //create new voltmx.worker.WorkerThread
-    var worker = new voltmx.worker.WorkerThread('WorkerThread.js');
-
-    //invoked when worker calls postmessage() from its inner scope
-    worker.addEventListener(&quot;message&quot;, function (event) {
-        voltmx.print('Parent Scope : onmessage : event.data : ' + event.data);
-    });
-
-    worker.postMessage(&quot;Hello from Parent&quot;);
-
-} catch (err) {
-voltmx.print(&quot;Parent Scope: In Catch block&quot;);
-
-}
-
-//invoke a function  
-invoke_timer_task();
-
-//
-function invoke_timer_task() {
-voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - &quot;);
-
-    var timerId = &quot;mytimer12111&quot;;
-    var i = 0;
-
-    function timerFunc() {
-
-        i++;
-        voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - In timerFunc() : &quot; + i);
-        if (i &gt; 20) {
-            voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - Stopping timer : &quot;);
-            voltmx.timer.cancel(timerId);
-        }
-    };
-
-    //
-    voltmx.timer.schedule(timerId, timerFunc, 1, true);
-    voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - Done&quot;);
-
-};
-voltmx.print(&quot;Parent Scope: Exit test_case_parent_thread()&quot;);
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>try {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>voltmx.print(&quot;Parent Scope: Init test_case_parent_thread()&quot;);
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>voltmx.print(&quot;Parent Scope: In try block&quot;);
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    //create new voltmx.worker.WorkerThread
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    var worker = new voltmx.worker.WorkerThread(&#39;WorkerThread.js&#39;);
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    //invoked when worker calls postmessage() from its inner scope
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    worker.addEventListener(&quot;message&quot;, function (event) {
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        voltmx.print(&#39;Parent Scope : onmessage : event.data : &#39; + event.data);
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    });
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    worker.postMessage(&quot;Hello from Parent&quot;);
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>} catch (err) {
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>voltmx.print(&quot;Parent Scope: In Catch block&quot;);
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>}
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>//invoke a function  
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>invoke_timer_task();
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>//
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>function invoke_timer_task() {
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - &quot;);
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>    var timerId = &quot;mytimer12111&quot;;
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>    var i = 0;
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>    function timerFunc() {
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>        i++;
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>        voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - In timerFunc() : &quot; + i);
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>        if (i &gt; 20) {
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>            voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - Stopping timer : &quot;);
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>            voltmx.timer.cancel(timerId);
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>        }
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>    };
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>    //
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>    voltmx.timer.schedule(timerId, timerFunc, 1, true);
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>    voltmx.print(&quot;Parent Scope :- voltmx.timer.schedule - Done&quot;);
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>};
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>voltmx.print(&quot;Parent Scope: Exit test_case_parent_thread()&quot;);
+</span></code></pre></div>
 <p>WorkerThread.js</p>
-<pre><code>//worker
-//workers inner scope
-
-voltmx.print(&quot;Worker Scope: Init&quot;);
-
-var worker = new voltmx.worker.WorkerThread('WorkerThread2.js');
-
-//invoked when Parent calls worker.postmessage()
-this.addEventListener(&quot;message&quot;, function(event) {
-voltmx.print('Worker Scope : onmessage : event.data : ' + event.data);
-});
-
-self.postMessage(&quot;Hello from Worker&quot;);
-//
-invoke_timer_task();
-
-//
-function invoke_timer_task() {
-voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - &quot;);
-
-    var timerId = &quot;mytimer121&quot;;
-    var i = 0;
-
-    function timerFunc() {
-
-        i++;
-        voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - In timerFunc() : &quot; + i);
-
-
-        if(i &gt; 20) {
-            voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - Stopping timer : &quot;);
-            voltmx.timer.cancel(timerId);
-        }
-    };
-    //
-    voltmx.timer.schedule(timerId,timerFunc, 1, true);
-    voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - Done&quot;);
-
-};
-voltmx.print(&quot;Worker Scope: Loading done&quot;);
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>//worker
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>//workers inner scope
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>voltmx.print(&quot;Worker Scope: Init&quot;);
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>var worker = new voltmx.worker.WorkerThread(&#39;WorkerThread2.js&#39;);
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>//invoked when Parent calls worker.postmessage()
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>this.addEventListener(&quot;message&quot;, function(event) {
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>voltmx.print(&#39;Worker Scope : onmessage : event.data : &#39; + event.data);
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>});
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>self.postMessage(&quot;Hello from Worker&quot;);
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>//
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>invoke_timer_task();
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>//
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>function invoke_timer_task() {
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - &quot;);
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    var timerId = &quot;mytimer121&quot;;
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    var i = 0;
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    function timerFunc() {
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>        i++;
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>        voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - In timerFunc() : &quot; + i);
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>        if(i &gt; 20) {
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>            voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - Stopping timer : &quot;);
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>            voltmx.timer.cancel(timerId);
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>        }
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>    };
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>    //
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>    voltmx.timer.schedule(timerId,timerFunc, 1, true);
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>    voltmx.print(&quot;Worker Scope :- voltmx.timer.schedule - Done&quot;);
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>};
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>voltmx.print(&quot;Worker Scope: Loading done&quot;);
+</span></code></pre></div>
 <p>WorkerThread2.js</p>
-<pre><code>//Grand child worker2 – nested worker
-//workers inner scope
-
-voltmx.print(&quot;Grand child: Worker2 Scope: Init&quot;);
-
-//invoked when Parent calls worker.postmessage()
-this.addEventListener(&quot;message&quot;, function(event) {
-voltmx.print('Grand child: Worker2 Scope : onmessage : event.data : ' + event.data);
-});
-
-self.postMessage(&quot;Hello from Worker2&quot;);
-//
-invoke_timer_task();
-
-//
-function invoke_timer_task () {
-voltmx.print(&quot;Grand child: Worker2 Scope :- voltmx.timer.schedule - &quot;);
-
-    var timerId = &quot;mytimer1211&quot;;
-    var i = 0;
-
-    function timerFunc()
-    {
-        i++;
-        voltmx.print(&quot;Worker2 Scope :- voltmx.timer.schedule - In timerFunc() : &quot; + i + &quot; : Grand child &quot;);
-
-        if(i &gt; 20) {
-            voltmx.print(&quot;Grand child: Worker2 Scope :- voltmx.timer.schedule - Stopping timer : &quot;);
-            voltmx.timer.cancel(timerId);
-        }
-    };
-
-    //
-    voltmx.timer.schedule(timerId,timerFunc, 1, true);
-    voltmx.print(&quot;Grand child: Worker2 Scope :- voltmx.timer.schedule - Done&quot;);
-
-};
-voltmx.print(&quot;Grand child: Worker2 Scope : Loading done&quot;);
-
-</code></pre>
-<h3 id="scope-rules-and-supported-apis">Scope Rules and Supported APIs</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>//Grand child worker2 – nested worker
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>//workers inner scope
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>voltmx.print(&quot;Grand child: Worker2 Scope: Init&quot;);
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>//invoked when Parent calls worker.postmessage()
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>this.addEventListener(&quot;message&quot;, function(event) {
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>voltmx.print(&#39;Grand child: Worker2 Scope : onmessage : event.data : &#39; + event.data);
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>});
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>self.postMessage(&quot;Hello from Worker2&quot;);
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>//
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>invoke_timer_task();
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>//
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>function invoke_timer_task () {
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>voltmx.print(&quot;Grand child: Worker2 Scope :- voltmx.timer.schedule - &quot;);
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    var timerId = &quot;mytimer1211&quot;;
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    var i = 0;
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>    function timerFunc()
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    {
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>        i++;
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>        voltmx.print(&quot;Worker2 Scope :- voltmx.timer.schedule - In timerFunc() : &quot; + i + &quot; : Grand child &quot;);
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>        if(i &gt; 20) {
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>            voltmx.print(&quot;Grand child: Worker2 Scope :- voltmx.timer.schedule - Stopping timer : &quot;);
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>            voltmx.timer.cancel(timerId);
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>        }
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>    };
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>    //
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>    voltmx.timer.schedule(timerId,timerFunc, 1, true);
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>    voltmx.print(&quot;Grand child: Worker2 Scope :- voltmx.timer.schedule - Done&quot;);
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>};
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>voltmx.print(&quot;Grand child: Worker2 Scope : Loading done&quot;);
+</span></code></pre></div>
+<h3 id="scope-rules-and-supported-apis">Scope Rules and Supported APIs<a class="headerlink" href="#scope-rules-and-supported-apis" title="Permanent link">&para;</a></h3>
 <p>Global resources in the App context will not be available in the worker thread context as it can lead to Race conditions since no locking mechanisms are provided.</p>
 <p>Every worker has its own context of execution, which is not shared between the parent and its worker. As a result the global variables in parent scope are not available in worker scope and vice versa.</p>
 <table border="1">
@@ -6791,7 +6918,7 @@ voltmx.print(&quot;Grand child: Worker2 Scope : Loading done&quot;);
 </tr>
 </table>
 
-<h3 id="ffi-and-custom-widgets">FFI and Custom Widgets</h3>
+<h3 id="ffi-and-custom-widgets">FFI and Custom Widgets<a class="headerlink" href="#ffi-and-custom-widgets" title="Permanent link">&para;</a></h3>
 <p>With and without Functional Module in Worker context:</p>
 <table>
 <tr>
@@ -6810,7 +6937,7 @@ voltmx.print(&quot;Grand child: Worker2 Scope : Loading done&quot;);
 </tr>
 </table>
 
-<h3 id="guidelines-and-limitations">Guidelines and Limitations</h3>
+<h3 id="guidelines-and-limitations">Guidelines and Limitations<a class="headerlink" href="#guidelines-and-limitations" title="Permanent link">&para;</a></h3>
 <p>The following guidelines are recommended before using worker thread:</p>
 <ol>
 <li>The objects "this" and "self" are available in worker thread inner scope that is referred as worker thread itself.</li>
@@ -6851,7 +6978,7 @@ voltmx.print(&quot;Grand child: Worker2 Scope : Loading done&quot;);
 
 Debugger support for worker threads is not available in 5.6.2 release. -->
 
-<h3 id="worker-life-cycle-notes">Worker Life Cycle Notes</h3>
+<h3 id="worker-life-cycle-notes">Worker Life Cycle Notes<a class="headerlink" href="#worker-life-cycle-notes" title="Permanent link">&para;</a></h3>
 <p>Following are some worker life cycle notes:</p>
 <ul>
 <li>Call to Worker constructor will create a new Worker instance and a new parallel execution environment context is created, and immediately starts execution in the new parallel thread of control in an asynchronous manner. In this new thread, first the Worker will try to load the ‘workerjs’ script.</li>
@@ -6876,6 +7003,8 @@ Debugger support for worker threads is not available in 5.6.2 release. -->
 
 
 
+
+
                 
               </article>
             </div>
@@ -6886,7 +7015,7 @@ Debugger support for worker threads is not available in 5.6.2 release. -->
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -6924,10 +7053,14 @@ Debugger support for worker threads is not available in 5.6.2 release. -->
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

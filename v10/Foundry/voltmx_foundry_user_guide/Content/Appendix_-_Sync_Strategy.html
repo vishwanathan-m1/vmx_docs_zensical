@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_user_guide/Content/Appendix_-_Sync_Strategy.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_user_guide/Content/Appendix_-_Sync_Strategy.html">
       
       
         <link rel="prev" href="Samples/Samples.html">
@@ -18,8 +18,11 @@
         <link rel="next" href="Appendix_-_App_Services.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
@@ -27,9 +30,41 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -354,13 +350,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -373,6 +368,7 @@
         
   
   
+  
     
   
   
@@ -381,8 +377,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,92 +769,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Iris
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Iris
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Iris
-  </span>
   
 
       
@@ -1190,919 +809,54 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Application Design and Development Guidelines
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt Iris API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Native Function API Developers Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Widget Programmer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
     
       
       
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris Wearables Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
   
-
-              
-            
-              
-                
   
-  
-  
-  
-    
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Iris CarApp Developer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
   
   
   
-  
     
     
-      
-        
-      
-        
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    iOS Live Activities in Volt MX Iris
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Using the Volt MX App
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
         
       
         
       
         
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
-  
-    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Reference Architecture Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
       
-      
-  
-  
     
-  
-  
-  
     
     
-      
-        
-      
-        
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
-        
       
     
     
-    
-    
-      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -2111,9 +865,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2122,7 +883,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Foundry
+            
+  
+    Foundry
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2136,9 +901,16 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2181,8 +953,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2190,12 +967,20 @@
         
   
   
+  
     <a href="../../installing_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -2334,10 +1119,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" checked>
@@ -2346,9 +1135,16 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry User Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2357,7 +1153,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3">
             <span class="md-nav__icon md-icon"></span>
-            Volt MX Foundry User Guide
+            
+  
+    Volt MX Foundry User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2371,9 +1171,16 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2392,9 +1199,16 @@
       <a href="Preface.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Preface
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2413,9 +1227,16 @@
       <a href="../../foundrySDKs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Foundry SDKs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2434,9 +1255,16 @@
       <a href="Accessing_VoltMX_MBaaS_Portal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2455,9 +1283,16 @@
       <a href="Environments-Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - Volt MX Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2476,9 +1311,16 @@
       <a href="Account_Settings_User_ACLs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Default Access Control Lists (ACLs) on New Apps and Services
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2497,9 +1339,16 @@
       <a href="UpgradeCloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Updates on Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2518,9 +1367,16 @@
       <a href="How_to_access_VoltMX_Foundry_Portal_on-Prem.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Accessing Volt MX Foundry Console - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2539,9 +1395,16 @@
       <a href="Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Environments - On-Premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2560,9 +1423,16 @@
       <a href="Published_Apps-Environments.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Viewing Applications Published to a Runtime Environment
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2581,9 +1451,16 @@
       <a href="Features.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Features
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2602,9 +1479,16 @@
       <a href="Adding_Applications.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Apps - How to Add Applications
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2623,9 +1507,16 @@
       <a href="ConsoleAccessControl.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Console Access Control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2644,9 +1535,16 @@
       <a href="Continuous_Integration_with_Foundry_Governanc_%20APIs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous Integration with Foundry Governanc APIs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2671,8 +1569,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2680,12 +1583,20 @@
         
   
   
+  
     <a href="API_Management.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     APIs in API Management
+  
+
+    
   </span>
+  
   
 
       
@@ -2710,9 +1621,16 @@
       <a href="API_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2731,9 +1649,16 @@
       <a href="App_Versioning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Versioning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2752,9 +1677,16 @@
       <a href="CustomDataConfig.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Custom Data Adapters on Volt MX Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2773,9 +1705,16 @@
       <a href="JAR_Management.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Managing JAR Files
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2794,9 +1733,16 @@
       <a href="CLI_Analytics.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Analytics for Third-party Client App Binaries
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2815,9 +1761,16 @@
       <a href="Export-Import_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exporting and Importing an Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2854,21 +1807,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Identity.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Identity
+  
+
+    
   </span>
+  
   
 
       
@@ -2901,21 +1867,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Legacy_Serivces.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Services
+  
+
+    
   </span>
+  
   
 
       
@@ -2948,21 +1927,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -2995,21 +1987,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Orchestration.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Orchestration
+  
+
+    
   </span>
+  
   
 
       
@@ -3058,8 +2063,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3067,12 +2077,20 @@
         
   
   
+  
     <a href="Objectservices.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Object Services
+  
+
+    
   </span>
+  
   
 
       
@@ -3097,9 +2115,16 @@
       <a href="../../voltmx_foundry_workflow/Content/Workflow.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Workflow
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3118,9 +2143,16 @@
       <a href="offline_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Offline Enablement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3139,9 +2171,16 @@
       <a href="Legacy_Sync.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Sync
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3160,9 +2199,16 @@
       <a href="VoltMXDevPortal.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Developer Portal
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3181,9 +2227,16 @@
       <a href="Logic_in_Apps.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logic
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3202,9 +2255,16 @@
       <a href="Rules_as_a_Service.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Rules as a Service
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3223,9 +2283,16 @@
       <a href="Engagement.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Engagement
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3254,8 +2321,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3263,12 +2335,20 @@
         
   
   
+  
     <a href="Manage_Client_App_Assets.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Manage Client App Assets
+  
+
+    
   </span>
+  
   
 
       
@@ -3293,9 +2373,16 @@
       <a href="EnterpriseAppStore.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Enterprise App Store Service for Digital App Distribution
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3314,9 +2401,16 @@
       <a href="PushNotificationsEas.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sending Push Notification to EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3335,9 +2429,16 @@
       <a href="AppVersionUpgradePolicyEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Checking App Versions in EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3356,9 +2457,16 @@
       <a href="EAS_NativeApp_Walk-through.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Walk-through of Volt MX Enterprise App Store (EAS) Source Application
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3377,9 +2485,16 @@
       <a href="KnownIssuesEAS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Known Issues - EAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3398,9 +2513,16 @@
       <a href="Governance_for_Foundry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Governance for Foundry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3431,8 +2553,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3440,12 +2567,20 @@
         
   
   
+  
     <a href="Publish.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Publish
+  
+
+    
   </span>
+  
   
 
       
@@ -3470,9 +2605,16 @@
       <a href="AppPromotion.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Promoting a Deployment Package
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3515,8 +2657,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3524,12 +2671,20 @@
         
   
   
+  
     <a href="CI_Foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Command Line Utility - Continuous Integration
+  
+
+    
   </span>
+  
   
 
       
@@ -3566,8 +2721,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3575,12 +2735,20 @@
         
   
   
+  
     <a href="Foundry_SDKs.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SDKs
+  
+
+    
   </span>
+  
   
 
       
@@ -3605,9 +2773,16 @@
       <a href="Settings_Cloud.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - Cloud
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3626,9 +2801,16 @@
       <a href="Settings.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings - On-premises
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3647,9 +2829,16 @@
       <a href="Review_Requests_Dashboard.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Review Requests Dashboard
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3668,9 +2857,16 @@
       <a href="Reports.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3689,9 +2885,16 @@
       <a href="Support.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Support
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3710,9 +2913,16 @@
       <a href="Telemetry.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Telemetry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3731,9 +2941,16 @@
       <a href="Samples/Samples.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3761,9 +2978,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Sync Strategy
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3772,14 +2996,22 @@
       <a href="Appendix_-_Sync_Strategy.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Sync Strategy
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3799,7 +3031,9 @@
         <li class="md-nav__item">
   <a href="#over-the-air-sync-otasync" class="md-nav__link">
     <span class="md-ellipsis">
-      Over The Air Sync (OTAsync)
+      
+        Over The Air Sync (OTAsync)
+      
     </span>
   </a>
   
@@ -3808,7 +3042,9 @@
         <li class="md-nav__item">
   <a href="#persistent-sync" class="md-nav__link">
     <span class="md-ellipsis">
-      Persistent Sync
+      
+        Persistent Sync
+      
     </span>
   </a>
   
@@ -3817,7 +3053,9 @@
         <li class="md-nav__item">
   <a href="#when-to-use-which-sync-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      When to Use which Sync Strategy?
+      
+        When to Use which Sync Strategy?
+      
     </span>
   </a>
   
@@ -3827,7 +3065,9 @@
           <li class="md-nav__item">
   <a href="#otasync-strategy-is-recommended-solution-when" class="md-nav__link">
     <span class="md-ellipsis">
-      OTASync Strategy is recommended solution when:
+      
+        OTASync Strategy is recommended solution when:
+      
     </span>
   </a>
   
@@ -3836,7 +3076,9 @@
           <li class="md-nav__item">
   <a href="#persistentsync-is-recommended-solution-when" class="md-nav__link">
     <span class="md-ellipsis">
-      PersistentSync is recommended solution when:
+      
+        PersistentSync is recommended solution when:
+      
     </span>
   </a>
   
@@ -3845,7 +3087,9 @@
           <li class="md-nav__item">
   <a href="#what-are-the-prerequisites-for-otasync-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      What are the prerequisites for OTASync strategy ?
+      
+        What are the prerequisites for OTASync strategy ?
+      
     </span>
   </a>
   
@@ -3854,7 +3098,9 @@
           <li class="md-nav__item">
   <a href="#what-are-the-prerequisites-for-persistentsync-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      What are the prerequisites for PersistentSync strategy?
+      
+        What are the prerequisites for PersistentSync strategy?
+      
     </span>
   </a>
   
@@ -3868,7 +3114,9 @@
         <li class="md-nav__item">
   <a href="#changetracking" class="md-nav__link">
     <span class="md-ellipsis">
-      ChangeTracking
+      
+        ChangeTracking
+      
     </span>
   </a>
   
@@ -3877,7 +3125,9 @@
         <li class="md-nav__item">
   <a href="#conflict-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Conflict Resolution
+      
+        Conflict Resolution
+      
     </span>
   </a>
   
@@ -3908,8 +3158,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3917,12 +3172,20 @@
         
   
   
+  
     <a href="Appendix_-_App_Services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - App Services
+  
+
+    
   </span>
+  
   
 
       
@@ -3947,9 +3210,16 @@
       <a href="Appendix_-_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Appendix - Frequently Asked Questions (FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3968,9 +3238,16 @@
       <a href="Limitations.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4003,21 +3280,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth Sample App Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4050,21 +3340,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../integration_services.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services
+  
+
+    
   </span>
+  
   
 
       
@@ -4097,21 +3400,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../administering_foundry.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Administering Foundry
+  
+
+    
   </span>
+  
   
 
       
@@ -4168,21 +3484,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Services Console User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4241,21 +3570,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Factory User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4304,8 +3646,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4313,12 +3660,20 @@
         
   
   
+  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Foundry Deployment Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4343,9 +3698,16 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Analytics & Reporting Cloud FAQs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4372,8 +3734,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4381,12 +3748,20 @@
         
   
   
+  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Integration Services Troubleshooting Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4421,6 +3796,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -4439,7 +3815,9 @@
         <li class="md-nav__item">
   <a href="#over-the-air-sync-otasync" class="md-nav__link">
     <span class="md-ellipsis">
-      Over The Air Sync (OTAsync)
+      
+        Over The Air Sync (OTAsync)
+      
     </span>
   </a>
   
@@ -4448,7 +3826,9 @@
         <li class="md-nav__item">
   <a href="#persistent-sync" class="md-nav__link">
     <span class="md-ellipsis">
-      Persistent Sync
+      
+        Persistent Sync
+      
     </span>
   </a>
   
@@ -4457,7 +3837,9 @@
         <li class="md-nav__item">
   <a href="#when-to-use-which-sync-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      When to Use which Sync Strategy?
+      
+        When to Use which Sync Strategy?
+      
     </span>
   </a>
   
@@ -4467,7 +3849,9 @@
           <li class="md-nav__item">
   <a href="#otasync-strategy-is-recommended-solution-when" class="md-nav__link">
     <span class="md-ellipsis">
-      OTASync Strategy is recommended solution when:
+      
+        OTASync Strategy is recommended solution when:
+      
     </span>
   </a>
   
@@ -4476,7 +3860,9 @@
           <li class="md-nav__item">
   <a href="#persistentsync-is-recommended-solution-when" class="md-nav__link">
     <span class="md-ellipsis">
-      PersistentSync is recommended solution when:
+      
+        PersistentSync is recommended solution when:
+      
     </span>
   </a>
   
@@ -4485,7 +3871,9 @@
           <li class="md-nav__item">
   <a href="#what-are-the-prerequisites-for-otasync-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      What are the prerequisites for OTASync strategy ?
+      
+        What are the prerequisites for OTASync strategy ?
+      
     </span>
   </a>
   
@@ -4494,7 +3882,9 @@
           <li class="md-nav__item">
   <a href="#what-are-the-prerequisites-for-persistentsync-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      What are the prerequisites for PersistentSync strategy?
+      
+        What are the prerequisites for PersistentSync strategy?
+      
     </span>
   </a>
   
@@ -4508,7 +3898,9 @@
         <li class="md-nav__item">
   <a href="#changetracking" class="md-nav__link">
     <span class="md-ellipsis">
-      ChangeTracking
+      
+        ChangeTracking
+      
     </span>
   </a>
   
@@ -4517,7 +3909,9 @@
         <li class="md-nav__item">
   <a href="#conflict-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Conflict Resolution
+      
+        Conflict Resolution
+      
     </span>
   </a>
   
@@ -4533,27 +3927,37 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_user_guide/Content/Appendix_-_Sync_Strategy.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 <p>User Guide: Appendix - Sync Strategy</p>
-<h1 id="appendix-sync-strategy">Appendix - Sync Strategy</h1>
+<h1 id="appendix-sync-strategy">Appendix - Sync Strategy<a class="headerlink" href="#appendix-sync-strategy" title="Permanent link">&para;</a></h1>
 <p>During offline operation, the mobile application on the device is completely disconnected from the server. Instances of the same application that may run on other mobile devices at the same time, either connected to or disconnected from the server. Data stored locally on the mobile device running in offline mode may be modified or deleted or new data may be created. Potentially, the same data entity may be modified by multiple mobile clients concurrently, running either in online or offline operation, with potential effects on the server data store. These modifications that may be in conflict with others, have to be synchronized with the data on the server when a mobile application switches back to online operation. During this process, conflicts need to be reconciled and updates have to be made available to other application clients connected.</p>
 <p>To enable the above synchronization needs the server may choose to store the data before merging it with the Enterprise Datasource. Though this is not a mandatory requirement, it is very desirable when the Enterprise Datasource has not been designed for handling additional mobile users or is only occasionally available.</p>
 <p>Volt MX  Foundry Sync Framework provides two flexible sync strategies that help the application developer design the application that best suites the enterprise needs.</p>
-<h2 id="over-the-air-sync-otasync">Over The Air Sync (OTAsync)</h2>
+<h2 id="over-the-air-sync-otasync">Over The Air Sync (OTAsync)<a class="headerlink" href="#over-the-air-sync-otasync" title="Permanent link">&para;</a></h2>
 <p>In this strategy whenever the mobile application invokes sync API, the Volt MX Foundry Sync server immediately merges upload packets with the enterprise server. Similarly the Volt MX Foundry Sync server queries the enterprise server for "delta" changes real-time and sends the same to the mobile application.</p>
 <p>In this strategy, Enterprise Datasource is assumed to be available when the device starts the sync session.</p>
 <p><img alt="" src="Resources/Images/OTA.png" /></p>
-<h2 id="persistent-sync">Persistent Sync</h2>
+<h2 id="persistent-sync">Persistent Sync<a class="headerlink" href="#persistent-sync" title="Permanent link">&para;</a></h2>
 <p>In this strategy the application data is first persisted on Volt MX Foundry Sync server and later merged with the Enterprise Datasource as part of the offline process. Though this results in some data latency but ensures that the system is still functional even though the Enterprise Datasource may not be available.</p>
 <p><img alt="" src="Resources/Images/persistent.png" /></p>
 <p>In this strategy, the Sync Framework buffers / persists the backend data; during synchronization of a mobile client, the delta for that client is calculated based on the existing data in the Volt MX Foundry Sync Server. You can schedule replication jobs to occur at predetermined intervals to update the Volt MX Foundry Sync Server data. These jobs compare backend data with the data that is persisted in the Volt MX Foundry Sync Server and decide whether an object needs to be updated.</p>
-<h2 id="when-to-use-which-sync-strategy">When to Use which Sync Strategy?</h2>
+<h2 id="when-to-use-which-sync-strategy">When to Use which Sync Strategy?<a class="headerlink" href="#when-to-use-which-sync-strategy" title="Permanent link">&para;</a></h2>
 <p>Deciding upon to use a Sync Strategy is one of the key architectural / designs decisions that you need to make when developing any enterprise grade offline application. This is not a simple decision but is based on number of input parameters and system constraints. Below are some of the recommendations that can help you determine to choose the appropriate strategy:</p>
-<h3 id="otasync-strategy-is-recommended-solution-when">OTASync Strategy is recommended solution when:</h3>
+<h3 id="otasync-strategy-is-recommended-solution-when">OTASync Strategy is recommended solution when:<a class="headerlink" href="#otasync-strategy-is-recommended-solution-when" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The Enterprise backend is highly available to the Volt MX Foundry Sync Server. It can be assumed that the availability of connectivity between the Device and Volt MX Foundry Sync server is the same as the availability of connectivity between the Volt MX Foundry Sync Server and the Enterprise backend. So whenever the device has network availability it can directly post the changes to the Enterprise backend.</li>
 <li>When there is a need to keep system and operational costs down by not having to replicate the enterprise backend on the Volt MX Foundry Sync server. Data replication does added to the amount of disk space needed to maintain the data and also resources to monitor the data.</li>
@@ -4561,30 +3965,32 @@
 <li>The Enterprise backend can provide delta changes based on the last updated timestamp as that the device sends. Before we get into the details to understand the need for this, it is important to understand that the essence of OTASync strategy to is to avoid “persisting” a copy of the Enterprise backend data on the Volt MX Foundry Sync server. During OTASync, the device waits for the client changes to merge with enterprise backend and at the same time, enterprise updates to been sent to the device. Now, if the enterprise backend does not provide the ability to query “deltas”, it means that you have to do the real time delta determination. This means that current state of device data is available on the Volt MX Foundry Sync server to compare with the current state of the data on the Enterprise backend (so that you can determine the deltas between two sources). Since we don’t persist data on the Volt MX Foundry Sync server (for OTASync strategy), this means sending a snapshot of the client data with every upload request may increase the pay load of the upload request to an unmanageable level. SalesForce WebServices offers a very good design pattern on how you should design services to suite the OTASync strategy.</li>
 <li>Every time the users perform a sync, they get access to the Latest updates on the Enterprise backend.</li>
 </ul>
-<h3 id="persistentsync-is-recommended-solution-when">PersistentSync is recommended solution when:</h3>
+<h3 id="persistentsync-is-recommended-solution-when">PersistentSync is recommended solution when:<a class="headerlink" href="#persistentsync-is-recommended-solution-when" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The Enterprise backend is not highly available. For example: the Order Processing system is busy serving desktop users during the peak hours (say 9:00 AM to 5:00 PM) and cannot take additional load of the “new” mobile users (employees accessing the system using mobile devices). So, in order to make sure that the mobile users are still able to submit requests, you have to persist these requests on Volt MX Foundry Sync server and merge with the Enterprise backend offline (during off peak hours).</li>
 <li>A scheduled system down time does not allow users to access the (typically due to time zone differences)</li>
 <li>The Enterprise backend is “UnProvisioned”. Provisioned is the term used to signify you have to follow typical database design patterns such as tracking deletes through a soft delete flag and tracking lastupdated timestamp for each data item (or a table row). An unprovisioned backend does not follow these characteristics and hence it means that Volt MX Foundry Sync Server has to do delta determination (which dataitems /rows are added new, deleted and updated). When we deal with row items in thousands, this can be a processor intensive and time consuming exercise. hence this is usually done offline say few times during a day for the entire dataset (data for all users in the system)</li>
 <li>It is acceptable that users are productive even with information set that is “outdated” or “stale” by a few hours. Merging of the data is done usually at periodic intervals, it means that data in the Replica Database can be outdated with respect to the Enterprise backend.</li>
 </ul>
-<h3 id="what-are-the-prerequisites-for-otasync-strategy">What are the prerequisites for OTASync strategy ?</h3>
+<h3 id="what-are-the-prerequisites-for-otasync-strategy">What are the prerequisites for OTASync strategy ?<a class="headerlink" href="#what-are-the-prerequisites-for-otasync-strategy" title="Permanent link">&para;</a></h3>
 <p>In order to select the OTASync strategy for a particular SyncScope, ensure that the follow prerequisites are met:</p>
 <ul>
 <li>Enterprise backend is Provisioned. This means that it provides a way to query updated records based on a timestamp and also query the deleted records based on a timestamp.</li>
 <li>It should provide a way to get data items (rows) in batches. This is important as the device has limited memory and can process limited data at any given point in time.</li>
 </ul>
-<h3 id="what-are-the-prerequisites-for-persistentsync-strategy">What are the prerequisites for PersistentSync strategy?</h3>
+<h3 id="what-are-the-prerequisites-for-persistentsync-strategy">What are the prerequisites for PersistentSync strategy?<a class="headerlink" href="#what-are-the-prerequisites-for-persistentsync-strategy" title="Permanent link">&para;</a></h3>
 <p>In order to select the PersistentSync strategy for a particular SyncScope, ensure that the follow prerequisites are met:</p>
 <ul>
 <li>The system provides access to data for all users with a single login / authentication. This is essential since the replica database stores the data for all users and should be able to query the same from the Enterprise backend. The replica service does not refresh data for a particular user. It does across users. For example: it invokes getAll operation on Account objects. This means that it gets all the accounts across users and then tags the one that is updated and that is deleted. The replica service does not have any context of the users that are defined in the systems. The replica service only job is to refresh data periodically from Enterprise backend.</li>
 <li>Additional storage capacity to be allocated on Volt MX Foundry Sync Server as it now also stores a copy of the Enterprise backend</li>
 </ul>
-<h2 id="changetracking">ChangeTracking</h2>
+<h2 id="changetracking">ChangeTracking<a class="headerlink" href="#changetracking" title="Permanent link">&para;</a></h2>
 <p>Applications requiring data synchronization capabilities require that changes are tracked in the server database so that these changes can be delivered to clients during a subsequent synchronization session (and vice versa). Below, we discuss different strategies that you can apply / configure to ensure that you can share only incremental updates between client and server.</p>
 <p>Volt MX  Foundry Sync framework provides the ability to either utilize change tracking that the datasource provides or in absence of such capability at the datasource, the Sync framework itself can change tracking in the server.</p>
-<h2 id="conflict-resolution">Conflict Resolution</h2>
+<h2 id="conflict-resolution">Conflict Resolution<a class="headerlink" href="#conflict-resolution" title="Permanent link">&para;</a></h2>
 <p>During synchronizing two data stores (local device client and enterprise server), conflicts may occur if the same data object is modified in both participating stores independently. You can detect the conflicts by comparing state information of the two objects. The resolution of a conflict is called reconciliation and is always performed on the enterprise schema.</p>
+
+
 
 
 
@@ -4607,7 +4013,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -4645,10 +4051,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>

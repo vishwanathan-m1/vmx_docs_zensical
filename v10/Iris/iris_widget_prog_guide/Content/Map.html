@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_widget_prog_guide/Content/Map.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_widget_prog_guide/Content/Map.html">
       
       
         <link rel="prev" href="ListBox_Basic_Properties.html">
@@ -18,18 +18,53 @@
         <link rel="next" href="Map_Templates.html">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
+      <meta name="generator" content="zensical-0.0.8">
     
     
       
-        <title>Map Widget Basics - HCL Volt MX Documentation</title>
+        <title>Map Widget - HCL Volt MX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
       
       
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
 
 
     
@@ -41,7 +76,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,11 +85,10 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -127,7 +161,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -139,7 +173,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Map Widget Basics
+              Map Widget
             
           </span>
         </div>
@@ -147,67 +181,36 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -226,11 +229,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
-  
-    
   
   Introducing Volt MX
 
@@ -243,11 +245,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
-  
-    
   
   Getting Started
 
@@ -260,13 +261,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
-  
-    
   
   What&apos;s New
 
@@ -280,11 +280,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
-  
-    
   
   Release Notes
 
@@ -297,13 +296,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
-  
-    
   
   App Platform
 
@@ -317,13 +315,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
-  
-    
   
   Tutorials
 
@@ -337,11 +334,10 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
-  
-    
   
   Installation Guides
 
@@ -353,6 +349,7 @@
         
   
   
+  
     
   
   
@@ -361,8 +358,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Iris
 
@@ -376,13 +371,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
-  
-    
   
   Foundry
 
@@ -426,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -446,9 +440,16 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introducing Volt MX
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -466,9 +467,16 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -490,59 +498,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     What&apos;s New
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            What&apos;s New
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    What&apos;s new in V10
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -558,9 +549,16 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,59 +580,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     App Platform
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            App Platform
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -682,353 +663,42 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
+    
   </span>
   
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Tutorials
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
   
 
-      </a>
-    </li>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Action Editor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    App Factory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/architecture.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Build And Productivity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Components and Marketplace
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connecting to Backend
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing For Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Designing the Layout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Internationalization and Localization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Notification and Analytics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offline Services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programming and Extensibility
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1044,9 +714,16 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Installation Guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,13 +771,17 @@
     
     
     
-    
       
+        
+        
+      
+      
+    
+    
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -1109,9 +790,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1120,7 +808,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris
+            
+  
+    Iris
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1134,9 +826,16 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fundamentals
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1165,21 +864,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Installing Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -1272,21 +984,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris tutorials
+  
+
+    
   </span>
+  
   
 
       
@@ -1349,21 +1074,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris User Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1420,21 +1158,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Application Design and Development Guidelines
+  
+
+    
   </span>
+  
   
 
       
@@ -1595,21 +1346,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt Iris API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1644,8 +1408,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1653,12 +1422,20 @@
         
   
   
+  
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Native Function API Developers Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -1791,10 +1568,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" checked>
@@ -1803,9 +1584,16 @@
           <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Widget Programmer Guide
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1814,7 +1602,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_8">
             <span class="md-nav__icon md-icon"></span>
-            Iris Widget Programmer Guide
+            
+  
+    Iris Widget Programmer Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1828,9 +1620,16 @@
       <a href="Overview.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1849,9 +1648,16 @@
       <a href="widgetApiReference.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Widgets and API reference
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1870,9 +1676,16 @@
       <a href="GestureAPI.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Gesture Methods and 3D Touch
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1891,9 +1704,16 @@
       <a href="Widget_Skins.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Widget Skins
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1912,9 +1732,16 @@
       <a href="Dynamic_Skinning.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Dynamic Skinning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1933,9 +1760,16 @@
       <a href="Application_Events.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Application  Initialization Events
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1960,8 +1794,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1969,12 +1808,20 @@
         
   
   
+  
     <a href="Animation.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Widget Animation Using Flex Forms
+  
+
+    
   </span>
+  
   
 
       
@@ -1999,9 +1846,16 @@
       <a href="API_Simplification.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API Simplification
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2020,9 +1874,16 @@
       <a href="Masters.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Masters
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2041,9 +1902,16 @@
       <a href="Widget_Common_Properties.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Widget Common Properties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2068,8 +1936,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2077,12 +1950,20 @@
         
   
   
+  
     <a href="PlatformSpecificCapabilities.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Platform Specific Capabilities
+  
+
+    
   </span>
+  
   
 
       
@@ -2107,9 +1988,16 @@
       <a href="Appendix.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Platform Specific Limitations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2138,21 +2026,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Alert.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Alert Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2185,21 +2086,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="App_Menu.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     App Menu Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2234,21 +2148,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="ARRenderer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ARRenderer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2283,21 +2210,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="BottomSheet.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     BottomSheet Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2332,21 +2272,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Browser.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Browser Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2381,21 +2334,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Button.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Button Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2430,21 +2396,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Calendar.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Calendar Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2479,21 +2458,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Camera.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Camera Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2528,21 +2520,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="canvas.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Canvas Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2577,21 +2582,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="CheckBox.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     CheckBoxGroup Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2626,21 +2644,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="CollectionView.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     CollectionView Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2675,21 +2706,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="CordovaBrowser.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     CordovaBrowser Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2726,21 +2770,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="DataGrid.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     DataGrid Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2779,21 +2836,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="FlexContainer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     FlexContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2834,21 +2904,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="FlexForm.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     FlexForm Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2887,21 +2970,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="FlexScrollContainer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     FlexScrollContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2936,21 +3032,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Image.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Image Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -2985,21 +3094,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="label.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Label Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3034,8 +3156,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3043,12 +3170,20 @@
         
   
   
+  
     <a href="ListBox.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ListBox Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3089,10 +3224,14 @@
     
     
     
+      
+      
+    
+    
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_32" checked>
@@ -3101,9 +3240,16 @@
           <label class="md-nav__link" for="__nav_8_8_32" id="__nav_8_8_32_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Map Widget
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3112,7 +3258,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_32_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_8_32">
             <span class="md-nav__icon md-icon"></span>
-            Map Widget
+            
+  
+    Map Widget
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3135,9 +3285,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Map Widget Basics
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -3146,14 +3303,22 @@
       <a href="Map.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Map Widget Basics
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
+
 
   
 
@@ -3173,7 +3338,9 @@
         <li class="md-nav__item">
   <a href="#layout" class="md-nav__link">
     <span class="md-ellipsis">
-      Layout
+      
+        Layout
+      
     </span>
   </a>
   
@@ -3182,7 +3349,9 @@
         <li class="md-nav__item">
   <a href="#animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Animations
+      
+        Animations
+      
     </span>
   </a>
   
@@ -3191,7 +3360,9 @@
         <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Management
+      
+        Data Management
+      
     </span>
   </a>
   
@@ -3200,7 +3371,9 @@
         <li class="md-nav__item">
   <a href="#3d-touch" class="md-nav__link">
     <span class="md-ellipsis">
-      3D Touch
+      
+        3D Touch
+      
     </span>
   </a>
   
@@ -3209,7 +3382,9 @@
         <li class="md-nav__item">
   <a href="#user-input-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      User Input Handling
+      
+        User Input Handling
+      
     </span>
   </a>
   
@@ -3218,7 +3393,9 @@
         <li class="md-nav__item">
   <a href="#ui-appearance" class="md-nav__link">
     <span class="md-ellipsis">
-      UI Appearance
+      
+        UI Appearance
+      
     </span>
   </a>
   
@@ -3227,7 +3404,9 @@
         <li class="md-nav__item">
   <a href="#enabling-rtl" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling RTL
+      
+        Enabling RTL
+      
     </span>
   </a>
   
@@ -3236,7 +3415,9 @@
         <li class="md-nav__item">
   <a href="#miscellaneous" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      
+        Miscellaneous
+      
     </span>
   </a>
   
@@ -3245,7 +3426,9 @@
         <li class="md-nav__item">
   <a href="#configurations-common-to-all-widgets" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurations Common To All Widgets
+      
+        Configurations Common To All Widgets
+      
     </span>
   </a>
   
@@ -3254,7 +3437,9 @@
         <li class="md-nav__item">
   <a href="#map-widget-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Map Widget Basics
+      
+        Map Widget Basics
+      
     </span>
   </a>
   
@@ -3264,7 +3449,9 @@
           <li class="md-nav__item">
   <a href="#flex-container-support" class="md-nav__link">
     <span class="md-ellipsis">
-      Flex Container Support
+      
+        Flex Container Support
+      
     </span>
   </a>
   
@@ -3273,7 +3460,9 @@
           <li class="md-nav__item">
   <a href="#mapping-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Mapping Services
+      
+        Mapping Services
+      
     </span>
   </a>
   
@@ -3282,7 +3471,9 @@
           <li class="md-nav__item">
   <a href="#creating-a-map-using-a-constructor-voltmxuimap" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Map Using a Constructor: voltmx.ui.Map
+      
+        Creating a Map Using a Constructor: voltmx.ui.Map
+      
     </span>
   </a>
   
@@ -3291,7 +3482,9 @@
           <li class="md-nav__item">
   <a href="#map-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Map Examples
+      
+        Map Examples
+      
     </span>
   </a>
   
@@ -3301,7 +3494,9 @@
           <li class="md-nav__item">
   <a href="#example-1-creating-a-map-dynamically" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Creating a Map Dynamically
+      
+        Example 1: Creating a Map Dynamically
+      
     </span>
   </a>
   
@@ -3310,7 +3505,9 @@
           <li class="md-nav__item">
   <a href="#example-2-using-flex-containers-in-maps" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 2: Using Flex Containers in Maps
+      
+        Example 2: Using Flex Containers in Maps
+      
     </span>
   </a>
   
@@ -3324,7 +3521,9 @@
           <li class="md-nav__item">
   <a href="#managing-map-pins" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing Map Pins
+      
+        Managing Map Pins
+      
     </span>
   </a>
   
@@ -3333,7 +3532,9 @@
           <li class="md-nav__item">
   <a href="#important-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Considerations
+      
+        Important Considerations
+      
     </span>
   </a>
   
@@ -3342,7 +3543,9 @@
           <li class="md-nav__item">
   <a href="#customizing-map-pin-images" class="md-nav__link">
     <span class="md-ellipsis">
-      Customizing Map Pin Images
+      
+        Customizing Map Pin Images
+      
     </span>
   </a>
   
@@ -3351,7 +3554,9 @@
           <li class="md-nav__item">
   <a href="#searching-routes" class="md-nav__link">
     <span class="md-ellipsis">
-      Searching Routes
+      
+        Searching Routes
+      
     </span>
   </a>
   
@@ -3381,9 +3586,16 @@
       <a href="Map_Templates.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Templates
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3402,9 +3614,16 @@
       <a href="Map_Events.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Events
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3423,9 +3642,16 @@
       <a href="Map_Methods.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Methods
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3444,9 +3670,16 @@
       <a href="Map_Properties.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Properties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3465,9 +3698,16 @@
       <a href="MapObjects.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Objects
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3504,21 +3744,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="MLCamera.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     MLCamera Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3553,21 +3806,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="nativeContainer.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     NativeContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3602,21 +3868,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PDFView.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     PDFView Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3651,21 +3930,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Phone.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Phone Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3700,21 +3992,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="PickerView.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     PickerView Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3749,21 +4054,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="RadioButtonGroup.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     RadioButtonGroup Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3794,21 +4112,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="react_Native_Container.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     ReactNativeContainer Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3843,21 +4174,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="RichText.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     RichText Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3894,21 +4238,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Segment.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SegmentedUI Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3943,21 +4300,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Signature.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SignatureCapture Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -3990,21 +4360,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="SigninWithApple.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     SigninWithApple Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4041,21 +4424,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Slider.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Slider Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4090,21 +4486,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Switch.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Switch Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4139,21 +4548,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="TabPane.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     TabPane Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4188,21 +4610,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="TextArea.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     TextArea2 Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4237,21 +4672,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="TextBox.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     TextBox2 Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4288,21 +4736,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="Toolbar.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Toolbar Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4337,8 +4798,13 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -4346,12 +4812,20 @@
         
   
   
+  
     <a href="Video.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Video Widget
+  
+
+    
   </span>
+  
   
 
       
@@ -4376,9 +4850,16 @@
       <a href="Deprecated.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Deprecated Widgets
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4397,9 +4878,16 @@
       <a href="Glossary.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Glossary
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4432,21 +4920,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris Wearables Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4481,21 +4982,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Iris CarApp Developer Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4530,21 +5044,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     iOS Live Activities in Volt MX Iris
+  
+
+    
   </span>
+  
   
 
       
@@ -4577,21 +5104,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the Volt MX App
+  
+
+    
   </span>
+  
   
 
       
@@ -4624,21 +5164,34 @@
     
     
     
+      
+      
+    
     
       
+        
+        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
+  
   
   
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
+  
   <span class="md-ellipsis">
+    
+  
     Volt MX Reference Architecture Guide
+  
+
+    
   </span>
+  
   
 
       
@@ -4694,106 +5247,34 @@
     
     
     
-    
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
       
         
         
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
-            
+  
+  
+  
+    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+      
+  
   
   <span class="md-ellipsis">
+    
+  
     Foundry
-  </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Foundry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fundamentals
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Installing Foundry
-  </span>
   
 
       
@@ -4802,579 +5283,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    OAuth Sample App Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Administering Foundry
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Services Console User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    App Factory User Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Volt MX Foundry Deployment Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Volt MX Analytics & Reporting Cloud FAQs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Integration Services Troubleshooting Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -5392,6 +5300,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -5411,7 +5320,9 @@
         <li class="md-nav__item">
   <a href="#layout" class="md-nav__link">
     <span class="md-ellipsis">
-      Layout
+      
+        Layout
+      
     </span>
   </a>
   
@@ -5420,7 +5331,9 @@
         <li class="md-nav__item">
   <a href="#animations" class="md-nav__link">
     <span class="md-ellipsis">
-      Animations
+      
+        Animations
+      
     </span>
   </a>
   
@@ -5429,7 +5342,9 @@
         <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Management
+      
+        Data Management
+      
     </span>
   </a>
   
@@ -5438,7 +5353,9 @@
         <li class="md-nav__item">
   <a href="#3d-touch" class="md-nav__link">
     <span class="md-ellipsis">
-      3D Touch
+      
+        3D Touch
+      
     </span>
   </a>
   
@@ -5447,7 +5364,9 @@
         <li class="md-nav__item">
   <a href="#user-input-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      User Input Handling
+      
+        User Input Handling
+      
     </span>
   </a>
   
@@ -5456,7 +5375,9 @@
         <li class="md-nav__item">
   <a href="#ui-appearance" class="md-nav__link">
     <span class="md-ellipsis">
-      UI Appearance
+      
+        UI Appearance
+      
     </span>
   </a>
   
@@ -5465,7 +5386,9 @@
         <li class="md-nav__item">
   <a href="#enabling-rtl" class="md-nav__link">
     <span class="md-ellipsis">
-      Enabling RTL
+      
+        Enabling RTL
+      
     </span>
   </a>
   
@@ -5474,7 +5397,9 @@
         <li class="md-nav__item">
   <a href="#miscellaneous" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      
+        Miscellaneous
+      
     </span>
   </a>
   
@@ -5483,7 +5408,9 @@
         <li class="md-nav__item">
   <a href="#configurations-common-to-all-widgets" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurations Common To All Widgets
+      
+        Configurations Common To All Widgets
+      
     </span>
   </a>
   
@@ -5492,7 +5419,9 @@
         <li class="md-nav__item">
   <a href="#map-widget-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Map Widget Basics
+      
+        Map Widget Basics
+      
     </span>
   </a>
   
@@ -5502,7 +5431,9 @@
           <li class="md-nav__item">
   <a href="#flex-container-support" class="md-nav__link">
     <span class="md-ellipsis">
-      Flex Container Support
+      
+        Flex Container Support
+      
     </span>
   </a>
   
@@ -5511,7 +5442,9 @@
           <li class="md-nav__item">
   <a href="#mapping-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Mapping Services
+      
+        Mapping Services
+      
     </span>
   </a>
   
@@ -5520,7 +5453,9 @@
           <li class="md-nav__item">
   <a href="#creating-a-map-using-a-constructor-voltmxuimap" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Map Using a Constructor: voltmx.ui.Map
+      
+        Creating a Map Using a Constructor: voltmx.ui.Map
+      
     </span>
   </a>
   
@@ -5529,7 +5464,9 @@
           <li class="md-nav__item">
   <a href="#map-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Map Examples
+      
+        Map Examples
+      
     </span>
   </a>
   
@@ -5539,7 +5476,9 @@
           <li class="md-nav__item">
   <a href="#example-1-creating-a-map-dynamically" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: Creating a Map Dynamically
+      
+        Example 1: Creating a Map Dynamically
+      
     </span>
   </a>
   
@@ -5548,7 +5487,9 @@
           <li class="md-nav__item">
   <a href="#example-2-using-flex-containers-in-maps" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 2: Using Flex Containers in Maps
+      
+        Example 2: Using Flex Containers in Maps
+      
     </span>
   </a>
   
@@ -5562,7 +5503,9 @@
           <li class="md-nav__item">
   <a href="#managing-map-pins" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing Map Pins
+      
+        Managing Map Pins
+      
     </span>
   </a>
   
@@ -5571,7 +5514,9 @@
           <li class="md-nav__item">
   <a href="#important-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Considerations
+      
+        Important Considerations
+      
     </span>
   </a>
   
@@ -5580,7 +5525,9 @@
           <li class="md-nav__item">
   <a href="#customizing-map-pin-images" class="md-nav__link">
     <span class="md-ellipsis">
-      Customizing Map Pin Images
+      
+        Customizing Map Pin Images
+      
     </span>
   </a>
   
@@ -5589,7 +5536,9 @@
           <li class="md-nav__item">
   <a href="#searching-routes" class="md-nav__link">
     <span class="md-ellipsis">
-      Searching Routes
+      
+        Searching Routes
+      
     </span>
   </a>
   
@@ -5610,13 +5559,23 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_widget_prog_guide/Content/Map.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
+    </a>
+  
+  
 
 
+<div class="language-text highlight"><pre><span></span><code>
+</code></pre></div>
 <p>You are here: Flex Container Support</p>
-<h1 id="map-widget">Map Widget</h1>
+<h1 id="map-widget">Map Widget<a class="headerlink" href="#map-widget" title="Permanent link">&para;</a></h1>
 <p>If you want to display certain geographical locations on a map as part of your application, you should use a Map widget. The Map widget uses native maps such as Google Maps to display the relevant points. Map widgets also have callouts and annotations such as pins and label to display the information related to each coordinate.</p>
 <p>Here are some use cases in which you can use a Map widget, instead of calling the Maps app such as Google apps:</p>
 <ul>
@@ -5628,8 +5587,8 @@
 <p>You can also use Map widgets to overlay the map with various shapes such as circle, polyline, and polygon; encode or decode the maps; add pins to the map; and customize information that needs to be displayed for each pin (by using callout). In addition, you can use a Map widget to determine the distance between two geographical coordinates.</p>
 <p>A Map widget provides you the capability to display pre-defined locations (latitude and longitude) on an onscreen map. Platforms like iPhone (above 3.0), and Android provide a native map widget that can be displayed as part of the application.</p>
 <p>On platforms where a native map widget is not available, the Map widget integrates with Google Maps and displays the static image with zoom and pan controls. You can customize the map view if you do not want to use the default view.</p>
-<p>Widgets are normally added to your application using Volt MX Iris, but can also be added from code. For general information on using widgets in Volt MX Iris, see <a href="../../iris_user_guide/Content/Part_II_CreatingAnApplication.html">Designing an Application</a> in the <a href="../../iris_user_guide/Content/Introduction.html">Iris User Guide</a>.</p>
-<p>For general information on the Map widget see the <a href="../../iris_user_guide/Content/Map.html">Map</a> topic in the Volt MX Iris User Guide.</p>
+<p>Widgets are normally added to your application using Volt MX Iris, but can also be added from code. For general information on using widgets in Volt MX Iris, see <a href="../../../Iris/iris_user_guide/Content/Part_II_CreatingAnApplication.html">Designing an Application</a> in the <a href="../../../Iris/iris_user_guide/Content/Introduction.html">Iris User Guide</a>.</p>
+<p>For general information on the Map widget see the <a href="../../../Iris/iris_user_guide/Content/Map.html">Map</a> topic in the Volt MX Iris User Guide.</p>
 <p>For a more hands-on approach on the functions of Map widget and features provided by the Map API, import and preview the <strong>Map Feature</strong> sample app by using Volt MX Iris.</p>
 <p><a href="https://marketplace.hclvoltmx.com/items/voltmx-map-feature-app"><img alt="" src="Resources/Images/Download_Button_10_230x35.png" /></a> </p>
 <p>The Map widget capabilities can be broadly categorized into the following:</p>
@@ -5644,7 +5603,7 @@
 <li><a href="#miscellaneous">Miscellaneous</a></li>
 <li><a href="#configurations-common-to-all-widgets">Configurations Common To All Widgets</a></li>
 </ul>
-<h4 id="layout">Layout</h4>
+<h4 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -5745,7 +5704,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="animations">Animations</h4>
+<h4 id="animations">Animations<a class="headerlink" href="#animations" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -5774,7 +5733,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="data-management">Data Management</h4>
+<h4 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -5823,7 +5782,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="3d-touch">3D Touch</h4>
+<h4 id="3d-touch">3D Touch<a class="headerlink" href="#3d-touch" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -5850,7 +5809,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="user-input-handling">User Input Handling</h4>
+<h4 id="user-input-handling">User Input Handling<a class="headerlink" href="#user-input-handling" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -5908,12 +5867,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Map_Properties.html#autoCenterPinOnClick">autoCenterPinOnClick</a></td>
+<td><a href="../../../Iris/iris_widget_prog_guide/Content/Map_Properties.html#autoCenterPinOnClick">autoCenterPinOnClick</a></td>
 <td>Controls the placement of the pins of the Map widget to the center, when it is clicked.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="ui-appearance">UI Appearance</h4>
+<h4 id="ui-appearance">UI Appearance<a class="headerlink" href="#ui-appearance" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -6034,7 +5993,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="enabling-rtl">Enabling RTL</h4>
+<h4 id="enabling-rtl">Enabling RTL<a class="headerlink" href="#enabling-rtl" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -6057,7 +6016,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="miscellaneous">Miscellaneous</h4>
+<h4 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -6089,7 +6048,7 @@
 <td>Specifies the type of the mouse pointer used.</td>
 </tr>
 <tr>
-<td><a href="Map_Properties.html#enableToolBar">enableToolBar</a></td>
+<td><a href="../../../Iris/iris_widget_prog_guide/Content/Map_Properties.html#enableToolBar">enableToolBar</a></td>
 <td>Helps you to either enable or disable toolbar of a Map widget.</td>
 </tr>
 <tr>
@@ -6120,7 +6079,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="configurations-common-to-all-widgets">Configurations Common To All Widgets</h4>
+<h4 id="configurations-common-to-all-widgets">Configurations Common To All Widgets<a class="headerlink" href="#configurations-common-to-all-widgets" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -6181,18 +6140,18 @@
 </tr>
 </tbody>
 </table>
-<h2 id="map-widget-basics">Map Widget Basics</h2>
+<h2 id="map-widget-basics">Map Widget Basics<a class="headerlink" href="#map-widget-basics" title="Permanent link">&para;</a></h2>
 <p>With the Map widget, your app can display a specific location, overlay it with circles, polygons, and polylines, and add highly customizable pins. With these capabilities, you app can, for instance, show the user a circular or rectangular area in which the app will search for certain types of businesses.</p>
 <p>In addition, your app can search for possible routes between a source and a destination location and show them on the map by drawing a polyline.</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> On Android platform, Map widget does not work in Popup.</p>
 </blockquote>
-<h3 id="flex-container-support">Flex Container Support</h3>
+<h3 id="flex-container-support">Flex Container Support<a class="headerlink" href="#flex-container-support" title="Permanent link">&para;</a></h3>
 <p>When designing and developing your app, you can place a Map widget inside a flex container such as a FlexForm, a FlexContainer, or a FlexScrollContainer. You can also apply flex templates to Map widgets to aid in customizing their appearance. However, flex templates cannot be applied to Map widgets that are placed inside a box container such as an HBox or VBox. Flex templates can only be used on Map widgets that you have placed inside a flex container. In addition, you can use flex containers and flex templates for your pin callouts.</p>
 <p>When used within a flex container, callouts behave in ways that are different from most widgets. For example, the Map widget does not use the flex container positional properties for callouts because it always displays callouts at the pin location. Because the Map widget itself is not derived from a flex container, the implicit calculations that normally occur with flex dimensional parameters are not performed with a Map widget's callouts. If the callout does not have an explicit width and height specified, the flex container default width and height are applied. When you apply callout templates to callounts in the Map widget, the Map widget ignores the <strong>calloutWidth</strong> property entirely.</p>
 <p>Since a Flex container has the width and height properties, the calloutWidth property of a Map is ignored when using a Flex callout template.</p>
 <p>Positional parameters of Flex containers are not respected since callouts are always displayed at the pin location rather than positions specified. Implicit calculations of flex dimensional values are not supported as its parent (the Map widget) is not a Flex container. If the widget does not have explicit width and height specified, Flex container default width and height are applicable.</p>
-<h3 id="mapping-services">Mapping Services</h3>
+<h3 id="mapping-services">Mapping Services<a class="headerlink" href="#mapping-services" title="Permanent link">&para;</a></h3>
 <p>The Map widget renders a map using the mapping service provided by the platform. The following table shows the list of platforms and the available mapping services:</p>
 <table>
 <thead>
@@ -6216,11 +6175,10 @@
 </tr>
 </tbody>
 </table>
-<p>To generate and configure Android Google Map APIs <a href="../../iris_user_guide/Content/Generating_Map_Keys.html">click here</a>.</p>
-<h3 id="creating-a-map-using-a-constructor-voltmxuimap">Creating a Map Using a Constructor: voltmx.ui.Map</h3>
-<pre><code>
-var mymap = new voltmx.ui.Map(basicConf, layoutConf, pspConf);
-</code></pre>
+<p>To generate and configure Android Google Map APIs <a href="../../../Iris/iris_user_guide/Content/Generating_Map_Keys.html">click here</a>.</p>
+<h3 id="creating-a-map-using-a-constructor-voltmxuimap">Creating a Map Using a Constructor: voltmx.ui.Map<a class="headerlink" href="#creating-a-map-using-a-constructor-voltmxuimap" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>var mymap = new voltmx.ui.Map(basicConf, layoutConf, pspConf);
+</span></code></pre></div>
 <ul>
 <li><strong>basicConf</strong> is an object with basic properties.</li>
 <li><strong>layoutConf</strong> is an object with layout properties.</li>
@@ -6229,245 +6187,244 @@ var mymap = new voltmx.ui.Map(basicConf, layoutConf, pspConf);
 <blockquote>
 <p><strong><em>Note:</em></strong> The configuration properties should be passed only in the respective configuration objects otherwise they are ignored</p>
 </blockquote>
-<h3 id="map-examples">Map Examples</h3>
-<h4 id="example-1-creating-a-map-dynamically">Example 1: Creating a Map Dynamically</h4>
-<pre><code>//The below function is the callback function for onPinClick event.
-function onPinClickCallBck(map) {
-    alert(&quot;onPinClick event triggered&quot;);
-}
-
-//Defining the map properties
-var mapBasicConf = {
-    id: &quot;map1&quot;,
-    provider: constants.MAP_PROVIDER_GOOGLE,
-    mapKey: &quot;0z5UtaSPUYj42f5qX0VAwmDGLX39Qxgbtcra0TA&quot;, //Provide your own Google map key.
-    defaultPinImage: &quot;kmpin.png&quot;,
-    isVisible: true,
-    onPinClick: onPinClickCallBck
-};
-
-var mapLayoutConf = {
-    margin: [20, 40, 50, 20],
-    containerWeight: 100,
-    widgetAlignment: constants.WIDGET_ALIGN_BOTTOM_LEFT,
-    padding: [10, 10, 10, 10],
-    hExpand: false,
-    vExpand: false
-};
-
-var mapPSPConf = {
-    mode: constants.MAP_VIEW_MODE_HYBRID,
-    showCurrentLocation: constants.MAP_VIEW_SHOW_CURRENT_LOCATION_AS_PIN
-};
-//Creating the map with the properties defined above.
-var map = new voltmx.ui.Map(mapBasicConf, mapLayoutConf, mapPSPConf);
-</code></pre>
-<h4 id="example-2-using-flex-containers-in-maps">Example 2: Using Flex Containers in Maps</h4>
-<pre><code>var lbl1 = new voltmx.ui.Label({
-    &quot;height&quot;: &quot;26dp&quot;,
-    &quot;id&quot;: &quot;lbl1&quot;,
-    &quot;left&quot;: &quot;1dp&quot;,
-    &quot;top&quot;: &quot;85dp&quot;,
-    &quot;width&quot;: &quot;100dp&quot;,
-    &quot;zIndex&quot;: 1….
-}, {….
-}, {….
-});
-
-flexTemp1 = new voltmx.ui.FlexContainer({
-    &quot;bottom&quot;: &quot;50dp&quot;,
-    &quot;clipBounds&quot;: true,
-    &quot;id&quot;: &quot;flexTemp1&quot;,
-    &quot;isVisible&quot;: true,
-    &quot;layoutType&quot;: voltmx.flex.FREE_FORM,
-    &quot;left&quot;: &quot;0dp&quot;,
-    &quot;Location&quot;: &quot;[0,0]&quot;,
-    &quot;right&quot;: &quot;200dp&quot;,
-    &quot;skin&quot;: &quot;flexskin1&quot;,
-    &quot;top&quot;: &quot;0dp&quot;,
-    &quot;zIndex&quot;: 1
-}, {
-    &quot;padding&quot;: [0, 0, 0, 0]
-}, {});;
-
-flexTemp1.add(lbl1);
-mapWidget.calloutTemplate = flexTemp1;
-frmMap1.map1.widgetDataMapForCallout = {
-    &quot;lbl1&quot;: &quot;lbl1&quot;
-};
-frmMap1.map1.locationData = [{
-    lat: &quot;17.377513&quot;,
-    lon: &quot;78.475895&quot;,
-    name: &quot;HCL&quot;,
-    desc: &quot;Hyderabad,Telangana&quot;,
-    showCallout: true,
-    calloutData: {
-        lbl1: &quot;HCL&quot;
-    }
-}]      
-
-</code></pre>
-<h3 id="managing-map-pins">Managing Map Pins</h3>
+<h3 id="map-examples">Map Examples<a class="headerlink" href="#map-examples" title="Permanent link">&para;</a></h3>
+<h4 id="example-1-creating-a-map-dynamically">Example 1: Creating a Map Dynamically<a class="headerlink" href="#example-1-creating-a-map-dynamically" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>//The below function is the callback function for onPinClick event.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>function onPinClickCallBck(map) {
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    alert(&quot;onPinClick event triggered&quot;);
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>}
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>//Defining the map properties
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>var mapBasicConf = {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    id: &quot;map1&quot;,
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    provider: constants.MAP_PROVIDER_GOOGLE,
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    mapKey: &quot;0z5UtaSPUYj42f5qX0VAwmDGLX39Qxgbtcra0TA&quot;, //Provide your own Google map key.
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    defaultPinImage: &quot;kmpin.png&quot;,
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    isVisible: true,
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    onPinClick: onPinClickCallBck
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>};
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>var mapLayoutConf = {
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    margin: [20, 40, 50, 20],
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    containerWeight: 100,
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    widgetAlignment: constants.WIDGET_ALIGN_BOTTOM_LEFT,
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    padding: [10, 10, 10, 10],
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    hExpand: false,
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    vExpand: false
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>};
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>var mapPSPConf = {
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    mode: constants.MAP_VIEW_MODE_HYBRID,
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    showCurrentLocation: constants.MAP_VIEW_SHOW_CURRENT_LOCATION_AS_PIN
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>};
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>//Creating the map with the properties defined above.
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>var map = new voltmx.ui.Map(mapBasicConf, mapLayoutConf, mapPSPConf);
+</span></code></pre></div>
+<h4 id="example-2-using-flex-containers-in-maps">Example 2: Using Flex Containers in Maps<a class="headerlink" href="#example-2-using-flex-containers-in-maps" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>var lbl1 = new voltmx.ui.Label({
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &quot;height&quot;: &quot;26dp&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;id&quot;: &quot;lbl1&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;left&quot;: &quot;1dp&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &quot;top&quot;: &quot;85dp&quot;,
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &quot;width&quot;: &quot;100dp&quot;,
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    &quot;zIndex&quot;: 1….
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>}, {….
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>}, {….
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>});
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>flexTemp1 = new voltmx.ui.FlexContainer({
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    &quot;bottom&quot;: &quot;50dp&quot;,
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    &quot;clipBounds&quot;: true,
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    &quot;id&quot;: &quot;flexTemp1&quot;,
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    &quot;isVisible&quot;: true,
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    &quot;layoutType&quot;: voltmx.flex.FREE_FORM,
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    &quot;left&quot;: &quot;0dp&quot;,
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    &quot;Location&quot;: &quot;[0,0]&quot;,
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    &quot;right&quot;: &quot;200dp&quot;,
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    &quot;skin&quot;: &quot;flexskin1&quot;,
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    &quot;top&quot;: &quot;0dp&quot;,
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    &quot;zIndex&quot;: 1
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>}, {
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    &quot;padding&quot;: [0, 0, 0, 0]
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>}, {});;
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>flexTemp1.add(lbl1);
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>mapWidget.calloutTemplate = flexTemp1;
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>frmMap1.map1.widgetDataMapForCallout = {
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    &quot;lbl1&quot;: &quot;lbl1&quot;
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>};
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>frmMap1.map1.locationData = [{
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    lat: &quot;17.377513&quot;,
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    lon: &quot;78.475895&quot;,
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    name: &quot;HCL&quot;,
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    desc: &quot;Hyderabad,Telangana&quot;,
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    showCallout: true,
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    calloutData: {
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>        lbl1: &quot;HCL&quot;
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>    }
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>}]      
+</span></code></pre></div>
+<h3 id="managing-map-pins">Managing Map Pins<a class="headerlink" href="#managing-map-pins" title="Permanent link">&para;</a></h3>
 <p>The following example shows how to add, delete and update map pins.</p>
-<pre><code>/******************************************************************
- *  Name    : mapPins
- *  Author  : HCL
- *  Purpose : To add pins corresponding to location data.
- *******************************************************************/
-function mapPins() {
-    frmMapNew.MainMap.locationData = [{
-        lat: &quot;17.447326&quot;,
-        lon: &quot;78.371358&quot;,
-        name: &quot;HCL(new)&quot;,
-        desc: &quot;Phoenix infocity, Gachibowli&quot;
-    }, {
-        lat: &quot;17.441839&quot;,
-        lon: &quot;78.380928&quot;,
-        name: &quot;HCL&quot;,
-        desc: &quot;HCL&quot;,
-        image: &quot;pin.png&quot;,
-        meta: {
-            color: &quot;red&quot;,
-            label: &quot;A&quot;
-        }
-    }, {
-        lat: &quot;17.450378&quot;,
-        lon: &quot;78.388398&quot;,
-        name: &quot;House&quot;,
-        desc: &quot;Madhapur, Hyderabad, Andhra Pradesh&quot;,
-        image: &quot;pin.png&quot;,
-        meta: {
-            color: &quot;yellow&quot;,
-            label: &quot;B&quot;
-        }
-    }, ];
-
-    //   frmMapNew.MainMap.addPin(pin1);
-}
-
-// Creating Pins 
-pin1 = {
-    id: &quot;id1&quot;, // id is mandatory for every pin
-    lat: &quot;17.4947934&quot;,
-    lon: &quot;78.3996441&quot;,
-    name: &quot;KPHB&quot;,
-    image: &quot;defaultImage.png&quot;,
-    focusImage: ”focusImage.png &quot;,  //focus image will be shown while map pin selected
-    desc: &quot;Kukatpally &quot;,
-    showCallout : true,
-    meta: {
-        color: &quot;green &quot;,
-        label: &quot;A &quot;
-    }
-};
-
-pin2 = {
-    id : &quot;id2 &quot;, // id is mandatory for every pin
-    lat : &quot;17.3616 &quot;,
-    lon : &quot;78.4747 &quot;,
-    name : &quot;Charminar &quot;,
-    image : &quot;defaultImage.png &quot;,
-    focusImage:&quot;focusImage.png&quot;, //focus image will be shown while map pin selected
-    desc: &quot;In Hyderabad&quot;,
-    showCallout: true,
-    meta: {
-        color: &quot;green&quot;,
-        label: &quot;B&quot;
-    }
-};
-
-pin3 = {
-    id: &quot;id3&quot;, // id is mandatory for every pin
-    lat: &quot;17.2543&quot;,
-    lon: &quot;78.6808&quot;,
-    name: &quot;Ramoji&quot;,
-    image: &quot;defaultImage.png&quot;,
-    focusImage: ”focusImage.png &quot;,  //focus image will be shown while map pin selected
-    desc : &quot;Film City in Hyderabad &quot;,
-    showCallout : true,
-    meta: {
-        color: &quot;green &quot;,
-        label: &quot;C &quot;
-    } 
-};
-/******************************************************************
-*   Name    : addPin
-*   Author  : HCL
-*   Purpose : To Dynamically add pin to the Map widget.
-*******************************************************************/
-function addPin ()
-{
-    frmMapNew.MainMap.addPin(pin1);
-}
-
-/******************************************************************
-*   Name    : addPins
-*   Author  : HCL
-*   Purpose : To Dynamically add pins to the Map widget.
-*******************************************************************/
-function addPins()
-{ 
-    frmMapNew.MainMap.addPins([pin2,pin3]);
-}
-
-/******************************************************************
-*   Name    : deletePin
-*   Author  : HCL
-*   Purpose : To Dynamically delete pin from the Map widget.
-*******************************************************************/
-function deletePin()
-{
-    frmMapNew.MainMap.removePin(pin1);
-}
-
-/******************************************************************
-*   Name    : deletePins
-*   Author  : HCL
-*   Purpose : To Dynamically delete pins from the Map widget.
-*******************************************************************/
-function deletePins()
-{
-    frmMapNew.MainMap.removePins([pin2,pin3]);
-}
-
-/******************************************************************
-*   Name    : updatePin
-*   Author  : HCL
-*   Purpose : To Dynamically update pin of a Map widget.
-*******************************************************************/
-function updatePin()
-{
-    pinTemp = {
-        id : &quot;id1 &quot;,  // id is mandatory for every pin
-        name : &quot;Kukatpally Housing Board &quot;,
-    };
-    frmMapNew.MainMap.updatePin(pinTemp);
-    frmMapNew.lblUpdate.text = &quot;
-    updated the name of added pin &quot;;
-}
-
-/******************************************************************
-*   Name    : updatePins
-*   Author  : HCL
-*   Purpose : To Dynamically update pins of a Map widget.
-*******************************************************************/
-
-function updatePins()
-{
-    pinTemp = {
-        id : &quot;id1 &quot;,  // id is mandatory for every pin
-        name : &quot;Kukatpally Housing Board &quot;,
-    };
-
-    pinTemp1 = {
-        id : &quot;id2 &quot;,  // id is mandatory for every pin
-        name : &quot;Four Minarets &quot;,
-    };
-    frmMapNew.MainMap.updatePins([pinTemp,pinTemp1]);
-    frmMapNew.lblUpdate.text = &quot;updated the names of Pins &quot;;
-}
-</code></pre>
-<h3 id="important-considerations">Important Considerations</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/******************************************************************
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> *  Name    : mapPins
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> *  Author  : HCL
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a> *  Purpose : To add pins corresponding to location data.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a> *******************************************************************/
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>function mapPins() {
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    frmMapNew.MainMap.locationData = [{
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        lat: &quot;17.447326&quot;,
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        lon: &quot;78.371358&quot;,
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        name: &quot;HCL(new)&quot;,
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        desc: &quot;Phoenix infocity, Gachibowli&quot;
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    }, {
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        lat: &quot;17.441839&quot;,
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        lon: &quot;78.380928&quot;,
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        name: &quot;HCL&quot;,
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        desc: &quot;HCL&quot;,
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        image: &quot;pin.png&quot;,
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        meta: {
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            color: &quot;red&quot;,
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            label: &quot;A&quot;
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        }
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    }, {
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        lat: &quot;17.450378&quot;,
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        lon: &quot;78.388398&quot;,
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        name: &quot;House&quot;,
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        desc: &quot;Madhapur, Hyderabad, Andhra Pradesh&quot;,
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        image: &quot;pin.png&quot;,
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        meta: {
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>            color: &quot;yellow&quot;,
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>            label: &quot;B&quot;
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        }
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    }, ];
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    //   frmMapNew.MainMap.addPin(pin1);
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>}
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>// Creating Pins 
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>pin1 = {
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>    id: &quot;id1&quot;, // id is mandatory for every pin
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>    lat: &quot;17.4947934&quot;,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>    lon: &quot;78.3996441&quot;,
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    name: &quot;KPHB&quot;,
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>    image: &quot;defaultImage.png&quot;,
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>    focusImage: ”focusImage.png &quot;,  //focus image will be shown while map pin selected
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    desc: &quot;Kukatpally &quot;,
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>    showCallout : true,
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>    meta: {
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>        color: &quot;green &quot;,
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>        label: &quot;A &quot;
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>    }
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>};
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>pin2 = {
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>    id : &quot;id2 &quot;, // id is mandatory for every pin
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>    lat : &quot;17.3616 &quot;,
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>    lon : &quot;78.4747 &quot;,
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>    name : &quot;Charminar &quot;,
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>    image : &quot;defaultImage.png &quot;,
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>    focusImage:&quot;focusImage.png&quot;, //focus image will be shown while map pin selected
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>    desc: &quot;In Hyderabad&quot;,
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>    showCallout: true,
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>    meta: {
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>        color: &quot;green&quot;,
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>        label: &quot;B&quot;
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>    }
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>};
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>pin3 = {
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>    id: &quot;id3&quot;, // id is mandatory for every pin
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>    lat: &quot;17.2543&quot;,
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>    lon: &quot;78.6808&quot;,
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>    name: &quot;Ramoji&quot;,
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>    image: &quot;defaultImage.png&quot;,
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>    focusImage: ”focusImage.png &quot;,  //focus image will be shown while map pin selected
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>    desc : &quot;Film City in Hyderabad &quot;,
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>    showCallout : true,
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>    meta: {
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>        color: &quot;green &quot;,
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>        label: &quot;C &quot;
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>    } 
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>};
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>/******************************************************************
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>*   Name    : addPin
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>*   Author  : HCL
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>*   Purpose : To Dynamically add pin to the Map widget.
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>*******************************************************************/
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>function addPin ()
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>{
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>    frmMapNew.MainMap.addPin(pin1);
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>}
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>/******************************************************************
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a>*   Name    : addPins
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a>*   Author  : HCL
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a>*   Purpose : To Dynamically add pins to the Map widget.
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>*******************************************************************/
+</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>function addPins()
+</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a>{ 
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a>    frmMapNew.MainMap.addPins([pin2,pin3]);
+</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a>}
+</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>
+</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a>/******************************************************************
+</span><span id="__span-3-103"><a id="__codelineno-3-103" name="__codelineno-3-103" href="#__codelineno-3-103"></a>*   Name    : deletePin
+</span><span id="__span-3-104"><a id="__codelineno-3-104" name="__codelineno-3-104" href="#__codelineno-3-104"></a>*   Author  : HCL
+</span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a>*   Purpose : To Dynamically delete pin from the Map widget.
+</span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a>*******************************************************************/
+</span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a>function deletePin()
+</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a>{
+</span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a>    frmMapNew.MainMap.removePin(pin1);
+</span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a>}
+</span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a>
+</span><span id="__span-3-112"><a id="__codelineno-3-112" name="__codelineno-3-112" href="#__codelineno-3-112"></a>/******************************************************************
+</span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113" href="#__codelineno-3-113"></a>*   Name    : deletePins
+</span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114" href="#__codelineno-3-114"></a>*   Author  : HCL
+</span><span id="__span-3-115"><a id="__codelineno-3-115" name="__codelineno-3-115" href="#__codelineno-3-115"></a>*   Purpose : To Dynamically delete pins from the Map widget.
+</span><span id="__span-3-116"><a id="__codelineno-3-116" name="__codelineno-3-116" href="#__codelineno-3-116"></a>*******************************************************************/
+</span><span id="__span-3-117"><a id="__codelineno-3-117" name="__codelineno-3-117" href="#__codelineno-3-117"></a>function deletePins()
+</span><span id="__span-3-118"><a id="__codelineno-3-118" name="__codelineno-3-118" href="#__codelineno-3-118"></a>{
+</span><span id="__span-3-119"><a id="__codelineno-3-119" name="__codelineno-3-119" href="#__codelineno-3-119"></a>    frmMapNew.MainMap.removePins([pin2,pin3]);
+</span><span id="__span-3-120"><a id="__codelineno-3-120" name="__codelineno-3-120" href="#__codelineno-3-120"></a>}
+</span><span id="__span-3-121"><a id="__codelineno-3-121" name="__codelineno-3-121" href="#__codelineno-3-121"></a>
+</span><span id="__span-3-122"><a id="__codelineno-3-122" name="__codelineno-3-122" href="#__codelineno-3-122"></a>/******************************************************************
+</span><span id="__span-3-123"><a id="__codelineno-3-123" name="__codelineno-3-123" href="#__codelineno-3-123"></a>*   Name    : updatePin
+</span><span id="__span-3-124"><a id="__codelineno-3-124" name="__codelineno-3-124" href="#__codelineno-3-124"></a>*   Author  : HCL
+</span><span id="__span-3-125"><a id="__codelineno-3-125" name="__codelineno-3-125" href="#__codelineno-3-125"></a>*   Purpose : To Dynamically update pin of a Map widget.
+</span><span id="__span-3-126"><a id="__codelineno-3-126" name="__codelineno-3-126" href="#__codelineno-3-126"></a>*******************************************************************/
+</span><span id="__span-3-127"><a id="__codelineno-3-127" name="__codelineno-3-127" href="#__codelineno-3-127"></a>function updatePin()
+</span><span id="__span-3-128"><a id="__codelineno-3-128" name="__codelineno-3-128" href="#__codelineno-3-128"></a>{
+</span><span id="__span-3-129"><a id="__codelineno-3-129" name="__codelineno-3-129" href="#__codelineno-3-129"></a>    pinTemp = {
+</span><span id="__span-3-130"><a id="__codelineno-3-130" name="__codelineno-3-130" href="#__codelineno-3-130"></a>        id : &quot;id1 &quot;,  // id is mandatory for every pin
+</span><span id="__span-3-131"><a id="__codelineno-3-131" name="__codelineno-3-131" href="#__codelineno-3-131"></a>        name : &quot;Kukatpally Housing Board &quot;,
+</span><span id="__span-3-132"><a id="__codelineno-3-132" name="__codelineno-3-132" href="#__codelineno-3-132"></a>    };
+</span><span id="__span-3-133"><a id="__codelineno-3-133" name="__codelineno-3-133" href="#__codelineno-3-133"></a>    frmMapNew.MainMap.updatePin(pinTemp);
+</span><span id="__span-3-134"><a id="__codelineno-3-134" name="__codelineno-3-134" href="#__codelineno-3-134"></a>    frmMapNew.lblUpdate.text = &quot;
+</span><span id="__span-3-135"><a id="__codelineno-3-135" name="__codelineno-3-135" href="#__codelineno-3-135"></a>    updated the name of added pin &quot;;
+</span><span id="__span-3-136"><a id="__codelineno-3-136" name="__codelineno-3-136" href="#__codelineno-3-136"></a>}
+</span><span id="__span-3-137"><a id="__codelineno-3-137" name="__codelineno-3-137" href="#__codelineno-3-137"></a>
+</span><span id="__span-3-138"><a id="__codelineno-3-138" name="__codelineno-3-138" href="#__codelineno-3-138"></a>/******************************************************************
+</span><span id="__span-3-139"><a id="__codelineno-3-139" name="__codelineno-3-139" href="#__codelineno-3-139"></a>*   Name    : updatePins
+</span><span id="__span-3-140"><a id="__codelineno-3-140" name="__codelineno-3-140" href="#__codelineno-3-140"></a>*   Author  : HCL
+</span><span id="__span-3-141"><a id="__codelineno-3-141" name="__codelineno-3-141" href="#__codelineno-3-141"></a>*   Purpose : To Dynamically update pins of a Map widget.
+</span><span id="__span-3-142"><a id="__codelineno-3-142" name="__codelineno-3-142" href="#__codelineno-3-142"></a>*******************************************************************/
+</span><span id="__span-3-143"><a id="__codelineno-3-143" name="__codelineno-3-143" href="#__codelineno-3-143"></a>
+</span><span id="__span-3-144"><a id="__codelineno-3-144" name="__codelineno-3-144" href="#__codelineno-3-144"></a>function updatePins()
+</span><span id="__span-3-145"><a id="__codelineno-3-145" name="__codelineno-3-145" href="#__codelineno-3-145"></a>{
+</span><span id="__span-3-146"><a id="__codelineno-3-146" name="__codelineno-3-146" href="#__codelineno-3-146"></a>    pinTemp = {
+</span><span id="__span-3-147"><a id="__codelineno-3-147" name="__codelineno-3-147" href="#__codelineno-3-147"></a>        id : &quot;id1 &quot;,  // id is mandatory for every pin
+</span><span id="__span-3-148"><a id="__codelineno-3-148" name="__codelineno-3-148" href="#__codelineno-3-148"></a>        name : &quot;Kukatpally Housing Board &quot;,
+</span><span id="__span-3-149"><a id="__codelineno-3-149" name="__codelineno-3-149" href="#__codelineno-3-149"></a>    };
+</span><span id="__span-3-150"><a id="__codelineno-3-150" name="__codelineno-3-150" href="#__codelineno-3-150"></a>
+</span><span id="__span-3-151"><a id="__codelineno-3-151" name="__codelineno-3-151" href="#__codelineno-3-151"></a>    pinTemp1 = {
+</span><span id="__span-3-152"><a id="__codelineno-3-152" name="__codelineno-3-152" href="#__codelineno-3-152"></a>        id : &quot;id2 &quot;,  // id is mandatory for every pin
+</span><span id="__span-3-153"><a id="__codelineno-3-153" name="__codelineno-3-153" href="#__codelineno-3-153"></a>        name : &quot;Four Minarets &quot;,
+</span><span id="__span-3-154"><a id="__codelineno-3-154" name="__codelineno-3-154" href="#__codelineno-3-154"></a>    };
+</span><span id="__span-3-155"><a id="__codelineno-3-155" name="__codelineno-3-155" href="#__codelineno-3-155"></a>    frmMapNew.MainMap.updatePins([pinTemp,pinTemp1]);
+</span><span id="__span-3-156"><a id="__codelineno-3-156" name="__codelineno-3-156" href="#__codelineno-3-156"></a>    frmMapNew.lblUpdate.text = &quot;updated the names of Pins &quot;;
+</span><span id="__span-3-157"><a id="__codelineno-3-157" name="__codelineno-3-157" href="#__codelineno-3-157"></a>}
+</span></code></pre></div>
+<h3 id="important-considerations">Important Considerations<a class="headerlink" href="#important-considerations" title="Permanent link">&para;</a></h3>
 <p>If there are multiple pins at the same location, click events will behave in the following way:</p>
 <ul>
 <li>iOS: Click events will be sent to the topmost pin and callout.</li>
@@ -6485,8 +6442,8 @@ function updatePins()
 <li>Under <strong>Manifest Properties</strong>, select <strong>Tags</strong> tab.</li>
 <li>Add the below line of code in <strong>Child tag entries under <application> tag:</strong>.</li>
 </ol>
-<pre><code>&lt;uses-library Android:name=&quot;com.google.Android.maps&quot;&gt;&lt;/uses-library&gt;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;uses-library Android:name=&quot;com.google.Android.maps&quot;&gt;&lt;/uses-library&gt;
+</span></code></pre></div>
 <p><strong>Procedure2:</strong> (works only with Volt MX Iris IDE plugin version IDE GA-V5.0.10 )</p>
 <ol>
 <li>From the Applications View, right-click on the project and select <strong>Properties</strong>.</li>
@@ -6500,7 +6457,7 @@ function updatePins()
 <p><img alt="" src="Resources/Images/AddWidgetAndroid.png" /></p>
 </li>
 </ol>
-<p><a href="../../iris_user_guide/Content/Generating_Map_Keys.html">Click here to read more about Generating and Configuring Map API Keys.</a></p>
+<p><a href="../../../Iris/iris_user_guide/Content/Generating_Map_Keys.html">Click here to read more about Generating and Configuring Map API Keys.</a></p>
 <p>If you have downloaded Google Play Services v13 in Android SDK manager, follow either of the options below:</p>
 <p>To support Android v2.2 and above devices, do the following:</p>
 <ol>
@@ -6522,7 +6479,7 @@ function updatePins()
 <p><strong><em>Note:</em></strong> On Android platform, Multiple Map Widgets in a single form is not supported for Google Map V1. It is supported for Google Map V2.</p>
 <p><strong><em>Note:</em></strong> Clickable/Interactive widgets inside a Map callout template will become non-clickable when Android Map V2 version is used. This the limitation of native Android Map V2 callout. As callouts are displayed as static image snapshot of callout template and only the entire callout is clickable. Map onSelection callback is invoked when a callout is clicked.</p>
 </blockquote>
-<h3 id="customizing-map-pin-images">Customizing Map Pin Images</h3>
+<h3 id="customizing-map-pin-images">Customizing Map Pin Images<a class="headerlink" href="#customizing-map-pin-images" title="Permanent link">&para;</a></h3>
 <p>The Map widget provides you with the ability to set the map pin image from different possible sources. The map pin image takes the name of the pin image that is bundled with the application. This feature allows the developer to set the pin image from different sources. If the platforms fail to extract the image out of source, then default pin image is used. You can set the pin image from the following sources.</p>
 <ul>
 <li><strong>A bundled image</strong>. If you have bundled an image with the app, you can set the pin image source to the name of the bundled image to display it.</li>
@@ -6533,8 +6490,10 @@ function updatePins()
 <blockquote>
 <p><strong><em>Note:</em></strong> Desktop Web, and SPA support only bundled images.</p>
 </blockquote>
-<h3 id="searching-routes">Searching Routes</h3>
-<p>Your app can search for routes between the source and destination locations using the <a href="../../iris_api_dev_guide/content/mapapi.html">voltmx.map.searchRoutes</a> function, which is documented in the <a href="../../iris_api_dev_guide/content/introduction.html">API Developer's Guide</a>.</p>
+<h3 id="searching-routes">Searching Routes<a class="headerlink" href="#searching-routes" title="Permanent link">&para;</a></h3>
+<p>Your app can search for routes between the source and destination locations using the <a href="../../../Iris/iris_api_dev_guide/content/mapapi.html">voltmx.map.searchRoutes</a> function, which is documented in the <a href="../../../Iris/iris_api_dev_guide/content/introduction.html">API Developer's Guide</a>.</p>
+
+
 
 
 
@@ -6557,7 +6516,7 @@ function updatePins()
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
   Back to top
 </button>
         
@@ -6595,10 +6554,14 @@ function updatePins()
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
       
     
   </body>
