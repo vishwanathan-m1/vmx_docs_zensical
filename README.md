@@ -14,4 +14,4 @@
 
 - Live document site link: [https://vishwanathan-m1.github.io/vmx_docs_zensical/](https://vishwanathan-m1.github.io/vmx_docs_zensical/)
 
-![](./source/Resources/Images/material1.png) <h1>---></h1> ![](./source/Resources/Images/zensical1.png)
+![](./source/Resources/Images/material1.png) <h1>--></h1> ![](./source/Resources/Images/zensical1.png)
