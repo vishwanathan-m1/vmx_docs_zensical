@@ -9,16 +9,13 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_workflow/Content/Workflow_Implementation.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_workflow/Content/Workflow_Implementation.html">
       
       
-      
-      
-        
       
       
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="zensical-0.0.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
     
     
       
@@ -26,41 +23,9 @@
       
     
     
-      
-        
-      
-      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
       
       
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  <style>:root{}</style>
-
 
 
     
@@ -72,7 +37,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -81,10 +46,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -157,7 +123,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -177,36 +143,67 @@
     </div>
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
-  <button type="button" class="md-search__button">
-    Search
-  </button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-      
     
-    <div class="md-header__source">
-      
+    
+      <div class="md-header__source">
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      
-    </div>
+      </div>
+    
   </nav>
   
 </header>
@@ -225,10 +222,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
+  
+    
   
   Introducing Volt MX
 
@@ -241,10 +239,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
+  
+    
   
   Getting Started
 
@@ -257,12 +256,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
+  
+    
   
   What&apos;s New
 
@@ -276,10 +276,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
+  
+    
   
   Release Notes
 
@@ -292,12 +293,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
+  
+    
   
   App Platform
 
@@ -311,12 +313,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
+  
+    
   
   Tutorials
 
@@ -330,10 +333,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
+  
+    
   
   Installation Guides
 
@@ -346,12 +350,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Iris
 
@@ -365,12 +370,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Foundry
 
@@ -414,7 +420,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -434,16 +440,9 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introducing Volt MX
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -461,16 +460,9 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -492,42 +484,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     What&apos;s New
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -543,16 +552,9 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Release Notes
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -574,42 +576,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     App Platform
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -657,42 +676,353 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     Tutorials
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -708,16 +1038,9 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation Guides
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -763,13 +1086,79 @@
     
     
     
+    
       
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
         
+      
         
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -777,20 +1166,12 @@
         
   
   
-  
-    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
-    Iris
-  
-
-    
+    Installing Iris
   </span>
-  
   
 
       
@@ -799,6 +1180,875 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -838,13 +2088,93 @@
     
     
     
+    
       
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
         
+      
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -852,20 +2182,12 @@
         
   
   
-  
-    <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
+    <a href="../../installing_foundry.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
-    Foundry
-  
-
-    
+    Installing Foundry
   </span>
-  
   
 
       
@@ -874,6 +2196,579 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -891,7 +2786,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
   
 
@@ -911,9 +2805,7 @@
         <li class="md-nav__item">
   <a href="#usecase" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Usecase
-      
+      Usecase
     </span>
   </a>
   
@@ -922,9 +2814,7 @@
         <li class="md-nav__item">
   <a href="#loan-application-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Loan Application Workflow
-      
+      Loan Application Workflow
     </span>
   </a>
   
@@ -934,9 +2824,7 @@
           <li class="md-nav__item">
   <a href="#pre-requisites" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pre-requisites
-      
+      Pre-requisites
     </span>
   </a>
   
@@ -945,9 +2833,7 @@
           <li class="md-nav__item">
   <a href="#create-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Create Workflow
-      
+      Create Workflow
     </span>
   </a>
   
@@ -961,9 +2847,7 @@
         <li class="md-nav__item">
   <a href="#test-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Test the Workflow
-      
+      Test the Workflow
     </span>
   </a>
   
@@ -973,9 +2857,7 @@
           <li class="md-nav__item">
   <a href="#runtime-server-admin-console" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Runtime Server (Admin Console)
-      
+      Runtime Server (Admin Console)
     </span>
   </a>
   
@@ -996,23 +2878,13 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
-  
-    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_workflow/Content/Workflow_Implementation.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
-    </a>
-  
-  
 
 
-<div class="language-text highlight"><pre><span></span><code>
-</code></pre></div>
-<h1 id="object-triggered-workflow-implementation">Object Triggered Workflow Implementation<a class="headerlink" href="#object-triggered-workflow-implementation" title="Permanent link">&para;</a></h1>
-<h2 id="usecase">Usecase<a class="headerlink" href="#usecase" title="Permanent link">&para;</a></h2>
+<h1 id="object-triggered-workflow-implementation">Object Triggered Workflow Implementation</h1>
+<h2 id="usecase">Usecase</h2>
 <p>Let us create a basic Workflow that is invoked whenever a new loan application is submitted. Using Workflow, we can automate the different phases through which the loan application passes before approval or rejection. Whenever a manual input is required, the Workflow will pause at that phase and the process will resume automatically after an appropriate action is taken by the applicant.</p>
 <p><a href="Resources/Images/workflow-uc9.png"><img alt="" src="Resources/Images/workflow-uc9_thumb_0_48.png" /></a></p>
 <p>In this example, the loan application process will have the following steps:</p>
@@ -1026,11 +2898,11 @@
 <li>The loan request is processed based on the calculated interest rate and a message is sent to the applicant stating that the loan request is processed.</li>
 <li>The loan amount is disbursed to the applicant’s bank account.</li>
 </ul>
-<h2 id="loan-application-workflow">Loan Application Workflow<a class="headerlink" href="#loan-application-workflow" title="Permanent link">&para;</a></h2>
-<h3 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h3>
+<h2 id="loan-application-workflow">Loan Application Workflow</h2>
+<h3 id="pre-requisites">Pre-requisites</h3>
 <p>To create a workflow for the steps that were discussed in this example, you must have the necessary Integration Services configured in your Volt MX Foundry console.</p>
 <p><a href="https://docs.voltmx.com/9_x_PDFs/voltmxfoundry/LoanSvc_(v1.0).zip">Click here</a> to download the Integration Services required to create the workflow and import the same into your Volt MX Foundry console.</p>
-<h3 id="create-workflow">Create Workflow<a class="headerlink" href="#create-workflow" title="Permanent link">&para;</a></h3>
+<h3 id="create-workflow">Create Workflow</h3>
 <p>To create the Loan Application workflow, do the following:</p>
 <ul>
 <li>From the dashboard in Volt MX Foundry console, click the Foundry app where you have imported the Integration Services related to this use case, and click the Workflows tab. The Workflow’s landing page appears.</li>
@@ -1060,12 +2932,12 @@
 *   In the <strong>Name</strong> field, type the required name of the exclusive gateway based on the activity it handles. For example: <strong>Check SSN</strong>.
 *   As <strong>Check SSN</strong> is an exclusive gateway, two flows emerge from here. One flow determines the path of the workflow if the SSN is found. Name the flow as <strong>Customer Found</strong>. The other flow determines the path of the workflow if the SSN is invalid. Name the flow as <strong>Customer Not Found</strong>
 *   Click the <strong>Customer Found</strong> flow, and do the following:<br />
-*   In the Properties pane, click <strong>Edit</strong> under <strong>Entry Validation criteria</strong>.
-*   Click <strong>Add Condition</strong>. Select <strong>BACKEND_RESPONSE</strong> from the <strong>Namespace</strong> list and in the <strong>Value</strong> field type SSN.
-*   From the operators list select <code>!=Null</code> and click <strong>Save</strong>.
+<em>   In the Properties pane, click </em><em>Edit</em><em> under </em><em>Entry Validation criteria</em><em>.
+*   Click </em><em>Add Condition</em><em>. Select </em><em>BACKEND_RESPONSE</em><em> from the </em><em>Namespace</em><em> list and in the </em><em>Value</em><em> field type SSN.
+*   From the operators list select <code>!=Null</code> and click </em><em>Save</em><em>.
 <img alt="" src="Resources/Images/WI8.PNG" />
-*   Click the <strong>Customer Not Found</strong> flow, and do the following:<br />
-*   In the Properties pane, click <strong>Edit</strong> under <strong>Entry Validation criteria</strong>.
+*   Click the </em><em>Customer Not Found</em><em> flow, and do the following:<br />
+</em>   In the Properties pane, click <strong>Edit</strong> under <strong>Entry Validation criteria</strong>.
 *   Click <strong>Add Condition</strong>. Select <strong>BACKEND_RESPONSE</strong> from the <strong>Namespace</strong> list and in the <strong>Value</strong> field type SSN.
 *   From the operators list select <code>==Null</code> and click <strong>Save</strong>.
 <img alt="" src="Resources/Images/WI9.PNG" />
@@ -1076,13 +2948,13 @@
 *   In the Parameters tab, in the Name column, type the $variable given in email template, select the <strong>Namespace</strong> value as <strong>None</strong> and provide the required $variable data in the <strong>Value</strong> column.
 *   Place an <strong>End</strong> node after the <strong>Incorrect User Details</strong> message task to finish the <strong>SSN is invalid</strong> flow path.
 *   Connect the <strong>Customer Found</strong> flow with a Service Task and click the Properties pane. You can do the following in the Properties pane:<br />
-*   In the <strong>Name</strong> field, type the required name of the service task based on the activity it handles. For example: <strong>Get CreditScore, Financial and Employment Status</strong>.
-*   Link this task to an Integration service and select <strong>Loan</strong> and <strong>CreditScore</strong> in the respective dropdowns as you have done in the previous service task.
-*   Click Input Parameters <strong>Configure</strong> to manage the integration service’s request input parameters. In the <strong>Namespace</strong> column, select Foundry_Workflow_Context the input parameter and type SSN in the <strong>Value</strong> column as the output of the <strong>Get Customer SSN</strong> was stored in Foundry_Workflow_Context.SSN.
-*   Click Output Parameters <strong>Configure</strong> to manage the integration service’s output response. By default, response from each service task is saved in the Foundry_Workflow_Context namespace. Type <strong>CreditScore</strong> which acts as a variable for the namespace (Foundry_Workflow_Context.CeditScore).
+<em>   In the </em><em>Name</em><em> field, type the required name of the service task based on the activity it handles. For example: </em><em>Get CreditScore, Financial and Employment Status</em><em>.
+*   Link this task to an Integration service and select </em><em>Loan</em><em> and </em><em>CreditScore</em><em> in the respective dropdowns as you have done in the previous service task.
+*   Click Input Parameters </em><em>Configure</em><em> to manage the integration service’s request input parameters. In the </em><em>Namespace</em><em> column, select Foundry_Workflow_Context the input parameter and type SSN in the </em><em>Value</em><em> column as the output of the </em><em>Get Customer SSN</em><em> was stored in Foundry_Workflow_Context.SSN.
+*   Click Output Parameters </em><em>Configure</em><em> to manage the integration service’s output response. By default, response from each service task is saved in the Foundry_Workflow_Context namespace. Type </em><em>CreditScore</em><em> which acts as a variable for the namespace (Foundry_Workflow_Context.CeditScore).
 <a href="Resources/Images/workflow-uc4.PNG"><img alt="" src="Resources/Images/workflow-uc4_thumb_0_48.png" /></a>
-*   Drag and drop a User Task next to the <strong>Get CreditScore, Financial and Employment Status</strong> service task click the Properties pane. You can do the following in the Properties pane:<br />
-*   In the <strong>Name</strong> field, type the required name of the user task based on the activity it handles. For example: <strong>Check Loan Eligibility</strong>.
+*   Drag and drop a User Task next to the </em><em>Get CreditScore, Financial and Employment Status</em><em> service task click the Properties pane. You can do the following in the Properties pane:<br />
+</em>   In the <strong>Name</strong> field, type the required name of the user task based on the activity it handles. For example: <strong>Check Loan Eligibility</strong>.
 *   In the <strong>Allowed States</strong> field, type <strong>SUBMITTED</strong>.
 *   In the <strong>Valid state transitions</strong> field, type <strong>ELIGIBLE</strong>.  </p>
 <p><a href="Resources/Images/workflow-uc5.PNG"><img alt="" src="Resources/Images/workflow-uc5_thumb_0_48.png" /></a>
@@ -1104,12 +2976,12 @@
 *   In the Parameters tab, in the Name column, type the $variable given in email template, select the <strong>Namespace</strong> value as <strong>None</strong> and provide the required $variable data in the <strong>Value</strong> column.
 *   Place an <strong>End</strong> node after the <strong>Loan Application Rejected</strong> message task to finish the <strong>Ineligible</strong> flow path.
 *   Connect the <strong>Eligible</strong> flow with a Service Task and click the Properties pane. You can do the following in the Properties pane:<br />
-*   In the <strong>Name</strong> field, type the required name of the service task based on the activity it handles. For example: <strong>Calculate Interest Rate</strong>.
-*   Link this task to an Integration service and select <strong>Loan</strong> and <strong>Rate</strong> in the respective dropdowns as you have done in the previous service task.
-*   Configure the output parameter as <strong>Rate</strong> (Foundry_Workflow_Context.Rate).
+<em>   In the </em><em>Name</em><em> field, type the required name of the service task based on the activity it handles. For example: </em><em>Calculate Interest Rate</em><em>.
+*   Link this task to an Integration service and select </em><em>Loan</em><em> and </em><em>Rate</em><em> in the respective dropdowns as you have done in the previous service task.
+*   Configure the output parameter as </em><em>Rate</em><em> (Foundry_Workflow_Context.Rate).
 <a href="Resources/Images/workflow-uc6.PNG"><img alt="" src="Resources/Images/workflow-uc6_thumb_0_48.png" /></a>
-*   Drag and drop a Service Task next to the <strong>Calculate Interest Rate</strong> service task and click the Properties pane. You can do the following in the Properties pane:<br />
-*   In the <strong>Name</strong> field, type the required name of the service task based on the activity it handles. For example: <strong>Process Loan Request</strong>.
+*   Drag and drop a Service Task next to the </em><em>Calculate Interest Rate</em><em> service task and click the Properties pane. You can do the following in the Properties pane:<br />
+</em>   In the <strong>Name</strong> field, type the required name of the service task based on the activity it handles. For example: <strong>Process Loan Request</strong>.
 *   Link this task to an Integration service and select <strong>Loan</strong> and <strong>ProcessLoan</strong> in the respective dropdowns as you have done in the previous service task.
 *   Configure the input parameter as Rate as the output of the <strong>Calculate Interest Rate</strong> was stored in Foundry_Workflow_Context.Rate.
 *   Configure the output parameter as <strong>LoanId</strong> (Foundry_Workflow_Context.LoanId).
@@ -1120,11 +2992,11 @@
 *   In the Email-Template tab, type the TO, CC, and the name of the recipient in Body with appropriate message. You can provide $ variables like $email1, $email2, and $FirstName respectively in the required fields.
 *   In the <strong>Parameters</strong> tab, in the Name column, type the $variable given in email template, select the <strong>Namespace</strong> value as <strong>None</strong> and provide the required $variable data in the <strong>Value</strong> column.
 *   Drag and drop a Service Task next to the Loan Processed message task and click the Properties pane. You can do the following in the Properties pane:<br />
-*   In the <strong>Name</strong> field, type the required name of the service task based on the activity it handles. For example: <strong>Disburse Loan Amount</strong>.
-*   Link this task to an Integration service and select <strong>Loan</strong> and <strong>Disburse Loan</strong> in the respective dropdowns as you have done in the previous service task.
-*   Configure the input parameter as <strong>LoanId</strong> as the output of the <strong>Process Loan Request</strong> was stored in Foundry_Workflow_Context.LoanId.
+<em>   In the </em><em>Name</em><em> field, type the required name of the service task based on the activity it handles. For example: </em><em>Disburse Loan Amount</em><em>.
+*   Link this task to an Integration service and select </em><em>Loan</em><em> and </em><em>Disburse Loan</em><em> in the respective dropdowns as you have done in the previous service task.
+*   Configure the input parameter as </em><em>LoanId</em><em> as the output of the </em><em>Process Loan Request</em><em> was stored in Foundry_Workflow_Context.LoanId.
 <a href="Resources/Images/workflow-uc8.PNG"><img alt="" src="Resources/Images/workflow-uc8_thumb_0_48.png" /></a>
-*   Place an <strong>End</strong> node after the <strong>Disburse Loan Amount</strong> service task to finish the loan application flow path.</p>
+*   Place an </em><em>End</em><em> node after the </em><em>Disburse Loan Amount</em>* service task to finish the loan application flow path.</p>
 </li>
 </ul>
 <p>Once the Workflow is created, do the following to publish the Foundry app:</p>
@@ -1133,83 +3005,82 @@
 <li>Select the required runtime environment.</li>
 <li>Click Publish.</li>
 </ul>
-<h2 id="test-the-workflow">Test the Workflow<a class="headerlink" href="#test-the-workflow" title="Permanent link">&para;</a></h2>
+<h2 id="test-the-workflow">Test the Workflow</h2>
 <p>After the app is successfully published, you can check the workflow functionality through the following means:</p>
 <ul>
 <li>Runtime server (Admin console)</li>
 <li>Postman</li>
 </ul>
-<h3 id="runtime-server-admin-console">Runtime Server (Admin Console)<a class="headerlink" href="#runtime-server-admin-console" title="Permanent link">&para;</a></h3>
+<h3 id="runtime-server-admin-console">Runtime Server (Admin Console)</h3>
 <p>Click the Workflow icon in the Consoles section of the environment where the Foundry app is published. The Workflow Services screen from Admin Console appears in a new tab.</p>
 <p>The Workflow Services screen lists all the workflows that were created and published to the current environment. To test the workflow which you have created (LoanApplication), do the following:</p>
 <ol>
 <li>From the side menu, click Object Services.</li>
 <li>Locate the Object service (ObjSvcLoanApplication) that is linked to the LoanApplication workflow. From the App Data Model Objects column select the operation (objLoanApplication) of the linked Object service. The Request Input screen of the selected operation appears.</li>
 <li>From the Operations list, select create (POST).</li>
-<li>Provide the input request body here. The request input will contain fields like the following;
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &quot;WorkflowField&quot;: &quot;&quot;,
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &quot;CustomPrimaryField&quot;: &quot;&quot;,
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  &quot;CreatedBy&quot;: &quot;&quot;,
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  &quot;LastUpdatedBy&quot;: &quot;&quot;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>```6.  Provide the value for &quot;WorkflowField&quot; parameter as **SUBMITTED** as it should be same as the value you provided for **Valid state transitions** field in **Submit Loan Request** user task.
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>7.  Click **Get Response**. The response will have the following parameters:
-</span></code></pre></div>
-{
-    "CustomPrimaryField":1,"opstatus":0,"httpStatusCode":0
-}</li>
+<li>Provide the input request body here. The request input will contain fields like the following;</li>
 </ol>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt; **_Important:_** Use the same &quot;CustomPrimaryField&quot; parameter value received from response while providing input response for other user tasks while testing the workflow.
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>10.  Now you can check the status of the LoanApplication workflow from Workflow service tab. The Workflow status will be Paused at **Check Loan Eligibility** user task.
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>11.  Repeat the steps followed from step 2 to step 4.
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>12.  Provide the value for &quot;WorkflowField&quot; parameter as **ELIGIBLE** as it should be same as the value you provided for **Valid state transitions** field in **Check Loan Eligibility** user task.
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>13.  Provide a numeric value for &quot;CustomPrimaryField&quot; parameter as “1”.
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>14.  Click **Get Response**.
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>15.  Now you can check the status of the LoanApplication workflow from Workflow service tab. The Workflow status will be Completed.
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&gt; **_Note:_** In this testing process, it is assumed that all the service tasks, exclusive gateways and message tasks used were executed successfully.
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>&gt; **_Note:_** To view the execution status of a workflow service by using Volt MX App Services Console, refer to [VoltMX App Services Console &gt; Workflow Services](../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/Workflow.md) section.
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>### Postman
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>Testing the Workflow through Postman involves two major steps. First you have to authenticate yourself as a valid user and then invoke the object service which would trigger the Workflow. Perform the following steps to test the workflow:
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>*   Login to Postman and from the **Launchpad** tab, click **Create a Request**.
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>*   In the **Enter Request URL** field provide the request URL. The request URL will be same as the Service URL you receive after publishing the Workflow.  
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    **For example**: https://XXXXXXX.auth. voltmxcloud.com/login
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>*   Click the Headers tab and provide the following details in KEY and VALUE columns respectively:
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    *   Content-Type: application/json
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    *   X-VoltMX-App-Key: 69f58xxxxxxxxxxxxx9e35bdcdf2c9ca
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    *   X-VoltMX-App-Secret: 92ee7xxxxxxxxxxxxxxx2bdc8525c8cd
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    &gt; **_Note:_** You can get the App Key and App Secret from the Publish page.
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>*   Click **Send**. If you are an authentic user, you will receive a claims token.  
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    **For example**: `{&quot;claims_token&quot;:{&quot;value&quot;:&quot;eyAidHlwIjogImp3dCITk9ORSIgfQ.xxxxxxx_kqjJUP1LNue_rA&quot;,&quot;exp&quot;:1578450870000,&quot;integrity_check_required&quot;:false,&quot;is_mfa_enabled&quot;:false,&quot;mfa_meta&quot;:null,&quot;session_id&quot;:&quot;e6ecb1ed-606d-4a7c-b05d-442469ca8de8&quot;}`
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>*   From the verbs list, select POST.
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>*   In the **Enter Request URL** field provide the request URL for the POST call. The format of the request is as follows: https://FoundryAppName.voltmxcloud.com:XXX/services/data/v1/ObjectServiceName/objects/ObjectName.  
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    **For example**: https://workflowtesting. voltmxcloud.com:443/services/data/v1/ObjSvcDocTrial/objects/ObjDocTrial
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>*   Click the **Headers** tab and provide the following details in KEY and VALUE columns respectively:
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    *   Content-Type: application/json
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    *   X-VoltMX-Authorization: &lt;claims token&gt;
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    &gt; **_Note:_** Provide the authorization key in the Value parameter in the Claims token that you received.
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>*   Click the Body tab and provide the JSON payload here:
-</span></code></pre></div>
-{
+<pre><code>{
+  &quot;WorkflowField&quot;: &quot;&quot;,
+  &quot;CustomPrimaryField&quot;: &quot;&quot;,
+  &quot;CreatedBy&quot;: &quot;&quot;,
+  &quot;LastUpdatedBy&quot;: &quot;&quot;
+}
+
+```6.  Provide the value for &quot;WorkflowField&quot; parameter as **SUBMITTED** as it should be same as the value you provided for **Valid state transitions** field in **Submit Loan Request** user task.
+7.  Click **Get Response**. The response will have the following parameters:
+</code></pre>
+<p>{
+    "CustomPrimaryField":1,"opstatus":0,"httpStatusCode":0
+}</p>
+<pre><code>
+&gt; **_Important:_** Use the same &quot;CustomPrimaryField&quot; parameter value received from response while providing input response for other user tasks while testing the workflow.
+
+10.  Now you can check the status of the LoanApplication workflow from Workflow service tab. The Workflow status will be Paused at **Check Loan Eligibility** user task.
+11.  Repeat the steps followed from step 2 to step 4.
+12.  Provide the value for &quot;WorkflowField&quot; parameter as **ELIGIBLE** as it should be same as the value you provided for **Valid state transitions** field in **Check Loan Eligibility** user task.
+13.  Provide a numeric value for &quot;CustomPrimaryField&quot; parameter as “1”.
+14.  Click **Get Response**.
+15.  Now you can check the status of the LoanApplication workflow from Workflow service tab. The Workflow status will be Completed.
+
+&gt; **_Note:_** In this testing process, it is assumed that all the service tasks, exclusive gateways and message tasks used were executed successfully.
+
+&gt; **_Note:_** To view the execution status of a workflow service by using Volt MX App Services Console, refer to [VoltMX App Services Console &gt; Workflow Services](../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/Workflow.md) section.
+
+### Postman
+
+Testing the Workflow through Postman involves two major steps. First you have to authenticate yourself as a valid user and then invoke the object service which would trigger the Workflow. Perform the following steps to test the workflow:
+
+*   Login to Postman and from the **Launchpad** tab, click **Create a Request**.
+*   In the **Enter Request URL** field provide the request URL. The request URL will be same as the Service URL you receive after publishing the Workflow.  
+    **For example**: https://XXXXXXX.auth. voltmxcloud.com/login
+*   Click the Headers tab and provide the following details in KEY and VALUE columns respectively:
+    *   Content-Type: application/json
+    *   X-VoltMX-App-Key: 69f58xxxxxxxxxxxxx9e35bdcdf2c9ca
+    *   X-VoltMX-App-Secret: 92ee7xxxxxxxxxxxxxxx2bdc8525c8cd
+
+    &gt; **_Note:_** You can get the App Key and App Secret from the Publish page.
+
+*   Click **Send**. If you are an authentic user, you will receive a claims token.  
+    **For example**: `{&quot;claims_token&quot;:{&quot;value&quot;:&quot;eyAidHlwIjogImp3dCITk9ORSIgfQ.xxxxxxx_kqjJUP1LNue_rA&quot;,&quot;exp&quot;:1578450870000,&quot;integrity_check_required&quot;:false,&quot;is_mfa_enabled&quot;:false,&quot;mfa_meta&quot;:null,&quot;session_id&quot;:&quot;e6ecb1ed-606d-4a7c-b05d-442469ca8de8&quot;}`
+*   From the verbs list, select POST.
+*   In the **Enter Request URL** field provide the request URL for the POST call. The format of the request is as follows: https://FoundryAppName.voltmxcloud.com:XXX/services/data/v1/ObjectServiceName/objects/ObjectName.  
+    **For example**: https://workflowtesting. voltmxcloud.com:443/services/data/v1/ObjSvcDocTrial/objects/ObjDocTrial
+*   Click the **Headers** tab and provide the following details in KEY and VALUE columns respectively:
+    *   Content-Type: application/json
+    *   X-VoltMX-Authorization: &lt;claims token&gt;
+
+    &gt; **_Note:_** Provide the authorization key in the Value parameter in the Claims token that you received.
+
+*   Click the Body tab and provide the JSON payload here:
+</code></pre>
+<p>{
   "WorkflowField": "",
   "CustomPrimaryField": "",
   "CreatedBy": "",
   "LastUpdatedBy": ""
 }</p>
 <p>```*   Click Send.</p>
-
-
 
 
 
@@ -1232,7 +3103,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -1270,14 +3141,10 @@
     </div>
     
     
-    
-      
-      
-      
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

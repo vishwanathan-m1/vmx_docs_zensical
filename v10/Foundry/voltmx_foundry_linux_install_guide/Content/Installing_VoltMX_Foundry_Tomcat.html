@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Foundry/voltmx_foundry_linux_install_guide/Content/Installing_VoltMX_Foundry_Tomcat.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Foundry/voltmx_foundry_linux_install_guide/Content/Installing_VoltMX_Foundry_Tomcat.html">
       
       
         <link rel="prev" href="Installing_VoltMX_Foundry_on_Linux.html">
@@ -18,53 +18,18 @@
         <link rel="next" href="Installing_Foundry_on_JBoss.html">
       
       
-        
-      
-      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="zensical-0.0.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
     
     
       
-        <title>Installing Volt MX Foundry on Tomcat - Console-mode - HCL Volt MX Documentation</title>
+        <title>Installing Volt MX Foundry on Tomcat - HCL Volt MX Documentation</title>
       
     
     
-      
-        
-      
-      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
       
       
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  <style>:root{}</style>
-
 
 
     
@@ -76,7 +41,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -85,10 +50,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -161,7 +127,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -173,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing Volt MX Foundry on Tomcat - Console-mode
+              Installing Volt MX Foundry on Tomcat
             
           </span>
         </div>
@@ -181,36 +147,67 @@
     </div>
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
-  <button type="button" class="md-search__button">
-    Search
-  </button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-      
     
-    <div class="md-header__source">
-      
+    
+      <div class="md-header__source">
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      
-    </div>
+      </div>
+    
   </nav>
   
 </header>
@@ -229,10 +226,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
+  
+    
   
   Introducing Volt MX
 
@@ -245,10 +243,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
+  
+    
   
   Getting Started
 
@@ -261,12 +260,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
+  
+    
   
   What&apos;s New
 
@@ -280,10 +280,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
+  
+    
   
   Release Notes
 
@@ -296,12 +297,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
+  
+    
   
   App Platform
 
@@ -315,12 +317,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
+  
+    
   
   Tutorials
 
@@ -334,10 +337,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../installationGuides.html" class="md-tabs__link">
         
+  
+    
   
   Installation Guides
 
@@ -350,12 +354,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Iris
 
@@ -368,7 +373,6 @@
         
   
   
-  
     
   
   
@@ -377,6 +381,8 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxFoundryFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Foundry
 
@@ -420,7 +426,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -440,16 +446,9 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introducing Volt MX
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -467,16 +466,9 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -498,42 +490,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     What&apos;s New
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -549,16 +558,9 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Release Notes
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -580,42 +582,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     App Platform
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -663,42 +682,353 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     Tutorials
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -714,16 +1044,9 @@
       <a href="../../installationGuides.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation Guides
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -769,13 +1092,79 @@
     
     
     
+    
       
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Iris
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Iris
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
         
+      
         
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -783,20 +1172,12 @@
         
   
   
-  
-    <a href="../../../Iris/voltmxIrisFundamentals.html" class="md-nav__link">
+    <a href="../../../Iris/installing_iris.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
-    Iris
-  
-
-    
+    Installing Iris
   </span>
-  
   
 
       
@@ -805,6 +1186,875 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_tutorials/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris tutorials
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/app_design_dev/Content/homepage.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Application Design and Development Guidelines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_api_dev_guide/content/introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt Iris API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Native Function API Developers Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Widget Programmer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris Wearables Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Iris CarApp Developer Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    iOS Live Activities in Volt MX Iris
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/iris_app_viewer/Content/Overview.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Using the Volt MX App
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Iris/voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Reference Architecture Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -846,17 +2096,13 @@
     
     
     
-      
-        
-        
-      
-      
     
-    
+      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
@@ -865,16 +2111,9 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Foundry
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -883,11 +2122,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Foundry
-  
-
+            Foundry
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -901,16 +2136,9 @@
       <a href="../../voltmxFoundryFundamentals.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Fundamentals
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -955,14 +2183,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
@@ -971,16 +2195,9 @@
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Foundry
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -989,11 +2206,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Installing Foundry
-  
-
+            Installing Foundry
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1007,16 +2220,9 @@
       <a href="../../installing_foundry.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1045,13 +2251,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1059,20 +2260,12 @@
         
   
   
-  
     <a href="../../voltmxfoundry_supported_devices_os_browsers/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry - Supported OS, Application Servers, and Databases Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1125,14 +2318,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_3" checked>
@@ -1141,16 +2330,9 @@
           <label class="md-nav__link" for="__nav_9_2_3" id="__nav_9_2_3_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Installation Guide   - Linux
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1159,11 +2341,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_2_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Volt MX Foundry Installation Guide   - Linux
-  
-
+            Volt MX Foundry Installation Guide   - Linux
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1177,16 +2355,9 @@
       <a href="Introduction.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1213,13 +2384,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1227,20 +2393,12 @@
         
   
   
-  
     <a href="Prerequisites.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Prerequisites
-  
-
-    
   </span>
-  
   
 
       
@@ -1265,16 +2423,9 @@
       <a href="Foundry_Architecture_and_Components.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Topology and Components
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1293,16 +2444,9 @@
       <a href="MF_Single-Node_Multinode.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation on Single Node and Multinode
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1321,16 +2465,9 @@
       <a href="Pre-installation_Tasks.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Preinstallation Tasks
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1363,14 +2500,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_3_6" checked>
@@ -1379,16 +2512,9 @@
           <label class="md-nav__link" for="__nav_9_2_3_6" id="__nav_9_2_3_6_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation Modes
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1397,11 +2523,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_2_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_2_3_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Installation Modes
-  
-
+            Installation Modes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1415,16 +2537,9 @@
       <a href="Installing_Modes.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1443,16 +2558,9 @@
       <a href="Installing_VoltMX_Foundry_on_Linux.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Volt MX Foundry   - Console-mode
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1480,16 +2588,9 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Volt MX Foundry on Tomcat
-  
-
-    
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -1498,22 +2599,14 @@
       <a href="Installing_VoltMX_Foundry_Tomcat.html" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Volt MX Foundry on Tomcat
-  
-
-    
   </span>
-  
   
 
       </a>
       
         
-
 
   
 
@@ -1533,9 +2626,7 @@
         <li class="md-nav__item">
   <a href="#reports-database" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Reports Database
-      
+      Reports Database
     </span>
   </a>
   
@@ -1544,9 +2635,7 @@
         <li class="md-nav__item">
   <a href="#reports-database-for-integration-on-a-separate-node" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Reports Database for Integration on a Separate Node:
-      
+      Reports Database for Integration on a Separate Node:
     </span>
   </a>
   
@@ -1585,13 +2674,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1599,20 +2683,12 @@
         
   
   
-  
     <a href="Installing_Foundry_on_JBoss.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Volt MX Foundry on JBoss
-  
-
-    
   </span>
-  
   
 
       
@@ -1637,16 +2713,9 @@
       <a href="Silent_Installation.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Volt MX Foundry   - Silent-mode
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1673,16 +2742,9 @@
       <a href="Starting_VoltMX_Foundry_Console.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     How to Stop and Start Volt MX Foundry
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1709,13 +2771,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1723,20 +2780,12 @@
         
   
   
-  
     <a href="Upgrading_VoltMX_Foundry_on_Linux.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Upgrading Volt MX Foundry
-  
-
-    
   </span>
-  
   
 
       
@@ -1761,16 +2810,9 @@
       <a href="Patch_Installer_-_Linux.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Hotfix Archives for Volt MX Foundry   - Linux
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1789,16 +2831,9 @@
       <a href="Uninstalling_VoltMX_Foundry.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Uninstalling Volt MX Foundry
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1817,16 +2852,9 @@
       <a href="Post-Installation_Tasks.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Post-Installation Tasks
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1855,34 +2883,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Troubleshooting.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     FAQs and Troubleshooting
-  
-
-    
   </span>
-  
   
 
       
@@ -1943,34 +2958,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_foundry_windows_install_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Installation Guide   - Windows
-  
-
-    
   </span>
-  
   
 
       
@@ -2015,34 +3017,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_foundry_manual_install_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Manual Installation Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2081,34 +3070,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../VoltMX_Foundry_CLI/Content/installer_cli.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt Foundry Command Line Installer
-  
-
-    
   </span>
-  
   
 
       
@@ -2147,34 +3123,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmxfoundry_on_amazon_eks/Content/introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry on Amazon EKS
-  
-
-    
   </span>
-  
   
 
       
@@ -2211,34 +3174,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmxfoundry_on_openshift/Content/introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry on Red Hat OpenShift
-  
-
-    
   </span>
-  
   
 
       
@@ -2275,34 +3225,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmxfoundry_containers_helm/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Installation Guide - Helm Installation
-  
-
-    
   </span>
-  
   
 
       
@@ -2333,34 +3270,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmxfoundry_single_container/Content/Introduction_Single.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Single Container Solution (On-Premises)
-  
-
-    
   </span>
-  
   
 
       
@@ -2399,13 +3323,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -2413,20 +3332,12 @@
         
   
   
-  
     <a href="../../voltmxfoundry_containers_solution_on-prem/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Installation Guide   - Containers Solution
-  
-
-    
   </span>
-  
   
 
       
@@ -2571,34 +3482,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2629,34 +3527,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     OAuth Sample App Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2689,34 +3574,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../integration_services.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Integration Services
-  
-
-    
   </span>
-  
   
 
       
@@ -2749,34 +3621,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../administering_foundry.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Administering Foundry
-  
-
-    
   </span>
-  
   
 
       
@@ -2833,34 +3692,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     App Services Console User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2919,34 +3765,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     App Factory User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -2995,13 +3828,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3009,20 +3837,12 @@
         
   
   
-  
     <a href="../../voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Foundry Deployment Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -3047,16 +3867,9 @@
       <a href="../../VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Analytics & Reporting Cloud FAQs
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -3083,13 +3896,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3097,20 +3905,12 @@
         
   
   
-  
     <a href="../../vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Integration Services Troubleshooting Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -3145,7 +3945,6 @@
                   <div class="md-sidebar__inner">
                     
 
-
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -3164,9 +3963,7 @@
         <li class="md-nav__item">
   <a href="#reports-database" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Reports Database
-      
+      Reports Database
     </span>
   </a>
   
@@ -3175,9 +3972,7 @@
         <li class="md-nav__item">
   <a href="#reports-database-for-integration-on-a-separate-node" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Reports Database for Integration on a Separate Node:
-      
+      Reports Database for Integration on a Separate Node:
     </span>
   </a>
   
@@ -3193,26 +3988,16 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
-  
-    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Foundry/voltmx_foundry_linux_install_guide/Content/Installing_VoltMX_Foundry_Tomcat.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
-    </a>
-  
-  
 
 
-<div class="language-text highlight"><pre><span></span><code>
-</code></pre></div>
-<h1 id="installing-volt-mx-foundry-on-tomcat-console-mode">Installing Volt MX Foundry on Tomcat - Console-mode<a class="headerlink" href="#installing-volt-mx-foundry-on-tomcat-console-mode" title="Permanent link">&para;</a></h1>
+<h1 id="installing-volt-mx-foundry-on-tomcat-console-mode">Installing Volt MX Foundry on Tomcat - Console-mode</h1>
 <blockquote>
 <p><strong><em>Note:</em></strong>  If a user installs Volt MX Foundry Console on a partition different from the user's home directory, the user must have read/write execute permissions.</p>
 </blockquote>
-<p>This section of the document provides you with the instructions for installing and configuring Volt MX Foundry Console on a single node. For multi-node installations, refer the <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Deployment_Checklist.html">Deployment Checklist and Example Case Studies</a>.</p>
+<p>This section of the document provides you with the instructions for installing and configuring Volt MX Foundry Console on a single node. For multi-node installations, refer the <a href="../../voltmx_Foundry_deployment_guide/Content/Deployment_Checklist.html">Deployment Checklist and Example Case Studies</a>.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong>  Ensure that you have the required hardware and access to the supporting software as mentioned in the <a href="Prerequisites.html">Prerequisites</a> section and performed the steps as mentioned in the <a href="Pre-installation_Tasks.html">Pre-installation Tasks</a> section.</p>
 </blockquote>
@@ -3474,7 +4259,7 @@ The following installation types are supported for new installation:
 <li>
 <p><strong>API Developer Portal</strong> - To install developer portal, type 4 and press <strong>Enter</strong>.  </p>
 <blockquote>
-<p><strong><em>Note:</em></strong> During installation if you have selected <strong>API Developer Portal</strong>, the <strong>API Developer Portal</strong> is created. You can directly access your <a href="../../../Foundry/voltmx_foundry_user_guide/Content/VoltMXDevPortal.html">VoltMX Developer Portal</a> in Volt MX Foundry Console.</p>
+<p><strong><em>Note:</em></strong> During installation if you have selected <strong>API Developer Portal</strong>, the <strong>API Developer Portal</strong> is created. You can directly access your <a href="../../voltmx_foundry_user_guide/Content/VoltMXDevPortal.html">VoltMX Developer Portal</a> in Volt MX Foundry Console.</p>
 </blockquote>
 </li>
 <li>
@@ -3482,7 +4267,7 @@ The following installation types are supported for new installation:
         The system creates the following database: <code>&lt;prefix&gt;vpnsdb&lt;suffix&gt;</code>.</p>
 </li>
 </ul>
-<h2 id="reports-database">Reports Database<a class="headerlink" href="#reports-database" title="Permanent link">&para;</a></h2>
+<h2 id="reports-database">Reports Database</h2>
 <p>The reports database is used for configuring reports.</p>
 <p>The Installer creates the <code>mfreportsdb</code> if you choose either Console or Integration Services:</p>
 <ul>
@@ -3490,7 +4275,7 @@ The following installation types are supported for new installation:
 <li><strong>Console</strong> and <strong>Integration Services</strong> (with or without Engagement Services)</li>
 <li><strong>Integration Services</strong> without Console (with or without Engagement Services)</li>
 </ul>
-<h2 id="reports-database-for-integration-on-a-separate-node">Reports Database for Integration on a Separate Node:<a class="headerlink" href="#reports-database-for-integration-on-a-separate-node" title="Permanent link">&para;</a></h2>
+<h2 id="reports-database-for-integration-on-a-separate-node">Reports Database for Integration on a Separate Node:</h2>
 <p>While installing console and integration on separate nodes, the installer prompts you to point the reports database during the integration installation.  </p>
 <p>For example:  </p>
 <p>You have installed only Console on one node. The installer creates these three databases such as <code>&lt;&gt;mfreportsdb&lt;&gt;</code> along with the <code>&lt;&gt;mfconsoledb&lt;&gt;</code> and <code>&lt;&gt;mfaccountsdb&lt;&gt;</code>. For example, your report database name is <code>voltmxmfreportsdb1</code>  </p>
@@ -3500,14 +4285,15 @@ The following installation types are supported for new installation:
   <li value="10">Press <b>Enter</b> to continue the installation. The Install Folder details appear.</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>===============
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Install Folder  
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>---------------
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Please choose a destination folder for this installation.  
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>NOTE: The installation path should not contain any special characters.  
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Default Install Folder: /home/user1/VoltMXFoundry  
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>ENTER AN ABSOLUTE PATH, OR PRESS &lt; ENTER &gt; TO ACCEPT THE DEFAULT  
-</span></code></pre></div>
+<pre><code>===============
+Install Folder  
+---------------
+Please choose a destination folder for this installation.  
+NOTE: The installation path should not contain any special characters.  
+Default Install Folder: /home/user1/VoltMXFoundry  
+ENTER AN ABSOLUTE PATH, OR PRESS &lt; ENTER &gt; TO ACCEPT THE DEFAULT  
+
+</code></pre>
 <blockquote>
 <p><strong><em>Note:</em></strong>  By default, Volt MX Foundry is installed at the home directory of the user.</p>
 </blockquote>
@@ -3515,14 +4301,15 @@ The following installation types are supported for new installation:
   <li value="11">Press <b>Enter</b> to continue the installation. The installer prompts for the_Application Server_ details as follows:</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>===================   
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Application Server  
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>-------------------
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Enter requested information  
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>-&gt;1- Tomcat  
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2- JBoss
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::
-</span></code></pre></div>
+<pre><code>===================   
+Application Server  
+-------------------
+Enter requested information  
+-&gt;1- Tomcat  
+2- JBoss
+ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::
+
+</code></pre>
 <ol>
   <li value="12">In the <b>Application Server</b>, type 1.</li>
 </ol>
@@ -3530,7 +4317,7 @@ The following installation types are supported for new installation:
 <blockquote>
 <p><strong><em>Note:</em></strong> By default Tomcat manager password in used by Volt MX Foundry for Web Application publish. To change the default Tomcat manager password, the new password needs to be replaced in the <code>password</code> value for user <code>manager</code> in <code>&lt;tomcat-users&gt;</code> tag in <code>tomcat-users.xml</code>.  </p>
 </blockquote>
-<p>Now to replace the value in database, the password value should be encrypted. To encrypt the database password, follow these steps mentioned in the <a href="../../../Foundry/voltmx_foundry_manual_install_guide/Content/Encrypt_Passwords.html">Encrypt_Passwords</a> section.  </p>
+<p>Now to replace the value in database, the password value should be encrypted. To encrypt the database password, follow these steps mentioned in the <a href="../../voltmx_foundry_manual_install_guide/Content/Encrypt_Passwords.html">Encrypt_Passwords</a> section.  </p>
 <p>Once the password is encrypted, replace the encrypted value in the <code>prop_value</code> column in the row where prop_value is <code>management_server_password</code> of <code>&lt;DatabasePrefix&gt;admindb&lt;DatabaseSuffix&gt;</code> database in the <code>server_configuration</code> table.</p>
 <li>Press <b>Enter</b>. The _HTTP or HTTPS_ details appear asking you to choose the HTTP or HTTPS.
 <pre><code style="display:block;background-color:#eee;">=============== 
@@ -3585,82 +4372,86 @@ The following installation types are supported for new installation:
 <ul>
 <li>If a port is already in use, the installer displays the following error message:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>===============================================================================  
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Validation of Host Detail  
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>-------------------------  
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Port 22 is already in use.  
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Please provide a different port.  
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> -&gt;1- Go back to give valid input.  
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>   2- Abort Installation.  
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>ENTER THE NUMBER OF THE DESIRED CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT:
-</span></code></pre></div>
+<pre><code>===============================================================================  
+Validation of Host Detail  
+-------------------------  
+Port 22 is already in use.  
+
+Please provide a different port.  
+
+ -&gt;1- Go back to give valid input.  
+   2- Abort Installation.  
+
+ENTER THE NUMBER OF THE DESIRED CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT:
+</code></pre>
 <ul>
 <li>If you provide an invalid port, the installer displays the following error message:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>===============================================================================  
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Port Validation  
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>---------------  
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Please enter a valid port. Port should be in between 1-65535.  
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a> -&gt;1- Go back to give valid port.  
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   2- Abort Installation.  
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>ENTER THE NUMBER OF THE DESIRED CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::
-</span></code></pre></div>
+<pre><code>===============================================================================  
+Port Validation  
+---------------  
+Please enter a valid port. Port should be in between 1-65535.  
+ -&gt;1- Go back to give valid port.  
+   2- Abort Installation.  
+
+ENTER THE NUMBER OF THE DESIRED CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::
+
+</code></pre>
 <ul>
 <li>If you provide an invalid Hostname/IP address, the installer displays the following error message:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>===============================================================================  
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Invalid Hostname/IP Address  
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>---------------------------  
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Please enter a valid hostname/IP address.  
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a> -&gt;1- Go back to give valid details.  
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>   2- Abort Installation.  
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>ENTER THE NUMBER OF THE DESIRED CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT:
-</span></code></pre></div>
+<pre><code>===============================================================================  
+Invalid Hostname/IP Address  
+---------------------------  
+
+Please enter a valid hostname/IP address.  
+
+ -&gt;1- Go back to give valid details.  
+   2- Abort Installation.  
+
+ENTER THE NUMBER OF THE DESIRED CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT:
+
+</code></pre>
 <ol>
   <li value="13">Provide the <b>Hostname/IP Address</b>, <b>HTTP Port</b>, and <b>HTTPS Port</b>, and press <b>Enter</b>. The_SSL Configuration for HTTPS Communication_ details appear only if you select HTTPS. Choose one of the following two options:</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>==============================================
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>SSL Configuration for HTTPS Communication  
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>-----------------------------------------------  
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Please select the appropriate option to proceed.  
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a> -&gt;1- Create self-signed certificate  
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>   2- Provide SSL certificate  
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::  
-</span></code></pre></div>
+<pre><code>==============================================
+SSL Configuration for HTTPS Communication  
+-----------------------------------------------  
+Please select the appropriate option to proceed.  
+
+ -&gt;1- Create self-signed certificate  
+   2- Provide SSL certificate  
+
+ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::  
+
+</code></pre>
 <p>In the <em>SSL Configuration for HTTPS Communication</em>, if you select 1, the <em>Details for self-signed SSL Certificate</em> details appear.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To add an existing SSL certificate to cacerts file, refer to <a href="Post-Installation_Tasks.html#how-to-add-an-existing-ssl-certificate-to-cacerts">How to Add Your Existing SSL Certificate</a>.</p>
 </blockquote>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>========================================================================  
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Details for self-signed SSL Certificate  
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>-----------------------------------------  
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Please provide the following details to create self-signed certificate. All the fields are mandatory.  
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Please note that the path of self-signed certificate will be  /root/VoltMXFoundry/keystore.jks.  
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Organizational Unit (DEFAULT: ): platform  
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>Host Name (DEFAULT: ): voltmx.com  
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>Company (DEFAULT: ): Volt MX  
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>City (DEFAULT: ): HYD  
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>State (DEFAULT: ): AP  
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>Country (DEFAULT: ): IND  
-</span></code></pre></div>
+<pre><code>========================================================================  
+Details for self-signed SSL Certificate  
+-----------------------------------------  
+
+Please provide the following details to create self-signed certificate. All the fields are mandatory.  
+
+Please note that the path of self-signed certificate will be  /root/VoltMXFoundry/keystore.jks.  
+
+Organizational Unit (DEFAULT: ): platform  
+
+Host Name (DEFAULT: ): voltmx.com  
+
+Company (DEFAULT: ): Volt MX  
+
+City (DEFAULT: ): HYD  
+
+State (DEFAULT: ): AP  
+
+Country (DEFAULT: ): IND  
+
+</code></pre>
 <blockquote>
 <p><strong><em>Note:</em></strong> The path for a self-signed certificate will be in this location: <code>&lt;install folder&gt;\keystore.jks</code></p>
 </blockquote>
@@ -3668,54 +4459,58 @@ The following installation types are supported for new installation:
 <blockquote>
 <p><strong><em>Note:</em></strong> Provide path for .jks file as input.</p>
 </blockquote>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>========================
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>SSL Certificate Details  
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>-----------------------  
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Please provide the following details  
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Absolute Path to Keystore File (Default: ): /downloads/_.hcl.net.2016.jks  
-</span></code></pre></div>
+<pre><code>========================
+SSL Certificate Details  
+-----------------------  
+Please provide the following details  
+
+Absolute Path to Keystore File (Default: ): /downloads/_.hcl.net.2016.jks  
+
+</code></pre>
 <p>b.  Type the details. The installer prompts for <em>Password for keystore file</em> details as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>============================= 
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Password for keystore file  
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>-----------------------------
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Password should contain minimum six characters and should not contain space.  
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Please enter the password:
-</span></code></pre></div>
+<pre><code>============================= 
+Password for keystore file  
+-----------------------------
+
+Password should contain minimum six characters and should not contain space.  
+
+Please enter the password:
+
+</code></pre>
 <ul>
-<li>If you enter an incorrect password -- for example, one that is fewer than six characters, contains a space, or is empty -- the following error message for an invalid keystore password is displayed.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>=============================
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Password for keystore file  
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>------------------------------
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>===============================
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Invalid Keystore Password  
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>-------------------------  
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Keystore password must be at least six characters and should not contain space.  
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div></li>
+<li>If you enter an incorrect password -- for example, one that is fewer than six characters, contains a space, or is empty -- the following error message for an invalid keystore password is displayed.</li>
 </ul>
+<pre><code>=============================
+Password for keystore file  
+------------------------------
+
+===============================
+Invalid Keystore Password  
+-------------------------  
+Keystore password must be at least six characters and should not contain space.  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ol>
   <li value="14">Type the password.</li>
   <li value="15">Press <b>Enter</b>. The_Database Choice_details appear:</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>================= 
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Database Choice  
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>------------------
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Please select the database provider of your choice.
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>-&gt;1- MySQL
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  2- MySQL Cluster - Group Replication
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  3- Oracle 19c (19.3.0)
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  4- SQL Server 2017
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  5- MariaDB 10.3. 13
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::  
-</span></code></pre></div>
+<pre><code>================= 
+Database Choice  
+------------------
+Please select the database provider of your choice.
+
+-&gt;1- MySQL
+  2- MySQL Cluster - Group Replication
+  3- Oracle 19c (19.3.0)
+  4- SQL Server 2017
+  5- MariaDB 10.3. 13
+
+ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::  
+
+</code></pre>
 <ol>
   <li value="16">In the_Database Choice_,choose the DB:</li>
 </ol>
@@ -3723,18 +4518,19 @@ The following installation types are supported for new installation:
 <ul>
 <li>In the <em>Database Choice</em> if you select 1, the <em>MySQL Database Details</em> appear.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>======================= 
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>MySQL Database Details  
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>-------------------------
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>Please enter MySQL database server details  
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>Database Server IP (DEFAULT: localhost): &lt;IP address&gt;  
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>Port (DEFAULT: 3306):  
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>Username (DEFAULT: ): root  
-</span></code></pre></div>
+<pre><code>======================= 
+MySQL Database Details  
+-------------------------
+
+Please enter MySQL database server details  
+
+Database Server IP (DEFAULT: localhost): &lt;IP address&gt;  
+
+Port (DEFAULT: 3306):  
+
+Username (DEFAULT: ): root  
+
+</code></pre>
 <p>a.  Enter the following details:</p>
 <ul>
 <li><strong>Database Server IP</strong>: Enter the server Hostname/IP to be used to create a database of selected components of Volt MX Foundry. By default, the server Hostname/IP is set as localhost.</li>
@@ -3742,130 +4538,140 @@ The following installation types are supported for new installation:
 <li><strong>Username</strong>: Enter the user name used while creating the database user - for example, dbclient.</li>
 </ul>
 <p>b.  Provide a password and press <strong>Enter</strong>.</p>
-<p>c.  If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="./Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
+<p>c.  If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
 <ul>
 <li>If the database connection fails, the following error message displays.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>==========================
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Database Connection Failed  
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>--------------------------  
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Database connection failed.  
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>For the following reasons: Communications link failure  
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>==========================
+Database Connection Failed  
+--------------------------  
+Database connection failed.  
+
+For the following reasons: Communications link failure  
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ul>
 <li>If the database server not compatible, the following error message displays:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>===================================== 
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Incompatible Database Server Version  
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>------------------------------------  
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>===================================== 
+Incompatible Database Server Version  
+------------------------------------  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ul>
 <li>In the <em>Database Choice</em> if you select 2, the <em>Oracle Database Details</em> appear.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>=========================
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Oracle Database Details  
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>-------------------------
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Please enter Oracle database server details.  
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Database Server Hostname/IP (Default: 10.10.24.51): &lt;Hostname/IP&gt;  
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>Port (Default: 1521):  
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>Service ID / Service Name(Default: ):  
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>System Username (Default: ): 
-</span></code></pre></div>
+<pre><code>=========================
+Oracle Database Details  
+-------------------------
+
+Please enter Oracle database server details.  
+
+Database Server Hostname/IP (Default: 10.10.24.51): &lt;Hostname/IP&gt;  
+
+Port (Default: 1521):  
+
+Service ID / Service Name(Default: ):  
+
+System Username (Default: ): 
+
+</code></pre>
 <p>a.  Enter the following details:
   *   <strong>Database Server IP</strong>: Enter the server Hostname/IP to be used to create a database of selected components of Volt MX Foundry. By default, the server Hostname/IP is set as localhost.
   *   <strong>Port</strong>: Enter the database port of the Oracle Server. By default, this field is set to 1521 for oracle.
   *   <strong>Service ID</strong> <strong>/ Service Name</strong>: Enter Oracle service ID or service name. Service ID is unique alias given to an instance name of Oracle DB.     <br />
   *   <strong>System Username</strong>: Enter the user name used while creating the database user.</p>
 <p>b.  Press <strong>Enter</strong>. The installer prompts for <em>Enter Password for Database User</em> details as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>=================================
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Enter Password for Database User  
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>---------------------------------
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Please enter the password: 
-</span></code></pre></div>
+<pre><code>=================================
+Enter Password for Database User  
+---------------------------------
+Please enter the password: 
+
+</code></pre>
 <p>c. Provide a password and press <strong>Enter</strong>.</p>
-<p>d. If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="./Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
+<p>d. If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
 <ul>
 <li>If the database connection fails, the following error message displays.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>========================== 
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Database Connection Failed  
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>--------------------------  
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Database connection failed.  
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>For the following reasons: Communications link failure  
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>========================== 
+Database Connection Failed  
+--------------------------  
+Database connection failed.  
+
+For the following reasons: Communications link failure  
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ul>
 <li>If the database server not compatible, the following error message displays:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>==================================== 
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Incompatible Database Server Version  
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>------------------------------------
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>==================================== 
+Incompatible Database Server Version  
+------------------------------------
+
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <p>Select the tablespace for Oracle database:</p>
 <blockquote>
 <p><strong><em>Important:</em></strong>  If tablespaces were already created, the DBA must grant quota (permissions) on these tablespaces to installer with admin option.  </p>
 </blockquote>
 <p>The DBA also must include grant quota on the schemas from installer login.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>==================== 
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Tablespace Choice  
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>--------------------  
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Please select the Table Space type  
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>-&gt;1- Default Tablespace  
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a> 2- User Defined Tablespace  
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::  
-</span></code></pre></div>
+<pre><code>==================== 
+Tablespace Choice  
+--------------------  
+
+Please select the Table Space type  
+
+-&gt;1- Default Tablespace  
+ 2- User Defined Tablespace  
+
+ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::  
+
+</code></pre>
 <ul>
 <li><strong>Default Tablespace</strong>: If selected, the database schema and SQL scripts migration happens automatically to the default tablespace - for example, <code>USERS</code></li>
 <li><strong>User Defined Tablespace</strong>: If selected, enter the tablespaces for the following:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>=========================
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Ask for the Tablespaces  
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>-------------------------
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Please enter the names of the Tablespaces  
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Data Tablespace (Default: ): VoltMX123  
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>Index Tablespace (Default: ):  
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>LOB Table Space (Default: ):  
-</span></code></pre></div>
+<pre><code>=========================
+Ask for the Tablespaces  
+-------------------------
+
+Please enter the names of the Tablespaces  
+
+Data Tablespace (Default: ): VoltMX123  
+Index Tablespace (Default: ):  
+LOB Table Space (Default: ):  
+
+</code></pre>
 <ul>
 <li><strong>Data Tablespace</strong>:<br />
 Enter the name for Data tablespace.  </li>
 </ul>
 <p>This is a mandatory field. If the Data tablespace field is empty, the installers displays the error message:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>===================================== 
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>TableSpace details not provided  
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>-------------------------------------- 
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Please provide a valid Tablespace for at least the Data field for the installation wizard to proceed further. PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):  
-</span></code></pre></div>
+<pre><code>===================================== 
+TableSpace details not provided  
+-------------------------------------- 
+Please provide a valid Tablespace for at least the Data field for the installation wizard to proceed further. PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):  
+
+</code></pre>
 <p>If the Data tablespace (for example, VoltMX123) does not exist, the installers displays the error message:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>=====================================
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Invalid TableSpace Details  
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>------------------------------------
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Installation wizard is not able to access the VoltMX123 TableSpace provided with give credentials. Please verify the details again. PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK): 
-</span></code></pre></div>
+<pre><code>=====================================
+Invalid TableSpace Details  
+------------------------------------
+Installation wizard is not able to access the VoltMX123 TableSpace provided with give credentials. Please verify the details again. PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK): 
+
+</code></pre>
 <ul>
 <li><strong>Index Index Tablespace</strong>: Enter the name for Index tablespace.<br />
 If input for Index Tablespace is not provided, then the value will be set to the provided Datatable space value.</li>
@@ -3873,20 +4679,21 @@ If input for Index Tablespace is not provided, then the value will be set to the
 If input for LOB Tablespace is not provided, then the value will be set to the provided Datatable space value.</li>
 <li>In the <em>Database Choice</em> if you select 3, the <em>SQL Server Database Details</em> appear.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>===============================
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>SQLServer Database Details  
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>-------------------------------
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>Please enter SQL database server details.  
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>Database Server Hostname/IP (Default: 10.10.24.51): &lt;Hostname/IP&gt;  
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>Port (Default: 1433):  
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>Username 9Default: ):  
-</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>
-</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>Instance Name (Optional) (Default: ):
-</span></code></pre></div>
+<pre><code>===============================
+SQLServer Database Details  
+-------------------------------
+
+Please enter SQL database server details.  
+
+Database Server Hostname/IP (Default: 10.10.24.51): &lt;Hostname/IP&gt;  
+
+Port (Default: 1433):  
+
+Username 9Default: ):  
+
+Instance Name (Optional) (Default: ):
+
+</code></pre>
 <p>a.  Enter the following details:</p>
 <ul>
 <li><strong>Database Server IP</strong>: Enter the server Hostname/IP to be used to create a database of selected components of Volt MX Foundry. By default, the server Hostname/IP is set as localhost.</li>
@@ -3895,35 +4702,38 @@ If input for LOB Tablespace is not provided, then the value will be set to the p
 <li><strong>Instance Name (Optional)</strong>: Enter the instance name for the database. This information is optional.</li>
 </ul>
 <p>b.  Press <strong>Enter</strong>. The installer prompts for <em>Enter Password for Database User</em> details as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>=====================================
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>Enter Password for Database User  
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>--------------------------------------
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Please enter the password:  
-</span></code></pre></div>
+<pre><code>=====================================
+Enter Password for Database User  
+--------------------------------------
+Please enter the password:  
+
+</code></pre>
 <p>c.  Provide a password and press <strong>Enter</strong>.</p>
-<p>d.  If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="./Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
+<p>d.  If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
 <ul>
 <li>If the database connection fails, the following error message displays.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>=========================== 
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Database Connection Failed  
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>--------------------------  
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Database connection failed.  
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>For the following reasons: Communications link failure  
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
-</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>
-</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>=========================== 
+Database Connection Failed  
+--------------------------  
+Database connection failed.  
+
+For the following reasons: Communications link failure  
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ul>
 <li>If the database server not compatible, the following error message displays:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>==================================== 
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Incompatible Database Server Version  
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>-----------------------------------  
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>==================================== 
+Incompatible Database Server Version  
+-----------------------------------  
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <blockquote>
 <p><strong><em>Important:</em></strong> Follow the below steps only if you want install Volt MX Foundry on Tomcat with Microsoft Azure SQL Server database.</p>
 </blockquote>
@@ -3938,36 +4748,38 @@ If input for LOB Tablespace is not provided, then the value will be set to the p
 Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
 <p><code>&lt;LocalDrive&gt;\VoltMXFoundryInstallerV8\tomcat\conf\Catalina\localhost\authService.xml</code></p>
 <p>b.  Modify the following the <code>authService.xml</code> file:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>&lt;!-- The contents of this file will be loaded for each web application --&gt;
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>&lt;Context&gt;
-</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
-</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>&lt;Resource auth=&quot;Container&quot; driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;  
-</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>factory=&quot;org.apache.tomcat.jdbc.pool.DataSourceFactory&quot; initialSize=&quot;5&quot; jmxEnabled=&quot;true&quot; logAbandoned=&quot;true&quot; maxActive=&quot;10&quot; maxIdle=&quot;5&quot; maxWait=&quot;10000&quot; minEvictableIdleTimeMillis=&quot;30000&quot; minIdle=&quot;2&quot; name=&quot;jdbc/authglobaldb&quot; password=&quot;&lt;Password&gt;&quot; removeAbandoned=&quot;true&quot; removeAbandonedTimeout=&quot;600&quot; testOnBorrow=&quot;true&quot; testOnReturn=&quot;false&quot; testWhileIdle=&quot;true&quot; timeBetweenEvictionRunsMillis=&quot;30000&quot; type=&quot;javax.sql.DataSource&quot; url=&quot;jdbc:sqlserver://&lt;DBServerIP:PORT&gt;;databasename=&lt;auth database name&gt;;sendStringParametersAsUnicode=true;&quot; username=&quot;&lt;User_Name&gt;&quot; validationInterval=&quot;30000&quot; validationQuery=&quot;SELECT 1&quot;/&gt;
-</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
-</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>&lt;Resource auth=&quot;Container&quot; driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;  
-</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>factory=&quot;org.apache.tomcat.jdbc.pool.DataSourceFactory&quot; initialSize=&quot;5&quot; jmxEnabled=&quot;true&quot; logAbandoned=&quot;true&quot; maxActive=&quot;10&quot; maxIdle=&quot;5&quot; maxWait=&quot;10000&quot; minEvictableIdleTimeMillis=&quot;30000&quot; minIdle=&quot;2&quot; name=&quot;jdbc/authconfig&quot; password=&quot;&lt;Password&gt;&quot; removeAbandoned=&quot;true&quot; removeAbandonedTimeout=&quot;600&quot; testOnBorrow=&quot;true&quot; testOnReturn=&quot;false&quot; testWhileIdle=&quot;true&quot; timeBetweenEvictionRunsMillis=&quot;30000&quot; type=&quot;javax.sql.DataSource&quot; url=&quot;jdbc:sqlserver::/&lt;DBServerIP:PORT&gt;;databasename=&lt;auth database name&gt;;sendStringParametersAsUnicode=true;&quot; username=&quot;&lt;User_Name&gt;&quot; validationInterval=&quot;30000&quot; validationQuery=&quot;SELECT 1&quot;/&gt;
-</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>
-</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>&lt;/Context&gt;
-</span></code></pre></div>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;!-- The contents of this file will be loaded for each web application --&gt;
+&lt;Context&gt;
+
+&lt;Resource auth=&quot;Container&quot; driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;  
+factory=&quot;org.apache.tomcat.jdbc.pool.DataSourceFactory&quot; initialSize=&quot;5&quot; jmxEnabled=&quot;true&quot; logAbandoned=&quot;true&quot; maxActive=&quot;10&quot; maxIdle=&quot;5&quot; maxWait=&quot;10000&quot; minEvictableIdleTimeMillis=&quot;30000&quot; minIdle=&quot;2&quot; name=&quot;jdbc/authglobaldb&quot; password=&quot;&lt;Password&gt;&quot; removeAbandoned=&quot;true&quot; removeAbandonedTimeout=&quot;600&quot; testOnBorrow=&quot;true&quot; testOnReturn=&quot;false&quot; testWhileIdle=&quot;true&quot; timeBetweenEvictionRunsMillis=&quot;30000&quot; type=&quot;javax.sql.DataSource&quot; url=&quot;jdbc:sqlserver://&lt;DBServerIP:PORT&gt;;databasename=&lt;auth database name&gt;;sendStringParametersAsUnicode=true;&quot; username=&quot;&lt;User_Name&gt;&quot; validationInterval=&quot;30000&quot; validationQuery=&quot;SELECT 1&quot;/&gt;
+
+&lt;Resource auth=&quot;Container&quot; driverClassName=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;  
+factory=&quot;org.apache.tomcat.jdbc.pool.DataSourceFactory&quot; initialSize=&quot;5&quot; jmxEnabled=&quot;true&quot; logAbandoned=&quot;true&quot; maxActive=&quot;10&quot; maxIdle=&quot;5&quot; maxWait=&quot;10000&quot; minEvictableIdleTimeMillis=&quot;30000&quot; minIdle=&quot;2&quot; name=&quot;jdbc/authconfig&quot; password=&quot;&lt;Password&gt;&quot; removeAbandoned=&quot;true&quot; removeAbandonedTimeout=&quot;600&quot; testOnBorrow=&quot;true&quot; testOnReturn=&quot;false&quot; testWhileIdle=&quot;true&quot; timeBetweenEvictionRunsMillis=&quot;30000&quot; type=&quot;javax.sql.DataSource&quot; url=&quot;jdbc:sqlserver::/&lt;DBServerIP:PORT&gt;;databasename=&lt;auth database name&gt;;sendStringParametersAsUnicode=true;&quot; username=&quot;&lt;User_Name&gt;&quot; validationInterval=&quot;30000&quot; validationQuery=&quot;SELECT 1&quot;/&gt;
+
+&lt;/Context&gt;
+
+</code></pre>
 </details>
 <ul>
 <li>In the <em>Database Choice</em> if you select 5, the <em>MariaDB Database Details</em> appear.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>============================
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>MariaDB Database Details  
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>-----------------------------
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
-</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Please enter MariaDB database server details.  
-</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
-</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>Database Server Hostname/IP (Default: 10.10.24.51): &lt;Hostname/IP&gt;  
-</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
-</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>Database Port (Default: 1433):  
-</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
-</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>Database Username (Default: ):  
-</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>
-</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>Instance Name (Optional) (Default: ):
-</span></code></pre></div>
+<pre><code>============================
+MariaDB Database Details  
+-----------------------------
+
+Please enter MariaDB database server details.  
+
+Database Server Hostname/IP (Default: 10.10.24.51): &lt;Hostname/IP&gt;  
+
+Database Port (Default: 1433):  
+
+Database Username (Default: ):  
+
+Instance Name (Optional) (Default: ):
+
+</code></pre>
 <p>a.  Enter the following details:</p>
 <ul>
 <li><strong>Database Server IP</strong>: Enter the server Hostname/IP to be used to create a database of selected components of Volt MX Foundry. By default, the server Hostname/IP is set as localhost.</li>
@@ -3975,51 +4787,54 @@ Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
 <li><strong>Database Username</strong>: Enter the user name used while creating the database user - for example, dbclient.</li>
 </ul>
 <p>b.  Press <strong>Enter</strong>. The installer prompts for <em>Enter Password for Database User</em> details as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>=====================================
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Enter Password for Database User  
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>-------------------------------------  
-</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Please enter the password:  
-</span></code></pre></div>
+<pre><code>=====================================
+Enter Password for Database User  
+-------------------------------------  
+Please enter the password:  
+
+</code></pre>
 <p>c.  Provide a password and press <strong>Enter</strong>.</p>
-<p>d.  If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="./Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
+<p>d.  If you are using an encrypted database password, type the key that you received from the encryption tool and press Enter. Otherwise, leave the field blank and press Enter. For more information, refer to <a href="Troubleshooting.html#how-to-encrypt-the-database-password">How to encrypt the database password</a>.</p>
 <ul>
 <li>If the database connection fails, the following error message displays.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>==========================
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>Database Connection Failed  
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>--------------------------  
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>Database connection failed.  
-</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>
-</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>For the following reasons: Communications link failure  
-</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>
-</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
-</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
-</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
+<pre><code>==========================
+Database Connection Failed  
+--------------------------  
+Database connection failed.  
+
+For the following reasons: Communications link failure  
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ul>
 <li>If the database server not compatible, the following error message displays:</li>
 </ul>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>====================================
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>Incompatible Database Server Version  
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>------------------------------------  
-</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
-</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
-</span></code></pre></div>
- 
+<pre><code>====================================
+Incompatible Database Server Version  
+------------------------------------  
+
+PRESS &lt;ENTER&gt; TO ACCEPT THE FOLLOWING (OK):
+
+</code></pre>
 <ol>
   <li value="17">Press <b>Enter</b>. The installation prompts for Database name prefix and suffix details as follows:</li>
 </ol>
-</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>===============================
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>Database name prefix and suffix  
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>-------------------------------  
-</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
-</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>Please enter database name prefix and suffix. Please provide existing Prefix and Suffix if you intend to upgrade to the new Volt MX Foundry Database.  
-</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
-</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>Database Name Prefix (Default: voltmx): tomcat  
-</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>
-</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>Database Name Suffix (Default: 1): 54
-</span></code></pre></div>
+
+<pre><code>===============================
+Database name prefix and suffix  
+-------------------------------  
+
+Please enter database name prefix and suffix. Please provide existing Prefix and Suffix if you intend to upgrade to the new Volt MX Foundry Database.  
+
+Database Name Prefix (Default: voltmx): tomcat  
+
+Database Name Suffix (Default: 1): 54
+
+</code></pre>
 <ul>
 <li>Database Name Prefix: Enter valid prefix databases - for example, Volt MX.</li>
 <li>Database Name Suffix: Enter valid suffix for all databases - for example, 1.</li>
@@ -4030,20 +4845,21 @@ Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
 
 <p>The <strong>Administrator Account Configuration</strong> details help you to configure your super administrator account.</p>
 <p>The <strong>Administrator Account Configuration</strong> window appears only while installing Console and Identity Services along with one or all other Volt MX Foundry components such as Integration Services, and Engagement Services on Tomcat or JBoss on a single node. You can select the components at <a href="#InstallComponentsSN">Install Components</a>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>===================================
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>Administrator Account Configuration  
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>------------------------------------
-</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>
-</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>Please configure your Administrator Account. We require your First Name, Last Name, Email Address and Password. Your Name is used for display purposes in the console, the Email address will be used as your login ID and we do not use it to send unsolicited emails.  
-</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
-</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>Public URL (Default: ):  
-</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
-</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>First Name (Default: ):  
-</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
-</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>Last Name (Default: ):  
-</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>
-</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>Email (Default: ):  
-</span></code></pre></div>
+<pre><code>===================================
+Administrator Account Configuration  
+------------------------------------
+
+Please configure your Administrator Account. We require your First Name, Last Name, Email Address and Password. Your Name is used for display purposes in the console, the Email address will be used as your login ID and we do not use it to send unsolicited emails.  
+
+Public URL (Default: ):  
+
+First Name (Default: ):  
+
+Last Name (Default: ):  
+
+Email (Default: ):  
+
+</code></pre>
 <p>a.  In the <strong>Administrator Account Configuration</strong>, enter the following details to create the administrator account.</p>
 <ul>
 <li>
@@ -4063,127 +4879,133 @@ Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
 <p><strong><em>Note:</em></strong> During Volt MX Foundry installation if you have configured your super administrator account, you can directly log in to Volt MX Foundry Console.</p>
 </blockquote>
 <p>b.  Press <strong>Enter</strong>. The <em>Password for the Administrator Account</em> details appear.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>======================================  
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>Password for the Administrator Account  
-</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>--------------------------------------- 
-</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>Please Enter the Password:  
-</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>
-</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>
-</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>Confirm Password for the Administrator Account Configuration  
-</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>
-</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>Please Enter the Password:  
-</span></code></pre></div>
+<pre><code>======================================  
+Password for the Administrator Account  
+--------------------------------------- 
+Please Enter the Password:  
+
+
+Confirm Password for the Administrator Account Configuration  
+
+Please Enter the Password:  
+
+</code></pre>
 <p>c.  Enter the admin log-in password and press <strong>Enter</strong>. The <em>Confirm Password for the Administrator Account Configuration</em> details appear.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>==============================================================
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Confirm Password for the Administrator Account Configuration  
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>--------------------------------------------------------------
-</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
-</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>Please Enter the Password:
-</span></code></pre></div>
+<pre><code>==============================================================
+Confirm Password for the Administrator Account Configuration  
+--------------------------------------------------------------
+
+Please Enter the Password:
+
+</code></pre>
 <ol>
   <li value="19">Re-enter the admin log-in password and press <b>Enter</b>. The_VoltMX Foundry server startup_details appear.</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>=======================================
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>Volt MX Foundry server startup details  
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>----------------------------------------
-</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
-</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>Do you want to start the Volt MX Foundry server after successful installation of Volt MX Foundry  
-</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a> -&gt;1- Yes  
-</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>   2- No  
-</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
-</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::
-</span></code></pre></div>
+<pre><code>=======================================
+Volt MX Foundry server startup details  
+----------------------------------------
+
+Do you want to start the Volt MX Foundry server after successful installation of Volt MX Foundry  
+ -&gt;1- Yes  
+   2- No  
+
+ENTER THE NUMBER FOR YOUR CHOICE, OR PRESS &lt;ENTER&gt; TO ACCEPT THE DEFAULT::
+
+</code></pre>
 <ol>
   <li value="20">To start the server automatically after the successful installation of Volt MX Foundry, press <b>Enter</b>.</li>
 </ol>
 
 <blockquote>
-<p><strong><em>Note:</em></strong> To start the server manually after the successful installation of Volt MX Foundry, refer to <a href="../../../Foundry/voltmx_foundry_manual_install_guide/Content/Starting_VoltMX_Foundry_Console.html">Starting Volt MX Foundry Console.</a></p>
+<p><strong><em>Note:</em></strong> To start the server manually after the successful installation of Volt MX Foundry, refer to <a href="../../voltmx_foundry_manual_install_guide/Content/Starting_VoltMX_Foundry_Console.html">Starting Volt MX Foundry Console.</a></p>
 </blockquote>
 <p>The <em>Pre-Installation Summary</em> details appear.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>=================================================  
-</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Pre-Installation Summary  
-</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>-----------------------  
-</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>Please review the following before continuing:  
-</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>
-</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>Installation Type:  
-</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>New Installation  
-</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>
-</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>Install Components:  
-</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>Console, Developer Portal, Identity Services, Integration Services and Engagement Services  
-</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>
-</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>Install Folder:  
-</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>/home/User/VoltMXFoundryInstaller-DEV-8.4.1.438  
-</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>
-</span><span id="__span-36-15"><a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a>Application Server:  
-</span><span id="__span-36-16"><a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>Tomcat  9.0.x
-</span><span id="__span-36-17"><a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a>
-</span><span id="__span-36-18"><a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a>Application Server Details:  
-</span><span id="__span-36-19"><a id="__codelineno-36-19" name="__codelineno-36-19" href="#__codelineno-36-19"></a>Hostname/IP Address: 10.11.12.201, Protocol: HTTP, HTTP Port: 8080,  
-</span><span id="__span-36-20"><a id="__codelineno-36-20" name="__codelineno-36-20" href="#__codelineno-36-20"></a>
-</span><span id="__span-36-21"><a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a>Database Choice:  
-</span><span id="__span-36-22"><a id="__codelineno-36-22" name="__codelineno-36-22" href="#__codelineno-36-22"></a>MySQL  
-</span><span id="__span-36-23"><a id="__codelineno-36-23" name="__codelineno-36-23" href="#__codelineno-36-23"></a>
-</span><span id="__span-36-24"><a id="__codelineno-36-24" name="__codelineno-36-24" href="#__codelineno-36-24"></a>Database Details:  
-</span><span id="__span-36-25"><a id="__codelineno-36-25" name="__codelineno-36-25" href="#__codelineno-36-25"></a>Hostname/IP Address: mbaastest22.hcl.net, User: mfuser, Port: 3306  
-</span><span id="__span-36-26"><a id="__codelineno-36-26" name="__codelineno-36-26" href="#__codelineno-36-26"></a>
-</span><span id="__span-36-27"><a id="__codelineno-36-27" name="__codelineno-36-27" href="#__codelineno-36-27"></a>Database Names:  
-</span><span id="__span-36-28"><a id="__codelineno-36-28" name="__codelineno-36-28" href="#__codelineno-36-28"></a>Test_mfconsoledb_438, Test_mfaccountsdb_438, Test_mfreportsdb_438, Test_idconfigdb_438, Test_admindb_438 and Test_vpnsdb_438  
-</span><span id="__span-36-29"><a id="__codelineno-36-29" name="__codelineno-36-29" href="#__codelineno-36-29"></a>
-</span><span id="__span-36-30"><a id="__codelineno-36-30" name="__codelineno-36-30" href="#__codelineno-36-30"></a>Admin Account Details:  
-</span><span id="__span-36-31"><a id="__codelineno-36-31" name="__codelineno-36-31" href="#__codelineno-36-31"></a>First Name:test, Last Name:one, Email:bvtuser@voltmx.com  
-</span><span id="__span-36-32"><a id="__codelineno-36-32" name="__codelineno-36-32" href="#__codelineno-36-32"></a>
-</span><span id="__span-36-33"><a id="__codelineno-36-33" name="__codelineno-36-33" href="#__codelineno-36-33"></a>PRESS &lt;ENTER&gt; TO CONTINUE: =========================================================== Installing... ------------- \[==================|==================|==================\]
-</span></code></pre></div>
+<pre><code>=================================================  
+Pre-Installation Summary  
+-----------------------  
+Please review the following before continuing:  
+
+Installation Type:  
+New Installation  
+
+Install Components:  
+Console, Developer Portal, Identity Services, Integration Services and Engagement Services  
+
+Install Folder:  
+/home/User/VoltMXFoundryInstaller-DEV-8.4.1.438  
+
+Application Server:  
+Tomcat  9.0.x
+
+Application Server Details:  
+Hostname/IP Address: 10.11.12.201, Protocol: HTTP, HTTP Port: 8080,  
+
+Database Choice:  
+MySQL  
+
+Database Details:  
+Hostname/IP Address: mbaastest22.hcl.net, User: mfuser, Port: 3306  
+
+Database Names:  
+Test_mfconsoledb_438, Test_mfaccountsdb_438, Test_mfreportsdb_438, Test_idconfigdb_438, Test_admindb_438 and Test_vpnsdb_438  
+
+Admin Account Details:  
+First Name:test, Last Name:one, Email:bvtuser@voltmx.com  
+
+PRESS &lt;ENTER&gt; TO CONTINUE: =========================================================== Installing... ------------- \[==================|==================|==================\]
+
+</code></pre>
 <ol>
   <li value="21">Type the details and press <b>Enter</b>. The_Ready To Install_ details appear.</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>=====================================
-</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Ready To Install  
-</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>--------------------------------------
-</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
-</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>Installer is now ready to install Volt MX Foundry Console onto your system at the following location:  
-</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
-</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>/home/user1/VoltMXFoundry  
-</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>
-</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>PRESS &lt;ENTER&gt; TO INSTALL:
-</span></code></pre></div>
+<pre><code>=====================================
+Ready To Install  
+--------------------------------------
+
+Installer is now ready to install Volt MX Foundry Console onto your system at the following location:  
+
+/home/user1/VoltMXFoundry  
+
+PRESS &lt;ENTER&gt; TO INSTALL:
+
+</code></pre>
 <ol>
   <li value="22">Press <b>Enter</b> to continue the installation.</li>
 </ol>
 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>===============  
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>Installing...  
-</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>---------------
-</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>
-</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>[==================|==================|==================|==================\] \[------------------|------------------|------------------|------------------\]
-</span></code></pre></div>
+<pre><code>===============  
+Installing...  
+---------------
+
+[==================|==================|==================|==================\] \[------------------|------------------|------------------|------------------\]
+
+</code></pre>
 <ol>
   <li value="23">Press <b>Enter</b>. The_Installation Complete_details appear.</li>
 </ol>
 
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>========================
-</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>Installation Complete  
-</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>------------------------
-</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
-</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>Congratulations. Volt MX Foundry has been successfully installed to:  
-</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
-</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>/home/user1/VoltMXFoundry  
-</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>
-</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>Console URL: https://00.00.00.00:port/mfconsole  
-</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>Identity Service URL: https://00.00.00.00:port/authService  
-</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>Integration Service URL: https://00.00.00.00:port/admin  
-</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a>Engagement Services URL: http://00.00.00.000:port/vpns  
-</span><span id="__span-39-13"><a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a>
-</span><span id="__span-39-14"><a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a>PRESS &lt;ENTER&gt; TO EXIT THE INSTALLER: \[user1@cnt6-01c downloads\]$
-</span></code></pre></div>
- 
+<pre><code>========================
+Installation Complete  
+------------------------
+
+Congratulations. Volt MX Foundry has been successfully installed to:  
+
+/home/user1/VoltMXFoundry  
+
+Console URL: https://00.00.00.00:port/mfconsole  
+Identity Service URL: https://00.00.00.00:port/authService  
+Integration Service URL: https://00.00.00.00:port/admin  
+Engagement Services URL: http://00.00.00.000:port/vpns  
+
+PRESS &lt;ENTER&gt; TO EXIT THE INSTALLER: \[user1@cnt6-01c downloads\]$
+
+</code></pre>
 <ol>
   <li value="24">Press <b>Enter</b> to complete the installation. After the installation is completed, the installer creates logs in the install folder.</li>
 </ol>
-</p>
+
 <blockquote>
 <p><strong><em>Important:</em></strong> When you are using a third party tool (for example, PuTTY) for installing Volt MX Foundry remotely, if any network connection issues occur at the end of the installation, the installer stops the installation and the installation log is not created.</p>
 <p><strong><em>Important:</em></strong>  After installing Volt MX Foundry, import your SSL certificate (for example, domain.subdomain.crt) into your Volt MX Foundry installer's JRE trusted certificate authority (CA) certificates file - for example,<br />
@@ -4192,13 +5014,11 @@ Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
 <p>If your SSL certificate is not configured, the system displays an error - for example, "peer not authenticated".  </p>
 <p>For details, refer to <a href="Troubleshooting.html#Service_Provider's_Certificate_Issues">Troubleshoot with SSL Certificate Issues</a>.</p>
 <blockquote>
-<p><strong><em>Note:</em></strong> You can now access Volt MX Foundry Console by using the URLs. For more details, refer to <a href="../../../Foundry/voltmx_foundry_user_guide/Content/How_to_access_VoltMX_Foundry_Portal_on-Prem.html">Accessing Volt MX Foundry Console - On-premises</a>.<br />
+<p><strong><em>Note:</em></strong> You can now access Volt MX Foundry Console by using the URLs. For more details, refer to <a href="../../voltmx_foundry_user_guide/Content/How_to_access_VoltMX_Foundry_Portal_on-Prem.html">Accessing Volt MX Foundry Console - On-premises</a>.<br />
 <img alt="" src="Resources/Images/MFWelcome_649x407.png" />  </p>
 </blockquote>
-<p>During installation if you have configured your super administrator account, you can directly <a href="../../../Foundry/voltmx_foundry_user_guide/Content/How_to_access_VoltMX_Foundry_Portal_on-Prem.html">log in to Volt MX Foundry Console</a> by using the Console URL.  </p>
+<p>During installation if you have configured your super administrator account, you can directly <a href="../../voltmx_foundry_user_guide/Content/How_to_access_VoltMX_Foundry_Portal_on-Prem.html">log in to Volt MX Foundry Console</a> by using the Console URL.  </p>
 <p><img alt="" src="Resources/Images/Sign-inMF_648x363.png" /></p>
-
-
 
 
 
@@ -4221,7 +5041,7 @@ Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -4259,14 +5079,10 @@ Sample Location for authService.xml from Tomcat with MSSQL install folder,</p>
     </div>
     
     
-    
-      
-      
-      
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

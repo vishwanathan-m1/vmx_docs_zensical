@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_widget_prog_guide/Content/Alert_Basic_Properties.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_widget_prog_guide/Content/Alert_Basic_Properties.html">
       
       
         <link rel="prev" href="Alert_Methods.html">
@@ -18,53 +18,18 @@
         <link rel="next" href="App_Menu.html">
       
       
-        
-      
-      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="zensical-0.0.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
     
     
       
-        <title>Alert Properties - HCL Volt MX Documentation</title>
+        <title>Properties - HCL Volt MX Documentation</title>
       
     
     
-      
-        
-      
-      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
       
       
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  <style>:root{}</style>
-
 
 
     
@@ -76,7 +41,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -85,10 +50,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -161,7 +127,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -173,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alert Properties
+              Properties
             
           </span>
         </div>
@@ -181,36 +147,67 @@
     </div>
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
-  <button type="button" class="md-search__button">
-    Search
-  </button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-      
     
-    <div class="md-header__source">
-      
+    
+      <div class="md-header__source">
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      
-    </div>
+      </div>
+    
   </nav>
   
 </header>
@@ -229,10 +226,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
+  
+    
   
   Introducing Volt MX
 
@@ -245,10 +243,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
+  
+    
   
   Getting Started
 
@@ -261,12 +260,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
+  
+    
   
   What&apos;s New
 
@@ -280,10 +280,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
+  
+    
   
   Release Notes
 
@@ -296,12 +297,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
+  
+    
   
   App Platform
 
@@ -315,12 +317,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
+  
+    
   
   Tutorials
 
@@ -334,10 +337,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
+  
+    
   
   Installation Guides
 
@@ -349,7 +353,6 @@
         
   
   
-  
     
   
   
@@ -358,6 +361,8 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Iris
 
@@ -371,12 +376,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Foundry
 
@@ -420,7 +426,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -440,16 +446,9 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introducing Volt MX
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -467,16 +466,9 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -498,42 +490,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     What&apos;s New
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -549,16 +558,9 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Release Notes
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -580,42 +582,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     App Platform
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -663,42 +682,353 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     Tutorials
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -714,16 +1044,9 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation Guides
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -771,17 +1094,13 @@
     
     
     
-      
-        
-        
-      
-      
     
-    
+      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -790,16 +1109,9 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -808,11 +1120,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Iris
-  
-
+            Iris
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -826,16 +1134,9 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Fundamentals
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -864,34 +1165,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Iris
-  
-
-    
   </span>
-  
   
 
       
@@ -984,34 +1272,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris tutorials
-  
-
-    
   </span>
-  
   
 
       
@@ -1074,34 +1349,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1158,34 +1420,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Application Design and Development Guidelines
-  
-
-    
   </span>
-  
   
 
       
@@ -1346,34 +1595,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt Iris API Developers Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1408,13 +1644,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1422,20 +1653,12 @@
         
   
   
-  
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Native Function API Developers Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1568,14 +1791,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" checked>
@@ -1584,16 +1803,9 @@
           <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris Widget Programmer Guide
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1602,11 +1814,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Iris Widget Programmer Guide
-  
-
+            Iris Widget Programmer Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1620,16 +1828,9 @@
       <a href="Overview.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1648,16 +1849,9 @@
       <a href="widgetApiReference.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Widgets and API reference
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1676,16 +1870,9 @@
       <a href="GestureAPI.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Gesture Methods and 3D Touch
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1704,16 +1891,9 @@
       <a href="Widget_Skins.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Widget Skins
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1732,16 +1912,9 @@
       <a href="Dynamic_Skinning.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Dynamic Skinning
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1760,16 +1933,9 @@
       <a href="Application_Events.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Application  Initialization Events
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1794,13 +1960,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1808,20 +1969,12 @@
         
   
   
-  
     <a href="Animation.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Widget Animation Using Flex Forms
-  
-
-    
   </span>
-  
   
 
       
@@ -1846,16 +1999,9 @@
       <a href="API_Simplification.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     API Simplification
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1874,16 +2020,9 @@
       <a href="Masters.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Masters
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1902,16 +2041,9 @@
       <a href="Widget_Common_Properties.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Widget Common Properties
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1936,13 +2068,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1950,20 +2077,12 @@
         
   
   
-  
     <a href="PlatformSpecificCapabilities.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Platform Specific Capabilities
-  
-
-    
   </span>
-  
   
 
       
@@ -1988,16 +2107,9 @@
       <a href="Appendix.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Platform Specific Limitations
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2028,14 +2140,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_13" checked>
@@ -2044,16 +2152,9 @@
           <label class="md-nav__link" for="__nav_8_8_13" id="__nav_8_8_13_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Alert Widget
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2062,11 +2163,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_8_13">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Alert Widget
-  
-
+            Alert Widget
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2080,16 +2177,9 @@
       <a href="Alert.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Alert Widget Basics
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2108,16 +2198,9 @@
       <a href="Alert_Events.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Events
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2136,16 +2219,9 @@
       <a href="Alert_Methods.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Methods
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2173,16 +2249,9 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
-    
-  
     Properties
-  
-
-    
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2191,22 +2260,14 @@
       <a href="Alert_Basic_Properties.html" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Properties
-  
-
-    
   </span>
-  
   
 
       </a>
       
         
-
 
   
 
@@ -2226,9 +2287,7 @@
         <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2237,9 +2296,7 @@
         <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2248,9 +2305,7 @@
         <li class="md-nav__item">
   <a href="#readwrite" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -2259,9 +2314,7 @@
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2270,9 +2323,7 @@
         <li class="md-nav__item">
   <a href="#android-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Android limitations
-      
+      Android limitations
     </span>
   </a>
   
@@ -2281,9 +2332,7 @@
         <li class="md-nav__item">
   <a href="#spadesktop-web-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        SPA/Desktop Web limitations
-      
+      SPA/Desktop Web limitations
     </span>
   </a>
   
@@ -2292,9 +2341,7 @@
         <li class="md-nav__item">
   <a href="#example-1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 1
-      
+      Example 1
     </span>
   </a>
   
@@ -2303,9 +2350,7 @@
         <li class="md-nav__item">
   <a href="#example-2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 2
-      
+      Example 2
     </span>
   </a>
   
@@ -2314,9 +2359,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2325,9 +2368,7 @@
         <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2336,9 +2377,7 @@
         <li class="md-nav__item">
   <a href="#type_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2347,9 +2386,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -2358,9 +2395,7 @@
         <li class="md-nav__item">
   <a href="#remarks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2369,9 +2404,7 @@
         <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Examples
-      
+      Examples
     </span>
   </a>
   
@@ -2380,9 +2413,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2391,9 +2422,7 @@
         <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2402,9 +2431,7 @@
         <li class="md-nav__item">
   <a href="#type_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2413,9 +2440,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -2424,9 +2449,7 @@
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2435,9 +2458,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -2446,9 +2467,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2457,9 +2476,7 @@
         <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2468,9 +2485,7 @@
         <li class="md-nav__item">
   <a href="#type_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2479,9 +2494,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -2490,9 +2503,7 @@
         <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2501,9 +2512,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -2512,9 +2521,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2523,9 +2530,7 @@
         <li class="md-nav__item">
   <a href="#syntax_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2534,9 +2539,7 @@
         <li class="md-nav__item">
   <a href="#type_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2545,9 +2548,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -2556,9 +2557,7 @@
         <li class="md-nav__item">
   <a href="#remarks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2567,9 +2566,7 @@
         <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2578,9 +2575,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2589,9 +2584,7 @@
         <li class="md-nav__item">
   <a href="#syntax_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2600,9 +2593,7 @@
         <li class="md-nav__item">
   <a href="#type_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2611,9 +2602,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -2622,9 +2611,7 @@
         <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2633,9 +2620,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -2644,9 +2629,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2655,9 +2638,7 @@
         <li class="md-nav__item">
   <a href="#syntax_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2666,9 +2647,7 @@
         <li class="md-nav__item">
   <a href="#type_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2677,9 +2656,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -2688,9 +2665,7 @@
         <li class="md-nav__item">
   <a href="#example_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2699,9 +2674,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -2710,9 +2683,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2721,9 +2692,7 @@
         <li class="md-nav__item">
   <a href="#syntax_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2732,9 +2701,7 @@
         <li class="md-nav__item">
   <a href="#type_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2743,9 +2710,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -2754,9 +2719,7 @@
         <li class="md-nav__item">
   <a href="#example_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2765,9 +2728,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2776,9 +2737,7 @@
         <li class="md-nav__item">
   <a href="#syntax_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2787,9 +2746,7 @@
         <li class="md-nav__item">
   <a href="#type_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2798,9 +2755,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -2809,9 +2764,7 @@
         <li class="md-nav__item">
   <a href="#example_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2820,9 +2773,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2831,9 +2782,7 @@
         <li class="md-nav__item">
   <a href="#syntax_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2842,9 +2791,7 @@
         <li class="md-nav__item">
   <a href="#type_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2853,9 +2800,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -2864,9 +2809,7 @@
         <li class="md-nav__item">
   <a href="#example_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2875,9 +2818,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2886,9 +2827,7 @@
         <li class="md-nav__item">
   <a href="#syntax_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2897,9 +2836,7 @@
         <li class="md-nav__item">
   <a href="#type_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -2908,9 +2845,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -2919,9 +2854,7 @@
         <li class="md-nav__item">
   <a href="#example_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2930,9 +2863,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -2941,9 +2872,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2984,34 +2913,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="App_Menu.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     App Menu Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3046,34 +2962,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="ARRenderer.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     ARRenderer Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3108,34 +3011,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="BottomSheet.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     BottomSheet Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3170,34 +3060,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Browser.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Browser Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3232,34 +3109,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Button.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Button Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3294,34 +3158,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Calendar.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Calendar Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3356,34 +3207,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Camera.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Camera Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3418,34 +3256,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="canvas.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Canvas Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3480,34 +3305,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="CheckBox.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     CheckBoxGroup Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3542,34 +3354,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="CollectionView.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     CollectionView Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3604,34 +3403,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="CordovaBrowser.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     CordovaBrowser Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3668,34 +3454,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="DataGrid.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     DataGrid Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3734,34 +3507,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="FlexContainer.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     FlexContainer Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3802,34 +3562,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="FlexForm.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     FlexForm Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3868,34 +3615,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="FlexScrollContainer.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     FlexScrollContainer Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3930,34 +3664,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Image.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Image Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -3992,34 +3713,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="label.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Label Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4054,34 +3762,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="ListBox.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     ListBox Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4120,34 +3815,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Map.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Map Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4182,34 +3864,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="MLCamera.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     MLCamera Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4244,34 +3913,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="nativeContainer.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     NativeContainer Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4306,34 +3962,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="PDFView.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     PDFView Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4368,34 +4011,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Phone.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Phone Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4430,34 +4060,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="PickerView.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     PickerView Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4492,34 +4109,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="RadioButtonGroup.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     RadioButtonGroup Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4550,34 +4154,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="react_Native_Container.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     ReactNativeContainer Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4612,34 +4203,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="RichText.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     RichText Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4676,34 +4254,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Segment.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     SegmentedUI Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4738,34 +4303,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Signature.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     SignatureCapture Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4798,34 +4350,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="SigninWithApple.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     SigninWithApple Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4862,34 +4401,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Slider.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Slider Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4924,34 +4450,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Switch.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Switch Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -4986,34 +4499,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="TabPane.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     TabPane Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -5048,34 +4548,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="TextArea.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     TextArea2 Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -5110,34 +4597,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="TextBox.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     TextBox2 Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -5174,34 +4648,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="Toolbar.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Toolbar Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -5236,13 +4697,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -5250,20 +4706,12 @@
         
   
   
-  
     <a href="Video.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Video Widget
-  
-
-    
   </span>
-  
   
 
       
@@ -5288,16 +4736,9 @@
       <a href="Deprecated.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Deprecated Widgets
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -5316,16 +4757,9 @@
       <a href="Glossary.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Glossary
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -5358,34 +4792,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_wearables_dev_guide/content/homehtml.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris Wearables Developer Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -5420,34 +4841,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris CarApp Developer Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -5482,34 +4890,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     iOS Live Activities in Volt MX Iris
-  
-
-    
   </span>
-  
   
 
       
@@ -5542,34 +4937,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Using the Volt MX App
-  
-
-    
   </span>
-  
   
 
       
@@ -5602,13 +4984,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -5616,20 +4993,12 @@
         
   
   
-  
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Reference Architecture Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -5685,13 +5054,93 @@
     
     
     
+    
       
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
         
+      
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -5699,20 +5148,12 @@
         
   
   
-  
-    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
-    Foundry
-  
-
-    
+    Installing Foundry
   </span>
-  
   
 
       
@@ -5721,6 +5162,579 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -5738,7 +5752,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
   
 
@@ -5758,9 +5771,7 @@
         <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -5769,9 +5780,7 @@
         <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -5780,9 +5789,7 @@
         <li class="md-nav__item">
   <a href="#readwrite" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -5791,9 +5798,7 @@
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -5802,9 +5807,7 @@
         <li class="md-nav__item">
   <a href="#android-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Android limitations
-      
+      Android limitations
     </span>
   </a>
   
@@ -5813,9 +5816,7 @@
         <li class="md-nav__item">
   <a href="#spadesktop-web-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        SPA/Desktop Web limitations
-      
+      SPA/Desktop Web limitations
     </span>
   </a>
   
@@ -5824,9 +5825,7 @@
         <li class="md-nav__item">
   <a href="#example-1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 1
-      
+      Example 1
     </span>
   </a>
   
@@ -5835,9 +5834,7 @@
         <li class="md-nav__item">
   <a href="#example-2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 2
-      
+      Example 2
     </span>
   </a>
   
@@ -5846,9 +5843,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -5857,9 +5852,7 @@
         <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -5868,9 +5861,7 @@
         <li class="md-nav__item">
   <a href="#type_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -5879,9 +5870,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -5890,9 +5879,7 @@
         <li class="md-nav__item">
   <a href="#remarks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -5901,9 +5888,7 @@
         <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Examples
-      
+      Examples
     </span>
   </a>
   
@@ -5912,9 +5897,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -5923,9 +5906,7 @@
         <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -5934,9 +5915,7 @@
         <li class="md-nav__item">
   <a href="#type_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -5945,9 +5924,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -5956,9 +5933,7 @@
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -5967,9 +5942,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -5978,9 +5951,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -5989,9 +5960,7 @@
         <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6000,9 +5969,7 @@
         <li class="md-nav__item">
   <a href="#type_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6011,9 +5978,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -6022,9 +5987,7 @@
         <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6033,9 +5996,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -6044,9 +6005,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6055,9 +6014,7 @@
         <li class="md-nav__item">
   <a href="#syntax_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6066,9 +6023,7 @@
         <li class="md-nav__item">
   <a href="#type_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6077,9 +6032,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -6088,9 +6041,7 @@
         <li class="md-nav__item">
   <a href="#remarks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -6099,9 +6050,7 @@
         <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6110,9 +6059,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6121,9 +6068,7 @@
         <li class="md-nav__item">
   <a href="#syntax_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6132,9 +6077,7 @@
         <li class="md-nav__item">
   <a href="#type_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6143,9 +6086,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -6154,9 +6095,7 @@
         <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6165,9 +6104,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -6176,9 +6113,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6187,9 +6122,7 @@
         <li class="md-nav__item">
   <a href="#syntax_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6198,9 +6131,7 @@
         <li class="md-nav__item">
   <a href="#type_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6209,9 +6140,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -6220,9 +6149,7 @@
         <li class="md-nav__item">
   <a href="#example_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6231,9 +6158,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -6242,9 +6167,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6253,9 +6176,7 @@
         <li class="md-nav__item">
   <a href="#syntax_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6264,9 +6185,7 @@
         <li class="md-nav__item">
   <a href="#type_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6275,9 +6194,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -6286,9 +6203,7 @@
         <li class="md-nav__item">
   <a href="#example_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6297,9 +6212,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6308,9 +6221,7 @@
         <li class="md-nav__item">
   <a href="#syntax_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6319,9 +6230,7 @@
         <li class="md-nav__item">
   <a href="#type_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6330,9 +6239,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -6341,9 +6248,7 @@
         <li class="md-nav__item">
   <a href="#example_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6352,9 +6257,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6363,9 +6266,7 @@
         <li class="md-nav__item">
   <a href="#syntax_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6374,9 +6275,7 @@
         <li class="md-nav__item">
   <a href="#type_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6385,9 +6284,7 @@
         <li class="md-nav__item">
   <a href="#readwrite_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Read/Write
-      
+      Read/Write
     </span>
   </a>
   
@@ -6396,9 +6293,7 @@
         <li class="md-nav__item">
   <a href="#example_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6407,9 +6302,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6418,9 +6311,7 @@
         <li class="md-nav__item">
   <a href="#syntax_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -6429,9 +6320,7 @@
         <li class="md-nav__item">
   <a href="#type_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Type
-      
+      Type
     </span>
   </a>
   
@@ -6440,9 +6329,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-code_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from Code
-      
+      Accessible from Code
     </span>
   </a>
   
@@ -6451,9 +6338,7 @@
         <li class="md-nav__item">
   <a href="#example_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -6462,9 +6347,7 @@
         <li class="md-nav__item">
   <a href="#accessible-from-ide_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible from IDE
-      
+      Accessible from IDE
     </span>
   </a>
   
@@ -6473,9 +6356,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -6491,37 +6372,28 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
-  
-    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_widget_prog_guide/Content/Alert_Basic_Properties.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
-    </a>
-  
-  
 
 
-<div class="language-text highlight"><pre><span></span><code>
-</code></pre></div>
-<h1 id="alert-properties">Alert Properties<a class="headerlink" href="#alert-properties" title="Permanent link">&para;</a></h1>
+<h1 id="alert-properties">Alert Properties</h1>
 <p>The properties of the Alert widget are:</p>
 <hr />
 <details close="close">
 <p><summary>accessibilityConfig Property</summary></p>
 <hr />
 <p>Enables you to control accessibility behavior and alternative text for the widget.</p>
-<p>For more information on using accessibility features in your app, see the <a href="../../../Iris/app_design_dev/Content/Accessibility_Overview.html">Accessibility</a> appendix in the VoltMX IrisUser Guide.</p>
-<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>accessibilityConfig
-</span></code></pre></div>
-<h3 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
+<p>For more information on using accessibility features in your app, see the <a href="../../app_design_dev/Content/Accessibility_Overview.html">Accessibility</a> appendix in the VoltMX IrisUser Guide.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code>
+accessibilityConfig
+</code></pre>
+<h3 id="type">Type</h3>
 <p>Object</p>
-<h3 id="readwrite">Read/Write<a class="headerlink" href="#readwrite" title="Permanent link">&para;</a></h3>
+<h3 id="readwrite">Read/Write</h3>
 <p>Read + Write</p>
-<h3 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h3>
+<h3 id="remarks">Remarks</h3>
 <ul>
 <li>The accessibilityConfig property is enabled for all the widgets which are supported under the Flex Layout.</li>
 </ul>
@@ -6577,43 +6449,45 @@
 </tr>
 </tbody>
 </table>
-<h3 id="android-limitations">Android limitations<a class="headerlink" href="#android-limitations" title="Permanent link">&para;</a></h3>
+<h3 id="android-limitations">Android limitations</h3>
 <ul>
 <li>If the results of the concatenation of a11y fields result in an empty string, then <code>accessibilityConfig</code> is ignored and the text that is on widget is read out.</li>
 <li>The soft keypad does not gain accessibility focus during the right/left swipe gesture when the keypad appears.</li>
 </ul>
-<h3 id="spadesktop-web-limitations">SPA/Desktop Web limitations<a class="headerlink" href="#spadesktop-web-limitations" title="Permanent link">&para;</a></h3>
+<h3 id="spadesktop-web-limitations">SPA/Desktop Web limitations</h3>
 <ul>
 <li>When <code>accessibilityConfig</code> property is configured for any widget, the <code>tabIndex</code> attribute is added automatically to the <code>accessibilityConfig</code> property.</li>
 <li>The behavior of accessibility depends on the Web browser, Web browser version, Voice Over Assistant, and Voice Over Assistant version.</li>
 <li>Currently SPA/Desktop web applications support only a few ARIA tags. To achieve more accessibility features, use the attribute a11yARIA. The corresponding tags will be added to the DOM as per these configurations.</li>
 </ul>
-<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
+<h3 id="example-1">Example 1</h3>
 <p>This example uses the button widget, but the principle remains the same for all widgets that have an accessibilityConfig property.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>//This is a generic property that is applicable for various widgets.
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>//Here, we have shown how to use the accessibilityConfig Property for button widget.
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>/*You need to make a corresponding use of the accessibilityConfig property for other applicable widgets.*/
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Form1.myButton.accessibilityConfig = {
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;a11yLabel&quot;: &quot;Label&quot;,
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;a11yValue&quot;: &quot;Value&quot;,
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;a11yHint&quot;: &quot;Hint&quot;    
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>};
-</span></code></pre></div>
-<h3 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
+<pre><code>
+//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the accessibilityConfig Property for button widget.
+/*You need to make a corresponding use of the accessibilityConfig property for other applicable widgets.*/
+
+Form1.myButton.accessibilityConfig = {
+    &quot;a11yLabel&quot;: &quot;Label&quot;,
+    &quot;a11yValue&quot;: &quot;Value&quot;,
+    &quot;a11yHint&quot;: &quot;Hint&quot;    
+};
+</code></pre>
+<h3 id="example-2">Example 2</h3>
 <p>This example uses the button widget to implement internationalization in <code>accessibilityConfig</code> property, but the principle remains the same for all widgets.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/*Sample code to implement internationalization in accessibilityConfig property in Native platform.*/
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Form1.myButton.accessibilityConfig = {
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;a11yLabel&quot;: voltmx.i18n.getLocalizedString(&quot;key1&quot;)     
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>};  
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>/*Sample code to implement internationalization in accessibilityConfig property in Desktop Web platform.*/
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Form1.myButton.accessibilityConfig = {
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &quot;a11yLabel&quot;: &quot;voltmx.i18n.getLocalizedString(\&quot;key3\&quot;)&quot;
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>};
-</span></code></pre></div>
-<h3 id="platform-availability">Platform Availability<a class="headerlink" href="#platform-availability" title="Permanent link">&para;</a></h3>
+<pre><code>
+/*Sample code to implement internationalization in accessibilityConfig property in Native platform.*/
+
+Form1.myButton.accessibilityConfig = {
+    &quot;a11yLabel&quot;: voltmx.i18n.getLocalizedString(&quot;key1&quot;)     
+};  
+/*Sample code to implement internationalization in accessibilityConfig property in Desktop Web platform.*/
+
+Form1.myButton.accessibilityConfig = {
+    &quot;a11yLabel&quot;: &quot;voltmx.i18n.getLocalizedString(\&quot;key3\&quot;)&quot;
+};
+</code></pre>
+<h3 id="platform-availability">Platform Availability</h3>
 <ul>
 <li>Available in the IDE</li>
 <li>iOS, Android, SPA, and Desktop Web</li>
@@ -6624,43 +6498,46 @@
 <p><summary>alertIcon Property</summary></p>
 <hr />
 <p>Specifies the Icon to be displayed to visually indicate the type of alert.</p>
-<h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>alertIcon
-</span></code></pre></div>
-<h3 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_1">Syntax</h3>
+<pre><code>
+alertIcon
+</code></pre>
+<h3 id="type_1">Type</h3>
 <p>String</p>
-<h3 id="readwrite_1">Read/Write<a class="headerlink" href="#readwrite_1" title="Permanent link">&para;</a></h3>
+<h3 id="readwrite_1">Read/Write</h3>
 <p>No</p>
-<h3 id="remarks_1">Remarks<a class="headerlink" href="#remarks_1" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_1">Remarks</h3>
 <p>In Android platform, the alert icon can be either a string specifying a local resource, or an image object created using the API: voltmx.image.</p>
 <p>In iOS platform, you can provide the alert icon only as a string. iOS platform does not support the use of the image object.</p>
-<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<h3 id="examples">Examples</h3>
 <p>Using a local resource for the alert icon:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>//Creating the alert with the alertIcon:&quot;icon.png&quot;
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>var alertBasic = {
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    message: &quot;Sample Alert&quot;,
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    alertIcon: &quot;icon.png&quot;
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>};
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>//The icon.png should be available in resources folder.
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>var alertPSP = {};
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>var alert = voltmx.ui.Alert(alertBasic, alertPSP);
-</span></code></pre></div>
+<pre><code>
+//Creating the alert with the alertIcon:&quot;icon.png&quot;
+var alertBasic = {
+    message: &quot;Sample Alert&quot;,
+    alertIcon: &quot;icon.png&quot;
+};
+//The icon.png should be available in resources folder.
+var alertPSP = {};
+
+var alert = voltmx.ui.Alert(alertBasic, alertPSP);
+</code></pre>
 <p>Using an image object:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>//Creating the alert with an image object
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>imgObjRef = voltmx.image.createImage(&quot;local.png&quot;);
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>pspConfig = {};
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>var alert = voltmx.ui.Alert({
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    &quot;message&quot;: &quot;Alert text&quot;,
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    &quot;alertType&quot;: constants.ALERT_TYPE_INFO,
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    &quot;alertTitle&quot;: &quot;Alert Title&quot;,
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    &quot;yesLabel&quot;: &quot;Yes&quot;,
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    &quot;noLabel&quot;: &quot;&quot;,
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    &quot;alertIcon&quot;: imgObjRef,
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    &quot;alertHandler&quot;: null
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>}, pspConfig);
-</span></code></pre></div>
-<h3 id="platform-availability_1">Platform Availability<a class="headerlink" href="#platform-availability_1" title="Permanent link">&para;</a></h3>
+<pre><code>
+//Creating the alert with an image object
+imgObjRef = voltmx.image.createImage(&quot;local.png&quot;);
+pspConfig = {};
+var alert = voltmx.ui.Alert({
+    &quot;message&quot;: &quot;Alert text&quot;,
+    &quot;alertType&quot;: constants.ALERT_TYPE_INFO,
+    &quot;alertTitle&quot;: &quot;Alert Title&quot;,
+    &quot;yesLabel&quot;: &quot;Yes&quot;,
+    &quot;noLabel&quot;: &quot;&quot;,
+    &quot;alertIcon&quot;: imgObjRef,
+    &quot;alertHandler&quot;: null
+}, pspConfig);
+</code></pre>
+<h3 id="platform-availability_1">Platform Availability</h3>
 <ul>
 <li>Available in the IDE</li>
 <li>iOS (does not support the image object)</li>
@@ -6672,27 +6549,29 @@
 <p><summary>alertTitle Property</summary></p>
 <hr />
 <p>Specifies the Title of the alert.</p>
-<h3 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>alertTitle
-</span></code></pre></div>
-<h3 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_2">Syntax</h3>
+<pre><code>
+alertTitle
+</code></pre>
+<h3 id="type_2">Type</h3>
 <p>String</p>
-<h3 id="accessible-from-code">Accessible from Code<a class="headerlink" href="#accessible-from-code" title="Permanent link">&para;</a></h3>
+<h3 id="accessible-from-code">Accessible from Code</h3>
 <p>No</p>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>//Creating the alert with the alertTitle:&quot;Confirmation&quot;
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>var alertBasic = {
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    message: &quot;Sample Alert&quot;,
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    alertTitle: &quot;Confirmation&quot;
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>};
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>var alertPSP = {};
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>var alert = voltmx.ui.Alert(alertBasic, alertPSP);
-</span></code></pre></div>
-<h3 id="accessible-from-ide">Accessible from IDE<a class="headerlink" href="#accessible-from-ide" title="Permanent link">&para;</a></h3>
+<h3 id="example">Example</h3>
+<pre><code>
+//Creating the alert with the alertTitle:&quot;Confirmation&quot;
+var alertBasic = {
+    message: &quot;Sample Alert&quot;,
+    alertTitle: &quot;Confirmation&quot;
+};
+
+var alertPSP = {};
+
+var alert = voltmx.ui.Alert(alertBasic, alertPSP);
+</code></pre>
+<h3 id="accessible-from-ide">Accessible from IDE</h3>
 <p>Yes</p>
-<h3 id="platform-availability_2">Platform Availability<a class="headerlink" href="#platform-availability_2" title="Permanent link">&para;</a></h3>
+<h3 id="platform-availability_2">Platform Availability</h3>
 <p>Available on all platforms</p>
 <hr />
 </details>
@@ -6711,27 +6590,29 @@
 <li>ALERT_TYPE_ERROR</li>
 <li>ALERT_TYPE_INFO (Default)</li>
 </ul>
-<h3 id="syntax_3">Syntax<a class="headerlink" href="#syntax_3" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>alertType
-</span></code></pre></div>
-<h3 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_3">Syntax</h3>
+<pre><code>
+alertType
+</code></pre>
+<h3 id="type_3">Type</h3>
 <p>Number</p>
-<h3 id="accessible-from-code_1">Accessible from Code<a class="headerlink" href="#accessible-from-code_1" title="Permanent link">&para;</a></h3>
+<h3 id="accessible-from-code_1">Accessible from Code</h3>
 <p>No</p>
-<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>//Creating the alert with the alertType:constants.ALERT_TYPE_CONFIRMATION
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>var alertBasic = {
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    message: &quot;Sample Alert&quot;,
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    alertType: constants.ALERT_TYPE_CONFIRMATION
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>};
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>var alertPSP = {};
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>var alert = voltmx.ui.Alert(alertBasic, alertPSP);
-</span></code></pre></div>
-<h3 id="accessible-from-ide_1">Accessible from IDE<a class="headerlink" href="#accessible-from-ide_1" title="Permanent link">&para;</a></h3>
+<h3 id="example_1">Example</h3>
+<pre><code>
+//Creating the alert with the alertType:constants.ALERT_TYPE_CONFIRMATION
+var alertBasic = {
+    message: &quot;Sample Alert&quot;,
+    alertType: constants.ALERT_TYPE_CONFIRMATION
+};
+
+var alertPSP = {};
+
+var alert = voltmx.ui.Alert(alertBasic, alertPSP);
+</code></pre>
+<h3 id="accessible-from-ide_1">Accessible from IDE</h3>
 <p>Yes</p>
-<h3 id="platform-availability_3">Platform Availability<a class="headerlink" href="#platform-availability_3" title="Permanent link">&para;</a></h3>
+<h3 id="platform-availability_3">Platform Availability</h3>
 <p>Available on all platforms</p>
 <hr />
 </details>
@@ -6739,15 +6620,16 @@
 <p><summary>cursorType Property</summary></p>
 <hr />
 <p>In Desktop Web applications, when you hover the mouse over any widget, a mouse pointer appears. Using the cursorType property in Iris, you can specify the type of the mouse pointer.</p>
-<h3 id="syntax_4">Syntax<a class="headerlink" href="#syntax_4" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cursorType
-</span></code></pre></div>
-<h3 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_4">Syntax</h3>
+<pre><code>
+cursorType
+</code></pre>
+<h3 id="type_4">Type</h3>
 <p>String.</p>
 <p>You must provide valid CSS cursor value such as wait, grab, help, etc. to the cursorType property.</p>
-<h3 id="readwrite_2">Read/Write<a class="headerlink" href="#readwrite_2" title="Permanent link">&para;</a></h3>
+<h3 id="readwrite_2">Read/Write</h3>
 <p>Read + Write</p>
-<h3 id="remarks_2">Remarks<a class="headerlink" href="#remarks_2" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_2">Remarks</h3>
 <p>To add the <code>cursorType</code> property using VoltMX Iris in a Desktop Web application, follow these steps.</p>
 <ol>
 <li>In VoltMX Iris, open the Desktop Web application. From the <strong>Project</strong> explorer, expand <strong>Responsive Web/ Desktop</strong>&gt; <strong>Forms</strong> and select the form to which you need to make the changes.</li>
@@ -6763,14 +6645,16 @@
     You can see that the <strong>Cursor Type</strong> property has been added under the <strong>General</strong> section.</li>
 <li>Select a value from the drop-down list to set the <strong>Cursor Type</strong> for the widget.</li>
 </ol>
-<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>//This is a generic property and is applicable for many widgets.  
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>/*The example provided is for the Button widget. Make the required changes in the example while using other widgets.*/
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>frmButton.myButton.cursorType = &quot;wait&quot;;
-</span></code></pre></div>
-<h3 id="platform-availability_4">Platform Availability<a class="headerlink" href="#platform-availability_4" title="Permanent link">&para;</a></h3>
+<h3 id="example_2">Example</h3>
+<pre><code>
+//This is a generic property and is applicable for many widgets.  
+
+/*The example provided is for the Button widget. Make the required changes in the example while using other widgets.*/
+
+frmButton.myButton.cursorType = &quot;wait&quot;;
+
+</code></pre>
+<h3 id="platform-availability_4">Platform Availability</h3>
 <ul>
 <li>Available in IDE</li>
 <li>Desktop Web</li>
@@ -6781,26 +6665,28 @@
 <p><summary>message Property</summary></p>
 <hr />
 <p>Specifies the message description of the alert to be displayed.</p>
-<h3 id="syntax_5">Syntax<a class="headerlink" href="#syntax_5" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>message
-</span></code></pre></div>
-<h3 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_5">Syntax</h3>
+<pre><code>
+message
+</code></pre>
+<h3 id="type_5">Type</h3>
 <p>String</p>
-<h3 id="accessible-from-code_2">Accessible from Code<a class="headerlink" href="#accessible-from-code_2" title="Permanent link">&para;</a></h3>
+<h3 id="accessible-from-code_2">Accessible from Code</h3>
 <p>No</p>
-<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>//Creating the alert with the message:&quot;Sample Alert&quot;
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>var alertBasic = {
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    message: &quot;Sample Alert&quot;
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>};
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>var alertPSP = {};
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>var alert = voltmx.ui.Alert(alertBasic, alertPSP);
-</span></code></pre></div>
-<h3 id="accessible-from-ide_2">Accessible from IDE<a class="headerlink" href="#accessible-from-ide_2" title="Permanent link">&para;</a></h3>
+<h3 id="example_3">Example</h3>
+<pre><code>
+//Creating the alert with the message:&quot;Sample Alert&quot;
+var alertBasic = {
+    message: &quot;Sample Alert&quot;
+};
+
+var alertPSP = {};
+
+var alert = voltmx.ui.Alert(alertBasic, alertPSP);
+</code></pre>
+<h3 id="accessible-from-ide_2">Accessible from IDE</h3>
 <p>Yes</p>
-<h3 id="platform-availability_5">Platform Availability<a class="headerlink" href="#platform-availability_5" title="Permanent link">&para;</a></h3>
+<h3 id="platform-availability_5">Platform Availability</h3>
 <p>Available on all platforms</p>
 <hr />
 </details>
@@ -6808,26 +6694,29 @@
 <p><summary>noLabel Property</summary></p>
 <hr />
 <p>Specifies the descriptive Text for the "<strong>No</strong>" label.</p>
-<h3 id="syntax_6">Syntax<a class="headerlink" href="#syntax_6" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>noLabel
-</span></code></pre></div>
-<h3 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_6">Syntax</h3>
+<pre><code>
+noLabel
+</code></pre>
+<h3 id="type_6">Type</h3>
 <p>String</p>
-<h3 id="accessible-from-code_3">Accessible from Code<a class="headerlink" href="#accessible-from-code_3" title="Permanent link">&para;</a></h3>
+<h3 id="accessible-from-code_3">Accessible from Code</h3>
 <p>No</p>
-<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>//Creating the alert with the noLabel:&quot;No&quot;
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>var alertBasic = {
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    message: &quot;Sample Alert&quot;,
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    alertType: constants.ALERT_TYPE_CONFIRMATION,
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    noLabel: &quot;No&quot;
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>};
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>var alertPSP = {};
-</span></code></pre></div>
-<h3 id="accessible-from-ide_3">Accessible from IDE<a class="headerlink" href="#accessible-from-ide_3" title="Permanent link">&para;</a></h3>
+<h3 id="example_4">Example</h3>
+<pre><code>
+//Creating the alert with the noLabel:&quot;No&quot;
+var alertBasic = {
+    message: &quot;Sample Alert&quot;,
+    alertType: constants.ALERT_TYPE_CONFIRMATION,
+    noLabel: &quot;No&quot;
+};
+
+var alertPSP = {};
+
+</code></pre>
+<h3 id="accessible-from-ide_3">Accessible from IDE</h3>
 <p>Yes</p>
-<h3 id="platform-availability_6">Platform Availability<a class="headerlink" href="#platform-availability_6" title="Permanent link">&para;</a></h3>
+<h3 id="platform-availability_6">Platform Availability</h3>
 <p>Available on all platforms</p>
 <hr />
 </details>
@@ -6839,13 +6728,14 @@
 <p><strong><em>Note:</em></strong> Locale-level configurations take priority when invalid values are given to this property, or if it is not defined.</p>
 </blockquote>
 <p>The mirroring widget layout properties should be defined as follows.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    return (isI18nLayoutConfigEnabled &amp;&amp;
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    localeLayoutConfig[defaultLocale]
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    !widgetRetainFlexPositionPropertiesValue);
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>}
-</span></code></pre></div>
+<pre><code>
+function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
+    return (isI18nLayoutConfigEnabled &amp;&amp;
+    localeLayoutConfig[defaultLocale]
+    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
+    !widgetRetainFlexPositionPropertiesValue);
+}
+</code></pre>
 <p>The following table illustrates how widgets consider Local flag and Widget flag values.</p>
 <table>
 <thead>
@@ -6913,39 +6803,41 @@
 </tr>
 </tbody>
 </table>
-<h3 id="syntax_7">Syntax<a class="headerlink" href="#syntax_7" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>retainContentAlignment
-</span></code></pre></div>
-<h3 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_7">Syntax</h3>
+<pre><code>
+retainContentAlignment
+</code></pre>
+<h3 id="type_7">Type</h3>
 <p>Boolean</p>
-<h3 id="readwrite_3">Read/Write<a class="headerlink" href="#readwrite_3" title="Permanent link">&para;</a></h3>
+<h3 id="readwrite_3">Read/Write</h3>
 <p>No (only during widget-construction time)</p>
-<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>//This is a generic property that is applicable for various widgets.
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>//Here, we have shown how to use the retainContentAlignment property for Button widget.
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>/*You need to make a corresponding use of the 
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>retainContentAlignment property for other applicable widgets.*/
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>var btn = new voltmx.ui.Button({
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    &quot;height&quot;: &quot;50dp&quot;,
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    &quot;id&quot;: &quot;myButton&quot;,
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    &quot;isVisible&quot;: true,
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    &quot;left&quot;: &quot;0dp&quot;,
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>    &quot;skin&quot;: &quot;defBtnNormal&quot;,
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    &quot;text&quot;: &quot;text always from top left&quot;,
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>    &quot;top&quot;: &quot;0dp&quot;,
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>    &quot;width&quot;: &quot;260dp&quot;,
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>    &quot;zIndex&quot;: 1
-</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>}, {
-</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>    &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_TOP_LEFT,
-</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>    &quot;displayText&quot;: true,
-</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>    &quot;padding&quot;: [0, 0, 0, 0],
-</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>    &quot;paddingInPixel&quot;: false,
-</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>    &quot;retainFlexPositionProperties&quot;: false,
-</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>    &quot;retainContentAlignment&quot;: true
-</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>}, {});
-</span></code></pre></div>
-<h3 id="platform-availability_7">Platform Availability<a class="headerlink" href="#platform-availability_7" title="Permanent link">&para;</a></h3>
+<h3 id="example_5">Example</h3>
+<pre><code>
+//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the retainContentAlignment property for Button widget.
+/*You need to make a corresponding use of the 
+retainContentAlignment property for other applicable widgets.*/
+var btn = new voltmx.ui.Button({
+    &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
+    &quot;height&quot;: &quot;50dp&quot;,
+    &quot;id&quot;: &quot;myButton&quot;,
+    &quot;isVisible&quot;: true,
+    &quot;left&quot;: &quot;0dp&quot;,
+    &quot;skin&quot;: &quot;defBtnNormal&quot;,
+    &quot;text&quot;: &quot;text always from top left&quot;,
+    &quot;top&quot;: &quot;0dp&quot;,
+    &quot;width&quot;: &quot;260dp&quot;,
+    &quot;zIndex&quot;: 1
+}, {
+    &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_TOP_LEFT,
+    &quot;displayText&quot;: true,
+    &quot;padding&quot;: [0, 0, 0, 0],
+    &quot;paddingInPixel&quot;: false,
+    &quot;retainFlexPositionProperties&quot;: false,
+    &quot;retainContentAlignment&quot;: true
+}, {});
+</code></pre>
+<h3 id="platform-availability_7">Platform Availability</h3>
 <ul>
 <li>Available in IDE</li>
 <li>iOS, Android, and SPA</li>
@@ -6960,13 +6852,14 @@
 <p><strong><em>Note:</em></strong> Locale-level configurations take priority when invalid values are given to this property, or if it is not defined.</p>
 </blockquote>
 <p>The mirroring widget layout properties should be defined as follows.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    return (isI18nLayoutConfigEnabled &amp;&amp;
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    localeLayoutConfig[defaultLocale]
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    !widgetRetainFlexPositionPropertiesValue);
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>}
-</span></code></pre></div>
+<pre><code>
+function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
+    return (isI18nLayoutConfigEnabled &amp;&amp;
+    localeLayoutConfig[defaultLocale]
+    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
+    !widgetRetainFlexPositionPropertiesValue);
+}
+</code></pre>
 <p>The following table illustrates how widgets consider Local flag and Widget flag values.</p>
 <table>
 <thead>
@@ -7034,39 +6927,41 @@
 </tr>
 </tbody>
 </table>
-<h3 id="syntax_8">Syntax<a class="headerlink" href="#syntax_8" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>retainFlexPositionProperties
-</span></code></pre></div>
-<h3 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_8">Syntax</h3>
+<pre><code>
+retainFlexPositionProperties
+</code></pre>
+<h3 id="type_8">Type</h3>
 <p>Boolean</p>
-<h3 id="readwrite_4">Read/Write<a class="headerlink" href="#readwrite_4" title="Permanent link">&para;</a></h3>
+<h3 id="readwrite_4">Read/Write</h3>
 <p>No (only during widget-construction time)</p>
-<h3 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>//This is a generic property that is applicable for various widgets.
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>//Here, we have shown how to use the retainFlexPositionProperties property for Button widget.
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>/*You need to make a corresponding use of the 
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>retainFlexPositionProperties property for other applicable widgets.*/
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>var btn = new voltmx.ui.Button({
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    &quot;height&quot;: &quot;50dp&quot;,
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    &quot;id&quot;: &quot;myButton&quot;,
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    &quot;isVisible&quot;: true,
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    &quot;left&quot;: &quot;0dp&quot;,
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    &quot;skin&quot;: &quot;defBtnNormal&quot;,
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    &quot;text&quot;: &quot;always left&quot;,
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    &quot;top&quot;: &quot;0dp&quot;,
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    &quot;width&quot;: &quot;260dp&quot;,
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>    &quot;zIndex&quot;: 1
-</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>}, {
-</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_CENTER,
-</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    &quot;displayText&quot;: true,
-</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>    &quot;padding&quot;: [0, 0, 0, 0],
-</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>    &quot;paddingInPixel&quot;: false,
-</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    &quot;retainFlexPositionProperties&quot;: true,
-</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>    &quot;retainContentAlignment&quot;: false
-</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>}, {});
-</span></code></pre></div>
-<h3 id="platform-availability_8">Platform Availability<a class="headerlink" href="#platform-availability_8" title="Permanent link">&para;</a></h3>
+<h3 id="example_6">Example</h3>
+<pre><code>
+//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the retainFlexPositionProperties property for Button widget.
+/*You need to make a corresponding use of the 
+retainFlexPositionProperties property for other applicable widgets.*/
+var btn = new voltmx.ui.Button({
+    &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
+    &quot;height&quot;: &quot;50dp&quot;,
+    &quot;id&quot;: &quot;myButton&quot;,
+    &quot;isVisible&quot;: true,
+    &quot;left&quot;: &quot;0dp&quot;,
+    &quot;skin&quot;: &quot;defBtnNormal&quot;,
+    &quot;text&quot;: &quot;always left&quot;,
+    &quot;top&quot;: &quot;0dp&quot;,
+    &quot;width&quot;: &quot;260dp&quot;,
+    &quot;zIndex&quot;: 1
+}, {
+    &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_CENTER,
+    &quot;displayText&quot;: true,
+    &quot;padding&quot;: [0, 0, 0, 0],
+    &quot;paddingInPixel&quot;: false,
+    &quot;retainFlexPositionProperties&quot;: true,
+    &quot;retainContentAlignment&quot;: false
+}, {});
+</code></pre>
+<h3 id="platform-availability_8">Platform Availability</h3>
 <ul>
 <li>Available in IDE</li>
 <li>iOS, Android, and SPA</li>
@@ -7081,13 +6976,14 @@
 <p><strong><em>Note:</em></strong> Locale-level configurations take priority when invalid values are given to this property, or if it is not defined.</p>
 </blockquote>
 <p>The mirroring widget layout properties should be defined as follows.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    return (isI18nLayoutConfigEnabled &amp;&amp;
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    localeLayoutConfig[defaultLocale]
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    !widgetRetainFlexPositionPropertiesValue);
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>}
-</span></code></pre></div>
+<pre><code>
+function getIsFlexPositionalShouldMirror(widgetRetainFlexPositionPropertiesValue) {
+    return (isI18nLayoutConfigEnabled &amp;&amp;
+    localeLayoutConfig[defaultLocale]
+    [&quot;mirrorFlexPositionalProperties&quot;] == true &amp;&amp;
+    !widgetRetainFlexPositionPropertiesValue);
+}
+</code></pre>
 <p>The following table illustrates how widgets consider Local flag and Widget flag values.</p>
 <table>
 <thead>
@@ -7155,40 +7051,42 @@
 </tr>
 </tbody>
 </table>
-<h3 id="syntax_9">Syntax<a class="headerlink" href="#syntax_9" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>retainFlowHorizontalAlignment
-</span></code></pre></div>
-<h3 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_9">Syntax</h3>
+<pre><code>
+retainFlowHorizontalAlignment
+</code></pre>
+<h3 id="type_9">Type</h3>
 <p>Boolean</p>
-<h3 id="readwrite_5">Read/Write<a class="headerlink" href="#readwrite_5" title="Permanent link">&para;</a></h3>
+<h3 id="readwrite_5">Read/Write</h3>
 <p>No (only during widget-construction time)</p>
-<h3 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>//This is a generic property that is applicable for various widgets.
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>//Here, we have shown how to use the retainFlowHorizontalAlignment property for Button widget.
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>/*You need to make a corresponding use of the 
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>retainFlowHorizontalAlignment property for other applicable widgets. */
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>var btn = new voltmx.ui.Button({
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a> &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a> &quot;height&quot;: &quot;50dp&quot;,
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a> &quot;id&quot;: &quot;myButton&quot;,
-</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a> &quot;isVisible&quot;: true,
-</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a> &quot;left&quot;: &quot;0dp&quot;,
-</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a> &quot;skin&quot;: &quot;defBtnNormal&quot;,
-</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a> &quot;text&quot;: &quot;always left&quot;,
-</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a> &quot;top&quot;: &quot;0dp&quot;,
-</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a> &quot;width&quot;: &quot;260dp&quot;,
-</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a> &quot;zIndex&quot;: 1
-</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>}, {
-</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a> &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_CENTER,
-</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a> &quot;displayText&quot;: true,
-</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a> &quot;padding&quot;: [0, 0, 0, 0],
-</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a> &quot;paddingInPixel&quot;: false,
-</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a> &quot;retainFlexPositionProperties&quot;: true,
-</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a> &quot;retainContentAlignment&quot;: false,
-</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a> &quot;retainFlowHorizontalAlignment &quot;: false
-</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>}, {});
-</span></code></pre></div>
-<h3 id="platform-availability_9">Platform Availability<a class="headerlink" href="#platform-availability_9" title="Permanent link">&para;</a></h3>
+<h3 id="example_7">Example</h3>
+<pre><code>
+//This is a generic property that is applicable for various widgets.
+//Here, we have shown how to use the retainFlowHorizontalAlignment property for Button widget.
+/*You need to make a corresponding use of the 
+retainFlowHorizontalAlignment property for other applicable widgets. */
+var btn = new voltmx.ui.Button({
+ &quot;focusSkin&quot;: &quot;defBtnFocus&quot;,
+ &quot;height&quot;: &quot;50dp&quot;,
+ &quot;id&quot;: &quot;myButton&quot;,
+ &quot;isVisible&quot;: true,
+ &quot;left&quot;: &quot;0dp&quot;,
+ &quot;skin&quot;: &quot;defBtnNormal&quot;,
+ &quot;text&quot;: &quot;always left&quot;,
+ &quot;top&quot;: &quot;0dp&quot;,
+ &quot;width&quot;: &quot;260dp&quot;,
+ &quot;zIndex&quot;: 1
+}, {
+ &quot;contentAlignment&quot;: constants.CONTENT_ALIGN_CENTER,
+ &quot;displayText&quot;: true,
+ &quot;padding&quot;: [0, 0, 0, 0],
+ &quot;paddingInPixel&quot;: false,
+ &quot;retainFlexPositionProperties&quot;: true,
+ &quot;retainContentAlignment&quot;: false,
+ &quot;retainFlowHorizontalAlignment &quot;: false
+}, {});
+</code></pre>
+<h3 id="platform-availability_9">Platform Availability</h3>
 <ul>
 <li>Available in IDE</li>
 <li>iOS, Android, and SPA</li>
@@ -7199,32 +7097,32 @@
 <p><summary>yesLabel Property</summary></p>
 <hr />
 <p>Specifies the descriptive Text for the "<strong>Yes</strong>" label.</p>
-<h3 id="syntax_10">Syntax<a class="headerlink" href="#syntax_10" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>yesLabel
-</span></code></pre></div>
-<h3 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_10">Syntax</h3>
+<pre><code>
+yesLabel
+</code></pre>
+<h3 id="type_10">Type</h3>
 <p>String</p>
-<h3 id="accessible-from-code_4">Accessible from Code<a class="headerlink" href="#accessible-from-code_4" title="Permanent link">&para;</a></h3>
+<h3 id="accessible-from-code_4">Accessible from Code</h3>
 <p>No</p>
-<h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>//Creating the alert with the yesLabel:&quot;Yes&quot;
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>var alertBasic = {
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    message: &quot;Sample Alert&quot;,
-</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    yesLabel: &quot;Yes&quot;
-</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>};
-</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
-</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>var alertPSP = {};
-</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
-</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>var alert = voltmx.ui.Alert(alertBasic, alertPSP);
-</span></code></pre></div>
-<h3 id="accessible-from-ide_4">Accessible from IDE<a class="headerlink" href="#accessible-from-ide_4" title="Permanent link">&para;</a></h3>
+<h3 id="example_8">Example</h3>
+<pre><code>
+//Creating the alert with the yesLabel:&quot;Yes&quot;
+var alertBasic = {
+    message: &quot;Sample Alert&quot;,
+    yesLabel: &quot;Yes&quot;
+};
+
+var alertPSP = {};
+
+var alert = voltmx.ui.Alert(alertBasic, alertPSP);
+</code></pre>
+<h3 id="accessible-from-ide_4">Accessible from IDE</h3>
 <p>Yes</p>
-<h3 id="platform-availability_10">Platform Availability<a class="headerlink" href="#platform-availability_10" title="Permanent link">&para;</a></h3>
+<h3 id="platform-availability_10">Platform Availability</h3>
 <p>Available on all platforms</p>
 <hr />
 </details>
-
-
 
 
 
@@ -7247,7 +7145,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -7285,14 +7183,10 @@
     </div>
     
     
-    
-      
-      
-      
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

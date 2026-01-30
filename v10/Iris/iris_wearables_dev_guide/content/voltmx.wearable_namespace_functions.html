@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://help.hcl-software.com/voltmx/Iris/iris_wearables_dev_guide/content/voltmx.wearable_namespace_functions.html">
+        <link rel="canonical" href="https://help.hcl-software.com/voltmx/latest/Iris/iris_wearables_dev_guide/content/voltmx.wearable_namespace_functions.html">
       
       
         <link rel="prev" href="voltmx.wearable_namespace_constants.html">
@@ -18,53 +18,18 @@
         <link rel="next" href="../../iris_car_app_developer_guide/Content/Introduction.html">
       
       
-        
-      
-      
       <link rel="icon" href="../../../assets/images/Volt_Mx_logo.png">
-      <meta name="generator" content="zensical-0.0.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.0">
     
     
       
-        <title>voltmx.wearable Namespace Functions - HCL Volt MX Documentation</title>
+        <title>Functions - HCL Volt MX Documentation</title>
       
     
     
-      
-        
-      
-      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.2644c6b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.45e1311d.min.css">
       
       
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  <style>:root{}</style>
-
 
 
     
@@ -76,7 +41,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -85,10 +50,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/vmx_style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -161,7 +127,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -173,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              voltmx.wearable Namespace Functions
+              Functions
             
           </span>
         </div>
@@ -181,36 +147,67 @@
     </div>
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
-  <button type="button" class="md-search__button">
-    Search
-  </button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-      
     
-    <div class="md-header__source">
-      
+    
+      <div class="md-header__source">
         <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
   </div>
 </a>
-      
-    </div>
+      </div>
+    
   </nav>
   
 </header>
@@ -229,10 +226,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../index.html" class="md-tabs__link">
         
+  
+    
   
   Introducing Volt MX
 
@@ -245,10 +243,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Introducing_Volt_MX.html" class="md-tabs__link">
         
+  
+    
   
   Getting Started
 
@@ -261,12 +260,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Whats_New_in_V10.html" class="md-tabs__link">
           
+  
+    
   
   What&apos;s New
 
@@ -280,10 +280,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../VMX_release_notes.html" class="md-tabs__link">
         
+  
+    
   
   Release Notes
 
@@ -296,12 +297,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-tabs__link">
           
+  
+    
   
   App Platform
 
@@ -315,12 +317,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../tutorials/Tutorials.html" class="md-tabs__link">
           
+  
+    
   
   Tutorials
 
@@ -334,10 +337,11 @@
   
   
   
-  
     <li class="md-tabs__item">
       <a href="../../../Foundry/installationGuides.html" class="md-tabs__link">
         
+  
+    
   
   Installation Guides
 
@@ -349,7 +353,6 @@
         
   
   
-  
     
   
   
@@ -358,6 +361,8 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../voltmxIrisFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Iris
 
@@ -371,12 +376,13 @@
   
   
   
-  
     
     
       <li class="md-tabs__item">
         <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-tabs__link">
           
+  
+    
   
   Foundry
 
@@ -420,7 +426,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/volt-mx-docs
@@ -440,16 +446,9 @@
       <a href="../../../index.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introducing Volt MX
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -467,16 +466,9 @@
       <a href="../../../Introducing_Volt_MX.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -498,42 +490,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     What&apos;s New
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What&apos;s New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Whats_New_in_V10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What&apos;s new in V10
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -549,16 +558,9 @@
       <a href="../../../VMX_release_notes.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Release Notes
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -580,42 +582,59 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     App Platform
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            App Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app_platform/Content/AppPlatform_Overview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -663,42 +682,353 @@
     
     
     
+    
       
       
     
-    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
         
-  
-  
-  
-    <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
-      
-  
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    
-  
     Tutorials
-  
-
-    
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/Tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ActionEditor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/apiManagement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/appFactory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/buildAndProductivity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build And Productivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/componentAndMarketplace.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components and Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/ConnectingToBackend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/DesigningForWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing For Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/designingTheLayout.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing the Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/internalizationAndLocalization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization and Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/notificationAndAnalytics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification and Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/offlineServices.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/programmingAndExtensitbility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming and Extensibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/voltmxFoundryOverview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -714,16 +1044,9 @@
       <a href="../../../Foundry/installationGuides.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Installation Guides
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -771,17 +1094,13 @@
     
     
     
-      
-        
-        
-      
-      
     
-    
+      
       
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
@@ -790,16 +1109,9 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -808,11 +1120,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Iris
-  
-
+            Iris
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -826,16 +1134,9 @@
       <a href="../../voltmxIrisFundamentals.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Fundamentals
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -864,34 +1165,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../installing_iris.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Installing Iris
-  
-
-    
   </span>
-  
   
 
       
@@ -984,34 +1272,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_tutorials/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris tutorials
-  
-
-    
   </span>
-  
   
 
       
@@ -1074,34 +1349,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_user_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris User Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1158,34 +1420,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../app_design_dev/Content/homepage.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Application Design and Development Guidelines
-  
-
-    
   </span>
-  
   
 
       
@@ -1346,34 +1595,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_api_dev_guide/content/introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt Iris API Developers Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1408,34 +1644,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_nf_api_dev_guide/content/native_function_api_developers__guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Native Function API Developers Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1566,13 +1789,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1580,20 +1798,12 @@
         
   
   
-  
     <a href="../../iris_widget_prog_guide/Content/Overview.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris Widget Programmer Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -1626,14 +1836,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" checked>
@@ -1642,16 +1848,9 @@
           <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris Wearables Developer Guide
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1660,11 +1859,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_9">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Iris Wearables Developer Guide
-  
-
+            Iris Wearables Developer Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1678,16 +1873,9 @@
       <a href="homehtml.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introduction
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1720,14 +1908,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2" checked>
@@ -1736,16 +1920,9 @@
           <label class="md-nav__link" for="__nav_8_9_2" id="__nav_8_9_2_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Wearables
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1754,11 +1931,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_9_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Wearables
-  
-
+            Wearables
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1772,16 +1945,9 @@
       <a href="wearable.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1800,16 +1966,9 @@
       <a href="wearable_supported.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Supported Platforms and Devices
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1828,16 +1987,9 @@
       <a href="wearable_supported.html#prerequisites" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Prerequisites
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1868,13 +2020,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -1882,20 +2029,12 @@
         
   
   
-  
     <a href="wearable_ios.html#apple-watch" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Apple Watch
-  
-
-    
   </span>
-  
   
 
       
@@ -1930,14 +2069,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2_5" checked>
@@ -1946,16 +2081,9 @@
           <label class="md-nav__link" for="__nav_8_9_2_5" id="__nav_8_9_2_5_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Android Wear
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1964,11 +2092,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_9_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_9_2_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Android Wear
-  
-
+            Android Wear
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1982,16 +2106,9 @@
       <a href="wearable_android.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Introduction
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2010,16 +2127,9 @@
       <a href="androidwearoverviews.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overviews
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2046,14 +2156,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2_5_3" checked>
@@ -2062,16 +2168,9 @@
           <label class="md-nav__link" for="__nav_8_9_2_5_3" id="__nav_8_9_2_5_3_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     References
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2080,11 +2179,7 @@
         <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_9_2_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_9_2_5_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    References
-  
-
+            References
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2098,16 +2193,9 @@
       <a href="androidwearreferences.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2136,14 +2224,10 @@
     
     
     
-      
-      
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2_5_3_2" checked>
@@ -2152,16 +2236,9 @@
           <label class="md-nav__link" for="__nav_8_9_2_5_3_2" id="__nav_8_9_2_5_3_2_label" tabindex="0">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     voltmx.wearable Namespace
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2170,11 +2247,7 @@
         <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_8_9_2_5_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_9_2_5_3_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    voltmx.wearable Namespace
-  
-
+            voltmx.wearable Namespace
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2188,16 +2261,9 @@
       <a href="voltmx.wearable_namespace.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2216,16 +2282,9 @@
       <a href="voltmx.wearable_namespace_constants.html" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Constants
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2253,16 +2312,9 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
-    
-  
     Functions
-  
-
-    
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2271,22 +2323,14 @@
       <a href="voltmx.wearable_namespace_functions.html" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Functions
-  
-
-    
   </span>
-  
   
 
       </a>
       
         
-
 
   
 
@@ -2306,9 +2350,7 @@
         <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2317,9 +2359,7 @@
         <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2328,9 +2368,7 @@
         <li class="md-nav__item">
   <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2339,9 +2377,7 @@
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2350,9 +2386,7 @@
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2361,9 +2395,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2372,9 +2404,7 @@
         <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2383,9 +2413,7 @@
         <li class="md-nav__item">
   <a href="#parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2394,9 +2422,7 @@
         <li class="md-nav__item">
   <a href="#return-values_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2405,9 +2431,7 @@
         <li class="md-nav__item">
   <a href="#remarks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2416,9 +2440,7 @@
         <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2427,9 +2449,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2438,9 +2458,7 @@
         <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2449,9 +2467,7 @@
         <li class="md-nav__item">
   <a href="#parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2460,9 +2476,7 @@
         <li class="md-nav__item">
   <a href="#return-values_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2471,9 +2485,7 @@
         <li class="md-nav__item">
   <a href="#remarks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2482,9 +2494,7 @@
         <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2493,9 +2503,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2504,9 +2512,7 @@
         <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2515,9 +2521,7 @@
         <li class="md-nav__item">
   <a href="#parameters_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2526,9 +2530,7 @@
         <li class="md-nav__item">
   <a href="#return-values_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2537,9 +2539,7 @@
         <li class="md-nav__item">
   <a href="#remarks_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2548,9 +2548,7 @@
         <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2559,9 +2557,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2570,9 +2566,7 @@
         <li class="md-nav__item">
   <a href="#syntax_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2581,9 +2575,7 @@
         <li class="md-nav__item">
   <a href="#parameters_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2592,9 +2584,7 @@
         <li class="md-nav__item">
   <a href="#return-values_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2603,9 +2593,7 @@
         <li class="md-nav__item">
   <a href="#remarks_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2614,9 +2602,7 @@
         <li class="md-nav__item">
   <a href="#example_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2625,9 +2611,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2636,9 +2620,7 @@
         <li class="md-nav__item">
   <a href="#syntax_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2647,9 +2629,7 @@
         <li class="md-nav__item">
   <a href="#parameters_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2658,9 +2638,7 @@
         <li class="md-nav__item">
   <a href="#return-values_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2669,9 +2647,7 @@
         <li class="md-nav__item">
   <a href="#remarks_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2680,9 +2656,7 @@
         <li class="md-nav__item">
   <a href="#example_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2691,9 +2665,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2702,9 +2674,7 @@
         <li class="md-nav__item">
   <a href="#syntax_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2713,9 +2683,7 @@
         <li class="md-nav__item">
   <a href="#parameters_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2724,9 +2692,7 @@
         <li class="md-nav__item">
   <a href="#return-values_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2735,9 +2701,7 @@
         <li class="md-nav__item">
   <a href="#remarks_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2746,9 +2710,7 @@
         <li class="md-nav__item">
   <a href="#example-1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 1
-      
+      Example 1
     </span>
   </a>
   
@@ -2757,9 +2719,7 @@
         <li class="md-nav__item">
   <a href="#example-2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 2
-      
+      Example 2
     </span>
   </a>
   
@@ -2768,9 +2728,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2779,9 +2737,7 @@
         <li class="md-nav__item">
   <a href="#syntax_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2790,9 +2746,7 @@
         <li class="md-nav__item">
   <a href="#parameters_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2801,9 +2755,7 @@
         <li class="md-nav__item">
   <a href="#return-values_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2812,9 +2764,7 @@
         <li class="md-nav__item">
   <a href="#remarks_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2823,9 +2773,7 @@
         <li class="md-nav__item">
   <a href="#example_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2834,9 +2782,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2845,9 +2791,7 @@
         <li class="md-nav__item">
   <a href="#syntax_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2856,9 +2800,7 @@
         <li class="md-nav__item">
   <a href="#parameters_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2867,9 +2809,7 @@
         <li class="md-nav__item">
   <a href="#return-values_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2878,9 +2818,7 @@
         <li class="md-nav__item">
   <a href="#example_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2889,9 +2827,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2900,9 +2836,7 @@
         <li class="md-nav__item">
   <a href="#syntax_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2911,9 +2845,7 @@
         <li class="md-nav__item">
   <a href="#parameters_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2922,9 +2854,7 @@
         <li class="md-nav__item">
   <a href="#return-values_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2933,9 +2863,7 @@
         <li class="md-nav__item">
   <a href="#example_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -2944,9 +2872,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -2955,9 +2881,7 @@
         <li class="md-nav__item">
   <a href="#syntax_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -2966,9 +2890,7 @@
         <li class="md-nav__item">
   <a href="#parameters_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -2977,9 +2899,7 @@
         <li class="md-nav__item">
   <a href="#return-values_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -2988,9 +2908,7 @@
         <li class="md-nav__item">
   <a href="#remarks_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -2999,9 +2917,7 @@
         <li class="md-nav__item">
   <a href="#example-1_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 1
-      
+      Example 1
     </span>
   </a>
   
@@ -3010,9 +2926,7 @@
         <li class="md-nav__item">
   <a href="#example-2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 2
-      
+      Example 2
     </span>
   </a>
   
@@ -3021,9 +2935,7 @@
         <li class="md-nav__item">
   <a href="#syntax_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3032,9 +2944,7 @@
         <li class="md-nav__item">
   <a href="#parameters_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3043,9 +2953,7 @@
         <li class="md-nav__item">
   <a href="#remarks_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3054,9 +2962,7 @@
         <li class="md-nav__item">
   <a href="#example_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3065,9 +2971,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3076,9 +2980,7 @@
         <li class="md-nav__item">
   <a href="#syntax_12" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3087,9 +2989,7 @@
         <li class="md-nav__item">
   <a href="#parameters_12" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3098,9 +2998,7 @@
         <li class="md-nav__item">
   <a href="#return-values_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3109,9 +3007,7 @@
         <li class="md-nav__item">
   <a href="#remarks_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3120,9 +3016,7 @@
         <li class="md-nav__item">
   <a href="#example_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3131,9 +3025,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3208,34 +3100,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_car_app_developer_guide/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Iris CarApp Developer Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -3270,34 +3149,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iOS_Live_Activities_in_Volt_MX_Iris/Content/Introduction.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     iOS Live Activities in Volt MX Iris
-  
-
-    
   </span>
-  
   
 
       
@@ -3330,34 +3196,21 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-  
   
   
     <a href="../../iris_app_viewer/Content/Overview.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Using the Volt MX App
-  
-
-    
   </span>
-  
   
 
       
@@ -3390,13 +3243,8 @@
     
     
     
-      
-      
-    
     
       
-        
-        
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3404,20 +3252,12 @@
         
   
   
-  
     <a href="../../voltmx_ref_arch_api/Content/VoltMX_Reference_Architecture_Guide.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Volt MX Reference Architecture Guide
-  
-
-    
   </span>
-  
   
 
       
@@ -3473,13 +3313,93 @@
     
     
     
+    
       
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Foundry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
         
+      
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
       
     
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
@@ -3487,20 +3407,12 @@
         
   
   
-  
-    <a href="../../../Foundry/voltmxFoundryFundamentals.html" class="md-nav__link">
+    <a href="../../../Foundry/installing_foundry.html" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
-    Foundry
-  
-
-    
+    Installing Foundry
   </span>
-  
   
 
       
@@ -3509,6 +3421,579 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_foundry_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/KF_Services_OAuth_Sample/Content/KF_Services_OAuth_Sample.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OAuth Sample App Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/integration_services.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/administering_foundry.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Administering Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmf_integrationservice_admin_console_userguide/Content/App_Services_User_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Services Console User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_appfactory_user_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    App Factory User Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/voltmx_Foundry_deployment_guide/Content/Introduction.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Volt MX Foundry Deployment Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Foundry/VoltMX_Analytics_Cloud_FAQs/Content/VoltMX_Analytics_Cloud_FAQs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volt MX Analytics & Reporting Cloud FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Foundry/vmfintegrationservice_troubleshooting_guide/Content/Integration_Services_Troubleshooting_Guide.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integration Services Troubleshooting Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -3527,7 +4012,6 @@
                   <div class="md-sidebar__inner">
                     
 
-
   
 
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
@@ -3546,9 +4030,7 @@
         <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3557,9 +4039,7 @@
         <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3568,9 +4048,7 @@
         <li class="md-nav__item">
   <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3579,9 +4057,7 @@
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3590,9 +4066,7 @@
         <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3601,9 +4075,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3612,9 +4084,7 @@
         <li class="md-nav__item">
   <a href="#syntax_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3623,9 +4093,7 @@
         <li class="md-nav__item">
   <a href="#parameters_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3634,9 +4102,7 @@
         <li class="md-nav__item">
   <a href="#return-values_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3645,9 +4111,7 @@
         <li class="md-nav__item">
   <a href="#remarks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3656,9 +4120,7 @@
         <li class="md-nav__item">
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3667,9 +4129,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3678,9 +4138,7 @@
         <li class="md-nav__item">
   <a href="#syntax_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3689,9 +4147,7 @@
         <li class="md-nav__item">
   <a href="#parameters_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3700,9 +4156,7 @@
         <li class="md-nav__item">
   <a href="#return-values_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3711,9 +4165,7 @@
         <li class="md-nav__item">
   <a href="#remarks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3722,9 +4174,7 @@
         <li class="md-nav__item">
   <a href="#example_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3733,9 +4183,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3744,9 +4192,7 @@
         <li class="md-nav__item">
   <a href="#syntax_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3755,9 +4201,7 @@
         <li class="md-nav__item">
   <a href="#parameters_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3766,9 +4210,7 @@
         <li class="md-nav__item">
   <a href="#return-values_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3777,9 +4219,7 @@
         <li class="md-nav__item">
   <a href="#remarks_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3788,9 +4228,7 @@
         <li class="md-nav__item">
   <a href="#example_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3799,9 +4237,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3810,9 +4246,7 @@
         <li class="md-nav__item">
   <a href="#syntax_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3821,9 +4255,7 @@
         <li class="md-nav__item">
   <a href="#parameters_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3832,9 +4264,7 @@
         <li class="md-nav__item">
   <a href="#return-values_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3843,9 +4273,7 @@
         <li class="md-nav__item">
   <a href="#remarks_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3854,9 +4282,7 @@
         <li class="md-nav__item">
   <a href="#example_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3865,9 +4291,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_4" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3876,9 +4300,7 @@
         <li class="md-nav__item">
   <a href="#syntax_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3887,9 +4309,7 @@
         <li class="md-nav__item">
   <a href="#parameters_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3898,9 +4318,7 @@
         <li class="md-nav__item">
   <a href="#return-values_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3909,9 +4327,7 @@
         <li class="md-nav__item">
   <a href="#remarks_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3920,9 +4336,7 @@
         <li class="md-nav__item">
   <a href="#example_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -3931,9 +4345,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -3942,9 +4354,7 @@
         <li class="md-nav__item">
   <a href="#syntax_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -3953,9 +4363,7 @@
         <li class="md-nav__item">
   <a href="#parameters_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -3964,9 +4372,7 @@
         <li class="md-nav__item">
   <a href="#return-values_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -3975,9 +4381,7 @@
         <li class="md-nav__item">
   <a href="#remarks_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -3986,9 +4390,7 @@
         <li class="md-nav__item">
   <a href="#example-1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 1
-      
+      Example 1
     </span>
   </a>
   
@@ -3997,9 +4399,7 @@
         <li class="md-nav__item">
   <a href="#example-2" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 2
-      
+      Example 2
     </span>
   </a>
   
@@ -4008,9 +4408,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -4019,9 +4417,7 @@
         <li class="md-nav__item">
   <a href="#syntax_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -4030,9 +4426,7 @@
         <li class="md-nav__item">
   <a href="#parameters_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -4041,9 +4435,7 @@
         <li class="md-nav__item">
   <a href="#return-values_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -4052,9 +4444,7 @@
         <li class="md-nav__item">
   <a href="#remarks_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -4063,9 +4453,7 @@
         <li class="md-nav__item">
   <a href="#example_6" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -4074,9 +4462,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -4085,9 +4471,7 @@
         <li class="md-nav__item">
   <a href="#syntax_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -4096,9 +4480,7 @@
         <li class="md-nav__item">
   <a href="#parameters_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -4107,9 +4489,7 @@
         <li class="md-nav__item">
   <a href="#return-values_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -4118,9 +4498,7 @@
         <li class="md-nav__item">
   <a href="#example_7" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -4129,9 +4507,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -4140,9 +4516,7 @@
         <li class="md-nav__item">
   <a href="#syntax_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -4151,9 +4525,7 @@
         <li class="md-nav__item">
   <a href="#parameters_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -4162,9 +4534,7 @@
         <li class="md-nav__item">
   <a href="#return-values_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -4173,9 +4543,7 @@
         <li class="md-nav__item">
   <a href="#example_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -4184,9 +4552,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -4195,9 +4561,7 @@
         <li class="md-nav__item">
   <a href="#syntax_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -4206,9 +4570,7 @@
         <li class="md-nav__item">
   <a href="#parameters_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -4217,9 +4579,7 @@
         <li class="md-nav__item">
   <a href="#return-values_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -4228,9 +4588,7 @@
         <li class="md-nav__item">
   <a href="#remarks_8" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -4239,9 +4597,7 @@
         <li class="md-nav__item">
   <a href="#example-1_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 1
-      
+      Example 1
     </span>
   </a>
   
@@ -4250,9 +4606,7 @@
         <li class="md-nav__item">
   <a href="#example-2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example 2
-      
+      Example 2
     </span>
   </a>
   
@@ -4261,9 +4615,7 @@
         <li class="md-nav__item">
   <a href="#syntax_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -4272,9 +4624,7 @@
         <li class="md-nav__item">
   <a href="#parameters_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -4283,9 +4633,7 @@
         <li class="md-nav__item">
   <a href="#remarks_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -4294,9 +4642,7 @@
         <li class="md-nav__item">
   <a href="#example_9" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -4305,9 +4651,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -4316,9 +4660,7 @@
         <li class="md-nav__item">
   <a href="#syntax_12" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Syntax
-      
+      Syntax
     </span>
   </a>
   
@@ -4327,9 +4669,7 @@
         <li class="md-nav__item">
   <a href="#parameters_12" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameters
-      
+      Parameters
     </span>
   </a>
   
@@ -4338,9 +4678,7 @@
         <li class="md-nav__item">
   <a href="#return-values_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Return Values
-      
+      Return Values
     </span>
   </a>
   
@@ -4349,9 +4687,7 @@
         <li class="md-nav__item">
   <a href="#remarks_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remarks
-      
+      Remarks
     </span>
   </a>
   
@@ -4360,9 +4696,7 @@
         <li class="md-nav__item">
   <a href="#example_10" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example
-      
+      Example
     </span>
   </a>
   
@@ -4371,9 +4705,7 @@
         <li class="md-nav__item">
   <a href="#platform-availability_11" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Platform Availability
-      
+      Platform Availability
     </span>
   </a>
   
@@ -4389,34 +4721,25 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
-  
-    <a href="https://github.com/HCL-TECH-SOFTWARE/volt-mx-docs/issues//Iris/iris_wearables_dev_guide/content/voltmx.wearable_namespace_functions.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>
-    </a>
-  
-  
 
 
-<div class="language-text highlight"><pre><span></span><code>
-</code></pre></div>
-<h1 id="voltmxwearable-namespace-functions">voltmx.wearable Namespace Functions<a class="headerlink" href="#voltmxwearable-namespace-functions" title="Permanent link">&para;</a></h1>
+<h1 id="voltmxwearable-namespace-functions">voltmx.wearable Namespace Functions</h1>
 <p>The <code>voltmx.wearable</code> namespace provides the following functions.</p>
 <details close="close">
 <p><summary>voltmx.wearable.addCapabilityChangeListener Function</summary> </p>
 <hr />
 <p>Adds a callback event handler function that monitors for changes to the status of paired devices, such the device becoming available or unavailable.</p>
-<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>voltmx.wearable.addCapabilityChangeListener(  
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    capability,  
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    onCapabilityChanged,  
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    errorCallback);
-</span></code></pre></div>
-<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<h3 id="syntax">Syntax</h3>
+<pre><code>
+voltmx.wearable.addCapabilityChangeListener(  
+    capability,  
+    onCapabilityChanged,  
+    errorCallback);
+</code></pre>
+<h3 id="parameters">Parameters</h3>
 <p><em>capability</em></p>
 <p>A string that specifies the capability to look for on all of the paired devices.</p>
 <p><em>onCapabilityChanged</em></p>
@@ -4449,37 +4772,38 @@
 <p>A callback event handler function that is invoked when there is an error. This callback function must have the following signature.</p>
 <p>errorCallback(errorConst);</p>
 <p>Where <code>errorConst</code> is a value from the <a href="voltmx.wearable_namespace_constants.html#CallBackResult">Callback Result Constants</a>.</p>
-<h3 id="return-values">Return Values<a class="headerlink" href="#return-values" title="Permanent link">&para;</a></h3>
+<h3 id="return-values">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h3>
+<h3 id="remarks">Remarks</h3>
 <p>This function enables your app to see when devices that are paired with the current device become available or unavailable, or when the paired app gets installed or uninstalled.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>function addCapabilityChangeListener()
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>{
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    voltmx.wearable.addCapabilityChangeListener(&quot;capability_1&quot;, onCapabilityChanged, capabilityErrorCallback);
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>}
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>function onCapabilityChanged(capability, nodesArray)
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>{
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    if (nodesArray.length &gt; 0)
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    {
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        alert(&quot;nodes with capability &quot; + capability + &quot;  exists “ );
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    }
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    else
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    {
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        alert(&quot;no node is  connected with capability &quot; + capability);
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    }
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>}
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>function capabilityErrorCallback(errorConst)
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>{
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    alert(&quot;error occured, errorConst = &quot; + errorConst);
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>}
-</span></code></pre></div>
-<h3 id="platform-availability">Platform Availability<a class="headerlink" href="#platform-availability" title="Permanent link">&para;</a></h3>
+<h3 id="example">Example</h3>
+<pre><code>
+function addCapabilityChangeListener()
+{
+    voltmx.wearable.addCapabilityChangeListener(&quot;capability_1&quot;, onCapabilityChanged, capabilityErrorCallback);
+}
+
+function onCapabilityChanged(capability, nodesArray)
+{
+    if (nodesArray.length &gt; 0)
+    {
+        alert(&quot;nodes with capability &quot; + capability + &quot;  exists “ );
+    }
+    else
+    {
+        alert(&quot;no node is  connected with capability &quot; + capability);
+    }
+}
+
+function capabilityErrorCallback(errorConst)
+{
+    alert(&quot;error occured, errorConst = &quot; + errorConst);
+}
+</code></pre>
+<h3 id="platform-availability">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4487,12 +4811,13 @@
 <p><summary>voltmx.wearable.addForegroundDataItemListener Function</summary> </p>
 <hr />
 <p>Receives data items when the app is in the foreground.</p>
-<h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>voltmx.wearable.addForegroundDataItemListener(  
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    onDataItemReceiver,  
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    errorCallback);
-</span></code></pre></div>
-<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_1">Syntax</h3>
+<pre><code>
+voltmx.wearable.addForegroundDataItemListener(  
+    onDataItemReceiver,  
+    errorCallback);
+</code></pre>
+<h3 id="parameters_1">Parameters</h3>
 <p><em>onDataItemReceiver</em></p>
 <p>A callback event handler function that is invoked when data items are received from the paired device. The callback function passed through the <em>onDataItemReceiver</em> parameter must have the following signature.</p>
 <p>onDataItemReceiver(path,payloadTable,nodeId);</p>
@@ -4501,55 +4826,56 @@
 <p>A callback event handler function that is invoked when there is an error. This callback function must have the following signature.</p>
 <p>errorCallback(errorConst);</p>
 <p>Where <code>errorConst</code> is a value from the <a href="voltmx.wearable_namespace_constants.html#CallBackResult">Callback Result Constants</a>.</p>
-<h3 id="return-values_1">Return Values<a class="headerlink" href="#return-values_1" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_1">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_1">Remarks<a class="headerlink" href="#remarks_1" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_1">Remarks</h3>
 <p>This function only receives data when the app is in the foreground. It does not affect the device or the device's battery life when the app is not running or is running in the background.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>function onDataItemReceiver(path,payloadTable,nodeId)
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>{
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    if (path == “/photo’’)
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    {
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        // reading payLoadTable
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        if (payloadTable ! = null)
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        {
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>            var rawBytes =   payloadTable.photo ;
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            frmMyForm.imgImagewidget.rawBytes = rawBytes ;
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        }
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    } 
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    else if (path == “/count”)
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    {
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        // reading payloadTable
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        if (payloadTable != null)
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        {
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            var count = payloadTable.count;
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>            frmMyForm.lblThisLabel.text = count ;
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            // sending reply to the sender using nodeId obtained as function argument.
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            voltmx.wearable.sendMessage(path,”message received” ,{“nodeId”:nodeid});
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        }
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    }
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>}
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>function errorCallback(errorConst)
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>{
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    alert (“error occurred”);
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    if(errorConst == voltmx.wearable.RESULT_ERROR_API_NOT_AVAILABLE)
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    {
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        alert (“Error: Android Wear app. is not installed in the device”);
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    } 
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>    else if (errorConst == voltmx.wearable.RESULT_ERROR_UNKNOWN) 
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    { 
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        alert (“Error unknown”);
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    }
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>}
-</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>
-</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>voltmx.wearable.addForegroundDataItemListener(onDataItemReceiver,errorCallback);                
-</span></code></pre></div>
-<h3 id="platform-availability_1">Platform Availability<a class="headerlink" href="#platform-availability_1" title="Permanent link">&para;</a></h3>
+<h3 id="example_1">Example</h3>
+<pre><code>
+function onDataItemReceiver(path,payloadTable,nodeId)
+{
+    if (path == “/photo’’)
+    {
+        // reading payLoadTable
+        if (payloadTable ! = null)
+        {
+            var rawBytes =   payloadTable.photo ;
+            frmMyForm.imgImagewidget.rawBytes = rawBytes ;
+        }
+    } 
+    else if (path == “/count”)
+    {
+        // reading payloadTable
+        if (payloadTable != null)
+        {
+            var count = payloadTable.count;
+            frmMyForm.lblThisLabel.text = count ;
+
+            // sending reply to the sender using nodeId obtained as function argument.
+            voltmx.wearable.sendMessage(path,”message received” ,{“nodeId”:nodeid});
+        }
+    }
+}
+
+function errorCallback(errorConst)
+{
+    alert (“error occurred”);
+    if(errorConst == voltmx.wearable.RESULT_ERROR_API_NOT_AVAILABLE)
+    {
+        alert (“Error: Android Wear app. is not installed in the device”);
+    } 
+    else if (errorConst == voltmx.wearable.RESULT_ERROR_UNKNOWN) 
+    { 
+        alert (“Error unknown”);
+    }
+}
+
+voltmx.wearable.addForegroundDataItemListener(onDataItemReceiver,errorCallback);                
+</code></pre>
+<h3 id="platform-availability_1">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4557,12 +4883,13 @@
 <p><summary>voltmx.wearable.addForegroundMessageListener Function</summary> </p>
 <hr />
 <p>Receives messages when the app is running in the foreground.</p>
-<h3 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>voltmx.wearable.addForegroundMessageListener(  
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    onMessageReceiver,  
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    errorCallback);
-</span></code></pre></div>
-<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_2">Syntax</h3>
+<pre><code>
+voltmx.wearable.addForegroundMessageListener(  
+    onMessageReceiver,  
+    errorCallback);
+</code></pre>
+<h3 id="parameters_2">Parameters</h3>
 <p><em>onMessageReceiver</em></p>
 <p>A JavaScript callback function that is invoked when the message is received if the app is in the foreground. The callback function is not invoked if the app is not running or is running in the background. The callback function must have the following signature.</p>
 <p>onMessageReceiver(path,payload,nodeId);</p>
@@ -4571,41 +4898,42 @@
 <p>A JavaScript callback function that is invoked when there is an error in receiving the message. The callback function must have the following signature.</p>
 <p>errorCallback(errorConst);</p>
 <p>Where <code>errorConst</code> is a value from the <a href="voltmx.wearable_namespace_constants.html#CallBackResult">Callback Result Constants</a>.</p>
-<h3 id="return-values_2">Return Values<a class="headerlink" href="#return-values_2" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_2">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_2">Remarks<a class="headerlink" href="#remarks_2" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_2">Remarks</h3>
 <p>The callback set by this function receives messages only when the app is in the foreground. This can extend the charge of the device's battery.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>function onMessageReceiver (path,payload,nodeId)
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>{
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    if(path == “/location”)
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    {
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        // reading payload
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        if (payload != null)
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        {
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>            var  LatLong = payload ;
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>            // your logic to use payload and send reply if required.
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            voltmx.wearable.sendMessage(path,”received location”,null, {“nodeId”: nodeId}) ;
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        }
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    } 
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    else if (path == “/start-Form”)
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    {
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        // reading   payload
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>        if(payload != null)
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>        {
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>            var form = payload;
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>            if(form == “Form1”)
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>            {
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>                Form1.show( );
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>            }
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>        }
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    }
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>}
-</span></code></pre></div>
-<h3 id="platform-availability_2">Platform Availability<a class="headerlink" href="#platform-availability_2" title="Permanent link">&para;</a></h3>
+<h3 id="example_2">Example</h3>
+<pre><code>
+function onMessageReceiver (path,payload,nodeId)
+{
+    if(path == “/location”)
+    {
+        // reading payload
+        if (payload != null)
+        {
+            var  LatLong = payload ;
+            // your logic to use payload and send reply if required.
+            voltmx.wearable.sendMessage(path,”received location”,null, {“nodeId”: nodeId}) ;
+        }
+    } 
+    else if (path == “/start-Form”)
+    {
+        // reading   payload
+        if(payload != null)
+        {
+            var form = payload;
+            if(form == “Form1”)
+            {
+                Form1.show( );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="platform-availability_2">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4613,12 +4941,13 @@
 <p><summary>voltmx.wearable.getCapabilityAsync Function</summary> </p>
 <hr />
 <p>Retrieves the capabilities of a paired device.</p>
-<h3 id="syntax_3">Syntax<a class="headerlink" href="#syntax_3" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>voltmx.wearable.getCapabilityAsync(  
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    capability,  
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    capabilityCallback);
-</span></code></pre></div>
-<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_3">Syntax</h3>
+<pre><code>
+voltmx.wearable.getCapabilityAsync(  
+    capability,  
+    capabilityCallback);
+</code></pre>
+<h3 id="parameters_3">Parameters</h3>
 <p><em>capability</em></p>
 <p>A string that specifies the capability to look for on all of the paired devices.</p>
 <p><em>capabilityCallback</em></p>
@@ -4647,34 +4976,35 @@
 </tr>
 </tbody>
 </table>
-<h3 id="return-values_3">Return Values<a class="headerlink" href="#return-values_3" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_3">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_3">Remarks<a class="headerlink" href="#remarks_3" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_3">Remarks</h3>
 <p>When you write apps for Android Wear 2.0 or later, the watch apps can be stand-alone apps or they can paired with a companion app on an Android mobile device. If your watch app is paired with a companion app on an Android mobile device, your watch app and your companion app each needs a way to discover whether or not the paired device is available and the matching app is running on it. The primary use of this function is to find that out. Both the Android Wear app and the Android phone or tablet app must advertise their presence on the network of paired devices. The apps on the paired devices call the <code>getCapabilityAsync</code> function find out whether the paired device has the companion app. For more information, see <a href="androidwearoverviews.html#using-capabilities">Using Capabilities</a>.</p>
 <p>This function is executed asynchronously and the results are passed to the callback function specified in the <em>capabilityCallback</em> parameter.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>var nodesArray= voltmx.wearable.getCapabilityAsync(&quot;phoneApp&quot;, capabilityCallback);
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>function capabilityCallback (nodesArray)
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>{
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    if(nodesArray.length &gt; 0)
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    {
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        alert(“The companion app is available.”) ;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        for (var i = 0 ; i &lt; nodesArray.length ; i++)
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        {
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>            var nodeId = nodesArray[i].nodeId ;
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            voltmx.wearable.sendMessage(path,payload,statusCallback,nodeId);
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        }
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    }
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    else
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    {
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        alert(“requested capability nodes/devices does not exists”);
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    }
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>}
-</span></code></pre></div>
-<h3 id="platform-availability_3">Platform Availability<a class="headerlink" href="#platform-availability_3" title="Permanent link">&para;</a></h3>
+<h3 id="example_3">Example</h3>
+<pre><code>
+var nodesArray= voltmx.wearable.getCapabilityAsync(&quot;phoneApp&quot;, capabilityCallback);
+function capabilityCallback (nodesArray)
+{
+    if(nodesArray.length &gt; 0)
+    {
+        alert(“The companion app is available.”) ;
+        for (var i = 0 ; i &lt; nodesArray.length ; i++)
+        {
+            var nodeId = nodesArray[i].nodeId ;
+            voltmx.wearable.sendMessage(path,payload,statusCallback,nodeId);
+        }
+    }
+    else
+    {
+        alert(“requested capability nodes/devices does not exists”);
+    }
+}
+</code></pre>
+<h3 id="platform-availability_3">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4682,13 +5012,14 @@
 <p><summary>voltmx.wearable.getConnectedNodes Function</summary> </p>
 <hr />
 <p>Retrieves an array of connected devices.</p>
-<h3 id="syntax_4">Syntax<a class="headerlink" href="#syntax_4" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>voltmx.wearable.getConnectedNodes();
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>}
-</span></code></pre></div>
-<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_4">Syntax</h3>
+<pre><code>
+voltmx.wearable.getConnectedNodes();
+}
+</code></pre>
+<h3 id="parameters_4">Parameters</h3>
 <p>None.</p>
-<h3 id="return-values_4">Return Values<a class="headerlink" href="#return-values_4" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_4">Return Values</h3>
 <p>Returns an array of nodes. Nodes are devices that are paired with the current device. Each node in the array is a JavaScript object containing the following key-value pairs.</p>
 <table>
 <thead>
@@ -4712,32 +5043,33 @@
 </tr>
 </tbody>
 </table>
-<h3 id="remarks_4">Remarks<a class="headerlink" href="#remarks_4" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_4">Remarks</h3>
 <p>This function retrieves an array of devices that are paired with the current device via Bluetooth. The paired devices may or may not currently be in range.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>function sendMessageToPairedDevices()
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>{
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    var nodesArray = voltmx.wearable.getConnectedNodes();
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    if(nodesArray.length &gt; 0)
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    {
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        alert(“Paired devices exist.”) ;
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        for(index = 0 ; index &lt; nodesArray.length ; index++)
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        {
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>            var nodeId =  nodesArray [index].nodeId ;
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>            voltmx.wearable.sendMessage(path,payload,statusCallback, nodeId);
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        }
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    }
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    else
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    {
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>        alert(“ There are no paired devices”) ;
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    }
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>}
-</span></code></pre></div>
-<h3 id="platform-availability_4">Platform Availability<a class="headerlink" href="#platform-availability_4" title="Permanent link">&para;</a></h3>
+<h3 id="example_4">Example</h3>
+<pre><code>
+function sendMessageToPairedDevices()
+{
+    var nodesArray = voltmx.wearable.getConnectedNodes();
+
+    if(nodesArray.length &gt; 0)
+    {
+        alert(“Paired devices exist.”) ;
+        for(index = 0 ; index &lt; nodesArray.length ; index++)
+        {
+            var nodeId =  nodesArray [index].nodeId ;
+            voltmx.wearable.sendMessage(path,payload,statusCallback, nodeId);
+        }
+    }
+    else
+    {
+        alert(“ There are no paired devices”) ;
+    }
+}
+</code></pre>
+<h3 id="platform-availability_4">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4745,13 +5077,14 @@
 <p><summary>voltmx.wearable.openListingOfAppInPlayStoreOnRemoteDevice</summary> </p>
 <hr />
 <p>Opens the listing for the specified package name in the Google Play store on the remote device so that the user can install the corresponding app.</p>
-<h3 id="syntax_5">Syntax<a class="headerlink" href="#syntax_5" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>voltmx.wearable.openListingOfAppInPlayStoreOnRemoteDevice(  
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    appPackageName,  
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    nodeId,  
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    statusCallback);
-</span></code></pre></div>
-<h3 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_5">Syntax</h3>
+<pre><code>
+voltmx.wearable.openListingOfAppInPlayStoreOnRemoteDevice(  
+    appPackageName,  
+    nodeId,  
+    statusCallback);
+</code></pre>
+<h3 id="parameters_5">Parameters</h3>
 <p><em>appPackageName</em></p>
 <p>A string that has the name of the application package whose listing is opened on the paired remote device.</p>
 <p><em>nodeId</em></p>
@@ -4782,37 +5115,38 @@
 </tr>
 </tbody>
 </table>
-<h3 id="return-values_5">Return Values<a class="headerlink" href="#return-values_5" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_5">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_5">Remarks<a class="headerlink" href="#remarks_5" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_5">Remarks</h3>
 <p>If your watch app depends on a phone app, both the watch app and the phone can detect whether the companion app is installed on the paired device. For example, the watch app can detect whether the paired phone has the phone app installed by calling the <a href="#openListingOfAppInPlayStoreOnRemoteDevice">voltmx.wearable.getCapabilityAsync</a> function. Suppose that in this example, the watch finds that the paired device is present but it does not have the companion phone app installed. The watch app can then call this function to open the companion phone app's listing in the Google Play store for the user. The user can then install the companion phone app so that the phone app and the watch app can work together.</p>
-<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>function checkAppInstalledInConnectedDeviceIfNotOpenPlayStoreInRemoteDevice()
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>{
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>     var nodeIds = voltmx.wearable.getConnectedNodeIds();
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>     if (nodeIds.length &gt; 0)
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>     {
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>          voltmx.wearable.getCapabilityAsync(“wear_app_capability”,capabilityCallback);
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>     }
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>}
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>function capabilityCallback(capabilityNodes)
-</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>{
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>     if (capabilityNodes.length &lt; 0)
-</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>     {
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>          alert(“app is not installed on the remote device,opening through playstore API ”);
-</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
-</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>          var nodeIds = voltmx.wearable.getConnectedNodeIds();
-</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>
-</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>          for (var nodeId in nodeIds)
-</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>          {
-</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>               voltmx.wearable.openAppInPlayStoreOnRemoteDevice(“com.x.y”, nodeId);
-</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>          }
-</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>     }
-</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>} 
-</span></code></pre></div>
-<h3 id="platform-availability_5">Platform Availability<a class="headerlink" href="#platform-availability_5" title="Permanent link">&para;</a></h3>
+<h3 id="example_5">Example</h3>
+<pre><code>
+function checkAppInstalledInConnectedDeviceIfNotOpenPlayStoreInRemoteDevice()
+{
+     var nodeIds = voltmx.wearable.getConnectedNodeIds();
+
+     if (nodeIds.length &gt; 0)
+     {
+          voltmx.wearable.getCapabilityAsync(“wear_app_capability”,capabilityCallback);
+     }
+}
+
+function capabilityCallback(capabilityNodes)
+{
+     if (capabilityNodes.length &lt; 0)
+     {
+          alert(“app is not installed on the remote device,opening through playstore API ”);
+
+          var nodeIds = voltmx.wearable.getConnectedNodeIds();
+
+          for (var nodeId in nodeIds)
+          {
+               voltmx.wearable.openAppInPlayStoreOnRemoteDevice(“com.x.y”, nodeId);
+          }
+     }
+} 
+</code></pre>
+<h3 id="platform-availability_5">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4820,14 +5154,15 @@
 <p><summary>voltmx.wearable.putDataItem Function</summary> </p>
 <hr />
 <p>Sends data items to paired devices that are connected over Bluetooth.</p>
-<h3 id="syntax_6">Syntax<a class="headerlink" href="#syntax_6" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>voltmx.wearable.putDataItem(  
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    path,  
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    payloadTable,  
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    statusCallback ,  
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    options);
-</span></code></pre></div>
-<h3 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_6">Syntax</h3>
+<pre><code>
+voltmx.wearable.putDataItem(  
+    path,  
+    payloadTable,  
+    statusCallback ,  
+    options);
+</code></pre>
+<h3 id="parameters_6">Parameters</h3>
 <p><em>path</em></p>
 <p>A string that uniquely identifies the data item being transmitted. The path must start with a forward slash character ('/') or an exception is thrown.</p>
 <p><em>payloadTable</em></p>
@@ -4853,66 +5188,68 @@
 </tr>
 </tbody>
 </table>
-<h3 id="return-values_6">Return Values<a class="headerlink" href="#return-values_6" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_6">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_6">Remarks<a class="headerlink" href="#remarks_6" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_6">Remarks</h3>
 <p>Your Volt MX Wearables for Android Wear apps use this function to transmit data between watches and the Android mobile devices they are paired with. The paired devices can send both simple data, such as numbers, strings, and Boolean values and large data items, such as RawBytes obtained from an Image object or Camera widget. However, other data or objects cannot be sent.</p>
 <p>Apps can send data items to their companion apps or they can send messages. But messages are not guaranteed to be delivered because the device may not be connected or it may be out of range at the time the message is sent. Transmitting data items guarantees the deliver of the data. So if the data you are sending must have a guaranteed delivery, your app should call this function to send the information as data items rather than calling the <code>voltmx.wearable.sendMessage</code> function to send the information as a message.</p>
 <p>If your app calls this function without changing the payload, it is the same as calling it once. The same payload is not transmitted multiple times. Transmission is only initiated if the payload is different.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>var path = “/count”;
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>var payloadTable = {“count”: 2};
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>function statusCallback(status)
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>{
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    if (status == voltmx.wearable.RESULT_SUCCESS)
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    {
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        alert (“payload dispatched to android framework successfully”);
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    } 
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    else
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    {
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>        alert (“error occurred  “);
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        // find the exact error by comparing with Status Constants.
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    }
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>}
-</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
-</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>voltmx.wearable.putDataItem(path,payloadTable,statusCallback) ;
-</span></code></pre></div>
-<h3 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>// Take a picture with camera widget and send it to the android wear.
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>rawBytes = null;
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>function onCaptureCallbackOfCamera()
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>{
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    rawBytes = frmMyCameraForm.cameraMyCameraWidget.rawBytes;
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>}
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>function sendDataItem()
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>{
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    var payloadTable = {};
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    if (rawBytes != null)
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    {
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>        payloadTable.photo = rawBytes;
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    }
-</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    else
-</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>    {
-</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>        alert(&quot;please capture photo the with camera.&quot;);
-</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>        return ;
-</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>    } 
-</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>    voltmx.wearable.putDataItem(
-</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>        &quot;/photo&quot;, 
-</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>        payloadTable, 
-</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>        statusCallback, 
-</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>        {
-</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>            &quot;isUrgent&quot;: true
-</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>        });
-</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>}
-</span></code></pre></div>
-<h3 id="platform-availability_6">Platform Availability<a class="headerlink" href="#platform-availability_6" title="Permanent link">&para;</a></h3>
+<h3 id="example-1">Example 1</h3>
+<pre><code>
+var path = “/count”;
+var payloadTable = {“count”: 2};
+
+function statusCallback(status)
+{
+    if (status == voltmx.wearable.RESULT_SUCCESS)
+    {
+        alert (“payload dispatched to android framework successfully”);
+    } 
+    else
+    {
+        alert (“error occurred  “);
+        // find the exact error by comparing with Status Constants.
+    }
+}
+
+voltmx.wearable.putDataItem(path,payloadTable,statusCallback) ;
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code>
+// Take a picture with camera widget and send it to the android wear.
+rawBytes = null;
+
+function onCaptureCallbackOfCamera()
+{
+    rawBytes = frmMyCameraForm.cameraMyCameraWidget.rawBytes;
+}
+
+function sendDataItem()
+{
+    var payloadTable = {};
+
+    if (rawBytes != null)
+    {
+        payloadTable.photo = rawBytes;
+    }
+    else
+    {
+        alert(&quot;please capture photo the with camera.&quot;);
+        return ;
+    } 
+    voltmx.wearable.putDataItem(
+        &quot;/photo&quot;, 
+        payloadTable, 
+        statusCallback, 
+        {
+            &quot;isUrgent&quot;: true
+        });
+}
+</code></pre>
+<h3 id="platform-availability_6">Platform Availability</h3>
 <p>Android Wear 2.0 or later</p>
 <hr />
 </details>
@@ -4920,21 +5257,23 @@
 <p><summary>voltmx.wearable.removeCapabilityChangeListener</summary> </p>
 <hr />
 <p>Removes the listener callback function for the specified capability.</p>
-<h3 id="syntax_7">Syntax<a class="headerlink" href="#syntax_7" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>voltmx.wearable.removeCapabilityChangeListener(  
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    capability);
-</span></code></pre></div>
-<h3 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_7">Syntax</h3>
+<pre><code>
+voltmx.wearable.removeCapabilityChangeListener(  
+    capability);
+</code></pre>
+<h3 id="parameters_7">Parameters</h3>
 <p><em>capability</em></p>
 <p>A string that specifies the capability whose listener callback function is removed.</p>
-<h3 id="return-values_7">Return Values<a class="headerlink" href="#return-values_7" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_7">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_7">Remarks<a class="headerlink" href="#remarks_7" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_7">Remarks</h3>
 <p>This function enables your app to removed listener callback functions set by the <a href="#addCapabilityChangeListener">voltmx.wearable.addCapabilityChangeListener</a> function.</p>
-<h3 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>voltmx.wearable.removeCapabilityChangeListener(“voiceTranscription”);
-</span></code></pre></div>
-<h3 id="platform-availability_7">Platform Availability<a class="headerlink" href="#platform-availability_7" title="Permanent link">&para;</a></h3>
+<h3 id="example_6">Example</h3>
+<pre><code>
+voltmx.wearable.removeCapabilityChangeListener(“voiceTranscription”);
+</code></pre>
+<h3 id="platform-availability_7">Platform Availability</h3>
 <p>Android Wear 2.0 or later</p>
 <hr />
 </details>
@@ -4942,17 +5281,19 @@
 <p><summary>voltmx.wearable.removeForegroundDataItemListener Function</summary> </p>
 <hr />
 <p>Removes the callback function set by the <a href="#addForegroundDataItemListener">voltmx.wearable.addForegroundDataItemListener</a> function.</p>
-<h3 id="syntax_8">Syntax<a class="headerlink" href="#syntax_8" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>voltmx.wearable.removeForegroundDataItemListener();
-</span></code></pre></div>
-<h3 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_8">Syntax</h3>
+<pre><code>
+voltmx.wearable.removeForegroundDataItemListener();
+</code></pre>
+<h3 id="parameters_8">Parameters</h3>
 <p>None.</p>
-<h3 id="return-values_8">Return Values<a class="headerlink" href="#return-values_8" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_8">Return Values</h3>
 <p>None.</p>
-<h3 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>voltmx.wearable.removeForegroundDataItemListener();
-</span></code></pre></div>
-<h3 id="platform-availability_8">Platform Availability<a class="headerlink" href="#platform-availability_8" title="Permanent link">&para;</a></h3>
+<h3 id="example_7">Example</h3>
+<pre><code>
+voltmx.wearable.removeForegroundDataItemListener();
+</code></pre>
+<h3 id="platform-availability_8">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4960,17 +5301,19 @@
 <p><summary>voltmx.wearable.removeForegroundMessageListener</summary> </p>
 <hr />
 <p>Removes the callback function set by the <a href="#addForegroundMessageListener">voltmx.wearable.addForegroundMessageListener</a> function.</p>
-<h3 id="syntax_9">Syntax<a class="headerlink" href="#syntax_9" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>voltmx.wearable.removeForegroundMessageListener();
-</span></code></pre></div>
-<h3 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_9">Syntax</h3>
+<pre><code>
+voltmx.wearable.removeForegroundMessageListener();
+</code></pre>
+<h3 id="parameters_9">Parameters</h3>
 <p>None.</p>
-<h3 id="return-values_9">Return Values<a class="headerlink" href="#return-values_9" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_9">Return Values</h3>
 <p>None.</p>
-<h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>voltmx.wearable.removeForegroundMessageListener();
-</span></code></pre></div>
-<h3 id="platform-availability_9">Platform Availability<a class="headerlink" href="#platform-availability_9" title="Permanent link">&para;</a></h3>
+<h3 id="example_8">Example</h3>
+<pre><code>
+voltmx.wearable.removeForegroundMessageListener();
+</code></pre>
+<h3 id="platform-availability_9">Platform Availability</h3>
 <p>Android Wear 2.0 or later.</p>
 <hr />
 </details>
@@ -4978,14 +5321,15 @@
 <p><summary>voltmx.wearable.sendMessage Function</summary> </p>
 <hr />
 <p>Sends a message to a paired device.</p>
-<h3 id="syntax_10">Syntax<a class="headerlink" href="#syntax_10" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>voltmx.wearable.sendMessage(  
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    path,  
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    payload,  
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    statusCallback,  
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    options);
-</span></code></pre></div>
-<h3 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_10">Syntax</h3>
+<pre><code>
+voltmx.wearable.sendMessage(  
+    path,  
+    payload,  
+    statusCallback,  
+    options);
+</code></pre>
+<h3 id="parameters_10">Parameters</h3>
 <p>path</p>
 <p>A string that uniquely identifies the data item being transmitted. The path must start with a forward slash character ('/') or an exception is thrown.</p>
 <p>payload</p>
@@ -5010,9 +5354,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="return-values_10">Return Values<a class="headerlink" href="#return-values_10" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_10">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_8">Remarks<a class="headerlink" href="#remarks_8" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_8">Remarks</h3>
 <p>Sending a message to a paired device results in a faster delivery of the data than transmitting a data item. But messages are not guaranteed to be delivered because the device may not be connected or it may be out of range at the time the message is sent. Transmitting data items guarantees the deliver of the data.</p>
 <p>Your app can get the node ID for the <em>options</em> parameter by calling the following functions.</p>
 <ul>
@@ -5026,44 +5370,46 @@
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function from the app that is paired with your watch app, you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example-1_1">Example 1<a class="headerlink" href="#example-1_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>var path = “/location”;
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>var payload = “17.4478262,78.3363178,13”
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>function statusCallback(status)
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>{
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    if (status == voltmx.wearable.RESULT_SUCCESS)
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>    { 
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>        alert (“message is dispatched successfully”);
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>    } 
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>    else
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>    {
-</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>        alert (“error occurred while sending message “);
-</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>    }
-</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>}
-</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>
-</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>voltmx.wearable.sendMessage(path,payload, statusCallback,null) ;
-</span></code></pre></div>
-<h3 id="example-2_1">Example 2<a class="headerlink" href="#example-2_1" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>var path = “/Start-Form”;
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>var payload = “Form1”
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>function statusCallback(status)
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>{
-</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    if (status == voltmx.wearable.RESULT_SUCCESS)
-</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    {
-</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>        alert (“message is dispatched successfully”);
-</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    } 
-</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>    else 
-</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>    {
-</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>        alert (“error occurred while sending message “);
-</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>    }
-</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>}
-</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>
-</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>var options = {“nodeId”: &quot;12345&quot;};
-</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>
-</span><span id="__span-23-18"><a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>voltmx.wearable.sendMessage(path,payload, statusCallback,options) ;
-</span></code></pre></div>
+<h3 id="example-1_1">Example 1</h3>
+<pre><code>
+var path = “/location”;
+var payload = “17.4478262,78.3363178,13”
+
+function statusCallback(status)
+{
+    if (status == voltmx.wearable.RESULT_SUCCESS)
+    { 
+        alert (“message is dispatched successfully”);
+    } 
+    else
+    {
+        alert (“error occurred while sending message “);
+    }
+}
+
+voltmx.wearable.sendMessage(path,payload, statusCallback,null) ;
+</code></pre>
+<h3 id="example-2_1">Example 2</h3>
+<pre><code>
+var path = “/Start-Form”;
+var payload = “Form1”
+
+function statusCallback(status)
+{
+    if (status == voltmx.wearable.RESULT_SUCCESS)
+    {
+        alert (“message is dispatched successfully”);
+    } 
+    else 
+    {
+        alert (“error occurred while sending message “);
+    }
+}
+
+var options = {“nodeId”: &quot;12345&quot;};
+
+voltmx.wearable.sendMessage(path,payload, statusCallback,options) ;
+</code></pre>
 <p>Platform Availability</p>
 <p>Android Wear 2.0 or later.</p>
 <hr />
@@ -5072,11 +5418,12 @@
 <p><summary>voltmx.wearable.setDataItemListener Function</summary> </p>
 <hr />
 <p>Sets a callback event handler function that is invoked when the app receives data.</p>
-<h3 id="syntax_11">Syntax<a class="headerlink" href="#syntax_11" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>voltmx.wearable.setDataItemListener(  
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    onDataItemReceiver);
-</span></code></pre></div>
-<h3 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_11">Syntax</h3>
+<pre><code>
+voltmx.wearable.setDataItemListener(  
+    onDataItemReceiver);
+</code></pre>
+<h3 id="parameters_11">Parameters</h3>
 <p><em>onDataItemReceiver</em></p>
 <p>A callback event handler function that is invoked when data items are received from the paired device. The callback function passed through the <em>onDataItemReceiver</em> parameter must have the following signature.</p>
 <p>onDataItemReceiver(path,payloadTable,nodeId);</p>
@@ -5084,41 +5431,42 @@
 <p><em>errorCallback</em></p>
 <p>Return Values</p>
 <p>None.</p>
-<h3 id="remarks_9">Remarks<a class="headerlink" href="#remarks_9" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_9">Remarks</h3>
 <p>This function sets a callback event handler that receives data even when the app is in the background or not running. However, setting this callback function consumes more power from the battery. So your app should only invoke <code>setDataItemListener</code> for high-priority items. In most cases, your app should use the <a href="#addForegroundDataItemListener">voltmx.wearable.addForegroundDataItemListener</a> function instead.</p>
 <p>Your app should generally call this function in either the pre-appinit or postapp-init callback functions.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>function onDataItemReceiver(path,payloadTable, nodeId)
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>{
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    if(path == “/photo’’)
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    {
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>        // reading payLoadTable
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>        if (payloadTable != null)
-</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>        {
-</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>            var photo =   payloadTable.photoRawBytes ;
-</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>            frmMyForm.imgImagewidget.rawBytes = photo
-</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>        }
-</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>    } 
-</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>    else if (path == “/count”)
-</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>    {
-</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>        // reading   payloadTable
-</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>        if(payloadTable != null)
-</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>        {
-</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>            var count =  payloadTable.count ;
-</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>            frmMyForm.lblThisLabel.text = count ;
-</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>
-</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a>            // sending reply to the sender using nodeId obtained as function argument.
-</span><span id="__span-25-21"><a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a>            voltmx.wearable.sendMessage(path,”message received” ,{“nodeId”:nodeid});
-</span><span id="__span-25-22"><a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a>        }
-</span><span id="__span-25-23"><a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a>    }
-</span><span id="__span-25-24"><a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a>}
-</span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a>
-</span><span id="__span-25-26"><a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a>voltmx.wearable.setDataItemListener(onDataItemReceiver);
-</span></code></pre></div>
-<h3 id="platform-availability_10">Platform Availability<a class="headerlink" href="#platform-availability_10" title="Permanent link">&para;</a></h3>
+<h3 id="example_9">Example</h3>
+<pre><code>
+function onDataItemReceiver(path,payloadTable, nodeId)
+{
+    if(path == “/photo’’)
+    {
+        // reading payLoadTable
+        if (payloadTable != null)
+        {
+            var photo =   payloadTable.photoRawBytes ;
+            frmMyForm.imgImagewidget.rawBytes = photo
+        }
+    } 
+    else if (path == “/count”)
+    {
+        // reading   payloadTable
+        if(payloadTable != null)
+        {
+            var count =  payloadTable.count ;
+            frmMyForm.lblThisLabel.text = count ;
+
+            // sending reply to the sender using nodeId obtained as function argument.
+            voltmx.wearable.sendMessage(path,”message received” ,{“nodeId”:nodeid});
+        }
+    }
+}
+
+voltmx.wearable.setDataItemListener(onDataItemReceiver);
+</code></pre>
+<h3 id="platform-availability_10">Platform Availability</h3>
 <p>Android Wear 2.0 or later</p>
 <hr />
 </details>
@@ -5126,36 +5474,36 @@
 <p><summary>voltmx.wearable.setMessageListener Function</summary> </p>
 <hr />
 <p>Receives a message from a paired app regardless of whether the app is running, running in the foreground, or running in the background.</p>
-<h3 id="syntax_12">Syntax<a class="headerlink" href="#syntax_12" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>voltmx.wearable.setMessageListener(  
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    onMessageReceiver);
-</span></code></pre></div>
-<h3 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_12">Syntax</h3>
+<pre><code>
+voltmx.wearable.setMessageListener(  
+    onMessageReceiver);
+</code></pre>
+<h3 id="parameters_12">Parameters</h3>
 <p><em>onMessageReceiver</em></p>
 <p>A JavaScript callback event handler function that is invoked when the app receives a message. The callback function must have the following signature.</p>
 <p>onMessageReceiver(path,payload,nodeId);</p>
 <p>Where <code>path</code> is a string that uniquely identifies the data item being transmitted, <code>payload</code> is a JavaScript object of type <code>RawBytes</code> or <code>String</code>, and <code>nodeId</code> is a string containing the ID of the node to send the message to. The <code>path</code> argument must start with a forward slash character ('/') or an exception is thrown. The maximum size of the <code>payload</code> argument is 100KB. Your app can use the <code>nodeId</code> value to reply to the sender..</p>
-<h3 id="return-values_11">Return Values<a class="headerlink" href="#return-values_11" title="Permanent link">&para;</a></h3>
+<h3 id="return-values_11">Return Values</h3>
 <p>None.</p>
-<h3 id="remarks_10">Remarks<a class="headerlink" href="#remarks_10" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_10">Remarks</h3>
 <p>Setting a callback function to receive messages by calling <code>setMessageListener</code> consumes more power than setting a callback that only operates in the foreground. In general, your app should use this function sparingly.</p>
 <blockquote>
 <p><strong><em>Important:</em></strong> To call this function you must set the compilation settings in  Volt MX Iris appropriately. For details, see <a href="androidwearoverviews.html#transmitting-data-between-paired-apps">Transmitting Data Between Paired Apps</a>.</p>
 </blockquote>
-<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>function onMessageReceiver(path,payload,nodeId)
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>{
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    // Add your code to read the payload.
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>}
-</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
-</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>voltmx.wearable.setMessageListener(onMessageReceiver) ;
-</span></code></pre></div>
-<h3 id="platform-availability_11">Platform Availability<a class="headerlink" href="#platform-availability_11" title="Permanent link">&para;</a></h3>
+<h3 id="example_10">Example</h3>
+<pre><code>
+function onMessageReceiver(path,payload,nodeId)
+{
+    // Add your code to read the payload.
+}
+
+voltmx.wearable.setMessageListener(onMessageReceiver) ;
+</code></pre>
+<h3 id="platform-availability_11">Platform Availability</h3>
 <p>Android Wear 2.0 or later</p>
 <hr />
 </details>
-
-
 
 
 
@@ -5178,7 +5526,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -5216,14 +5564,10 @@
     </div>
     
     
-    
-      
-      
-      
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.indexes","navigation.top","navigation.instant","navigation.prune","search.highlight","search.share","search.suggest","content.code.copy","content.action.edit"],"search":"../../../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.21aa498e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>
